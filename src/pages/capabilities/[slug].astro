@@ -1,0 +1,135 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import Badge from '../../components/ui/Badge.astro';
+import ObservableCard from '../../components/cards/ObservableCard.astro';
+import AntiPatternCard from '../../components/cards/AntiPatternCard.astro';
+import PlaybookCard from '../../components/cards/PlaybookCard.astro';
+import CapabilityCard from '../../components/cards/CapabilityCard.astro';
+import {
+  capabilities,
+  getCapability,
+  getCoverage,
+  getObservablesForCapability,
+  getAntiPatternsForCapability,
+  getPlaybooksForCapability,
+  getRubricAnchorsForCapability,
+  getRelatedCapabilities,
+} from '../../lib/data';
+import { formatPercent } from '../../lib/utils';
+
+export function getStaticPaths() {
+  return capabilities.map(cap => ({
+    params: { slug: cap.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const cap = getCapability(slug!)!;
+const cov = getCoverage(cap.id);
+const observables = getObservablesForCapability(cap.id);
+const aps = getAntiPatternsForCapability(cap.id);
+const pbs = getPlaybooksForCapability(cap.id);
+const rubrics = getRubricAnchorsForCapability(cap.id);
+const related = getRelatedCapabilities(cap.id);
+---
+
+<ContentLayout title={`${cap.id}: ${cap.name}`} description={cap.description} currentSlug={cap.slug}>
+  <Breadcrumb items={[
+    { label: 'Capabilities', href: '/capabilities/' },
+    { label: `${cap.id}: ${cap.name}` },
+  ]} />
+
+  <!-- Header -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-3 flex-wrap">
+      <Badge text={cap.domain} variant="domain" domain={cap.domain} />
+      <span class="text-sm text-gray-500 dark:text-gray-400">{observables.length} observables</span>
+      {cov && <span class="text-sm text-gray-500 dark:text-gray-400">{formatPercent(cov.coveragePercent)} coverage</span>}
+    </div>
+    <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+      {cap.name}
+    </h1>
+    <p class="text-lg text-gray-600 dark:text-gray-400">{cap.description}</p>
+  </div>
+
+  <!-- Rubric Progression -->
+  {rubrics.length > 0 && (
+    <section class="mb-10">
+      <h2 class="section-heading">Rubric Progression</h2>
+      {rubrics.map((rubric, i) => (
+        <div class:list={['mb-6', rubrics.length > 1 && 'pt-4']}>
+          {rubrics.length > 1 && (
+            <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wider">
+              {rubric.sourceTopic}
+            </h3>
+          )}
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800/50">
+              <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Developing</h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300">{rubric.level1Developing}</p>
+            </div>
+            <div class="rounded-xl border border-blue-200 dark:border-blue-800 p-4 bg-blue-50 dark:bg-blue-950/20">
+              <h4 class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">Competent</h4>
+              <p class="text-sm text-blue-700 dark:text-blue-300">{rubric.level3Competent}</p>
+            </div>
+            <div class="rounded-xl border border-green-200 dark:border-green-800 p-4 bg-green-50 dark:bg-green-950/20">
+              <h4 class="text-sm font-semibold text-green-600 dark:text-green-400 mb-2">Advanced</h4>
+              <p class="text-sm text-green-700 dark:text-green-300">{rubric.level5Advanced}</p>
+            </div>
+          </div>
+          {rubric.rationale && (
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 italic">{rubric.rationale}</p>
+          )}
+        </div>
+      ))}
+    </section>
+  )}
+
+  <!-- Observables -->
+  <section class="mb-10">
+    <h2 class="section-heading">Observables ({observables.length})</h2>
+    <div class="space-y-3">
+      {observables.map(obs => (
+        <ObservableCard observable={obs} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Anti-Patterns -->
+  {aps.length > 0 && (
+    <section class="mb-10">
+      <h2 class="section-heading">Related Anti-Patterns</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {aps.map(ap => (
+          <AntiPatternCard antiPattern={ap} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Related Playbooks -->
+  {pbs.length > 0 && (
+    <section class="mb-10">
+      <h2 class="section-heading">Related Playbooks</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {pbs.map(pb => (
+          <PlaybookCard playbook={pb} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Related Capabilities -->
+  {related.length > 0 && (
+    <section class="mb-10">
+      <h2 class="section-heading">Related Capabilities</h2>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Connected via shared observables and crosswalk mappings.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {related.map(rc => (
+          <CapabilityCard capability={rc} />
+        ))}
+      </div>
+    </section>
+  )}
+</ContentLayout>

@@ -1,0 +1,380 @@
+[
+  {
+    "capabilityId": "C1",
+    "leadingIndicators": [
+      "Cross-team dependency mapping is current (updated within 30 days)",
+      "Org health dashboard reviewed weekly by leadership",
+      "Succession plan exists for all critical roles",
+      "Quarterly org design review is scheduled and attended"
+    ],
+    "laggingIndicators": [
+      "Zero regrettable attrition post-reorg",
+      "Teams achieve 85%+ delivery commitment rate",
+      "Cross-team escalations decreased quarter-over-quarter",
+      "Employee engagement scores stable or improving through org changes"
+    ],
+    "measurementAntiPatterns": [
+      "Using team size as a proxy for leadership scope",
+      "Measuring reorg count instead of reorg outcomes",
+      "Evaluating org design in isolation from delivery metrics"
+    ],
+    "suggestedCadence": "quarterly",
+    "dataSourceExamples": [
+      "HRIS attrition data",
+      "Engagement survey results",
+      "Delivery tracking tools",
+      "Org chart and role mapping tools"
+    ]
+  },
+  {
+    "capabilityId": "C2",
+    "leadingIndicators": [
+      "Prioritization framework is documented and shared with stakeholders",
+      "Roadmap has explicit not-doing list with rationale",
+      "Investment allocation ratios are reviewed monthly",
+      "Stakeholders can articulate the current top 3 priorities"
+    ],
+    "laggingIndicators": [
+      "Feature delivery aligns with stated priorities (>80% match)",
+      "Unplanned work remains below 20% of total capacity",
+      "Strategic bets delivered measurable outcomes within expected timeframe",
+      "Stakeholder satisfaction with prioritization decisions is above 4/5"
+    ],
+    "measurementAntiPatterns": [
+      "Equating busyness with strategic alignment",
+      "Measuring number of features shipped without tying to business outcomes",
+      "Allowing loudest stakeholder to override prioritization framework"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "Roadmap and planning tools (Jira, Linear, Shortcut)",
+      "OKR tracking platforms",
+      "Time allocation reports",
+      "Stakeholder feedback surveys"
+    ]
+  },
+  {
+    "capabilityId": "C3",
+    "leadingIndicators": [
+      "Architecture Decision Records (ADRs) created for all major changes",
+      "Tech debt backlog is triaged and prioritized quarterly",
+      "System reliability targets (SLOs) are defined for all critical services",
+      "Architecture review board meets regularly with clear decision log"
+    ],
+    "laggingIndicators": [
+      "System uptime meets defined SLO targets (e.g., 99.9%)",
+      "Median time to integrate a new service decreased over 6 months",
+      "Tech debt ratio (debt work / total work) remains within target band",
+      "No architecture-related production incidents recurring after fix"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring architecture quality by document volume rather than decision outcomes",
+      "Using code coverage as a sole proxy for system quality",
+      "Ignoring operational complexity when evaluating architecture decisions"
+    ],
+    "suggestedCadence": "quarterly",
+    "dataSourceExamples": [
+      "ADR repositories and wikis",
+      "Monitoring and observability platforms (Datadog, Grafana)",
+      "Incident tracking systems",
+      "Code complexity and dependency analysis tools"
+    ]
+  },
+  {
+    "capabilityId": "C4",
+    "leadingIndicators": [
+      "Sprint planning and retrospectives happen on schedule every cycle",
+      "Blockers are identified and escalated within 24 hours",
+      "Team working agreements are documented and reviewed quarterly",
+      "Delivery forecasts are shared with stakeholders before each cycle"
+    ],
+    "laggingIndicators": [
+      "Sprint commitment accuracy is 80%+ consistently",
+      "Cycle time for standard work items is stable or decreasing",
+      "Meeting effectiveness scores above 3.5/5 in team surveys",
+      "Zero missed external deadlines in the quarter"
+    ],
+    "measurementAntiPatterns": [
+      "Optimizing for velocity without measuring outcome quality",
+      "Treating all process deviations as failures rather than learning signals",
+      "Measuring hours worked instead of output and flow efficiency"
+    ],
+    "suggestedCadence": "weekly",
+    "dataSourceExamples": [
+      "Project management tools (Jira, Linear, Asana)",
+      "DORA metrics dashboards",
+      "Team health check surveys",
+      "Standup and retro notes"
+    ]
+  },
+  {
+    "capabilityId": "C5",
+    "leadingIndicators": [
+      "Regular 1:1s scheduled with key cross-functional peers (PM, Design, Sales)",
+      "Engineering input is included in cross-functional planning documents",
+      "Stakeholder map is maintained with relationship health scores",
+      "Pre-alignment meetings happen before major cross-functional decisions"
+    ],
+    "laggingIndicators": [
+      "Cross-functional projects delivered on time with no late-stage surprises",
+      "Stakeholder NPS for engineering partnership is above 40",
+      "Requests from other functions are resolved within agreed SLAs",
+      "Engineering is invited to strategic planning conversations proactively"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring influence by meeting attendance rather than decision impact",
+      "Confusing being agreeable with being influential",
+      "Counting cross-functional projects without assessing relationship quality"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "Cross-functional stakeholder surveys",
+      "Project retrospective reports",
+      "Meeting and collaboration tool analytics",
+      "360-degree feedback results"
+    ]
+  },
+  {
+    "capabilityId": "C6",
+    "leadingIndicators": [
+      "All direct reports have documented career development plans",
+      "1:1s happen weekly with documented notes and action items",
+      "Manager has completed coaching or leadership training in past 12 months",
+      "Stretch assignments are actively tracked for each team member"
+    ],
+    "laggingIndicators": [
+      "Internal promotion rate is at or above org benchmark",
+      "Direct reports report high manager effectiveness in surveys (>4/5)",
+      "Regrettable attrition is below org average",
+      "At least one direct report ready for next-level role within 12 months"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring coaching by number of 1:1s held rather than development outcomes",
+      "Using retention alone as a coaching metric without distinguishing regrettable vs. healthy attrition",
+      "Treating all promotions as evidence of coaching without assessing readiness"
+    ],
+    "suggestedCadence": "quarterly",
+    "dataSourceExamples": [
+      "1:1 tracking tools (Lattice, Culture Amp, 15Five)",
+      "Career development plan documents",
+      "Engagement and manager effectiveness surveys",
+      "Promotion and internal mobility data"
+    ]
+  },
+  {
+    "capabilityId": "C7",
+    "leadingIndicators": [
+      "Decision documents follow a consistent template (options, tradeoffs, recommendation)",
+      "Key decisions are communicated to all affected parties within 48 hours",
+      "Decision log is maintained and accessible to the team",
+      "Pre-reads are shared at least 24 hours before decision meetings"
+    ],
+    "laggingIndicators": [
+      "Decisions are rarely revisited or reversed due to miscommunication",
+      "Team members can articulate the rationale behind recent key decisions",
+      "Executive asks for clarification less than 10% of the time on proposals",
+      "Decision-to-action latency is under 1 week for standard decisions"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring communication volume (emails sent, docs written) rather than clarity and reach",
+      "Assuming silence means alignment after a decision announcement",
+      "Valuing speed of decision over quality of framing"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "Decision log or wiki (Notion, Confluence)",
+      "Meeting notes and action item tracking",
+      "Skip-level feedback on communication clarity",
+      "Presentation feedback from leadership reviews"
+    ]
+  },
+  {
+    "capabilityId": "C8",
+    "leadingIndicators": [
+      "On-call rotation is staffed and reviewed monthly",
+      "Runbooks exist for top 10 failure scenarios and are tested quarterly",
+      "Incident response roles (commander, scribe, comms) are defined and trained",
+      "Risk register is reviewed and updated monthly"
+    ],
+    "laggingIndicators": [
+      "Mean time to detect (MTTD) is under target threshold",
+      "Mean time to resolve (MTTR) trending downward quarter-over-quarter",
+      "Repeat incidents for the same root cause are zero after remediation",
+      "Post-incident action items are completed within committed timeline (>90%)"
+    ],
+    "measurementAntiPatterns": [
+      "Counting incidents without weighting by severity and customer impact",
+      "Blaming individuals in post-mortems rather than identifying systemic causes",
+      "Using low incident count as proof of reliability without considering detection gaps"
+    ],
+    "suggestedCadence": "weekly",
+    "dataSourceExamples": [
+      "Incident management platforms (PagerDuty, Opsgenie, FireHydrant)",
+      "Post-incident review documents",
+      "Monitoring and alerting dashboards",
+      "SLO tracking tools"
+    ]
+  },
+  {
+    "capabilityId": "C9",
+    "leadingIndicators": [
+      "Key metrics are defined before project kickoff, not after launch",
+      "Dashboards are reviewed in team meetings at least biweekly",
+      "Data quality checks are automated for critical metrics",
+      "A/B test or experiment framework is available and used"
+    ],
+    "laggingIndicators": [
+      "Decisions reference specific data points in decision documents",
+      "Product outcomes match or exceed pre-defined success criteria (>70% of launches)",
+      "Data-informed pivots happen within one cycle of negative signal",
+      "Metric definitions are consistent across teams (no conflicting dashboards)"
+    ],
+    "measurementAntiPatterns": [
+      "Tracking vanity metrics that do not tie to business or user outcomes",
+      "Measuring everything without distinguishing signal from noise",
+      "Using metrics to justify pre-determined conclusions rather than inform decisions"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "Analytics platforms (Amplitude, Mixpanel, Looker)",
+      "A/B testing tools (LaunchDarkly, Optimizely)",
+      "Business intelligence dashboards",
+      "OKR and goal tracking systems"
+    ]
+  },
+  {
+    "capabilityId": "C10",
+    "leadingIndicators": [
+      "Headcount plan is documented with clear rationale per role",
+      "Investment allocation (build vs. maintain vs. innovate) is explicitly tracked",
+      "Budget reviews happen monthly with variance analysis",
+      "Tradeoff decisions are documented with alternatives considered"
+    ],
+    "laggingIndicators": [
+      "Budget variance is within 5% of plan at quarter-end",
+      "Time-to-fill for approved roles is within target (e.g., <60 days)",
+      "ROI of major investments is measured and reported within 6 months of completion",
+      "No critical projects stalled due to unplanned resource constraints"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring resource allocation by headcount alone without considering skill mix",
+      "Treating all engineering time as fungible across project types",
+      "Optimizing for utilization rate rather than throughput and outcomes"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "Financial planning tools (Adaptive, Anaplan)",
+      "HRIS and headcount tracking systems",
+      "Project portfolio management tools",
+      "Vendor and infrastructure cost dashboards (AWS Cost Explorer, Cloudability)"
+    ]
+  },
+  {
+    "capabilityId": "C11",
+    "leadingIndicators": [
+      "Job descriptions are reviewed and updated within the last 6 months",
+      "Interview rubrics exist and are calibrated across all interviewers",
+      "Onboarding checklist has 30/60/90-day milestones with clear owners",
+      "Hiring pipeline metrics (conversion rates per stage) are tracked weekly"
+    ],
+    "laggingIndicators": [
+      "Offer acceptance rate is above 80%",
+      "New hire productivity ramp (time to first meaningful contribution) is within target",
+      "90-day new hire retention is above 95%",
+      "Hiring manager satisfaction with candidates is above 4/5"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring hiring speed without assessing hire quality over time",
+      "Using time-to-fill as the primary hiring metric without tracking new hire success",
+      "Optimizing for pipeline volume rather than pipeline quality and conversion"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "ATS platforms (Greenhouse, Lever, Ashby)",
+      "Onboarding tracking tools",
+      "New hire surveys (30/60/90-day)",
+      "Hiring quality retrospectives"
+    ]
+  },
+  {
+    "capabilityId": "C12",
+    "leadingIndicators": [
+      "Team working agreements are documented and revisited quarterly",
+      "Psychological safety is explicitly discussed in retrospectives",
+      "Recognition practices happen at least weekly (shoutouts, kudos)",
+      "Manager models desired cultural behaviors visibly in meetings and communications"
+    ],
+    "laggingIndicators": [
+      "Psychological safety scores are above team benchmark in engagement surveys",
+      "Diverse voices participate in team discussions (not dominated by 1-2 individuals)",
+      "Team conflict is resolved constructively without escalation above manager",
+      "Employee engagement scores are above org median"
+    ],
+    "measurementAntiPatterns": [
+      "Measuring culture by perks and social events rather than behavioral norms",
+      "Using survey scores alone without qualitative feedback or observation",
+      "Assuming uniform culture across the team without checking subgroup experiences"
+    ],
+    "suggestedCadence": "quarterly",
+    "dataSourceExamples": [
+      "Engagement and pulse survey platforms (Culture Amp, Peakon, Officevibe)",
+      "Retrospective notes and action items",
+      "Recognition platform data (Bonusly, Lattice)",
+      "Skip-level interview notes"
+    ]
+  },
+  {
+    "capabilityId": "C13",
+    "leadingIndicators": [
+      "Security training completion rate is above 95% for all engineers",
+      "Vulnerability scanning is automated and runs on every deploy",
+      "Compliance requirements are mapped to engineering controls with clear owners",
+      "Threat modeling is completed for all new services before launch"
+    ],
+    "laggingIndicators": [
+      "Critical and high vulnerabilities are remediated within SLA (e.g., 7 days for critical)",
+      "Zero compliance audit findings related to engineering controls",
+      "Security incidents caused by known vulnerability classes decreased year-over-year",
+      "Time to patch critical CVEs is under 72 hours"
+    ],
+    "measurementAntiPatterns": [
+      "Counting security training completions without testing knowledge retention",
+      "Measuring vulnerability count without weighting by exploitability and exposure",
+      "Treating compliance checkbox completion as evidence of actual security posture"
+    ],
+    "suggestedCadence": "monthly",
+    "dataSourceExamples": [
+      "Vulnerability scanning tools (Snyk, Dependabot, Qualys)",
+      "Compliance management platforms (Vanta, Drata)",
+      "Security training platforms (KnowBe4, security awareness LMS)",
+      "Audit reports and findings trackers"
+    ]
+  },
+  {
+    "capabilityId": "C14",
+    "leadingIndicators": [
+      "Performance review timeline is published and communicated at least 4 weeks in advance",
+      "Calibration criteria and rubric are documented and shared with all managers",
+      "Managers complete calibration prep (draft ratings with evidence) before sessions",
+      "Underperformance is addressed with documented feedback within 2 weeks of identification"
+    ],
+    "laggingIndicators": [
+      "Performance ratings distribution is consistent with org guidelines and calibrated across teams",
+      "Employees report reviews as fair and useful (>4/5 in post-review survey)",
+      "PIP-to-resolution cycle time is within policy guidelines",
+      "Zero successful legal challenges to termination decisions"
+    ],
+    "measurementAntiPatterns": [
+      "Forcing a bell curve distribution without regard for actual team performance",
+      "Measuring manager effectiveness by how many PIPs they initiate rather than outcomes",
+      "Using recency bias in reviews rather than evaluating the full review period"
+    ],
+    "suggestedCadence": "quarterly",
+    "dataSourceExamples": [
+      "Performance management platforms (Lattice, Workday, BambooHR)",
+      "Calibration session notes and rating distributions",
+      "Post-review employee feedback surveys",
+      "HR case management systems for PIPs and exits"
+    ]
+  }
+]

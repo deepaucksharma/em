@@ -1,0 +1,122 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import Badge from '../../components/ui/Badge.astro';
+import { playbooks, getCapability, observables } from '../../lib/data';
+
+export function getStaticPaths() {
+  return playbooks.map(pb => ({
+    params: { slug: pb.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const pb = playbooks.find(p => p.slug === slug)!;
+const caps = pb.capabilityIds.map(id => getCapability(id)).filter(Boolean);
+const relatedObs = observables.filter(o => pb.observableIds.includes(o.id));
+---
+
+<ContentLayout title={pb.title} description={pb.context} showSidebar={false}>
+  <Breadcrumb items={[
+    { label: 'Playbooks', href: '/playbooks/' },
+    { label: pb.title },
+  ]} />
+
+  <div class="max-w-3xl">
+    <div class="flex items-center gap-2 mb-4 flex-wrap">
+      {caps.map(cap => cap && (
+        <a href={`/capabilities/${cap.slug}/`}>
+          <Badge text={`${cap.id}: ${cap.name}`} variant="domain" domain={cap.domain} />
+        </a>
+      ))}
+      <span class="text-sm font-mono text-gray-400 dark:text-gray-500">{pb.id}</span>
+    </div>
+
+    <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6">
+      {pb.title}
+    </h1>
+
+    {pb.context && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">The Scenario</h2>
+        <p class="text-gray-600 dark:text-gray-400 whitespace-pre-line">{pb.context}</p>
+      </section>
+    )}
+
+    {pb.topicsActivated.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Topics Activated</h2>
+        <div class="flex flex-wrap gap-2">
+          {pb.topicsActivated.map(topic => (
+            <span class="badge bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">{topic}</span>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {pb.decisionFramework && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Decision Framework</h2>
+        <div class="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-xl p-5">
+          <p class="text-blue-800 dark:text-blue-300 whitespace-pre-line">{pb.decisionFramework}</p>
+        </div>
+      </section>
+    )}
+
+    {pb.commonMistakes && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Common Mistakes</h2>
+        <div class="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl p-5">
+          <p class="text-red-800 dark:text-red-300 whitespace-pre-line">{pb.commonMistakes}</p>
+        </div>
+      </section>
+    )}
+
+    {pb.whatGoodLooksLike && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">What Good Looks Like</h2>
+        <div class="bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-xl p-5">
+          <p class="text-green-800 dark:text-green-300 whitespace-pre-line">{pb.whatGoodLooksLike}</p>
+        </div>
+      </section>
+    )}
+
+    {relatedObs.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Related Observables</h2>
+        <ul class="space-y-2">
+          {relatedObs.map(obs => {
+            const obsCap = getCapability(obs.capabilityId);
+            return (
+              <li>
+                <a
+                  href={obsCap ? `/capabilities/${obsCap.slug}/#${obs.id.toLowerCase()}` : '#'}
+                  class="flex items-start gap-2 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <span class="font-mono text-xs text-gray-400 dark:text-gray-500 mt-0.5 shrink-0">{obs.id}</span>
+                  <span class="text-sm text-gray-700 dark:text-gray-300">{obs.shortText}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+
+    {caps.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Related Capabilities</h2>
+        <div class="space-y-3">
+          {caps.map(cap => cap && (
+            <a href={`/capabilities/${cap.slug}/`} class="card block group">
+              <Badge text={cap.domain} variant="domain" domain={cap.domain} />
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-2">
+                {cap.id}: {cap.name}
+              </h3>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</ContentLayout>

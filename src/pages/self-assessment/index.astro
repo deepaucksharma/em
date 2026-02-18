@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import { capabilities } from '../../lib/data';
+---
+
+<BaseLayout title="Self-Assessment" description="Self-assessment tools for engineering leaders to evaluate capabilities and identify growth areas.">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Self-Assessment' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Self-Assessment
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Rate yourself across {capabilities.length} leadership capabilities, identify strengths and gaps, and generate a development plan.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+      <a href="/self-assessment/tool/" class="card group block text-center">
+        <div class="text-3xl mb-3">📊</div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+          Interactive Assessment
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Rate yourself 1-5 on each capability with behavioral anchors as guides. Results saved locally and exportable as CSV.
+        </p>
+      </a>
+
+      <a href="/self-assessment/feedback-bank/" class="card group block text-center">
+        <div class="text-3xl mb-3">💬</div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+          360 Feedback Bank
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Curated questions for self-reflection, direct reports, peers, and managers — organized by capability.
+        </p>
+      </a>
+    </div>
+
+    <section>
+      <h2 class="section-heading">How to Use</h2>
+      <div class="prose dark:prose-invert max-w-none">
+        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+          <li><strong>Start with self-assessment:</strong> Rate yourself on all 14 capabilities using the interactive tool. Use behavioral anchors to guide honest evaluation.</li>
+          <li><strong>Identify patterns:</strong> Look at your strengths (4-5) and growth areas (1-2). Are gaps concentrated in one domain?</li>
+          <li><strong>Gather feedback:</strong> Use the feedback bank to collect 360 input. Compare external perception with self-assessment.</li>
+          <li><strong>Build a plan:</strong> Use <a href="/learning-pathways/" class="text-blue-600 dark:text-blue-400 hover:underline">Learning Pathways</a> to create a development plan for your top growth areas.</li>
+          <li><strong>Reassess quarterly:</strong> Your ratings are saved locally. Revisit quarterly to track progress.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

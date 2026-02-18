@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import Badge from '../../components/ui/Badge.astro';
+import StatsBar from '../../components/ui/StatsBar.astro';
+import CapabilityCard from '../../components/cards/CapabilityCard.astro';
+import AntiPatternCard from '../../components/cards/AntiPatternCard.astro';
+import PlaybookCard from '../../components/cards/PlaybookCard.astro';
+import {
+  capabilities,
+  observables,
+  antiPatterns,
+  playbooks,
+  getCapabilitiesByDomain,
+  getAllDomains,
+} from '../../lib/data';
+import { getDomainColor } from '../../lib/utils';
+
+export function getStaticPaths() {
+  return getAllDomains().map(d => ({
+    params: { domain: d.toLowerCase() },
+    props: { domainName: d },
+  }));
+}
+
+const { domainName } = Astro.props;
+const domainCaps = getCapabilitiesByDomain(domainName);
+const capIds = new Set(domainCaps.map(c => c.id));
+const domainObs = observables.filter(o => capIds.has(o.capabilityId));
+const domainAPs = antiPatterns.filter(a => capIds.has(a.capabilityId));
+const domainPBs = playbooks.filter(p => p.capabilityIds.some(id => capIds.has(id)));
+
+const stats = [
+  { value: domainCaps.length, label: 'Capabilities' },
+  { value: domainObs.length, label: 'Observables' },
+  { value: domainAPs.length, label: 'Anti-Patterns' },
+  { value: domainPBs.length, label: 'Playbooks' },
+];
+---
+
+<BaseLayout title={`${domainName} Domain`} description={`All capabilities, anti-patterns, and playbooks in the ${domainName} domain.`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[
+      { label: 'Capabilities', href: '/capabilities/' },
+      { label: `${domainName} Domain` },
+    ]} />
+
+    <div class="mb-8">
+      <Badge text={domainName} variant="domain" domain={domainName} />
+      <h1 class:list={['text-3xl font-extrabold tracking-tight mt-3 mb-2', getDomainColor(domainName).text]}>
+        {domainName}
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        All capabilities, patterns, and playbooks in the {domainName} domain.
+      </p>
+    </div>
+
+    <div class="mb-10">
+      <StatsBar stats={stats} />
+    </div>
+
+    <!-- Capabilities -->
+    <section class="mb-10">
+      <h2 class="section-heading">Capabilities</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {domainCaps.map(cap => (
+          <CapabilityCard capability={cap} />
+        ))}
+      </div>
+    </section>
+
+    <!-- Anti-Patterns -->
+    {domainAPs.length > 0 && (
+      <section class="mb-10">
+        <h2 class="section-heading">Anti-Patterns</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {domainAPs.map(ap => (
+            <AntiPatternCard antiPattern={ap} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Playbooks -->
+    {domainPBs.length > 0 && (
+      <section class="mb-10">
+        <h2 class="section-heading">Playbooks</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {domainPBs.map(pb => (
+            <PlaybookCard playbook={pb} />
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>

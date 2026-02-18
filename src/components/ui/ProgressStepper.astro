@@ -1,0 +1,62 @@
+---
+interface Step {
+  level: number;
+  name: string;
+  slug: string;
+  description: string;
+}
+
+interface Props {
+  steps: Step[];
+  activeLevel?: number;
+}
+
+const { steps, activeLevel } = Astro.props;
+
+const stepColors: Record<number, string> = {
+  1: 'bg-red-500',
+  2: 'bg-orange-500',
+  3: 'bg-yellow-500',
+  4: 'bg-blue-500',
+  5: 'bg-green-500',
+};
+---
+
+<div class="relative">
+  {/* Vertical line */}
+  <div class="absolute left-4 top-4 bottom-4 w-0.5 bg-gray-200 dark:bg-gray-700" />
+
+  <div class="space-y-6">
+    {steps.map((step, i) => {
+      const isActive = activeLevel === step.level;
+      const color = stepColors[step.level] || 'bg-gray-500';
+
+      return (
+        <a href={`#${step.slug}`} class:list={[
+          'relative flex items-start gap-4 pl-0 group',
+          isActive && 'font-semibold',
+        ]}>
+          {/* Dot */}
+          <div class:list={[
+            'relative z-10 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0',
+            color,
+            isActive ? 'ring-4 ring-blue-200 dark:ring-blue-800' : '',
+          ]}>
+            {step.level}
+          </div>
+
+          {/* Content */}
+          <div class="pt-1">
+            <h4 class:list={[
+              'text-sm font-semibold',
+              isActive ? 'text-blue-700 dark:text-blue-300' : 'text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400',
+            ]}>
+              {step.name}
+            </h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{step.description}</p>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+</div>

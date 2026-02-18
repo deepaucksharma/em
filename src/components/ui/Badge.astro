@@ -1,0 +1,29 @@
+---
+import { getDomainColor } from '../../lib/utils';
+
+interface Props {
+  text: string;
+  variant?: 'domain' | 'relevance' | 'frequency' | 'type';
+  domain?: string;
+}
+
+const { text, variant = 'domain', domain } = Astro.props;
+
+function getClasses(): string {
+  if (variant === 'domain' && domain) {
+    return `badge ${getDomainColor(domain).badge}`;
+  }
+  if (variant === 'relevance') {
+    switch (text?.toLowerCase()) {
+      case 'high': return 'badge badge-high';
+      case 'medium': return 'badge badge-medium';
+      case 'low': return 'badge badge-low';
+      case 'n/a': return 'badge bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400';
+      default: return 'badge badge-low';
+    }
+  }
+  return 'badge bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
+}
+---
+
+<span class={getClasses()}>{text}</span>

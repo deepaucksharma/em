@@ -1,0 +1,50 @@
+---
+interface Props {
+  level: {
+    level: number;
+    title: string;
+    slug: string;
+    scope: string;
+    keyDifferences: string[];
+    promotionBlockers: string[];
+    transitionSignals: string[];
+  };
+  active?: boolean;
+}
+
+const { level, active = false } = Astro.props;
+
+const levelColors: Record<number, { accent: string; bg: string; border: string }> = {
+  1: { accent: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-50 dark:bg-blue-950/20', border: 'border-blue-200 dark:border-blue-800' },
+  2: { accent: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950/20', border: 'border-indigo-200 dark:border-indigo-800' },
+  3: { accent: 'text-purple-600 dark:text-purple-400', bg: 'bg-purple-50 dark:bg-purple-950/20', border: 'border-purple-200 dark:border-purple-800' },
+  4: { accent: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-950/20', border: 'border-amber-200 dark:border-amber-800' },
+};
+
+const colors = levelColors[level.level] || levelColors[1];
+---
+
+<a href={`/career-progression/${level.slug}/`} class:list={['card group block', active && `ring-2 ring-blue-400 dark:ring-blue-600`]}>
+  <div class="flex items-center gap-3 mb-3">
+    <span class:list={['text-2xl font-extrabold', colors.accent]}>L{level.level}</span>
+    <div>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        {level.title}
+      </h3>
+    </div>
+  </div>
+
+  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{level.scope}</p>
+
+  <div class="space-y-2">
+    <h4 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Key Differences</h4>
+    <ul class="space-y-1">
+      {level.keyDifferences.slice(0, 3).map(diff => (
+        <li class="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+          <span class="text-gray-300 dark:text-gray-600 mt-0.5">&bull;</span>
+          {diff}
+        </li>
+      ))}
+    </ul>
+  </div>
+</a>

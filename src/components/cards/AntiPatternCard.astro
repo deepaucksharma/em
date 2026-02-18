@@ -1,0 +1,30 @@
+---
+import Badge from '../ui/Badge.astro';
+import type { AntiPattern } from '../../lib/data';
+import { getCapability } from '../../lib/data';
+
+interface Props {
+  antiPattern: AntiPattern;
+}
+
+const { antiPattern } = Astro.props;
+const cap = getCapability(antiPattern.capabilityId);
+---
+
+<a href={`/anti-patterns/${antiPattern.slug}/`} class="card group block">
+  <div class="flex items-start justify-between mb-3">
+    {cap && <Badge text={cap.domain} variant="domain" domain={cap.domain} />}
+    <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{antiPattern.id}</span>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+    {antiPattern.name}
+  </h3>
+  <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-3">
+    {antiPattern.warningSigns}
+  </p>
+  {cap && (
+    <div class="text-xs text-gray-500 dark:text-gray-400">
+      {cap.id}: {cap.name}
+    </div>
+  )}
+</a>

@@ -1,0 +1,113 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "name": "Ad Hoc",
+      "slug": "ad-hoc",
+      "description": "Processes are informal and reactive. Success depends on individual heroics.",
+      "indicators": [
+        "No documented engineering processes",
+        "Incident response is chaotic with no runbooks or rotation",
+        "No career framework or leveling guide exists",
+        "Hiring is ad hoc with no consistent bar or rubric",
+        "Deployments are manual and high-risk"
+      ],
+      "recommendedActions": [
+        "Establish basic on-call rotation with escalation paths",
+        "Create hiring rubric for top 2 roles",
+        "Implement weekly team standup and retrospectives",
+        "Document the top 5 most critical runbooks",
+        "Define a minimal deploy checklist"
+      ],
+      "capabilityFocus": ["C4", "C8", "C11"]
+    },
+    {
+      "level": 2,
+      "name": "Emerging",
+      "slug": "emerging",
+      "description": "Some processes exist but are inconsistently applied. Pockets of good practice depend on specific managers.",
+      "indicators": [
+        "Basic processes exist but vary across teams",
+        "Some teams have on-call rotations, others do not",
+        "Career ladder exists on paper but is not calibrated",
+        "Hiring loops exist but interviewers are not trained",
+        "Retrospectives happen sporadically with no follow-through",
+        "Metrics are collected but rarely reviewed or acted upon"
+      ],
+      "recommendedActions": [
+        "Standardize incident severity definitions across all teams",
+        "Train all hiring managers on structured interviewing",
+        "Run first org-wide calibration session for performance reviews",
+        "Establish a shared engineering metrics dashboard",
+        "Create onboarding checklist with 30/60/90-day milestones"
+      ],
+      "capabilityFocus": ["C6", "C9", "C12", "C14"]
+    },
+    {
+      "level": 3,
+      "name": "Defined",
+      "slug": "defined",
+      "description": "Consistent processes are documented, communicated, and followed across the organization. Roles and expectations are clear.",
+      "indicators": [
+        "Engineering handbook is published and maintained",
+        "All teams follow a consistent SDLC with defined quality gates",
+        "Career framework is calibrated and used in promotion decisions",
+        "Incident response has defined severity levels, roles, and SLAs",
+        "Cross-functional planning cadence is established (quarterly or similar)",
+        "Security and compliance requirements are documented and tracked"
+      ],
+      "recommendedActions": [
+        "Introduce architecture review process for major changes",
+        "Implement cross-team dependency tracking and communication",
+        "Begin measuring DORA metrics consistently",
+        "Establish formal mentorship or coaching program for EMs",
+        "Create resource allocation model tied to strategic priorities"
+      ],
+      "capabilityFocus": ["C3", "C5", "C7", "C13"]
+    },
+    {
+      "level": 4,
+      "name": "Managed",
+      "slug": "managed",
+      "description": "Processes are measured, data-driven, and continuously improved. Leadership decisions are informed by metrics and feedback loops.",
+      "indicators": [
+        "Engineering metrics are reviewed regularly and drive decisions",
+        "Talent reviews and succession planning are formalized",
+        "Cross-team dependencies are actively managed with clear owners",
+        "Resource allocation follows a transparent framework tied to OKRs",
+        "Post-incident reviews consistently produce systemic improvements",
+        "Security posture is proactively monitored with vulnerability SLAs"
+      ],
+      "recommendedActions": [
+        "Introduce leading indicators alongside lagging metrics",
+        "Build internal leadership development program for senior ICs and EMs",
+        "Establish tech radar or technology governance process",
+        "Run annual organizational health survey with action plans",
+        "Implement portfolio-level investment tracking across teams"
+      ],
+      "capabilityFocus": ["C1", "C2", "C10"]
+    },
+    {
+      "level": 5,
+      "name": "Optimizing",
+      "slug": "optimizing",
+      "description": "The organization continuously experiments, learns, and adapts. Engineering leadership is a strategic differentiator.",
+      "indicators": [
+        "Teams proactively experiment with process improvements",
+        "Leadership pipeline produces ready-now candidates for critical roles",
+        "Engineering strategy is visibly tied to business outcomes",
+        "Culture of psychological safety enables candid upward feedback",
+        "Failure is treated as a learning signal, not a blame event",
+        "Cross-org initiatives are self-organizing with minimal top-down coordination"
+      ],
+      "recommendedActions": [
+        "Publish internal case studies of successful org changes",
+        "Mentor other departments on operational excellence practices",
+        "Contribute to industry communities and open-source leadership frameworks",
+        "Run chaos engineering exercises for organizational resilience",
+        "Establish innovation time or internal incubator programs"
+      ],
+      "capabilityFocus": ["C1", "C5", "C7", "C12"]
+    }
+  ]
+}

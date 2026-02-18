@@ -1,0 +1,99 @@
+---
+import Badge from '../ui/Badge.astro';
+import type { Observable } from '../../lib/data';
+
+interface Props {
+  observable: Observable;
+}
+
+const { observable } = Astro.props;
+---
+
+<details id={observable.id.toLowerCase()} class="card group open:ring-2 open:ring-blue-200 dark:open:ring-blue-800">
+  <summary class="cursor-pointer list-none">
+    <div class="flex items-start gap-3">
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-1 flex-wrap">
+          <span class="font-mono text-xs text-gray-400 dark:text-gray-500">{observable.id}</span>
+          <Badge text={`EM: ${observable.emRelevance}`} variant="relevance" />
+          <Badge text={`Dir: ${observable.directorRelevance}`} variant="relevance" />
+          {observable.requiredFrequency && (
+            <span class="text-xs text-gray-500 dark:text-gray-400">{observable.requiredFrequency}</span>
+          )}
+        </div>
+        <h4 class="text-base font-medium text-gray-900 dark:text-white">
+          {observable.shortText}
+        </h4>
+      </div>
+      <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </summary>
+
+  <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 space-y-4">
+    {observable.fullExample && (
+      <div>
+        <h5 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Full Example</h5>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{observable.fullExample}</p>
+      </div>
+    )}
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {observable.why && (
+        <div class="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3">
+          <h5 class="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">Why</h5>
+          <p class="text-sm text-blue-600 dark:text-blue-400">{observable.why}</p>
+        </div>
+      )}
+      {observable.how && (
+        <div class="bg-green-50 dark:bg-green-950/20 rounded-lg p-3">
+          <h5 class="text-sm font-semibold text-green-700 dark:text-green-300 mb-1">How</h5>
+          <p class="text-sm text-green-600 dark:text-green-400">{observable.how}</p>
+        </div>
+      )}
+      {observable.expectedResult && (
+        <div class="bg-purple-50 dark:bg-purple-950/20 rounded-lg p-3">
+          <h5 class="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-1">Expected Result</h5>
+          <p class="text-sm text-purple-600 dark:text-purple-400">{observable.expectedResult}</p>
+        </div>
+      )}
+    </div>
+
+    {observable.evidenceTypes.length > 0 && (
+      <div>
+        <h5 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Evidence Types</h5>
+        <div class="flex flex-wrap gap-1.5">
+          {observable.evidenceTypes.map(et => (
+            <span class="badge bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">{et}</span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {observable.calibrationSignals.length > 0 && (
+      <div>
+        <h5 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Calibration Signals</h5>
+        <ul class="space-y-1">
+          {observable.calibrationSignals.map(sig => (
+            <li class="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+              <span class="badge bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 shrink-0 mt-0.5">{sig.signalType}</span>
+              {sig.signalText}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    {observable.levelNotes && (
+      <div>
+        <h5 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Level Notes</h5>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{observable.levelNotes}</p>
+      </div>
+    )}
+
+    <div class="text-xs text-gray-400 dark:text-gray-500">
+      Weight: {observable.defaultWeight.toFixed(3)}
+    </div>
+  </div>
+</details>

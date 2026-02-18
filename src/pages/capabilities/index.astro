@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import CapabilityCard from '../../components/cards/CapabilityCard.astro';
+import { capabilities } from '../../lib/data';
+import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+
+const capsByDomain = DOMAIN_ORDER.map(domain => ({
+  domain,
+  capabilities: capabilities.filter(c => c.domain === domain),
+}));
+---
+
+<BaseLayout title="Capabilities" description="All 14 engineering leadership capabilities organized by domain.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Capabilities' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">Capabilities</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {capabilities.length} capabilities across {DOMAIN_ORDER.length} domains — the building blocks of engineering leadership.
+      </p>
+    </div>
+
+    {capsByDomain.map(({ domain, capabilities: caps }) => (
+      <section class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <h2 class:list={['text-xl font-bold', getDomainColor(domain).text]}>{domain}</h2>
+          <span class="text-sm text-gray-500 dark:text-gray-400">{caps.length} capabilities</span>
+          <a href={`/domains/${domain.toLowerCase()}/`} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 ml-auto">
+            View domain &rarr;
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {caps.map(cap => (
+            <CapabilityCard capability={cap} />
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

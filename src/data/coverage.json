@@ -1,0 +1,114 @@
+[
+  {
+    "capabilityId": "C1",
+    "name": "Org-Level Thinking",
+    "domain": "Strategy",
+    "primarySubTopics": 16,
+    "observables": 15,
+    "coveragePercent": 94.0
+  },
+  {
+    "capabilityId": "C2",
+    "name": "Strategic Prioritization",
+    "domain": "Strategy",
+    "primarySubTopics": 4,
+    "observables": 4,
+    "coveragePercent": 100.0
+  },
+  {
+    "capabilityId": "C3",
+    "name": "Systems Design & Architecture",
+    "domain": "Execution",
+    "primarySubTopics": 11,
+    "observables": 10,
+    "coveragePercent": 91.0
+  },
+  {
+    "capabilityId": "C4",
+    "name": "Operational Leadership & Rhythm",
+    "domain": "Execution",
+    "primarySubTopics": 13,
+    "observables": 11,
+    "coveragePercent": 85.0
+  },
+  {
+    "capabilityId": "C5",
+    "name": "Cross-Functional Influence",
+    "domain": "Stakeholder",
+    "primarySubTopics": 16,
+    "observables": 15,
+    "coveragePercent": 94.0
+  },
+  {
+    "capabilityId": "C6",
+    "name": "Coaching & Talent Development",
+    "domain": "People",
+    "primarySubTopics": 12,
+    "observables": 12,
+    "coveragePercent": 100.0
+  },
+  {
+    "capabilityId": "C7",
+    "name": "Decision Framing & Communication",
+    "domain": "Stakeholder",
+    "primarySubTopics": 11,
+    "observables": 7,
+    "coveragePercent": 64.0
+  },
+  {
+    "capabilityId": "C8",
+    "name": "Incidents, Risk & Reliability",
+    "domain": "Reliability",
+    "primarySubTopics": 6,
+    "observables": 6,
+    "coveragePercent": 100.0
+  },
+  {
+    "capabilityId": "C9",
+    "name": "Metrics, Measurement & Outcomes",
+    "domain": "Data",
+    "primarySubTopics": 9,
+    "observables": 8,
+    "coveragePercent": 89.0
+  },
+  {
+    "capabilityId": "C10",
+    "name": "Resource Allocation & Tradeoffs",
+    "domain": "Strategy",
+    "primarySubTopics": 8,
+    "observables": 5,
+    "coveragePercent": 62.0
+  },
+  {
+    "capabilityId": "C11",
+    "name": "Hiring, Onboarding & Role Design",
+    "domain": "People",
+    "primarySubTopics": 10,
+    "observables": 8,
+    "coveragePercent": 80.0
+  },
+  {
+    "capabilityId": "C12",
+    "name": "Culture & Norms Shaping",
+    "domain": "People",
+    "primarySubTopics": 8,
+    "observables": 5,
+    "coveragePercent": 62.0
+  },
+  {
+    "capabilityId": "C13",
+    "name": "Security & Compliance Posture",
+    "domain": "Reliability",
+    "primarySubTopics": 4,
+    "observables": 4,
+    "coveragePercent": 100.0
+  },
+  {
+    "capabilityId": "C14",
+    "name": "Performance Management & Calibration",
+    "domain": "People",
+    "primarySubTopics": 9,
+    "observables": 6,
+    "coveragePercent": 67.0
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "C1",
+    "name": "Org-Level Thinking",
+    "slug": "org-level-thinking",
+    "domain": "Strategy",
+    "description": "Sees and shapes cross-team systems, tradeoffs, and long-horizon outcomes.",
+    "primarySubTopics": [
+      "16"
+    ],
+    "observableCount": 15,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C2",
+    "name": "Strategic Prioritization",
+    "slug": "strategic-prioritization",
+    "domain": "Strategy",
+    "description": "Defines and defends prioritization across competing investments.",
+    "primarySubTopics": [
+      "4"
+    ],
+    "observableCount": 4,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C3",
+    "name": "Systems Design & Architecture",
+    "slug": "systems-design-architecture",
+    "domain": "Execution",
+    "description": "Designs resilient systems and organizational structures that scale.",
+    "primarySubTopics": [
+      "11"
+    ],
+    "observableCount": 10,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C4",
+    "name": "Operational Leadership & Rhythm",
+    "slug": "operational-leadership-rhythm",
+    "domain": "Execution",
+    "description": "Establishes operating cadences and ensures reliable delivery.",
+    "primarySubTopics": [
+      "13"
+    ],
+    "observableCount": 11,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C5",
+    "name": "Cross-Functional Influence",
+    "slug": "cross-functional-influence",
+    "domain": "Stakeholder",
+    "description": "Aligns peers and leaders through influence, not authority.",
+    "primarySubTopics": [
+      "16"
+    ],
+    "observableCount": 15,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C6",
+    "name": "Coaching & Talent Development",
+    "slug": "coaching-talent-development",
+    "domain": "People",
+    "description": "Develops ICs and managers through 1:1s, career conversations, and growth-focused leadership.",
+    "primarySubTopics": [
+      "12"
+    ],
+    "observableCount": 12,
+    "v5Status": "UPDATED"
+  },
+  {
+    "id": "C7",
+    "name": "Decision Framing & Communication",
+    "slug": "decision-framing-communication",
+    "domain": "Stakeholder",
+    "description": "Frames complex choices clearly with options, tradeoffs, and risks.",
+    "primarySubTopics": [
+      "11"
+    ],
+    "observableCount": 7,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C8",
+    "name": "Incidents, Risk & Reliability",
+    "slug": "incidents-risk-reliability",
+    "domain": "Reliability",
+    "description": "Manages incidents, extracts systemic fixes, and drives operational risk reduction.",
+    "primarySubTopics": [
+      "6"
+    ],
+    "observableCount": 6,
+    "v5Status": "UPDATED"
+  },
+  {
+    "id": "C9",
+    "name": "Metrics, Measurement & Outcomes",
+    "slug": "metrics-measurement-outcomes",
+    "domain": "Data",
+    "description": "Defines success metrics and uses data to validate decisions.",
+    "primarySubTopics": [
+      "9"
+    ],
+    "observableCount": 8,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C10",
+    "name": "Resource Allocation & Tradeoffs",
+    "slug": "resource-allocation-tradeoffs",
+    "domain": "Strategy",
+    "description": "Allocates budget, headcount, and attention to maximize long-term value.",
+    "primarySubTopics": [
+      "8"
+    ],
+    "observableCount": 5,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C11",
+    "name": "Hiring, Onboarding & Role Design",
+    "slug": "hiring-onboarding-role-design",
+    "domain": "People",
+    "description": "Designs hiring processes, ramps teams effectively, and builds talent brand.",
+    "primarySubTopics": [
+      "10"
+    ],
+    "observableCount": 8,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C12",
+    "name": "Culture & Norms Shaping",
+    "slug": "culture-norms-shaping",
+    "domain": "People",
+    "description": "Uses signals, rituals, and policy to shape team culture and psychological safety.",
+    "primarySubTopics": [
+      "8"
+    ],
+    "observableCount": 5,
+    "v5Status": "CARRIED"
+  },
+  {
+    "id": "C13",
+    "name": "Security & Compliance Posture",
+    "slug": "security-compliance-posture",
+    "domain": "Reliability",
+    "description": "Drives proactive security governance, vulnerability management, and compliance readiness.",
+    "primarySubTopics": [
+      "4"
+    ],
+    "observableCount": 4,
+    "v5Status": "NEW"
+  },
+  {
+    "id": "C14",
+    "name": "Performance Management & Calibration",
+    "slug": "performance-management-calibration",
+    "domain": "People",
+    "description": "Runs the performance cycle: reviews, calibration, ratings, PIPs, and exits with rigor and fairness.",
+    "primarySubTopics": [
+      "9"
+    ],
+    "observableCount": 6,
+    "v5Status": "NEW"
+  }
+]

@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  /* Domain colors */
+  --color-domain-strategy: #3b82f6;
+  --color-domain-execution: #22c55e;
+  --color-domain-stakeholder: #a855f7;
+  --color-domain-people: #f59e0b;
+  --color-domain-reliability: #ef4444;
+  --color-domain-data: #06b6d4;
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Component classes */
+@utility card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .dark & {
+      background-color: var(--color-gray-800);
+      border-color: var(--color-gray-700);
+    }
+  }
+
+  .dark & {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+}
+
+@utility badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@utility badge-strategy {
+  background-color: #dbeafe;
+  color: #1e40af;
+
+  .dark & {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+  }
+}
+
+@utility badge-execution {
+  background-color: #dcfce7;
+  color: #166534;
+
+  .dark & {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+  }
+}
+
+@utility badge-stakeholder {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+
+  .dark & {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #d8b4fe;
+  }
+}
+
+@utility badge-people {
+  background-color: #fef3c7;
+  color: #92400e;
+
+  .dark & {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+  }
+}
+
+@utility badge-reliability {
+  background-color: #fee2e2;
+  color: #991b1b;
+
+  .dark & {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+  }
+}
+
+@utility badge-data {
+  background-color: #cffafe;
+  color: #155e75;
+
+  .dark & {
+    background-color: rgba(6, 182, 212, 0.15);
+    color: #67e8f9;
+  }
+}
+
+@utility badge-high {
+  background-color: #dcfce7;
+  color: #166534;
+
+  .dark & {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+  }
+}
+
+@utility badge-medium {
+  background-color: #fef3c7;
+  color: #92400e;
+
+  .dark & {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+  }
+}
+
+@utility badge-low {
+  background-color: #f3f4f6;
+  color: #374151;
+
+  .dark & {
+    background-color: rgba(55, 65, 81, 0.5);
+    color: #d1d5db;
+  }
+}
+
+@utility section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,179 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "title": "Engineering Manager",
+      "slug": "engineering-manager",
+      "scope": "Single team (5-10 engineers), owns team execution and people management",
+      "keyDifferences": [
+        "Manages ICs directly with regular 1:1s and career conversations",
+        "Owns sprint execution, delivery commitments, and team velocity",
+        "Partners with PM on team roadmap and backlog prioritization",
+        "First point of escalation for technical and interpersonal issues",
+        "Drives hiring for their team and owns onboarding experience",
+        "Responsible for team health, morale, and day-to-day culture"
+      ],
+      "capabilityExpectations": {
+        "C1": "low",
+        "C2": "medium",
+        "C3": "medium",
+        "C4": "high",
+        "C5": "medium",
+        "C6": "high",
+        "C7": "medium",
+        "C8": "high",
+        "C9": "medium",
+        "C10": "low",
+        "C11": "high",
+        "C12": "high",
+        "C13": "medium",
+        "C14": "high"
+      },
+      "promotionBlockers": [
+        "Cannot delegate — does everything themselves and becomes a bottleneck",
+        "No evidence of cross-team impact or influence beyond their own team",
+        "Team cannot function without them; no succession or knowledge sharing",
+        "Avoids difficult performance conversations or delays PIPs",
+        "Focuses only on execution with no strategic thinking about team direction"
+      ],
+      "transitionSignals": [
+        "Proactively solving cross-team problems without being asked",
+        "Coaching other EMs informally on people management challenges",
+        "VP or Director seeks their input on org-level decisions",
+        "Successfully navigated a team reorg or significant scope change",
+        "Built repeatable processes that other teams have adopted"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Senior Engineering Manager",
+      "slug": "senior-engineering-manager",
+      "scope": "2-3 teams (12-25 engineers), owns cross-team coordination and technical strategy for a product area",
+      "keyDifferences": [
+        "Manages EMs and/or tech leads in addition to some ICs",
+        "Owns cross-team coordination and dependency management within their area",
+        "Drives technical strategy and architecture decisions for their product area",
+        "Represents engineering in cross-functional leadership forums",
+        "Leads hiring strategy across multiple teams including pipeline building"
+      ],
+      "capabilityExpectations": {
+        "C1": "medium",
+        "C2": "medium",
+        "C3": "high",
+        "C4": "high",
+        "C5": "high",
+        "C6": "high",
+        "C7": "high",
+        "C8": "high",
+        "C9": "high",
+        "C10": "medium",
+        "C11": "high",
+        "C12": "high",
+        "C13": "medium",
+        "C14": "high"
+      },
+      "promotionBlockers": [
+        "Still operating as a hands-on EM rather than leading through other managers",
+        "Cannot articulate a coherent technical vision for their area",
+        "Struggles to manage competing priorities across their teams",
+        "Does not invest in developing their direct reports as leaders",
+        "Avoids organizational politics and fails to build cross-functional relationships"
+      ],
+      "transitionSignals": [
+        "Successfully led a multi-team initiative with significant org-wide impact",
+        "Developed an EM who was promoted into a leadership role",
+        "Proposed and executed a reorganization that improved team effectiveness",
+        "Built strong relationships with senior leaders outside engineering",
+        "Regularly consulted by peers on organizational design and team health"
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Director of Engineering",
+      "slug": "director-of-engineering",
+      "scope": "4-8 teams (30-60 engineers), owns engineering strategy for a business domain and manages a team of managers",
+      "keyDifferences": [
+        "Manages managers exclusively; no direct IC reports",
+        "Owns engineering strategy and roadmap for an entire business domain",
+        "Drives headcount planning, budget allocation, and resource tradeoffs",
+        "Accountable for org health metrics: attrition, engagement, diversity",
+        "Partners with VP and C-suite on company-level technical decisions",
+        "Shapes engineering culture through policy, rituals, and norms"
+      ],
+      "capabilityExpectations": {
+        "C1": "high",
+        "C2": "high",
+        "C3": "high",
+        "C4": "high",
+        "C5": "high",
+        "C6": "high",
+        "C7": "high",
+        "C8": "medium",
+        "C9": "high",
+        "C10": "high",
+        "C11": "medium",
+        "C12": "high",
+        "C13": "high",
+        "C14": "high"
+      },
+      "promotionBlockers": [
+        "Cannot translate business strategy into engineering priorities",
+        "Micromanages their managers instead of coaching and empowering them",
+        "Lacks credibility with executive leadership or board-level stakeholders",
+        "Fails to build a leadership pipeline — always hiring externally for manager roles",
+        "Reactive to organizational issues rather than proactively shaping the org"
+      ],
+      "transitionSignals": [
+        "Influenced company-level strategy beyond their own domain",
+        "Successfully scaled the org through a period of rapid growth or contraction",
+        "Built a self-sustaining leadership team that operates effectively in their absence",
+        "Drove a major technical or organizational transformation end-to-end",
+        "Recognized as a thought leader internally and externally in engineering leadership"
+      ]
+    },
+    {
+      "level": 4,
+      "title": "VP of Engineering",
+      "slug": "vp-of-engineering",
+      "scope": "Entire engineering organization (60-300+ engineers), owns engineering as a function and sits on the leadership team",
+      "keyDifferences": [
+        "Owns the engineering function end-to-end: strategy, execution, people, culture",
+        "Reports to CTO or CEO; accountable to board for engineering outcomes",
+        "Drives multi-year technical strategy aligned with business objectives",
+        "Owns the engineering budget and makes final headcount allocation decisions",
+        "Represents engineering externally: recruiting brand, conference talks, partnerships",
+        "Navigates company politics and builds coalitions across the executive team"
+      ],
+      "capabilityExpectations": {
+        "C1": "high",
+        "C2": "high",
+        "C3": "medium",
+        "C4": "medium",
+        "C5": "high",
+        "C6": "medium",
+        "C7": "high",
+        "C8": "medium",
+        "C9": "high",
+        "C10": "high",
+        "C11": "medium",
+        "C12": "high",
+        "C13": "high",
+        "C14": "medium"
+      },
+      "promotionBlockers": [
+        "Cannot operate at the executive level — gets pulled into tactical details",
+        "Fails to build trust with CEO, CFO, or board members",
+        "Engineering is seen as a cost center rather than a strategic asset under their leadership",
+        "Does not develop Directors who can own domains independently",
+        "Lacks a compelling multi-year vision for the engineering organization"
+      ],
+      "transitionSignals": [
+        "Engineering is recognized as a competitive advantage by the board",
+        "Multiple Directors in the org are ready-now candidates for VP roles elsewhere",
+        "Successfully navigated a major crisis (acquisition, reorg, layoff) with org trust intact",
+        "Drove a company-level initiative that required cross-functional executive alignment",
+        "Built an engineering culture that attracts top talent and has industry recognition"
+      ]
+    }
+  ]
+}

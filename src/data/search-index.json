@@ -1,0 +1,1748 @@
+[
+  {
+    "title": "C1: Org-Level Thinking",
+    "description": "Sees and shapes cross-team systems, tradeoffs, and long-horizon outcomes.",
+    "type": "capability",
+    "url": "/capabilities/org-level-thinking/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1"
+  },
+  {
+    "title": "C2: Strategic Prioritization",
+    "description": "Defines and defends prioritization across competing investments.",
+    "type": "capability",
+    "url": "/capabilities/strategic-prioritization/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2"
+  },
+  {
+    "title": "C3: Systems Design & Architecture",
+    "description": "Designs resilient systems and organizational structures that scale.",
+    "type": "capability",
+    "url": "/capabilities/systems-design-architecture/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3"
+  },
+  {
+    "title": "C4: Operational Leadership & Rhythm",
+    "description": "Establishes operating cadences and ensures reliable delivery.",
+    "type": "capability",
+    "url": "/capabilities/operational-leadership-rhythm/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4"
+  },
+  {
+    "title": "C5: Cross-Functional Influence",
+    "description": "Aligns peers and leaders through influence, not authority.",
+    "type": "capability",
+    "url": "/capabilities/cross-functional-influence/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5"
+  },
+  {
+    "title": "C6: Coaching & Talent Development",
+    "description": "Develops ICs and managers through 1:1s, career conversations, and growth-focused leadership.",
+    "type": "capability",
+    "url": "/capabilities/coaching-talent-development/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6"
+  },
+  {
+    "title": "C7: Decision Framing & Communication",
+    "description": "Frames complex choices clearly with options, tradeoffs, and risks.",
+    "type": "capability",
+    "url": "/capabilities/decision-framing-communication/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7"
+  },
+  {
+    "title": "C8: Incidents, Risk & Reliability",
+    "description": "Manages incidents, extracts systemic fixes, and drives operational risk reduction.",
+    "type": "capability",
+    "url": "/capabilities/incidents-risk-reliability/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8"
+  },
+  {
+    "title": "C9: Metrics, Measurement & Outcomes",
+    "description": "Defines success metrics and uses data to validate decisions.",
+    "type": "capability",
+    "url": "/capabilities/metrics-measurement-outcomes/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9"
+  },
+  {
+    "title": "C10: Resource Allocation & Tradeoffs",
+    "description": "Allocates budget, headcount, and attention to maximize long-term value.",
+    "type": "capability",
+    "url": "/capabilities/resource-allocation-tradeoffs/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10"
+  },
+  {
+    "title": "C11: Hiring, Onboarding & Role Design",
+    "description": "Designs hiring processes, ramps teams effectively, and builds talent brand.",
+    "type": "capability",
+    "url": "/capabilities/hiring-onboarding-role-design/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11"
+  },
+  {
+    "title": "C12: Culture & Norms Shaping",
+    "description": "Uses signals, rituals, and policy to shape team culture and psychological safety.",
+    "type": "capability",
+    "url": "/capabilities/culture-norms-shaping/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12"
+  },
+  {
+    "title": "C13: Security & Compliance Posture",
+    "description": "Drives proactive security governance, vulnerability management, and compliance readiness.",
+    "type": "capability",
+    "url": "/capabilities/security-compliance-posture/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13"
+  },
+  {
+    "title": "C14: Performance Management & Calibration",
+    "description": "Runs the performance cycle: reviews, calibration, ratings, PIPs, and exits with rigor and fairness.",
+    "type": "capability",
+    "url": "/capabilities/performance-management-calibration/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14"
+  },
+  {
+    "title": "C1-O1: Designs team topology aligned to value streams and cognitive load",
+    "description": "Reorganizes from layer-based to stream-aligned teams, mapping ownership to customer value flows with clear boundaries.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o1",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O1"
+  },
+  {
+    "title": "C1-O2: Applies inverse Conway maneuver to align org structure with target architecture",
+    "description": "Restructures teams to match desired microservices architecture, enabling independent deployment per team.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o2",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O2"
+  },
+  {
+    "title": "C1-O3: Executes re-orgs with structured communication and zero regrettable attrition",
+    "description": "Runs re-org of 30 engineers across 4 teams: managers told first, ICs within 24hrs, phased transition over 3 weeks, full productivity restored by week 4.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o3",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O3"
+  },
+  {
+    "title": "C1-O4: Recognizes re-org signals and acts before problems become crises",
+    "description": "Identifies growing coordination overhead and unclear ownership across two teams, proposes and executes split before productivity degrades.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o4",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O4"
+  },
+  {
+    "title": "C1-O5: Maintains single-threaded ownership registry with no ambiguity",
+    "description": "Builds and maintains service\u2192team\u2192on-call\u2192contact registry; resolves disputes by escalation, not by sharing ownership.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o5",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O5"
+  },
+  {
+    "title": "C1-O6: Sets coherent org-level goals aligned to business strategy with visible cross-team dependencies",
+    "description": "Creates cascading OKRs from business strategy to org objectives to team goals; maps cross-team dependencies; explicitly connects engineering work to business outcomes and revenue impact.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o6",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O6"
+  },
+  {
+    "title": "C1-O7: Monitors org health dashboard and intervenes on early signals",
+    "description": "Tracks attrition, engagement scores, skip-level themes, and PTO usage monthly; catches burnout trend in one team before anyone resigns.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o7",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O7"
+  },
+  {
+    "title": "C1-O8: Leads org through crisis while maintaining delivery on critical path",
+    "description": "During 20% RIF, owns communication, protects remaining team's morale, maintains delivery on top priorities, sees zero additional voluntary attrition for 6 months.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o8",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O8"
+  },
+  {
+    "title": "C1-O9: Delegates execution to EMs while operating at Director altitude",
+    "description": "Defines explicit ownership boundaries: Director owns strategy, cross-team, upward comms; EMs own team execution, 1:1s, sprint management. EMs escalate to Director only when criteria met.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o9",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O9"
+  },
+  {
+    "title": "C1-O10: Considers second-order effects and system-wide implications of decisions",
+    "description": "Before approving a team's velocity metric target, identifies that it would incentivize gaming and instead proposes a balanced scorecard approach.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o10",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O10"
+  },
+  {
+    "title": "C2-O1: Runs structured planning process aligning eng investment to business priorities",
+    "description": "Leads H2 planning: gathers asks from PM/business/tech-debt/reliability, calculates real capacity, stack-ranks, gets stakeholder buy-in on final plan.",
+    "type": "observable",
+    "url": "/capabilities/strategic-prioritization/#c2-o1",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2-O1"
+  },
+  {
+    "title": "C2-O2: Declines requests by making trade-offs visible, not by saying no",
+    "description": "Responds to scope request with: 'Yes, if we deprioritize X \u2014 would you like to make that trade-off?' with data on impact of each option.",
+    "type": "observable",
+    "url": "/capabilities/strategic-prioritization/#c2-o2",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2-O2"
+  },
+  {
+    "title": "C2-O3: Makes progress under ambiguity by matching decision rigor to reversibility",
+    "description": "Classifies a technology choice as reversible, ships in 2 days instead of 2 weeks; classifies a data model change as irreversible, invests 3 weeks in analysis.",
+    "type": "observable",
+    "url": "/capabilities/strategic-prioritization/#c2-o3",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2-O3"
+  },
+  {
+    "title": "C2-O4: Challenges assumptions using first principles when situation demands fresh thinking",
+    "description": "Questions why team is building a custom auth system; first-principles analysis reveals the original requirement no longer exists, saving 3 months of work.",
+    "type": "observable",
+    "url": "/capabilities/strategic-prioritization/#c2-o4",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2-O4"
+  },
+  {
+    "title": "C3-O1: Authors and maintains multi-quarter technical vision with clear migration path",
+    "description": "Co-authors tech strategy doc with Staff engineers: current state \u2192 target state \u2192 migration path \u2192 success metrics. Reviews quarterly against delivery reality.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o1",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O1"
+  },
+  {
+    "title": "C3-O2: Runs architecture reviews covering service boundaries, modularity, and design quality",
+    "description": "Creates RFC template with required sections, sets review cadence, evaluates service boundary decisions against team topology and cognitive load, maintains searchable decision log. Reviews prevent both monolith coupling and over-decomposition.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o2",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O2"
+  },
+  {
+    "title": "C3-O3: Makes build-vs-buy decisions using repeatable framework with TCO analysis",
+    "description": "Evaluates vendor solution using 3-year TCO including maintenance, lock-in risk, and team capability fit; saves 6 eng-months by buying instead of building.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o3",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O3"
+  },
+  {
+    "title": "C3-O4: Manages tech debt systematically with explicit capacity allocation",
+    "description": "Maintains debt inventory classified by severity, allocates 15-20% sprint capacity, tracks impact of paydown on delivery metrics.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o4",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O4"
+  },
+  {
+    "title": "C3-O5: Defines SLOs with error budgets that drive reliability trade-offs",
+    "description": "Partners with SRE to set SLOs per service, defines error budgets, uses budget consumption as signal to slow feature work and invest in reliability.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o5",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O5"
+  },
+  {
+    "title": "C3-O6: Plans and executes migrations incrementally without business disruption",
+    "description": "Uses strangler fig pattern to migrate system serving 10K QPS: parallel running with comparison testing, phased rollout with feature flags, zero customer-facing incidents.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o6",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O6"
+  },
+  {
+    "title": "C3-O7: Maintains observability standards and dependency maps enabling fast incident diagnosis",
+    "description": "Defines structured logging format, required metrics per service, end-to-end trace propagation, and dependency maps with fallback strategies; reduces mean time to diagnose from 4 hours to 20 minutes.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o7",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O7"
+  },
+  {
+    "title": "C4-O1: Establishes operating cadences with clear purposes and measurable outputs",
+    "description": "Creates quarterly planning, weekly ops review, and async status cadence \u2014 each with defined roles, inputs, and outputs. Eliminates 3 meetings with unclear purpose.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o1",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O1"
+  },
+  {
+    "title": "C4-O2: Tracks delivery commitments with measurable KPIs and >85% hit rate",
+    "description": "Creates commitment tracking with planned-vs-delivered ratio, velocity trend, and carryover rate; team consistently delivers 85%+ of committed work.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o2",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O2"
+  },
+  {
+    "title": "C4-O3: Invests in developer experience and tooling with measurable productivity gains",
+    "description": "Reduces CI pipeline from 45min to 8min, reclaiming 200 developer-hours/week; tracks build times, test duration, and local dev setup time.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o3",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O3"
+  },
+  {
+    "title": "C4-O4: Eliminates toil through automation with tracked capacity reclamation",
+    "description": "Runs toil audit, identifies top 3 manual processes, automates them, reclaims equivalent of 1 FTE in capacity per quarter.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o4",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O4"
+  },
+  {
+    "title": "C4-O5: Implements risk-appropriate release process with automated rollback",
+    "description": "Deploys with canary (1%\u219210%\u219250%\u2192100%), automated rollback triggers on error rate spike, feature flags decoupling deploy from release.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o5",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O5"
+  },
+  {
+    "title": "C4-O6: Maintains code review culture with <24hr SLA and knowledge distribution",
+    "description": "Sets review SLA target, implements reviewer rotation for knowledge spread, tracks review bottleneck trends.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o6",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O6"
+  },
+  {
+    "title": "C4-O7: Protects team focus with interrupt budget and scope change process",
+    "description": "Designates rotating interrupt handler per sprint, defines escalation criteria for true urgency, requires explicit trade-off for any mid-sprint scope addition.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o7",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O7"
+  },
+  {
+    "title": "C4-O8: Runs retrospectives with >80% action item completion rate",
+    "description": "Bi-weekly retros with strict format, action items with owners, tracked completion rate, specific process improvements implemented each quarter.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o8",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O8"
+  },
+  {
+    "title": "C5-O1: Maintains healthy Eng/PM/Design triad with joint roadmap ownership",
+    "description": "Runs weekly triad syncs with shared context: PM shares business data, Design shares user research, Eng shares technical constraints. Disagreements resolved through data, not hierarchy.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o1",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O1"
+  },
+  {
+    "title": "C5-O2: Navigates PM disagreements by framing trade-offs in business terms",
+    "description": "Responds to PM's deadline pressure by quantifying tech debt cost: 'This approach costs 200 eng-hours in maintenance over 3 quarters' and proposes three options with trade-offs.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o2",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O2"
+  },
+  {
+    "title": "C5-O3: Proactively shapes product strategy through technical insight",
+    "description": "Identifies a new API capability that enables a product surface PM hadn't considered; presents with user impact framing, leading to a roadmap pivot.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o3",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O3"
+  },
+  {
+    "title": "C5-O4: Resolves cross-team dependencies through partnership, not escalation",
+    "description": "Builds relationship with partner EM before needing anything; frames dependency request as mutual benefit; unblocks project without VP involvement.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o4",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O4"
+  },
+  {
+    "title": "C5-O5: Builds effective partnerships with platform, infra, and support functions",
+    "description": "Joins platform team's planning process, provides clear requirements with business justification, contributes bug fixes back; team's needs reflected in platform roadmap.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o5",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O5"
+  },
+  {
+    "title": "C5-O6: Manages up intentionally to build trust, autonomy, and sponsorship",
+    "description": "Understands manager's priorities; brings solutions not just problems; pre-wires before surprises; manager advocates for team in rooms they're not in.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o6",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O6"
+  },
+  {
+    "title": "C5-O7: Builds political capital through consistent delivery and helping others succeed",
+    "description": "Accumulates trust by: delivering consistently, sharing credit, unblocking peer teams, following through on every commitment. Trusted advisor for domain decisions.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o7",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O7"
+  },
+  {
+    "title": "C5-O8: Pre-wires alignment across orgs before formal decision meetings",
+    "description": "Has 1:1 conversations with each stakeholder before group meeting; creates shared context document; proposes strawman for reaction. Drives convergence without VP forcing it.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o8",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O8"
+  },
+  {
+    "title": "C5-O9: Builds sponsor relationships with senior leaders for visibility and advocacy",
+    "description": "Delivers visible results, presents at VP reviews, volunteers for cross-org initiatives; VP sponsors them for scope expansion.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o9",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O9"
+  },
+  {
+    "title": "C5-O10: Navigates scope ambiguity by demonstrating capability, not political maneuvering",
+    "description": "When scope between two orgs is ambiguous, demonstrates competence by delivering in the space; frames expansion in terms of customer benefit; builds coalition of supporters.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o10",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O10"
+  },
+  {
+    "title": "C6-O1: Runs structured 1:1s that build trust and drive career development",
+    "description": "Weekly 1:1s with shared doc; 60% their agenda / 20% yours / 20% career; follows through on every commitment. Skip-level feedback confirms quality.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o1",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O1"
+  },
+  {
+    "title": "C6-O2: Addresses underperformance early with clear expectations and genuine support",
+    "description": "Verifies expectations were clear, documents specific gaps with examples, sets improvement plan with milestones, holds weekly check-ins; person either improves or exits with dignity.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o2",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O2"
+  },
+  {
+    "title": "C6-O3: Identifies flight risk through behavioral signals and intervenes proactively",
+    "description": "Notices reduced engagement and vague answers about future plans from key engineer; conducts stay interview, surfaces growth concern, creates stretch assignment. Engineer stays.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o3",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O3"
+  },
+  {
+    "title": "C6-O4: Manages high performers with increasing scope, visibility, and sponsorship",
+    "description": "Quarterly career conversations with top talent; provides stretch assignments, visibility opportunities, and comp advocacy. Grows senior engineer to staff through deliberate sponsorship.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o4",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O4"
+  },
+  {
+    "title": "C6-O5: Designs stretch assignments that build promotion evidence through real work",
+    "description": "Identifies business need as stretch opportunity for engineer; provides clear expectations, check-in cadence, and safety net. Engineer demonstrates next-level capability and gets promoted.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o5",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O5"
+  },
+  {
+    "title": "C6-O6: Coaches EMs through management situations using scenario-based development",
+    "description": "Weekly 1:1s focused on management craft, not just status. Walks EM through 'your engineer says they're burned out' scenario; EM develops independent judgment over 6 months.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o6",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O6"
+  },
+  {
+    "title": "C6-O7: Builds manager bench through intentional EM pipeline development",
+    "description": "Identifies high-potential ICs, creates TL rotation opportunities, runs EM-in-training program with shadowing. Manager transitions happen with zero team disruption.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o7",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O7"
+  },
+  {
+    "title": "C7-O1: Frames decisions with options, trade-offs, and clear recommendation",
+    "description": "Sends decision memo with 3 options, quantified trade-offs, recommended path, and anticipated objections. Decision is made in first review meeting.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o1",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O1"
+  },
+  {
+    "title": "C7-O2: Adapts communication altitude to audience \u2014 exec summary to detailed appendix",
+    "description": "Creates one-slide exec memo for VP and detailed appendix for engineering; same content, different altitude. Both audiences get what they need.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o2",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O2"
+  },
+  {
+    "title": "C7-O3: Communicates status proactively \u2014 wins, risks, and needs \u2014 earning autonomy",
+    "description": "Weekly written update to manager: top 3 wins, top 3 risks, what I need from you. Manager says: 'always knows what's happening, no surprises.'",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o3",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O3"
+  },
+  {
+    "title": "C7-O4: Delivers bad news early with ownership and a mitigation plan",
+    "description": "Flags project slip 3 weeks before deadline with root cause, impact assessment, and 2 mitigation options. Leadership thanks them for transparency.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o4",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O4"
+  },
+  {
+    "title": "C7-O5: Delivers crisp executive presentations driving decisions within allotted time",
+    "description": "Pyramid-structured 5-slide business review: conclusion first, supporting metrics, anticipated questions prepared. Earns invitation to future strategy discussions.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o5",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O5"
+  },
+  {
+    "title": "C7-O6: Implements DACI/RFC frameworks that reduce decision revisitation",
+    "description": "Establishes DACI roles for every significant decision; RFC template with 5-day comment period and escalation path. Decision revisitation drops measurably.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o6",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O6"
+  },
+  {
+    "title": "C7-O7: Communicates roadmap trade-offs with explicit 'what we're NOT doing' section",
+    "description": "Every planning doc includes de-prioritized items with rationale; new requests require explicit deprioritization trade-off visible to all stakeholders.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/#c7-o7",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O7"
+  },
+  {
+    "title": "C8-O1: Runs incident command with clear roles, reducing Sev1 duration measurably",
+    "description": "Implements ICS model: IC, Comms Lead, Ops Lead. Quarterly game days to practice. Sev1 duration reduced 40% after adoption.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/#c8-o1",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O1"
+  },
+  {
+    "title": "C8-O2: Drives blameless post-mortems with >90% action item completion",
+    "description": "Structured template with timeline, 5-whys, systemic action items with owners and deadlines. Tracks completion rate; repeat incident rate drops measurably.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/#c8-o2",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O2"
+  },
+  {
+    "title": "C8-O3: Maintains healthy on-call with <2 off-hours pages/night and low false-positive rate",
+    "description": "Tracks pages per rotation, off-hours pages, and false positive rate. Runs noise reduction sprints when thresholds exceeded. Engineers willing to be on-call.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/#c8-o3",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O3"
+  },
+  {
+    "title": "C8-O4: Conducts proactive failure mode analysis and launch readiness reviews",
+    "description": "Pre-mortem before major launch identifies 5 failure modes; mitigation in place for each. Launch checklist gates deployment. Zero Sev1s on launches for 4 consecutive quarters.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/#c8-o4",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O4"
+  },
+  {
+    "title": "C9-O1: Tracks DORA metrics with trend analysis and targeted bottleneck removal",
+    "description": "Instruments CI/CD pipeline for all 4 DORA metrics; identifies review bottleneck as longest stage; reduces lead time from 5 days to 8 hours by implementing review SLA.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/#c9-o1",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O1"
+  },
+  {
+    "title": "C9-O2: Measures developer satisfaction and acts on friction signals before they become attrition",
+    "description": "Quarterly 5-question developer experience survey; identifies tooling frustration as top theme; invests in fix; next quarter satisfaction improves and attrition risk decreases.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/#c9-o2",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O2"
+  },
+  {
+    "title": "C9-O3: Uses activity metrics as diagnostic signals, never as performance measures",
+    "description": "Dashboards show team-level patterns (PR throughput, review turnaround) to spot blocked teams; explicitly bans individual-level activity metrics from perf evaluation.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/#c9-o3",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O3"
+  },
+  {
+    "title": "C9-O4: Defines outcome-oriented OKRs with measurable key results scored quarterly",
+    "description": "Max 3 objectives per team per quarter; all key results measurable; includes 1 stretch; bi-weekly check-in; quarterly scoring drives real priority decisions.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/#c9-o4",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O4"
+  },
+  {
+    "title": "C9-O5: Translates engineering outcomes into business metrics leadership values",
+    "description": "Maps latency reduction to conversion rate lift, framing infrastructure investment as '$2M ARR impact' rather than 'p99 improvement.'",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/#c9-o5",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O5"
+  },
+  {
+    "title": "C9-O6: Classifies attrition and identifies systemic retention patterns",
+    "description": "Categorizes each departure as regrettable vs non-regrettable; identifies that 3 of 4 regrettable departures cited lack of growth; implements fix.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/#c9-o6",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O6"
+  },
+  {
+    "title": "C10-O1: Builds headcount cases with capacity model, impact projection, and ROI",
+    "description": "Secures 4 headcount by demonstrating: current capacity gap, business impact if unfilled, 3x ROI projection within 12 months, prioritized role ranking.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/#c10-o1",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O1"
+  },
+  {
+    "title": "C10-O2: Reprioritizes aggressively during cuts, communicating what stops \u2014 not just what continues",
+    "description": "During 15% budget cut: stack-ranks all work, pauses bottom 20%, communicates cuts to stakeholders explicitly, maintains delivery on top-3 priorities.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/#c10-o2",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O2"
+  },
+  {
+    "title": "C10-O3: Manages cloud/infra costs with attribution, targets, and optimization results",
+    "description": "Implements cost attribution per service, monthly cost review, optimization targets; reduces cloud costs 25% ($500K annual savings) through right-sizing and reserved instances.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/#c10-o3",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O3"
+  },
+  {
+    "title": "C10-O4: Optimizes team composition with principled FTE/contractor/vendor mix",
+    "description": "Evaluates work types: core differentiating work\u2192FTE, commodity/surge work\u2192contractor, specialized work\u2192vendor. Saves 20% while maintaining velocity.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/#c10-o4",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O4"
+  },
+  {
+    "title": "C10-O5: Defends critical investments during cuts by articulating business consequences",
+    "description": "Protects platform team during 20% budget cut by demonstrating: cutting team means 5 product teams lose deploy capability, impacting $10M revenue. Proposes alternative savings instead.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/#c10-o5",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O5"
+  },
+  {
+    "title": "C11-O1: Runs calibrated hiring loops with trained interviewers and consistent bar",
+    "description": "Defines competency matrix per role/level, trains interviewers through shadow cycle, enforces independent write-ups before group debrief, maintains bar raiser veto.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/#c11-o1",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O1"
+  },
+  {
+    "title": "C11-O2: Maintains hiring bar under pressure \u2014 no warm body hires",
+    "description": "Despite 4 open reqs for 6 months, passes on borderline candidates; eventual hires all rated 'strong hire' with zero regrettable offers.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/#c11-o2",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O2"
+  },
+  {
+    "title": "C11-O3: Designs 30/60/90 onboarding with measurable ramp milestones",
+    "description": "Week 1: first commit. Month 1: buddy-guided starter project. Month 2: independent feature delivery. Month 3: full autonomy. Ramp time reduced from 90 to 45 days.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/#c11-o3",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O3"
+  },
+  {
+    "title": "C11-O4: Collects and acts on onboarding feedback, improving program each cohort",
+    "description": "30/60/90 surveys with 5 questions; identifies that documentation gaps slow ramp; fixes docs; next cohort ramps 2 weeks faster.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/#c11-o4",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O4"
+  },
+  {
+    "title": "C11-O5: Builds continuous sourcing pipeline through referrals and technical brand",
+    "description": "Creates team referral culture, publishes engineering blog posts showcasing team's work, supports conference talks; fills roles through referrals in avg 30 days.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/#c11-o5",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O5"
+  },
+  {
+    "title": "C11-O6: Articulates clear team value proposition driving higher offer acceptance",
+    "description": "Defines and maintains: what problems we solve, what scale we operate at, what you'll learn, career path, culture. Offer acceptance rate improves from 60% to 80%.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/#c11-o6",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O6"
+  },
+  {
+    "title": "C12-O1: Models psychological safety through personal vulnerability and constructive response to bad news",
+    "description": "Shares own mistakes publicly; responds to production incident disclosure with 'tell me more' not 'how did this happen'; team health survey shows safety scores above org average.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/#c12-o1",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O1"
+  },
+  {
+    "title": "C12-O2: Establishes team charter and engineering principles that guide daily decisions",
+    "description": "Collaboratively drafts team charter covering values, communication norms, and decision process. Creates 3-5 engineering principles referenced in design reviews.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/#c12-o2",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O2"
+  },
+  {
+    "title": "C12-O3: Institutionalizes knowledge sharing that reduces bus factor and accelerates onboarding",
+    "description": "Implements bi-weekly tech talks, documentation standards (every system has README + runbook + design doc), design doc culture. Documentation coverage goes from 40% to 90%.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/#c12-o3",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O3"
+  },
+  {
+    "title": "C12-O4: Implements recognition rituals that reinforce desired behaviors",
+    "description": "Weekly shout-outs in team sync tied to engineering principles; peer recognition channel. Recognition is specific ('Sarah's design doc saved 2 weeks of rework') not generic ('good job').",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/#c12-o4",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O4"
+  },
+  {
+    "title": "C12-O5: Drives inclusive practices ensuring equitable opportunity distribution",
+    "description": "Uses round-robin facilitation, async participation options, and equitable stretch assignment distribution. Promotion rates equitable across demographics.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/#c12-o5",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O5"
+  },
+  {
+    "title": "C13-O1: Embeds security checkpoints in development workflow as automatic gates",
+    "description": "Threat modeling during design phase using STRIDE; automated SAST/DAST in CI; security champion rotation; pre-launch security checklist. Zero last-minute security blockers.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/#c13-o1",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O1"
+  },
+  {
+    "title": "C13-O2: Manages vulnerabilities within severity-based SLAs with tracked patch velocity",
+    "description": "Automated dependency scanning in CI; Critical: 48hr, High: 1 week, Medium: 1 month. Zero critical CVEs beyond SLA for 6 consecutive quarters.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/#c13-o2",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O2"
+  },
+  {
+    "title": "C13-O3: Enforces least-privilege access with quarterly reviews and auto-expiring elevation",
+    "description": "Quarterly access reviews, role-based access aligned to on-call rotation, temporary elevation for debugging that auto-expires, full audit trail.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/#c13-o3",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O3"
+  },
+  {
+    "title": "C13-O4: Maintains continuous compliance posture with automated evidence collection",
+    "description": "Automated compliance checks in CI/CD; evidence collection pipelines; quarterly self-audit against controls; compliance dashboard. Clean audit for 4 consecutive cycles with zero findings.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/#c13-o4",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O4"
+  },
+  {
+    "title": "C14-O1: Writes evidence-based performance reviews with level-anchored assessment",
+    "description": "Collects feedback continuously using impact log; uses level rubric language explicitly; reviews are specific ('drove X resulting in Y, demonstrating next-level Z') not vague ('did great work').",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/#c14-o1",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O1"
+  },
+  {
+    "title": "C14-O2: Prepares calibration cases with evidence portfolio and anticipated pushback",
+    "description": "Per person: 1-page impact portfolio with top 3 achievements, peer feedback synthesis, cross-team comparison context, counter-arguments prepared. Expected ratings achieved consistently.",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/#c14-o2",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O2"
+  },
+  {
+    "title": "C14-O3: Navigates ratings distribution with honest differentiation and zero escalations",
+    "description": "Understands company's specific distribution curve; differentiates honestly without inflating; invests preparation proportional to contested ratings.",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/#c14-o3",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O3"
+  },
+  {
+    "title": "C14-O4: Delivers performance feedback within 48hrs using SBI framework",
+    "description": "Uses Situation\u2192Behavior\u2192Impact framework for all feedback. Never saves feedback for perf review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/#c14-o4",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O4"
+  },
+  {
+    "title": "C14-O5: Builds promotion evidence over multiple cycles with deliberate gap-filling",
+    "description": "Starts building promo case 2-3 cycles before target; maps work to next-level rubric; identifies gaps; creates stretch opportunities to fill them; gets pre-reads from calibration peers.",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/#c14-o5",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O5"
+  },
+  {
+    "title": "C14-O6: Runs fair PIPs with genuine support and clean process \u2014 zero procedural issues",
+    "description": "Specific gaps with examples, measurable criteria, 30-60 day timeline, weekly check-ins with documented progress, genuine coaching and resources. HR sees them as reliable partner.",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/#c14-o6",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O6"
+  },
+  {
+    "title": "C1-O11: Identifies platform opportunities and builds teams that reduce org-wide cognitive load",
+    "description": "Justified and built internal platform team providing self-service deployment, observability, and auth. 8 stream-aligned teams adopted, saving estimated 12 eng-months/quarter of duplicated effort.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o11",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O11"
+  },
+  {
+    "title": "C1-O12: Navigates externally-imposed changes (re-orgs, new leadership) while maintaining team stability",
+    "description": "VP announces re-org splitting team; guides team through transition with honest communication about what's known/unknown, preserves key relationships, maintains velocity, zero attrition. Builds trust with new leadership within 30 days.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o12",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O12"
+  },
+  {
+    "title": "C1-O13: Conducts structured assessment of inherited team within first 30 days",
+    "description": "In first 30 days as new EM: mapped people (strengths, aspirations, concerns), processes (what works, what's broken), and systems (tech debt, reliability gaps). Identified 4 key issues, built trust through listening before initiating changes in month 2.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/#c1-o13",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O13"
+  },
+  {
+    "title": "C3-O8: Conducts proactive capacity planning and identifies platform consolidation opportunities",
+    "description": "Anticipated 3x load for product launch: pre-scaled infrastructure with zero downtime. Identified that 4 teams built separate caching layers; proposed consolidated platform approach saving $800K/year.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/#c3-o8",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O8"
+  },
+  {
+    "title": "C4-O9: Establishes runbook culture ensuring every alert has documented remediation steps",
+    "description": "Every page in PagerDuty links to a runbook. New on-call engineers handle incidents independently within first rotation. Runbook coverage: 95% of alerts, reviewed quarterly.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o9",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O9"
+  },
+  {
+    "title": "C4-O10: Implements tiered change management proportional to risk level, preventing change-induced incidents",
+    "description": "Tiered process: automated checks for config changes, peer review + staged rollout for schema migrations, full approval + maintenance window for cross-service changes. All production changes tracked and auditable. Change-related incidents reduced 65%.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o10",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O10"
+  },
+  {
+    "title": "C4-O11: Adapts team practices for remote/hybrid work ensuring equal engagement regardless of location",
+    "description": "Manages distributed team across 3 timezones: async-first communication, recorded decisions in shared docs, defined overlap hours for real-time collaboration. No proximity bias in stretch assignments or promotions.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/#c4-o11",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O11"
+  },
+  {
+    "title": "C5-O11: Navigates leadership transitions by rebuilding trust proactively within 30 days",
+    "description": "New VP arrives with different priorities. Within 2 weeks: scheduled intro, presented team portfolio with business impact framing, identified 2 alignment opportunities. VP trust established before first planning cycle.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o11",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O11"
+  },
+  {
+    "title": "C5-O12: Partners with Legal/Privacy/Policy teams to build reusable patterns that eliminate launch-blocking reviews",
+    "description": "Built pre-approved design patterns for PII handling, consent flows, and data residency. Reduced launch-blocking legal reviews from 3 weeks to 2 days for 80% of launches.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o12",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O12"
+  },
+  {
+    "title": "C5-O13: Earns early credibility as new leader through quick wins and listening before changing",
+    "description": "First 90 days: spent weeks 1-3 in listening mode (skip-levels, stakeholder intros, codebase review). Identified quick win (flaky test fix) in week 4. Delivered by week 6. Earned mandate for larger changes.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/#c5-o13",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O13"
+  },
+  {
+    "title": "C6-O8: Conducts systematic stay interviews surfacing retention drivers before they become exit interviews",
+    "description": "Instituted quarterly stay interviews with all direct reports. Surfaced comp band concern across 3 engineers. Addressed with market adjustment before any resignations.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o8",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O8"
+  },
+  {
+    "title": "C6-O9: Manages Staff+ engineers with calibrated autonomy, influence opportunities, and organizational sponsorship",
+    "description": "Partnered with Staff engineer: co-owned technical vision, provided organizational air cover, created VP-visibility opportunities. Staff engineer led cross-org migration, cited partnership in promo packet.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o9",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O9"
+  },
+  {
+    "title": "C6-O10: Drives career development through structured career conversations distinct from performance feedback",
+    "description": "Separated career conversations from performance check-ins. Monthly career 1:1 focused on 18-month aspirations, skill gaps, and growth experiments. 100% of reports have written development plans.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/#c6-o10",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O10"
+  },
+  {
+    "title": "AP-01: The Absent Architect \u2014 EM defers all technical direction to TL/Staff and has no opinion on system evolution",
+    "description": "No tech strategy doc exists; architecture decisions are ad hoc; design reviews are inconsistent or skipped; tech debt is invisible until it causes incidents",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-absent-architect/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-01"
+  },
+  {
+    "title": "AP-02: The Over-Involved Architect \u2014 EM makes every technical decision, bypassing TL/seniors",
+    "description": "EM reviews all PRs; design docs require EM approval; senior engineers are disempowered; EM is the bottleneck for every decision",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-over-involved-architect/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-02"
+  },
+  {
+    "title": "AP-03: Metrics Theater \u2014 tracking DORA/SPACE dashboards without acting on them, or gaming metrics",
+    "description": "Beautiful dashboards nobody looks at; metrics improve but team doesn't feel faster; metrics targets become team KPIs used in performance reviews; 'deploy frequency' gamed by splitting deploys",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/metrics-theater/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-03"
+  },
+  {
+    "title": "AP-04: Velocity Obsession \u2014 optimizing for shipping speed while quality, reliability, and sustainability degrade",
+    "description": "Rising change failure rate alongside rising deployment frequency; increasing on-call pages; growing tech debt backlog; team working overtime 'to ship'; cutting testing 'to move faster'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/velocity-obsession/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-04"
+  },
+  {
+    "title": "AP-05: Security As Someone Else's Problem \u2014 EM treats security as the security team's job, not the engineering team's responsibility",
+    "description": "Security reviews are afterthoughts or skipped; vulnerabilities linger beyond SLA; team doesn't know basic security practices; 'we'll fix it after launch'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/security-as-someone-elses-problem/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "AP-05"
+  },
+  {
+    "title": "AP-06: Hero Culture \u2014 incidents resolved by the same 2-3 people every time; tribal knowledge instead of process",
+    "description": "Same people always on incident calls; no runbooks; new team members useless during incidents; MTTR depends on who's on-call; hero engineers burned out",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/hero-culture/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-06"
+  },
+  {
+    "title": "AP-07: Blame Post-Mortems \u2014 post-incident analysis becomes finger-pointing, driving incidents underground",
+    "description": "People avoid documenting what went wrong; root causes listed as 'human error'; defensive language in post-mortems; fewer incidents reported (not fewer incidents occurring); near-misses never discussed",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/blame-post-mortems/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-07"
+  },
+  {
+    "title": "AP-08: Re-org Addiction \u2014 constantly restructuring teams instead of solving underlying problems",
+    "description": "More than one re-org per year; teams never stabilize; people joke about 'the next re-org'; leadership sees re-orgs as solutions to execution problems",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/re-org-addiction/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-08"
+  },
+  {
+    "title": "AP-09: Fuzzy Ownership \u2014 multiple teams think they own the same thing, or nobody owns it",
+    "description": "Incidents where 3 teams are paged and nobody acts; features that 'slip through the cracks'; cross-team meetings to figure out 'who should build this'; duplicate implementations discovered",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/fuzzy-ownership/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-09"
+  },
+  {
+    "title": "AP-10: Conflict Avoidance \u2014 EM avoids difficult conversations, lets problems fester, gives vague feedback",
+    "description": "Underperformers coasting for quarters; team frustration about 'dead weight'; EM gives everyone positive feedback; real issues discussed in back-channels; skip-level 1:1s reveal problems EM hasn't addressed",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/conflict-avoidance/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-10"
+  },
+  {
+    "title": "AP-11: The Bubble \u2014 EM only hears good news because team doesn't feel safe sharing problems",
+    "description": "EM thinks team is happy; engagement survey results are surprising; problems discovered through incidents or attrition, not through communication; 1:1s are pleasant but shallow",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-bubble/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-11"
+  },
+  {
+    "title": "AP-12: The 24/7 Manager \u2014 EM is always available, always responsive, and burning out while modeling unsustainable behavior",
+    "description": "EM responds to Slack at midnight; team feels guilty taking PTO because EM never does; EM can't delegate because 'it's faster to do it myself'; EM's manager doesn't know EM is underwater",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-247-manager/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-12"
+  },
+  {
+    "title": "AP-13: Lowering the Bar Under Pressure \u2014 hiring warm bodies because reqs are open and leadership is asking",
+    "description": "Declining interview scores accepted with 'we need someone'; onboarding problems increase; regrettable hires within 12 months; team quality diluted",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/lowering-the-bar-under-pressure/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-13"
+  },
+  {
+    "title": "AP-14: The Clone Factory \u2014 hiring people who look, think, and work exactly like the current team",
+    "description": "Homogeneous team; same backgrounds and perspectives; groupthink in design reviews; interview process unconsciously filters for 'culture fit' meaning 'like us'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-clone-factory/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-14"
+  },
+  {
+    "title": "AP-15: The Permanent PIP \u2014 using performance management as punishment instead of genuine development tool",
+    "description": "PIPs designed to fail; documentation started only when exit decision already made; no real coaching or support during PIP; team perceives PIPs as 'you're being fired slowly'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-permanent-pip/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-15"
+  },
+  {
+    "title": "AP-16: Promotion as Retention \u2014 promoting people who aren't ready to prevent them from leaving",
+    "description": "Engineers promoted without next-level evidence; newly promoted engineers struggling at new level; promo rate high but calibration pushback increasing; 'title inflation'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/promotion-as-retention/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-16"
+  },
+  {
+    "title": "AP-17: The Lake Wobegon Effect \u2014 rating everyone above average, avoiding differentiation",
+    "description": "All reports rated 'Exceeds Expectations'; calibration committee overrides your ratings; no one on your team has development areas in their review; skip-level feedback contradicts your assessments",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-lake-wobegon-effect/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-17"
+  },
+  {
+    "title": "AP-18: Culture by Accident \u2014 no intentional culture, just whatever norms emerge from the loudest personalities",
+    "description": "Team norms driven by most senior/vocal person; new hires absorb unhealthy patterns; no written team charter; 'that's just how we do things' is the only explanation",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/culture-by-accident/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-18"
+  },
+  {
+    "title": "AP-19: The Super-EM \u2014 Director who manages ICs through their EMs, undermining EM authority",
+    "description": "ICs come to Director instead of their EM; Director gives direction that contradicts EM's plan; EMs feel like figureheads; Director in too many operational details",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-super-em/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-19"
+  },
+  {
+    "title": "AP-20: Absent Director \u2014 delegates everything and disappears, providing no coaching, context, or support",
+    "description": "EMs making conflicting decisions; no cross-team alignment; EMs don't know organizational context; Director can't articulate what their teams are doing; skip-level feedback: 'I never see my Director'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/absent-director/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-20"
+  },
+  {
+    "title": "AP-21: The Feature Factory \u2014 team builds whatever PM asks without questioning whether it's the right investment",
+    "description": "Roadmap is just PM's feature list; no engineering-initiated work; tech debt never prioritized; team can't articulate why they're building what they're building; no OKRs, just a Jira backlog",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-feature-factory/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-21"
+  },
+  {
+    "title": "AP-22: The Adversarial Triad \u2014 Eng/PM/Design in constant conflict, treating each other as obstacles instead of partners",
+    "description": "Blame between functions when things go wrong; PM and Eng have separate roadmaps; Design excluded from technical decisions; 'us vs them' language in team meetings",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-adversarial-triad/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-22"
+  },
+  {
+    "title": "AP-23: The Surprise Factory \u2014 leadership learns about problems from other people, not from you",
+    "description": "VP asks about a project delay you haven't reported; partner team escalates an issue you thought was contained; your manager is blindsided in a meeting; 'why am I hearing about this from [someone else]?'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-surprise-factory/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-23"
+  },
+  {
+    "title": "AP-24: Empire Building \u2014 expanding scope for status rather than customer or business impact",
+    "description": "Politicking for headcount without clear need; absorbing teams without clear benefit; optimizing for org size rather than org impact; 'more reports = more important'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/empire-building/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-24"
+  },
+  {
+    "title": "AP-25: The Blank Check Mentality \u2014 asking for resources without cost consciousness or ROI justification",
+    "description": "Every problem's solution is 'we need more headcount'; no cost tracking for cloud/infra; proposals lack ROI analysis; never voluntarily reducing spend; surprised by budget discussions",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-blank-check-mentality/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-25"
+  },
+  {
+    "title": "AP-26: Analysis Paralysis \u2014 every decision requires exhaustive analysis, committees, and consensus before action",
+    "description": "Simple decisions take weeks; team waits for EM approval on everything; meetings to plan meetings; 'let's get more data' as default response; reversible decisions treated as irreversible",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/analysis-paralysis/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-26"
+  },
+  {
+    "title": "AP-27: The Yes Machine \u2014 agreeing to everything, never pushing back, never making trade-offs explicit",
+    "description": "Team overcommitted; every stakeholder thinks their request is accepted; deadlines consistently missed; team working overtime; EM apologizing constantly",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-yes-machine/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-27"
+  },
+  {
+    "title": "P-C6-1: Your Top Performer Gives 2 Weeks Notice",
+    "description": "Your best senior engineer has an offer from a competitor. They seem decided but are giving you a courtesy conversation.",
+    "type": "playbook",
+    "url": "/playbooks/your-top-performer-gives-2-weeks-notice/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "P-C6-1"
+  },
+  {
+    "title": "P-C8-1: Major Production Incident During Your Vacation",
+    "description": "You're on vacation. A Sev1 incident fires and your team is handling it. Your manager pings you asking for status.",
+    "type": "playbook",
+    "url": "/playbooks/major-production-incident-during-your-vacation/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "P-C8-1"
+  },
+  {
+    "title": "P-C5-1: PM Wants to Ship a Feature You Know Will Create Tech Debt",
+    "description": "PM has committed to a deadline with stakeholders. Meeting the deadline requires cutting corners that will cost the team months of debt later.",
+    "type": "playbook",
+    "url": "/playbooks/pm-wants-to-ship-a-feature-you-know-will-create-tech-debt/",
+    "domain": "Execution",
+    "capabilityName": "Cross-Functional Influence, Systems Design & Architecture",
+    "id": "P-C5-1"
+  },
+  {
+    "title": "P-C12-1: Two of Your Engineers Are in Conflict",
+    "description": "Two senior engineers disagree on a technical approach. It's gotten personal \u2014 code reviews are hostile, standup is tense, team morale is affected.",
+    "type": "playbook",
+    "url": "/playbooks/two-of-your-engineers-are-in-conflict/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "P-C12-1"
+  },
+  {
+    "title": "P-C1-1: You Inherit a Low-Performing Team",
+    "description": "You join as EM. In your first month you discover: 2 engineers should probably be on a PIP, the team's metrics are worst in the org, morale is low, and the previous EM left because of burnout.",
+    "type": "playbook",
+    "url": "/playbooks/you-inherit-a-low-performing-team/",
+    "domain": "People",
+    "capabilityName": "Org-Level Thinking, Coaching & Talent Development",
+    "id": "P-C1-1"
+  },
+  {
+    "title": "P-C1-2: Layoffs Are Coming and You Know Before Your Team",
+    "description": "Your Director told you confidentially: 20% RIF next week. You know who's affected on your team. You can't tell anyone yet.",
+    "type": "playbook",
+    "url": "/playbooks/layoffs-are-coming-and-you-know-before-your-team/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking, Decision Framing & Communication",
+    "id": "P-C1-2"
+  },
+  {
+    "title": "P-C5-2: Your New VP Wants to Change Everything",
+    "description": "New VP joins. They want to re-org, change tech stack, adopt new processes, and reset all roadmaps. Your team is anxious.",
+    "type": "playbook",
+    "url": "/playbooks/your-new-vp-wants-to-change-everything/",
+    "domain": "Strategy",
+    "capabilityName": "Cross-Functional Influence, Org-Level Thinking",
+    "id": "P-C5-2"
+  },
+  {
+    "title": "P-C6-2: You Discover a Senior Engineer Is Quietly Job Searching",
+    "description": "Through the grapevine (or obvious calendar gaps), you realize one of your senior engineers is interviewing elsewhere. They haven't told you.",
+    "type": "playbook",
+    "url": "/playbooks/you-discover-a-senior-engineer-is-quietly-job-searching/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "P-C6-2"
+  },
+  {
+    "title": "P-C3-1: Your Team Needs to Deliver a Critical Migration Under Tight Deadline",
+    "description": "Leadership committed to migrating off a legacy system in Q3. Your team owns it. The deadline is real (vendor contract expiration). Scope is larger than estimated.",
+    "type": "playbook",
+    "url": "/playbooks/your-team-needs-to-deliver-a-critical-migration-under-tight-deadline/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture, Operational Leadership & Rhythm",
+    "id": "P-C3-1"
+  },
+  {
+    "title": "P-C14-1: Calibration Committee Wants to Downgrade Your Engineer's Rating",
+    "description": "You submitted 'Exceeds Expectations' for a strong senior engineer. In calibration, peer managers are pushing for 'Meets' based on cross-team comparison. You disagree.",
+    "type": "playbook",
+    "url": "/playbooks/calibration-committee-wants-to-downgrade-your-engineers-rating/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "P-C14-1"
+  },
+  {
+    "title": "P-C1-3: A Cross-Team Initiative Is Stalled Because No One Owns It",
+    "description": "An important cross-org project has been discussed for months but nobody is driving it. Multiple teams would benefit but each expects the other to lead.",
+    "type": "playbook",
+    "url": "/playbooks/a-cross-team-initiative-is-stalled-because-no-one-owns-it/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking, Cross-Functional Influence",
+    "id": "P-C1-3"
+  },
+  {
+    "title": "P-C14-2: Your Manager Asks You to Rate Everyone 'Meets Expectations'",
+    "description": "Your Director says the org needs to compress ratings this cycle. They want fewer 'Exceeds' ratings. You have 3 engineers who genuinely exceeded.",
+    "type": "playbook",
+    "url": "/playbooks/your-manager-asks-you-to-rate-everyone-meets-expectations/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "P-C14-2"
+  },
+  {
+    "title": "P-C11-1: You Need to Build a New Team From Scratch",
+    "description": "You've been given headcount to build a new team for a greenfield project. You have 6 months to hire 6 engineers and deliver first milestone.",
+    "type": "playbook",
+    "url": "/playbooks/you-need-to-build-a-new-team-from-scratch/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "P-C11-1"
+  },
+  {
+    "title": "P-C6-3: One of Your EMs Is Struggling (Director Scenario)",
+    "description": "One of your EMs is underperforming: their team's metrics are declining, skip-level feedback is concerning, and the EM seems overwhelmed.",
+    "type": "playbook",
+    "url": "/playbooks/one-of-your-ems-is-struggling-director-scenario/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "P-C6-3"
+  },
+  {
+    "title": "P-C8-2: Production Outage Caused by Your Team's Deploy",
+    "description": "Your team deployed a change that caused a major production incident. Customers are affected. Leadership is asking what happened.",
+    "type": "playbook",
+    "url": "/playbooks/production-outage-caused-by-your-teams-deploy/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "P-C8-2"
+  },
+  {
+    "title": "P-C5-3: You're Asked to Take on Scope That Doesn't Fit Your Team",
+    "description": "Your VP wants your team to own a new area that doesn't align with your team's expertise or mission. It's a political hot potato nobody else wants.",
+    "type": "playbook",
+    "url": "/playbooks/youre-asked-to-take-on-scope-that-doesnt-fit-your-team/",
+    "domain": "Strategy",
+    "capabilityName": "Cross-Functional Influence, Strategic Prioritization",
+    "id": "P-C5-3"
+  },
+  {
+    "title": "P-C5-4: A Key Platform Dependency Is Unreliable and the Platform Team Won't Prioritize Fixes",
+    "description": "Your team's reliability is suffering because of an upstream platform dependency. The platform team acknowledges the issue but has higher priorities.",
+    "type": "playbook",
+    "url": "/playbooks/a-key-platform-dependency-is-unreliable-and-the-platform-team-wont-prioritize-fixes/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "P-C5-4"
+  },
+  {
+    "title": "P-C12-2: Your Team Has Zero Diversity and You're Told to Fix It",
+    "description": "HR/leadership points out your team is homogeneous. You're asked to 'improve diversity' in your next hires.",
+    "type": "playbook",
+    "url": "/playbooks/your-team-has-zero-diversity-and-youre-told-to-fix-it/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping, Hiring, Onboarding & Role Design",
+    "id": "P-C12-2"
+  },
+  {
+    "title": "P-C7-1: You Strongly Disagree with a Decision Made Above You",
+    "description": "Your Director/VP made a strategic decision you think is wrong. It directly affects your team's direction.",
+    "type": "playbook",
+    "url": "/playbooks/you-strongly-disagree-with-a-decision-made-above-you/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "P-C7-1"
+  },
+  {
+    "title": "P-C5-5: You're Preparing for Your Own Promotion to Director",
+    "description": "You've been a strong EM for 2+ years and want to make the jump to Director. What do you actually need to demonstrate?",
+    "type": "playbook",
+    "url": "/playbooks/youre-preparing-for-your-own-promotion-to-director/",
+    "domain": "People",
+    "capabilityName": "Cross-Functional Influence, Performance Management & Calibration",
+    "id": "P-C5-5"
+  },
+  {
+    "title": "P-C9-1: DORA Metrics Show Decline But Team Feels Fine",
+    "description": "Your DORA metrics have been trending down for 2 quarters \u2014 deploy frequency dropped 40%, lead time increased 3x. But team morale is fine and nobody is complaining. Your VP saw the dashboard and is asking questions.",
+    "type": "playbook",
+    "url": "/playbooks/dora-metrics-show-decline-but-team-feels-fine/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "P-C9-1"
+  },
+  {
+    "title": "P-C10-1: Budget Cut: Lose 20% Headcount, Keep Critical Deliverables",
+    "description": "Company announces 20% headcount reduction. You have 25 engineers across 4 teams. You need to identify 5 positions to cut while maintaining delivery on your top-3 commitments. You have 2 weeks before the announcement.",
+    "type": "playbook",
+    "url": "/playbooks/budget-cut-lose-20-headcount-keep-critical-deliverables/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "P-C10-1"
+  },
+  {
+    "title": "P-C13-1: Security Audit Finding: Critical Vulnerability in Production",
+    "description": "Internal security audit found a critical vulnerability (e.g., unencrypted PII in logs, open S3 bucket, SQL injection vector) in your team's production service. Security team has given you a 72-hour remediation window. Your team is mid-sprint on a high-priority feature launch.",
+    "type": "playbook",
+    "url": "/playbooks/security-audit-finding-critical-vulnerability-in-production/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "P-C13-1"
+  },
+  {
+    "title": "C1-O14: Leads engineering teams through M&A integration with codebase consolidation and talent retention",
+    "description": "Led integration of 25-person acquired team: mapped overlapping services within 2 weeks, established unified coding standards by month 2, consolidated 3 duplicated services by month 4. Retained 92% of acquired engineers through intentional culture bridging and clear role mapping.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O14"
+  },
+  {
+    "title": "C1-O15: Manages divestiture and team wind-down with dignity, knowledge transfer, and minimal organizational disruption",
+    "description": "Led wind-down of 15-person product team after strategic pivot: created comprehensive knowledge transfer plan within 1 week, placed 12 of 15 engineers into internal roles within 30 days, archived documentation for all critical systems, zero production incidents during transition.",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O15"
+  },
+  {
+    "title": "C3-O9: Designs systems with cost consciousness and drives FinOps practices across the team",
+    "description": "Implemented cost-aware architecture reviews: every design doc includes estimated cloud cost. Established FinOps practice with weekly cost dashboards per service. Identified $400K/year in overprovisioned compute, right-sized without performance impact. Engineering team owns cost as a first-class metric.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O9"
+  },
+  {
+    "title": "C3-O10: Incorporates sustainability and energy efficiency into architecture decisions and infrastructure planning",
+    "description": "Implemented carbon-aware workload scheduling, shifting batch processing to low-carbon-intensity hours. Adopted ARM-based instances for stateless services, reducing energy consumption 30%. Reported sustainability metrics in quarterly business reviews.",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O10"
+  },
+  {
+    "title": "C5-O14: Navigates multiple reporting lines and stakeholder alignment in matrix management structures",
+    "description": "Reports to VP Engineering with dotted line to VP Product and CTO. Maintains weekly syncs with all three, aligns conflicting priorities through transparent trade-off communication. When priorities conflict, escalates with recommendation rather than forcing stakeholders to discover misalignment.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O14"
+  },
+  {
+    "title": "C5-O15: Prepares board-level materials that frame engineering investment as strategic business narrative",
+    "description": "Authored engineering section of quarterly board deck: 3 slides covering platform reliability as competitive moat, R&D velocity benchmarked against industry, and talent pipeline as strategic risk. Board approved $2M infrastructure investment based on narrative.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O15"
+  },
+  {
+    "title": "C6-O11: Coaches struggling EMs through skill gaps with structured support and clear intervention criteria",
+    "description": "Identified EM struggling with conflict resolution: team had 3 unresolved interpersonal issues. Created 90-day coaching plan with weekly role-play sessions, assigned mentor from senior EM pool, monitored via skip-level sentiment. EM resolved all issues by month 3 and cited coaching as career-defining.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O11"
+  },
+  {
+    "title": "C6-O12: Builds succession plans ensuring leadership continuity for all critical roles",
+    "description": "Maintained succession matrix for all EM and TL roles: identified primary and secondary successors, documented readiness gaps, created development assignments to close gaps. When EM departed unexpectedly, successor stepped in with zero team disruption.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O12"
+  },
+  {
+    "title": "C8-O5: Manages regulatory compliance risk with proactive frameworks and audit-ready engineering practices",
+    "description": "Built GDPR compliance framework for engineering: automated PII detection in data pipelines, consent management API used by 6 teams, data retention policies enforced programmatically. Passed SOC2 audit with zero engineering findings for 3 consecutive years.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O5"
+  },
+  {
+    "title": "C8-O6: Evaluates and manages vendor risk with structured assessment, dependency tracking, and contingency planning",
+    "description": "Maintained vendor risk registry for 12 critical dependencies. Identified single-vendor lock-in for payment processing; negotiated multi-provider contract and built abstraction layer. When primary vendor had 8-hour outage, failover activated automatically with zero customer impact.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O6"
+  },
+  {
+    "title": "C9-O7: Governs feature flag lifecycle with creation standards, ownership tracking, and mandatory cleanup",
+    "description": "Established feature flag governance: every flag has owner, expiry date, and cleanup ticket created at birth. Automated stale flag detection alerts at 30 days. Reduced active flags from 340 to 45. Eliminated 2 production incidents caused by forgotten flag interactions.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O7"
+  },
+  {
+    "title": "C9-O8: Enforces statistical rigor in A/B testing with proper design, power analysis, and result interpretation",
+    "description": "Established A/B testing standards: mandatory power analysis before launch, minimum sample size gates, sequential testing for early stopping. Caught 3 experiments that would have shipped with underpowered results. Team stopped making decisions on p=0.08 results.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O8"
+  },
+  {
+    "title": "C11-O7: Optimizes diversity hiring pipeline with structured sourcing, bias reduction, and inclusive practices",
+    "description": "Audited hiring funnel: identified 40% drop-off of underrepresented candidates at phone screen. Revised job descriptions removing exclusionary language, added structured scoring rubrics, partnered with 3 diversity-focused sourcing organizations. Underrepresented candidate pass-through rate improved 25% within 2 quarters.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O7"
+  },
+  {
+    "title": "C11-O8: Runs interviewer calibration program ensuring consistent signal quality and reduced evaluation bias",
+    "description": "Built interviewer calibration program: monthly sessions reviewing anonymized write-ups, scoring alignment exercises, feedback quality rubric. Interviewer inter-rater reliability improved from 0.4 to 0.75. Reduced 'weak hire' reversals in debrief by 60%.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O8"
+  },
+  {
+    "title": "Your Team's Tech Stack Becomes Deprecated Company-Wide",
+    "description": "Platform team announces your primary framework/language is sunset. Migration timeline is 18 months. You have 100K lines of code in the deprecated stack, active feature development in flight, and no one on your team has deep experience with the target stack.",
+    "type": "playbook",
+    "url": "/playbooks/your-teams-tech-stack-becomes-deprecated-company-wide/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "P-C3-2"
+  },
+  {
+    "title": "Merging Two Teams After Acquisition/Re-org",
+    "description": "Company acquired a startup. You're responsible for merging their 8-person team with your 12-person team. Different tech stacks (they use Python/Django, you use Java/Spring), different cultures (startup speed vs. enterprise process), different processes (they have no sprint planning, you run 2-week sprints with full ceremonies). Some role overlap exists. Both teams are anxious about who stays, who leads, and what changes.",
+    "type": "playbook",
+    "url": "/playbooks/merging-two-teams-after-acquisition-re-org/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "P-C1-4"
+  },
+  {
+    "title": "Managing Through a Major Security Incident (Data Breach)",
+    "description": "Security team discovers unauthorized data access to your team's service. Customer PII (names, emails, hashed passwords) may be compromised. The scope is unclear \u2014 could be hundreds or millions of records. Legal, PR, and the exec team are involved. Your team owns the affected service. The incident is already escalated to the CEO. Clock is ticking on regulatory notification requirements (72 hours under GDPR).",
+    "type": "playbook",
+    "url": "/playbooks/managing-through-a-major-security-incident-data-breach/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "P-C8-3"
+  },
+  {
+    "title": "Your Skip-Level Reports Are Unhappy With Their EM",
+    "description": "In skip-level 1:1s, multiple engineers (3 out of 7) express frustration with their EM. Recurring themes: lack of career development conversations, micromanagement on technical decisions, poor communication about team priorities, and feeling unheard. The EM has been in role for 18 months and was promoted from within. Their self-assessment is that things are going well.",
+    "type": "playbook",
+    "url": "/playbooks/your-skip-level-reports-are-unhappy-with-their-em/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "P-C6-4"
+  },
+  {
+    "title": "Budget Is Frozen But Commitments Remain",
+    "description": "Mid-year budget freeze announced. No new hires (you had 4 open reqs), no new vendor contracts, limited travel and conference budget. But your Q3-Q4 commitments haven't been adjusted. Leadership expects delivery on the original roadmap. Your team is already at capacity, and two of the open reqs were for a critical new initiative that starts next quarter.",
+    "type": "playbook",
+    "url": "/playbooks/budget-is-frozen-but-commitments-remain/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "P-C10-2"
+  },
+  {
+    "title": "Leading a Cost Optimization Initiative (FinOps)",
+    "description": "CFO mandates 30% cloud cost reduction across engineering. You're asked to lead the initiative for your org (4 teams, ~40 engineers). Current monthly spend is $2M across AWS services. No one has a clear picture of what's driving costs. Teams have never been held accountable for infrastructure spend. Finance wants a plan in 2 weeks and results within the quarter.",
+    "type": "playbook",
+    "url": "/playbooks/leading-a-cost-optimization-initiative-finops/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "P-C10-3"
+  },
+  {
+    "title": "Managing Through a Hiring Freeze",
+    "description": "6-month hiring freeze announced company-wide. You have 3 open reqs mid-pipeline \u2014 one candidate just passed the onsite, another is in final round, and a third is at phone screen stage. Your team of 9 is already stretched across 3 projects. Two senior engineers are showing signs of burnout. One mid-level engineer recently mentioned they've been getting recruiter outreach. Attrition risk is real and you can't backfill.",
+    "type": "playbook",
+    "url": "/playbooks/managing-through-a-hiring-freeze/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "P-C11-2"
+  },
+  {
+    "title": "Your Product Is Being Sunset/Deprecated",
+    "description": "Leadership decides to sunset your team's product \u2014 a service with 50K active users. Revenue doesn't justify continued investment. Users need to be migrated to an alternative (internal or third-party). Timeline is 9 months. Your team of 10 engineers built this product over 3 years. They're anxious about their futures \u2014 will they be laid off, reassigned, or forgotten?",
+    "type": "playbook",
+    "url": "/playbooks/your-product-is-being-sunset-deprecated/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "P-C3-3"
+  },
+  {
+    "title": "The IC Trap",
+    "description": "The IC Trap \u2014 EM spends their time writing code and reviewing PRs instead of doing the actual management work their team needs",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-ic-trap/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-28"
+  },
+  {
+    "title": "Death by Metrics",
+    "description": "Death by Metrics \u2014 EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/death-by-metrics/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-29"
+  },
+  {
+    "title": "The Consensus Trap",
+    "description": "The Consensus Trap \u2014 EM treats every decision as requiring unanimous agreement, turning consensus into a procrastination mechanism",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-consensus-trap/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-30"
+  },
+  {
+    "title": "Meeting Debt",
+    "description": "Meeting Debt \u2014 team drowning in ceremonies and syncs until engineers have less than two hours of uninterrupted focus time per day",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/meeting-debt/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-31"
+  },
+  {
+    "title": "Documentation Hoarding",
+    "description": "Documentation Hoarding \u2014 EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful, creating a graveyard of stale pages",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/documentation-hoarding/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-32"
+  },
+  {
+    "title": "The Hero EM",
+    "description": "The Hero EM \u2014 manager who solves every problem personally, takes over every escalation, and works unsustainable hours while the team never develops independence",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-hero-em/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-33"
+  }
+]

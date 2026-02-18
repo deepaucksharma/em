@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import AntiPatternCard from '../../components/cards/AntiPatternCard.astro';
+import { antiPatterns, capabilities } from '../../lib/data';
+import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+
+const capMap = new Map(capabilities.map(c => [c.id, c]));
+const domains = DOMAIN_ORDER;
+---
+
+<BaseLayout title="Anti-Patterns" description="27 anti-patterns to watch for in engineering leadership.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Anti-Patterns' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">Anti-Patterns</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {antiPatterns.length} common failure modes in engineering leadership — recognize them early, recover fast.
+      </p>
+    </div>
+
+    <!-- Domain filter chips -->
+    <div class="flex flex-wrap gap-2 mb-8" id="domain-filters">
+      <button data-domain="all" class="badge bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 cursor-pointer border-2 border-blue-400">All</button>
+      {domains.map(d => (
+        <button data-domain={d} class:list={['badge cursor-pointer border-2 border-transparent hover:border-current', getDomainColor(d).badge]}>
+          {d}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="ap-grid">
+      {antiPatterns.map(ap => {
+        const cap = capMap.get(ap.capabilityId);
+        return (
+          <div data-domain={cap?.domain ?? ''}>
+            <AntiPatternCard antiPattern={ap} />
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll('#domain-filters button');
+  const items = document.querySelectorAll('#ap-grid > div');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const domain = btn.getAttribute('data-domain');
+      buttons.forEach(b => b.classList.remove('border-blue-400', 'border-green-400', 'border-purple-400', 'border-amber-400', 'border-red-400', 'border-cyan-400'));
+      buttons.forEach(b => b.classList.add('border-transparent'));
+      btn.classList.remove('border-transparent');
+      btn.classList.add('border-current');
+
+      items.forEach(item => {
+        if (domain === 'all' || item.getAttribute('data-domain') === domain) {
+          (item as HTMLElement).style.display = '';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

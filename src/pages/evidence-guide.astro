@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import Badge from '../components/ui/Badge.astro';
+import { evidenceTypes } from '../lib/data';
+
+const byStrength = {
+  High: evidenceTypes.filter(e => e.evidenceStrength === 'High'),
+  Medium: evidenceTypes.filter(e => e.evidenceStrength === 'Medium'),
+  Low: evidenceTypes.filter(e => e.evidenceStrength === 'Low'),
+};
+---
+
+<BaseLayout title="Evidence Guide" description="24 evidence types with strength ratings and usage guidance.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Evidence Guide' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">Evidence Guide</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {evidenceTypes.length} evidence types for documenting leadership capability — organized by strength.
+      </p>
+    </div>
+
+    {Object.entries(byStrength).map(([strength, types]) => types.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <Badge text={strength} variant="relevance" />
+          <span>{strength} Strength Evidence</span>
+          <span class="text-sm font-normal text-gray-500 dark:text-gray-400">({types.length})</span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {types.map(et => (
+            <div class="card">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold text-gray-900 dark:text-white">{et.displayName}</h3>
+                <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{et.typeKey}</span>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{et.description}</p>
+              <div class="text-xs text-gray-500 dark:text-gray-400">
+                Used by {et.usageCount} observables
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

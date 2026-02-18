@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import Badge from '../../components/ui/Badge.astro';
+import { capabilities, getCapability } from '../../lib/data';
+import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+import learningData from '../../data/learning-pathways.json';
+
+const pathways = learningData as {
+  capabilityId: string;
+  foundational: { title: string; type: string; description: string; url?: string }[];
+  practical: { title: string; type: string; description: string }[];
+  advanced: { title: string; type: string; description: string }[];
+}[];
+
+const pathwaysWithCap = pathways.map(p => ({
+  ...p,
+  capability: getCapability(p.capabilityId),
+})).filter(p => p.capability);
+
+const groupedByDomain = DOMAIN_ORDER.map(domain => ({
+  domain,
+  items: pathwaysWithCap.filter(p => p.capability?.domain === domain),
+})).filter(g => g.items.length > 0);
+
+const typeIcon: Record<string, string> = {
+  book: '📖', article: '📄', course: '🎓', video: '🎬', practice: '🔧',
+  exercise: '💪', template: '📋', workshop: '🏗️', tool: '🛠️',
+  'case-study': '📊', mentorship: '🤝', community: '👥', framework: '🏛️',
+};
+---
+
+<BaseLayout title="Learning Pathways" description="Structured learning activities across three tiers for all 14 engineering leadership capabilities.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Learning Pathways' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Learning Pathways
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Three-tier learning activities for each capability: foundational knowledge, practical application, and advanced mastery.
+      </p>
+    </div>
+
+    {groupedByDomain.map(({ domain, items }) => (
+      <section class="mb-12">
+        <h2 class:list={['text-xl font-bold mb-6', getDomainColor(domain).text]}>{domain}</h2>
+
+        {items.map(({ capability: cap, foundational, practical, advanced }) => cap && (
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-4">
+              <Badge text={cap.domain} variant="domain" domain={cap.domain} />
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <a href={`/capabilities/${cap.slug}/`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  {cap.id}: {cap.name}
+                </a>
+              </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Foundational */}
+              <div class="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800/50">
+                <h4 class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3 uppercase tracking-wider">Foundational</h4>
+                <ul class="space-y-3">
+                  {foundational.map(item => (
+                    <li>
+                      <div class="flex items-start gap-2">
+                        <span class="text-sm">{typeIcon[item.type] || '📌'}</span>
+                        <div>
+                          <span class="text-sm font-medium text-gray-900 dark:text-white">{item.title}</span>
+                          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.description}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Practical */}
+              <div class="rounded-xl border border-blue-200 dark:border-blue-800 p-4 bg-blue-50 dark:bg-blue-950/20">
+                <h4 class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 uppercase tracking-wider">Practical</h4>
+                <ul class="space-y-3">
+                  {practical.map(item => (
+                    <li>
+                      <div class="flex items-start gap-2">
+                        <span class="text-sm">{typeIcon[item.type] || '📌'}</span>
+                        <div>
+                          <span class="text-sm font-medium text-blue-700 dark:text-blue-300">{item.title}</span>
+                          <p class="text-xs text-blue-600 dark:text-blue-400 mt-0.5">{item.description}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Advanced */}
+              <div class="rounded-xl border border-green-200 dark:border-green-800 p-4 bg-green-50 dark:bg-green-950/20">
+                <h4 class="text-sm font-semibold text-green-600 dark:text-green-400 mb-3 uppercase tracking-wider">Advanced</h4>
+                <ul class="space-y-3">
+                  {advanced.map(item => (
+                    <li>
+                      <div class="flex items-start gap-2">
+                        <span class="text-sm">{typeIcon[item.type] || '📌'}</span>
+                        <div>
+                          <span class="text-sm font-medium text-green-700 dark:text-green-300">{item.title}</span>
+                          <p class="text-xs text-green-600 dark:text-green-400 mt-0.5">{item.description}</p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+    ))}
+  </div>
+</BaseLayout>

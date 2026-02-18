@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import CareerLevelCard from '../../components/cards/CareerLevelCard.astro';
+import careerData from '../../data/career-progression.json';
+
+const career = careerData as { levels: any[] };
+---
+
+<BaseLayout title="Career Progression" description="Four-level career progression from EM to VP with capability expectations.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Career Progression' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Career Progression
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Four levels of engineering leadership with scope, capability expectations, promotion blockers, and transition signals.
+      </p>
+    </div>
+
+    {/* Horizontal progression overview */}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      {career.levels.map(level => (
+        <CareerLevelCard level={level} />
+      ))}
+    </div>
+
+    {/* Progression arrows */}
+    <div class="hidden lg:flex items-center justify-center gap-2 -mt-8 mb-8">
+      {career.levels.slice(0, -1).map((_, i) => (
+        <div class="flex items-center">
+          <div class="w-24 h-0.5 bg-gray-300 dark:bg-gray-600" />
+          <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+          {i < career.levels.length - 2 && <div class="w-24" />}
+        </div>
+      ))}
+    </div>
+
+    {/* Detailed comparison */}
+    <section>
+      <h2 class="section-heading">Detailed Comparison</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-700">
+              <th class="text-left py-3 pr-4 font-semibold text-gray-700 dark:text-gray-300">Aspect</th>
+              {career.levels.map(l => (
+                <th class="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">{l.title}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100 dark:border-gray-800">
+              <td class="py-3 pr-4 font-medium text-gray-700 dark:text-gray-300">Scope</td>
+              {career.levels.map(l => (
+                <td class="py-3 px-3 text-gray-600 dark:text-gray-400">{l.scope}</td>
+              ))}
+            </tr>
+            <tr class="border-b border-gray-100 dark:border-gray-800">
+              <td class="py-3 pr-4 font-medium text-gray-700 dark:text-gray-300">Key Transition Signal</td>
+              {career.levels.map(l => (
+                <td class="py-3 px-3 text-gray-600 dark:text-gray-400">{l.transitionSignals[0]}</td>
+              ))}
+            </tr>
+            <tr class="border-b border-gray-100 dark:border-gray-800">
+              <td class="py-3 pr-4 font-medium text-gray-700 dark:text-gray-300">Top Promotion Blocker</td>
+              {career.levels.map(l => (
+                <td class="py-3 px-3 text-gray-600 dark:text-gray-400">{l.promotionBlockers[0]}</td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

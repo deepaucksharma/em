@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import InterviewQuestionCard from '../../components/cards/InterviewQuestionCard.astro';
+import { getCapability } from '../../lib/data';
+import interviewData from '../../data/interview-questions.json';
+
+const questions = interviewData as {
+  id: string;
+  capabilityId: string;
+  question: string;
+  level: string;
+  questionType: string;
+  followUps: string[];
+  lookFor: string[];
+  redFlags: string[];
+}[];
+
+export function getStaticPaths() {
+  return [
+    { params: { level: 'em' } },
+    { params: { level: 'director' } },
+  ];
+}
+
+const { level } = Astro.params;
+const levelLabel = level === 'director' ? 'Director' : 'Engineering Manager';
+const filtered = questions.filter(q => q.level === level);
+---
+
+<BaseLayout title={`${levelLabel} Interview Questions`} description={`Interview questions for ${levelLabel} candidates.`}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[
+      { label: 'Interview Questions', href: '/interview-questions/' },
+      { label: levelLabel },
+    ]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        {levelLabel} Interview Questions
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {filtered.length} questions for {levelLabel} candidates across all capabilities.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      {filtered.map(q => {
+        const cap = getCapability(q.capabilityId);
+        return (
+          <InterviewQuestionCard question={q} capabilityName={cap?.name} />
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

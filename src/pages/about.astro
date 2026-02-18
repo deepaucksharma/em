@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import { capabilities, observables, antiPatterns, playbooks, calibrationSignals, rubricAnchors, evidenceTypes } from '../lib/data';
+---
+
+<BaseLayout title="About" description="About the Engineering Leadership Matrix v6 — methodology, structure, and how to use it.">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'About' }]} />
+
+    <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6">About the Matrix</h1>
+
+    <div class="prose dark:prose-invert max-w-none space-y-6">
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">What is the Engineering Leadership Matrix?</h2>
+        <p class="text-gray-600 dark:text-gray-400">
+          The Engineering Leadership Matrix v6 is a unified capability model for engineering managers and directors at Big Tech companies. It provides a structured, evidence-based framework for career development, performance calibration, and leadership growth.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Structure</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">The matrix is organized into interconnected layers:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="card">
+            <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{capabilities.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Capabilities</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Core competency areas across 6 domains</div>
+          </div>
+          <div class="card">
+            <div class="text-2xl font-bold text-green-600 dark:text-green-400">{observables.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Observables</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Specific behaviors you can measure</div>
+          </div>
+          <div class="card">
+            <div class="text-2xl font-bold text-red-600 dark:text-red-400">{antiPatterns.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Anti-Patterns</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Common failure modes to watch for</div>
+          </div>
+          <div class="card">
+            <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">{playbooks.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Playbooks</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Scenario-based decision frameworks</div>
+          </div>
+          <div class="card">
+            <div class="text-2xl font-bold text-cyan-600 dark:text-cyan-400">{calibrationSignals.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Calibration Signals</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Language for promo packets & reviews</div>
+          </div>
+          <div class="card">
+            <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{rubricAnchors.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Rubric Anchors</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">3-level behavioral descriptions</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Domains</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-3">Capabilities are organized into 6 domains:</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-blue-500"></span><span class="font-medium text-gray-900 dark:text-white">Strategy</span> — Org-level thinking, prioritization</li>
+          <li class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-green-500"></span><span class="font-medium text-gray-900 dark:text-white">Execution</span> — Systems design, operational rhythm, delivery</li>
+          <li class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-purple-500"></span><span class="font-medium text-gray-900 dark:text-white">Stakeholder</span> — Decision framing, resource allocation</li>
+          <li class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-amber-500"></span><span class="font-medium text-gray-900 dark:text-white">People</span> — Coaching, hiring, culture, performance management</li>
+          <li class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-500"></span><span class="font-medium text-gray-900 dark:text-white">Reliability</span> — Incidents, risk, security, compliance</li>
+          <li class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-cyan-500"></span><span class="font-medium text-gray-900 dark:text-white">Data</span> — Metrics, measurement, outcomes</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">How to Use</h2>
+        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+          <li><strong>Self-assessment:</strong> Use the <a href="/rubric/" class="text-blue-600 dark:text-blue-400 hover:underline">Rubric</a> to evaluate your current level across capabilities.</li>
+          <li><strong>1:1 conversations:</strong> Use capability pages and observables to structure feedback conversations.</li>
+          <li><strong>Career planning:</strong> Identify capabilities to develop and use evidence types to track progress.</li>
+          <li><strong>Promo packets:</strong> Use <a href="/calibration/" class="text-blue-600 dark:text-blue-400 hover:underline">calibration signals</a> as language templates.</li>
+          <li><strong>Scenario prep:</strong> Use <a href="/playbooks/" class="text-blue-600 dark:text-blue-400 hover:underline">playbooks</a> to prepare for common leadership scenarios.</li>
+          <li><strong>Anti-pattern recognition:</strong> Use <a href="/anti-patterns/" class="text-blue-600 dark:text-blue-400 hover:underline">anti-patterns</a> to identify and correct failure modes early.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Version History</h2>
+        <p class="text-gray-600 dark:text-gray-400">
+          Version 6 represents the latest iteration of the matrix, with fixes for anti-pattern alignment, reconciled observable counts, updated EM relevance ratings, and coverage percentages.
+        </p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

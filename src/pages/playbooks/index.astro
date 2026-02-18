@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import PlaybookCard from '../../components/cards/PlaybookCard.astro';
+import { playbooks, capabilities } from '../../lib/data';
+
+const capMap = new Map(capabilities.map(c => [c.id, c]));
+const capIds = [...new Set(playbooks.flatMap(p => p.capabilityIds))].sort();
+---
+
+<BaseLayout title="Playbooks" description="23 scenario-based playbooks for engineering leadership.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Playbooks' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">Scenario Playbooks</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {playbooks.length} real-world scenarios with decision frameworks, common mistakes, and what good looks like.
+      </p>
+    </div>
+
+    <!-- Capability filter chips -->
+    <div class="flex flex-wrap gap-2 mb-8" id="cap-filters">
+      <button data-cap="all" class="badge bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 cursor-pointer border-2 border-current">All</button>
+      {capIds.map(id => {
+        const cap = capMap.get(id);
+        return cap && (
+          <button data-cap={id} class="badge bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 cursor-pointer border-2 border-transparent hover:border-current">
+            {id}
+          </button>
+        );
+      })}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="pb-grid">
+      {playbooks.map(pb => (
+        <div data-caps={pb.capabilityIds.join(',')}>
+          <PlaybookCard playbook={pb} />
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll('#cap-filters button');
+  const items = document.querySelectorAll('#pb-grid > div');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cap = btn.getAttribute('data-cap');
+      buttons.forEach(b => { b.classList.remove('border-current'); b.classList.add('border-transparent'); });
+      btn.classList.remove('border-transparent');
+      btn.classList.add('border-current');
+
+      items.forEach(item => {
+        const caps = item.getAttribute('data-caps')?.split(',') ?? [];
+        if (cap === 'all' || caps.includes(cap!)) {
+          (item as HTMLElement).style.display = '';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

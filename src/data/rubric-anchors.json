@@ -1,0 +1,130 @@
+[
+  {
+    "capabilityId": "C3",
+    "sourceTopic": "Technical Strategy & System Ownership",
+    "level1Developing": "Follows existing technical direction set by TL/Staff. Participates in design reviews. Aware of tech debt but doesn't prioritize it systematically. Relies on senior engineers for architecture decisions.",
+    "level3Competent": "Co-authors tech strategy with TL/Staff. Runs design reviews with clear criteria. Manages tech debt allocation (15-20% capacity). Makes build-vs-buy decisions with TCO analysis. Understands system health metrics and acts on them.",
+    "level5Advanced": "Sets multi-quarter technical vision that senior engineers follow. Architecture review process institutionalized across teams. Strategic tech debt paydown with measurable velocity impact. Drives platform thinking across org. Recognized as technical strategy leader by peers.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C9",
+    "sourceTopic": "Engineering Excellence & Delivery",
+    "level1Developing": "Aware of DORA metrics but doesn't track consistently. Follows existing release processes. Notices developer experience issues but doesn't systematically address them. Sprint management is reactive.",
+    "level3Competent": "Tracks DORA metrics weekly with team, acts on trends. Owns release quality and process for team. Runs developer experience improvements quarterly (top 2 pain points). Predictable sprint health (85%+ commitment accuracy). Toil tracked and reduced systematically.",
+    "level5Advanced": "DORA metrics at elite level across teams. Developer experience investments justified with ROI data. Delivery practices standardized across org. Teams benchmark against each other constructively. Engineering productivity narrative presented to leadership.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C13",
+    "sourceTopic": "Security & Operational Rigor",
+    "level1Developing": "Ensures team follows security practices when reminded. Patches vulnerabilities reactively. Change management is informal. Compliance is handled last-minute before audits.",
+    "level3Competent": "Security embedded in development workflow (threat modeling, automated scanning, champion rotation). Vulnerability SLAs met consistently. Tiered change management process. Continuous compliance posture with automated evidence collection.",
+    "level5Advanced": "Security culture driven across org. Zero critical findings in audits for multiple cycles. Change management standards adopted org-wide. Compliance is a competitive advantage, not a burden. Security champion program scaled beyond own team.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C8",
+    "sourceTopic": "Operational Risk & Incident Management",
+    "level1Developing": "Participates in incident response. Post-mortems happen but action items slip. On-call exists but rotation health isn't tracked. Launches happen without formal readiness review.",
+    "level3Competent": "Incident command process defined and practiced. Post-mortem action item completion >80%. On-call health tracked (page volume, false positives, off-hours pages). Launch readiness checklist enforced. Game days run quarterly.",
+    "level5Advanced": "Org-level incident process owned and continuously improved. Cross-org failure mode analysis. On-call health exemplary (teams want to be on your rotation). Incident patterns analyzed across teams. Culture of proactive resilience building.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C1",
+    "sourceTopic": "Org Design & Team Topologies",
+    "level1Developing": "Inherits team structure and works within it. Recognizes ownership confusion when it causes problems. Understands Conway's Law conceptually but doesn't apply it proactively.",
+    "level3Competent": "Assesses team cognitive load and advocates for structural changes. Maintains clear ownership registry. Proposes and executes team splits/merges when needed. Applies Conway's Law to align architecture and org structure.",
+    "level5Advanced": "Designs team topology for the org. Re-orgs executed with zero regrettable attrition. Platform team justification and creation. Inverse Conway maneuver applied successfully. Team topology rationale articulated to VP+ with architectural alignment evidence.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C6",
+    "sourceTopic": "Team Health & Execution",
+    "level1Developing": "Holds 1:1s but they're mostly status updates. Avoids difficult conversations. Capacity planning is rough estimate. Handles retention reactively (after notice given). Struggles with adversity communication.",
+    "level3Competent": "1:1s are trust-building with career development mix. Addresses underperformance within 2 weeks of identification. Capacity model accounts for interrupts, on-call, PTO. Retention managed proactively (stay interviews, flight risk identification). Leads team through adversity with honest communication.",
+    "level5Advanced": "Psychological safety measurable and high across team. Zero avoidance of difficult conversations. Team executes predictably at sustainable pace. Regrettable attrition below org benchmark. Team navigates crises with minimal productivity loss. New leader transitions are smooth.",
+    "rationale": "Anchor 1/2: Covers EM-level coaching (1:1s, underperformance, retention, stretch assignments). Maps to C6-O1 through C6-O5."
+  },
+  {
+    "capabilityId": "C11",
+    "sourceTopic": "Talent Acquisition & Team Building",
+    "level1Developing": "Participates in hiring loops. Onboarding is informal (buddy system if lucky). Headcount requests are 'we need more people.' No engineering brand presence.",
+    "level3Competent": "Calibrated hiring loops with trained interviewers and rubrics. Structured 30/60/90 onboarding with metrics. Headcount justified with capacity model and business impact. Referral pipeline active. Blog posts or conference presence emerging.",
+    "level5Advanced": "Bar raiser discipline maintained under pressure. Time-to-productivity measured and optimized. Headcount cases win at VP level. Engineering brand draws inbound candidates. Conference talks and open source presence attract senior talent.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C14",
+    "sourceTopic": "Performance, Calibration & Growth",
+    "level1Developing": "Writes reviews but they're vague. Calibration prep is last-minute. Promotion packets are reactive ('they've been doing this for a while'). Avoids PIPs. Career conversations are infrequent.",
+    "level3Competent": "Evidence-based reviews with specific impact and rubric language. Calibration cases prepared with cross-team comparison data. Promo packets built over 2-3 cycles with gap-filling stretch assignments. PIPs executed when needed with HR partnership. Quarterly career conversations for all reports.",
+    "level5Advanced": "Reviews set the standard for the org. Calibration presence is authoritative and credible. Multiple successful promotions per cycle. Performance management (including exits) handled cleanly. Career development is the reason people join your team. Calibrates other EMs' performance standards.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C12",
+    "sourceTopic": "Engineering Culture & Team Identity",
+    "level1Developing": "Team culture exists by accident (whatever norms emerged). Recognition is sporadic. Knowledge sharing is informal. Inclusion is 'we treat everyone the same.'",
+    "level3Competent": "Team charter written and referenced. Engineering principles documented and used in design reviews. Regular recognition rituals. Documentation standards maintained. Active inclusion practices (meeting facilitation, async options, equitable opportunity distribution).",
+    "level5Advanced": "Culture is intentional, measurable, and self-reinforcing. Engineering principles adopted beyond own team. Knowledge sharing institutionalized (tech talks, wikis, design doc culture). Inclusive environment measurable in surveys. Culture is a recruiting advantage.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C6",
+    "sourceTopic": "Managing Managers (Director Track)",
+    "level1Developing": "n/a for EM level. Early Director: still doing EM-level work. Skip-levels infrequent or awkward. EMs operate independently without cross-calibration. Delegation is uncomfortable.",
+    "level3Competent": "Regular skip-level 1:1s providing org insight. EMs coached on management craft (not just project management). Cross-EM calibration sessions before perf cycles. Delegation boundaries clear. EM bench strength being developed.",
+    "level5Advanced": "EMs are independently strong leaders. Skip-level insights drive proactive org interventions. Calibration standards consistent across all EMs. EM pipeline producing ready managers. Director operates at Director altitude consistently. Org health monitored and maintained systematically.",
+    "rationale": "Anchor 2/2: Covers Director-level EM development (coaching EMs, skip-levels, bench building). Maps to C6-O6 and C6-O7. Intentionally separate — different altitude of practice."
+  },
+  {
+    "capabilityId": "C2",
+    "sourceTopic": "Strategic Alignment & Roadmapping",
+    "level1Developing": "Plans reactively (PM tells you what to build). OKRs exist but are task lists. Engineering impact described in technical terms. Trade-offs implicit, not communicated.",
+    "level3Competent": "Structured quarterly planning with capacity model. Outcome-oriented OKRs (max 3 per team). Engineering impact translated to business metrics. Trade-offs explicit in planning docs with 'what we're NOT doing' section. Roadmap communicated at multiple altitudes.",
+    "level5Advanced": "Org-level planning drives cross-team alignment. OKRs directly tied to company strategy with measurable outcomes. Engineering ROI articulated in board-level business terms. Planning process is the standard others adopt. Strategic partner to PM/business leadership.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C5",
+    "sourceTopic": "Cross-Functional Partnership",
+    "level1Developing": "Works with PM on features but relationship is transactional. Design involvement is late. Dependencies are managed reactively. TPM relationship undefined.",
+    "level3Competent": "Healthy triad with PM/Design (regular syncs, shared ownership, constructive disagreements). Technical input shapes product direction. Dependencies negotiated proactively. TPM partnership has clear division of labor. DS and platform partnerships structured.",
+    "level5Advanced": "Triad is a model for the org. Product strategy influenced by technical insights. Cross-org partnerships brokered at scale. Legal/privacy partnerships proactive. Partner feedback is consistently strong across all functions.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C7",
+    "sourceTopic": "Stakeholder Management & Influence",
+    "level1Developing": "Communicates status when asked. Frames asks in engineering terms. Delivers bad news late or sugar-coated. Political capital not actively built. No executive presence.",
+    "level3Competent": "Proactive weekly written updates. Proposals framed in business terms with ROI. Bad news delivered early with mitigation plan. Political capital built through consistent delivery and helping others. Comfortable in exec reviews.",
+    "level5Advanced": "Leadership trusts completely — maximum autonomy earned. Cross-org alignment driven without escalation. Executive communication is crisp and confident. Sponsors at VP+ level actively advocate for you. Seen as a leader beyond engineering function.",
+    "rationale": "Anchor 1/2: Covers external-facing communication (status updates, bad news delivery, exec presentations, managing up). Maps to C7-O2 through C7-O5."
+  },
+  {
+    "capabilityId": "C10",
+    "sourceTopic": "Budget, Headcount & Resource Planning",
+    "level1Developing": "Requests headcount without financial framing. Cloud costs not tracked at team level. Build-vs-buy decisions are gut feel. Budget is someone else's problem.",
+    "level3Competent": "Headcount justified with ROI analysis. Cloud costs attributed and optimized per service. Build-vs-buy uses TCO framework. Contractor strategy is principled. Budget defense prepared for cuts.",
+    "level5Advanced": "Org-level headcount narrative wins at VP/finance level. FinOps culture established across teams. Engineering investment framed as business asset with measurable returns. Proactive cost optimization (savings reinvested). Trusted steward of company resources.",
+    "rationale": "Single anchor for capability."
+  },
+  {
+    "capabilityId": "C7",
+    "sourceTopic": "Decision Making & Prioritization",
+    "level1Developing": "Decisions made in meetings without documentation. Difficulty saying no. Most decisions escalated or deferred. First principles thinking is aspirational, not practiced.",
+    "level3Competent": "DACI/RFC culture established. Decisions classified by reversibility and handled appropriately. Says no with trade-off framing. First principles analysis applied to significant decisions. Systems thinking catches second-order effects.",
+    "level5Advanced": "Decision framework is the org standard. Prioritization under ambiguity is a strength — forward progress in uncertain situations. First principles thinking produces novel solutions. Systems thinking prevents cross-org negative externalities. Decision quality recognized by peers and leadership.",
+    "rationale": "Anchor 2/2: Covers decision architecture (DACI/RFC, trade-off framing, reversibility). Maps to C7-O1, C7-O6, C7-O7. Intentionally separate — communication vs decision-making are distinct sub-skills."
+  },
+  {
+    "capabilityId": "C4",
+    "sourceTopic": "Derived from Engineering Excellence & Team Health execution practices",
+    "level1Developing": "Follows existing processes. Sprint velocity inconsistent. Interrupts handled reactively. Remote practices undefined.",
+    "level3Competent": "Clear operating cadence with defined outputs. 85%+ delivery predictability. Interrupt rotation implemented. Remote-first practices documented.",
+    "level5Advanced": "Operating rhythm is the org standard. Teams self-manage within cadence. Toil systematically eliminated. Remote/hybrid practices produce equal engagement.",
+    "rationale": "Single anchor for capability."
+  }
+]

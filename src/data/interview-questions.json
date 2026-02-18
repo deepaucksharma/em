@@ -1,0 +1,1311 @@
+[
+  {
+    "id": "IQ-01",
+    "capabilityId": "C1",
+    "question": "Tell me about a time you identified a structural problem that spanned multiple teams. How did you diagnose it and what did you do?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you build consensus among the other team leads involved?",
+      "What data or signals told you this was a structural issue rather than a local one?"
+    ],
+    "lookFor": [
+      "Ability to see beyond their own team's boundaries",
+      "Systematic diagnosis rather than gut-feel reactions",
+      "Evidence of collaboration with peer managers",
+      "Clear articulation of the before/after state"
+    ],
+    "redFlags": [
+      "Only focused on their own team's symptoms",
+      "Escalated without attempting to understand root causes",
+      "Could not explain the broader organizational impact"
+    ]
+  },
+  {
+    "id": "IQ-02",
+    "capabilityId": "C1",
+    "question": "You inherit a team that has grown organically and now has unclear ownership boundaries with two adjacent teams. How would you approach clarifying responsibilities?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How would you handle a case where the other team's manager disagrees with your proposed boundaries?",
+      "What artifacts or agreements would you create to make the new boundaries stick?",
+      "How would you communicate changes to your ICs without creating anxiety?"
+    ],
+    "lookFor": [
+      "Starts by mapping current state before proposing changes",
+      "Involves stakeholders early rather than dictating boundaries",
+      "Thinks about sustainable ownership, not just short-term fixes",
+      "Considers the human impact of reorganization"
+    ],
+    "redFlags": [
+      "Immediately proposes a reorg without understanding current dynamics",
+      "Ignores the perspectives of adjacent team leads",
+      "Treats it purely as a technical ownership problem without people considerations",
+      "No plan for ongoing governance of boundaries"
+    ]
+  },
+  {
+    "id": "IQ-03",
+    "capabilityId": "C1",
+    "question": "Tell me about a time you led a significant organizational restructuring. What drove the decision and how did you execute it?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "What resistance did you encounter and how did you handle it?",
+      "How did you measure success of the restructuring?",
+      "What would you do differently if you could do it again?"
+    ],
+    "lookFor": [
+      "Structured approach to change management",
+      "Data-driven decision making tied to business outcomes",
+      "Empathy for affected team members",
+      "Clear communication plan at multiple levels"
+    ],
+    "redFlags": [
+      "No consideration of team impact",
+      "Reorganized without clear business rationale",
+      "Unable to articulate success metrics",
+      "Treated it as a one-time event rather than a managed transition"
+    ]
+  },
+  {
+    "id": "IQ-04",
+    "capabilityId": "C1",
+    "question": "How do you evaluate whether your current org structure is the right one for the problems your teams need to solve over the next 12-18 months?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "What signals tell you the current structure is no longer serving the business?",
+      "How do you balance stability for your teams against the need for structural change?"
+    ],
+    "lookFor": [
+      "Uses Conway's Law thinking to connect architecture and org design",
+      "Considers multiple dimensions: delivery speed, talent growth, customer impact",
+      "Has a framework for evaluating org health beyond just shipping velocity",
+      "Thinks in time horizons beyond the current quarter"
+    ],
+    "redFlags": [
+      "Only thinks about org structure reactively",
+      "No mental model for how org design affects outcomes",
+      "Optimizes solely for short-term delivery",
+      "Cannot articulate tradeoffs of different org shapes"
+    ]
+  },
+  {
+    "id": "IQ-05",
+    "capabilityId": "C2",
+    "question": "Describe a time when you had to say no to a project or initiative that had strong executive sponsorship. How did you handle it?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did the executive respond, and what did you learn from the interaction?",
+      "What framework did you use to justify the deprioritization?"
+    ],
+    "lookFor": [
+      "Courage to push back with data and reasoning",
+      "Clear prioritization framework, not just opinion",
+      "Ability to propose alternatives or sequencing rather than a flat no",
+      "Maintained the relationship while being honest"
+    ],
+    "redFlags": [
+      "Never pushes back on leadership requests",
+      "Said no without offering alternatives or tradeoff analysis",
+      "Avoided the conversation and let the project silently stall",
+      "Could not articulate opportunity cost"
+    ]
+  },
+  {
+    "id": "IQ-06",
+    "capabilityId": "C2",
+    "question": "Your team has capacity for three projects next quarter but five are on the roadmap. Walk me through how you would decide what to cut or defer.",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you handle the case where two projects score similarly on your framework?",
+      "How do you communicate the deprioritized items to stakeholders who are counting on them?",
+      "What role does your team play in this decision?"
+    ],
+    "lookFor": [
+      "Uses a consistent evaluation framework (impact, effort, risk, alignment)",
+      "Involves stakeholders in tradeoff discussions rather than deciding unilaterally",
+      "Considers dependencies and sequencing, not just isolated project value",
+      "Transparent about the decision process"
+    ],
+    "redFlags": [
+      "Tries to do all five by overloading the team",
+      "Defers entirely to leadership without forming a recommendation",
+      "No structured approach to comparing projects",
+      "Ignores downstream dependencies"
+    ]
+  },
+  {
+    "id": "IQ-07",
+    "capabilityId": "C2",
+    "question": "Tell me about a time you had to realign your organization's roadmap mid-year due to a significant shift in business strategy. How did you manage the transition?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you handle teams that had already invested months in now-deprioritized work?",
+      "What did you do to maintain morale during the pivot?",
+      "How did you ensure the new priorities were properly resourced?"
+    ],
+    "lookFor": [
+      "Speed of response without sacrificing thoughtfulness",
+      "Ability to translate business strategy shifts into engineering priorities",
+      "Sensitivity to sunk cost and team morale",
+      "Clear re-communication of the new narrative"
+    ],
+    "redFlags": [
+      "Took weeks to respond to the strategic shift",
+      "Could not connect business strategy to engineering priorities",
+      "Ignored the emotional impact on teams who lost their projects",
+      "Failed to update stakeholders on the downstream implications"
+    ]
+  },
+  {
+    "id": "IQ-08",
+    "capabilityId": "C2",
+    "question": "How do you balance investment between new feature development, technical debt reduction, and platform reliability across your org?",
+    "level": "director",
+    "questionType": "technical",
+    "followUps": [
+      "How do you ensure tech debt work actually gets done rather than perpetually deferred?",
+      "What metrics do you use to know the balance is right?"
+    ],
+    "lookFor": [
+      "Has explicit allocation targets or budgets for each category",
+      "Uses data to adjust the balance over time rather than fixed ratios",
+      "Can articulate the long-term cost of under-investing in each area",
+      "Creates structural mechanisms to protect non-feature work"
+    ],
+    "redFlags": [
+      "No conscious allocation strategy; it just happens",
+      "100% feature-focused with tech debt as an afterthought",
+      "Cannot explain how the balance has shifted over time or why",
+      "Treats reliability as someone else's problem"
+    ]
+  },
+  {
+    "id": "IQ-09",
+    "capabilityId": "C3",
+    "question": "Tell me about a system architecture decision you influenced as a manager. What was your role versus the tech lead's role?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you add value without undermining the tech lead's authority?",
+      "Were there business constraints you brought into the discussion that the engineers hadn't considered?"
+    ],
+    "lookFor": [
+      "Understands the difference between steering and dictating technical decisions",
+      "Brings business context and constraints that engineers might miss",
+      "Empowers the tech lead while staying informed enough to ask good questions",
+      "Can speak to architecture at an appropriate level of abstraction"
+    ],
+    "redFlags": [
+      "Either completely hands-off or micromanaging technical decisions",
+      "Cannot describe any architecture their team owns",
+      "Takes credit for the tech lead's work",
+      "No understanding of how architecture choices affect team structure or delivery"
+    ]
+  },
+  {
+    "id": "IQ-10",
+    "capabilityId": "C3",
+    "question": "Your team is proposing a migration from a monolith to microservices. As the EM, what questions would you ask and what guardrails would you put in place?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How would you stage the migration to manage risk?",
+      "What organizational changes might need to accompany the architectural change?",
+      "How would you handle it if the migration is taking longer than expected?"
+    ],
+    "lookFor": [
+      "Asks about the business driver, not just the technical rationale",
+      "Thinks about incremental migration rather than big-bang rewrites",
+      "Connects architectural changes to team topology and ownership",
+      "Considers operational readiness and observability requirements"
+    ],
+    "redFlags": [
+      "Rubber-stamps the technical proposal without critical questions",
+      "Focuses only on technical elegance without business justification",
+      "No risk management or rollback strategy",
+      "Ignores the operational complexity microservices introduce"
+    ]
+  },
+  {
+    "id": "IQ-11",
+    "capabilityId": "C3",
+    "question": "Describe a time you had to make a build-vs-buy decision for a significant piece of infrastructure. Walk me through your analysis and the outcome.",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you account for long-term maintenance costs in your analysis?",
+      "What would have changed your decision?",
+      "How did you handle internal disagreement about the direction?"
+    ],
+    "lookFor": [
+      "Comprehensive cost analysis including TCO, not just upfront cost",
+      "Considered team capability and hiring implications",
+      "Evaluated strategic differentiation vs. commodity infrastructure",
+      "Made a reversible or staged decision where possible"
+    ],
+    "redFlags": [
+      "Made the decision based purely on engineering preference",
+      "Did not consider ongoing operational costs",
+      "Ignored vendor risk or lock-in considerations",
+      "Could not explain the decision criteria used"
+    ]
+  },
+  {
+    "id": "IQ-12",
+    "capabilityId": "C3",
+    "question": "How do you ensure your organization's technical architecture evolves to support a 10x increase in scale over the next two years?",
+    "level": "director",
+    "questionType": "technical",
+    "followUps": [
+      "How do you balance forward-looking architecture work against current delivery commitments?",
+      "How do you get alignment across multiple teams on shared architectural direction?"
+    ],
+    "lookFor": [
+      "Uses architecture reviews, RFCs, or similar governance mechanisms",
+      "Invests in architectural runway proactively, not reactively",
+      "Creates forums for cross-team architectural alignment",
+      "Ties architecture evolution to business growth scenarios"
+    ],
+    "redFlags": [
+      "No proactive architecture planning; only reacts to scaling emergencies",
+      "Relies on a single architect rather than building architectural capability across teams",
+      "Cannot articulate the current architecture's scaling limitations",
+      "Architecture decisions are made in silos without cross-team coordination"
+    ]
+  },
+  {
+    "id": "IQ-13",
+    "capabilityId": "C4",
+    "question": "Walk me through the operating cadence you run with your team. What meetings and rituals do you use and why?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you arrive at this cadence? What did you try that didn't work?",
+      "How do you keep meetings from becoming stale or performative?",
+      "How do you balance process with autonomy for your team?"
+    ],
+    "lookFor": [
+      "Intentional design of cadence tied to team needs, not copy-pasted from a framework",
+      "Regular retrospection on whether rituals are still serving their purpose",
+      "Balances visibility and accountability with maker time",
+      "Adapts cadence to the team's maturity and project phase"
+    ],
+    "redFlags": [
+      "Cannot explain the purpose of their meetings",
+      "Never changed or removed a ritual despite feedback",
+      "Either no structure at all or excessive meeting overhead",
+      "Treats standup as a status report to them rather than a team coordination tool"
+    ]
+  },
+  {
+    "id": "IQ-14",
+    "capabilityId": "C4",
+    "question": "A critical project your team owns is slipping. You realize two weeks before the deadline that you will miss it by at least a month. What do you do?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you communicate this to your director and stakeholders?",
+      "What would you do to prevent this from happening again?",
+      "How do you maintain team morale during the slip?"
+    ],
+    "lookFor": [
+      "Communicates early and transparently, does not hide the slip",
+      "Diagnoses root cause before proposing a new timeline",
+      "Proposes scope reduction or re-sequencing rather than just pushing the date",
+      "Takes ownership without throwing the team under the bus"
+    ],
+    "redFlags": [
+      "Waits until the deadline to communicate the slip",
+      "Blames the team without examining process or estimation failures",
+      "Responds by demanding overtime without addressing root cause",
+      "No plan to improve estimation or early-warning signals going forward"
+    ]
+  },
+  {
+    "id": "IQ-15",
+    "capabilityId": "C4",
+    "question": "Tell me about how you established operational excellence across multiple teams. What systems and cadences did you put in place?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you handle teams at very different levels of operational maturity?",
+      "What was the hardest part of scaling operational practices across teams?",
+      "How did you measure whether the new practices were working?"
+    ],
+    "lookFor": [
+      "Creates lightweight, scalable processes rather than heavy bureaucracy",
+      "Adapts practices to team context rather than one-size-fits-all mandates",
+      "Measures operational health with leading indicators, not just lagging ones",
+      "Built operational capability in managers rather than running everything centrally"
+    ],
+    "redFlags": [
+      "Imposed rigid processes without considering team context",
+      "Measured only output velocity, not operational health",
+      "Could not delegate operational oversight to their managers",
+      "No feedback loop to evolve processes over time"
+    ]
+  },
+  {
+    "id": "IQ-16",
+    "capabilityId": "C4",
+    "question": "How do you ensure reliable delivery across your organization while still allowing teams autonomy in how they work?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "What do you do when a team consistently underdelivers despite having autonomy?",
+      "How do you distinguish between healthy experimentation and dysfunction?"
+    ],
+    "lookFor": [
+      "Defines outcomes and guardrails rather than prescribing process",
+      "Uses transparency and shared metrics to enable accountability without control",
+      "Intervenes at the right altitude: team-level coaching, not task-level management",
+      "Can give specific examples of when they granted autonomy and when they pulled it back"
+    ],
+    "redFlags": [
+      "Either full control or full abdication, no spectrum",
+      "Conflates autonomy with a lack of accountability",
+      "Cannot explain how they detect delivery problems early",
+      "Treats all teams identically regardless of maturity"
+    ]
+  },
+  {
+    "id": "IQ-17",
+    "capabilityId": "C5",
+    "question": "Tell me about a time you needed to get buy-in from a product or design counterpart who disagreed with your engineering team's approach. How did you handle it?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "What did you do when initial attempts to persuade didn't work?",
+      "How did you ensure the final decision stuck and didn't get relitigated?",
+      "What did you learn about influencing without authority from this experience?"
+    ],
+    "lookFor": [
+      "Sought to understand the other perspective before advocating",
+      "Used data and shared goals to find common ground",
+      "Built a relationship, not just won an argument",
+      "Elevated the decision appropriately when needed without being adversarial"
+    ],
+    "redFlags": [
+      "Framed it as engineering vs. product rather than a shared problem",
+      "Went over the counterpart's head without first attempting direct resolution",
+      "Capitulated without advocating for the team's perspective",
+      "No effort to build an ongoing working relationship"
+    ]
+  },
+  {
+    "id": "IQ-18",
+    "capabilityId": "C5",
+    "question": "Your product manager wants to launch a feature in two weeks, but your team estimates it needs four weeks to be production-ready. How do you navigate this?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "What if the PM escalates to their VP and pressure comes from above?",
+      "How would you explore whether a reduced-scope version could meet the timeline?"
+    ],
+    "lookFor": [
+      "Breaks down the gap: scope, quality, or estimation disagreement",
+      "Proposes creative options rather than binary yes/no",
+      "Communicates risk clearly without being obstructionist",
+      "Maintains partnership tone even under pressure"
+    ],
+    "redFlags": [
+      "Immediately caves to the PM timeline without pushback",
+      "Refuses to negotiate scope and insists on the full estimate",
+      "Makes it personal rather than keeping it about the work",
+      "Does not involve the team in exploring options"
+    ]
+  },
+  {
+    "id": "IQ-19",
+    "capabilityId": "C5",
+    "question": "Describe how you built influence with a peer group of engineering managers or directors at a previous company. What strategies did you use?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you handle a situation where a peer was actively blocking an initiative you championed?",
+      "What role did informal relationships play versus formal decision-making processes?"
+    ],
+    "lookFor": [
+      "Invested in relationships proactively, not just when they needed something",
+      "Created value for peers through information sharing or joint problem-solving",
+      "Used organizational forums strategically to build visibility and alignment",
+      "Balanced advocacy for their org with genuine collaboration"
+    ],
+    "redFlags": [
+      "Influence strategy is purely positional or escalation-based",
+      "No examples of genuine peer collaboration, only competition",
+      "Only builds relationships upward, not laterally",
+      "Cannot name specific peer relationships that drove organizational outcomes"
+    ]
+  },
+  {
+    "id": "IQ-20",
+    "capabilityId": "C5",
+    "question": "You need to drive a cross-org technical initiative (e.g., a shared platform migration) that requires four peer directors to commit their teams' time. How do you approach this?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "What do you do if one director refuses to allocate their team's time?",
+      "How do you structure governance for a cross-org initiative without it becoming a committee?"
+    ],
+    "lookFor": [
+      "Starts with shared understanding of the problem and value, not the solution",
+      "Creates a lightweight governance model with clear decision rights",
+      "Makes it easy for peers to say yes by reducing their teams' burden",
+      "Has a plan for maintaining momentum over multiple quarters"
+    ],
+    "redFlags": [
+      "Expects executive mandate to solve alignment problems",
+      "No plan for governance or accountability across teams",
+      "Tries to own everything centrally rather than distributing ownership",
+      "Underestimates the political complexity of cross-org initiatives"
+    ]
+  },
+  {
+    "id": "IQ-21",
+    "capabilityId": "C6",
+    "question": "Tell me about a time you helped an IC on your team grow from mid-level to senior. What was your approach?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you identify the specific gaps in their skills or behaviors?",
+      "What was the most challenging coaching conversation you had with them?",
+      "How long did the growth take and what were the key inflection points?"
+    ],
+    "lookFor": [
+      "Created a specific, individualized development plan, not generic advice",
+      "Provided stretch opportunities paired with support and feedback",
+      "Had honest conversations about gaps without demoralizing the person",
+      "Measured growth through observable behaviors, not just output"
+    ],
+    "redFlags": [
+      "Cannot describe specific coaching actions, only general platitudes",
+      "Promoted based on tenure or output without evidence of skill growth",
+      "Never had difficult development conversations",
+      "Growth was entirely self-directed by the IC; manager added no value"
+    ]
+  },
+  {
+    "id": "IQ-22",
+    "capabilityId": "C6",
+    "question": "One of your senior engineers is technically excellent but struggles with mentoring junior team members and is becoming a bottleneck. How do you coach them?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "What if they push back and say mentoring isn't their job?",
+      "How do you make the expectation concrete and measurable?",
+      "At what point would you consider this a performance issue?"
+    ],
+    "lookFor": [
+      "Connects mentoring to the senior engineer's own growth trajectory",
+      "Makes expectations concrete with specific behaviors, not vague asks",
+      "Offers to help develop their mentoring skills rather than just demanding it",
+      "Addresses the bottleneck risk separately from the development conversation"
+    ],
+    "redFlags": [
+      "Avoids the conversation and works around the bottleneck",
+      "Frames it as a mandate without connecting it to the engineer's interests",
+      "No plan for helping them build mentoring skills",
+      "Accepts that some engineers just can not mentor and doesn't push"
+    ]
+  },
+  {
+    "id": "IQ-23",
+    "capabilityId": "C6",
+    "question": "How do you build a talent development culture across your management team? Give me a concrete example of a program or practice you implemented.",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you ensure your managers took talent development seriously and didn't treat it as HR overhead?",
+      "What metrics did you use to track whether your talent investment was paying off?"
+    ],
+    "lookFor": [
+      "Created systematic approaches to talent development, not just ad-hoc mentoring",
+      "Held managers accountable for their reports' growth",
+      "Measured talent outcomes: promotions, internal mobility, retention of high performers",
+      "Built development into the operating rhythm rather than treating it as a separate initiative"
+    ],
+    "redFlags": [
+      "Talent development is delegated entirely to HR or L&D",
+      "No measurable talent outcomes to point to",
+      "Only develops engineers who are already high performers",
+      "Cannot describe how they coach their own managers on coaching"
+    ]
+  },
+  {
+    "id": "IQ-24",
+    "capabilityId": "C6",
+    "question": "You have a manager on your team who is well-liked but whose reports are not growing. How do you diagnose and address this?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "How do you gather signal about a manager's effectiveness without undermining them?",
+      "What does the coaching plan for this manager look like?"
+    ],
+    "lookFor": [
+      "Uses multiple data sources: skip-levels, promotion rates, peer feedback, engagement surveys",
+      "Distinguishes between the manager being liked and being effective",
+      "Coaches the manager on specific development behaviors, not just outcomes",
+      "Sets a clear timeline and expectations for improvement"
+    ],
+    "redFlags": [
+      "Ignores the problem because the manager is well-liked and team is not complaining",
+      "Only looks at the manager's delivery output, not people development",
+      "Jumps to replacing the manager without attempting to develop them",
+      "No framework for assessing manager effectiveness"
+    ]
+  },
+  {
+    "id": "IQ-25",
+    "capabilityId": "C7",
+    "question": "Tell me about a complex technical decision you had to communicate to a non-technical audience. How did you frame it?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you know your message landed? What feedback did you get?",
+      "What would you do differently if you had to communicate the same decision again?"
+    ],
+    "lookFor": [
+      "Framed the decision in terms of business impact, not technical details",
+      "Used analogies or frameworks that the audience could relate to",
+      "Presented options with clear tradeoffs rather than a single recommendation",
+      "Anticipated questions and prepared for pushback"
+    ],
+    "redFlags": [
+      "Communicated at too high or too low a level of technical detail",
+      "Presented only one option with no alternative considered",
+      "Could not adapt their communication style to the audience",
+      "No mechanism to verify the message was understood"
+    ]
+  },
+  {
+    "id": "IQ-26",
+    "capabilityId": "C7",
+    "question": "Your team needs to choose between two database technologies for a new service. Both have significant tradeoffs. How would you structure the decision and communicate it to stakeholders?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "What if the team is split 50/50 and feels strongly? How do you break the tie?",
+      "How do you document the decision so it doesn't get relitigated?"
+    ],
+    "lookFor": [
+      "Defines clear evaluation criteria before comparing options",
+      "Separates the decision framework from the recommendation",
+      "Documents the decision with rationale for future reference",
+      "Creates space for disagreement and commit rather than forcing consensus"
+    ],
+    "redFlags": [
+      "Makes the decision unilaterally based on personal preference",
+      "Analysis paralysis with no decision-making timeline",
+      "Does not document the decision or rationale",
+      "Avoids making the call when the team is divided"
+    ]
+  },
+  {
+    "id": "IQ-27",
+    "capabilityId": "C7",
+    "question": "Describe a situation where you had to deliver bad news upward, such as informing your VP that a major commitment would not be met. How did you approach it?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How early did you surface the problem? What would you have done differently in hindsight?",
+      "How did you present the situation to maintain trust while being transparent?"
+    ],
+    "lookFor": [
+      "Surfaced the problem early with clear root cause analysis",
+      "Came with options and a recommendation, not just bad news",
+      "Took personal accountability rather than deflecting blame",
+      "Maintained credibility by being honest about what they knew and didn't know"
+    ],
+    "redFlags": [
+      "Delayed communicating the problem hoping it would resolve itself",
+      "Blamed external factors without taking any responsibility",
+      "Delivered bad news without a mitigation plan",
+      "Sugar-coated the severity of the situation"
+    ]
+  },
+  {
+    "id": "IQ-28",
+    "capabilityId": "C7",
+    "question": "How do you structure decision-making across your organization? What decisions do you own, what do your managers own, and how do you ensure consistency?",
+    "level": "director",
+    "questionType": "technical",
+    "followUps": [
+      "Give me an example of a decision you explicitly pushed down to a manager that you were tempted to make yourself.",
+      "How do you handle it when two of your managers make conflicting decisions?"
+    ],
+    "lookFor": [
+      "Has an explicit decision-rights framework (RACI, DRI, or similar)",
+      "Distinguishes between reversible and irreversible decisions with different processes",
+      "Pushes decisions to the lowest level that has sufficient context",
+      "Creates mechanisms for cross-team decisions that need coordination"
+    ],
+    "redFlags": [
+      "All significant decisions flow through them, creating a bottleneck",
+      "No clarity on who owns which decisions",
+      "Treats all decisions with the same weight and process",
+      "Cannot let go of decisions they have delegated"
+    ]
+  },
+  {
+    "id": "IQ-29",
+    "capabilityId": "C8",
+    "question": "Walk me through how you handled a production incident from the moment you were paged to the resolution and follow-up. What was your role?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you run the postmortem? What were the key outcomes?",
+      "What systemic changes came out of this incident?",
+      "How did you support your team during and after a high-stress incident?"
+    ],
+    "lookFor": [
+      "Clear understanding of their role during an incident versus the on-call engineer's role",
+      "Focused on coordination, communication, and shielding the team from distractions",
+      "Blameless postmortem that produced actionable improvements",
+      "Follow-through on postmortem action items"
+    ],
+    "redFlags": [
+      "Took over debugging from the on-call engineer rather than coordinating",
+      "No postmortem or postmortem without actionable follow-ups",
+      "Blamed individuals rather than looking at systemic factors",
+      "Incident response was ad hoc with no structure"
+    ]
+  },
+  {
+    "id": "IQ-30",
+    "capabilityId": "C8",
+    "question": "You join a team that has had three major incidents in the last quarter, all in different parts of the system. How do you approach improving reliability?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you prioritize reliability work against feature work when there is pressure to ship?",
+      "What leading indicators would you track to know if reliability is improving?"
+    ],
+    "lookFor": [
+      "Looks for systemic patterns across incidents, not just point fixes",
+      "Establishes reliability baselines and improvement targets",
+      "Invests in observability and alerting as foundational capabilities",
+      "Creates a sustainable on-call rotation and incident response process"
+    ],
+    "redFlags": [
+      "Only addresses the specific bugs from recent incidents",
+      "No proactive reliability strategy, only reactive firefighting",
+      "Cannot articulate reliability metrics like SLOs, error budgets, or MTTR",
+      "Treats reliability as solely an infrastructure problem"
+    ]
+  },
+  {
+    "id": "IQ-31",
+    "capabilityId": "C8",
+    "question": "Tell me about how you built an incident management culture across your engineering org. What practices did you establish and what outcomes did you achieve?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you shift from blame-oriented to blameless incident reviews?",
+      "How did you ensure postmortem action items actually got completed?",
+      "What was your role during a major P0 incident?"
+    ],
+    "lookFor": [
+      "Built repeatable incident response processes with clear roles",
+      "Established blameless culture through modeling and reinforcement",
+      "Created visibility into incident trends and reliability metrics at the org level",
+      "Used incidents as learning opportunities to drive systemic improvement"
+    ],
+    "redFlags": [
+      "Incident management is ad hoc and depends on who is on-call",
+      "Postmortems are performative with no follow-through",
+      "Blames teams or individuals publicly after incidents",
+      "No org-wide view of reliability trends or incident patterns"
+    ]
+  },
+  {
+    "id": "IQ-32",
+    "capabilityId": "C8",
+    "question": "How do you think about risk management for your engineering organization? How do you identify and mitigate risks before they become incidents?",
+    "level": "director",
+    "questionType": "technical",
+    "followUps": [
+      "Give me an example of a risk you identified proactively and how you mitigated it.",
+      "How do you balance risk mitigation with speed of delivery?"
+    ],
+    "lookFor": [
+      "Has a systematic approach to identifying risks: technical debt, single points of failure, key-person dependencies",
+      "Uses risk registers or equivalent tracking for top risks",
+      "Allocates engineering time proactively for risk reduction",
+      "Connects technical risk to business risk in executive communications"
+    ],
+    "redFlags": [
+      "Only manages risk reactively after something breaks",
+      "Cannot articulate the top three risks in their current organization",
+      "No investment in proactive risk mitigation, only incident response",
+      "Treats risk management as a compliance exercise rather than an engineering practice"
+    ]
+  },
+  {
+    "id": "IQ-33",
+    "capabilityId": "C9",
+    "question": "What metrics do you use to understand the health and productivity of your team? How did you choose them?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you avoid Goodhart's Law where the metric becomes the target?",
+      "Have you ever discovered that a metric you were tracking was misleading? What did you do?"
+    ],
+    "lookFor": [
+      "Uses a balanced set of metrics: delivery, quality, team health",
+      "Understands the difference between leading and lagging indicators",
+      "Uses metrics to inform decisions, not as a scoreboard",
+      "Can explain why they chose specific metrics and what they don't measure"
+    ],
+    "redFlags": [
+      "Only tracks velocity or story points as the primary metric",
+      "Uses metrics punitively rather than diagnostically",
+      "Cannot explain what their metrics actually measure or their limitations",
+      "No metrics at all, manages purely by feel"
+    ]
+  },
+  {
+    "id": "IQ-34",
+    "capabilityId": "C9",
+    "question": "Your VP asks you to demonstrate that your team's work over the past quarter delivered measurable business value. How do you approach this?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "What if the most important work your team did is hard to quantify, like infrastructure improvements?",
+      "How do you set up measurement frameworks before the work starts rather than retrofitting metrics?"
+    ],
+    "lookFor": [
+      "Connects engineering work to business outcomes with a clear causal chain",
+      "Uses both quantitative metrics and qualitative evidence",
+      "Can articulate value of foundational work that doesn't have direct revenue attribution",
+      "Sets up success criteria before starting work, not after"
+    ],
+    "redFlags": [
+      "Can only describe output (features shipped) not outcomes (impact delivered)",
+      "No connection between engineering metrics and business metrics",
+      "Retrofits success narratives after the fact",
+      "Dismisses the question as not relevant to engineering"
+    ]
+  },
+  {
+    "id": "IQ-35",
+    "capabilityId": "C9",
+    "question": "How have you built a data-driven culture within your engineering organization? What worked and what didn't?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you handle teams that resist measurement or feel that metrics oversimplify their work?",
+      "What is your philosophy on DORA metrics or similar industry frameworks?"
+    ],
+    "lookFor": [
+      "Invested in data infrastructure and tooling to make metrics accessible",
+      "Trained managers on how to use metrics constructively",
+      "Created shared dashboards and reviews that drive action",
+      "Balanced quantitative metrics with qualitative judgment"
+    ],
+    "redFlags": [
+      "Metrics are only used for executive reporting, not day-to-day decisions",
+      "Created a surveillance culture where metrics are used punitively",
+      "Adopted industry frameworks without adapting them to their context",
+      "No investment in making data accessible or trustworthy"
+    ]
+  },
+  {
+    "id": "IQ-36",
+    "capabilityId": "C9",
+    "question": "You are defining the success metrics for a new platform your org is building. The platform won't have direct revenue attribution for at least a year. How do you measure its value?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "How do you justify continued investment when early metrics don't look impressive?",
+      "What leading indicators would you track in the first 90 days?"
+    ],
+    "lookFor": [
+      "Defines proxy metrics and leading indicators that connect to eventual business outcomes",
+      "Creates a measurement roadmap that evolves as the platform matures",
+      "Uses adoption, developer experience, and time-saved metrics as early indicators",
+      "Can articulate the theory of change from platform investment to business value"
+    ],
+    "redFlags": [
+      "Expects to measure platform value only through direct revenue",
+      "No measurement plan; assumes the value is self-evident",
+      "Cannot define what success looks like at 3, 6, and 12 month horizons",
+      "Ignores internal customer satisfaction as a signal"
+    ]
+  },
+  {
+    "id": "IQ-37",
+    "capabilityId": "C10",
+    "question": "Tell me about a time you had to make a difficult headcount tradeoff. How did you decide where to invest limited headcount?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you communicate the tradeoff to the team that didn't get the headcount?",
+      "What data did you use to support your recommendation?"
+    ],
+    "lookFor": [
+      "Used a clear framework to evaluate competing needs",
+      "Considered both immediate delivery needs and long-term team health",
+      "Communicated the rationale transparently",
+      "Explored creative alternatives like retraining or shifting existing team members"
+    ],
+    "redFlags": [
+      "Allocated headcount based on who complained the loudest",
+      "No framework for comparing competing investment options",
+      "Did not communicate the rationale to affected teams",
+      "Only considered short-term project needs, not long-term capacity building"
+    ]
+  },
+  {
+    "id": "IQ-38",
+    "capabilityId": "C10",
+    "question": "Your team is asked to take on a new initiative but you have no additional headcount. What is your approach?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you evaluate whether to stop existing work versus do the new thing at lower quality?",
+      "How do you make the tradeoffs visible to the person requesting the new initiative?"
+    ],
+    "lookFor": [
+      "Makes tradeoffs explicit rather than silently absorbing additional work",
+      "Presents options: what would be deprioritized, deferred, or done differently",
+      "Uses the situation as an opportunity to revisit and rationalize the team's portfolio",
+      "Protects the team from unsustainable workload"
+    ],
+    "redFlags": [
+      "Accepts the new work without deprioritizing anything, overloading the team",
+      "Flatly refuses without exploring creative options",
+      "Does not surface the tradeoff to leadership",
+      "Burns out the team to accommodate every request"
+    ]
+  },
+  {
+    "id": "IQ-39",
+    "capabilityId": "C10",
+    "question": "Walk me through how you managed your engineering budget. How did you decide where to allocate investment across teams, tooling, infrastructure, and people?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "What was the biggest reallocation you made and what drove it?",
+      "How did you handle budget cuts that required reducing investment in active projects?"
+    ],
+    "lookFor": [
+      "Had a principled framework for allocation that balanced multiple dimensions",
+      "Used data on ROI, utilization, and strategic alignment to guide decisions",
+      "Communicated budget decisions transparently and explained the rationale",
+      "Anticipated budget scenarios and had contingency plans"
+    ],
+    "redFlags": [
+      "Budget allocation was purely historical (same as last year plus inflation)",
+      "No visibility into how budget was actually spent versus planned",
+      "Could not explain the rationale behind major allocation decisions",
+      "Treated headcount as the only lever, ignoring tooling, training, or infrastructure"
+    ]
+  },
+  {
+    "id": "IQ-40",
+    "capabilityId": "C10",
+    "question": "You have to cut 20% of your engineering budget. How do you decide what to cut while minimizing impact on your organization's ability to deliver?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "How do you decide between cutting people versus cutting programs or tooling?",
+      "How do you communicate the cuts to your organization?",
+      "What would you protect at all costs and why?"
+    ],
+    "lookFor": [
+      "Starts with strategic priorities and works backward to cuts, not the reverse",
+      "Considers second-order effects: what breaks if you cut this?",
+      "Communicates with honesty and empathy, especially if headcount is affected",
+      "Identifies opportunities to consolidate or simplify rather than just slash"
+    ],
+    "redFlags": [
+      "Applies across-the-board cuts without strategic prioritization",
+      "Cuts only from less-powerful teams rather than based on strategic value",
+      "No communication plan or empathy for affected team members",
+      "Cannot articulate what the organization can and cannot do after the cuts"
+    ]
+  },
+  {
+    "id": "IQ-41",
+    "capabilityId": "C11",
+    "question": "Tell me about a hire you made that didn't work out. What happened and what did you learn?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "What signals did you miss during the interview process?",
+      "How did you change your hiring process afterward?",
+      "How did you handle the situation once it was clear it wasn't working?"
+    ],
+    "lookFor": [
+      "Takes personal accountability for the hiring miss",
+      "Identifies specific process improvements rather than just blaming the candidate",
+      "Acted quickly and humanely once the mismatch was clear",
+      "Changed their hiring approach based on the experience"
+    ],
+    "redFlags": [
+      "Blames the candidate entirely without examining their own process",
+      "No changes to the hiring process after the failure",
+      "Let the bad hire situation drag on for too long before acting",
+      "Cannot reflect on what they would do differently"
+    ]
+  },
+  {
+    "id": "IQ-42",
+    "capabilityId": "C11",
+    "question": "You need to hire a senior engineer for a critical role but your pipeline is weak and the market is competitive. What is your strategy?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you sell your team to top candidates who have multiple offers?",
+      "Would you lower the bar to fill the role faster? Under what circumstances?",
+      "What is your onboarding plan to set this hire up for success?"
+    ],
+    "lookFor": [
+      "Uses multiple sourcing channels beyond just recruiter pipeline",
+      "Has a compelling team narrative and candidate experience strategy",
+      "Maintains the hiring bar while being creative about sourcing",
+      "Plans onboarding before the candidate starts, not after"
+    ],
+    "redFlags": [
+      "Relies entirely on the recruiting team without personal involvement",
+      "Would lower the bar to fill the role, rationalizing speed over quality",
+      "No thought about onboarding or integration into the team",
+      "Cannot articulate what makes their team an attractive place to work"
+    ]
+  },
+  {
+    "id": "IQ-43",
+    "capabilityId": "C11",
+    "question": "How do you design roles and team composition to maximize your organization's effectiveness? Give me an example of a role you created or reshaped.",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you identify the need for a new role versus expanding an existing one?",
+      "How did you handle cases where someone was in a role that no longer fit the organization's needs?"
+    ],
+    "lookFor": [
+      "Designs roles based on organizational needs, not just filling standard titles",
+      "Considers how roles interact with team structure and culture",
+      "Has reshaped roles as the organization evolved",
+      "Balances specialization and generalization based on team scale"
+    ],
+    "redFlags": [
+      "Only uses standard role templates without customization",
+      "Creates roles to accommodate people rather than organizational needs",
+      "No thought about how roles evolve as the org scales",
+      "Cannot explain why different teams might need different role compositions"
+    ]
+  },
+  {
+    "id": "IQ-44",
+    "capabilityId": "C11",
+    "question": "How do you scale your hiring process as your organization grows from 30 to 100 engineers while maintaining quality and consistency?",
+    "level": "director",
+    "questionType": "technical",
+    "followUps": [
+      "How do you calibrate interviewers to ensure consistency across hiring panels?",
+      "What metrics do you track to evaluate hiring process effectiveness?"
+    ],
+    "lookFor": [
+      "Built structured interview processes with calibrated rubrics",
+      "Trained and calibrated interviewers regularly",
+      "Tracked hiring funnel metrics: time-to-fill, pass-through rates, offer acceptance, 6-month retention",
+      "Created scalable onboarding that doesn't require personal attention for every new hire"
+    ],
+    "redFlags": [
+      "Hiring process is inconsistent and depends on individual interviewers' preferences",
+      "No interviewer training or calibration",
+      "Does not track hiring quality metrics",
+      "Onboarding is entirely ad hoc"
+    ]
+  },
+  {
+    "id": "IQ-45",
+    "capabilityId": "C12",
+    "question": "How do you build psychological safety on your team? Give me a specific example of something you did that made a measurable difference.",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you know your team feels psychologically safe? What signals do you look for?",
+      "How do you handle a situation where one person on the team is undermining psychological safety?"
+    ],
+    "lookFor": [
+      "Models vulnerability and admits mistakes publicly",
+      "Creates specific rituals or norms that encourage speaking up",
+      "Responds to mistakes with curiosity rather than blame",
+      "Can point to concrete evidence of psychological safety, not just assertions"
+    ],
+    "redFlags": [
+      "Confuses psychological safety with the absence of conflict",
+      "Cannot give specific examples, only general statements",
+      "Doesn't address toxic behavior that undermines team culture",
+      "Believes psychological safety means never giving critical feedback"
+    ]
+  },
+  {
+    "id": "IQ-46",
+    "capabilityId": "C12",
+    "question": "Your team has a culture of working long hours and wearing burnout as a badge of honor. You want to change this. How do you approach it?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you model the behavior you want without appearing to not care about outcomes?",
+      "What if a few high performers resist the change because they thrive on intensity?",
+      "How do you maintain productivity while changing the work culture?"
+    ],
+    "lookFor": [
+      "Starts by modeling the desired behavior personally",
+      "Addresses the root causes of overwork, not just the symptoms",
+      "Changes incentive structures and what gets celebrated",
+      "Maintains high standards while rejecting unsustainable pace"
+    ],
+    "redFlags": [
+      "Mandates work hours without addressing workload or expectations",
+      "Privately works long hours while publicly advocating balance",
+      "Dismisses the problem because results are being delivered",
+      "No plan for maintaining output quality during the culture shift"
+    ]
+  },
+  {
+    "id": "IQ-47",
+    "capabilityId": "C12",
+    "question": "Describe how you shaped the engineering culture at a previous organization. What norms did you establish and how did you reinforce them?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you handle subcultures within different teams that conflicted with the broader culture you were building?",
+      "What norms did you find hardest to establish and why?"
+    ],
+    "lookFor": [
+      "Intentional about defining cultural values and making them concrete",
+      "Used hiring, recognition, promotion, and rituals to reinforce desired culture",
+      "Addressed cultural problems directly rather than hoping they would self-correct",
+      "Balanced consistency across the org with team-level autonomy"
+    ],
+    "redFlags": [
+      "Culture is just a set of stated values with no reinforcement mechanisms",
+      "Ignores subcultures or toxic pockets within the organization",
+      "Culture is whatever the loudest voices define",
+      "Cannot articulate what makes their engineering culture distinctive"
+    ]
+  },
+  {
+    "id": "IQ-48",
+    "capabilityId": "C12",
+    "question": "How do you build and maintain an inclusive engineering culture as your organization grows and becomes more diverse?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "Give me an example of a specific inclusion challenge you faced and how you addressed it.",
+      "How do you ensure that remote and in-office engineers have equitable experiences?"
+    ],
+    "lookFor": [
+      "Treats inclusion as an ongoing practice, not a one-time initiative",
+      "Uses structural mechanisms: meeting norms, feedback processes, promotion criteria",
+      "Actively seeks input from underrepresented voices rather than waiting for them to speak up",
+      "Measures inclusion through engagement surveys and retention data"
+    ],
+    "redFlags": [
+      "Treats diversity and inclusion as solely an HR responsibility",
+      "No concrete actions, only statements of intent",
+      "Defines culture in ways that favor the existing majority",
+      "Cannot point to specific changes they made to improve inclusion"
+    ]
+  },
+  {
+    "id": "IQ-49",
+    "capabilityId": "C13",
+    "question": "How do you ensure your team writes secure code? What practices and processes do you have in place?",
+    "level": "em",
+    "questionType": "technical",
+    "followUps": [
+      "How do you handle a situation where security requirements conflict with delivery timelines?",
+      "How do you keep your team's security awareness current?"
+    ],
+    "lookFor": [
+      "Has concrete security practices integrated into the development workflow",
+      "Uses automated tools: SAST, dependency scanning, code review checklists",
+      "Treats security as a shared team responsibility, not just the security team's job",
+      "Balances security rigor with development velocity"
+    ],
+    "redFlags": [
+      "Security is an afterthought addressed only during audits",
+      "No automated security tooling in the CI/CD pipeline",
+      "Relies entirely on the security team to find vulnerabilities",
+      "Has shipped known vulnerabilities due to timeline pressure without a risk acceptance process"
+    ]
+  },
+  {
+    "id": "IQ-50",
+    "capabilityId": "C13",
+    "question": "Your team discovers a significant security vulnerability in production that affects customer data. Walk me through how you handle it.",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you decide when to disclose to customers?",
+      "What systemic changes would you make after resolving the immediate issue?"
+    ],
+    "lookFor": [
+      "Follows an established incident response protocol for security events",
+      "Prioritizes containing the vulnerability over understanding root cause initially",
+      "Involves the right stakeholders: security, legal, communications",
+      "Drives systemic improvements to prevent similar vulnerabilities"
+    ],
+    "redFlags": [
+      "No escalation or involvement of security team",
+      "Prioritizes keeping it quiet over proper disclosure",
+      "No plan for systemic remediation after the fix",
+      "Does not consider regulatory or legal notification requirements"
+    ]
+  },
+  {
+    "id": "IQ-51",
+    "capabilityId": "C13",
+    "question": "How have you built a security-conscious engineering culture across your organization? What programs or practices did you implement?",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you measure whether your security posture is improving over time?",
+      "How do you partner with the security team to make security a shared responsibility?"
+    ],
+    "lookFor": [
+      "Created programs that make security accessible and practical for engineers",
+      "Established security champions or similar distributed ownership models",
+      "Used metrics like vulnerability resolution time, scan coverage, and security review adoption",
+      "Made security part of the engineering culture, not an externally imposed burden"
+    ],
+    "redFlags": [
+      "Security is entirely delegated to a separate security team",
+      "No security training or awareness programs for engineers",
+      "Cannot articulate the organization's security risk profile",
+      "Treats compliance checkboxes as sufficient security"
+    ]
+  },
+  {
+    "id": "IQ-52",
+    "capabilityId": "C13",
+    "question": "Your organization needs to achieve SOC 2 compliance within six months. How do you plan and execute this while minimizing disruption to your engineering teams?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "How do you handle the tension between compliance requirements and engineering velocity?",
+      "What would you do if you discover significant gaps in your current practices?"
+    ],
+    "lookFor": [
+      "Approaches compliance as an opportunity to improve engineering practices, not just a checkbox",
+      "Creates a structured program with clear milestones and ownership",
+      "Minimizes engineer burden through automation and tooling",
+      "Partners with security and compliance teams rather than working in isolation"
+    ],
+    "redFlags": [
+      "Treats compliance as a one-time project rather than ongoing capability",
+      "Plans to achieve compliance through manual processes that won't scale",
+      "Does not involve engineering teams in understanding why compliance matters",
+      "No plan for maintaining compliance posture after the initial certification"
+    ]
+  },
+  {
+    "id": "IQ-53",
+    "capabilityId": "C14",
+    "question": "Tell me about the most difficult performance conversation you have had with a direct report. What was the situation and how did you handle it?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you prepare for the conversation?",
+      "What was the outcome and would you handle it differently now?",
+      "How did you ensure the feedback was specific and actionable?"
+    ],
+    "lookFor": [
+      "Gave specific, evidence-based feedback rather than vague impressions",
+      "Had the conversation promptly rather than waiting for a review cycle",
+      "Created a clear improvement plan with measurable expectations",
+      "Showed empathy while being direct and honest"
+    ],
+    "redFlags": [
+      "Avoided the conversation or delayed it significantly",
+      "Gave feedback that was vague, subjective, or not actionable",
+      "Made it personal rather than focusing on behaviors and impact",
+      "No follow-up plan to track improvement"
+    ]
+  },
+  {
+    "id": "IQ-54",
+    "capabilityId": "C14",
+    "question": "You have an engineer who meets expectations but never exceeds them, and they are frustrated about not being promoted. How do you handle this?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you help them understand the gap between meeting expectations and being promotion-ready?",
+      "What if they threaten to leave over the lack of promotion?",
+      "How do you differentiate this from a case where the engineer genuinely deserves a promotion but hasn't gotten one?"
+    ],
+    "lookFor": [
+      "Provides clear, specific examples of what next-level performance looks like",
+      "Helps the engineer build a development plan with concrete milestones",
+      "Is honest about the gap without being discouraging",
+      "Considers whether the issue is truly a performance gap or a visibility or opportunity gap"
+    ],
+    "redFlags": [
+      "Promises a promotion timeline they cannot guarantee",
+      "Cannot articulate concrete differences between current and next level",
+      "Avoids the conversation to prevent confrontation",
+      "Promotes to retain without evidence of next-level performance"
+    ]
+  },
+  {
+    "id": "IQ-55",
+    "capabilityId": "C14",
+    "question": "How do you run performance calibration across your management team? Walk me through your process and philosophy.",
+    "level": "director",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you handle a case where two managers disagree on the calibration of similar-performing engineers?",
+      "How do you ensure the calibration process is fair and minimizes bias?",
+      "What do you do when calibration results require difficult conversations with your managers?"
+    ],
+    "lookFor": [
+      "Has a structured calibration process with clear criteria and examples",
+      "Actively works to reduce bias through calibration norms and diverse perspectives",
+      "Uses calibration to develop managers' judgment, not just assign ratings",
+      "Ensures calibration outcomes translate into clear, actionable feedback for engineers"
+    ],
+    "redFlags": [
+      "Calibration is a rubber-stamp process where managers' initial ratings rarely change",
+      "No attention to bias patterns across teams or demographics",
+      "Calibration results are not connected to development conversations",
+      "Uses calibration as a political exercise rather than a fairness mechanism"
+    ]
+  },
+  {
+    "id": "IQ-56",
+    "capabilityId": "C14",
+    "question": "One of your managers has never put anyone on a PIP and has a team with several underperformers. How do you address this?",
+    "level": "director",
+    "questionType": "situational",
+    "followUps": [
+      "How do you coach the manager on having difficult performance conversations?",
+      "How do you ensure PIPs are fair, well-documented, and legally sound?",
+      "How do you balance supporting the manager with protecting the underperformers' dignity?"
+    ],
+    "lookFor": [
+      "Diagnoses why the manager avoids performance management: skill gap, conflict avoidance, or unclear expectations",
+      "Coaches the manager through the process rather than taking it over",
+      "Ensures the process is documented, fair, and gives the employee a genuine chance to improve",
+      "Holds the manager accountable for addressing performance while providing support"
+    ],
+    "redFlags": [
+      "Takes over the performance management process from the manager",
+      "Ignores the problem because the team is still delivering at an aggregate level",
+      "Pushes the manager to put people on PIPs without coaching them on how",
+      "No consideration of whether the underperformance is a management failure rather than an individual one"
+    ]
+  }
+]

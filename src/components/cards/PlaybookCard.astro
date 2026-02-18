@@ -1,0 +1,32 @@
+---
+import Badge from '../ui/Badge.astro';
+import type { Playbook } from '../../lib/data';
+import { getCapability } from '../../lib/data';
+
+interface Props {
+  playbook: Playbook;
+}
+
+const { playbook } = Astro.props;
+const caps = playbook.capabilityIds.map(id => getCapability(id)).filter(Boolean);
+---
+
+<a href={`/playbooks/${playbook.slug}/`} class="card group block">
+  <div class="flex items-start gap-2 mb-3 flex-wrap">
+    {caps.map(cap => cap && (
+      <Badge text={cap.domain} variant="domain" domain={cap.domain} />
+    ))}
+    <span class="text-xs font-mono text-gray-400 dark:text-gray-500 ml-auto">{playbook.id}</span>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+    {playbook.title}
+  </h3>
+  <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-3">
+    {playbook.context}
+  </p>
+  <div class="flex flex-wrap gap-1.5">
+    {caps.map(cap => cap && (
+      <span class="text-xs text-gray-500 dark:text-gray-400">{cap.id}: {cap.name}</span>
+    ))}
+  </div>
+</a>

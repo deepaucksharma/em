@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import ProgressStepper from '../components/ui/ProgressStepper.astro';
+import MaturityLevelCard from '../components/cards/MaturityLevelCard.astro';
+import orgMaturityData from '../data/org-maturity.json';
+
+const maturity = orgMaturityData as { levels: any[] };
+---
+
+<BaseLayout title="Org Maturity Model" description="Five-level engineering organization maturity model with indicators and recommended actions.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[{ label: 'Org Maturity Model' }]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Engineering Org Maturity Model
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Assess your engineering organization's maturity across five levels. Each level includes indicators to identify where you are and actions to progress.
+      </p>
+    </div>
+
+    <div class="flex gap-8">
+      <!-- Stepper sidebar -->
+      <div class="hidden lg:block w-64 shrink-0">
+        <div class="sticky top-24">
+          <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-4 uppercase tracking-wider">Levels</h3>
+          <ProgressStepper steps={maturity.levels} />
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="flex-1 min-w-0 space-y-6">
+        {maturity.levels.map(level => (
+          <MaturityLevelCard level={level} />
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

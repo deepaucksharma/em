@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import Badge from '../../components/ui/Badge.astro';
+import { getCapability } from '../../lib/data';
+import selfAssessmentData from '../../data/self-assessment.json';
+
+const assessments = selfAssessmentData as {
+  capabilityId: string;
+  feedbackQuestions: { audience: string; question: string }[];
+}[];
+
+const audiences = ['self', 'direct-report', 'peer', 'manager'] as const;
+
+const audienceLabels: Record<string, string> = {
+  self: 'Self-Reflection',
+  'direct-report': 'Direct Reports',
+  peer: 'Peers',
+  manager: 'Manager',
+};
+
+const audienceColors: Record<string, { bg: string; text: string; border: string }> = {
+  self: { bg: 'bg-blue-50 dark:bg-blue-950/20', text: 'text-blue-700 dark:text-blue-300', border: 'border-blue-200 dark:border-blue-800' },
+  'direct-report': { bg: 'bg-green-50 dark:bg-green-950/20', text: 'text-green-700 dark:text-green-300', border: 'border-green-200 dark:border-green-800' },
+  peer: { bg: 'bg-purple-50 dark:bg-purple-950/20', text: 'text-purple-700 dark:text-purple-300', border: 'border-purple-200 dark:border-purple-800' },
+  manager: { bg: 'bg-amber-50 dark:bg-amber-950/20', text: 'text-amber-700 dark:text-amber-300', border: 'border-amber-200 dark:border-amber-800' },
+};
+
+const withCaps = assessments.map(a => ({
+  ...a,
+  capability: getCapability(a.capabilityId),
+})).filter(a => a.capability);
+---
+
+<BaseLayout title="360 Feedback Bank" description="Curated feedback questions organized by audience and capability.">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[
+      { label: 'Self-Assessment', href: '/self-assessment/' },
+      { label: 'Feedback Bank' },
+    ]} />
+
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        360 Feedback Question Bank
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Questions for gathering multi-directional feedback on engineering leadership capabilities.
+      </p>
+    </div>
+
+    {/* Filter by audience */}
+    {audiences.map(audience => (
+      <section class="mb-10">
+        <h2 class:list={['text-xl font-bold mb-4', audienceColors[audience].text]}>
+          {audienceLabels[audience]}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {withCaps.map(({ capability: cap, feedbackQuestions }) => {
+            const q = feedbackQuestions.find(fq => fq.audience === audience);
+            return cap && q && (
+              <div class:list={['rounded-xl border p-4', audienceColors[audience].border, audienceColors[audience].bg]}>
+                <div class="flex items-center gap-2 mb-2">
+                  <Badge text={cap.domain} variant="domain" domain={cap.domain} />
+                  <span class="text-xs font-mono text-gray-400">{cap.id}</span>
+                </div>
+                <p class:list={['text-sm font-medium', audienceColors[audience].text]}>{q.question}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

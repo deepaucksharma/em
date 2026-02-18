@@ -1,0 +1,31 @@
+---
+interface Stat {
+  value: number | string;
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+  {stats.map(stat => {
+    const Tag = stat.href ? 'a' : 'div';
+    return (
+      <Tag
+        href={stat.href}
+        class:list={[
+          'text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700',
+          stat.href && 'hover:border-blue-300 dark:hover:border-blue-700 transition-colors',
+        ]}
+      >
+        <div class="text-3xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat.label}</div>
+      </Tag>
+    );
+  })}
+</div>

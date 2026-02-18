@@ -1,0 +1,32 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="mb-6">
+  <ol class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400">
+    <li>
+      <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+    </li>
+    {items.map((item, i) => (
+      <li class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+        {item.href ? (
+          <a href={item.href} class="hover:text-gray-900 dark:hover:text-white transition-colors">{item.label}</a>
+        ) : (
+          <span class="text-gray-900 dark:text-white font-medium">{item.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

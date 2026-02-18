@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StatsBar from '../components/ui/StatsBar.astro';
+import CapabilityCard from '../components/cards/CapabilityCard.astro';
+import AntiPatternCard from '../components/cards/AntiPatternCard.astro';
+import PlaybookCard from '../components/cards/PlaybookCard.astro';
+import { capabilities, observables, antiPatterns, playbooks, calibrationSignals } from '../lib/data';
+import { DOMAIN_ORDER, getDomainColor } from '../lib/utils';
+
+const stats = [
+  { value: capabilities.length, label: 'Capabilities', href: '/capabilities/' },
+  { value: observables.length, label: 'Observables', href: '/capabilities/' },
+  { value: antiPatterns.length, label: 'Anti-Patterns', href: '/anti-patterns/' },
+  { value: playbooks.length, label: 'Playbooks', href: '/playbooks/' },
+];
+
+const capsByDomain = DOMAIN_ORDER.map(domain => ({
+  domain,
+  capabilities: capabilities.filter(c => c.domain === domain),
+}));
+
+const featuredPlaybooks = playbooks.slice(0, 6);
+const featuredAntiPatterns = antiPatterns.slice(0, 6);
+---
+
+<BaseLayout title="Home">
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+          Engineering Leadership Matrix
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-2">
+          Version 6 — EM &amp; Director at Big Tech
+        </p>
+        <p class="text-lg text-gray-500 dark:text-gray-400 mb-8">
+          A unified capability model with {capabilities.length} capabilities, {observables.length} observables,
+          {antiPatterns.length} anti-patterns, and {playbooks.length} scenario playbooks — designed for
+          career conversations, 1:1s, and calibration.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/capabilities/" class="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Explore Capabilities
+          </a>
+          <a href="/rubric/" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            View Rubric
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Stats -->
+    <section class="-mt-8 mb-16 relative z-10">
+      <StatsBar stats={stats} />
+    </section>
+
+    <!-- Capabilities by Domain -->
+    <section class="mb-16">
+      <h2 class="section-heading">Capabilities by Domain</h2>
+      {capsByDomain.map(({ domain, capabilities: caps }) => (
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <h3 class:list={['text-lg font-semibold', getDomainColor(domain).text]}>{domain}</h3>
+            <a href={`/domains/${domain.toLowerCase()}/`} class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+              View all &rarr;
+            </a>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {caps.map(cap => (
+              <CapabilityCard capability={cap} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- Featured Playbooks -->
+    <section class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="section-heading mb-0">Scenario Playbooks</h2>
+        <a href="/playbooks/" class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+          View all {playbooks.length} &rarr;
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {featuredPlaybooks.map(pb => (
+          <PlaybookCard playbook={pb} />
+        ))}
+      </div>
+    </section>
+
+    <!-- Featured Anti-Patterns -->
+    <section class="mb-16">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="section-heading mb-0">Anti-Patterns</h2>
+        <a href="/anti-patterns/" class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+          View all {antiPatterns.length} &rarr;
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {featuredAntiPatterns.map(ap => (
+          <AntiPatternCard antiPattern={ap} />
+        ))}
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="mb-16">
+      <h2 class="section-heading">Quick Links</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/rubric/" class="card group block text-center">
+          <div class="text-2xl mb-2">📊</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Rubric Overview</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">3-level behavioral anchors for all capabilities</p>
+        </a>
+        <a href="/calibration/" class="card group block text-center">
+          <div class="text-2xl mb-2">🎯</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Calibration Signals</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{calibrationSignals.length} signals for promo packets &amp; reviews</p>
+        </a>
+        <a href="/evidence-guide/" class="card group block text-center">
+          <div class="text-2xl mb-2">📋</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Evidence Guide</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Evidence types, strength ratings, and examples</p>
+        </a>
+        <a href="/about/" class="card group block text-center">
+          <div class="text-2xl mb-2">ℹ️</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">About</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Methodology, changelog, and how to use</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

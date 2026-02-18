@@ -1,0 +1,45 @@
+---
+import { capabilities } from '../../lib/data';
+import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug } = Astro.props;
+
+const capsByDomain = DOMAIN_ORDER.map(domain => ({
+  domain,
+  capabilities: capabilities.filter(c => c.domain === domain),
+}));
+---
+
+<aside class="hidden lg:block w-64 shrink-0">
+  <nav class="sticky top-20 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto pr-4 pb-8">
+    {capsByDomain.map(({ domain, capabilities: caps }) => (
+      <div>
+        <h3 class:list={['text-xs font-semibold uppercase tracking-wider mb-1.5', getDomainColor(domain).text]}>
+          {domain}
+        </h3>
+        <ul class="space-y-0.5">
+          {caps.map(cap => (
+            <li>
+              <a
+                href={`/capabilities/${cap.slug}/`}
+                class:list={[
+                  'block px-2 py-1 text-sm rounded-md transition-colors',
+                  currentSlug === cap.slug
+                    ? 'bg-blue-50 text-blue-700 font-medium dark:bg-blue-900/30 dark:text-blue-300'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800',
+                ]}
+              >
+                <span class="font-mono text-xs text-gray-400 dark:text-gray-500 mr-1">{cap.id}</span>
+                {cap.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </nav>
+</aside>

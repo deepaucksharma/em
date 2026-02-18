@@ -1,0 +1,1136 @@
+[
+  {
+    "capabilityId": "C1",
+    "foundational": [
+      {
+        "title": "An Elegant Puzzle: Systems of Engineering Management",
+        "type": "book",
+        "description": "Will Larson's comprehensive guide to thinking about engineering organizations as systems, covering org design, sizing teams, and managing technical migrations at scale.",
+        "url": "https://lethain.com/elegant-puzzle/"
+      },
+      {
+        "title": "Good Strategy Bad Strategy",
+        "type": "book",
+        "description": "Richard Rumelt's foundational work on what makes strategy effective, teaching how to diagnose challenges, create guiding policies, and design coherent actions.",
+        "url": ""
+      },
+      {
+        "title": "Thinking in Systems: A Primer",
+        "type": "book",
+        "description": "Donella Meadows' introduction to systems thinking, essential for understanding how organizational structures create emergent behaviors and feedback loops.",
+        "url": ""
+      },
+      {
+        "title": "How to Think About Org-Level Strategy as an EM",
+        "type": "article",
+        "description": "A practical article on translating company-level objectives into engineering org strategies, including aligning team missions with business outcomes.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Org Strategy Document Template",
+        "type": "template",
+        "description": "A structured template for writing an engineering org strategy document that connects business context, technical landscape, key challenges, and a coherent plan of action.",
+        "url": ""
+      },
+      {
+        "title": "Wardley Mapping for Engineering Leaders",
+        "type": "exercise",
+        "description": "Practice mapping your technology landscape using Wardley Maps to identify evolution stages, build vs. buy decisions, and strategic positioning of engineering investments.",
+        "url": ""
+      },
+      {
+        "title": "Strategy Review Simulation",
+        "type": "workshop",
+        "description": "A facilitated exercise where participants present and critique org-level strategies, practicing the skill of identifying weak strategies and strengthening them with concrete diagnosis and action.",
+        "url": ""
+      },
+      {
+        "title": "Quarterly Strategy Alignment Exercise",
+        "type": "exercise",
+        "description": "Map your team's current work to org-level strategic pillars, identify misalignments, and draft proposals for realigning efforts to maximize strategic impact.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Multi-Year Technical Strategy Case Studies",
+        "type": "case-study",
+        "description": "Analysis of real-world multi-year engineering strategies from companies like Spotify, Stripe, and Google, examining how they evolved org structure to support strategic shifts.",
+        "url": ""
+      },
+      {
+        "title": "Strategic Leadership Peer Group",
+        "type": "community",
+        "description": "Join or form a peer group of senior engineering leaders who meet regularly to review and challenge each other's org-level strategies and share lessons learned.",
+        "url": ""
+      },
+      {
+        "title": "Executive Strategy Mentorship",
+        "type": "mentorship",
+        "description": "Work with a VP or CTO-level mentor to develop the skill of reading business landscapes, identifying inflection points, and crafting strategies that position the engineering org for long-term success.",
+        "url": ""
+      },
+      {
+        "title": "The Strategy Stack Framework",
+        "type": "framework",
+        "description": "A layered framework for connecting company mission, business strategy, product strategy, and engineering strategy into a coherent stack where each layer reinforces the others.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C2",
+    "foundational": [
+      {
+        "title": "Essentialism: The Disciplined Pursuit of Less",
+        "type": "book",
+        "description": "Greg McKeown's guide to focusing on what truly matters, directly applicable to the challenge of saying no to good ideas in favor of great ones.",
+        "url": ""
+      },
+      {
+        "title": "The Art of Prioritization for Engineering Leaders",
+        "type": "article",
+        "description": "A deep dive into prioritization frameworks including RICE, ICE, and weighted scoring models, with guidance on when each is most appropriate for engineering contexts.",
+        "url": ""
+      },
+      {
+        "title": "Inspired: How to Create Tech Products People Love",
+        "type": "book",
+        "description": "Marty Cagan's work on product discovery and delivery, essential for understanding how to prioritize work that delivers genuine customer and business value.",
+        "url": ""
+      },
+      {
+        "title": "Opportunity Cost Thinking for Engineers",
+        "type": "video",
+        "description": "A talk on applying economic thinking to engineering prioritization, understanding that every choice to build one thing is a choice not to build something else.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "RICE Scoring Workshop",
+        "type": "workshop",
+        "description": "A hands-on session where teams score a backlog of real initiatives using Reach, Impact, Confidence, and Effort, then debate and calibrate their assessments.",
+        "url": ""
+      },
+      {
+        "title": "Priority Stack Ranking Template",
+        "type": "template",
+        "description": "A spreadsheet template for stack-ranking engineering initiatives against strategic objectives, including fields for estimated impact, effort, risk, and strategic alignment.",
+        "url": ""
+      },
+      {
+        "title": "Saying No Exercise",
+        "type": "exercise",
+        "description": "Practice the skill of declining requests constructively by role-playing scenarios where stakeholders push for work that doesn't align with current priorities, and crafting clear, empathetic responses.",
+        "url": ""
+      },
+      {
+        "title": "Cost of Delay Analysis",
+        "type": "tool",
+        "description": "Learn to quantify the cost of delay for different types of work (standard, urgent, fixed-date, intangible) and use this analysis to make sharper prioritization decisions.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Prioritization Under Uncertainty",
+        "type": "framework",
+        "description": "A framework for making prioritization decisions when data is incomplete, combining lightweight experimentation, option-value thinking, and reversibility assessment.",
+        "url": ""
+      },
+      {
+        "title": "Netflix and Spotify Prioritization Case Studies",
+        "type": "case-study",
+        "description": "Detailed examination of how high-performing engineering orgs balance platform investment, feature development, and technical debt reduction across multiple teams.",
+        "url": ""
+      },
+      {
+        "title": "Senior EM Prioritization Peer Review",
+        "type": "community",
+        "description": "A structured peer review process where engineering leaders present their quarterly prioritization rationale and receive feedback on blind spots, missing considerations, and alternative framings.",
+        "url": ""
+      },
+      {
+        "title": "Portfolio Management Mentorship",
+        "type": "mentorship",
+        "description": "Work with a senior leader experienced in managing a portfolio of engineering investments, learning to balance short-term delivery with long-term capability building.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C3",
+    "foundational": [
+      {
+        "title": "Designing Data-Intensive Applications",
+        "type": "book",
+        "description": "Martin Kleppmann's essential guide to the principles and practicalities of data systems, covering consistency, partitioning, replication, and stream processing.",
+        "url": ""
+      },
+      {
+        "title": "A Philosophy of Software Design",
+        "type": "book",
+        "description": "John Ousterhout's concise guide to managing complexity in software, focusing on deep modules, information hiding, and strategic vs. tactical programming.",
+        "url": ""
+      },
+      {
+        "title": "System Design Interview (Vol 1 & 2)",
+        "type": "book",
+        "description": "Alex Xu's comprehensive walkthrough of large-scale system design problems, useful both for interviews and for building mental models of distributed systems.",
+        "url": ""
+      },
+      {
+        "title": "Fundamentals of Software Architecture",
+        "type": "course",
+        "description": "A structured course covering architecture styles (monolith, microservices, event-driven), architecture characteristics (scalability, reliability), and the role of the architect in modern orgs.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Architecture Decision Record (ADR) Template",
+        "type": "template",
+        "description": "A lightweight template for documenting architecture decisions including context, decision, status, and consequences, fostering transparency and institutional memory.",
+        "url": ""
+      },
+      {
+        "title": "System Design Review Workshop",
+        "type": "workshop",
+        "description": "A facilitated workshop where participants present system designs and receive structured feedback on scalability, reliability, operability, and alignment with business requirements.",
+        "url": ""
+      },
+      {
+        "title": "Failure Mode Analysis Exercise",
+        "type": "exercise",
+        "description": "Take an existing system design and systematically identify failure modes, single points of failure, and cascading failure risks, then propose mitigations for each.",
+        "url": ""
+      },
+      {
+        "title": "Architecture Fitness Functions",
+        "type": "tool",
+        "description": "Learn to define and implement automated fitness functions that continuously validate that architecture characteristics (performance, coupling, complexity) remain within acceptable bounds.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Migration Strategy Case Studies",
+        "type": "case-study",
+        "description": "Analysis of large-scale system migrations (monolith to microservices, data center to cloud, legacy rewrites) including the technical and organizational strategies that made them succeed or fail.",
+        "url": ""
+      },
+      {
+        "title": "Architecture Review Board Participation",
+        "type": "community",
+        "description": "Join or establish an architecture review board that evaluates cross-cutting technical decisions, ensuring consistency and quality across the engineering organization.",
+        "url": ""
+      },
+      {
+        "title": "Staff+ Engineer Architecture Mentorship",
+        "type": "mentorship",
+        "description": "Pair with a Staff or Principal engineer to develop the skill of evaluating architectural tradeoffs, navigating ambiguity in large-scale design, and influencing technical direction.",
+        "url": ""
+      },
+      {
+        "title": "Evolutionary Architecture Framework",
+        "type": "framework",
+        "description": "A framework for designing systems that support guided, incremental change across multiple dimensions, enabling architecture to evolve alongside changing business requirements.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C4",
+    "foundational": [
+      {
+        "title": "The Manager's Path",
+        "type": "book",
+        "description": "Camille Fournier's guide to engineering leadership at every level, with practical advice on establishing team processes, running effective meetings, and creating operational cadences.",
+        "url": ""
+      },
+      {
+        "title": "High Output Management",
+        "type": "book",
+        "description": "Andy Grove's classic on management fundamentals, introducing concepts like leverage, output measurement, and the managerial activity of creating and maintaining operational rhythms.",
+        "url": ""
+      },
+      {
+        "title": "Team Topologies",
+        "type": "book",
+        "description": "Matthew Skelton and Manuel Pais' framework for organizing teams for fast flow, covering team types, interaction modes, and how operational structure affects software delivery.",
+        "url": ""
+      },
+      {
+        "title": "Effective Sprint Ceremonies for Engineering Teams",
+        "type": "article",
+        "description": "A practical guide to running standups, retrospectives, planning sessions, and demos that actually drive team effectiveness rather than becoming bureaucratic overhead.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Team Operating Manual Template",
+        "type": "template",
+        "description": "A template for documenting your team's operating rhythm including meeting cadences, communication norms, decision-making processes, and escalation paths.",
+        "url": ""
+      },
+      {
+        "title": "Meeting Audit Exercise",
+        "type": "exercise",
+        "description": "Audit all recurring meetings for your team over a two-week period, categorizing each by purpose, evaluating effectiveness, and proposing consolidation or elimination of low-value meetings.",
+        "url": ""
+      },
+      {
+        "title": "Operational Review Design Workshop",
+        "type": "workshop",
+        "description": "Design a weekly or bi-weekly operational review meeting format that surfaces blockers early, tracks progress toward commitments, and keeps the team aligned without micromanaging.",
+        "url": ""
+      },
+      {
+        "title": "Process Improvement Kanban",
+        "type": "tool",
+        "description": "Use a dedicated Kanban board to track operational improvements, making process changes visible and ensuring the team continuously improves its own ways of working.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Scaling Operational Rhythms Across Multiple Teams",
+        "type": "case-study",
+        "description": "Case studies of how engineering organizations scaled their operational cadences as they grew from one team to ten, examining what stayed the same and what had to change.",
+        "url": ""
+      },
+      {
+        "title": "Operations-Focused EM Community of Practice",
+        "type": "community",
+        "description": "A community of practice for engineering managers focused on sharing and refining operational practices, meeting monthly to discuss what's working and what isn't.",
+        "url": ""
+      },
+      {
+        "title": "Director-Level Operational Mentorship",
+        "type": "mentorship",
+        "description": "Work with a Director of Engineering to learn how to design operational rhythms that scale, balancing team autonomy with organizational alignment and visibility.",
+        "url": ""
+      },
+      {
+        "title": "The Operational Excellence Framework",
+        "type": "framework",
+        "description": "A comprehensive framework covering the five pillars of operational leadership: cadence design, information flow, decision velocity, accountability structures, and continuous improvement loops.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C5",
+    "foundational": [
+      {
+        "title": "Influence Without Authority",
+        "type": "book",
+        "description": "Allan Cohen and David Bradford's guide to building influence through reciprocity and mutual benefit, essential for engineering leaders who must work across organizational boundaries.",
+        "url": ""
+      },
+      {
+        "title": "Crucial Conversations",
+        "type": "book",
+        "description": "Tools for navigating high-stakes discussions where opinions vary and emotions run strong, directly applicable to cross-functional negotiations and alignment meetings.",
+        "url": ""
+      },
+      {
+        "title": "The Art of Cross-Functional Collaboration in Tech",
+        "type": "article",
+        "description": "A practical article on building productive working relationships with Product, Design, Data Science, and other functions, including common pitfalls and how to avoid them.",
+        "url": ""
+      },
+      {
+        "title": "Stakeholder Mapping for Engineering Leaders",
+        "type": "video",
+        "description": "A talk on identifying key stakeholders, understanding their motivations and concerns, and developing tailored influence strategies for each.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Stakeholder Map Template",
+        "type": "template",
+        "description": "A visual template for mapping stakeholders by influence and interest, identifying allies, blockers, and people who need to be informed or consulted on engineering decisions.",
+        "url": ""
+      },
+      {
+        "title": "Cross-Functional Alignment Workshop",
+        "type": "workshop",
+        "description": "A structured workshop format for bringing engineering, product, and design together to align on priorities, surface hidden dependencies, and commit to shared outcomes.",
+        "url": ""
+      },
+      {
+        "title": "Influence Conversation Role-Play",
+        "type": "exercise",
+        "description": "Practice influence skills through role-playing scenarios such as convincing a product manager to prioritize tech debt, or negotiating timeline changes with a business stakeholder.",
+        "url": ""
+      },
+      {
+        "title": "RACI Matrix Builder",
+        "type": "tool",
+        "description": "A tool for creating RACI matrices that clarify who is Responsible, Accountable, Consulted, and Informed for cross-functional initiatives, reducing confusion and conflict.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Cross-Functional Influence at Scale",
+        "type": "case-study",
+        "description": "Case studies of engineering leaders who successfully drove cross-functional initiatives (platform migrations, process changes, org restructures) that required buy-in from multiple functions.",
+        "url": ""
+      },
+      {
+        "title": "Executive Influence Mentorship",
+        "type": "mentorship",
+        "description": "Work with a senior leader skilled at cross-functional influence to develop strategies for building coalitions, managing resistance, and driving alignment at the executive level.",
+        "url": ""
+      },
+      {
+        "title": "Cross-Functional Leadership Forum",
+        "type": "community",
+        "description": "A forum bringing together leaders from engineering, product, design, and operations to discuss collaboration challenges and develop shared norms for working together effectively.",
+        "url": ""
+      },
+      {
+        "title": "The Influence Architecture Framework",
+        "type": "framework",
+        "description": "A framework for systematically building influence across an organization, covering relationship mapping, currency identification, trust building, and strategic communication patterns.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C6",
+    "foundational": [
+      {
+        "title": "The Coaching Habit",
+        "type": "book",
+        "description": "Michael Bungay Stanier's guide to asking better questions and giving less advice, transforming managers from problem-solvers into coaches who develop their team's capabilities.",
+        "url": ""
+      },
+      {
+        "title": "Radical Candor",
+        "type": "book",
+        "description": "Kim Scott's framework for caring personally while challenging directly, providing the foundation for honest feedback conversations that drive growth.",
+        "url": ""
+      },
+      {
+        "title": "Thanks for the Feedback",
+        "type": "book",
+        "description": "Douglas Stone and Sheila Heen's exploration of why feedback is hard to receive and how to create conditions where it lands effectively, essential for managers who give feedback daily.",
+        "url": ""
+      },
+      {
+        "title": "Growth Mindset and Engineering Teams",
+        "type": "article",
+        "description": "How to cultivate a growth mindset culture on engineering teams, moving from a fixed-ability worldview to one where skills are developed through deliberate practice and stretch assignments.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Individual Development Plan (IDP) Template",
+        "type": "template",
+        "description": "A structured template for creating individual development plans that connect an engineer's career aspirations with specific skills to develop, experiences to seek, and milestones to track.",
+        "url": ""
+      },
+      {
+        "title": "Coaching Conversation Practice",
+        "type": "exercise",
+        "description": "Practice the GROW model (Goal, Reality, Options, Will) through simulated coaching conversations covering common engineering scenarios: career pivots, skill gaps, and performance challenges.",
+        "url": ""
+      },
+      {
+        "title": "Stretch Assignment Design Workshop",
+        "type": "workshop",
+        "description": "Learn to identify and design stretch assignments that push engineers just beyond their comfort zone, with appropriate scaffolding to ensure learning without overwhelming risk.",
+        "url": ""
+      },
+      {
+        "title": "Feedback Journaling Tool",
+        "type": "tool",
+        "description": "A structured journaling practice for tracking feedback given and received, noting patterns, and improving the quality and impact of coaching conversations over time.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Talent Development at High-Growth Companies",
+        "type": "case-study",
+        "description": "How companies like Shopify, Stripe, and Datadog developed engineering talent at scale, including mentorship programs, internal mobility, and leadership development pipelines.",
+        "url": ""
+      },
+      {
+        "title": "Coaching Skills Peer Practice Group",
+        "type": "community",
+        "description": "A small group of engineering managers who meet regularly to practice coaching skills on each other, providing a safe environment to experiment with new techniques and get feedback.",
+        "url": ""
+      },
+      {
+        "title": "Executive Coach Partnership",
+        "type": "mentorship",
+        "description": "Work with a professional executive coach to deepen your own coaching skills, understand your coaching blind spots, and develop the ability to coach engineers through complex career transitions.",
+        "url": ""
+      },
+      {
+        "title": "The Talent Density Framework",
+        "type": "framework",
+        "description": "A framework for systematically increasing team capability through targeted hiring, coaching, stretch assignments, and performance management, raising the bar across the organization.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C7",
+    "foundational": [
+      {
+        "title": "Thinking in Bets",
+        "type": "book",
+        "description": "Annie Duke's guide to making better decisions under uncertainty, teaching how to separate decision quality from outcome quality and communicate probabilistic thinking.",
+        "url": ""
+      },
+      {
+        "title": "The Pyramid Principle",
+        "type": "book",
+        "description": "Barbara Minto's framework for structured communication, teaching how to organize ideas hierarchically so that key messages land clearly with any audience.",
+        "url": ""
+      },
+      {
+        "title": "Writing Well as an Engineering Leader",
+        "type": "article",
+        "description": "Practical guidance on writing effective technical documents, proposals, and updates that are clear, concise, and tailored to their audience.",
+        "url": ""
+      },
+      {
+        "title": "Decision-Making Frameworks for Engineering Managers",
+        "type": "video",
+        "description": "A talk covering common decision-making frameworks (DACI, consent-based, advisory) and how to choose the right one based on the type and impact of the decision.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Decision Document Template",
+        "type": "template",
+        "description": "A one-page template for framing decisions that includes context, options with tradeoffs, recommendation, risks, and reversibility assessment, designed for executive audiences.",
+        "url": ""
+      },
+      {
+        "title": "Executive Communication Workshop",
+        "type": "workshop",
+        "description": "Practice presenting technical decisions to non-technical executives, focusing on framing, storytelling, managing objections, and tailoring depth to the audience.",
+        "url": ""
+      },
+      {
+        "title": "Decision Journal Exercise",
+        "type": "exercise",
+        "description": "Maintain a decision journal for 90 days, recording each significant decision's context, reasoning, confidence level, and expected outcome, then reviewing to identify patterns and improve.",
+        "url": ""
+      },
+      {
+        "title": "Pre-mortem Facilitation Tool",
+        "type": "tool",
+        "description": "A structured pre-mortem process for stress-testing decisions before committing, imagining future failure and working backward to identify hidden risks and assumptions.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "High-Stakes Decision Communication Case Studies",
+        "type": "case-study",
+        "description": "Analysis of how engineering leaders communicated critical decisions (platform rewrites, team restructures, outage responses) including what worked, what failed, and lessons learned.",
+        "url": ""
+      },
+      {
+        "title": "Senior Leader Communication Mentorship",
+        "type": "mentorship",
+        "description": "Work with a VP-level leader known for exceptional communication to develop your ability to frame complex technical decisions for diverse audiences and build consensus.",
+        "url": ""
+      },
+      {
+        "title": "Decision Quality Community of Practice",
+        "type": "community",
+        "description": "A group of senior engineering leaders who meet to review past decisions, share decision-making techniques, and collectively improve the quality of decisions across the organization.",
+        "url": ""
+      },
+      {
+        "title": "The Decision Architecture Framework",
+        "type": "framework",
+        "description": "A comprehensive framework for designing organizational decision-making processes, covering decision rights, information flow, escalation triggers, and communication protocols.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C8",
+    "foundational": [
+      {
+        "title": "Site Reliability Engineering (The Google SRE Book)",
+        "type": "book",
+        "description": "Google's definitive guide to SRE principles and practices, covering incident management, postmortems, risk management, and building reliable systems at scale.",
+        "url": "https://sre.google/sre-book/table-of-contents/"
+      },
+      {
+        "title": "Incident Management for Operations",
+        "type": "book",
+        "description": "Rob Schnepp's guide to structured incident management, covering incident command systems, communication during crises, and post-incident learning processes.",
+        "url": ""
+      },
+      {
+        "title": "The Field Guide to Understanding Human Error",
+        "type": "book",
+        "description": "Sidney Dekker's essential reading on moving beyond blame in incident analysis, understanding how well-intentioned actions lead to failure, and building just cultures.",
+        "url": ""
+      },
+      {
+        "title": "Introduction to Chaos Engineering",
+        "type": "course",
+        "description": "A course covering the principles and practices of chaos engineering, including how to design experiments that proactively surface reliability weaknesses before they cause outages.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Incident Response Runbook Template",
+        "type": "template",
+        "description": "A template for creating incident response runbooks that cover detection, triage, mitigation, communication, and escalation for common failure scenarios.",
+        "url": ""
+      },
+      {
+        "title": "Blameless Postmortem Workshop",
+        "type": "workshop",
+        "description": "A facilitated workshop teaching how to run effective blameless postmortems that focus on systemic causes, extract actionable learnings, and drive meaningful reliability improvements.",
+        "url": ""
+      },
+      {
+        "title": "Incident Response Tabletop Exercise",
+        "type": "exercise",
+        "description": "Run a tabletop simulation of a major incident, practicing roles (incident commander, communications lead, technical lead), decision-making under pressure, and stakeholder communication.",
+        "url": ""
+      },
+      {
+        "title": "Error Budget Tracking Tool",
+        "type": "tool",
+        "description": "Set up and use error budget tracking to make reliability investment decisions data-driven, balancing feature velocity with reliability based on SLO consumption rates.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Major Outage Case Studies",
+        "type": "case-study",
+        "description": "Detailed analysis of major outages at companies like AWS, Cloudflare, and GitLab, examining cascading failures, organizational response, and long-term reliability improvements that resulted.",
+        "url": ""
+      },
+      {
+        "title": "Reliability Engineering Mentorship",
+        "type": "mentorship",
+        "description": "Partner with a senior SRE or reliability-focused engineering leader to develop skills in risk assessment, reliability program design, and building a culture of operational excellence.",
+        "url": ""
+      },
+      {
+        "title": "Learning from Incidents Community",
+        "type": "community",
+        "description": "Join the Learning from Incidents community to engage with practitioners sharing insights on incident analysis, human factors, and building resilient sociotechnical systems.",
+        "url": "https://www.learningfromincidents.io/"
+      },
+      {
+        "title": "Resilience Engineering Framework",
+        "type": "framework",
+        "description": "A framework for building organizational resilience that goes beyond preventing failures to developing adaptive capacity, graceful degradation, and rapid recovery capabilities.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C9",
+    "foundational": [
+      {
+        "title": "Accelerate: The Science of Lean Software and DevOps",
+        "type": "book",
+        "description": "Nicole Forsgren, Jez Humble, and Gene Kim's research-backed guide to measuring software delivery performance using the four key metrics: deployment frequency, lead time, MTTR, and change failure rate.",
+        "url": ""
+      },
+      {
+        "title": "How to Measure Anything",
+        "type": "book",
+        "description": "Douglas Hubbard's guide to applied information economics, teaching how to quantify seemingly intangible things and make better decisions with imperfect data.",
+        "url": ""
+      },
+      {
+        "title": "Measure What Matters",
+        "type": "book",
+        "description": "John Doerr's introduction to OKRs (Objectives and Key Results), providing a framework for setting measurable goals that align teams with organizational outcomes.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Metrics That Matter",
+        "type": "article",
+        "description": "A practical guide to selecting engineering metrics that drive behavior change, avoid Goodhart's Law pitfalls, and genuinely reflect team health and delivery effectiveness.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Engineering Metrics Dashboard Template",
+        "type": "template",
+        "description": "A template for building an engineering metrics dashboard covering DORA metrics, developer experience scores, quality indicators, and outcome-based measures.",
+        "url": ""
+      },
+      {
+        "title": "Metric Selection Workshop",
+        "type": "workshop",
+        "description": "A facilitated session where teams identify the behaviors they want to encourage, select metrics that proxy for those behaviors, and design safeguard metrics to prevent gaming.",
+        "url": ""
+      },
+      {
+        "title": "OKR Writing Exercise",
+        "type": "exercise",
+        "description": "Practice writing engineering OKRs that are outcome-focused rather than output-focused, measurable, ambitious but achievable, and aligned with broader organizational goals.",
+        "url": ""
+      },
+      {
+        "title": "Developer Experience Survey Tool",
+        "type": "tool",
+        "description": "Design and deploy a developer experience survey measuring satisfaction, productivity friction, tooling effectiveness, and psychological safety, then use results to prioritize improvements.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Engineering Productivity Measurement at Scale",
+        "type": "case-study",
+        "description": "How companies like Google (SPACE framework), Microsoft, and LinkedIn measure engineering productivity without reducing complex work to simplistic vanity metrics.",
+        "url": ""
+      },
+      {
+        "title": "Data-Driven Engineering Leadership Mentorship",
+        "type": "mentorship",
+        "description": "Work with a leader experienced in building measurement cultures to learn how to introduce metrics without creating anxiety, use data to tell stories, and evolve metrics as teams mature.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Analytics Community",
+        "type": "community",
+        "description": "A community of engineering leaders focused on measurement and analytics, sharing dashboards, metric definitions, survey instruments, and lessons learned from measurement programs.",
+        "url": ""
+      },
+      {
+        "title": "The Outcomes-Over-Outputs Framework",
+        "type": "framework",
+        "description": "A framework for shifting teams from measuring outputs (story points, PRs merged) to measuring outcomes (user impact, business results), including techniques for attributing outcomes to engineering work.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C10",
+    "foundational": [
+      {
+        "title": "The Phoenix Project",
+        "type": "book",
+        "description": "Gene Kim's novel about IT transformation, illustrating how work-in-progress limits, constraint management, and resource allocation decisions determine organizational performance.",
+        "url": ""
+      },
+      {
+        "title": "Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency",
+        "type": "book",
+        "description": "Tom DeMarco's argument for maintaining organizational slack, directly relevant to resource allocation decisions that balance efficiency with adaptability and innovation.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Investment Categories",
+        "type": "article",
+        "description": "A guide to categorizing engineering work into investment categories (feature development, platform, tech debt, innovation) and establishing healthy allocation ratios.",
+        "url": ""
+      },
+      {
+        "title": "Theory of Constraints for Software Teams",
+        "type": "video",
+        "description": "A talk on applying Goldratt's Theory of Constraints to software engineering, identifying bottlenecks and allocating resources to maximize throughput of the entire system.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Resource Allocation Matrix Template",
+        "type": "template",
+        "description": "A template for visualizing how engineering resources are allocated across teams, projects, and investment categories, making tradeoffs explicit and enabling data-driven rebalancing.",
+        "url": ""
+      },
+      {
+        "title": "Build vs. Buy Analysis Workshop",
+        "type": "workshop",
+        "description": "A structured workshop for evaluating build vs. buy decisions, considering total cost of ownership, strategic differentiation, maintenance burden, and opportunity cost.",
+        "url": ""
+      },
+      {
+        "title": "Capacity Planning Exercise",
+        "type": "exercise",
+        "description": "Practice capacity planning for a quarter, accounting for planned work, unplanned work, on-call rotations, learning time, and the reality that developers are not fungible.",
+        "url": ""
+      },
+      {
+        "title": "Investment Portfolio Tracker",
+        "type": "tool",
+        "description": "A tracking tool that categorizes all engineering work by investment type and visualizes allocation over time, enabling leaders to ensure investment ratios match strategic intent.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Resource Allocation During Hypergrowth",
+        "type": "case-study",
+        "description": "Case studies of how companies like Uber, Airbnb, and DoorDash made resource allocation decisions during rapid growth, balancing scale-up needs with feature velocity and reliability.",
+        "url": ""
+      },
+      {
+        "title": "Resource Strategy Mentorship",
+        "type": "mentorship",
+        "description": "Work with a senior engineering leader to develop skills in headcount planning, budget management, vendor evaluation, and making compelling business cases for engineering investment.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Finance Community",
+        "type": "community",
+        "description": "A community of engineering leaders who share practices around budgeting, cost optimization, cloud spend management, and making engineering investment decisions that align with financial goals.",
+        "url": ""
+      },
+      {
+        "title": "The Investment Portfolio Framework",
+        "type": "framework",
+        "description": "A framework treating engineering capacity as an investment portfolio, balancing high-risk/high-reward bets, steady returns, and defensive investments across short and long time horizons.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C11",
+    "foundational": [
+      {
+        "title": "Who: The A Method for Hiring",
+        "type": "book",
+        "description": "Geoff Smart and Randy Street's structured approach to hiring, covering scorecards, sourcing, structured interviews, and reference checks that predict job performance.",
+        "url": ""
+      },
+      {
+        "title": "Work Rules!",
+        "type": "book",
+        "description": "Laszlo Bock's account of Google's people operations, including data-driven insights on what makes hiring processes effective and how to reduce bias in candidate evaluation.",
+        "url": ""
+      },
+      {
+        "title": "Designing Effective Technical Interview Loops",
+        "type": "article",
+        "description": "A practical guide to structuring technical interview loops that assess the right signals, minimize redundancy, reduce candidate fatigue, and produce fair, consistent evaluations.",
+        "url": ""
+      },
+      {
+        "title": "The First 90 Days for Engineering Hires",
+        "type": "article",
+        "description": "How to design onboarding programs that get new engineers to full productivity quickly, covering documentation, buddy systems, starter projects, and milestone check-ins.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Job Description and Scorecard Template",
+        "type": "template",
+        "description": "Templates for writing inclusive, accurate job descriptions and candidate scorecards that focus on demonstrated competencies rather than credential proxies.",
+        "url": ""
+      },
+      {
+        "title": "Interview Calibration Workshop",
+        "type": "workshop",
+        "description": "A workshop where interviewers evaluate the same candidate responses independently, then calibrate together to align on what constitutes strong, acceptable, and weak signals.",
+        "url": ""
+      },
+      {
+        "title": "Onboarding Program Design Exercise",
+        "type": "exercise",
+        "description": "Design a 30-60-90 day onboarding plan for a new engineer joining your team, including learning objectives, key relationships to build, and progressively complex deliverables.",
+        "url": ""
+      },
+      {
+        "title": "Role Architecture Tool",
+        "type": "tool",
+        "description": "A tool for designing engineering roles that clearly delineate scope, expectations, growth paths, and how each role fits into the broader team and organizational structure.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Scaling Hiring at High-Growth Startups",
+        "type": "case-study",
+        "description": "Case studies of how fast-growing companies built and scaled their engineering hiring processes while maintaining quality, speed, and candidate experience.",
+        "url": ""
+      },
+      {
+        "title": "Talent Acquisition Strategy Mentorship",
+        "type": "mentorship",
+        "description": "Work with a senior engineering leader experienced in building teams from scratch to learn sourcing strategies, employer branding, compensation philosophy, and closing techniques.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Hiring Leaders Forum",
+        "type": "community",
+        "description": "A forum of engineering leaders sharing interview questions, process innovations, DEI hiring practices, and data on what predicts long-term success in engineering roles.",
+        "url": ""
+      },
+      {
+        "title": "The Talent Lifecycle Framework",
+        "type": "framework",
+        "description": "An end-to-end framework connecting role design, sourcing, interviewing, onboarding, development, and retention into a cohesive talent strategy that compounds over time.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C12",
+    "foundational": [
+      {
+        "title": "The Culture Code",
+        "type": "book",
+        "description": "Daniel Coyle's research into what makes high-performing group cultures work, identifying three key skills: building safety, sharing vulnerability, and establishing purpose.",
+        "url": ""
+      },
+      {
+        "title": "No Rules Rules: Netflix and the Culture of Reinvention",
+        "type": "book",
+        "description": "Reed Hastings and Erin Meyer's account of building Netflix's culture of freedom and responsibility, offering a provocative model for engineering team culture.",
+        "url": ""
+      },
+      {
+        "title": "Turn the Ship Around!",
+        "type": "book",
+        "description": "L. David Marquet's account of transforming a submarine crew from a leader-follower to a leader-leader model, directly applicable to building empowered engineering teams.",
+        "url": ""
+      },
+      {
+        "title": "Psychological Safety in Engineering Teams",
+        "type": "article",
+        "description": "How to create and maintain psychological safety on engineering teams, drawing from Google's Project Aristotle research and practical implementation strategies.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Team Charter Template",
+        "type": "template",
+        "description": "A template for creating a team charter that articulates shared values, working agreements, communication norms, and how the team handles conflict and decision-making.",
+        "url": ""
+      },
+      {
+        "title": "Culture Retrospective Workshop",
+        "type": "workshop",
+        "description": "A facilitated retrospective format specifically designed to surface cultural dynamics, identify norms that help and hinder the team, and co-create cultural improvements.",
+        "url": ""
+      },
+      {
+        "title": "Norm Setting Exercise",
+        "type": "exercise",
+        "description": "Lead your team through an explicit norm-setting exercise covering code review etiquette, meeting behavior, Slack communication patterns, and how disagreements are handled.",
+        "url": ""
+      },
+      {
+        "title": "Psychological Safety Assessment Tool",
+        "type": "tool",
+        "description": "A lightweight survey instrument for measuring psychological safety on your team, with specific questions adapted for engineering contexts and guidance on interpreting results.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Culture Transformation Case Studies",
+        "type": "case-study",
+        "description": "How engineering organizations at Etsy, Slack, and Shopify deliberately shaped their cultures, including specific practices, rituals, and artifacts that reinforced desired behaviors.",
+        "url": ""
+      },
+      {
+        "title": "Organizational Culture Mentorship",
+        "type": "mentorship",
+        "description": "Work with a senior leader who has successfully shaped engineering culture at scale to learn how culture propagates, how to diagnose cultural issues, and how to drive change.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Culture Leaders Network",
+        "type": "community",
+        "description": "A network of engineering leaders focused on culture, sharing practices around inclusion, remote work norms, innovation culture, and managing culture through organizational change.",
+        "url": ""
+      },
+      {
+        "title": "The Culture Operating System Framework",
+        "type": "framework",
+        "description": "A framework for treating culture as a system with inputs (hiring, rituals, artifacts), processes (norms, feedback loops), and outputs (behaviors, outcomes), enabling deliberate culture design.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C13",
+    "foundational": [
+      {
+        "title": "Security Engineering: A Guide to Building Dependable Distributed Systems",
+        "type": "book",
+        "description": "Ross Anderson's comprehensive guide to security engineering, covering threat modeling, access control, cryptography, and the human factors that make security succeed or fail.",
+        "url": ""
+      },
+      {
+        "title": "The Phoenix Project (Security Thread)",
+        "type": "book",
+        "description": "Gene Kim's novel includes a security subplot that illustrates how security and compliance can be integrated into delivery processes rather than being gatekeeping functions.",
+        "url": ""
+      },
+      {
+        "title": "OWASP Top 10 for Engineering Managers",
+        "type": "course",
+        "description": "A course covering the OWASP Top 10 web application security risks from a management perspective, focusing on how to build processes that prevent these vulnerabilities systematically.",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      {
+        "title": "Compliance as Code: An Introduction",
+        "type": "article",
+        "description": "How modern engineering organizations automate compliance requirements through policy-as-code, automated auditing, and continuous compliance monitoring.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Threat Modeling Workshop Template",
+        "type": "template",
+        "description": "A template for running threat modeling sessions using STRIDE methodology, including worksheets for identifying assets, threats, mitigations, and residual risks.",
+        "url": ""
+      },
+      {
+        "title": "Security Review Process Workshop",
+        "type": "workshop",
+        "description": "Design a lightweight security review process that integrates into your development workflow, covering when reviews are needed, what to look for, and how to track findings.",
+        "url": ""
+      },
+      {
+        "title": "Compliance Gap Analysis Exercise",
+        "type": "exercise",
+        "description": "Conduct a gap analysis of your team's practices against a relevant compliance framework (SOC 2, GDPR, HIPAA), identifying gaps and prioritizing remediation efforts.",
+        "url": ""
+      },
+      {
+        "title": "Dependency Vulnerability Scanner",
+        "type": "tool",
+        "description": "Set up and configure automated dependency scanning in your CI/CD pipeline, establishing policies for vulnerability severity levels, SLAs for patching, and exception processes.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Security Incident Response Case Studies",
+        "type": "case-study",
+        "description": "Analysis of real security incidents (SolarWinds, Log4Shell, Equifax) examining how organizational security posture, detection capabilities, and response processes affected outcomes.",
+        "url": ""
+      },
+      {
+        "title": "CISO or Security Leadership Mentorship",
+        "type": "mentorship",
+        "description": "Work with a CISO or senior security leader to understand how to build a security-aware engineering culture, manage security risk at the organizational level, and navigate compliance requirements.",
+        "url": ""
+      },
+      {
+        "title": "DevSecOps Community of Practice",
+        "type": "community",
+        "description": "Join a community focused on integrating security into the software development lifecycle, sharing tooling, automation approaches, and strategies for shifting security left.",
+        "url": ""
+      },
+      {
+        "title": "The Security Posture Maturity Framework",
+        "type": "framework",
+        "description": "A maturity model for assessing and improving an organization's security posture across dimensions: vulnerability management, access control, data protection, incident response, and compliance automation.",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "capabilityId": "C14",
+    "foundational": [
+      {
+        "title": "Nine Lies About Work",
+        "type": "book",
+        "description": "Marcus Buckingham and Ashley Goodall's challenge to conventional performance management wisdom, arguing for attention-based management over rating-based evaluation.",
+        "url": ""
+      },
+      {
+        "title": "An Elegant Puzzle (Performance Chapter)",
+        "type": "book",
+        "description": "Will Larson's practical guidance on performance management for engineering teams, covering performance designations, managing out, and calibration processes.",
+        "url": ""
+      },
+      {
+        "title": "The Hard Thing About Hard Things",
+        "type": "book",
+        "description": "Ben Horowitz's raw account of difficult management situations, including firing, demotions, and performance conversations that every engineering leader eventually faces.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Career Ladders and Leveling",
+        "type": "article",
+        "description": "A guide to designing and using engineering career ladders effectively, ensuring they serve as tools for growth rather than bureaucratic artifacts.",
+        "url": ""
+      }
+    ],
+    "practical": [
+      {
+        "title": "Performance Review Writing Template",
+        "type": "template",
+        "description": "A structured template for writing performance reviews that are specific, evidence-based, forward-looking, and calibrated against level expectations rather than peer comparison.",
+        "url": ""
+      },
+      {
+        "title": "Calibration Session Facilitation Workshop",
+        "type": "workshop",
+        "description": "Learn to facilitate calibration sessions that reduce bias, ensure consistency across managers, and produce fair performance ratings, including techniques for managing disagreement.",
+        "url": ""
+      },
+      {
+        "title": "Difficult Performance Conversation Role-Play",
+        "type": "exercise",
+        "description": "Practice delivering tough performance feedback through role-play scenarios including underperformance conversations, PIP discussions, and communicating missed promotions.",
+        "url": ""
+      },
+      {
+        "title": "Continuous Feedback Tracker",
+        "type": "tool",
+        "description": "A tool for capturing feedback and accomplishments throughout the review period, preventing recency bias and ensuring performance reviews reflect the full body of work.",
+        "url": ""
+      }
+    ],
+    "advanced": [
+      {
+        "title": "Performance Management System Redesign",
+        "type": "case-study",
+        "description": "How companies like Netflix, Adobe, and Microsoft redesigned their performance management systems, moving away from stack ranking toward approaches that better serve development and accountability.",
+        "url": ""
+      },
+      {
+        "title": "Performance Management Mentorship",
+        "type": "mentorship",
+        "description": "Work with a senior engineering leader experienced in calibration across large organizations to develop skills in fair assessment, bias mitigation, and managing performance at scale.",
+        "url": ""
+      },
+      {
+        "title": "Engineering Management Performance Forum",
+        "type": "community",
+        "description": "A forum for engineering managers to discuss performance management challenges, share calibration rubrics, and develop shared standards for what excellent, good, and underperformance look like.",
+        "url": ""
+      },
+      {
+        "title": "The Performance Ecosystem Framework",
+        "type": "framework",
+        "description": "A holistic framework connecting goal setting, continuous feedback, career development, calibration, and compensation into an integrated system that drives both individual growth and organizational performance.",
+        "url": ""
+      }
+    ]
+  }
+]
