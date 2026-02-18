@@ -17,6 +17,11 @@ const TYPE_LABELS: Record<string, string> = {
   observable: 'Observable',
   'anti-pattern': 'Anti-Pattern',
   playbook: 'Playbook',
+  'interview-question': 'Interview Q',
+  'career-level': 'Career Level',
+  'maturity-level': 'Maturity',
+  'learning-pathway': 'Learning',
+  measurement: 'Measurement',
 };
 
 const TYPE_COLORS: Record<string, string> = {
@@ -24,6 +29,11 @@ const TYPE_COLORS: Record<string, string> = {
   observable: '#22c55e',
   'anti-pattern': '#ef4444',
   playbook: '#a855f7',
+  'interview-question': '#f59e0b',
+  'career-level': '#06b6d4',
+  'maturity-level': '#8b5cf6',
+  'learning-pathway': '#10b981',
+  measurement: '#ec4899',
 };
 
 export default function SearchDialog() {
@@ -150,8 +160,12 @@ export default function SearchDialog() {
         {/* Results */}
         <div ref={listRef} style={{ maxHeight: '400px', overflowY: 'auto', padding: '8px' }}>
           {query && results.length === 0 && (
-            <div style={{ padding: '24px 16px', textAlign: 'center', color: '#9ca3af' }}>
-              No results for "{query}"
+            <div className="py-10 px-4 text-center">
+              <svg className="w-12 h-12 text-gray-300 dark:text-gray-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM13.5 10.5h-6" />
+              </svg>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">No results found</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500">Try a different search term or browse capabilities</p>
             </div>
           )}
           {results.map((result, i) => (

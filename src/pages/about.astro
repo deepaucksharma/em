@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/ui/Breadcrumb.astro';
-import { capabilities, observables, antiPatterns, playbooks, calibrationSignals, rubricAnchors, evidenceTypes } from '../lib/data';
+import { capabilities, observables, antiPatterns, playbooks, calibrationSignals, rubricAnchors, evidenceTypes, interviewQuestions, learningPathways, careerLevels } from '../lib/data';
 ---
 
 <BaseLayout title="About" description="About the Engineering Leadership Matrix v6 — methodology, structure, and how to use it.">
@@ -48,9 +48,9 @@ import { capabilities, observables, antiPatterns, playbooks, calibrationSignals,
             <div class="text-xs text-gray-500 dark:text-gray-400">Language for promo packets & reviews</div>
           </div>
           <div class="card">
-            <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{rubricAnchors.length}</div>
-            <div class="text-sm font-medium text-gray-900 dark:text-white">Rubric Anchors</div>
-            <div class="text-xs text-gray-500 dark:text-gray-400">3-level behavioral descriptions</div>
+            <div class="text-2xl font-bold text-amber-600 dark:text-amber-400">{interviewQuestions.length}</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Interview Questions</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Behavioral, situational, and technical</div>
           </div>
         </div>
       </section>
@@ -77,6 +77,12 @@ import { capabilities, observables, antiPatterns, playbooks, calibrationSignals,
           <li><strong>Promo packets:</strong> Use <a href="/calibration/" class="text-blue-600 dark:text-blue-400 hover:underline">calibration signals</a> as language templates.</li>
           <li><strong>Scenario prep:</strong> Use <a href="/playbooks/" class="text-blue-600 dark:text-blue-400 hover:underline">playbooks</a> to prepare for common leadership scenarios.</li>
           <li><strong>Anti-pattern recognition:</strong> Use <a href="/anti-patterns/" class="text-blue-600 dark:text-blue-400 hover:underline">anti-patterns</a> to identify and correct failure modes early.</li>
+          <li><strong>Learning pathways:</strong> Follow <a href="/learning-pathways/" class="text-blue-600 dark:text-blue-400 hover:underline">curated learning resources</a> organized by capability — foundational, practical, and advanced.</li>
+          <li><strong>Self-assessment:</strong> Use the <a href="/self-assessment/tool/" class="text-blue-600 dark:text-blue-400 hover:underline">interactive self-assessment tool</a> to rate yourself across all capabilities and identify gaps.</li>
+          <li><strong>Interview prep:</strong> Use <a href="/interview-questions/" class="text-blue-600 dark:text-blue-400 hover:underline">{interviewQuestions.length} interview questions</a> with follow-ups, green flags, and red flags.</li>
+          <li><strong>Career progression:</strong> Understand <a href="/career-progression/" class="text-blue-600 dark:text-blue-400 hover:underline">scope, expectations, and transition signals</a> for EM through VP levels.</li>
+          <li><strong>Org maturity:</strong> Assess your engineering organization's <a href="/org-maturity/" class="text-blue-600 dark:text-blue-400 hover:underline">maturity level</a> from Ad Hoc to Optimizing.</li>
+          <li><strong>Measurement:</strong> Use the <a href="/measurement-guide/" class="text-blue-600 dark:text-blue-400 hover:underline">measurement guide</a> for leading/lagging indicators and anti-patterns per capability.</li>
         </ul>
       </section>
 

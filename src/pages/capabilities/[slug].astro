@@ -15,6 +15,9 @@ import {
   getPlaybooksForCapability,
   getRubricAnchorsForCapability,
   getRelatedCapabilities,
+  getLearningPathway,
+  getMeasurementGuidance,
+  getInterviewQuestionsForCapability,
 } from '../../lib/data';
 import { formatPercent } from '../../lib/utils';
 
@@ -32,6 +35,9 @@ const aps = getAntiPatternsForCapability(cap.id);
 const pbs = getPlaybooksForCapability(cap.id);
 const rubrics = getRubricAnchorsForCapability(cap.id);
 const related = getRelatedCapabilities(cap.id);
+const pathway = getLearningPathway(cap.id);
+const measurement = getMeasurementGuidance(cap.id);
+const iqCount = getInterviewQuestionsForCapability(cap.id).length;
 ---
 
 <ContentLayout title={`${cap.id}: ${cap.name}`} description={cap.description} currentSlug={cap.slug}>
@@ -117,6 +123,143 @@ const related = getRelatedCapabilities(cap.id);
           <PlaybookCard playbook={pb} />
         ))}
       </div>
+    </section>
+  )}
+
+  <!-- Learning Pathway -->
+  {pathway && (
+    <section class="mb-10">
+      <h2 class="section-heading">Learning Pathway</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wider">Foundational</h3>
+          <div class="space-y-2">
+            {pathway.foundational.map(item => (
+              <div class="rounded-lg border border-gray-200 dark:border-gray-700 p-3 bg-gray-50 dark:bg-gray-800/50">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-medium text-gray-400 uppercase">{item.type}</span>
+                </div>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">{item.title}</a>
+                ) : (
+                  <p class="text-sm font-medium text-gray-700 dark:text-gray-300">{item.title}</p>
+                )}
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 uppercase tracking-wider">Practical</h3>
+          <div class="space-y-2">
+            {pathway.practical.map(item => (
+              <div class="rounded-lg border border-blue-200 dark:border-blue-800 p-3 bg-blue-50 dark:bg-blue-950/20">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-medium text-blue-400 uppercase">{item.type}</span>
+                </div>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener" class="text-sm font-medium text-blue-700 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200">{item.title}</a>
+                ) : (
+                  <p class="text-sm font-medium text-blue-700 dark:text-blue-300">{item.title}</p>
+                )}
+                <p class="text-xs text-blue-500 dark:text-blue-400 mt-1 line-clamp-2">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-green-600 dark:text-green-400 mb-3 uppercase tracking-wider">Advanced</h3>
+          <div class="space-y-2">
+            {pathway.advanced.map(item => (
+              <div class="rounded-lg border border-green-200 dark:border-green-800 p-3 bg-green-50 dark:bg-green-950/20">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-medium text-green-400 uppercase">{item.type}</span>
+                </div>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener" class="text-sm font-medium text-green-700 dark:text-green-300 hover:text-green-800 dark:hover:text-green-200">{item.title}</a>
+                ) : (
+                  <p class="text-sm font-medium text-green-700 dark:text-green-300">{item.title}</p>
+                )}
+                <p class="text-xs text-green-500 dark:text-green-400 mt-1 line-clamp-2">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
+        <a href="/learning-pathways/" class="text-blue-600 dark:text-blue-400 hover:underline">View all learning pathways &rarr;</a>
+      </p>
+    </section>
+  )}
+
+  <!-- Measurement Guidance -->
+  {measurement && (
+    <section class="mb-10">
+      <h2 class="section-heading">Measurement Guidance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="rounded-xl border border-green-200 dark:border-green-800 p-4 bg-green-50 dark:bg-green-950/20">
+          <h3 class="text-sm font-semibold text-green-600 dark:text-green-400 mb-3">Leading Indicators</h3>
+          <ul class="space-y-2">
+            {measurement.leadingIndicators.map(ind => (
+              <li class="text-sm text-green-700 dark:text-green-300 flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                {ind}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-xl border border-blue-200 dark:border-blue-800 p-4 bg-blue-50 dark:bg-blue-950/20">
+          <h3 class="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3">Lagging Indicators</h3>
+          <ul class="space-y-2">
+            {measurement.laggingIndicators.map(ind => (
+              <li class="text-sm text-blue-700 dark:text-blue-300 flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {ind}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-xl border border-red-200 dark:border-red-800 p-4 bg-red-50 dark:bg-red-950/20">
+          <h3 class="text-sm font-semibold text-red-600 dark:text-red-400 mb-3">Measurement Anti-Patterns</h3>
+          <ul class="space-y-2">
+            {measurement.measurementAntiPatterns.map(ap => (
+              <li class="text-sm text-red-700 dark:text-red-300 flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+                {ap}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mt-3 text-sm text-gray-500 dark:text-gray-400">
+        <span>Suggested cadence: <strong class="text-gray-700 dark:text-gray-300">{measurement.suggestedCadence}</strong></span>
+        <a href="/measurement-guide/" class="text-blue-600 dark:text-blue-400 hover:underline">Full measurement guide &rarr;</a>
+      </div>
+    </section>
+  )}
+
+  <!-- Interview Questions -->
+  {iqCount > 0 && (
+    <section class="mb-10">
+      <h2 class="section-heading">
+        Interview Questions
+        <span class="ml-2 text-sm font-normal text-gray-500 dark:text-gray-400">({iqCount} questions)</span>
+      </h2>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+        Behavioral, situational, and technical interview questions mapped to this capability.
+      </p>
+      <a href="/interview-questions/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 text-sm font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        View interview questions &rarr;
+      </a>
     </section>
   )}
 

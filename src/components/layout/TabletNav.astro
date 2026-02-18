@@ -1,0 +1,100 @@
+---
+import { capabilities } from '../../lib/data';
+import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug } = Astro.props;
+
+const capsByDomain = DOMAIN_ORDER.map(domain => ({
+  domain,
+  capabilities: capabilities.filter(c => c.domain === domain),
+}));
+
+const currentCap = currentSlug ? capabilities.find(c => c.slug === currentSlug) : null;
+const currentDomain = currentCap?.domain;
+
+const DOMAIN_HEX: Record<string, string> = {
+  Strategy: '#3b82f6',
+  Execution: '#22c55e',
+  Stakeholder: '#a855f7',
+  People: '#f59e0b',
+  Reliability: '#ef4444',
+  Data: '#06b6d4',
+};
+---
+
+<!-- Tablet horizontal domain nav (md to lg) -->
+<nav class="hidden md:block lg:hidden mb-6">
+  <div class="flex gap-2 overflow-x-auto pb-2">
+    {capsByDomain.map(({ domain, capabilities: caps }) => {
+      const isActiveDomain = domain === currentDomain;
+      const domainColors = getDomainColor(domain);
+      return (
+        <div class="shrink-0 relative" data-domain-dropdown>
+          <button
+            class:list={[
+              'flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium cursor-pointer border transition-colors',
+              isActiveDomain
+                ? `${domainColors.bg} ${domainColors.text} ${domainColors.border}`
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700',
+            ]}
+            data-domain-trigger
+          >
+            <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${DOMAIN_HEX[domain] || '#6b7280'}`}></span>
+            {domain}
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="hidden absolute z-30 mt-1 py-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 min-w-[200px] max-h-[300px] overflow-y-auto" data-domain-menu>
+            {caps.map(cap => (
+              <a
+                href={`/capabilities/${cap.slug}/`}
+                class:list={[
+                  'block px-3 py-1.5 text-sm transition-colors',
+                  currentSlug === cap.slug
+                    ? 'bg-blue-50 text-blue-700 font-medium dark:bg-blue-900/30 dark:text-blue-300'
+                    : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700',
+                ]}
+              >
+                <span class="font-mono text-xs text-gray-400 dark:text-gray-500 mr-1">{cap.id}</span>
+                {cap.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</nav>
+
+<script>
+  document.querySelectorAll('[data-domain-dropdown]').forEach(dropdown => {
+    const trigger = dropdown.querySelector('[data-domain-trigger]');
+    const menu = dropdown.querySelector('[data-domain-menu]');
+    if (!trigger || !menu) return;
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('[data-domain-menu]').forEach(m => {
+        if (m !== menu) m.classList.add('hidden');
+      });
+      menu.classList.toggle('hidden');
+    });
+
+    let timeout: ReturnType<typeof setTimeout>;
+    dropdown.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => menu.classList.add('hidden'), 200);
+    });
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('[data-domain-menu]').forEach(m => m.classList.add('hidden'));
+  });
+</script>

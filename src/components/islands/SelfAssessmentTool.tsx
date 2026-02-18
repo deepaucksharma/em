@@ -119,26 +119,23 @@ export default function SelfAssessmentTool() {
   }
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+    <div className="max-w-4xl mx-auto">
       {/* Progress bar */}
-      <div style={{ marginBottom: '24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '14px' }}>
-          <span style={{ color: '#6b7280' }}>{completedCount} of {totalCount} rated</span>
-          <span style={{ color: '#6b7280' }}>Average: {averageRating}</span>
+      <div className="mb-6">
+        <div className="flex justify-between mb-2 text-sm">
+          <span className="text-gray-500">{completedCount} of {totalCount} rated</span>
+          <span className="text-gray-500">Average: {averageRating}</span>
         </div>
-        <div style={{ height: '8px', backgroundColor: 'var(--sa-bar-bg, #e5e7eb)', borderRadius: '9999px', overflow: 'hidden' }}>
-          <div style={{
-            height: '100%',
-            width: `${(completedCount / totalCount) * 100}%`,
-            backgroundColor: '#3b82f6',
-            borderRadius: '9999px',
-            transition: 'width 0.3s ease',
-          }} />
+        <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-blue-500 rounded-full transition-all duration-300 ease-out"
+            style={{ width: `${(completedCount / totalCount) * 100}%` }}
+          />
         </div>
       </div>
 
       {/* Capability ratings */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
+      <div className="flex flex-col gap-2 mb-6">
         {capabilities.map(cap => {
           const assessment = assessmentMap.get(cap.id);
           const currentRating = ratings[cap.id];
@@ -146,57 +143,34 @@ export default function SelfAssessmentTool() {
           const domainColor = DOMAIN_COLORS[cap.domain] || '#6b7280';
 
           return (
-            <div key={cap.id} style={{
-              border: '1px solid var(--sa-border, #e5e7eb)',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              backgroundColor: 'var(--sa-card-bg, #fff)',
-            }} className="sa-card">
-              <div style={{ padding: '12px 16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                  <span style={{
-                    display: 'inline-block',
-                    width: '8px',
-                    height: '8px',
-                    borderRadius: '50%',
-                    backgroundColor: domainColor,
-                  }} />
-                  <span style={{ fontSize: '12px', color: '#9ca3af', fontFamily: 'monospace' }}>{cap.id}</span>
-                  <span style={{ fontWeight: 600, fontSize: '14px', color: 'var(--sa-text, #111827)' }}>{cap.name}</span>
+            <div key={cap.id} className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800">
+              <div className="px-4 py-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className="inline-block w-2 h-2 rounded-full shrink-0"
+                    style={{ backgroundColor: domainColor }}
+                  />
+                  <span className="text-xs text-gray-400 font-mono">{cap.id}</span>
+                  <span className="font-semibold text-sm text-gray-900 dark:text-white">{cap.name}</span>
                   <button
                     onClick={() => setExpandedCap(isExpanded ? null : cap.id)}
-                    style={{
-                      marginLeft: 'auto',
-                      fontSize: '12px',
-                      color: '#6b7280',
-                      background: 'none',
-                      border: 'none',
-                      cursor: 'pointer',
-                      padding: '2px 6px',
-                    }}
+                    className="ml-auto text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 bg-transparent border-none cursor-pointer px-1.5 py-0.5"
                   >
                     {isExpanded ? 'Hide guide' : 'Show guide'}
                   </button>
                 </div>
 
                 {/* Rating buttons */}
-                <div style={{ display: 'flex', gap: '4px' }}>
+                <div className="flex flex-wrap gap-1">
                   {[1, 2, 3, 4, 5].map(level => (
                     <button
                       key={level}
                       onClick={() => handleRate(cap.id, level)}
-                      style={{
-                        flex: 1,
-                        padding: '6px 4px',
-                        fontSize: '12px',
-                        fontWeight: currentRating === level ? 600 : 400,
-                        border: `1px solid ${currentRating === level ? '#3b82f6' : 'var(--sa-border, #e5e7eb)'}`,
-                        borderRadius: '6px',
-                        backgroundColor: currentRating === level ? '#3b82f6' : 'transparent',
-                        color: currentRating === level ? '#fff' : 'var(--sa-text-dim, #6b7280)',
-                        cursor: 'pointer',
-                        transition: 'all 0.15s ease',
-                      }}
+                      className={`flex-1 min-w-0 py-1.5 px-1 text-xs rounded-md border cursor-pointer transition-all duration-150 ${
+                        currentRating === level
+                          ? 'bg-blue-500 text-white border-blue-500 font-semibold'
+                          : 'bg-transparent text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600'
+                      }`}
                       title={LEVEL_LABELS[level]}
                     >
                       {level}
@@ -207,38 +181,27 @@ export default function SelfAssessmentTool() {
 
               {/* Expanded behavioral anchors */}
               {isExpanded && assessment && (
-                <div style={{
-                  padding: '12px 16px',
-                  borderTop: '1px solid var(--sa-border, #e5e7eb)',
-                  backgroundColor: 'var(--sa-expand-bg, #f9fafb)',
-                }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '13px' }}>
+                <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900">
+                  <div className="flex flex-col gap-1.5 text-[13px]">
                     {assessment.behavioralAnchors.map(anchor => (
-                      <div key={anchor.level} style={{
-                        display: 'flex',
-                        gap: '8px',
-                        padding: '4px 0',
-                        opacity: currentRating === anchor.level ? 1 : 0.7,
-                        fontWeight: currentRating === anchor.level ? 600 : 400,
-                      }}>
-                        <span style={{
-                          width: '20px',
-                          textAlign: 'center',
-                          color: currentRating === anchor.level ? '#3b82f6' : '#9ca3af',
-                          fontWeight: 600,
-                          shrink: 0,
-                        }}>{anchor.level}</span>
-                        <span style={{ color: 'var(--sa-text-dim, #6b7280)' }}>{anchor.description}</span>
+                      <div
+                        key={anchor.level}
+                        className={`flex gap-2 py-1 ${currentRating === anchor.level ? 'opacity-100 font-semibold' : 'opacity-70'}`}
+                      >
+                        <span className={`w-5 text-center shrink-0 font-semibold ${currentRating === anchor.level ? 'text-blue-500' : 'text-gray-400'}`}>
+                          {anchor.level}
+                        </span>
+                        <span className="text-gray-500 dark:text-gray-400">{anchor.description}</span>
                       </div>
                     ))}
                   </div>
 
                   {assessment.gapQuestions.length > 0 && (
-                    <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid var(--sa-border, #e5e7eb)' }}>
-                      <h5 style={{ fontSize: '12px', fontWeight: 600, color: 'var(--sa-text-dim, #6b7280)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Reflection Questions</h5>
-                      <ul style={{ fontSize: '13px', color: 'var(--sa-text-dim, #6b7280)', listStyle: 'disc', paddingLeft: '16px' }}>
+                    <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                      <h5 className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1.5 uppercase tracking-wider">Reflection Questions</h5>
+                      <ul className="text-[13px] text-gray-500 dark:text-gray-400 list-disc pl-4">
                         {assessment.gapQuestions.map((q, i) => (
-                          <li key={i} style={{ marginBottom: '4px' }}>{q}</li>
+                          <li key={i} className="mb-1">{q}</li>
                         ))}
                       </ul>
                     </div>
@@ -251,53 +214,32 @@ export default function SelfAssessmentTool() {
       </div>
 
       {/* Actions */}
-      <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', flexWrap: 'wrap' }}>
+      <div className="flex flex-wrap gap-2 mb-6">
         <button
           onClick={() => setShowResults(!showResults)}
           disabled={completedCount === 0}
-          style={{
-            padding: '8px 16px',
-            fontSize: '14px',
-            fontWeight: 500,
-            backgroundColor: completedCount > 0 ? '#3b82f6' : '#9ca3af',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: completedCount > 0 ? 'pointer' : 'not-allowed',
-          }}
+          className={`px-4 py-2 text-sm font-medium text-white rounded-lg ${
+            completedCount > 0
+              ? 'bg-blue-500 hover:bg-blue-600 cursor-pointer'
+              : 'bg-gray-400 cursor-not-allowed'
+          }`}
         >
           {showResults ? 'Hide Results' : 'View Results'}
         </button>
         <button
           onClick={handleExport}
           disabled={completedCount === 0}
-          style={{
-            padding: '8px 16px',
-            fontSize: '14px',
-            fontWeight: 500,
-            backgroundColor: 'transparent',
-            color: 'var(--sa-text, #374151)',
-            border: '1px solid var(--sa-border, #d1d5db)',
-            borderRadius: '8px',
-            cursor: completedCount > 0 ? 'pointer' : 'not-allowed',
-            opacity: completedCount > 0 ? 1 : 0.5,
-          }}
+          className={`px-4 py-2 text-sm font-medium bg-transparent text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg ${
+            completedCount > 0
+              ? 'hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer'
+              : 'opacity-50 cursor-not-allowed'
+          }`}
         >
           Export CSV
         </button>
         <button
           onClick={handleReset}
-          style={{
-            padding: '8px 16px',
-            fontSize: '14px',
-            fontWeight: 500,
-            backgroundColor: 'transparent',
-            color: '#ef4444',
-            border: '1px solid #fecaca',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            marginLeft: 'auto',
-          }}
+          className="px-4 py-2 text-sm font-medium text-red-500 border border-red-200 dark:border-red-800 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/20 cursor-pointer ml-auto"
         >
           Reset
         </button>
@@ -305,25 +247,14 @@ export default function SelfAssessmentTool() {
 
       {/* Results */}
       {showResults && completedCount > 0 && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="flex flex-col gap-4">
           {/* Strengths */}
           {strengths.length > 0 && (
-            <div style={{
-              padding: '16px',
-              borderRadius: '12px',
-              backgroundColor: 'var(--sa-green-bg, #f0fdf4)',
-              border: '1px solid var(--sa-green-border, #bbf7d0)',
-            }}>
-              <h3 style={{ fontSize: '14px', fontWeight: 600, color: '#16a34a', marginBottom: '8px' }}>Strengths (4-5)</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+            <div className="p-4 rounded-xl bg-green-50 dark:bg-green-950/10 border border-green-200 dark:border-green-800/20">
+              <h3 className="text-sm font-semibold text-green-600 dark:text-green-400 mb-2">Strengths (4-5)</h3>
+              <div className="flex flex-wrap gap-1.5">
                 {strengths.map(({ cap, rating }) => (
-                  <span key={cap.id} style={{
-                    padding: '4px 10px',
-                    fontSize: '13px',
-                    borderRadius: '9999px',
-                    backgroundColor: 'rgba(22, 163, 74, 0.1)',
-                    color: '#16a34a',
-                  }}>
+                  <span key={cap.id} className="px-2.5 py-1 text-xs rounded-full bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400">
                     {cap.id}: {cap.name} ({rating})
                   </span>
                 ))}
@@ -333,22 +264,11 @@ export default function SelfAssessmentTool() {
 
           {/* Gaps */}
           {gaps.length > 0 && (
-            <div style={{
-              padding: '16px',
-              borderRadius: '12px',
-              backgroundColor: 'var(--sa-red-bg, #fef2f2)',
-              border: '1px solid var(--sa-red-border, #fecaca)',
-            }}>
-              <h3 style={{ fontSize: '14px', fontWeight: 600, color: '#dc2626', marginBottom: '8px' }}>Growth Areas (1-2)</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+            <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/10 border border-red-200 dark:border-red-800/20">
+              <h3 className="text-sm font-semibold text-red-600 dark:text-red-400 mb-2">Growth Areas (1-2)</h3>
+              <div className="flex flex-wrap gap-1.5">
                 {gaps.map(({ cap, rating }) => (
-                  <span key={cap.id} style={{
-                    padding: '4px 10px',
-                    fontSize: '13px',
-                    borderRadius: '9999px',
-                    backgroundColor: 'rgba(220, 38, 38, 0.1)',
-                    color: '#dc2626',
-                  }}>
+                  <span key={cap.id} className="px-2.5 py-1 text-xs rounded-full bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-400">
                     {cap.id}: {cap.name} ({rating})
                   </span>
                 ))}
@@ -357,21 +277,6 @@ export default function SelfAssessmentTool() {
           )}
         </div>
       )}
-
-      <style>{`
-        .dark .sa-card {
-          --sa-card-bg: #1f2937;
-          --sa-border: #374151;
-          --sa-text: #f9fafb;
-          --sa-text-dim: #9ca3af;
-          --sa-expand-bg: #111827;
-          --sa-bar-bg: #374151;
-          --sa-green-bg: rgba(22, 163, 74, 0.1);
-          --sa-green-border: rgba(22, 163, 74, 0.2);
-          --sa-red-bg: rgba(220, 38, 38, 0.1);
-          --sa-red-border: rgba(220, 38, 38, 0.2);
-        }
-      `}</style>
     </div>
   );
 }

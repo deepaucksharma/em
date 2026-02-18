@@ -5,10 +5,31 @@ const navItems = [
   { label: 'Anti-Patterns', href: '/anti-patterns/' },
   { label: 'Playbooks', href: '/playbooks/' },
   { label: 'Rubric', href: '/rubric/' },
-  { label: 'About', href: '/about/' },
+];
+
+const developItems = [
+  { label: 'Learning Pathways', href: '/learning-pathways/' },
+  { label: 'Self-Assessment', href: '/self-assessment/' },
+  { label: 'Career Progression', href: '/career-progression/' },
+];
+
+const resourceItems = [
+  { label: 'Interview Questions', href: '/interview-questions/' },
+  { label: 'Org Maturity Model', href: '/org-maturity/' },
+  { label: 'Measurement Guide', href: '/measurement-guide/' },
+  { label: 'Calibration Signals', href: '/calibration/' },
+  { label: 'Evidence Guide', href: '/evidence-guide/' },
 ];
 
 const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  return currentPath === href || (href !== '/' && currentPath.startsWith(href));
+}
+
+function isDropdownActive(items: { href: string }[]) {
+  return items.some(item => isActive(item.href));
+}
 ---
 
 <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
@@ -27,7 +48,7 @@ const currentPath = Astro.url.pathname;
             href={item.href}
             class:list={[
               'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-              currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
+              isActive(item.href)
                 ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800',
             ]}
@@ -35,6 +56,84 @@ const currentPath = Astro.url.pathname;
             {item.label}
           </a>
         ))}
+
+        <!-- Develop dropdown -->
+        <div class="relative" data-dropdown>
+          <button
+            class:list={[
+              'px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1',
+              isDropdownActive(developItems)
+                ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800',
+            ]}
+            data-dropdown-trigger
+          >
+            Develop
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="hidden absolute top-full left-0 mt-1 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50" data-dropdown-menu>
+            {developItems.map(item => (
+              <a
+                href={item.href}
+                class:list={[
+                  'block px-4 py-2 text-sm transition-colors',
+                  isActive(item.href)
+                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                    : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700',
+                ]}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Resources dropdown -->
+        <div class="relative" data-dropdown>
+          <button
+            class:list={[
+              'px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1',
+              isDropdownActive(resourceItems)
+                ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800',
+            ]}
+            data-dropdown-trigger
+          >
+            Resources
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="hidden absolute top-full left-0 mt-1 w-52 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50" data-dropdown-menu>
+            {resourceItems.map(item => (
+              <a
+                href={item.href}
+                class:list={[
+                  'block px-4 py-2 text-sm transition-colors',
+                  isActive(item.href)
+                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                    : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700',
+                ]}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <a
+          href="/about/"
+          class:list={[
+            'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+            isActive('/about/')
+              ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800',
+          ]}
+        >
+          About
+        </a>
       </nav>
 
       <!-- Right side: search + theme toggle + mobile menu -->
@@ -42,14 +141,14 @@ const currentPath = Astro.url.pathname;
         <!-- Search trigger -->
         <button
           id="search-trigger"
-          class="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          class="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-400 dark:hover:border-blue-500 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors sm:min-w-[200px]"
           aria-label="Search"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <span class="hidden sm:inline">Search</span>
-          <kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-gray-700 rounded">⌘K</kbd>
+          <kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 text-xs bg-gray-200 dark:bg-gray-700 rounded ml-auto">⌘K</kbd>
         </button>
 
         <!-- Theme toggle -->
@@ -86,7 +185,7 @@ const currentPath = Astro.url.pathname;
           href={item.href}
           class:list={[
             'block px-3 py-2 rounded-lg text-sm font-medium',
-            currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
+            isActive(item.href)
               ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
               : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800',
           ]}
@@ -94,6 +193,45 @@ const currentPath = Astro.url.pathname;
           {item.label}
         </a>
       ))}
+      <div class="px-3 py-2 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-2">Develop</div>
+      {developItems.map(item => (
+        <a
+          href={item.href}
+          class:list={[
+            'block px-3 py-2 rounded-lg text-sm font-medium pl-6',
+            isActive(item.href)
+              ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+              : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="px-3 py-2 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-2">Resources</div>
+      {resourceItems.map(item => (
+        <a
+          href={item.href}
+          class:list={[
+            'block px-3 py-2 rounded-lg text-sm font-medium pl-6',
+            isActive(item.href)
+              ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+              : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="/about/"
+        class:list={[
+          'block px-3 py-2 rounded-lg text-sm font-medium mt-2',
+          isActive('/about/')
+            ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+            : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800',
+        ]}
+      >
+        About
+      </a>
     </nav>
   </div>
 </header>
@@ -111,5 +249,35 @@ const currentPath = Astro.url.pathname;
   const menu = document.getElementById('mobile-menu');
   menuBtn?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
+  });
+
+  // Dropdown menus
+  document.querySelectorAll('[data-dropdown]').forEach(dropdown => {
+    const trigger = dropdown.querySelector('[data-dropdown-trigger]');
+    const menu = dropdown.querySelector('[data-dropdown-menu]');
+    if (!trigger || !menu) return;
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Close other dropdowns
+      document.querySelectorAll('[data-dropdown-menu]').forEach(m => {
+        if (m !== menu) m.classList.add('hidden');
+      });
+      menu.classList.toggle('hidden');
+    });
+
+    // Close on mouse leave with delay
+    let timeout: ReturnType<typeof setTimeout>;
+    dropdown.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => menu.classList.add('hidden'), 200);
+    });
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+    });
+  });
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', () => {
+    document.querySelectorAll('[data-dropdown-menu]').forEach(m => m.classList.add('hidden'));
   });
 </script>
