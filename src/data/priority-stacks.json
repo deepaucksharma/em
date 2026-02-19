@@ -1,0 +1,36 @@
+{
+  "em": [
+    { "rank": 1, "metricId": "1.2", "dashboard": "main", "cadence": "weekly", "rationale": "Most actionable, causal, decomposable delivery metric. Fix the long pole and everything else improves." },
+    { "rank": 2, "metricId": "3.3", "dashboard": "main", "cadence": "weekly", "rationale": "The arbitration tool. Budget remaining → ship. Budget burned → freeze. Turns politics into math." },
+    { "rank": 3, "metricId": "5.4", "dashboard": "main", "cadence": "weekly", "rationale": "Often 40-60% of Lead Time. The #1 AI-era bottleneck — AI-generated PRs inflate review load. Biggest lever for LT improvement." },
+    { "rank": 4, "metricId": "1.4", "dashboard": "main", "cadence": "weekly", "rationale": "Quality counterweight to velocity. Without it, you might be shipping garbage fast." },
+    { "rank": 5, "metricId": "5.1", "dashboard": "main", "cadence": "quarterly", "rationale": "Only cheap, reliable leading indicator of attrition and velocity decline. 5 questions, 10 minutes." },
+    { "rank": 6, "metricId": "2.5", "dashboard": "main", "cadence": "per-sprint", "rationale": "Best proxy for predictability. 85%+ earns trust and autonomy." },
+    { "rank": 7, "metricId": "5.6", "dashboard": "team", "cadence": "monthly", "rationale": "Fastest path to burnout. Outsized impact on affected engineers." },
+    { "rank": 8, "metricId": "3.5", "dashboard": "main", "cadence": "monthly", "rationale": "Monthly reliability view. How often did we meet our targets?" },
+    { "rank": 9, "metricId": "1.3", "dashboard": "main", "cadence": "per-incident", "rationale": "Incident response effectiveness. Reactive but important." },
+    { "rank": 10, "metricId": "7.9", "dashboard": "team", "cadence": "quarterly", "rationale": "3-item Maslach survey. Leading indicator of everything going wrong." },
+    { "rank": 11, "metricId": "2.6", "dashboard": "drill-down", "cadence": "weekly", "rationale": "When LT/sprint accuracy are bad, locate dependency issues." },
+    { "rank": 12, "metricId": "5.9", "dashboard": "team", "cadence": "quarterly", "rationale": "The gap between perceived and measured AI benefit is the diagnostic. Too granular for top-8." },
+    { "rank": 13, "metricId": "4.3", "dashboard": "drill-down", "cadence": "monthly", "rationale": "When CFR is bad, check how often we undo releases." },
+    { "rank": 14, "metricId": "8.1", "dashboard": "team", "cadence": "quarterly", "rationale": "Tertiary — outcome orientation but the value is in the process, not the score." },
+    { "rank": 15, "metricId": "5.2", "dashboard": "drill-down", "cadence": "quarterly", "rationale": "Justify automation investment." }
+  ],
+  "director": [
+    { "rank": 1, "metricId": "7.1", "dashboard": "main", "cadence": "quarterly", "rationale": "Most expensive metric to get wrong. $200K-$500K+ per departure. Pattern analysis predicts the next one." },
+    { "rank": 2, "metricId": "3.5", "dashboard": "main", "cadence": "monthly", "rationale": "The org-level reliability scorecard. Which services are chronically unreliable? Where to invest?" },
+    { "rank": 3, "metricId": "5.1", "dashboard": "main", "cadence": "quarterly", "rationale": "Leading indicator for #1-ranked Attrition. Spot teams in trouble 6-12 months before departures confirm it." },
+    { "rank": 4, "metricId": "8.4", "dashboard": "qbr", "cadence": "quarterly", "rationale": "Where capacity goes. 15-20% protected for debt/platform is non-negotiable." },
+    { "rank": 5, "metricId": "5.9", "dashboard": "qbr", "cadence": "quarterly", "rationale": "Strategic AI bet. The gap between perceived and measured AI benefit predicts whether investment will help or hurt." },
+    { "rank": 6, "metricId": "8.2", "dashboard": "qbr", "cadence": "quarterly", "rationale": "How you justify the org's existence and defend headcount." },
+    { "rank": 7, "metricId": "3.3", "dashboard": "main", "cadence": "monthly", "rationale": "Are teams following the freeze/slowdown policy? If not, SLO compliance will degrade." },
+    { "rank": 8, "metricId": "1.2", "dashboard": "main", "cadence": "monthly", "rationale": "Find structural bottlenecks. Compare with archetype context." },
+    { "rank": 9, "metricId": "AI-4", "dashboard": "qbr", "cadence": "quarterly", "rationale": "Predicts whether AI investment will help or hurt." },
+    { "rank": 10, "metricId": "7.8", "dashboard": "main", "cadence": "quarterly", "rationale": "Macro canary. If <0, investigate immediately." },
+    { "rank": 11, "metricId": "10.1", "dashboard": "qbr", "cadence": "monthly", "rationale": "Efficiency at scale. The CFO metric." },
+    { "rank": 12, "metricId": "3.6", "dashboard": "main", "cadence": "monthly", "rationale": "Context for SLO compliance. Hot services." },
+    { "rank": 13, "metricId": "8.3", "dashboard": "planning", "cadence": "per-initiative", "rationale": "Mathematical prioritization for the portfolio." },
+    { "rank": 14, "metricId": "2.6", "dashboard": "drill-down", "cadence": "weekly", "rationale": "Team-level diagnostic for dependency issues. Not director-level strategic." },
+    { "rank": 15, "metricId": "8.1", "dashboard": "qbr", "cadence": "quarterly", "rationale": "Tertiary — cross-team alignment signal. Are OKRs driving behavior or sitting in a doc?" }
+  ]
+}

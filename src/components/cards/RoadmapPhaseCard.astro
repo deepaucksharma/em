@@ -1,0 +1,68 @@
+---
+import MetricCard from './MetricCard.astro';
+import type { RoadmapPhase, Metric } from '../../lib/data';
+import { getMetric } from '../../lib/data';
+import { getPhaseColors, getEffortColor } from '../../lib/metrics-colors';
+
+interface Props {
+  phase: RoadmapPhase;
+}
+
+const { phase } = Astro.props;
+
+const colors = getPhaseColors(phase.phase);
+
+const activatedMetrics = phase.metricsActivated
+  .map(id => getMetric(id))
+  .filter((m): m is Metric => !!m);
+---
+
+<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 overflow-hidden" id={`phase-${phase.phase}`}>
+  <!-- Phase header -->
+  <div class:list={['px-6 py-4 border-b', colors.border, colors.bg]}>
+    <div class="flex items-center gap-3">
+      <div class:list={['w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm', colors.dot]}>
+        {phase.phase}
+      </div>
+      <div>
+        <h3 class:list={['text-lg font-bold', colors.text]}>Phase {phase.phase}: {phase.name}</h3>
+        <span class="text-sm text-gray-500 dark:text-gray-400">{phase.duration}</span>
+      </div>
+    </div>
+    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">{phase.goal}</p>
+  </div>
+
+  <!-- Tasks -->
+  <div class="px-6 py-4">
+    <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Tasks</h4>
+    <div class="space-y-3">
+      {phase.tasks.map(task => (
+        <div class="rounded-lg border border-gray-100 dark:border-gray-700/50 p-3">
+          <div class="flex items-start justify-between gap-2">
+            <p class="text-sm text-gray-700 dark:text-gray-300 flex-1">{task.task}</p>
+            <span class:list={['badge text-[10px] shrink-0', getEffortColor(task.effort)]}>
+              {task.effort}
+            </span>
+          </div>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
+            <strong>Success:</strong> {task.successCriteria}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Activated metrics -->
+  {activatedMetrics.length > 0 && (
+    <div class="px-6 py-4 border-t border-gray-100 dark:border-gray-700/50">
+      <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        Metrics Activated ({activatedMetrics.length})
+      </h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {activatedMetrics.map(m => (
+          <MetricCard metric={m} compact />
+        ))}
+      </div>
+    </div>
+  )}
+</div>

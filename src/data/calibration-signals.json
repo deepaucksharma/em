@@ -1374,5 +1374,197 @@
     "signalText": "Interview quality culture: 'All interviewers complete shadow cycle before solo interviews. Monthly calibration reviews anonymized write-ups. Feedback rubric ensures evidence-based evaluations, not gut feel.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Interview Feedback Quality"
+  },
+  {
+    "id": "SIG-173",
+    "observableId": "C1-O3",
+    "capabilityId": "C1",
+    "signalText": "Observed during re-org: communicated rationale in team all-hands with empathy and clarity, answered hard questions directly, followed up individually with affected engineers within 24 hours.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Re-org Execution Quality"
+  },
+  {
+    "id": "SIG-174",
+    "observableId": "C3-O2",
+    "capabilityId": "C3",
+    "signalText": "Observed in design reviews: asks probing questions about coupling and blast radius, pushes back on designs that create cross-team dependencies, references team topology constraints in architectural decisions.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Design Review Quality"
+  },
+  {
+    "id": "SIG-175",
+    "observableId": "C4-O3",
+    "capabilityId": "C4",
+    "signalText": "Observed in sprint reviews: team consistently delivers within 10% of committed scope, EM flags risks early in standup rather than at sprint end, retro action items are tracked to completion.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Delivery Predictability"
+  },
+  {
+    "id": "SIG-176",
+    "observableId": "C5-O3",
+    "capabilityId": "C5",
+    "signalText": "Observed in cross-functional syncs: PM and Design actively seek EM's input on scope trade-offs, EM raises technical constraints without blocking, disagreements resolved constructively in the room.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Cross-Functional Collaboration Quality"
+  },
+  {
+    "id": "SIG-177",
+    "observableId": "C6-O2",
+    "capabilityId": "C6",
+    "signalText": "Observed in skip-levels: direct reports describe clear expectations and regular feedback from EM. EM addresses performance issues directly rather than routing around struggling engineers or reassigning their work silently.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Performance Conversation Quality"
+  },
+  {
+    "id": "SIG-178",
+    "observableId": "C7-O4",
+    "capabilityId": "C7",
+    "signalText": "Observed in exec reviews: delivers updates with appropriate altitude (business impact, not implementation detail), surfaces risks proactively with options rather than waiting to be asked, handles tough questions with composure.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Executive Communication Quality"
+  },
+  {
+    "id": "SIG-179",
+    "observableId": "C8-O1",
+    "capabilityId": "C8",
+    "signalText": "Observed during Sev1 incident: EM took command role calmly, established clear communication cadence, delegated investigation while managing stakeholder updates, ran structured post-mortem within 48 hours.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Incident Response Behavior"
+  },
+  {
+    "id": "SIG-180",
+    "observableId": "C9-O2",
+    "capabilityId": "C9",
+    "signalText": "Observed in team meetings: EM references DORA metrics and developer satisfaction data naturally in planning discussions, uses data to justify engineering investments rather than relying on anecdotes or gut feel.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Data Literacy in Practice"
+  },
+  {
+    "id": "SIG-181",
+    "observableId": "C11-O3",
+    "capabilityId": "C11",
+    "signalText": "Observed in interview debriefs: EM calibrates interviewers on evidence quality, pushes back on vague 'culture fit' signals, ensures structured scoring rubric is applied consistently across candidates.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Interview Process Rigor"
+  },
+  {
+    "id": "SIG-182",
+    "observableId": "C12-O3",
+    "capabilityId": "C12",
+    "signalText": "Observed in team meetings: diverse voices participate actively, EM facilitates equitably (draws out quieter members, time-boxes dominant speakers), async decision-making options provided for different working styles.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Inclusive Team Dynamics"
+  },
+  {
+    "id": "SIG-183",
+    "capabilityId": "C2",
+    "observableId": "C2-O1",
+    "signalType": "promo_packet",
+    "signalText": "Led quarterly planning that resulted in 30% reallocation of engineering investment toward highest-impact business priorities, documented with clear ROI analysis"
+  },
+  {
+    "id": "SIG-184",
+    "capabilityId": "C2",
+    "observableId": "C2-O1",
+    "signalType": "manager_observation",
+    "signalText": "Consistently produces planning artifacts that connect engineering work to business outcomes; stakeholders cite their planning process as a model for other teams"
+  },
+  {
+    "id": "SIG-185",
+    "capabilityId": "C2",
+    "observableId": "C2-O2",
+    "signalType": "peer_feedback",
+    "signalText": "When they say no, it never feels like a rejection \u2014 they show you exactly what you'd be trading off and help you make the call yourself"
+  },
+  {
+    "id": "SIG-186",
+    "capabilityId": "C2",
+    "observableId": "C2-O2",
+    "signalType": "promo_packet",
+    "signalText": "Deflected 5 out-of-scope requests in Q3 by presenting trade-off analyses that stakeholders described as 'the clearest prioritization communication they'd seen'"
+  },
+  {
+    "id": "SIG-187",
+    "capabilityId": "C2",
+    "observableId": "C2-O3",
+    "signalType": "manager_observation",
+    "signalText": "Distinguishes one-way door decisions from two-way door decisions and applies proportionate rigor; doesn't over-analyze reversible choices or under-analyze irreversible ones"
+  },
+  {
+    "id": "SIG-188",
+    "capabilityId": "C2",
+    "observableId": "C2-O3",
+    "signalType": "peer_feedback",
+    "signalText": "In ambiguous situations where other teams stall, they find a way to make meaningful progress by scoping down the decision and iterating"
+  },
+  {
+    "id": "SIG-189",
+    "capabilityId": "C2",
+    "observableId": "C2-O4",
+    "signalType": "promo_packet",
+    "signalText": "Challenged the team's assumption that a full rewrite was needed by applying first-principles analysis, resulting in a targeted migration that saved 3 months of engineering time"
+  },
+  {
+    "id": "SIG-190",
+    "capabilityId": "C2",
+    "observableId": "C2-O4",
+    "signalType": "manager_observation",
+    "signalText": "Regularly surfaces assumptions that others take as given; asks 'why do we believe this?' in a way that sharpens team thinking rather than undermining confidence"
+  },
+  {
+    "id": "SIG-191",
+    "capabilityId": "C13",
+    "observableId": "C13-O1",
+    "signalType": "metric",
+    "signalText": "Reduced security review bottleneck from 5 days to <1 day by embedding automated SAST/DAST scanning into CI pipeline, catching 85% of issues before human review"
+  },
+  {
+    "id": "SIG-192",
+    "capabilityId": "C13",
+    "observableId": "C13-O1",
+    "signalType": "promo_packet",
+    "signalText": "Designed and implemented security-by-default development workflow adopted by 3 teams, reducing post-deploy security findings by 60%"
+  },
+  {
+    "id": "SIG-193",
+    "capabilityId": "C13",
+    "observableId": "C13-O2",
+    "signalType": "metric",
+    "signalText": "Maintained P0 vulnerability patch velocity under 48 hours and P1 under 7 days for 4 consecutive quarters; zero SLA breaches on critical vulnerabilities"
+  },
+  {
+    "id": "SIG-194",
+    "capabilityId": "C13",
+    "observableId": "C13-O2",
+    "signalType": "manager_observation",
+    "signalText": "Treats vulnerability management as an ongoing practice, not a periodic exercise; team consistently patches within SLA without needing escalation"
+  },
+  {
+    "id": "SIG-195",
+    "capabilityId": "C13",
+    "observableId": "C13-O3",
+    "signalType": "peer_feedback",
+    "signalText": "Their access review process is thorough but not burdensome \u2014 they automated the quarterly review and elevated permissions expire automatically, so we rarely have stale access"
+  },
+  {
+    "id": "SIG-196",
+    "capabilityId": "C13",
+    "observableId": "C13-O3",
+    "signalType": "promo_packet",
+    "signalText": "Implemented automated access governance reducing over-privileged accounts by 70% and eliminating the quarterly manual access review burden for 200+ engineers"
+  },
+  {
+    "id": "SIG-197",
+    "capabilityId": "C13",
+    "observableId": "C13-O4",
+    "signalType": "metric",
+    "signalText": "Achieved continuous SOC2 compliance with automated evidence collection; audit prep time reduced from 6 weeks to 3 days"
+  },
+  {
+    "id": "SIG-198",
+    "capabilityId": "C13",
+    "observableId": "C13-O4",
+    "signalType": "peer_feedback",
+    "signalText": "Compliance used to be a dreaded annual exercise \u2014 now it runs continuously in the background and we barely notice it. That's entirely due to their leadership on automation"
   }
 ]

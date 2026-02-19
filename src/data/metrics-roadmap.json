@@ -1,0 +1,108 @@
+{
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Foundation",
+      "slug": "foundation",
+      "duration": "Months 1\u20133",
+      "goal": "Make delivery visible. Establish baseline habits.",
+      "tasks": [
+        { "task": "Instrument CI/CD for timestamps (merge \u2192 deploy)", "effort": "medium", "successCriteria": "EM can state team\u2019s median Lead Time and its stage breakdown" },
+        { "task": "Join deploy events with incident data", "effort": "medium", "successCriteria": "CFR calculated monthly; MTTR tracked per incident" },
+        { "task": "Set up weekly metrics review ritual", "effort": "low", "successCriteria": "Team reviews DORA trends bi-weekly; bottleneck identified" },
+        { "task": "Track sprint commitment vs completion", "effort": "low", "successCriteria": "3 sprints of data; team discusses accuracy in retro" },
+        { "task": "Run first DX survey (5 questions)", "effort": "low", "successCriteria": "Baseline score established; top 2 friction points identified" },
+        { "task": "Identify organizational archetype", "effort": "low", "successCriteria": "Team knows its archetype and appropriate interventions" }
+      ],
+      "metricsActivated": ["1.2", "1.1", "1.4", "1.3", "2.5", "5.1"],
+      "exitCriteria": "EM can answer: \u201cOur median Lead Time is X, with review wait as the long pole. CFR is Y%. Team satisfaction is Z/5.\u201d At least one concrete experiment run to improve the top bottleneck. Weekly/bi-weekly DORA review is happening."
+    },
+    {
+      "phase": 2,
+      "name": "Stabilization",
+      "slug": "stabilization",
+      "duration": "Months 4\u20136",
+      "goal": "Reliability becomes measurable. People metrics baseline established. Error budget policy active.",
+      "tasks": [
+        { "task": "Define SLIs for top 3 services", "effort": "medium", "successCriteria": "Each service has 1\u20132 user-centric SLIs; dashboarded" },
+        { "task": "Set SLO targets with product + SRE", "effort": "medium", "successCriteria": "SLO targets documented and agreed with PM" },
+        { "task": "Calculate and track error budget", "effort": "low", "successCriteria": "Error budget visible on dashboard; burn rate alerting active" },
+        { "task": "Draft and ratify error budget policy", "effort": "medium", "successCriteria": "Written policy: what happens at >50%, >75%, 100% budget consumed" },
+        { "task": "Classify all departures; code exit interviews", "effort": "low", "successCriteria": "Every departure classified; quarterly theme analysis" },
+        { "task": "Track on-call pages per rotation", "effort": "low", "successCriteria": "Per-rotation page count visible; outliers flagged" },
+        { "task": "Establish blocked work tracking", "effort": "low", "successCriteria": "\u201cBlocked\u201d status exists in workflow; tracked weekly" },
+        { "task": "Establish AI adoption baseline", "effort": "low", "successCriteria": "Know % team using AI; trust level; initial quality delta" },
+        { "task": "Baseline burnout risk index", "effort": "low", "successCriteria": "3 Maslach items added to DX survey; baseline established" },
+        { "task": "Set up AI-generated code security scanning", "effort": "medium", "successCriteria": "AI code detection integrated with security scanning pipeline" }
+      ],
+      "metricsActivated": ["3.1", "3.2", "3.3", "3.5", "7.1", "7.2", "5.6", "2.6", "3.6", "3.7", "5.4", "7.6", "7.7", "7.8", "5.9", "AI-1", "7.9", "9.4"],
+      "exitCriteria": "Error budget policy has been invoked at least once (freeze or slowdown triggered). Director can show SLO compliance across top services. Regrettable attrition classified; at least one pattern identified and action taken."
+    },
+    {
+      "phase": 3,
+      "name": "Optimization",
+      "slug": "optimization",
+      "duration": "Months 7\u201312",
+      "goal": "Business translation. Strategic portfolio view. Proactive people management.",
+      "tasks": [
+        { "task": "Tag all work items by category (feature/reliability/debt/security)", "effort": "medium", "successCriteria": "Quarterly investment mix report available" },
+        { "task": "Write outcome-oriented OKRs with measurable KRs", "effort": "medium", "successCriteria": "Max 3 objectives; all KRs measurable; quarterly scoring" },
+        { "task": "Partner with data science to attribute eng changes to business metrics", "effort": "high", "successCriteria": "At least 1 major eng investment attributed to $ impact" },
+        { "task": "Track toil systematically", "effort": "low", "successCriteria": "Team knows toil % and top source; automation investment justified" },
+        { "task": "Set vulnerability remediation SLAs", "effort": "medium", "successCriteria": "Critical <24hr, High <7d SLAs tracked and reported" },
+        { "task": "Benchmark DORA across teams", "effort": "medium", "successCriteria": "Director can compare LT/CFR across teams with context" },
+        { "task": "Establish AI quality monitoring", "effort": "medium", "successCriteria": "CFR and review time tracked separately for AI vs human PRs" },
+        { "task": "Complete AI readiness assessment", "effort": "low", "successCriteria": "Org scored on 7 DORA AI capabilities" },
+        { "task": "Apply CD3 for major initiatives", "effort": "medium", "successCriteria": "Used to sequence at least one planning cycle" }
+      ],
+      "metricsActivated": ["8.4", "8.1", "8.2", "5.2", "9.1", "4.3", "4.1", "4.2", "4.4", "5.3", "5.5", "5.7", "2.2", "2.1", "2.3", "2.4", "7.3", "7.4", "7.5", "8.5", "8.6", "AI-2", "AI-3", "AI-4", "10.5", "8.3"],
+      "exitCriteria": "Director presents QBR with: investment mix, business attribution, DORA benchmarks, SLO compliance, attrition analysis. \u201cEngineering generated $Xm in measurable business value this quarter.\u201d"
+    },
+    {
+      "phase": 4,
+      "name": "Excellence",
+      "slug": "excellence",
+      "duration": "Months 13+",
+      "goal": "Full portfolio view. Predictive analytics. Industry-leading efficiency.",
+      "tasks": [
+        { "task": "FinOps: cost attribution by service/team", "effort": "high", "successCriteria": "Cost per transaction trending and normalized for growth" },
+        { "task": "Platform adoption tracking", "effort": "medium", "successCriteria": ">80% of teams on standard platform" },
+        { "task": "Dependency currency automation", "effort": "medium", "successCriteria": ">80% of deps within 1 major version" },
+        { "task": "Compliance automation", "effort": "high", "successCriteria": ">90% of controls with automated evidence" },
+        { "task": "Cost of Delay modeling for major bets", "effort": "medium", "successCriteria": "Used to break ties in prioritization at least once per quarter" }
+      ],
+      "metricsActivated": ["10.1", "10.2", "10.3", "10.4", "5.8", "9.2", "9.3", "6.1", "6.2", "6.3", "6.4", "6.5"],
+      "exitCriteria": "Board-level narrative: \u201cEngineering efficiency improved X% (cost/transaction). We\u2019re [archetype] on DORA. Platform serves Nx users with <2x headcount. AI investment produces measured Y% improvement in Lead Time. Regrettable attrition is below industry benchmark. Technical debt allocation is protected at Z%.\u201d"
+    }
+  ],
+  "laws": [
+    {
+      "id": "L1",
+      "name": "The Decision Law",
+      "statement": "A metric that doesn\u2019t change a decision is decoration.",
+      "description": "Before adding any metric, answer: \u201cWhat will we do differently when this number moves?\u201d If you can\u2019t answer, don\u2019t track it.",
+      "example": "Lead Time > 7 days triggers: investigate review bottlenecks, check CI performance, audit dependency blocks. Each check leads to a specific action."
+    },
+    {
+      "id": "L2",
+      "name": "The Counterweight Law",
+      "statement": "A metric tracked without its counterweight creates perverse incentives.",
+      "description": "Speed needs a quality check. Satisfaction needs a delivery check. Reliability needs a velocity check. Every primary metric has a mandatory pair.",
+      "example": "Lead Time (speed) must always be paired with Change Failure Rate (quality). Reporting Lead Time improvement without CFR is incomplete at best, misleading at worst."
+    },
+    {
+      "id": "L3",
+      "name": "Goodhart\u2019s Law (Applied)",
+      "statement": "A metric used for individual evaluation destroys the system it measures.",
+      "description": "The moment commit counts appear in a performance review, commit counts become meaningless. System metrics measure systems, not people.",
+      "example": "Target: 80% test coverage. Result: Engineers write trivial tests for getters/setters to hit the number. The coverage metric looks great while critical business logic remains untested."
+    },
+    {
+      "id": "L4",
+      "name": "The Amplification Law",
+      "statement": "AI and automation amplify the character of the system they operate within.",
+      "description": "Healthy systems get healthier. Fragile systems break faster. Measure the system\u2019s readiness to absorb acceleration, not just the acceleration itself.",
+      "example": "Team with strong SLOs, good test coverage, and fast reviews adopts AI \u2192 Lead Time drops 30%. Team with tech debt, flaky tests, and overloaded reviewers adopts AI \u2192 CFR spikes, review backlog doubles, burnout accelerates."
+    }
+  ]
+}

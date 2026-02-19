@@ -1,0 +1,101 @@
+{
+  "dashboards": [
+    {
+      "id": "em",
+      "name": "EM Dashboard",
+      "slug": "em-dashboard",
+      "description": "Weekly dashboard for Engineering Managers focused on team-level delivery, reliability, and health signals. Role-level reference view; share only 3\u20135 key metrics with the team directly.",
+      "cadence": "weekly",
+      "sections": [
+        {
+          "name": "Delivery Health",
+          "position": "top-left",
+          "widgets": [
+            { "metricId": "1.2", "displayType": "trend-chart", "label": "Lead Time (median, by stage)" },
+            { "metricId": "1.4", "displayType": "gauge", "label": "Change Failure Rate" },
+            { "metricId": "2.5", "displayType": "progress-bar", "label": "Sprint Commitment Accuracy" },
+            { "metricId": "AI-3", "displayType": "score-card", "label": "AI vs Human Review Time" }
+          ]
+        },
+        {
+          "name": "Reliability Health",
+          "position": "top-right",
+          "widgets": [
+            { "metricId": "3.5", "displayType": "status-grid", "label": "SLO Status (per service)" },
+            { "metricId": "3.3", "displayType": "gauge", "label": "Error Budget Remaining + Burn Rate" }
+          ]
+        },
+        {
+          "name": "Team Health",
+          "position": "bottom-left",
+          "widgets": [
+            { "metricId": "5.1", "displayType": "score-card", "label": "DX Score (quarterly)" },
+            { "metricId": "5.6", "displayType": "bar-chart", "label": "On-Call Burden (last rotation)" },
+            { "metricId": "7.1", "displayType": "alert-indicator", "label": "Regrettable Attrition" },
+            { "metricId": "5.9", "displayType": "score-card", "label": "AI Tool Trust" },
+            { "metricId": "7.9", "displayType": "alert-indicator", "label": "Burnout Risk" }
+          ]
+        },
+        {
+          "name": "Actions This Sprint",
+          "position": "bottom-right",
+          "widgets": [
+            { "metricId": "5.4", "displayType": "task-list", "label": "Review SLA / Bottleneck Actions" },
+            { "metricId": "2.6", "displayType": "list", "label": "Currently Blocked Items" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "director",
+      "name": "Director Dashboard",
+      "slug": "director-dashboard",
+      "description": "Monthly/quarterly dashboard for Directors focused on org-level delivery, reliability, retention, and business outcomes.",
+      "cadence": "monthly",
+      "sections": [
+        {
+          "name": "Org Delivery & Reliability",
+          "position": "top-left",
+          "widgets": [
+            { "metricId": "1.2", "displayType": "distribution-chart", "label": "Lead Time Distribution (across teams)" },
+            { "metricId": "3.5", "displayType": "status-grid", "label": "SLO Compliance (Tier-1/Tier-2 services)" },
+            { "metricId": "3.6", "displayType": "heat-map", "label": "Incidents by Service & Severity" },
+            { "metricId": "3.7", "displayType": "progress-bar", "label": "Action Item Completion within SLA" }
+          ]
+        },
+        {
+          "name": "Org Health & Retention",
+          "position": "top-right",
+          "widgets": [
+            { "metricId": "7.1", "displayType": "trend-chart", "label": "Regrettable Attrition (annualized, with pattern)" },
+            { "metricId": "5.1", "displayType": "bar-chart", "label": "DX Score Trends (by team)" },
+            { "metricId": "7.8", "displayType": "gauge", "label": "eNPS (org-wide)" },
+            { "metricId": "7.9", "displayType": "alert-indicator", "label": "Burnout Risk Trends" }
+          ]
+        },
+        {
+          "name": "Business Outcomes",
+          "position": "bottom-left",
+          "widgets": [
+            { "metricId": "8.4", "displayType": "stacked-bar", "label": "Investment Mix (features/reliability/debt/security)" },
+            { "metricId": "8.1", "displayType": "progress-bar", "label": "OKR Achievement Rate" },
+            { "metricId": "8.2", "displayType": "score-card", "label": "Business Outcome Attribution" },
+            { "metricId": "10.1", "displayType": "trend-chart", "label": "Cost per Transaction (normalized)" },
+            { "metricId": "10.5", "displayType": "score-card", "label": "AI Tooling ROI" },
+            { "metricId": "AI-4", "displayType": "score-card", "label": "AI Readiness Score" }
+          ]
+        },
+        {
+          "name": "Top 3 Actions This Quarter (action tracker)",
+          "note": "Action items reference the same metrics shown above — tracks follow-through, not separate measurement.",
+          "position": "bottom-right",
+          "widgets": [
+            { "metricId": "3.7", "displayType": "task-list", "label": "Reliability Action Items" },
+            { "metricId": "8.1", "displayType": "list", "label": "At-Risk OKRs" },
+            { "metricId": "7.1", "displayType": "alert-indicator", "label": "Retention Risks" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+[
+  {
+    "id": "CL1",
+    "metricId": "1.2",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Lead Time improved from {previous} to {current} this sprint. The primary driver was {driver} — specifically, {detail}. We paired this with CFR at {cfr}, confirming speed gains aren't sacrificing quality.",
+    "variables": ["previous", "current", "driver", "detail", "cfr"],
+    "whenToUse": "Sprint retrospectives and team meetings when discussing delivery improvements",
+    "antiPattern": "Avoid: 'Lead Time is down 30%' without mentioning CFR. This invites the question 'at what cost to quality?'"
+  },
+  {
+    "id": "CL2",
+    "metricId": "1.2",
+    "role": "director",
+    "context": "qbr",
+    "template": "Across the org, median Lead Time is {median} with p90 at {p90}. {teamCount} of {totalTeams} teams are in the healthy range (< 1 day). The lagging teams share a common bottleneck: {bottleneck}. Recommended action: {action}.",
+    "variables": ["median", "p90", "teamCount", "totalTeams", "bottleneck", "action"],
+    "whenToUse": "Quarterly Business Reviews when presenting org-level delivery health",
+    "antiPattern": "Avoid: reporting only the median without distribution. One team at 30 minutes and another at 14 days averages to 7 days — which tells you nothing."
+  },
+  {
+    "id": "CL3",
+    "metricId": "1.4",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "CFR is at {rate} this sprint ({failures} failures out of {deploys} deployments). {trend} trend. Root causes: {rootCauses}. Mitigation: {mitigation}.",
+    "variables": ["rate", "failures", "deploys", "trend", "rootCauses", "mitigation"],
+    "whenToUse": "Sprint reviews when discussing quality alongside Lead Time",
+    "antiPattern": "Avoid: celebrating low CFR without mentioning deployment frequency. 0% CFR with 2 deploys/month is not an achievement."
+  },
+  {
+    "id": "CL4",
+    "metricId": "3.3",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Error budget burn rate is at {rate}x for {service}. At current rate, we'll exhaust budget in {daysRemaining} days. {action}: {detail}.",
+    "variables": ["rate", "service", "daysRemaining", "action", "detail"],
+    "whenToUse": "When error budget is burning faster than expected and team needs to discuss feature-vs-reliability trade-off",
+    "antiPattern": "Avoid: 'Error budget is fine' without quantifying burn rate. Fine today at 2x burn means crisis in 3 weeks."
+  },
+  {
+    "id": "CL5",
+    "metricId": "3.7",
+    "role": "director",
+    "context": "qbr",
+    "template": "Post-incident action item completion rate is {rate}. {openItems} items are overdue across {teams} teams. Top 3 overdue items: {items}. This directly impacts our repeat incident rate, which is currently {repeatRate}.",
+    "variables": ["rate", "openItems", "teams", "items", "repeatRate"],
+    "whenToUse": "QBRs when discussing reliability culture and follow-through",
+    "antiPattern": "Avoid: reporting completion rate without the repeat incident connection. High completion rate with rising incidents means you're completing the wrong actions."
+  },
+  {
+    "id": "CL6",
+    "metricId": "5.1",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "DX Score is {score}/5.0, {trend} from last quarter's {previous}. Top pain point: {painPoint}. Action taken: {action}. Expected impact: {impact}.",
+    "variables": ["score", "trend", "previous", "painPoint", "action", "impact"],
+    "whenToUse": "After quarterly DX survey results to communicate findings and planned improvements",
+    "antiPattern": "Avoid: sharing DX Score without action plan. Surveys without follow-up destroy response rates and trust."
+  },
+  {
+    "id": "CL7",
+    "metricId": "5.1",
+    "role": "director",
+    "context": "vp-report",
+    "template": "Org DX Score: {score}/5.0. {improvedTeams} teams improved, {declinedTeams} declined. The common factor in declining teams: {factor}. Investment proposal: {proposal} to address root cause.",
+    "variables": ["score", "improvedTeams", "declinedTeams", "factor", "proposal"],
+    "whenToUse": "VP-level reports to justify platform or tooling investments using DX data",
+    "antiPattern": "Avoid: using DX Score to rank teams competitively. This encourages gaming surveys rather than fixing actual developer experience."
+  },
+  {
+    "id": "CL8",
+    "metricId": "7.1",
+    "role": "em",
+    "context": "promo-packet",
+    "template": "Under {name}'s leadership, team regrettable attrition is {rate} (org average: {orgAvg}). Key retention actions: {actions}. Team DX Score: {dxScore}, {trend} trend.",
+    "variables": ["name", "rate", "orgAvg", "actions", "dxScore", "trend"],
+    "whenToUse": "Promotion packets to demonstrate people leadership impact",
+    "antiPattern": "Avoid: citing low attrition alone. Low attrition in a team that hasn't grown or that has low performers staying isn't impressive."
+  },
+  {
+    "id": "CL9",
+    "metricId": "7.1",
+    "role": "director",
+    "context": "qbr",
+    "template": "Regrettable attrition is at {rate} annualized ({count} departures this quarter). {classification}: {breakdown}. Compared to industry benchmark of {benchmark}. Risk areas: {risks}. Retention investments: {investments}.",
+    "variables": ["rate", "count", "classification", "breakdown", "benchmark", "risks", "investments"],
+    "whenToUse": "QBRs when presenting people and retention health to leadership",
+    "antiPattern": "Avoid: reporting total attrition without regrettable/non-regrettable split. Losing 5 underperformers is different from losing 2 architects."
+  },
+  {
+    "id": "CL10",
+    "metricId": "8.1",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "OKR {okrName} is at {progress}% with {weeksRemaining} weeks remaining. {status}: {detail}. Key risk: {risk}. Mitigation: {mitigation}.",
+    "variables": ["okrName", "progress", "weeksRemaining", "status", "detail", "risk", "mitigation"],
+    "whenToUse": "Sprint reviews for OKR progress updates, especially when at risk",
+    "antiPattern": "Avoid: 'OKR is on track' without quantified progress. Gut-feel assessments mask problems until it's too late."
+  },
+  {
+    "id": "CL11",
+    "metricId": "8.1",
+    "role": "director",
+    "context": "qbr",
+    "template": "Overall OKR achievement: {rate}%. {hitCount} of {totalCount} KRs achieved. Top achievements: {topWins}. Misses: {misses}. Pattern in misses: {pattern}. Adjustment for next quarter: {adjustment}.",
+    "variables": ["rate", "hitCount", "totalCount", "topWins", "misses", "pattern", "adjustment"],
+    "whenToUse": "End-of-quarter QBR to present OKR outcomes and learnings",
+    "antiPattern": "Avoid: 100% OKR achievement. This means goals weren't ambitious enough. Healthy range is 60-80% for stretch goals."
+  },
+  {
+    "id": "CL12",
+    "metricId": "8.2",
+    "role": "director",
+    "context": "board",
+    "template": "Engineering delivered {attributable}% of work with measurable business impact this quarter. Key outcomes: {outcomes}. Revenue impact: {revenue}. Cost savings: {savings}. Remaining {unattributable}% is infrastructure, reliability, and platform investments with indirect business value.",
+    "variables": ["attributable", "outcomes", "revenue", "savings", "unattributable"],
+    "whenToUse": "Board presentations to justify engineering investment and demonstrate business value",
+    "antiPattern": "Avoid: claiming all revenue growth is attributable to engineering. Be honest about what's measurable and what's indirect."
+  },
+  {
+    "id": "CL13",
+    "metricId": "8.4",
+    "role": "director",
+    "context": "budget",
+    "template": "Engineering capacity this quarter: {features}% features, {reliability}% reliability, {techDebt}% tech debt, {security}% security. This compares to {lastQuarter} and reflects {rationale}. Proposal: shift {amount}% from {from} to {to} because {reason}.",
+    "variables": ["features", "reliability", "techDebt", "security", "lastQuarter", "rationale", "amount", "from", "to", "reason"],
+    "whenToUse": "QBRs and budget planning to present engineering capacity allocation and propose shifts",
+    "antiPattern": "Avoid: presenting investment mix without a target allocation. Without a target, any mix looks fine."
+  },
+  {
+    "id": "CL14",
+    "metricId": "3.5",
+    "role": "director",
+    "context": "budget",
+    "template": "Our Tier-1 services met SLO {rate}% of the time this quarter. The {breachCount} breaches cost approximately ${impactCost} in {impactType}. Investing {investment} in {investmentDetail} would prevent an estimated {preventCount} of these.",
+    "variables": ["rate", "breachCount", "impactCost", "impactType", "investment", "investmentDetail", "preventCount"],
+    "whenToUse": "Budget discussions to justify reliability investment using SLO compliance data",
+    "antiPattern": "Avoid: '99.99% uptime' without SLI definition. Uptime without meaningful indicators is a vanity metric."
+  },
+  {
+    "id": "CL15",
+    "metricId": "1.2",
+    "role": "em",
+    "context": "promo-packet",
+    "template": "{name}'s team reduced Lead Time from {before} to {after} over {period}. Key changes: {changes}. CFR remained stable at {cfr}, confirming genuine improvement. This enabled {businessImpact}.",
+    "variables": ["name", "before", "after", "period", "changes", "cfr", "businessImpact"],
+    "whenToUse": "Promotion packets to demonstrate delivery improvement leadership",
+    "antiPattern": "Avoid: claiming Lead Time improvement without CFR stability evidence. Faster delivery that breaks things more isn't an improvement."
+  },
+  {
+    "id": "CL16",
+    "metricId": "10.1",
+    "role": "director",
+    "context": "budget",
+    "template": "Infrastructure cost per engineer: ${costPerEng}/month ({trend} from ${previous}). Cloud spend: ${cloudTotal}/month. Top cost drivers: {drivers}. Optimization opportunity: {opportunity} with estimated savings of ${savings}/month.",
+    "variables": ["costPerEng", "trend", "previous", "cloudTotal", "drivers", "opportunity", "savings"],
+    "whenToUse": "Budget reviews and cost optimization discussions",
+    "antiPattern": "Avoid: presenting total cloud spend without normalization. $500K/month means different things for a 50-person team vs. a 500-person org."
+  },
+  {
+    "id": "CL17",
+    "metricId": "9.1",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Security vulnerability SLA compliance: {rate}%. {overdue} items overdue. Critical/High status: {criticalStatus}. Top priority: {topPriority}.",
+    "variables": ["rate", "overdue", "criticalStatus", "topPriority"],
+    "whenToUse": "Sprint reviews when security work is part of the sprint commitment",
+    "antiPattern": "Avoid: treating security as 'someone else's problem'. Engineering owns remediation, security provides findings."
+  },
+  {
+    "id": "CL18",
+    "metricId": "2.5",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Sprint goal: {goalDescription}. Status: {hitOrMiss}. {rate}% commitment rate over last {sprintCount} sprints. {analysis}: {detail}.",
+    "variables": ["goalDescription", "hitOrMiss", "rate", "sprintCount", "analysis", "detail"],
+    "whenToUse": "Sprint retrospectives to discuss planning maturity and delivery predictability",
+    "antiPattern": "Avoid: tracking ticket completion instead of goal completion. Completing 90% of tickets but missing the sprint goal is a planning failure."
+  },
+  {
+    "id": "CL19",
+    "metricId": "2.6",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Blocked work rate: {rate}%. {count} items currently blocked. Top blockers: {blockers}. Cross-team dependencies: {dependencies}. Escalation status: {escalation}.",
+    "variables": ["rate", "count", "blockers", "dependencies", "escalation"],
+    "whenToUse": "Sprint reviews to surface dependency and architecture bottlenecks",
+    "antiPattern": "Avoid: accepting blocks as normal. High blocked rate should trigger architectural discussions, not just status updates."
+  },
+  {
+    "id": "CL20",
+    "metricId": "3.3",
+    "role": "director",
+    "context": "vp-report",
+    "template": "Error budget health across org: {healthyCount} services healthy, {warningCount} in warning, {criticalCount} critical. Services consuming budget fastest: {topBurners}. Recommended: {recommendations}.",
+    "variables": ["healthyCount", "warningCount", "criticalCount", "topBurners", "recommendations"],
+    "whenToUse": "VP reports on reliability trends requiring investment decisions",
+    "antiPattern": "Avoid: reporting only healthy services. Executives need to see the critical services that may require feature freeze."
+  },
+  {
+    "id": "CL21",
+    "metricId": "1.3",
+    "role": "em",
+    "context": "promo-packet",
+    "template": "Reduced MTTR from {before} to {after} through {investment}, protecting {businessValue}.",
+    "variables": ["before", "after", "investment", "businessValue"],
+    "whenToUse": "Promotion packets to demonstrate incident response improvement leadership",
+    "antiPattern": "Avoid: citing MTTR improvement without explaining the investment that drove it. Numbers without narrative are unconvincing."
+  },
+  {
+    "id": "CL22",
+    "metricId": "10.1",
+    "role": "director",
+    "context": "board",
+    "template": "Cost per {businessUnit} is ${cost}, {direction} {percentage}% {period} while {volumeMetric} grew {volumeGrowth}%.",
+    "variables": ["businessUnit", "cost", "direction", "percentage", "period", "volumeMetric", "volumeGrowth"],
+    "whenToUse": "Board presentations to demonstrate engineering cost efficiency at scale",
+    "antiPattern": "Avoid: reporting absolute cloud spend without normalization for growth. $500K/month means very different things at different scales."
+  },
+  {
+    "id": "CL23",
+    "metricId": "AI-1",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "AI-assisted PRs account for {aiRatio}% of team output. Review turnaround for AI PRs is {reviewMultiple}x human PRs. We're addressing this by {action}. CFR delta between AI and human PRs is {cfrDelta}%.",
+    "variables": ["aiRatio", "reviewMultiple", "action", "cfrDelta"],
+    "whenToUse": "Sprint reviews when discussing AI adoption impact on team delivery and quality",
+    "antiPattern": "Avoid: celebrating high AI PR ratio without quality and review time context. More AI PRs with rubber-stamp reviews is a quality risk, not a productivity gain."
+  },
+  {
+    "id": "CL24",
+    "metricId": "7.9",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "On-call burden reduced from {previousPages} pages/shift to {currentPages} through {investment}. Burnout risk index improved from {previousIndex} to {currentIndex}.",
+    "variables": ["previousPages", "currentPages", "investment", "previousIndex", "currentIndex"],
+    "whenToUse": "Sprint reviews when discussing team health improvements, especially after on-call or burnout-related investments",
+    "antiPattern": "Avoid: reporting burnout metrics without action plan. Measuring burnout and doing nothing about it is worse than not measuring."
+  },
+  {
+    "id": "CL25",
+    "metricId": "10.5",
+    "role": "director",
+    "context": "qbr",
+    "template": "AI tooling costs ${aiCostPerEng}/engineer/year. Measured impact: Lead Time {ltDirection}, CFR {cfrDirection}, DX trust score {trustScore}. We are {decision} investment because {rationale}.",
+    "variables": ["aiCostPerEng", "ltDirection", "cfrDirection", "trustScore", "decision", "rationale"],
+    "whenToUse": "QBRs when justifying or challenging AI tooling spend with measured delivery data",
+    "antiPattern": "Avoid: justifying AI spend with perception data ('80% of engineers say it helps'). Only measured delivery improvement counts."
+  },
+  {
+    "id": "CL26",
+    "metricId": "8.4",
+    "role": "director",
+    "context": "budget",
+    "template": "Technical debt currently consumes {debtPercent}% of engineering capacity (~${debtCost}/quarter in fully-loaded cost). Protecting {targetPercent}% allocation for remediation will return an estimated {hoursReturned} engineer-hours/quarter to feature work within {quarters} quarters.",
+    "variables": ["debtPercent", "debtCost", "targetPercent", "hoursReturned", "quarters"],
+    "whenToUse": "Budget discussions when arguing for protected debt remediation capacity using economic language",
+    "antiPattern": "Avoid: saying 'refactoring' or 'tech debt' to business stakeholders. Use 'reliability investment' or 'productivity enablement.'"
+  },
+  {
+    "id": "CL27",
+    "metricId": "8.2",
+    "role": "director",
+    "context": "qbr",
+    "template": "Engineering invested {engWeeks} eng-weeks in {project}, changing {technicalMetric} from {before} to {after}. Analytics shows {improvementPercent}% improvement in {businessMetric}, worth ~${annualValue} annually.",
+    "variables": ["engWeeks", "project", "technicalMetric", "before", "after", "improvementPercent", "businessMetric", "annualValue"],
+    "whenToUse": "QBRs when presenting specific engineering-to-business-outcome attribution",
+    "antiPattern": "Avoid: claiming topline revenue as engineering metric. Multi-causal — attribute specific investments to specific outcomes."
+  },
+  {
+    "id": "CL28",
+    "metricId": "8.4",
+    "role": "director",
+    "context": "qbr",
+    "template": "Capacity {quarter}: {features}% features, {reliability}% reliability, {debt}% debt, {security}% security. The {category} increase is a deliberate response to {issue} and will normalize to {targetPercent}% in {normalizeQuarter} as {condition} improves.",
+    "variables": ["quarter", "features", "reliability", "debt", "security", "category", "issue", "targetPercent", "normalizeQuarter", "condition"],
+    "whenToUse": "QBRs when presenting engineering investment mix and explaining deliberate allocation shifts",
+    "antiPattern": "Avoid: presenting investment mix without explaining intentional shifts. Every allocation change should have a stated reason and expected normalization timeline."
+  },
+  {
+    "id": "CL29",
+    "metricId": "1.3",
+    "role": "em",
+    "context": "incident-postmortem",
+    "template": "Incident summary: {serviceName} experienced {incidentType} for {duration}. Impact: {userImpact}. Root cause: {rootCause}. MTTR was {mttr} against our target of {mttrTarget}. What went well: {wentWell}. What we're fixing: {actions} with owners and deadlines assigned. Next review: {reviewDate}.",
+    "variables": ["serviceName", "incidentType", "duration", "userImpact", "rootCause", "mttr", "mttrTarget", "wentWell", "actions", "reviewDate"],
+    "whenToUse": "Post-incident communication to team and leadership. Separate detail level: full template for team, executive summary (first 2 sentences + actions) for leadership.",
+    "antiPattern": "Avoid: blame-oriented language. Focus on system failures, not individual mistakes. Never name individuals in the incident report."
+  },
+  {
+    "id": "CL30",
+    "metricId": "10.5",
+    "role": "director",
+    "context": "budget",
+    "template": "We're investing ${aiInvestment}/quarter in AI tooling across {teamCount} teams. Expected ROI: {expectedRoi}. Measurement plan: track Lead Time delta ({ltBaseline} → target {ltTarget}), CFR delta, and developer trust score over {measurementPeriod}. Decision point: if no measurable delivery improvement by {decisionDate}, we will {fallbackAction}.",
+    "variables": ["aiInvestment", "teamCount", "expectedRoi", "ltBaseline", "ltTarget", "measurementPeriod", "decisionDate", "fallbackAction"],
+    "whenToUse": "Budget discussions when making the business case for AI tooling investment with measurable success criteria",
+    "antiPattern": "Avoid: justifying AI investment with adoption numbers ('80% of engineers use it'). Adoption without delivery improvement is cost without benefit."
+  },
+  {
+    "id": "CL31",
+    "metricId": "AI-1",
+    "role": "director",
+    "context": "qbr",
+    "template": "AI adoption reached {adoptionRate}% of PRs but delivery metrics show {deliveryResult}. Root cause: {rootCause}. Specifically: Lead Time {ltDelta}, CFR {cfrDelta}, review turnaround {reviewDelta}. We're adjusting by {adjustment} and expect measurable improvement by {timeline}.",
+    "variables": ["adoptionRate", "deliveryResult", "rootCause", "ltDelta", "cfrDelta", "reviewDelta", "adjustment", "timeline"],
+    "whenToUse": "QBRs when AI adoption didn't deliver expected improvements and you need to communicate the pivot",
+    "antiPattern": "Avoid: hiding negative AI results. Transparency about what didn't work builds more credibility than false optimism."
+  },
+  {
+    "id": "CL32",
+    "metricId": "2.6",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Cross-org dependency on {dependencyTeam} is blocking {blockedItems} items, impacting {impactDescription}. We've been waiting {waitDays} days. Proposed resolution: {proposal}. Escalation needed: {escalationType}. If unresolved by {deadline}, fallback plan: {fallback}.",
+    "variables": ["dependencyTeam", "blockedItems", "impactDescription", "waitDays", "proposal", "escalationType", "deadline", "fallback"],
+    "whenToUse": "Sprint reviews and escalation meetings when cross-team dependencies are blocking delivery",
+    "antiPattern": "Avoid: framing as 'their fault.' Focus on the business impact of the delay and the specific resolution needed, not blame."
+  },
+  {
+    "id": "CL33",
+    "metricId": "7.1",
+    "role": "em",
+    "context": "1-on-1",
+    "template": "I want to discuss your performance trajectory. Here's what I'm seeing: {observation}. The gap between current state and expectations: {gap}. Specific examples: {examples}. What I need to see in the next {timeframe}: {expectations}. Support I'll provide: {support}. Let's check in on {checkInDate}.",
+    "variables": ["observation", "gap", "examples", "timeframe", "expectations", "support", "checkInDate"],
+    "whenToUse": "Difficult performance conversations that need clear framing — connecting individual performance to team metrics and retention health",
+    "antiPattern": "Avoid: vague feedback ('you need to step up'). Every concern must have specific examples and measurable improvement criteria."
+  },
+  {
+    "id": "CL34",
+    "metricId": "5.4",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Code review turnaround is {current} (target: {target}). {trend} from last sprint's {previous}. Reviews pending > {threshold}: {pendingCount}. Primary bottleneck: {bottleneck}. Action: {action}.",
+    "variables": ["current", "target", "trend", "previous", "threshold", "pendingCount", "bottleneck", "action"],
+    "whenToUse": "Sprint reviews when review turnaround is slowing delivery, especially with AI-inflated PR volumes",
+    "antiPattern": "Avoid: reporting average turnaround without distribution. One reviewer at 2 hours and another at 3 days averages to 1.5 days — which masks the bottleneck."
+  },
+  {
+    "id": "CL35",
+    "metricId": "5.6",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "On-call burden this rotation: {pagesPerShift} pages/shift ({trend} from {previous}). {afterHoursPercent}% after-hours. Top alert sources: {alertSources}. Signal-to-noise ratio: {snr}%. Action: {action}.",
+    "variables": ["pagesPerShift", "trend", "previous", "afterHoursPercent", "alertSources", "snr", "action"],
+    "whenToUse": "Sprint reviews when discussing operational load and its impact on team capacity and wellbeing",
+    "antiPattern": "Avoid: reporting page count without severity and time-of-day breakdown. 10 low-severity daytime alerts ≠ 3 critical 3am pages in terms of team impact."
+  },
+  {
+    "id": "CL36",
+    "metricId": "7.9",
+    "role": "em",
+    "context": "sprint-review",
+    "template": "Burnout risk index: {current} ({trend} from {previous}). Key drivers: {drivers}. {atRiskCount} team members in elevated risk zone. Interventions taken: {interventions}. Expected improvement timeline: {timeline}.",
+    "variables": ["current", "trend", "previous", "drivers", "atRiskCount", "interventions", "timeline"],
+    "whenToUse": "Sprint reviews when burnout indicators are rising, especially after sustained high-intensity periods or on-call burden increases",
+    "antiPattern": "Avoid: sharing burnout data without concrete interventions. Measuring burnout and doing nothing about it erodes trust faster than not measuring at all."
+  },
+  {
+    "id": "CL37",
+    "metricId": "5.9",
+    "role": "director",
+    "context": "qbr",
+    "template": "AI Trust Score across org: {score}. {adoptionRate}% adoption with {trustGap} perception-vs-measurement gap. Teams where trust aligns with delivery improvement: {alignedTeams}. Teams with trust gap > {gapThreshold}: {gapTeams}. Recommendation: {recommendation}.",
+    "variables": ["score", "adoptionRate", "trustGap", "alignedTeams", "gapThreshold", "gapTeams", "recommendation"],
+    "whenToUse": "QBRs when presenting AI adoption health and deciding whether to expand, pause, or adjust AI tooling investment",
+    "antiPattern": "Avoid: reporting adoption rate without trust score. High adoption with low trust means engineers are using AI tools reluctantly — gains won't sustain."
+  },
+  {
+    "id": "CL38",
+    "metricId": "AI-4",
+    "role": "director",
+    "context": "qbr",
+    "template": "AI Readiness Score: {score}/7 capabilities mature. Strengths: {strengths}. Gaps: {gaps}. Before expanding AI adoption, prerequisite investments needed: {prerequisites}. Timeline to readiness: {timeline}. Risk if we skip prerequisites: {risk}.",
+    "variables": ["score", "strengths", "gaps", "prerequisites", "timeline", "risk"],
+    "whenToUse": "QBRs when evaluating organizational readiness for AI adoption expansion, or when AI adoption isn't delivering expected improvements",
+    "antiPattern": "Avoid: expanding AI adoption without readiness assessment. Teams with weak testing, slow reviews, and high tech debt will see AI amplify problems, not solve them."
+  }
+]

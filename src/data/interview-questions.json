@@ -1307,5 +1307,341 @@
       "Pushes the manager to put people on PIPs without coaching them on how",
       "No consideration of whether the underperformance is a management failure rather than an individual one"
     ]
+  },
+  {
+    "id": "IQ-57",
+    "capabilityId": "C1",
+    "level": "em",
+    "question": "Tell me about a time you identified a misalignment between your team's work and the broader org strategy. What did you do?",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you discover the misalignment?",
+      "What was the reaction when you raised it?",
+      "How did you get buy-in for realigning?"
+    ],
+    "lookFor": [
+      "Proactively monitors strategic alignment, not just executes",
+      "Uses data to surface misalignment rather than opinion",
+      "Navigates organizational dynamics to drive change",
+      "Shows outcome of realignment effort"
+    ],
+    "redFlags": [
+      "Only notices misalignment when told",
+      "Complains about strategy but doesn't act",
+      "Can't articulate the org strategy clearly",
+      "Waits for someone else to fix it"
+    ]
+  },
+  {
+    "id": "IQ-58",
+    "capabilityId": "C1",
+    "level": "director",
+    "question": "How do you develop and communicate a multi-year technical strategy for your organization? Walk me through your process.",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you balance near-term delivery with long-term bets?",
+      "How do you get input from your EMs and staff engineers?",
+      "How do you know if your strategy is working?"
+    ],
+    "lookFor": [
+      "Structured process connecting business context to technical direction",
+      "Involves multiple stakeholders in strategy creation",
+      "Has concrete mechanisms to evaluate strategic progress",
+      "Can articulate trade-offs in strategic choices"
+    ],
+    "redFlags": [
+      "Strategy is just a list of projects",
+      "No feedback loops to evaluate strategy",
+      "Delegates strategy entirely to staff engineers",
+      "Can't explain how strategy connects to business outcomes"
+    ]
+  },
+  {
+    "id": "IQ-59",
+    "capabilityId": "C1",
+    "level": "em",
+    "question": "Describe a situation where you had to make a significant organizational change to your team structure. What drove the decision and how did you execute it?",
+    "questionType": "situational",
+    "followUps": [
+      "How did you evaluate the trade-offs of different structures?",
+      "How did you communicate the change to your team?",
+      "What happened in the first 90 days after the change?"
+    ],
+    "lookFor": [
+      "Data-driven reasoning for org changes",
+      "Considers impact on people, not just efficiency",
+      "Has a communication plan for the change",
+      "Monitors outcomes and adjusts"
+    ],
+    "redFlags": [
+      "Re-orgs for the sake of re-orgs",
+      "Doesn't consider team morale in structural decisions",
+      "No measurement of whether the change worked",
+      "Copies org structure from previous company without adapting"
+    ]
+  },
+  {
+    "id": "IQ-60",
+    "capabilityId": "C1",
+    "level": "director",
+    "question": "Tell me about a time you had to wind down or divest a significant engineering investment. How did you approach it?",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you decide what to stop vs. continue?",
+      "How did you handle the team members affected?",
+      "What did you learn about managing divestiture?"
+    ],
+    "lookFor": [
+      "Frames divestiture as strategic, not failure",
+      "Has a systematic approach to evaluating investments",
+      "Prioritizes people through transitions",
+      "Documents learnings for future decisions"
+    ],
+    "redFlags": [
+      "Avoids hard decisions about stopping work",
+      "Treats shutting down projects as purely mechanical",
+      "No empathy for affected team members",
+      "Can't explain the strategic rationale"
+    ]
+  },
+  {
+    "id": "IQ-61",
+    "capabilityId": "C5",
+    "level": "em",
+    "question": "Tell me about a time you had to influence a decision where you had no formal authority. What was your approach?",
+    "questionType": "behavioral",
+    "followUps": [
+      "What made this situation particularly challenging?",
+      "How did you build credibility with the stakeholders?",
+      "What would you do differently?"
+    ],
+    "lookFor": [
+      "Builds relationships before needing them",
+      "Uses data and framing rather than positional power",
+      "Understands stakeholder motivations",
+      "Achieves outcomes through persuasion not escalation"
+    ],
+    "redFlags": [
+      "Defaults to escalation when disagreed with",
+      "Can't adapt communication style to audience",
+      "Views cross-functional partners as adversaries",
+      "Only example involves their direct manager"
+    ]
+  },
+  {
+    "id": "IQ-62",
+    "capabilityId": "C5",
+    "level": "director",
+    "question": "How do you manage relationships with multiple senior stakeholders who have competing priorities? Give me a specific example.",
+    "questionType": "situational",
+    "followUps": [
+      "How did you navigate the conflicting priorities?",
+      "What was your communication strategy with each stakeholder?",
+      "How did you reach resolution?"
+    ],
+    "lookFor": [
+      "Maps stakeholder landscape proactively",
+      "Transparent about trade-offs with all parties",
+      "Creates win-win frames where possible",
+      "Maintains trust even when delivering bad news"
+    ],
+    "redFlags": [
+      "Tells each stakeholder what they want to hear",
+      "Avoids conflict between stakeholders",
+      "Always sides with the loudest voice",
+      "No systematic approach to stakeholder management"
+    ]
+  },
+  {
+    "id": "IQ-63",
+    "capabilityId": "C5",
+    "level": "em",
+    "question": "Describe a situation where a cross-functional initiative stalled. How did you unblock it?",
+    "questionType": "behavioral",
+    "followUps": [
+      "What was the root cause of the stall?",
+      "How did you identify who could unblock it?",
+      "What systems did you put in place to prevent recurrence?"
+    ],
+    "lookFor": [
+      "Diagnoses root cause rather than symptoms",
+      "Takes ownership even when not the DRI",
+      "Creates accountability structures",
+      "Builds momentum through small wins"
+    ],
+    "redFlags": [
+      "Waits for someone else to fix cross-team problems",
+      "Blames other teams without self-reflection",
+      "No follow-through on process improvements",
+      "Escalates immediately without attempting direct resolution"
+    ]
+  },
+  {
+    "id": "IQ-64",
+    "capabilityId": "C5",
+    "level": "director",
+    "question": "How do you build and maintain executive-level relationships that your engineering org depends on? What does that look like day-to-day?",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you decide which relationships to invest in?",
+      "How do you handle a relationship that has deteriorated?",
+      "How do you scale this as your org grows?"
+    ],
+    "lookFor": [
+      "Strategic about relationship investments",
+      "Maintains relationships proactively, not reactively",
+      "Creates value for partners, not just extracts it",
+      "Has specific routines for relationship maintenance"
+    ],
+    "redFlags": [
+      "Only builds relationships when they need something",
+      "Delegates all stakeholder relationships to their reports",
+      "Can't name specific actions they take to maintain relationships",
+      "Views relationship-building as political rather than essential"
+    ]
+  },
+  {
+    "id": "IQ-65",
+    "capabilityId": "C6",
+    "level": "em",
+    "question": "Tell me about a direct report who was struggling. How did you coach them and what was the outcome?",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you diagnose what was going wrong?",
+      "What specific coaching interventions did you use?",
+      "At what point would you have escalated to a PIP?"
+    ],
+    "lookFor": [
+      "Diagnoses root cause (skill gap vs. motivation vs. role fit)",
+      "Uses specific coaching techniques, not just 'talked to them'",
+      "Sets clear expectations and timelines",
+      "Shows genuine investment in the person's growth"
+    ],
+    "redFlags": [
+      "Jumps to PIP without coaching first",
+      "Vague about what coaching looked like",
+      "Avoids difficult conversations",
+      "No clear timeline or success criteria"
+    ]
+  },
+  {
+    "id": "IQ-66",
+    "capabilityId": "C6",
+    "level": "director",
+    "question": "How do you develop succession plans for critical roles in your organization? Walk me through your approach.",
+    "questionType": "situational",
+    "followUps": [
+      "How do you identify high-potential leaders?",
+      "What development opportunities do you create?",
+      "How do you handle when a succession plan falls apart?"
+    ],
+    "lookFor": [
+      "Systematic approach to identifying and developing successors",
+      "Creates stretch opportunities deliberately",
+      "Plans for multiple scenarios",
+      "Has actually had succession plans activate successfully"
+    ],
+    "redFlags": [
+      "No succession planning at all",
+      "Only identifies one successor per role",
+      "Hoards talent rather than developing it",
+      "Succession plan exists on paper but isn't actionable"
+    ]
+  },
+  {
+    "id": "IQ-67",
+    "capabilityId": "C4",
+    "level": "em",
+    "question": "Your team's sprint completion rate has dropped to 50% over the past quarter. Walk me through how you'd diagnose and fix this.",
+    "questionType": "situational",
+    "followUps": [
+      "What data would you look at first?",
+      "How would you distinguish between estimation problems vs. interrupt problems?",
+      "How would you rebuild stakeholder trust?"
+    ],
+    "lookFor": [
+      "Systematic diagnosis before solutioning",
+      "Considers multiple root causes",
+      "Has practical techniques for improving predictability",
+      "Addresses both the delivery problem and the trust problem"
+    ],
+    "redFlags": [
+      "Immediately adds more process",
+      "Blames the team for bad estimates",
+      "Commits to aggressive recovery targets",
+      "Doesn't address the stakeholder communication aspect"
+    ]
+  },
+  {
+    "id": "IQ-68",
+    "capabilityId": "C4",
+    "level": "director",
+    "question": "How do you establish consistent operating cadences across multiple teams while allowing for team-level autonomy? Give me a concrete example.",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you decide what to standardize vs. leave flexible?",
+      "How do you handle a team that resists your operating model?",
+      "How do you know if your cadence is working?"
+    ],
+    "lookFor": [
+      "Balances consistency with autonomy",
+      "Has clear principles for what to standardize",
+      "Measures operational health, not just compliance",
+      "Adapts cadence to team maturity"
+    ],
+    "redFlags": [
+      "One-size-fits-all approach",
+      "Measures process compliance rather than outcomes",
+      "Can't articulate why standardization is needed",
+      "Forces their previous company's model on teams"
+    ]
+  },
+  {
+    "id": "IQ-69",
+    "capabilityId": "C3",
+    "level": "em",
+    "question": "Tell me about a time your team accumulated significant technical debt. How did you make it visible and get investment to address it?",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you quantify the impact of the debt?",
+      "How did you prioritize which debt to pay down?",
+      "How did you balance debt work with feature delivery?"
+    ],
+    "lookFor": [
+      "Quantifies tech debt impact in business terms",
+      "Has a framework for prioritizing debt",
+      "Negotiates debt investment as part of planning",
+      "Tracks debt reduction progress"
+    ],
+    "redFlags": [
+      "Can't explain tech debt to non-technical stakeholders",
+      "Treats all debt as equally important",
+      "Either ignores debt entirely or stops feature work to fix it",
+      "No system for preventing new debt accumulation"
+    ]
+  },
+  {
+    "id": "IQ-70",
+    "capabilityId": "C3",
+    "level": "director",
+    "question": "How do you evaluate build vs. buy vs. adopt decisions for significant platform investments? Walk me through a recent example.",
+    "questionType": "situational",
+    "followUps": [
+      "What criteria did you use?",
+      "How did you account for total cost of ownership?",
+      "How did you manage the organizational change aspect?"
+    ],
+    "lookFor": [
+      "Structured evaluation framework",
+      "Considers TCO not just initial cost",
+      "Involves engineering team in evaluation",
+      "Plans for migration and adoption, not just selection"
+    ],
+    "redFlags": [
+      "Always builds when buying would be better (or vice versa)",
+      "Doesn't consider maintenance and operational costs",
+      "Makes technology decisions unilaterally",
+      "No evaluation of alternatives"
+    ]
   }
 ]

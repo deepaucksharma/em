@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import TierBadge from '../../components/ui/TierBadge.astro';
+import MetricCard from '../../components/cards/MetricCard.astro';
+import MetricPairCard from '../../components/cards/MetricPairCard.astro';
+import DiagnosticChainCard from '../../components/cards/DiagnosticChainCard.astro';
+import CalibrationLanguageCard from '../../components/cards/CalibrationLanguageCard.astro';
+import CapabilityCard from '../../components/cards/CapabilityCard.astro';
+import MetricsSidebar from '../../components/ui/MetricsSidebar.astro';
+import {
+  metrics,
+  getMetric,
+  getMetricPairForMetric,
+  getDiagnosticChainsForMetric,
+  getCalibrationLanguageForMetric,
+  getCapability,
+  getRelatedMetrics,
+  metricsRoadmap,
+} from '../../lib/data';
+import type { Metric, Capability } from '../../lib/data';
+
+export function getStaticPaths() {
+  return metrics.map(m => ({
+    params: { slug: m.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const metric = getMetric(slug!)!;
+
+const pair = getMetricPairForMetric(metric.id);
+const chains = getDiagnosticChainsForMetric(metric.id);
+const calLang = getCalibrationLanguageForMetric(metric.id);
+
+const relatedCapabilities = metric.capabilityIds
+  .map(id => getCapability(id))
+  .filter((c): c is Capability => !!c);
+
+const relatedMetrics = getRelatedMetrics(metric.id);
+
+// Prerequisites based on maturity phase
+const prerequisites: string[] = [];
+if (metric.maturityPhase >= 2) {
+  const phase1Metrics = metricsRoadmap.find(p => p.phase === 1);
+  if (phase1Metrics) {
+    prerequisites.push('Phase 1 foundation metrics are tracked and habitual');
+  }
+}
+if (metric.category === 'Reliability' && metric.id !== '3.1' && metric.id !== '3.2') {
+  prerequisites.push('SLIs defined per service (3.1)');
+  prerequisites.push('SLO targets set and agreed upon (3.2)');
+}
+if (metric.id === '3.3') {
+  prerequisites.push('SLOs defined per service (3.5)');
+  prerequisites.push('SLIs instrumented with monitoring (3.1, 3.2)');
+  prerequisites.push('Incident tracking active');
+}
+if (metric.id === '8.4') {
+  prerequisites.push('Work categorization system (features, reliability, debt, security)');
+  prerequisites.push('Time tracking or capacity allocation process');
+}
+if (metric.id === '7.1') {
+  prerequisites.push('HR classification of departures as regrettable/non-regrettable');
+  prerequisites.push('Exit interview process with coded themes');
+}
+
+const typeClass = `badge-type-${metric.type}`;
+
+const categoryColors: Record<string, string> = {
+  DORA: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
+  Flow: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300',
+  Reliability: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300',
+  Quality: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
+  DevEx: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300',
+  Activity: 'bg-gray-100 text-gray-600 dark:bg-gray-700/50 dark:text-gray-400',
+  People: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+  Strategy: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
+  Security: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300',
+  Cost: 'bg-slate-100 text-slate-700 dark:bg-slate-700/50 dark:text-slate-300',
+  'AI-Era': 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
+};
+
+const showPerRoleTiers = metric.emTier && metric.directorTier && metric.emTier !== metric.directorTier;
+
+const tierLabels: Record<string, string> = {
+  primary: 'Primary',
+  secondary: 'Secondary',
+  tertiary: 'Tertiary',
+  diagnostic: 'Diagnostic',
+  structural: 'Structural',
+  inferior: 'Inferior',
+};
+---
+
+<BaseLayout title={`${metric.id}: ${metric.name}`} description={metric.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex gap-8">
+      <MetricsSidebar currentSlug={metric.slug} />
+
+      <div class="flex-1 min-w-0">
+        <Breadcrumb items={[
+          { label: 'Metrics', href: '/metrics/' },
+          { label: `${metric.id}: ${metric.name}` },
+        ]} />
+
+        <!-- Header -->
+        <div class="mb-8">
+          <div class="flex items-center gap-3 mb-3 flex-wrap">
+            <TierBadge tier={metric.tier} />
+            <span class:list={['badge', typeClass]}>{metric.type}</span>
+            <span class:list={['badge', categoryColors[metric.category] || categoryColors.Quality]}>{metric.category}</span>
+            <span class="text-sm font-mono text-gray-400 dark:text-gray-500">{metric.id}</span>
+          </div>
+          <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+            {metric.name}
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">{metric.description}</p>
+          {metric.decisionRule && (
+            <div class="rounded-xl border-2 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-4">
+              <div class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                </svg>
+                <div>
+                  <span class="text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">Decision Rule</span>
+                  <p class="text-sm text-amber-900 dark:text-amber-200 mt-1">{metric.decisionRule}</p>
+                </div>
+              </div>
+            </div>
+          )}
+          {showPerRoleTiers && (
+            <div class="flex items-center gap-3 mt-3">
+              {metric.emTier && (
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 dark:text-gray-400">
+                  EM: <span class:list={['badge text-[10px]', `badge-tier-${metric.emTier}`]}>{tierLabels[metric.emTier] || metric.emTier}</span>
+                </span>
+              )}
+              {metric.directorTier && (
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 dark:text-gray-400">
+                  Director: <span class:list={['badge text-[10px]', `badge-tier-${metric.directorTier}`]}>{tierLabels[metric.directorTier] || metric.directorTier}</span>
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+
+        <!-- Why This Tier -->
+        {metric.whyThisTier && (
+          <section class="mb-10">
+            <h2 class="section-heading">Why This Tier</h2>
+            <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-5">
+              <p class="text-sm text-gray-700 dark:text-gray-300">{metric.whyThisTier}</p>
+              {metric.replaces && (
+                <div class="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                  <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Replaces: </span>
+                  <span class="text-xs text-red-600 dark:text-red-400 line-through">{metric.replaces}</span>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        <!-- AI-Era Impact -->
+        {metric.aiEraImpact && (
+          <section class="mb-10">
+            <h2 class="section-heading">AI-Era Impact</h2>
+            <div class="rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-950/20 p-5">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-violet-500 dark:text-violet-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                </svg>
+                <p class="text-sm text-violet-800 dark:text-violet-200">{metric.aiEraImpact}</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <!-- Measurement Ranges -->
+        <section class="mb-10">
+          <h2 class="section-heading">Measurement Guidance</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="rounded-xl border border-green-200 dark:border-green-800 p-4 bg-green-50 dark:bg-green-950/20">
+              <h3 class="text-sm font-semibold text-green-600 dark:text-green-400 mb-2">Good</h3>
+              <p class="text-sm text-green-700 dark:text-green-300 font-medium">{metric.goodRange}</p>
+            </div>
+            <div class="rounded-xl border border-amber-200 dark:border-amber-800 p-4 bg-amber-50 dark:bg-amber-950/20">
+              <h3 class="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-2">Warning</h3>
+              <p class="text-sm text-amber-700 dark:text-amber-300 font-medium">{metric.warningRange}</p>
+            </div>
+            <div class="rounded-xl border border-red-200 dark:border-red-800 p-4 bg-red-50 dark:bg-red-950/20">
+              <h3 class="text-sm font-semibold text-red-600 dark:text-red-400 mb-2">Danger</h3>
+              <p class="text-sm text-red-700 dark:text-red-300 font-medium">{metric.dangerRange}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 mt-3 text-sm text-gray-500 dark:text-gray-400 flex-wrap">
+            {metric.cadence !== 'never-as-kpi' && (
+              <span>Cadence: <strong class="text-gray-700 dark:text-gray-300">{metric.cadence}</strong></span>
+            )}
+            {metric.emRank.rank < 99 && (
+              <>
+                <span>EM Priority: <strong class="text-gray-700 dark:text-gray-300">{metric.emRank.priority}</strong></span>
+                <span>Director Priority: <strong class="text-gray-700 dark:text-gray-300">{metric.directorRank.priority}</strong></span>
+              </>
+            )}
+          </div>
+        </section>
+
+        <!-- Mandatory Pair -->
+        {pair && (
+          <section class="mb-10">
+            <h2 class="section-heading">Mandatory Pair</h2>
+            <MetricPairCard pair={pair} />
+          </section>
+        )}
+
+        <!-- Diagnostic Chains -->
+        {chains.length > 0 && (
+          <section class="mb-10">
+            <h2 class="section-heading">Diagnostic Chains</h2>
+            <div class="space-y-3">
+              {chains.map(chain => (
+                <DiagnosticChainCard chain={chain} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Dashboard Placement -->
+        {metric.dashboardPlacement.length > 0 && (
+          <section class="mb-10">
+            <h2 class="section-heading">Dashboard Placement</h2>
+            <div class="flex gap-3 flex-wrap">
+              {metric.dashboardPlacement.map(d => (
+                <a href="/metrics/dashboards/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z" />
+                  </svg>
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{d === 'em' ? 'EM Dashboard' : 'Director Dashboard'}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Implementation -->
+        <section class="mb-10">
+          <h2 class="section-heading">Implementation</h2>
+          <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+              <div>
+                <span class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase">Phase</span>
+                <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mt-1">
+                  {metric.maturityPhase > 0 ? `Phase ${metric.maturityPhase}` : 'N/A'}
+                </p>
+              </div>
+              <div>
+                <span class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase">Effort</span>
+                <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mt-1 capitalize">{metric.implementationEffort}</p>
+              </div>
+              <div>
+                <span class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase">Cadence</span>
+                <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mt-1">{metric.cadence}</p>
+              </div>
+            </div>
+            {metric.implementationNotes && (
+              <p class="text-sm text-gray-600 dark:text-gray-400">{metric.implementationNotes}</p>
+            )}
+          </div>
+        </section>
+
+        <!-- Calibration Language -->
+        {calLang.length > 0 && (
+          <section class="mb-10">
+            <h2 class="section-heading">Calibration Language</h2>
+            <div class="space-y-4">
+              {calLang.map(cl => (
+                <CalibrationLanguageCard entry={cl} />
+              ))}
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
+              <a href="/metrics/language-bank/" class="text-blue-600 dark:text-blue-400 hover:underline">View all calibration templates &rarr;</a>
+            </p>
+          </section>
+        )}
+
+        <!-- Prerequisites -->
+        {prerequisites.length > 0 && (
+          <section class="mb-10">
+            <h2 class="section-heading">Prerequisites</h2>
+            <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-5">
+              <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Before you track this metric, ensure you have:</p>
+              <ul class="space-y-2">
+                {prerequisites.map(prereq => (
+                  <li class="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
+                    <svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {prereq}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        <!-- Related Metrics -->
+        {relatedMetrics.length > 0 && (
+          <section class="mb-10">
+            <h2 class="section-heading">Related Metrics</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {relatedMetrics.slice(0, 8).map(({ metric: rm, relationship }) => (
+                <a href={`/metrics/${rm.slug}/`} class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2.5 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+                  <div class="flex-1 min-w-0">
+                    <span class="text-sm font-medium text-gray-900 dark:text-white block truncate">{rm.name}</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400">{rm.id} &middot; {rm.category}</span>
+                  </div>
+                  <span class:list={['px-2 py-0.5 rounded-full text-[10px] font-medium whitespace-nowrap',
+                    relationship === 'Mandatory Pair' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
+                    relationship === 'Diagnostic Context' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
+                    relationship === 'Same Archetype' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300' :
+                    'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+                  ]}>
+                    {relationship}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <!-- Related Capabilities -->
+        {relatedCapabilities.length > 0 && (
+          <section class="mb-10">
+            <h2 class="section-heading">Related Capabilities</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {relatedCapabilities.map(cap => (
+                <CapabilityCard capability={cap} />
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

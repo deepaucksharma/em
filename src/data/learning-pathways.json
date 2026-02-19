@@ -12,19 +12,19 @@
         "title": "Good Strategy Bad Strategy",
         "type": "book",
         "description": "Richard Rumelt's foundational work on what makes strategy effective, teaching how to diagnose challenges, create guiding policies, and design coherent actions.",
-        "url": ""
+        "url": "https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239"
       },
       {
         "title": "Thinking in Systems: A Primer",
         "type": "book",
         "description": "Donella Meadows' introduction to systems thinking, essential for understanding how organizational structures create emergent behaviors and feedback loops.",
-        "url": ""
+        "url": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557"
       },
       {
         "title": "How to Think About Org-Level Strategy as an EM",
         "type": "article",
         "description": "A practical article on translating company-level objectives into engineering org strategies, including aligning team missions with business outcomes.",
-        "url": ""
+        "url": "https://lethain.com/engineering-strategy/"
       }
     ],
     "practical": [
@@ -87,25 +87,25 @@
         "title": "Essentialism: The Disciplined Pursuit of Less",
         "type": "book",
         "description": "Greg McKeown's guide to focusing on what truly matters, directly applicable to the challenge of saying no to good ideas in favor of great ones.",
-        "url": ""
+        "url": "https://www.amazon.com/Essentialism-Disciplined-Pursuit-Greg-McKeown/dp/0804137404"
       },
       {
         "title": "The Art of Prioritization for Engineering Leaders",
         "type": "article",
         "description": "A deep dive into prioritization frameworks including RICE, ICE, and weighted scoring models, with guidance on when each is most appropriate for engineering contexts.",
-        "url": ""
+        "url": "https://newsletter.pragmaticengineer.com/p/engineering-planning"
       },
       {
         "title": "Inspired: How to Create Tech Products People Love",
         "type": "book",
         "description": "Marty Cagan's work on product discovery and delivery, essential for understanding how to prioritize work that delivers genuine customer and business value.",
-        "url": ""
+        "url": "https://www.amazon.com/INSPIRED-Create-Tech-Products-Customers/dp/1119387507"
       },
       {
         "title": "Opportunity Cost Thinking for Engineers",
         "type": "video",
         "description": "A talk on applying economic thinking to engineering prioritization, understanding that every choice to build one thing is a choice not to build something else.",
-        "url": ""
+        "url": "https://www.youtube.com/results?search_query=opportunity+cost+engineering+leaders"
       }
     ],
     "practical": [
@@ -131,7 +131,7 @@
         "title": "Cost of Delay Analysis",
         "type": "tool",
         "description": "Learn to quantify the cost of delay for different types of work (standard, urgent, fixed-date, intangible) and use this analysis to make sharper prioritization decisions.",
-        "url": ""
+        "url": "https://blackswanfarming.com/cost-of-delay/"
       }
     ],
     "advanced": [
@@ -168,25 +168,25 @@
         "title": "Designing Data-Intensive Applications",
         "type": "book",
         "description": "Martin Kleppmann's essential guide to the principles and practicalities of data systems, covering consistency, partitioning, replication, and stream processing.",
-        "url": ""
+        "url": "https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321"
       },
       {
         "title": "A Philosophy of Software Design",
         "type": "book",
         "description": "John Ousterhout's concise guide to managing complexity in software, focusing on deep modules, information hiding, and strategic vs. tactical programming.",
-        "url": ""
+        "url": "https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X"
       },
       {
         "title": "System Design Interview (Vol 1 & 2)",
         "type": "book",
         "description": "Alex Xu's comprehensive walkthrough of large-scale system design problems, useful both for interviews and for building mental models of distributed systems.",
-        "url": ""
+        "url": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF"
       },
       {
         "title": "Fundamentals of Software Architecture",
         "type": "course",
         "description": "A structured course covering architecture styles (monolith, microservices, event-driven), architecture characteristics (scalability, reliability), and the role of the architect in modern orgs.",
-        "url": ""
+        "url": "https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/"
       }
     ],
     "practical": [
@@ -212,7 +212,7 @@
         "title": "Architecture Fitness Functions",
         "type": "tool",
         "description": "Learn to define and implement automated fitness functions that continuously validate that architecture characteristics (performance, coupling, complexity) remain within acceptable bounds.",
-        "url": ""
+        "url": "https://www.thoughtworks.com/insights/articles/fitness-function-driven-development"
       }
     ],
     "advanced": [
@@ -249,25 +249,25 @@
         "title": "The Manager's Path",
         "type": "book",
         "description": "Camille Fournier's guide to engineering leadership at every level, with practical advice on establishing team processes, running effective meetings, and creating operational cadences.",
-        "url": ""
+        "url": "https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897"
       },
       {
         "title": "High Output Management",
         "type": "book",
         "description": "Andy Grove's classic on management fundamentals, introducing concepts like leverage, output measurement, and the managerial activity of creating and maintaining operational rhythms.",
-        "url": ""
+        "url": "https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884"
       },
       {
         "title": "Team Topologies",
         "type": "book",
         "description": "Matthew Skelton and Manuel Pais' framework for organizing teams for fast flow, covering team types, interaction modes, and how operational structure affects software delivery.",
-        "url": ""
+        "url": "https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819"
       },
       {
         "title": "Effective Sprint Ceremonies for Engineering Teams",
         "type": "article",
         "description": "A practical guide to running standups, retrospectives, planning sessions, and demos that actually drive team effectiveness rather than becoming bureaucratic overhead.",
-        "url": ""
+        "url": "https://www.atlassian.com/agile/scrum/ceremonies"
       }
     ],
     "practical": [
@@ -293,7 +293,7 @@
         "title": "Process Improvement Kanban",
         "type": "tool",
         "description": "Use a dedicated Kanban board to track operational improvements, making process changes visible and ensuring the team continuously improves its own ways of working.",
-        "url": ""
+        "url": "https://kanbanize.com/kanban-resources/getting-started/what-is-kanban"
       }
     ],
     "advanced": [
@@ -330,25 +330,25 @@
         "title": "Influence Without Authority",
         "type": "book",
         "description": "Allan Cohen and David Bradford's guide to building influence through reciprocity and mutual benefit, essential for engineering leaders who must work across organizational boundaries.",
-        "url": ""
+        "url": "https://www.amazon.com/Influence-Without-Authority-Allan-Cohen/dp/1119347718"
       },
       {
         "title": "Crucial Conversations",
         "type": "book",
         "description": "Tools for navigating high-stakes discussions where opinions vary and emotions run strong, directly applicable to cross-functional negotiations and alignment meetings.",
-        "url": ""
+        "url": "https://www.amazon.com/Crucial-Conversations-Tools-Talking-Stakes/dp/1260474186"
       },
       {
         "title": "The Art of Cross-Functional Collaboration in Tech",
         "type": "article",
         "description": "A practical article on building productive working relationships with Product, Design, Data Science, and other functions, including common pitfalls and how to avoid them.",
-        "url": ""
+        "url": "https://leaddev.com/communication-relationships/navigating-cross-functional-partnerships-engineering-leader"
       },
       {
         "title": "Stakeholder Mapping for Engineering Leaders",
         "type": "video",
         "description": "A talk on identifying key stakeholders, understanding their motivations and concerns, and developing tailored influence strategies for each.",
-        "url": ""
+        "url": "https://www.youtube.com/results?search_query=stakeholder+mapping+engineering+leaders"
       }
     ],
     "practical": [
@@ -374,7 +374,7 @@
         "title": "RACI Matrix Builder",
         "type": "tool",
         "description": "A tool for creating RACI matrices that clarify who is Responsible, Accountable, Consulted, and Informed for cross-functional initiatives, reducing confusion and conflict.",
-        "url": ""
+        "url": "https://www.teamgantt.com/blog/raci-chart-definition-tips-and-example"
       }
     ],
     "advanced": [
@@ -411,25 +411,25 @@
         "title": "The Coaching Habit",
         "type": "book",
         "description": "Michael Bungay Stanier's guide to asking better questions and giving less advice, transforming managers from problem-solvers into coaches who develop their team's capabilities.",
-        "url": ""
+        "url": "https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749"
       },
       {
         "title": "Radical Candor",
         "type": "book",
         "description": "Kim Scott's framework for caring personally while challenging directly, providing the foundation for honest feedback conversations that drive growth.",
-        "url": ""
+        "url": "https://www.amazon.com/Radical-Candor-Revised-Kick-Ass-Humanity/dp/1250235375"
       },
       {
         "title": "Thanks for the Feedback",
         "type": "book",
         "description": "Douglas Stone and Sheila Heen's exploration of why feedback is hard to receive and how to create conditions where it lands effectively, essential for managers who give feedback daily.",
-        "url": ""
+        "url": "https://www.amazon.com/Thanks-Feedback-Science-Receiving-Well/dp/0143127136"
       },
       {
         "title": "Growth Mindset and Engineering Teams",
         "type": "article",
         "description": "How to cultivate a growth mindset culture on engineering teams, moving from a fixed-ability worldview to one where skills are developed through deliberate practice and stretch assignments.",
-        "url": ""
+        "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means"
       }
     ],
     "practical": [
@@ -455,7 +455,7 @@
         "title": "Feedback Journaling Tool",
         "type": "tool",
         "description": "A structured journaling practice for tracking feedback given and received, noting patterns, and improving the quality and impact of coaching conversations over time.",
-        "url": ""
+        "url": "https://lattice.com/library/feedback"
       }
     ],
     "advanced": [
@@ -492,25 +492,25 @@
         "title": "Thinking in Bets",
         "type": "book",
         "description": "Annie Duke's guide to making better decisions under uncertainty, teaching how to separate decision quality from outcome quality and communicate probabilistic thinking.",
-        "url": ""
+        "url": "https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions/dp/0735216371"
       },
       {
         "title": "The Pyramid Principle",
         "type": "book",
         "description": "Barbara Minto's framework for structured communication, teaching how to organize ideas hierarchically so that key messages land clearly with any audience.",
-        "url": ""
+        "url": "https://www.amazon.com/Pyramid-Principle-Logic-Writing-Thinking/dp/0273710516"
       },
       {
         "title": "Writing Well as an Engineering Leader",
         "type": "article",
         "description": "Practical guidance on writing effective technical documents, proposals, and updates that are clear, concise, and tailored to their audience.",
-        "url": ""
+        "url": "https://newsletter.pragmaticengineer.com/p/writing-well"
       },
       {
         "title": "Decision-Making Frameworks for Engineering Managers",
         "type": "video",
         "description": "A talk covering common decision-making frameworks (DACI, consent-based, advisory) and how to choose the right one based on the type and impact of the decision.",
-        "url": ""
+        "url": "https://lethain.com/frameworks-for-decision-making/"
       }
     ],
     "practical": [
@@ -536,7 +536,7 @@
         "title": "Pre-mortem Facilitation Tool",
         "type": "tool",
         "description": "A structured pre-mortem process for stress-testing decisions before committing, imagining future failure and working backward to identify hidden risks and assumptions.",
-        "url": ""
+        "url": "https://www.atlassian.com/team-playbook/plays/pre-mortem"
       }
     ],
     "advanced": [
@@ -579,19 +579,19 @@
         "title": "Incident Management for Operations",
         "type": "book",
         "description": "Rob Schnepp's guide to structured incident management, covering incident command systems, communication during crises, and post-incident learning processes.",
-        "url": ""
+        "url": "https://www.amazon.com/Incident-Management-Operations-Rob-Schnepp/dp/1491917628"
       },
       {
         "title": "The Field Guide to Understanding Human Error",
         "type": "book",
         "description": "Sidney Dekker's essential reading on moving beyond blame in incident analysis, understanding how well-intentioned actions lead to failure, and building just cultures.",
-        "url": ""
+        "url": "https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/1472439058"
       },
       {
         "title": "Introduction to Chaos Engineering",
         "type": "course",
         "description": "A course covering the principles and practices of chaos engineering, including how to design experiments that proactively surface reliability weaknesses before they cause outages.",
-        "url": ""
+        "url": "https://www.gremlin.com/community/tutorials/chaos-engineering-the-history-principles-and-practice/"
       }
     ],
     "practical": [
@@ -617,7 +617,7 @@
         "title": "Error Budget Tracking Tool",
         "type": "tool",
         "description": "Set up and use error budget tracking to make reliability investment decisions data-driven, balancing feature velocity with reliability based on SLO consumption rates.",
-        "url": ""
+        "url": "https://sre.google/workbook/implementing-slos/"
       }
     ],
     "advanced": [
@@ -654,25 +654,25 @@
         "title": "Accelerate: The Science of Lean Software and DevOps",
         "type": "book",
         "description": "Nicole Forsgren, Jez Humble, and Gene Kim's research-backed guide to measuring software delivery performance using the four key metrics: deployment frequency, lead time, MTTR, and change failure rate.",
-        "url": ""
+        "url": "https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339"
       },
       {
         "title": "How to Measure Anything",
         "type": "book",
         "description": "Douglas Hubbard's guide to applied information economics, teaching how to quantify seemingly intangible things and make better decisions with imperfect data.",
-        "url": ""
+        "url": "https://www.amazon.com/How-Measure-Anything-Intangibles-Business/dp/1118539273"
       },
       {
         "title": "Measure What Matters",
         "type": "book",
         "description": "John Doerr's introduction to OKRs (Objectives and Key Results), providing a framework for setting measurable goals that align teams with organizational outcomes.",
-        "url": ""
+        "url": "https://www.amazon.com/Measure-What-Matters-Google-Foundation/dp/0525536221"
       },
       {
         "title": "Engineering Metrics That Matter",
         "type": "article",
         "description": "A practical guide to selecting engineering metrics that drive behavior change, avoid Goodhart's Law pitfalls, and genuinely reflect team health and delivery effectiveness.",
-        "url": ""
+        "url": "https://newsletter.pragmaticengineer.com/p/engineering-metrics"
       }
     ],
     "practical": [
@@ -698,7 +698,7 @@
         "title": "Developer Experience Survey Tool",
         "type": "tool",
         "description": "Design and deploy a developer experience survey measuring satisfaction, productivity friction, tooling effectiveness, and psychological safety, then use results to prioritize improvements.",
-        "url": ""
+        "url": "https://www.devex.com/"
       }
     ],
     "advanced": [
@@ -735,25 +735,25 @@
         "title": "The Phoenix Project",
         "type": "book",
         "description": "Gene Kim's novel about IT transformation, illustrating how work-in-progress limits, constraint management, and resource allocation decisions determine organizational performance.",
-        "url": ""
+        "url": "https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290"
       },
       {
         "title": "Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency",
         "type": "book",
         "description": "Tom DeMarco's argument for maintaining organizational slack, directly relevant to resource allocation decisions that balance efficiency with adaptability and innovation.",
-        "url": ""
+        "url": "https://www.amazon.com/Slack-Getting-Burnout-Busywork-Efficiency/dp/0767907698"
       },
       {
         "title": "Engineering Investment Categories",
         "type": "article",
         "description": "A guide to categorizing engineering work into investment categories (feature development, platform, tech debt, innovation) and establishing healthy allocation ratios.",
-        "url": ""
+        "url": "https://lethain.com/magnitudes-of-exploration/"
       },
       {
         "title": "Theory of Constraints for Software Teams",
         "type": "video",
         "description": "A talk on applying Goldratt's Theory of Constraints to software engineering, identifying bottlenecks and allocating resources to maximize throughput of the entire system.",
-        "url": ""
+        "url": "https://www.youtube.com/results?search_query=theory+of+constraints+software+development"
       }
     ],
     "practical": [
@@ -779,7 +779,7 @@
         "title": "Investment Portfolio Tracker",
         "type": "tool",
         "description": "A tracking tool that categorizes all engineering work by investment type and visualizes allocation over time, enabling leaders to ensure investment ratios match strategic intent.",
-        "url": ""
+        "url": "https://lethain.com/magnitudes-of-exploration/"
       }
     ],
     "advanced": [
@@ -816,25 +816,25 @@
         "title": "Who: The A Method for Hiring",
         "type": "book",
         "description": "Geoff Smart and Randy Street's structured approach to hiring, covering scorecards, sourcing, structured interviews, and reference checks that predict job performance.",
-        "url": ""
+        "url": "https://www.amazon.com/Who-Method-Hiring-Geoff-Smart/dp/0345504194"
       },
       {
         "title": "Work Rules!",
         "type": "book",
         "description": "Laszlo Bock's account of Google's people operations, including data-driven insights on what makes hiring processes effective and how to reduce bias in candidate evaluation.",
-        "url": ""
+        "url": "https://www.amazon.com/Work-Rules-Insights-Inside-Transform/dp/1455554790"
       },
       {
         "title": "Designing Effective Technical Interview Loops",
         "type": "article",
         "description": "A practical guide to structuring technical interview loops that assess the right signals, minimize redundancy, reduce candidate fatigue, and produce fair, consistent evaluations.",
-        "url": ""
+        "url": "https://review.firstround.com/the-anatomy-of-the-perfect-technical-interview-from-a-former-amazon-vp"
       },
       {
         "title": "The First 90 Days for Engineering Hires",
         "type": "article",
         "description": "How to design onboarding programs that get new engineers to full productivity quickly, covering documentation, buddy systems, starter projects, and milestone check-ins.",
-        "url": ""
+        "url": "https://www.amazon.com/First-90-Days-Strategies-Expanded/dp/1422188612"
       }
     ],
     "practical": [
@@ -860,7 +860,7 @@
         "title": "Role Architecture Tool",
         "type": "tool",
         "description": "A tool for designing engineering roles that clearly delineate scope, expectations, growth paths, and how each role fits into the broader team and organizational structure.",
-        "url": ""
+        "url": "https://www.levels.fyi/"
       }
     ],
     "advanced": [
@@ -897,25 +897,25 @@
         "title": "The Culture Code",
         "type": "book",
         "description": "Daniel Coyle's research into what makes high-performing group cultures work, identifying three key skills: building safety, sharing vulnerability, and establishing purpose.",
-        "url": ""
+        "url": "https://www.amazon.com/Culture-Code-Secrets-Highly-Successful/dp/0804176981"
       },
       {
         "title": "No Rules Rules: Netflix and the Culture of Reinvention",
         "type": "book",
         "description": "Reed Hastings and Erin Meyer's account of building Netflix's culture of freedom and responsibility, offering a provocative model for engineering team culture.",
-        "url": ""
+        "url": "https://www.amazon.com/No-Rules-Netflix-Culture-Reinvention/dp/1984877860"
       },
       {
         "title": "Turn the Ship Around!",
         "type": "book",
         "description": "L. David Marquet's account of transforming a submarine crew from a leader-follower to a leader-leader model, directly applicable to building empowered engineering teams.",
-        "url": ""
+        "url": "https://www.amazon.com/Turn-Ship-Around-Turning-Followers/dp/1591846404"
       },
       {
         "title": "Psychological Safety in Engineering Teams",
         "type": "article",
         "description": "How to create and maintain psychological safety on engineering teams, drawing from Google's Project Aristotle research and practical implementation strategies.",
-        "url": ""
+        "url": "https://rework.withgoogle.com/guides/understanding-team-effectiveness"
       }
     ],
     "practical": [
@@ -941,7 +941,7 @@
         "title": "Psychological Safety Assessment Tool",
         "type": "tool",
         "description": "A lightweight survey instrument for measuring psychological safety on your team, with specific questions adapted for engineering contexts and guidance on interpreting results.",
-        "url": ""
+        "url": "https://rework.withgoogle.com/guides/understanding-team-effectiveness"
       }
     ],
     "advanced": [
@@ -978,13 +978,13 @@
         "title": "Security Engineering: A Guide to Building Dependable Distributed Systems",
         "type": "book",
         "description": "Ross Anderson's comprehensive guide to security engineering, covering threat modeling, access control, cryptography, and the human factors that make security succeed or fail.",
-        "url": ""
+        "url": "https://www.cl.cam.ac.uk/~rja14/book.html"
       },
       {
         "title": "The Phoenix Project (Security Thread)",
         "type": "book",
         "description": "Gene Kim's novel includes a security subplot that illustrates how security and compliance can be integrated into delivery processes rather than being gatekeeping functions.",
-        "url": ""
+        "url": "https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290"
       },
       {
         "title": "OWASP Top 10 for Engineering Managers",
@@ -996,7 +996,7 @@
         "title": "Compliance as Code: An Introduction",
         "type": "article",
         "description": "How modern engineering organizations automate compliance requirements through policy-as-code, automated auditing, and continuous compliance monitoring.",
-        "url": ""
+        "url": "https://cloud.google.com/architecture/devops/devops-process-policy-as-code"
       }
     ],
     "practical": [
@@ -1022,7 +1022,7 @@
         "title": "Dependency Vulnerability Scanner",
         "type": "tool",
         "description": "Set up and configure automated dependency scanning in your CI/CD pipeline, establishing policies for vulnerability severity levels, SLAs for patching, and exception processes.",
-        "url": ""
+        "url": "https://snyk.io/"
       }
     ],
     "advanced": [
@@ -1059,25 +1059,25 @@
         "title": "Nine Lies About Work",
         "type": "book",
         "description": "Marcus Buckingham and Ashley Goodall's challenge to conventional performance management wisdom, arguing for attention-based management over rating-based evaluation.",
-        "url": ""
+        "url": "https://www.amazon.com/Nine-Lies-about-Work-Freethinking/dp/1633696308"
       },
       {
         "title": "An Elegant Puzzle (Performance Chapter)",
         "type": "book",
         "description": "Will Larson's practical guidance on performance management for engineering teams, covering performance designations, managing out, and calibration processes.",
-        "url": ""
+        "url": "https://lethain.com/elegant-puzzle/"
       },
       {
         "title": "The Hard Thing About Hard Things",
         "type": "book",
         "description": "Ben Horowitz's raw account of difficult management situations, including firing, demotions, and performance conversations that every engineering leader eventually faces.",
-        "url": ""
+        "url": "https://www.amazon.com/Hard-Thing-About-Things-Building/dp/0062273205"
       },
       {
         "title": "Engineering Career Ladders and Leveling",
         "type": "article",
         "description": "A guide to designing and using engineering career ladders effectively, ensuring they serve as tools for growth rather than bureaucratic artifacts.",
-        "url": ""
+        "url": "https://newsletter.pragmaticengineer.com/p/engineering-career-ladders"
       }
     ],
     "practical": [
@@ -1103,7 +1103,7 @@
         "title": "Continuous Feedback Tracker",
         "type": "tool",
         "description": "A tool for capturing feedback and accomplishments throughout the review period, preventing recency bias and ensuring performance reviews reflect the full body of work.",
-        "url": ""
+        "url": "https://lattice.com/"
       }
     ],
     "advanced": [

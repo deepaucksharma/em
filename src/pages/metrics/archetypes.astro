@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import ArchetypeCard from '../../components/cards/ArchetypeCard.astro';
+import { archetypes, metricsLaws } from '../../lib/data';
+---
+
+<BaseLayout title="Organizational Archetypes" description="7 organizational archetypes from the 2025 DORA research. Diagnose your team's systemic conditions before applying any metric.">
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-amber-50 via-orange-50/50 to-white dark:from-gray-800 dark:via-slate-800 dark:to-gray-900 border-b border-gray-200 dark:border-gray-800 overflow-hidden">
+    <div class="hero-pattern absolute inset-0 pointer-events-none"></div>
+    <svg class="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] dark:opacity-[0.04] pointer-events-none" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="100" r="120" stroke="currentColor" stroke-width="1.5" class="text-amber-600 dark:text-amber-400" />
+      <circle cx="200" cy="250" r="80" stroke="currentColor" stroke-width="1.5" class="text-orange-500 dark:text-orange-400" />
+      <circle cx="320" cy="300" r="60" stroke="currentColor" stroke-width="1.5" class="text-amber-500 dark:text-amber-300" />
+    </svg>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <nav class="mb-6">
+          <ol class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400">
+            <li><a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a></li>
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              <a href="/metrics/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Metrics</a>
+            </li>
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              <span class="text-gray-900 dark:text-white font-medium">Archetypes</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+          Organizational Archetypes
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-2">
+          Before applying any metric, identify your archetype.
+        </p>
+        <p class="text-lg text-gray-500 dark:text-gray-400 mb-8">
+          The 2025 DORA research established that delivery performance must be contextualized by systemic conditions.
+          {archetypes.length} archetypes capture the full spectrum from sustainable excellence to foundational crisis.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#archetypes-list" class="inline-flex items-center px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+            View Archetypes
+          </a>
+          <a href="/metrics/diagnostics/" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            Diagnostic Chains
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Archetype Rule Callout -->
+    <section class="mb-12">
+      <div class="rounded-xl border-2 border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/30 p-6">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+          <div>
+            <h3 class="text-sm font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wider mb-2">The Archetype Rule</h3>
+            <p class="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+              Attempting to optimize a singular metric — such as pushing a Legacy Bottleneck team to increase
+              Deployment Frequency — is actively destructive without first addressing underlying architectural constraints.
+              <strong>Diagnose the archetype. Then apply the corresponding intervention.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Archetypes List -->
+    <section id="archetypes-list" class="space-y-6 mb-16">
+      {archetypes.map(archetype => (
+        <div id={archetype.slug}>
+          <ArchetypeCard archetype={archetype} />
+        </div>
+      ))}
+    </section>
+
+    <!-- Cross-links -->
+    <section class="space-y-4">
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6 text-center">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">See tailored metric recommendations</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Each archetype has a customized set of recommended metrics, dashboard configuration notes, and diagnostic chains.
+        </p>
+        <a href="/metrics/by-archetype/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+          Metrics by Archetype
+        </a>
+      </div>
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6 text-center">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">What happens when a metric triggers?</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Once you've identified your archetype, use the diagnostic chains to investigate metric anomalies step by step.
+        </p>
+        <a href="/metrics/diagnostics/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+          Explore Diagnostic Chains
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b20 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  :global(.dark) .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b10 1px, transparent 1px);
+  }
+</style>

@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import { techDebtEconomics } from '../../lib/data';
+
+const { coreNumbers, investmentMandate, cd3, decisionTest } = techDebtEconomics;
+
+// Sort CD3 example by priority
+const cd3Sorted = [...cd3.example].sort((a, b) => a.priority - b.priority);
+---
+
+<BaseLayout title="Tech Debt Economics & Prioritization" description="The economic language to secure dedicated debt remediation budget and prioritize work mathematically using CD3.">
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-amber-50 via-orange-50/50 to-white dark:from-gray-800 dark:via-slate-800 dark:to-gray-900 border-b border-gray-200 dark:border-gray-800 overflow-hidden">
+    <div class="hero-pattern absolute inset-0 pointer-events-none"></div>
+    <svg class="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] dark:opacity-[0.04] pointer-events-none" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="100" r="120" stroke="currentColor" stroke-width="1.5" class="text-amber-600 dark:text-amber-400" />
+      <path d="M180 200 L320 200 L280 340 L220 340 Z" stroke="currentColor" stroke-width="1.5" fill="none" class="text-orange-500 dark:text-orange-400" />
+      <line x1="250" y1="180" x2="250" y2="360" stroke="currentColor" stroke-width="1" class="text-amber-500 dark:text-amber-300" />
+    </svg>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <nav class="mb-6">
+          <ol class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400">
+            <li><a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a></li>
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              <a href="/metrics/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Metrics</a>
+            </li>
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              <span class="text-gray-900 dark:text-white font-medium">Tech Debt Economics</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+          Tech Debt Economics & Prioritization
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+          The economic language to secure dedicated debt remediation budget and prioritize work mathematically.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#core-numbers" class="inline-flex items-center px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+            See the Numbers
+          </a>
+          <a href="#cd3" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            CD3 Prioritization
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Core Numbers -->
+    <section id="core-numbers" class="mb-16">
+      <h2 class="section-heading text-gray-900 dark:text-white">The Core Numbers</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        Six data points that make the financial case for tech debt investment at the board level.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {coreNumbers.map((item) => (
+          <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 hover:border-amber-300 dark:hover:border-amber-700 transition-colors">
+            <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">{item.source}</div>
+            <p class="text-sm font-semibold text-gray-900 dark:text-white mb-3 leading-snug">{item.dataPoint}</p>
+            <div class="border-t border-gray-100 dark:border-gray-700 pt-3">
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Implication:</span> {item.implication}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Investment Mandate -->
+    <section class="mb-16">
+      <h2 class="section-heading text-gray-900 dark:text-white">Investment Mandate</h2>
+      <div class="rounded-xl border-2 border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/30 p-6 mb-6">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-20 h-20 rounded-xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <span class="text-2xl font-extrabold text-amber-700 dark:text-amber-300">{investmentMandate.target}</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-amber-900 dark:text-amber-200 mb-2">Non-Negotiable Capacity Reserve</h3>
+            <p class="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
+              {investmentMandate.description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-base font-bold text-gray-900 dark:text-white mb-4">Four Strategies to Secure the Budget</h3>
+      <div class="space-y-3">
+        {investmentMandate.strategies.map((strategy, i) => (
+          <div class="flex items-start gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+            <span class="shrink-0 w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center text-xs font-bold text-amber-700 dark:text-amber-300">
+              {i + 1}
+            </span>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{strategy}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- CD3 Prioritization -->
+    <section id="cd3" class="mb-16">
+      <h2 class="section-heading text-gray-900 dark:text-white">CD3 Prioritization</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        {cd3.description}
+      </p>
+
+      <!-- Formula -->
+      <div class="rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 p-6 mb-8 text-center">
+        <div class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-3">Formula</div>
+        <div class="text-2xl font-mono font-bold text-blue-900 dark:text-blue-200 mb-3">
+          {cd3.formula}
+        </div>
+        <p class="text-sm text-blue-700 dark:text-blue-300">
+          Sequence work by highest CD3, not highest total value.
+        </p>
+      </div>
+
+      <!-- Example Table -->
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-6">
+        <div class="bg-gray-50 dark:bg-gray-800 px-5 py-3 border-b border-gray-200 dark:border-gray-700">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white">CD3 Ordering Example</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50">
+                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Priority</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Initiative</th>
+                <th class="px-4 py-3 text-right font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Duration (wks)</th>
+                <th class="px-4 py-3 text-right font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">Weekly Value</th>
+                <th class="px-4 py-3 text-right font-semibold text-gray-600 dark:text-gray-400 text-xs uppercase tracking-wider">CD3</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+              {cd3Sorted.map((row) => (
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                  <td class="px-4 py-3">
+                    <span class:list={[
+                      'inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold',
+                      row.priority === 1 ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300'
+                        : row.priority === 2 ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300'
+                        : row.priority === 3 ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300'
+                        : 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300',
+                    ]}>
+                      {row.priority}
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">{row.initiative}</td>
+                  <td class="px-4 py-3 text-right text-gray-600 dark:text-gray-400 font-mono">{row.duration}</td>
+                  <td class="px-4 py-3 text-right text-gray-600 dark:text-gray-400 font-mono">${row.weeklyValue.toLocaleString()}</td>
+                  <td class="px-4 py-3 text-right font-mono font-bold text-gray-900 dark:text-white">{row.cd3.toFixed(3)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">When to Use</h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300">{cd3.whenToUse}</p>
+        </div>
+        <div class="rounded-lg border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/20 p-4">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">Impact</h4>
+          <p class="text-sm text-green-800 dark:text-green-300">{cd3.impact}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-Question Metric Addition Test -->
+    <section class="mb-16">
+      <h2 class="section-heading text-gray-900 dark:text-white">5-Question Metric Addition Test</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        Before adding any new metric to your dashboard, it must pass all five questions. If the answer to any is unsatisfactory, do not add the metric.
+      </p>
+      <div class="space-y-3">
+        {decisionTest.map((question, i) => (
+          <div class="flex items-start gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+            <span class="shrink-0 w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-sm font-bold text-gray-600 dark:text-gray-300">
+              {i + 1}
+            </span>
+            <p class="text-gray-900 dark:text-white font-medium pt-1">{question}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Dashboard Connection -->
+    <section class="mb-16">
+      <h2 class="section-heading text-gray-900 dark:text-white">Where to Surface This on Your Dashboard</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-2">Investment Mix (8.4)</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Place on your QBR dashboard. Track quarterly capacity split between features, reliability, debt, and security.</p>
+          <a href="/metrics/engineering-investment-mix/" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">View metric detail &rarr;</a>
+        </div>
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-2">Tech Debt Ratio (8.6)</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Track on drill-down dashboard. Use trend to justify remediation investment and monitor paydown progress.</p>
+          <a href="/metrics/tech-debt-ratio/" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">View metric detail &rarr;</a>
+        </div>
+      </div>
+      <div class="mt-4 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 p-4">
+        <p class="text-sm text-amber-800 dark:text-amber-300">
+          <strong>Archetype context:</strong> If you're an <a href="/metrics/archetypes/#legacy-bottleneck" class="underline font-medium">A6: Legacy Bottleneck</a> team, Investment Mix and Tech Debt Ratio are your primary investment arguments. Use CD3 above to prioritize which debt to pay down first.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cross-links -->
+    <section class="space-y-4">
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6 text-center">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Track your investment balance</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Use the Investment Mix metric to monitor the ratio of feature work, reliability investment, and debt remediation across your portfolio.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/metrics/engineering-investment-mix/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+            Investment Mix Detail
+          </a>
+          <a href="/metrics/dashboards/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            Dashboard Blueprints
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b20 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  :global(.dark) .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b10 1px, transparent 1px);
+  }
+</style>

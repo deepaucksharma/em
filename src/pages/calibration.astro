@@ -25,16 +25,34 @@ const signalsByCapability = capabilities.map(cap => ({
       </p>
     </div>
 
-    <!-- Signal type legend -->
-    <div class="flex flex-wrap gap-2 mb-8">
-      {signalTypes.map(type => (
-        <span class="badge bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">{type}</span>
-      ))}
+    <!-- Signal type filters -->
+    <div class="flex flex-wrap gap-2 mb-8" id="signal-filters">
+      <button
+        class="signal-filter-btn badge bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 cursor-pointer border border-blue-300 dark:border-blue-700"
+        data-filter="all"
+        role="button"
+        aria-pressed="true"
+      >
+        All ({calibrationSignals.length})
+      </button>
+      {signalTypes.map(type => {
+        const count = calibrationSignals.filter(s => s.signalType === type).length;
+        return (
+          <button
+            class="signal-filter-btn badge bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 cursor-pointer border border-transparent hover:border-gray-300 dark:hover:border-gray-500 transition-colors"
+            data-filter={type}
+            role="button"
+            aria-pressed="false"
+          >
+            {type} ({count})
+          </button>
+        );
+      })}
     </div>
 
-    <div class="space-y-8">
+    <div class="space-y-8" id="signal-sections">
       {signalsByCapability.map(({ capability: cap, signals }) => (
-        <section class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+        <section class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden signal-section">
           <div class:list={['px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between', getDomainColor(cap.domain).bg]}>
             <div class="flex items-center gap-3">
               <Badge text={cap.domain} variant="domain" domain={cap.domain} />
@@ -42,12 +60,12 @@ const signalsByCapability = capabilities.map(cap => ({
                 {cap.id}: {cap.name}
               </a>
             </div>
-            <span class="text-sm text-gray-500 dark:text-gray-400">{signals.length} signals</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400 signal-count">{signals.length} signals</span>
           </div>
 
           <div class="divide-y divide-gray-100 dark:divide-gray-800">
             {signals.map(sig => (
-              <div class="px-6 py-3 flex items-start gap-3">
+              <div class="px-6 py-3 flex items-start gap-3 signal-row" data-signal-type={sig.signalType}>
                 <span class="badge bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 shrink-0 mt-0.5">{sig.signalType}</span>
                 <div class="flex-1 min-w-0">
                   <p class="text-sm text-gray-700 dark:text-gray-300">{sig.signalText}</p>
@@ -59,5 +77,49 @@ const signalsByCapability = capabilities.map(cap => ({
         </section>
       ))}
     </div>
+
+    <script>
+      const buttons = document.querySelectorAll('.signal-filter-btn');
+      const rows = document.querySelectorAll('.signal-row');
+      const sections = document.querySelectorAll('.signal-section');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = (btn as HTMLElement).dataset.filter!;
+
+          // Update button states
+          buttons.forEach(b => {
+            b.classList.remove('bg-blue-100', 'text-blue-700', 'dark:bg-blue-900/40', 'dark:text-blue-300', 'border-blue-300', 'dark:border-blue-700');
+            b.classList.add('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300', 'border-transparent');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.classList.remove('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300', 'border-transparent');
+          btn.classList.add('bg-blue-100', 'text-blue-700', 'dark:bg-blue-900/40', 'dark:text-blue-300', 'border-blue-300', 'dark:border-blue-700');
+          btn.setAttribute('aria-pressed', 'true');
+
+          // Filter rows
+          rows.forEach(row => {
+            const type = (row as HTMLElement).dataset.signalType;
+            if (filter === 'all' || type === filter) {
+              (row as HTMLElement).style.display = '';
+            } else {
+              (row as HTMLElement).style.display = 'none';
+            }
+          });
+
+          // Hide sections with no visible rows, update counts
+          sections.forEach(section => {
+            const visibleRows = section.querySelectorAll('.signal-row:not([style*="display: none"])');
+            const countEl = section.querySelector('.signal-count');
+            if (visibleRows.length === 0) {
+              (section as HTMLElement).style.display = 'none';
+            } else {
+              (section as HTMLElement).style.display = '';
+              if (countEl) countEl.textContent = `${visibleRows.length} signals`;
+            }
+          });
+        });
+      });
+    </script>
   </div>
 </BaseLayout>

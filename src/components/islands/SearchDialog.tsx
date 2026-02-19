@@ -22,6 +22,10 @@ const TYPE_LABELS: Record<string, string> = {
   'maturity-level': 'Maturity',
   'learning-pathway': 'Learning',
   measurement: 'Measurement',
+  metric: 'Metric',
+  'metric-pair': 'Metric Pair',
+  'diagnostic-chain': 'Diagnostic',
+  archetype: 'Archetype',
 };
 
 const TYPE_COLORS: Record<string, string> = {
@@ -34,6 +38,10 @@ const TYPE_COLORS: Record<string, string> = {
   'maturity-level': '#8b5cf6',
   'learning-pathway': '#10b981',
   measurement: '#ec4899',
+  metric: '#f59e0b',
+  'metric-pair': '#8b5cf6',
+  'diagnostic-chain': '#14b8a6',
+  archetype: '#10b981',
 };
 
 export default function SearchDialog() {

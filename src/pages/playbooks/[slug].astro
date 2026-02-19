@@ -2,7 +2,7 @@
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import Badge from '../../components/ui/Badge.astro';
-import { playbooks, getCapability, observables } from '../../lib/data';
+import { playbooks, getCapability, getMetric, observables } from '../../lib/data';
 
 export function getStaticPaths() {
   return playbooks.map(pb => ({
@@ -14,6 +14,7 @@ const { slug } = Astro.params;
 const pb = playbooks.find(p => p.slug === slug)!;
 const caps = pb.capabilityIds.map(id => getCapability(id)).filter(Boolean);
 const relatedObs = observables.filter(o => pb.observableIds.includes(o.id));
+const suggestedMetrics = (pb.suggestedMetricIds ?? []).map(id => getMetric(id)).filter(Boolean);
 ---
 
 <ContentLayout title={pb.title} description={pb.context} showSidebar={false}>
@@ -77,6 +78,23 @@ const relatedObs = observables.filter(o => pb.observableIds.includes(o.id));
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">What Good Looks Like</h2>
         <div class="bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-xl p-5">
           <p class="text-green-800 dark:text-green-300 whitespace-pre-line">{pb.whatGoodLooksLike}</p>
+        </div>
+      </section>
+    )}
+
+    {suggestedMetrics.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Key Metrics to Track</h2>
+        <div class="flex flex-wrap gap-2">
+          {suggestedMetrics.map(met => met && (
+            <a
+              href={`/metrics/${met.slug}/`}
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-blue-50 text-blue-700 dark:bg-blue-950/30 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-950/50 transition-colors border border-blue-100 dark:border-blue-900"
+            >
+              <span class="font-mono text-[10px] text-blue-400 dark:text-blue-500">{met.id}</span>
+              {met.name}
+            </a>
+          ))}
         </div>
       </section>
     )}

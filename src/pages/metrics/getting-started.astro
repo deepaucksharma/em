@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import TierBadge from '../../components/ui/TierBadge.astro';
+import MetricCard from '../../components/cards/MetricCard.astro';
+import { metrics, priorityStacks, archetypes, metricsRoadmap, getMetric } from '../../lib/data';
+
+const emTop5 = priorityStacks.em.slice(0, 5).map(e => getMetric(e.metricId)).filter(Boolean);
+const directorTop5 = priorityStacks.director.slice(0, 5).map(e => getMetric(e.metricId)).filter(Boolean);
+const phase1 = metricsRoadmap.find(p => p.phase === 1);
+---
+
+<BaseLayout title="Getting Started with Metrics" description="30-minute onboarding path: pick your role, identify your team archetype, follow your starter sequence.">
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-amber-50 via-orange-50/50 to-white dark:from-gray-800 dark:via-slate-800 dark:to-gray-900 border-b border-gray-200 dark:border-gray-800 overflow-hidden">
+    <div class="hero-pattern absolute inset-0 pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <Breadcrumb items={[
+          { label: 'Metrics', href: '/metrics/' },
+          { label: 'Getting Started' },
+        ]} />
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+          Getting Started with Metrics
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-2">
+          From zero to actionable metrics in 30 minutes
+        </p>
+        <p class="text-lg text-gray-500 dark:text-gray-400 mb-8">
+          Pick your role, identify your team archetype, follow your starter sequence. Start with Primary metrics.
+          Add Secondary when habitual. Tertiary only for diagnostics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Step 1: Role Selection -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-lg font-bold shrink-0">1</span>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Choose Your Role</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        EMs and Directors need different metrics. Your role determines your priority stack — the order in which you adopt metrics.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-xl border-2 border-cyan-200 dark:border-cyan-800 bg-cyan-50 dark:bg-cyan-950/20 p-6">
+          <h3 class="text-lg font-bold text-cyan-800 dark:text-cyan-200 mb-2">Engineering Manager</h3>
+          <p class="text-sm text-cyan-700 dark:text-cyan-300 mb-3">Team-level delivery, quality, and developer experience. Your metrics answer: "Is my team shipping well and sustainably?"</p>
+          <p class="text-xs text-cyan-600 dark:text-cyan-400">Start with: Lead Time, Error Budget, DX Score, Code Review Turnaround, CFR</p>
+        </div>
+        <div class="rounded-xl border-2 border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/20 p-6">
+          <h3 class="text-lg font-bold text-orange-800 dark:text-orange-200 mb-2">Director / Senior Director</h3>
+          <p class="text-sm text-orange-700 dark:text-orange-300 mb-3">Portfolio-level retention, reliability, and strategic investment. Your metrics answer: "Is the org healthy and moving in the right direction?"</p>
+          <p class="text-xs text-orange-600 dark:text-orange-400">Start with: Attrition, SLO Compliance, DX Score, Investment Mix, AI Trust</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 2: Archetype Quick Diagnosis -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-lg font-bold shrink-0">2</span>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Identify Your Archetype</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        Answer 3 questions to narrow down your team's archetype. This determines which metrics matter most right now.
+      </p>
+
+      <div class="space-y-4">
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+          <div class="flex items-start gap-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold shrink-0">Q1</span>
+            <div>
+              <p class="text-sm font-semibold text-gray-900 dark:text-white mb-2">Is your team in crisis mode (firefighting, high attrition, SLOs undefined)?</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="rounded-lg bg-red-50 dark:bg-red-950/10 border border-red-200 dark:border-red-800 px-3 py-2">
+                  <span class="text-xs font-semibold text-red-600 dark:text-red-400">Yes → </span>
+                  <span class="text-xs text-red-700 dark:text-red-300">You're likely <a href="/metrics/archetypes/#foundational-challenges" class="underline font-medium">A7: Foundational Challenges</a>. Stabilize first.</span>
+                </div>
+                <div class="rounded-lg bg-green-50 dark:bg-green-950/10 border border-green-200 dark:border-green-800 px-3 py-2">
+                  <span class="text-xs font-semibold text-green-600 dark:text-green-400">No → </span>
+                  <span class="text-xs text-green-700 dark:text-green-300">Continue to Q2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+          <div class="flex items-start gap-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold shrink-0">Q2</span>
+            <div>
+              <p class="text-sm font-semibold text-gray-900 dark:text-white mb-2">Is your primary bottleneck technical debt / legacy architecture?</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="rounded-lg bg-red-50 dark:bg-red-950/10 border border-red-200 dark:border-red-800 px-3 py-2">
+                  <span class="text-xs font-semibold text-red-600 dark:text-red-400">Yes → </span>
+                  <span class="text-xs text-red-700 dark:text-red-300">You're likely <a href="/metrics/archetypes/#legacy-bottleneck" class="underline font-medium">A6: Legacy Bottleneck</a> or <a href="/metrics/archetypes/#stalled-transformation" class="underline font-medium">A10: Stalled Transformation</a>.</span>
+                </div>
+                <div class="rounded-lg bg-green-50 dark:bg-green-950/10 border border-green-200 dark:border-green-800 px-3 py-2">
+                  <span class="text-xs font-semibold text-green-600 dark:text-green-400">No → </span>
+                  <span class="text-xs text-green-700 dark:text-green-300">Continue to Q3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+          <div class="flex items-start gap-3">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold shrink-0">Q3</span>
+            <div>
+              <p class="text-sm font-semibold text-gray-900 dark:text-white mb-2">Are your DORA metrics in the "good" range (LT &lt;1 day, CFR &lt;5%)?</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="rounded-lg bg-blue-50 dark:bg-blue-950/10 border border-blue-200 dark:border-blue-800 px-3 py-2">
+                  <span class="text-xs font-semibold text-blue-600 dark:text-blue-400">Yes → </span>
+                  <span class="text-xs text-blue-700 dark:text-blue-300"><a href="/metrics/archetypes/#harmonious-high-achievers" class="underline font-medium">A1</a> or <a href="/metrics/archetypes/#pragmatic-performers" class="underline font-medium">A2</a>. Focus on optimization and AI adoption.</span>
+                </div>
+                <div class="rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 px-3 py-2">
+                  <span class="text-xs font-semibold text-amber-600 dark:text-amber-400">No → </span>
+                  <span class="text-xs text-amber-700 dark:text-amber-300"><a href="/metrics/archetypes/" class="underline font-medium">Browse all {archetypes.length} archetypes</a> to find your match (A3-A5, A8-A9).</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Starter Metrics -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-lg font-bold shrink-0">3</span>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Your Starter Metrics (Top 5)</h2>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        Start with these 5 metrics. Don't add more until each one is habitual and driving real decisions.
+      </p>
+
+      <div class="mb-4">
+        <div class="flex gap-2" id="role-tabs">
+          <button class="role-tab active px-4 py-2 rounded-lg text-sm font-medium bg-cyan-50 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300" data-role="em">
+            EM Top 5
+          </button>
+          <button class="role-tab px-4 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800" data-role="director">
+            Director Top 5
+          </button>
+        </div>
+      </div>
+
+      <div id="role-em" class="role-panel">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {emTop5.map((m, i) => m && (
+            <div class="relative">
+              <span class="absolute -top-2 -left-2 z-10 inline-flex items-center justify-center w-6 h-6 rounded-full bg-cyan-600 text-white text-xs font-bold">{i + 1}</span>
+              <MetricCard metric={m} />
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+          <a href="/metrics/quick-reference/" class="text-blue-600 dark:text-blue-400 hover:underline">See the full EM priority stack (15 metrics) &rarr;</a>
+        </p>
+      </div>
+
+      <div id="role-director" class="role-panel hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {directorTop5.map((m, i) => m && (
+            <div class="relative">
+              <span class="absolute -top-2 -left-2 z-10 inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-600 text-white text-xs font-bold">{i + 1}</span>
+              <MetricCard metric={m} />
+            </div>
+          ))}
+        </div>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+          <a href="/metrics/quick-reference/" class="text-blue-600 dark:text-blue-400 hover:underline">See the full Director priority stack (15 metrics) &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Step 4: First 90 Days -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-lg font-bold shrink-0">4</span>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Your First 90 Days</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 p-5">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider shrink-0 mt-0.5">Days 1-30</span>
+            <div>
+              <h3 class="text-sm font-bold text-blue-900 dark:text-blue-200 mb-2">Foundation</h3>
+              <ul class="text-sm text-blue-800 dark:text-blue-300 space-y-1 list-disc list-inside">
+                <li>Instrument Lead Time and CFR from your CI/CD pipeline</li>
+                <li>Run your first DX survey (5 questions, 10 minutes)</li>
+                <li>Identify your team archetype using the quiz above</li>
+                <li>Set up a basic dashboard with your top 3 metrics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/20 p-5">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold text-green-600 dark:text-green-400 uppercase tracking-wider shrink-0 mt-0.5">Days 31-60</span>
+            <div>
+              <h3 class="text-sm font-bold text-green-900 dark:text-green-200 mb-2">Habitual Measurement</h3>
+              <ul class="text-sm text-green-800 dark:text-green-300 space-y-1 list-disc list-inside">
+                <li>Review your dashboard weekly — are you making decisions from it?</li>
+                <li>Add mandatory pairs (CFR with Lead Time, DX Score with Commitment)</li>
+                <li>Run your first diagnostic chain when a metric triggers</li>
+                <li>Practice calibration language in your next sprint review</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/20 p-5">
+          <div class="flex items-start gap-3">
+            <span class="text-sm font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider shrink-0 mt-0.5">Days 61-90</span>
+            <div>
+              <h3 class="text-sm font-bold text-purple-900 dark:text-purple-200 mb-2">Expansion & Integration</h3>
+              <ul class="text-sm text-purple-800 dark:text-purple-300 space-y-1 list-disc list-inside">
+                <li>Add metrics 4-5 from your priority stack (only if 1-3 are habitual)</li>
+                <li>Set up error budgets if you haven't (SLO + SLI definition)</li>
+                <li>Present your first data-driven QBR or sprint review</li>
+                <li>Review archetype fit — has your team's pattern changed?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Workflow -->
+    <section class="mb-16">
+      <h2 class="section-heading">The Complete Workflow</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        The metrics framework is a connected system. Here's how the tools fit together:
+      </p>
+      <div class="space-y-3">
+        <div class="flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold shrink-0">1</span>
+          <div class="flex-1">
+            <a href="/metrics/archetypes/" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400">Diagnose your archetype</a>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Understand your team's systemic conditions before measuring</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </div>
+        <div class="flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold shrink-0">2</span>
+          <div class="flex-1">
+            <a href="/metrics/dashboards/" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400">Set up your dashboard</a>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Use the blueprint for your role with archetype-specific customization</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </div>
+        <div class="flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold shrink-0">3</span>
+          <div class="flex-1">
+            <a href="/metrics/quick-reference/" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400">Monitor metrics using priority stack</a>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Follow your role's priority stack — add metrics only when previous ones are habitual</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </div>
+        <div class="flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold shrink-0">4</span>
+          <div class="flex-1">
+            <a href="/metrics/diagnostics/" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400">Run diagnostic chains when triggered</a>
+            <p class="text-xs text-gray-500 dark:text-gray-400">When a metric breaches, follow the step-by-step investigation flow</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </div>
+        <div class="flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold shrink-0">5</span>
+          <div class="flex-1">
+            <a href="/metrics/language-bank/" class="text-sm font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400">Communicate using calibration language</a>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Use the templates for sprint reviews, QBRs, promotion packets, and budget discussions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6 text-center">
+      <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Ready to dive deeper?</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Browse the full metrics reference or explore by archetype for tailored recommendations.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/metrics/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+          Browse All Metrics
+        </a>
+        <a href="/metrics/by-archetype/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          Metrics by Archetype
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b20 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  :global(.dark) .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b10 1px, transparent 1px);
+  }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll('.role-tab');
+  const panels = document.querySelectorAll('.role-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const role = (tab as HTMLElement).dataset.role;
+      tabs.forEach(t => {
+        t.classList.remove('active', 'bg-cyan-50', 'text-cyan-700', 'dark:bg-cyan-900/30', 'dark:text-cyan-300', 'bg-orange-50', 'text-orange-700', 'dark:bg-orange-900/30', 'dark:text-orange-300');
+        t.classList.add('text-gray-500', 'hover:bg-gray-100', 'dark:text-gray-400', 'dark:hover:bg-gray-800');
+      });
+      if (role === 'em') {
+        tab.classList.add('active', 'bg-cyan-50', 'text-cyan-700', 'dark:bg-cyan-900/30', 'dark:text-cyan-300');
+      } else {
+        tab.classList.add('active', 'bg-orange-50', 'text-orange-700', 'dark:bg-orange-900/30', 'dark:text-orange-300');
+      }
+      tab.classList.remove('text-gray-500', 'hover:bg-gray-100', 'dark:text-gray-400', 'dark:hover:bg-gray-800');
+
+      panels.forEach(panel => {
+        if ((panel as HTMLElement).id === `role-${role}`) {
+          panel.classList.remove('hidden');
+        } else {
+          panel.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>

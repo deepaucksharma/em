@@ -1,0 +1,3106 @@
+[
+  {
+    "id": "1.2",
+    "name": "Lead Time for Changes",
+    "slug": "lead-time-for-changes",
+    "category": "DORA",
+    "tier": "primary",
+    "type": "causal",
+    "description": "Most actionable DORA metric. Measures time from first commit to production deployment. Decomposes into fixable stages: review wait, build/test, deploy queue. Improving Lead Time naturally improves Deploy Frequency as a side effect.",
+    "emRank": {
+      "priority": "T3",
+      "rank": 1
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 8
+    },
+    "mandatoryPairIds": [
+      "1.4",
+      "3.3",
+      "AI-3"
+    ],
+    "cadence": "weekly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 1,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: instrument CI/CD timestamps for each stage",
+    "replaces": "Velocity (story points/sprint), Tickets closed/sprint",
+    "whyThisTier": "Most actionable DORA metric. Decomposes into fixable stages (review wait, build, deploy queue). The causal metric in the DORA family — improving LT naturally improves DF as a side effect.",
+    "goodRange": "< 1 day",
+    "warningRange": "1-7 days",
+    "dangerRange": "> 7 days",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O1",
+      "C4-O3"
+    ],
+    "emTier": "primary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI compresses coding stage but inflates review stage. Decomposition becomes more critical, not less. Track \"AI-assisted\" vs \"human-authored\" LT separately where possible.",
+    "decisionRule": "LT >7 days → decompose into review wait, build, deploy queue stages and investigate the longest pole. LT >1 day → track trend weekly."
+  },
+  {
+    "id": "1.4",
+    "name": "Change Failure Rate",
+    "slug": "change-failure-rate",
+    "category": "DORA",
+    "tier": "primary",
+    "type": "lagging",
+    "description": "Percentage of deployments causing failures requiring remediation. Essential quality counterweight to velocity. Without CFR, faster shipping might mean faster breaking. Directly tied to user impact and less gameable than bug counts.",
+    "emRank": {
+      "priority": "C",
+      "rank": 4
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 12
+    },
+    "mandatoryPairIds": [
+      "1.2",
+      "1.1",
+      "5.9",
+      "AI-1",
+      "AI-2"
+    ],
+    "cadence": "weekly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 1,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: tag failed deploys in CI/CD, link incidents to changes",
+    "replaces": "Bug count, Defects per sprint",
+    "whyThisTier": "Primary: essential quality counterweight to velocity. Without CFR, faster shipping might mean faster breaking. Less gameable than bug counts and directly tied to user impact.",
+    "goodRange": "< 5%",
+    "warningRange": "5-15%",
+    "dangerRange": "> 15%",
+    "capabilityIds": [
+      "C4",
+      "C5",
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O1",
+      "C5-O1"
+    ],
+    "emTier": "primary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI-generated code that passes syntax but fails under production load increases CFR. Monitor CFR specifically for AI-assisted PRs vs human PRs. Bug rates climb 9% with scaled AI adoption (Faros AI, 2024).",
+    "decisionRule": "CFR >15% → freeze features and investigate root causes by deployment type. CFR >5% → pair with escaped defects to identify testing gaps."
+  },
+  {
+    "id": "3.3",
+    "name": "Error Budget Remaining + Burn Rate",
+    "slug": "error-budget-burn-rate",
+    "category": "Reliability",
+    "tier": "primary",
+    "type": "leading",
+    "description": "The single best arbitration tool between velocity and reliability. Budget remaining tells you whether to ship freely or freeze and fix. Burn rate shows how fast reliability is degrading. Turns political arguments into math and forces SLI/SLO discipline as prerequisite.",
+    "emRank": {
+      "priority": "T3",
+      "rank": 2
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 6
+    },
+    "mandatoryPairIds": [
+      "1.2",
+      "1.1"
+    ],
+    "cadence": "continuous",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "high",
+    "implementationNotes": "4-8 wks: requires SLO/error budget infrastructure, then compute remaining and burn rate",
+    "replaces": "Uptime % without policy, Gut-feel reliability arguments",
+    "whyThisTier": "The single best arbitration tool between velocity and reliability. Budget remaining → ship freely. Budget exhausted → freeze and fix. Turns political arguments into math.",
+    "goodRange": "> 50% remaining, < 1x burn",
+    "warningRange": "10-50% remaining, 1-3x burn",
+    "dangerRange": "< 10% remaining, > 3x burn",
+    "capabilityIds": [
+      "C5",
+      "C8",
+      "C9"
+    ],
+    "observableIds": [
+      "C5-O3",
+      "C8-O2"
+    ],
+    "emTier": "primary",
+    "directorTier": "secondary",
+    "aiEraImpact": "As AI increases deploy volume, error budget burns faster per unit time. Burn rate alerting becomes more critical. Teams with AI-inflated DF must watch burn rate at higher cadence.",
+    "decisionRule": "Budget <10% remaining → feature freeze until budget recovers. Burn rate >3x → immediate incident review. >50% remaining → ship freely."
+  },
+  {
+    "id": "3.5",
+    "name": "SLO Compliance Rate",
+    "slug": "slo-compliance-rate",
+    "category": "Reliability",
+    "tier": "primary",
+    "type": "lagging",
+    "description": "The Director's reliability scorecard. Answers: 'Which services are chronically unreliable?' Drives investment decisions across the org. Policy-based, not political. Replaces vanity uptime numbers with customer-meaningful thresholds.",
+    "emRank": {
+      "priority": "C",
+      "rank": 7
+    },
+    "directorRank": {
+      "priority": "T3",
+      "rank": 2
+    },
+    "mandatoryPairIds": [
+      "8.4"
+    ],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "high",
+    "implementationNotes": "4-8 wks: define SLOs per service, instrument SLIs, build compliance dashboard",
+    "replaces": "Uptime %, Incident count as reliability measure",
+    "whyThisTier": "The Director's reliability scorecard. Answers: 'Which services are chronically unreliable?' Drives investment decisions across the org. Policy-based, not political.",
+    "goodRange": "> 97% of SLOs met",
+    "warningRange": "94-97% met",
+    "dangerRange": "< 94% met",
+    "capabilityIds": [
+      "C5",
+      "C8",
+      "C9"
+    ],
+    "observableIds": [
+      "C5-O1",
+      "C5-O3",
+      "C8-O2"
+    ],
+    "emTier": "secondary",
+    "directorTier": "primary",
+    "aiEraImpact": "AI doesn't change SLO compliance directly — it changes the rate at which you approach or breach SLOs through higher change volume.",
+    "decisionRule": "SLO compliance <94% → escalate to Director for investment decision. 94-97% → team-level remediation. >97% → maintain and optimize."
+  },
+  {
+    "id": "5.1",
+    "name": "Developer Satisfaction Score",
+    "slug": "developer-satisfaction-score",
+    "category": "DevEx",
+    "tier": "primary",
+    "type": "leading",
+    "description": "Only cheap, reliable leading indicator of attrition, velocity decline, and quality erosion. 5 questions, 10 minutes, quarterly. Every other people metric is lagging. Highest ROI people measurement.",
+    "emRank": {
+      "priority": "T3",
+      "rank": 3
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 5
+    },
+    "mandatoryPairIds": [
+      "2.5",
+      "7.1",
+      "5.9",
+      "7.9"
+    ],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 1,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: design survey (DX Core 4 framework), deploy quarterly, track trends",
+    "replaces": "Anecdotal 'vibes', Surprise attrition",
+    "whyThisTier": "Only cheap, reliable leading indicator of attrition, velocity decline, and quality erosion. 5 questions, 10 minutes, quarterly. Highest ROI people measurement.",
+    "goodRange": "> 4.0/5.0",
+    "warningRange": "3.0-4.0",
+    "dangerRange": "< 3.0",
+    "capabilityIds": [
+      "C6",
+      "C7",
+      "C9",
+      "C12"
+    ],
+    "observableIds": [
+      "C6-O3",
+      "C7-O1",
+      "C7-O3"
+    ],
+    "emTier": "primary",
+    "directorTier": "secondary",
+    "aiEraImpact": "Add AI-specific questions: 'AI tools help me move faster' and 'I trust the code AI generates.' 30% of developers report little trust in AI output (METR RCT, 2024). Research shows 1-point DX improvement ≈ 13 min/week saved per engineer.",
+    "decisionRule": "DX Score <3.0 → urgent intervention required, investigate toil and on-call burden. 3.0-4.0 → targeted improvement on top pain point. >4.0 → maintain."
+  },
+  {
+    "id": "7.1",
+    "name": "Regrettable Attrition Rate",
+    "slug": "regrettable-attrition-rate",
+    "category": "People",
+    "tier": "primary",
+    "type": "lagging",
+    "description": "A single regrettable departure costs $200K-$500K+. The rate alone is insufficient; pattern analysis (themes from exits by team/level/tenure) predicts and prevents the next one. Directors have most leverage here; EMs provide context.",
+    "emRank": {
+      "priority": "C",
+      "rank": 19
+    },
+    "directorRank": {
+      "priority": "T3",
+      "rank": 1
+    },
+    "mandatoryPairIds": [
+      "5.1",
+      "7.8"
+    ],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: work with HR to classify departures as regrettable/non-regrettable, code exit interviews",
+    "replaces": "Total attrition rate (unclassified)",
+    "whyThisTier": "A single regrettable departure costs $200K-$500K+. Pattern analysis predicts and prevents the next one. The ultimate people signal.",
+    "goodRange": "< 5% annually",
+    "warningRange": "5-10% annually",
+    "dangerRange": "> 10% annually",
+    "capabilityIds": [
+      "C7",
+      "C9",
+      "C12",
+      "C14"
+    ],
+    "observableIds": [
+      "C7-O2",
+      "C12-O1"
+    ],
+    "emTier": "secondary",
+    "directorTier": "primary",
+    "aiEraImpact": "AI reshapes attrition patterns: engineers who can't use AI tools leave for companies that provide them; engineers overwhelmed by AI-induced pace leave for calmer environments. Track whether AI adoption correlates with attrition in exit interviews.",
+    "decisionRule": "Attrition >10% → emergency retention review with HR. 5-10% → classify departures and target root causes. <5% → pattern analysis for prevention."
+  },
+  {
+    "id": "8.4",
+    "name": "Engineering Investment Mix",
+    "slug": "engineering-investment-mix",
+    "category": "Strategy",
+    "tier": "primary",
+    "type": "structural",
+    "description": "Answers 'where does our capacity actually go?' (features vs reliability vs debt vs security). Without this, Directors cannot defend budget, justify headcount, or explain why the roadmap takes longer than expected.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 20
+    },
+    "directorRank": {
+      "priority": "T3",
+      "rank": 3
+    },
+    "mandatoryPairIds": [
+      "8.2",
+      "8.1",
+      "3.5"
+    ],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: tag all work items by category (feature/reliability/debt/security), compute percentages",
+    "replaces": "No portfolio view, Accidental allocation driven by whoever shouts loudest",
+    "whyThisTier": "Answers 'where does our capacity actually go?' Without this, Directors cannot defend budget, justify headcount, or explain why the roadmap takes longer than expected.",
+    "goodRange": "Intentional and balanced",
+    "warningRange": "> 40% in any single category",
+    "dangerRange": "> 60% KTLO or unknown",
+    "capabilityIds": [
+      "C1",
+      "C2",
+      "C9",
+      "C10"
+    ],
+    "observableIds": [
+      "C1-O1",
+      "C1-O2",
+      "C2-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "primary",
+    "aiEraImpact": "AI shifts the investment mix: coding-phase acceleration frees capacity, but verification, security scanning, and review overhead may consume the gains. Track whether AI adoption actually increases feature allocation or just shifts work to different categories.",
+    "decisionRule": "Tech debt >40% of capacity → ring-fence modernization budget. Features >80% → sustainability risk. Review quarterly against 15-20% debt target."
+  },
+  {
+    "id": "8.2",
+    "name": "Revenue / Business Impact Attribution",
+    "slug": "business-impact-attribution",
+    "category": "Strategy",
+    "tier": "primary",
+    "type": "lagging",
+    "description": "How Directors justify their org's existence. Maps specific engineering work to specific business outcomes. Without it, you're at the mercy of whoever frames the narrative.",
+    "emRank": {
+      "priority": "M",
+      "rank": 21
+    },
+    "directorRank": {
+      "priority": "T3",
+      "rank": 4
+    },
+    "mandatoryPairIds": [
+      "8.4"
+    ],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 3,
+    "implementationEffort": "high",
+    "implementationNotes": "4-8 wks: partner with data science to attribute eng changes to business metrics",
+    "replaces": "Topline revenue as eng metric, NPS owned solely by eng",
+    "whyThisTier": "How Directors justify their org's existence. Maps specific engineering work to specific business outcomes. Without it, you're at the mercy of whoever frames the narrative.",
+    "goodRange": "> 60% attributable",
+    "warningRange": "30-60% attributable",
+    "dangerRange": "< 30% attributable",
+    "capabilityIds": [
+      "C1",
+      "C2",
+      "C3",
+      "C9"
+    ],
+    "observableIds": [
+      "C1-O1",
+      "C3-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "primary",
+    "aiEraImpact": "AI makes attribution harder: when AI generates code and humans verify, who gets credit? Focus attribution on outcomes (business metric movement), not effort (who wrote the code). AI amplifies the need for clear OKR-to-work-item linking.",
+    "decisionRule": "<30% attributable impact → strengthen outcome tracking. >60% → communicate wins aggressively. Track per-initiative, not aggregate."
+  },
+  {
+    "id": "2.5",
+    "name": "Sprint Commitment Accuracy",
+    "slug": "sprint-commitment-accuracy",
+    "category": "Flow",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Best proxy for predictability. 85%+ accuracy earns trust, autonomy, fewer 'when?' questions. Not primary because it's a planning metric, not a delivery system metric — it tells you how well you forecast, not how fast you ship.",
+    "emRank": {
+      "priority": "C",
+      "rank": 5
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 7
+    },
+    "mandatoryPairIds": ["5.1"],
+    "cadence": "per-sprint",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 1,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: define sprint goals explicitly, track binary hit/miss each sprint",
+    "replaces": "Velocity (story points/sprint) as KPI",
+    "whyThisTier": "Best proxy for predictability. Not primary because it's a planning metric — tells you how well you forecast, not how fast you ship.",
+    "goodRange": "> 85%",
+    "warningRange": "70-85%",
+    "dangerRange": "< 70%",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C4-O1"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI can improve estimation accuracy (historical analysis) but can also create false confidence. Track whether AI-estimated tickets actually land on time.",
+    "decisionRule": "Commitment <70% for 3+ sprints → investigate estimation process and interrupt patterns. 85%+ → earning trust and autonomy."
+  },
+  {
+    "id": "1.3",
+    "name": "Mean Time to Restore",
+    "slug": "mean-time-to-restore",
+    "category": "DORA",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Important but reactive. You can't improve it without incidents to practice on. Heavily influenced by cross-team factors (observability, rollback infra). Primary for incident response maturity, secondary as an ongoing health metric.",
+    "emRank": {
+      "priority": "C",
+      "rank": 10
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 18
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-incident",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 1,
+    "implementationEffort": "medium",
+    "implementationNotes": "1-2 wks: join deploy events with incident data",
+    "replaces": "Time to acknowledge (not restore)",
+    "whyThisTier": "Important but reactive. Can't improve without incidents to practice on. Primary for incident response maturity, secondary as ongoing health metric.",
+    "goodRange": "< 1 hour",
+    "warningRange": "1-4 hours",
+    "dangerRange": "> 4 hours",
+    "capabilityIds": [
+      "C5",
+      "C8",
+      "C9"
+    ],
+    "observableIds": [
+      "C5-O2",
+      "C8-O1"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI can accelerate incident diagnosis (log analysis, pattern matching) but cannot replace judgment on blast radius and rollback decisions.",
+    "decisionRule": "MTTR >4h → review incident response runbooks and on-call coverage. Track by service to identify chronic responders."
+  },
+  {
+    "id": "5.6",
+    "name": "On-Call Burden",
+    "slug": "on-call-burden",
+    "category": "DevEx",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Fastest path to burnout and attrition. Outsized impact on affected engineers. Not primary because not all teams have significant on-call, and it doesn't aggregate well to org level.",
+    "emRank": {
+      "priority": "C",
+      "rank": 6
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 16
+    },
+    "mandatoryPairIds": ["7.9"],
+    "cadence": "per-rotation",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 day: extract from PagerDuty/OpsGenie API, compute per-rotation stats",
+    "replaces": "",
+    "whyThisTier": "Fastest path to burnout and attrition. Not primary because not all teams have significant on-call, and it doesn't aggregate well to org level.",
+    "goodRange": "< 2 pages/shift, < 10% after-hours",
+    "warningRange": "2-5 pages/shift",
+    "dangerRange": "> 5 pages/shift",
+    "capabilityIds": [
+      "C5",
+      "C7"
+    ],
+    "observableIds": [
+      "C5-O4",
+      "C7-O2"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI-driven alerting can reduce noise, but AI-inflated deploy volume may increase incident frequency. Track 'interruptions per on-call shift.'",
+    "decisionRule": "On-call burden >25% of team capacity → redesign rotation or invest in automation. Track pages/shift, not just rotation."
+  },
+  {
+    "id": "3.1",
+    "name": "SLI Definition",
+    "slug": "sli-definition",
+    "category": "Reliability",
+    "tier": "secondary",
+    "type": "structural",
+    "description": "Essential foundation for error budgets and SLO compliance. The work is in getting the SLI right — choosing user-centric indicators that reflect real customer experience. Once defined correctly, SLIs disappear into the SLO.",
+    "emRank": {
+      "priority": "M",
+      "rank": 22
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 20
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly-review",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "high",
+    "implementationNotes": "2-4 wks per service: define user-centric SLIs, instrument measurement",
+    "replaces": "Uptime % without defined measurement",
+    "whyThisTier": "Essential foundation but a definition exercise, not an ongoing dashboard concern. Once defined correctly, you track SLOs and error budgets, not raw SLIs.",
+    "goodRange": "All critical services have defined SLIs",
+    "warningRange": "Some services missing SLIs",
+    "dangerRange": "No SLIs defined",
+    "capabilityIds": [
+      "C5",
+      "C8"
+    ],
+    "observableIds": [
+      "C5-O3"
+    ],
+    "emTier": "structural",
+    "directorTier": "structural",
+    "aiEraImpact": "Unchanged by AI. The definition exercise is human judgment about what matters to users.",
+    "decisionRule": "Use as prerequisite check for SLO compliance. No SLIs defined → cannot measure SLOs. Track definition completeness per service."
+  },
+  {
+    "id": "3.2",
+    "name": "SLO Target",
+    "slug": "slo-target",
+    "category": "Reliability",
+    "tier": "secondary",
+    "type": "structural",
+    "description": "SLO targets negotiated with product and SRE. The prerequisite for error budgets. Without defined targets, reliability arguments remain political rather than mathematical.",
+    "emRank": {
+      "priority": "M",
+      "rank": 23
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 21
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly-review",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: negotiate targets with PM, document per service tier",
+    "replaces": "",
+    "whyThisTier": "Prerequisite for error budget tracking. Once defined, you track compliance and budget, not the target itself.",
+    "goodRange": "All services have agreed SLO targets",
+    "warningRange": "Some services missing targets",
+    "dangerRange": "No SLO targets defined",
+    "capabilityIds": [
+      "C5",
+      "C8"
+    ],
+    "observableIds": [
+      "C5-O3"
+    ],
+    "emTier": "structural",
+    "directorTier": "structural",
+    "aiEraImpact": "Unchanged by AI. The definition exercise is human judgment about what matters to users.",
+    "decisionRule": "Use as prerequisite check for error budgets. SLOs undefined → error budgets are meaningless. Track per-service coverage."
+  },
+  {
+    "id": "3.6",
+    "name": "Incident Rate by Severity",
+    "slug": "incident-rate-by-severity",
+    "category": "Reliability",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Useful trend but poor primary metric: influenced by classification standards, doesn't capture impact (1 SEV1 > 50 SEV3s), doesn't prescribe action. Best used as context alongside SLO compliance.",
+    "emRank": {
+      "priority": "D",
+      "rank": 14
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 11
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: aggregate from incident management tool with severity tags",
+    "replaces": "Total incident count (ignoring severity)",
+    "whyThisTier": "Tertiary for EMs (felt directly), secondary for Directors (heat map across services). Classification standards vary, making cross-team comparison unreliable without normalization.",
+    "goodRange": "Decreasing trend",
+    "warningRange": "Flat trend",
+    "dangerRange": "Increasing trend",
+    "capabilityIds": [
+      "C5",
+      "C8"
+    ],
+    "observableIds": [
+      "C5-O1",
+      "C8-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "secondary",
+    "aiEraImpact": "If AI increases code volume without proportionate test coverage, incident rate will climb. Correlate incident rate with % AI-authored code to detect this.",
+    "decisionRule": "Use only as context for SLO compliance; never as standalone KPI. Rising incident rate + stable SLOs → incidents are minor. Rising rate + falling SLOs → escalate."
+  },
+  {
+    "id": "8.1",
+    "name": "OKR Achievement Rate",
+    "slug": "okr-achievement-rate",
+    "category": "Strategy",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Primary alignment tool, but achievement rate is secondary as a metric because: OKR quality varies wildly, percentage is influenced by target aggressiveness, and the value of OKRs is in the process, not the score.",
+    "emRank": {
+      "priority": "C",
+      "rank": 8
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 7
+    },
+    "mandatoryPairIds": ["8.4"],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "Ongoing per quarter: write outcome-oriented OKRs with measurable KRs, score quarterly",
+    "replaces": "Feature completion %",
+    "whyThisTier": "Primary alignment tool but secondary as a metric: OKR quality varies, % influenced by target aggressiveness, value is in the process not the score.",
+    "goodRange": "60-80% (stretch goals)",
+    "warningRange": "< 40% or > 90%",
+    "dangerRange": "< 20% or 100% (sandbagging)",
+    "capabilityIds": [
+      "C1",
+      "C2",
+      "C3",
+      "C9"
+    ],
+    "observableIds": [
+      "C1-O1",
+      "C2-O1",
+      "C3-O2"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI shifts OKR assumptions: coding acceleration changes what's achievable per quarter. Teams setting OKRs with pre-AI baselines may systematically under- or over-commit. Recalibrate velocity assumptions quarterly.",
+    "decisionRule": "Use as alignment signal, not performance metric. Achievement <50% → investigate if OKRs are driving behavior. Value is in the process, not the score."
+  },
+  {
+    "id": "5.4",
+    "name": "Code Review Turnaround Time",
+    "slug": "code-review-turnaround-time",
+    "category": "DevEx",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Hidden tax on velocity — often 40-60% of Lead Time. Secondary because better decomposed from Lead Time than tracked independently; can be gamed with rubber-stamp fast reviews.",
+    "emRank": {
+      "priority": "D",
+      "rank": 9
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 15
+    },
+    "mandatoryPairIds": [
+      "6.2",
+      "AI-1",
+      "AI-3"
+    ],
+    "cadence": "weekly",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: extract from GitHub/GitLab PR analytics",
+    "replaces": "",
+    "whyThisTier": "Hidden tax on velocity (often 40-60% of Lead Time). Secondary because better decomposed from Lead Time than tracked independently.",
+    "goodRange": "< 4 hours",
+    "warningRange": "4-24 hours",
+    "dangerRange": "> 24 hours",
+    "capabilityIds": [
+      "C4",
+      "C7"
+    ],
+    "observableIds": [
+      "C4-O3"
+    ],
+    "emTier": "secondary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "The AI verification bottleneck. AI adoption drives 154% larger PRs and 91% longer review times (Faros AI, 2024). Review turnaround is now the #1 leading indicator of AI-era delivery degradation.",
+    "decisionRule": "Review turnaround >24h → biggest bottleneck in Lead Time. Investigate review load distribution and PR size. Pair with PR Size (6.2)."
+  },
+  {
+    "id": "2.6",
+    "name": "Blocked Work Rate",
+    "slug": "blocked-work-rate",
+    "category": "Flow",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Best diagnostic for cross-team dependency problems. Secondary because requires disciplined tracking, causes often outside EM control, overlaps with Lead Time decomposition. Most valuable for architectural/reorg arguments.",
+    "emRank": {
+      "priority": "D",
+      "rank": 11
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 9
+    },
+    "mandatoryPairIds": [],
+    "cadence": "weekly",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: track blocked status in project tool, categorize blockers",
+    "replaces": "",
+    "whyThisTier": "Best diagnostic for cross-team dependency problems. Most valuable for architectural/reorg arguments.",
+    "goodRange": "< 10%",
+    "warningRange": "10-25%",
+    "dangerRange": "> 25%",
+    "capabilityIds": [
+      "C1",
+      "C4"
+    ],
+    "observableIds": [
+      "C1-O3"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI doesn't fix organizational dependencies. If blocked rate is high, AI just helps engineers spin up more parallel WIP — making the problem worse.",
+    "decisionRule": ">20% blocked → investigate cross-team dependencies and architectural coupling. Escalate blockers that persist >3 days."
+  },
+  {
+    "id": "7.8",
+    "name": "eNPS / Engagement Score",
+    "slug": "enps-engagement-score",
+    "category": "People",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Macro canary metric for organizational health. eNPS <0 requires immediate investigation. However, too coarse to act on alone — a single number hides whether the problem is compensation, management, tooling, or growth opportunities. Always pair with DX Score (5.1) for specificity and exit interview themes for root cause.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 15
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 9
+    },
+    "mandatoryPairIds": ["7.1"],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: add 1-question survey to quarterly pulse",
+    "replaces": "",
+    "whyThisTier": "Useful macro trend (canary in coal mine). Secondary because too coarse to act on, moves slowly, influenced by factors outside your control.",
+    "goodRange": "> 30",
+    "warningRange": "0-30",
+    "dangerRange": "< 0",
+    "capabilityIds": [
+      "C7",
+      "C12"
+    ],
+    "observableIds": [
+      "C12-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI adoption creates bimodal engagement: power users report higher satisfaction while skeptics and those in verification-heavy roles report lower. Segment eNPS by AI adoption level to identify whether AI is helping or hurting overall engagement.",
+    "decisionRule": "eNPS <0 → investigate immediately. 0-30 → targeted improvement. Too coarse to act on alone — pair with DX Score for specificity."
+  },
+  {
+    "id": "10.1",
+    "name": "Cloud Cost per Transaction/User",
+    "slug": "cloud-cost-per-transaction",
+    "category": "Cost",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Only cost metric that makes sense at scale because it normalizes for growth. Secondary overall because cost optimization that degrades reliability or velocity is a false economy. Fix delivery and reliability first.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 16
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 10
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 4,
+    "implementationEffort": "high",
+    "implementationNotes": "4-8 wks: map infra costs to services, define business transaction units, normalize for growth",
+    "replaces": "Absolute cloud spend (not normalized for growth)",
+    "whyThisTier": "Only cost metric that makes sense at scale. Secondary because cost optimization that degrades reliability or velocity is a false economy.",
+    "goodRange": "Decreasing trend",
+    "warningRange": "Flat trend",
+    "dangerRange": "Increasing trend",
+    "capabilityIds": [
+      "C1",
+      "C9",
+      "C10"
+    ],
+    "observableIds": [
+      "C1-O6",
+      "C9-O5"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI tooling adds infrastructure cost (API calls, compute for code generation, security scanning). Track AI tooling cost as a line item and compare against delivery improvement to determine true ROI.",
+    "decisionRule": "Cost/transaction rising → check infrastructure utilization and architecture efficiency. Normalize for growth before alarming."
+  },
+  {
+    "id": "3.7",
+    "name": "Post-Incident Action Item Completion Rate",
+    "slug": "post-incident-action-item-completion-rate",
+    "category": "Reliability",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Process discipline metric. Secondary because completion without quality is hollow, and the effect of good follow-through shows up in declining incident rate and improving SLO compliance.",
+    "emRank": {
+      "priority": "M",
+      "rank": 18
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 14
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: track postmortem action items in issue tracker with due dates and SLAs",
+    "replaces": "",
+    "whyThisTier": "Process discipline metric. Completion without quality is hollow. Effect of good follow-through shows up in declining incident rate and improving SLO compliance.",
+    "goodRange": "> 90% on time",
+    "warningRange": "70-90% on time",
+    "dangerRange": "< 70% on time",
+    "capabilityIds": [
+      "C5",
+      "C8",
+      "C9"
+    ],
+    "observableIds": [
+      "C5-O2",
+      "C5-O4",
+      "C8-O3"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI can help draft action items and runbooks, but follow-through is a human discipline problem.",
+    "decisionRule": "Completion <80% → follow-through failure causing repeat incidents. Track by team to find accountability gaps."
+  },
+  {
+    "id": "9.1",
+    "name": "Vulnerability Remediation Time",
+    "slug": "vulnerability-remediation-time",
+    "category": "Security",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Only continuously relevant security metric. Secondary overall because managed through organizational process rather than sprint-level decisions. But Critical SLA (<24hrs) is non-negotiable.",
+    "emRank": {
+      "priority": "D",
+      "rank": 17
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 13
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: define SLAs by severity, track from security scanning tool",
+    "replaces": "Number of open vulnerabilities (without time dimension)",
+    "whyThisTier": "Only continuously relevant security metric. Critical SLA (<24hrs) is non-negotiable.",
+    "goodRange": "Critical < 24hrs, High < 7d",
+    "warningRange": "Critical 1-3d, High 7-30d",
+    "dangerRange": "Critical > 3d, High > 30d",
+    "capabilityIds": [
+      "C5",
+      "C9",
+      "C13"
+    ],
+    "observableIds": [
+      "C13-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI-generated code may introduce novel vulnerability patterns not caught by standard scanners. Critical SLA (<24hrs) is non-negotiable.",
+    "decisionRule": "Critical vulns >7 days unpatched → non-negotiable escalation. High >30 days → review capacity allocation for security."
+  },
+  {
+    "id": "4.3",
+    "name": "Rollback Rate",
+    "slug": "rollback-rate",
+    "category": "Quality",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Most unambiguous quality signal — either you rolled back or you didn't. Secondary because all quality metrics are lagging, and CFR + error budget are better leading signals.",
+    "emRank": {
+      "priority": "D",
+      "rank": 12
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 19
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: tag rollback deploys in CI/CD, calculate rate per deployment",
+    "replaces": "Bug reopen rate",
+    "whyThisTier": "Most unambiguous quality signal. Secondary because CFR + error budget are better leading signals.",
+    "goodRange": "< 2%",
+    "warningRange": "2-5%",
+    "dangerRange": "> 5%",
+    "capabilityIds": [
+      "C4",
+      "C5",
+      "C8"
+    ],
+    "observableIds": [
+      "C4-O5",
+      "C5-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "Track rollback rate for AI-assisted vs human-authored deploys. If AI deploys roll back at higher rates, verification processes for AI code are insufficient.",
+    "decisionRule": "Rollback rate >10% → investigate deployment pipeline and testing adequacy. Frequent rollbacks signal systemic quality issues."
+  },
+  {
+    "id": "5.2",
+    "name": "Developer Toil Hours",
+    "slug": "developer-toil-hours",
+    "category": "DevEx",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Valuable for justifying platform/automation investment. Secondary because relies on self-reporting (inconsistent), impact shows up in DX scores and velocity more reliably, and 'toil' is subjective. Best used for specific business cases.",
+    "emRank": {
+      "priority": "M",
+      "rank": 13
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 17
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: self-report process, categorize toil sources",
+    "replaces": "% time spent coding (which penalizes mentoring, design, review)",
+    "whyThisTier": "Valuable for justifying platform/automation investment. Relies on self-reporting, impact shows up in DX scores and velocity more reliably.",
+    "goodRange": "< 10% of time",
+    "warningRange": "10-25%",
+    "dangerRange": "> 25%",
+    "capabilityIds": [
+      "C7",
+      "C9"
+    ],
+    "observableIds": [
+      "C7-O1",
+      "C9-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI can automate some toil (boilerplate, data migration scripts). Track toil reduction from AI vs new toil created by AI (prompt engineering, output verification).",
+    "decisionRule": ">30% toil → justify automation investment. Track trend quarterly. Declining toil is a leading indicator of improved velocity."
+  },
+  {
+    "id": "1.1",
+    "name": "Deployment Frequency",
+    "slug": "deployment-frequency",
+    "category": "DORA",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Most cited DORA metric but least useful as a primary: most gameable (split deploys), lagging indicator of Lead Time (LT improves → DF rises naturally), varies wildly by architecture. DF is a side effect of good Lead Time, not a goal.",
+    "emRank": {
+      "priority": "M",
+      "rank": 25
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 25
+    },
+    "mandatoryPairIds": ["1.4", "3.3"],
+    "cadence": "weekly",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 1,
+    "implementationEffort": "low",
+    "implementationNotes": "Already tracked via CI/CD; instrument timestamps alongside Lead Time",
+    "replaces": "",
+    "whyThisTier": "Most gameable DORA metric. Lagging indicator of Lead Time — when LT improves, DF rises naturally. DF is a side effect of good Lead Time, not a goal.",
+    "goodRange": "> 1/day per team",
+    "warningRange": "1/week - 1/day",
+    "dangerRange": "< 1/week",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI inflates DF by accelerating code production. High DF + rising CFR = 'shipping AI garbage fast.' Most gameable DORA metric.",
+    "decisionRule": "Diagnostic only — investigate when flagged by Lead Time or CFR anomalies. Do not use as standalone target."
+  },
+  {
+    "id": "2.1",
+    "name": "Flow Time",
+    "slug": "flow-time",
+    "category": "Flow",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Overlaps with DORA Lead Time. Adds value only when you need to distinguish queue time from active work time. Keep in toolkit for deep dives, not on main dashboard.",
+    "emRank": {
+      "priority": "D",
+      "rank": 26
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 26
+    },
+    "mandatoryPairIds": [
+      "4.4"
+    ],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: requires detailed state transition timestamps in project tool",
+    "replaces": "",
+    "whyThisTier": "Overlaps with DORA Lead Time. Adds value only when you need to distinguish queue time from active work time.",
+    "goodRange": "< 2 days active time",
+    "warningRange": "2-5 days",
+    "dangerRange": "> 5 days",
+    "capabilityIds": [
+      "C4"
+    ],
+    "observableIds": [
+      "C4-O1",
+      "C4-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "Useful for distinguishing queue time (AI can't fix) from active work time (AI can compress).",
+    "decisionRule": "Diagnostic only — investigate when flagged by primary delivery metrics. Use to identify flow bottlenecks."
+  },
+  {
+    "id": "2.3",
+    "name": "Cycle Time",
+    "slug": "cycle-time",
+    "category": "Flow",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Useful for estimation calibration but less powerful than Lead Time because it doesn't capture the deploy pipeline.",
+    "emRank": {
+      "priority": "D",
+      "rank": 27
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 27
+    },
+    "mandatoryPairIds": [],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: calculate from ticket state transitions",
+    "replaces": "",
+    "whyThisTier": "Useful for estimation but less powerful than Lead Time because it doesn't capture the deploy pipeline.",
+    "goodRange": "< 2 days",
+    "warningRange": "2-7 days",
+    "dangerRange": "> 7 days",
+    "capabilityIds": [
+      "C4"
+    ],
+    "observableIds": [
+      "C4-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "Useful for distinguishing queue time (AI can't fix) from active work time (AI can compress).",
+    "decisionRule": "Diagnostic only — investigate when flagged by primary delivery metrics."
+  },
+  {
+    "id": "2.4",
+    "name": "Throughput",
+    "slug": "throughput",
+    "category": "Flow",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Number of work items completed per time period. Stable throughput is necessary but insufficient — stable at what level? Always pair with Lead Time to distinguish 'lots of small things' from 'meaningful delivery.' Declining throughput with stable WIP → investigate blocked work and dependency bottlenecks.",
+    "emRank": {
+      "priority": "M",
+      "rank": 28
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 28
+    },
+    "mandatoryPairIds": [],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: count completed items per sprint/week",
+    "replaces": "Velocity (story points/sprint)",
+    "whyThisTier": "Capacity planning input, not health metric. Items vary in size making raw counts misleading.",
+    "goodRange": "Stable or increasing trend",
+    "warningRange": "Declining trend",
+    "dangerRange": "Volatile with no explanation",
+    "capabilityIds": [
+      "C4"
+    ],
+    "observableIds": [
+      "C4-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI inflates throughput counts (more items completed) but items may be lower-quality or lower-complexity. Pair with CFR and escaped defects.",
+    "decisionRule": "Diagnostic only — stable throughput at what level? Pair with Lead Time for context. Declining throughput → check WIP and blocked work."
+  },
+  {
+    "id": "2.2",
+    "name": "WIP (Work in Progress)",
+    "slug": "work-in-progress",
+    "category": "Flow",
+    "tier": "tertiary",
+    "type": "leading",
+    "description": "Process hygiene metric, not strategic signal. Consequences of high WIP are better measured through Lead Time and Cycle Time directly. Useful as a coaching tool in retros.",
+    "emRank": {
+      "priority": "D",
+      "rank": 29
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 29
+    },
+    "mandatoryPairIds": [],
+    "cadence": "daily",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: query project management tool for in-progress items",
+    "replaces": "",
+    "whyThisTier": "Process hygiene metric. Consequences of high WIP are better measured through Lead Time and Cycle Time directly.",
+    "goodRange": "< 2 items/engineer",
+    "warningRange": "2-4 items/engineer",
+    "dangerRange": "> 4 items/engineer",
+    "capabilityIds": [
+      "C4"
+    ],
+    "observableIds": [
+      "C4-O7"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI enables engineers to start more things simultaneously. WIP may increase. Track whether WIP × LT product stays constant (Little's Law).",
+    "decisionRule": "Diagnostic only — WIP >3x team size → context switching destroying productivity. Investigate when sprint commitment drops."
+  },
+  {
+    "id": "4.4",
+    "name": "Escaped Defect Rate",
+    "slug": "escaped-defect-rate",
+    "category": "Quality",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Useful for root-cause analysis but requires subjective classification. Business impact of escaped defects better captured through CFR and incident rate.",
+    "emRank": {
+      "priority": "D",
+      "rank": 30
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 30
+    },
+    "mandatoryPairIds": [
+      "2.1",
+      "AI-2"
+    ],
+    "cadence": "per-release",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: tag production bugs, link to releases, classify",
+    "replaces": "Raw bug count",
+    "whyThisTier": "Useful for root-cause analysis but requires subjective classification. Business impact better captured through CFR and incident rate.",
+    "goodRange": "< 1 per release",
+    "warningRange": "1-3 per release",
+    "dangerRange": "> 3 per release",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C4-O5",
+      "C9-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "9% increase in bug rates with AI adoption (Faros AI, 2024). Escaped defect tracking becomes the primary quality feedback loop for AI-generated code.",
+    "decisionRule": "Diagnostic only — investigate when CFR rises. Escaped defects identify where testing gaps exist."
+  },
+  {
+    "id": "4.1",
+    "name": "Test Coverage (Critical Paths)",
+    "slug": "test-coverage-critical-paths",
+    "category": "Quality",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Most misleading quality metric in software. High coverage ≠ good tests. Use as code review conversation, not a KPI. The signal you want is 'do tests catch bugs?' — better measured through escaped defects and CFR.",
+    "emRank": {
+      "priority": "M",
+      "rank": 31
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 31
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-sprint",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: integrate coverage tool with CI, focus on critical path coverage not absolute",
+    "replaces": "Test coverage % (absolute)",
+    "whyThisTier": "Most misleading quality metric in software. High coverage ≠ good tests. Use as code review conversation, not a KPI.",
+    "goodRange": "Critical paths > 80%",
+    "warningRange": "Critical paths 50-80%",
+    "dangerRange": "Critical paths < 50%",
+    "capabilityIds": [
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O3"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI can generate tests — but AI-generated tests often have weak assertions. Track 'meaningful coverage' (assertions that actually validate behavior), not line coverage.",
+    "decisionRule": "Diagnostic only — investigate when quality metrics decline. Coverage on changed paths matters more than headline number."
+  },
+  {
+    "id": "4.2",
+    "name": "Flaky Test Rate",
+    "slug": "flaky-test-rate",
+    "category": "Quality",
+    "tier": "tertiary",
+    "type": "leading",
+    "description": "Developer experience problem more than quality problem. Impact shows up in CI cycle time and DX scores. Flaky rate helps diagnose why DX is low, but DX score is the primary signal.",
+    "emRank": {
+      "priority": "D",
+      "rank": 32
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 32
+    },
+    "mandatoryPairIds": [],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: track test result determinism across CI runs, flag flaky tests",
+    "replaces": "",
+    "whyThisTier": "Developer experience problem more than quality problem. Impact shows up in CI cycle time and DX scores.",
+    "goodRange": "< 2%",
+    "warningRange": "2-10%",
+    "dangerRange": "> 10%",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C4-O3",
+      "C9-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI-generated tests may introduce new flakiness patterns (timing assumptions, implicit state). Monitor flaky rate trend after AI adoption.",
+    "decisionRule": ">5% flaky tests → CI credibility crisis. Quarantine flaky tests and fix systematically."
+  },
+  {
+    "id": "5.3",
+    "name": "Build & CI Cycle Time",
+    "slug": "build-ci-cycle-time",
+    "category": "DevEx",
+    "tier": "tertiary",
+    "type": "leading",
+    "description": "Subset of Lead Time. Typically a platform team problem, not an EM decision. Impact captured through DX survey and Lead Time decomposition.",
+    "emRank": {
+      "priority": "D",
+      "rank": 33
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 33
+    },
+    "mandatoryPairIds": [],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: extract from CI tool API",
+    "replaces": "",
+    "whyThisTier": "Subset of Lead Time. Typically a platform team problem. Impact captured through DX survey and Lead Time decomposition.",
+    "goodRange": "< 10 minutes",
+    "warningRange": "10-30 minutes",
+    "dangerRange": "> 30 minutes",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C4-O3",
+      "C9-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI-inflated code volume means more builds/tests. CI infrastructure must scale proportionally or becomes the new bottleneck.",
+    "decisionRule": "CI >30 min → investigate parallelization and caching. Slow CI directly impacts DX and Lead Time."
+  },
+  {
+    "id": "5.5",
+    "name": "Cognitive Load Index",
+    "slug": "context-switching-rate",
+    "category": "DevEx",
+    "tier": "tertiary",
+    "type": "leading",
+    "description": "Measures the frequency and impact of context-switching on developer productivity. In the AI era, includes verification overhead from reviewing AI-generated code. Track via DX survey questions on 'How often do you have to switch between unrelated tasks?' and 'How much time do you spend verifying AI output?' High cognitive load correlates with DX decline and quality erosion.",
+    "emRank": {
+      "priority": "M",
+      "rank": 34
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 34
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: survey-based or tool-based measurement of context switches per day",
+    "replaces": "",
+    "whyThisTier": "Theoretically important but practically hard to measure reliably. Effects show up in Cycle Time, DX scores, and defect rates.",
+    "goodRange": "< 3 switches/day",
+    "warningRange": "3-6 switches/day",
+    "dangerRange": "> 6 switches/day",
+    "capabilityIds": [
+      "C7",
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "New for AI era. DevEx framework identifies cognitive load as a core dimension. AI paradoxically increases cognitive load when engineers must verify, debug, and understand code they didn't write. The 19% slowdown for experienced developers (METR RCT, 2024) is driven by this verification overhead.",
+    "decisionRule": "Diagnostic only — high cognitive load correlates with DX decline. Investigate context-switching frequency and AI verification overhead."
+  },
+  {
+    "id": "5.7",
+    "name": "Environment Setup Time",
+    "slug": "environment-setup-time",
+    "category": "DevEx",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Time from new engineer start date to fully functional local development environment. Only matters during onboarding windows, but a bad experience sets the tone for the entire tenure. Fix it once (scripts, containers, IDP), verify quarterly. Target: < 4 hours.",
+    "emRank": {
+      "priority": "M",
+      "rank": 35
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 35
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: time a fresh setup, document baseline, invest in automation",
+    "replaces": "",
+    "whyThisTier": "Tertiary: one-time investment with diminishing returns after fix. Impact surfaces in New Hire Ramp Time (7.5) and DX scores.",
+    "goodRange": "< 30 minutes",
+    "warningRange": "30 min - 2 hours",
+    "dangerRange": "> 2 hours",
+    "capabilityIds": [
+      "C7"
+    ],
+    "observableIds": [
+      "C7-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI can help generate setup scripts and documentation, reducing ramp time.",
+    "decisionRule": "Setup time >1 day → onboarding bottleneck. Investigate with New Hire Ramp Time (7.5)."
+  },
+  {
+    "id": "5.8",
+    "name": "IDP Adoption Rate",
+    "slug": "idp-adoption-rate",
+    "category": "DevEx",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Only relevant if you have a platform team. Adoption is a lagging indicator of platform quality. Impact shows up in CI time, setup time, and DX scores.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 36
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 36
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 4,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: survey teams on platform usage, track service registration",
+    "replaces": "",
+    "whyThisTier": "Only relevant if you have a platform team. Adoption is a lagging indicator of platform quality.",
+    "goodRange": "> 80% adoption",
+    "warningRange": "50-80%",
+    "dangerRange": "< 50%",
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "observableIds": [
+      "C4-O3",
+      "C9-O1"
+    ],
+    "emTier": null,
+    "directorTier": "tertiary",
+    "aiEraImpact": "Platform engineering is a prerequisite for safe AI adoption. Low IDP adoption + high AI adoption = ungoverned risk.",
+    "decisionRule": "Diagnostic only — IDP adoption correlates with reduced toil. Track as platform investment success metric."
+  },
+  {
+    "id": "7.2",
+    "name": "Non-Regrettable Attrition Rate",
+    "slug": "non-regrettable-attrition-rate",
+    "category": "People",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Attrition where the departure is neutral or positive for the team (performance-managed exits, poor culture fits, voluntary departures of underperformers). If non-regrettable attrition is 0%, you're not managing performance. Healthy range: 2-5% annually. Zero for extended periods signals avoidance of difficult conversations.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 37
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 37
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "Part of attrition classification process — track alongside regrettable rate",
+    "replaces": "",
+    "whyThisTier": "Tertiary: health check metric, not a dashboard concern. If regrettable attrition is fine and total is reasonable, this needs no attention.",
+    "goodRange": "2-5% annually",
+    "warningRange": "0% or > 8%",
+    "dangerRange": "0% for > 1 year",
+    "capabilityIds": [
+      "C7",
+      "C14"
+    ],
+    "observableIds": [
+      "C7-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Diagnostic only — low non-regrettable attrition may indicate insufficient performance management."
+  },
+  {
+    "id": "7.3",
+    "name": "Time to Hire",
+    "slug": "time-to-hire",
+    "category": "People",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Calendar days from requisition opening to accepted offer. Mostly recruiting operations, not engineering leadership — EM's lever is narrow (structured interviews, fast feedback loops, compelling team pitch). Long time-to-hire erodes candidate quality as top candidates accept elsewhere.",
+    "emRank": {
+      "priority": "M",
+      "rank": 38
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 38
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-hire",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: track from HRIS/ATS data",
+    "replaces": "",
+    "whyThisTier": "Tertiary: recruiting operations metric with narrow EM lever (interview responsiveness). Monitored by talent acquisition, not engineering dashboards.",
+    "goodRange": "< 30 days",
+    "warningRange": "30-60 days",
+    "dangerRange": "> 60 days",
+    "capabilityIds": [
+      "C7",
+      "C11"
+    ],
+    "observableIds": [
+      "C11-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Diagnostic only — rising time-to-hire in competitive market may require compensation review."
+  },
+  {
+    "id": "7.4",
+    "name": "Offer Acceptance Rate",
+    "slug": "offer-acceptance-rate",
+    "category": "People",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Small sample sizes make it noisy. Root causes usually comp or brand (outside EM control).",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 39
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 39
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: track from ATS data",
+    "replaces": "",
+    "whyThisTier": "Tertiary: small sample sizes, lagging indicator with root causes (comp, brand) outside EM control. Impact shows up in Time to Hire and pipeline metrics first.",
+    "goodRange": "> 80%",
+    "warningRange": "60-80%",
+    "dangerRange": "< 60%",
+    "capabilityIds": [
+      "C7",
+      "C11"
+    ],
+    "observableIds": [
+      "C11-O6"
+    ],
+    "emTier": null,
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Diagnostic only — declining offer acceptance rate → compensation or employer brand issue."
+  },
+  {
+    "id": "7.5",
+    "name": "New Hire Ramp Time",
+    "slug": "new-hire-ramp-time",
+    "category": "People",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Impact of slow ramp shows up in delivery metrics. Measured per hire; improves with one-time investments in onboarding.",
+    "emRank": {
+      "priority": "M",
+      "rank": 40
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 40
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-hire",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: track start date to first meaningful PR/project completion",
+    "replaces": "",
+    "whyThisTier": "Impact shows up in delivery metrics. Measured per hire; improves with one-time onboarding investments.",
+    "goodRange": "< 30 days to productive",
+    "warningRange": "30-60 days",
+    "dangerRange": "> 60 days",
+    "capabilityIds": [
+      "C6",
+      "C7",
+      "C11",
+      "C14"
+    ],
+    "observableIds": [
+      "C7-O1",
+      "C11-O5"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI tools can accelerate surface-level productivity (faster first PR) while masking shallow codebase understanding. Track ramp-to-independent-ownership, not just ramp-to-first-commit.",
+    "decisionRule": "Ramp time >2x baseline → onboarding crisis. Check documentation, mentoring, and environment setup."
+  },
+  {
+    "id": "7.6",
+    "name": "Span of Control",
+    "slug": "span-of-control",
+    "category": "People",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Changes infrequently (only reorgs/hiring). Effects of bad span show up in DX, attrition, delivery long before you notice the number. Check during reorgs.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 41
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 41
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: count from org chart data",
+    "replaces": "",
+    "whyThisTier": "Changes infrequently. Effects of bad span show up in DX, attrition, delivery before you notice the number.",
+    "goodRange": "5-9 reports",
+    "warningRange": "3-4 or 10-12",
+    "dangerRange": "< 3 or > 12",
+    "capabilityIds": [
+      "C1",
+      "C7",
+      "C11",
+      "C14"
+    ],
+    "observableIds": [
+      "C7-O2",
+      "C1-O1"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI tools that accelerate individual productivity may enable slightly wider spans, but verification and coaching overhead partially offset this. Monitor DX and attrition when spans increase alongside AI adoption.",
+    "decisionRule": "Span >8 → manager stretched too thin for coaching. Correlates with attrition and burnout risk."
+  },
+  {
+    "id": "7.7",
+    "name": "Diversity Metrics",
+    "slug": "diversity-metrics",
+    "category": "People",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Not tertiary because they don't matter — they matter enormously. They operate on a different cadence and accountability structure. Pipeline and retention diversity are strategic, quarterly/annual concerns in hiring reviews and org planning. Parallel track, not lower priority.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 42
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 42
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: work with HR for demographic data, track pipeline and retention diversity",
+    "replaces": "",
+    "whyThisTier": "Not tertiary because they don't matter — they matter enormously. They operate on a different cadence. Parallel track, not lower priority.",
+    "goodRange": "Improving representation trends",
+    "warningRange": "Flat trends",
+    "dangerRange": "Declining representation",
+    "capabilityIds": [
+      "C7",
+      "C11",
+      "C12"
+    ],
+    "observableIds": [
+      "C7-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI screening tools in hiring pipelines carry documented bias risks. Audit AI-assisted resume screening and coding assessments for disparate impact. AI coding tools may also affect accessibility for neurodiverse engineers.",
+    "decisionRule": "Diagnostic only — track for compliance and hiring pipeline health."
+  },
+  {
+    "id": "8.3",
+    "name": "Cost of Delay",
+    "slug": "cost-of-delay",
+    "category": "Strategy",
+    "tier": "tertiary",
+    "type": "leading",
+    "description": "Powerful but expensive to calculate. Only worth doing for major initiatives (>1 quarter of team effort). Use for specific high-stakes decisions, not ongoing tracking.",
+    "emRank": {
+      "priority": "M",
+      "rank": 43
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 43
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-initiative",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "high",
+    "implementationNotes": "Per initiative: model revenue impact of delay, use to break ties in prioritization",
+    "replaces": "",
+    "whyThisTier": "Powerful but expensive to calculate. Only worth doing for major initiatives. Use for specific high-stakes decisions, not ongoing tracking.",
+    "goodRange": "Used for major decisions",
+    "warningRange": "Not calculated for major bets",
+    "dangerRange": "Never used in prioritization",
+    "capabilityIds": [
+      "C1",
+      "C2",
+      "C3",
+      "C10"
+    ],
+    "observableIds": [
+      "C2-O3"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "secondary",
+    "aiEraImpact": "CD3 = Weekly Financial Value / Weeks to Deliver. Sequence work by highest CD3, not highest total value. In enterprise portfolios, CD3 sequencing reduces aggregate delay costs 20-60%.",
+    "decisionRule": "Use CD3 formula to mathematically prioritize portfolio. Sequence by highest CD3, not highest total value."
+  },
+  {
+    "id": "8.5",
+    "name": "Customer Impact Metrics",
+    "slug": "customer-impact-metrics",
+    "category": "Strategy",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Composite measure of engineering's impact on customer outcomes: feature adoption rates, customer-reported issue resolution time, and NPS changes attributable to engineering releases. Useful as context for business attribution but too noisy for standalone operational decisions. Pair with Business Impact Attribution (8.2) for actionable insights.",
+    "emRank": {
+      "priority": "CTX",
+      "rank": 44
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 44
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: partner with product for task completion, support ticket trends",
+    "replaces": "",
+    "whyThisTier": "Essential for product teams but influenced by many non-engineering factors. Eng-specific impact better captured through SLO compliance and revenue attribution.",
+    "goodRange": "Improving customer outcomes",
+    "warningRange": "Flat trends",
+    "dangerRange": "Declining customer outcomes",
+    "capabilityIds": [
+      "C3"
+    ],
+    "observableIds": [
+      "C3-O5"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI-powered features create new customer impact patterns: faster feature delivery but potentially less polished UX. Track whether AI-accelerated releases maintain customer satisfaction.",
+    "decisionRule": "Use as context for business attribution, not standalone metric. Too noisy to drive decisions alone."
+  },
+  {
+    "id": "8.6",
+    "name": "Tech Debt Ratio",
+    "slug": "tech-debt-ratio",
+    "category": "Strategy",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Important but imprecise. 'Tech debt' is subjective. Impact shows up in Lead Time, CFR, DX scores. Better to measure 'how much are we investing in reducing it?' (Investment Mix) and 'is velocity improving?' (outcome).",
+    "emRank": {
+      "priority": "M",
+      "rank": 45
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 45
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-sprint",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: label tickets as feature vs. tech-debt, compute ratio",
+    "replaces": "",
+    "whyThisTier": "Important but imprecise. Impact shows up in Lead Time, CFR, DX scores. Better tracked via Investment Mix and velocity trends.",
+    "goodRange": "15-25% debt allocation",
+    "warningRange": "< 10% or > 35%",
+    "dangerRange": "0% or > 50%",
+    "capabilityIds": [
+      "C4",
+      "C9",
+      "C10"
+    ],
+    "observableIds": [
+      "C4-O4",
+      "C9-O4"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI-generated code often passes functional tests but introduces structural debt: inconsistent patterns, duplicated logic, missing abstractions. Monitor tech debt ratio trend after scaling AI adoption.",
+    "decisionRule": ">40% of capacity → ring-fence remediation. Track trend, not absolute number."
+  },
+  {
+    "id": "9.2",
+    "name": "Dependency Currency",
+    "slug": "dependency-currency",
+    "category": "Security",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Preventive hygiene metric. Consequences show up in vulnerability remediation time. Largely automatable (Dependabot, Renovate). Set up, automate, check monthly.",
+    "emRank": {
+      "priority": "M",
+      "rank": 46
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 46
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [],
+    "maturityPhase": 4,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: set up Dependabot/Renovate, track freshness percentage",
+    "replaces": "",
+    "whyThisTier": "Preventive hygiene metric. Largely automatable. Consequences show up in vulnerability remediation time.",
+    "goodRange": "> 80% within 1 major version",
+    "warningRange": "60-80%",
+    "dangerRange": "< 60%",
+    "capabilityIds": [
+      "C5",
+      "C13"
+    ],
+    "observableIds": [
+      "C13-O2"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "AI tools may suggest outdated library versions from training data. Automated dependency updating is mandatory infrastructure.",
+    "decisionRule": "Dependencies >90 days stale → security and stability risk. Prioritize by severity exposure."
+  },
+  {
+    "id": "9.3",
+    "name": "Compliance Audit Readiness",
+    "slug": "compliance-audit-readiness",
+    "category": "Security",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Percentage of compliance controls with automated evidence collection and audit-ready documentation. Situational — only relevant for regulated industries (SOC2, HIPAA, PCI-DSS, FedRAMP). Episodic around audit season. Invest once in automation (>90% automated evidence), then monitor quarterly.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 47
+    },
+    "directorRank": {
+      "priority": "M",
+      "rank": 47
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 4,
+    "implementationEffort": "high",
+    "implementationNotes": "4-8 wks: automate evidence collection for controls, > 90% automated",
+    "replaces": "",
+    "whyThisTier": "Situational (regulated industries). Episodic (audit season). Invest once in automation, then monitor.",
+    "goodRange": "> 90% controls automated",
+    "warningRange": "60-90%",
+    "dangerRange": "< 60% or manual evidence",
+    "capabilityIds": [
+      "C5",
+      "C13"
+    ],
+    "observableIds": [
+      "C13-O3"
+    ],
+    "emTier": null,
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Diagnostic only — track audit readiness as compliance prerequisite."
+  },
+  {
+    "id": "10.2",
+    "name": "Infrastructure Utilization Rate",
+    "slug": "infrastructure-utilization-rate",
+    "category": "Cost",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "FinOps operational metric, not leadership metric. Impact shows up in cost per transaction.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 48
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 48
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [],
+    "maturityPhase": 4,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-4 wks: monitor compute utilization across services, identify over-provisioning",
+    "replaces": "",
+    "whyThisTier": "FinOps operational metric, not leadership metric. Impact shows up in cost per transaction.",
+    "goodRange": "40-70% utilization",
+    "warningRange": "< 30% or > 80%",
+    "dangerRange": "< 20% (waste) or > 90% (risk)",
+    "capabilityIds": [
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O5"
+    ],
+    "emTier": null,
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Utilization <40% → over-provisioned, cost optimization opportunity. >80% → capacity risk."
+  },
+  {
+    "id": "10.3",
+    "name": "Cost per Engineer (Fully Loaded)",
+    "slug": "cost-per-engineer",
+    "category": "Cost",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Financial planning input, not engineering metric. Useful for ROI modeling, never on a dashboard.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 49
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 49
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 4,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: compile salary + benefits + tools + infra allocation per engineer",
+    "replaces": "",
+    "whyThisTier": "Financial planning input, not engineering metric. Useful for ROI modeling, never on a dashboard.",
+    "goodRange": "Industry benchmark dependent",
+    "warningRange": "50%+ above benchmark",
+    "dangerRange": "100%+ above benchmark",
+    "capabilityIds": [
+      "C1"
+    ],
+    "observableIds": [
+      "C1-O1"
+    ],
+    "emTier": null,
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Diagnostic only — use for budgeting and headcount justification. Normalize for role mix."
+  },
+  {
+    "id": "10.4",
+    "name": "Revenue per Engineer",
+    "slug": "revenue-per-engineer",
+    "category": "Cost",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Terrible operational metric: penalizes platform teams, varies by business model, influenced by factors outside engineering control, incentivizes headcount reduction over productivity. Annual narrative only.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 50
+    },
+    "directorRank": {
+      "priority": "CTX",
+      "rank": 50
+    },
+    "mandatoryPairIds": [],
+    "cadence": "annually",
+    "dashboardPlacement": [],
+    "maturityPhase": 4,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: divide quarterly revenue by engineering headcount",
+    "replaces": "",
+    "whyThisTier": "Terrible operational metric. Penalizes platform teams, varies by business model. Annual narrative only, never as a KPI.",
+    "goodRange": "Industry benchmark dependent",
+    "warningRange": "Declining trend",
+    "dangerRange": "Used as a KPI for eng teams",
+    "capabilityIds": [
+      "C1"
+    ],
+    "observableIds": [
+      "C1-O1"
+    ],
+    "emTier": null,
+    "directorTier": "tertiary",
+    "aiEraImpact": "",
+    "decisionRule": "Do not track as operational metric. Revenue per engineer is a terrible measure of engineering productivity — it conflates market conditions with engineering output. Use Investment Mix (8.4) and Business Impact Attribution (8.2) instead."
+  },
+  {
+    "id": "6.1",
+    "name": "PR Throughput (Team)",
+    "slug": "pr-throughput-team",
+    "category": "Activity",
+    "tier": "activity",
+    "type": "lagging",
+    "description": "Spot blocked teams, detect sudden disruption. A >50% week-over-week drop warrants immediate investigation. Team-level diagnostic only — never for individual performance.",
+    "emRank": {
+      "priority": "D",
+      "rank": 60
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 60
+    },
+    "mandatoryPairIds": [],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Available from GitHub/GitLab — track at team level only",
+    "replaces": "",
+    "whyThisTier": "Activity metric. Per-dev PR count as KPI leads to trivial PRs, penalizes pairing, architecture, and design work. Team-level diagnostic only.",
+    "goodRange": "Stable trend",
+    "warningRange": "> 50% week-over-week drop",
+    "dangerRange": "Used as individual KPI",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "diagnostic",
+    "directorTier": "diagnostic",
+    "aiEraImpact": "AI inflates PR throughput (98% increase in PRs merged (Faros AI, 2024)). Throughput increase without quality validation is a trap.",
+    "decisionRule": "Diagnostic only — investigate when flagged by primary metric. Never use as individual performance measure."
+  },
+  {
+    "id": "6.2",
+    "name": "PR Size Distribution",
+    "slug": "pr-size-distribution",
+    "category": "Activity",
+    "tier": "activity",
+    "type": "structural",
+    "description": "Large PRs correlate with higher defect rates and slower reviews. If >30% of PRs are XL (>1000 lines), PR hygiene coaching is needed. Never penalize engineers for large PRs without context.",
+    "emRank": {
+      "priority": "D",
+      "rank": 61
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 61
+    },
+    "mandatoryPairIds": [
+      "5.4"
+    ],
+    "cadence": "weekly",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Available from GitHub/GitLab — analyze PR size distribution",
+    "replaces": "",
+    "whyThisTier": "Activity metric. Penalizing engineers for large PRs without context is harmful — some refactors are legitimately large.",
+    "goodRange": "< 10% XL PRs",
+    "warningRange": "10-30% XL PRs",
+    "dangerRange": "> 30% XL PRs or used as individual metric",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "diagnostic",
+    "directorTier": "diagnostic",
+    "aiEraImpact": "Critical AI diagnostic. 154% increase in PR size with AI (Faros AI, 2024). Large AI PRs overwhelm reviewers, leading to rubber-stamping. Track AI vs human PR size separately.",
+    "decisionRule": "PR size >400 lines → review quality degrades. Use to investigate Code Review Turnaround bottlenecks."
+  },
+  {
+    "id": "6.3",
+    "name": "Review Load Distribution",
+    "slug": "review-load-distribution",
+    "category": "Activity",
+    "tier": "activity",
+    "type": "structural",
+    "description": "Bus factor risk and reviewer burnout signal. If one person is doing >50% of team reviews, rotation problem needs addressing. Never use review count as performance metric.",
+    "emRank": {
+      "priority": "D",
+      "rank": 62
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 62
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Available from GitHub/GitLab — analyze review assignments per person",
+    "replaces": "",
+    "whyThisTier": "Activity metric. Using review count as performance metric or forcing equal distribution regardless of expertise is harmful.",
+    "goodRange": "No single reviewer > 40%",
+    "warningRange": "One person > 50% of reviews",
+    "dangerRange": "Used as individual performance metric",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "diagnostic",
+    "directorTier": "diagnostic",
+    "aiEraImpact": "AI increases total review volume. If load isn't redistributed, bottleneck individuals burn out faster.",
+    "decisionRule": "Diagnostic only — uneven review load → bottleneck risk. Investigate when review turnaround spikes."
+  },
+  {
+    "id": "6.4",
+    "name": "Meeting Load",
+    "slug": "meeting-load",
+    "category": "Activity",
+    "tier": "activity",
+    "type": "structural",
+    "description": "Context switching and focus time erosion. ICs with >12 hrs/week in meetings need a calendar audit. Categorizing meetings as 'valuable' vs 'theater' creates political conflict; effect shows up in DX scores.",
+    "emRank": {
+      "priority": "D",
+      "rank": 63
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 63
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Audit calendar data — handle with care",
+    "replaces": "",
+    "whyThisTier": "Activity metric. Categorizing meetings as 'valuable' vs 'theater' creates political conflict. Effect shows up in DX scores.",
+    "goodRange": "ICs < 8 hrs/week",
+    "warningRange": "ICs 8-12 hrs/week",
+    "dangerRange": "ICs > 12 hrs/week",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "diagnostic",
+    "directorTier": "diagnostic",
+    "aiEraImpact": "Unchanged by AI.",
+    "decisionRule": ">40% of work week in meetings → productivity crisis. Investigate when DX Score drops."
+  },
+  {
+    "id": "6.5",
+    "name": "Cross-Team Dependency Count",
+    "slug": "cross-team-dependency-count",
+    "category": "Activity",
+    "tier": "activity",
+    "type": "structural",
+    "description": "Quantify organizational coupling for reorg/API arguments. >3 active dependencies per sprint warrants an architecture/ownership investigation. Evidence for org redesign, not blame.",
+    "emRank": {
+      "priority": "D",
+      "rank": 64
+    },
+    "directorRank": {
+      "priority": "D",
+      "rank": 64
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-sprint",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Track dependencies in sprint planning, count per sprint",
+    "replaces": "",
+    "whyThisTier": "Activity metric. Use as evidence for org redesign / API ownership changes, not for blaming other teams.",
+    "goodRange": "< 2 per sprint",
+    "warningRange": "2-3 per sprint",
+    "dangerRange": "> 3 per sprint",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "diagnostic",
+    "directorTier": "diagnostic",
+    "aiEraImpact": "AI doesn't resolve organizational dependencies.",
+    "decisionRule": "Diagnostic only — high cross-team dependency count → architectural coupling. Investigate when blocked work rises."
+  },
+  {
+    "id": "I1",
+    "name": "Lines of Code per Engineer",
+    "slug": "lines-of-code-per-engineer",
+    "category": "Activity",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Encourages bloated code; punishes refactoring, deletions, and concise solutions; penalizes debugging and design work. Universally discredited.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Already available in git — stop using immediately",
+    "replaces": "",
+    "whyThisTier": "Incentivizes verbosity, copy-paste, and avoiding deletions. The best code is code you didn't write.",
+    "goodRange": "N/A — do not target",
+    "warningRange": "N/A",
+    "dangerRange": "Used as a KPI",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "AI makes this metric maximally dangerous: AI tools generate verbose code at scale, making LoC appear to skyrocket while actual value may decrease.",
+    "superiorReplacement": "Lead Time (1.2) + OKR Achievement (8.1)",
+    "decisionRule": "Do not track. Use Lead Time (1.2) and Throughput (2.4) instead."
+  },
+  {
+    "id": "I2",
+    "name": "Commits per Engineer",
+    "slug": "commits-per-engineer",
+    "category": "Activity",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Micro-commits, noisy history, gaming; penalizes pairing, mobbing, and thoughtful architecture work.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Already available in git — stop using in any evaluative context",
+    "replaces": "",
+    "whyThisTier": "Trivially gamed by tiny commits. Penalizes pairing, mobbing, and thoughtful architecture work.",
+    "goodRange": "N/A — do not target",
+    "warningRange": "N/A",
+    "dangerRange": "Used as a KPI",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "AI-assisted workflows fragment commits further, inflating counts without meaningful signal. Even more misleading than pre-AI era.",
+    "superiorReplacement": "PR Throughput (6.1) team-level diagnostic only + DORA",
+    "decisionRule": "Do not track. Use Lead Time (1.2) and PR Throughput (6.1) instead."
+  },
+  {
+    "id": "I3",
+    "name": "Tickets Closed per Engineer",
+    "slug": "tickets-closed-per-engineer",
+    "category": "Flow",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Ticket slicing; busy work tickets; resistance to complex/ambiguous problems; penalizes systems thinking.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Already available — remove from performance reviews",
+    "replaces": "",
+    "whyThisTier": "Encourages ticket slicing and busy work. Penalizes complex, ambiguous problems that create the most value.",
+    "goodRange": "N/A — do not target",
+    "warningRange": "N/A",
+    "dangerRange": "Used as a KPI",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "AI accelerates simple tickets disproportionately, inflating closure counts while complex work remains unchanged. Creates illusion of productivity improvement.",
+    "superiorReplacement": "Sprint Commitment Accuracy (2.5) + Lead Time (1.2)",
+    "decisionRule": "Do not track. Use Sprint Commitment Accuracy (2.5) and Flow Time (2.1) instead."
+  },
+  {
+    "id": "I4",
+    "name": "Story Points per Engineer",
+    "slug": "story-points-per-engineer",
+    "category": "Flow",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Immediate point inflation; distorts estimation; turns planning tool into performance weapon; destroys trust between eng and product.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Remove from all individual contexts. Story points are an estimation tool.",
+    "replaces": "",
+    "whyThisTier": "Points are team-relative estimates for planning, not units of output. Using them as a KPI causes inflation and gaming.",
+    "goodRange": "N/A — do not target",
+    "warningRange": "N/A",
+    "dangerRange": "Used as a KPI or individual metric",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "AI inflates story point completion by accelerating simple tasks while leaving complex work unchanged. Creates illusion of velocity improvement.",
+    "superiorReplacement": "Sprint Commitment Accuracy (2.5) team-level",
+    "decisionRule": "Do not track. Use Sprint Commitment Accuracy (2.5) instead."
+  },
+  {
+    "id": "I5",
+    "name": "Velocity (Points/Sprint) as KPI",
+    "slug": "velocity-as-kpi",
+    "category": "Flow",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Point inflation, scope slicing, conservative estimation; rewards gaming over delivery. Velocity should be stable (for planning), not increasing (proof of productivity).",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Stop treating velocity as a target. Track commitment accuracy instead.",
+    "replaces": "",
+    "whyThisTier": "Velocity should be stable (for planning), not increasing (proof of productivity). Track commitment accuracy instead.",
+    "goodRange": "N/A — use for planning only",
+    "warningRange": "Used as team target",
+    "dangerRange": "Used as individual or cross-team comparison",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Sprint Commitment Accuracy (2.5) + Lead Time (1.2) + Throughput (2.4)",
+    "decisionRule": "Do not track. Use Sprint Commitment Accuracy (2.5) and Lead Time (1.2) instead."
+  },
+  {
+    "id": "I6",
+    "name": "Raw Bug Count",
+    "slug": "raw-bug-count",
+    "category": "Quality",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Punishes honest reporting; encourages hiding/reclassifying bugs; ignores severity entirely.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Stop counting bugs without severity weighting",
+    "replaces": "",
+    "whyThisTier": "Unweighted bug count is meaningless. A team with 50 minor UI bugs looks worse than a team with 2 data corruption issues.",
+    "goodRange": "N/A — use CFR instead",
+    "warningRange": "Used as quality metric without severity",
+    "dangerRange": "Used as team performance metric",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Change Failure Rate (1.4) + Escaped Defect Rate (4.4)",
+    "decisionRule": "Do not track. Use Change Failure Rate (1.4) and Escaped Defect Rate (4.4) instead."
+  },
+  {
+    "id": "I7",
+    "name": "% Bugs Fixed per Sprint",
+    "slug": "percent-bugs-fixed",
+    "category": "Quality",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Encourages tiny, low-impact fixes; defers hard systemic issues.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Measure service restoration, not bug count velocity",
+    "replaces": "",
+    "whyThisTier": "Incentivizes tiny, low-impact fixes. Defers hard systemic issues.",
+    "goodRange": "N/A — use MTTR instead",
+    "warningRange": "Used as quality metric",
+    "dangerRange": "Tied to team goals",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "MTTR (1.3) + SLO Compliance (3.5)",
+    "decisionRule": "Do not track. Use Change Failure Rate (1.4) instead."
+  },
+  {
+    "id": "I8",
+    "name": "Test Coverage % (Headline)",
+    "slug": "test-coverage-headline",
+    "category": "Quality",
+    "tier": "inferior",
+    "type": "structural",
+    "description": "Easily gamed (meaningless assertions); high coverage coexists with poor quality; creates false confidence.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Use as code review conversation, not a dashboard number",
+    "replaces": "",
+    "whyThisTier": "Goodhart's Law poster child. 90% coverage target leads to trivial tests covering getters/setters, not testing critical business logic.",
+    "goodRange": "N/A — use critical path coverage",
+    "warningRange": "Hard target > 80%",
+    "dangerRange": "Gate on 100% coverage",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Critical Path Coverage (4.1) + Flaky Test Rate (4.2) + CFR (1.4)",
+    "decisionRule": "Do not track. Use Test Coverage on Critical Paths (4.1) instead."
+  },
+  {
+    "id": "I9",
+    "name": "% Time Spent Coding",
+    "slug": "time-spent-coding",
+    "category": "DevEx",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Ignores necessary non-coding work (design, mentoring, incidents, planning); penalizes seniors and leaders; treats humans as resources to be utilized.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Measure unnecessary work (toil), not total non-coding time",
+    "replaces": "",
+    "whyThisTier": "Surveillance metric. Destroys psychological safety. Non-coding work includes critical activities like design, review, and mentoring.",
+    "goodRange": "N/A — do not measure",
+    "warningRange": "N/A",
+    "dangerRange": "Measured at all",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Toil % (5.2) + Cognitive Load Index (5.5) + DX Score (5.1)",
+    "decisionRule": "Do not track. Use Developer Satisfaction Score (5.1) and Toil Hours (5.2) instead."
+  },
+  {
+    "id": "I10",
+    "name": "Total Attrition Rate (Unclassified)",
+    "slug": "total-attrition-unclassified",
+    "category": "People",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Treats all departures as equivalent; can't distinguish healthy turnover from crisis; hides systemic issues.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Classify every departure immediately. You need both regrettable and non-regrettable numbers.",
+    "replaces": "",
+    "whyThisTier": "Without classification, all departures look the same. Losing a low performer looks the same as losing a key architect.",
+    "goodRange": "N/A — classify first",
+    "warningRange": "Used without classification",
+    "dangerRange": "Used as sole retention metric",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Regrettable Attrition (7.1) + Pattern Analysis",
+    "decisionRule": "Do not track. Use Regrettable Attrition Rate (7.1) instead."
+  },
+  {
+    "id": "I11",
+    "name": "Uptime % (Without Defined SLI)",
+    "slug": "uptime-without-sli",
+    "category": "Reliability",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "'What was up?' matters more than 'were we up?' 99.99% on a metric users don't feel is wasted effort; no defined measurement boundary; no error budget policy.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Define SLIs at user boundary. Set SLO targets. Track compliance and error budget.",
+    "replaces": "",
+    "whyThisTier": "Vanity metric. 99.9% uptime means nothing if your SLIs don't reflect customer experience.",
+    "goodRange": "N/A — define SLOs instead",
+    "warningRange": "Used without SLI definition",
+    "dangerRange": "Sole reliability metric",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "SLO Compliance (3.5) + SLIs (3.1) + Error Budget (3.3)",
+    "decisionRule": "Do not track. Use SLO Compliance Rate (3.5) with defined SLIs instead."
+  },
+  {
+    "id": "I12",
+    "name": "Topline Revenue as Eng Metric",
+    "slug": "topline-revenue-eng-metric",
+    "category": "Strategy",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Revenue is multi-causal (marketing, sales, pricing, seasonality); attribution to engineering is impossible at this level; creates false credit or false blame.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "high",
+    "implementationNotes": "Never claim 'revenue is up because engineering.' Use specific, measurable attribution instead.",
+    "replaces": "",
+    "whyThisTier": "Attribution is nearly impossible. Revenue depends on sales, marketing, pricing, market conditions.",
+    "goodRange": "N/A — use Revenue Impact Attribution",
+    "warningRange": "Used as sole eng value metric",
+    "dangerRange": "Eng comp tied to revenue",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Revenue Impact Attribution (8.2) tied to specific engineering changes",
+    "decisionRule": "Do not track. Use Revenue/Business Impact Attribution (8.2) instead."
+  },
+  {
+    "id": "I13",
+    "name": "NPS Owned Solely by Engineering",
+    "slug": "nps-owned-by-engineering",
+    "category": "Strategy",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "NPS influenced by support, pricing, UX, policies, market position; engineering is one of many factors; attribution is nearly impossible.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Own what you can measure and control: SLO compliance, latency, error rates.",
+    "replaces": "",
+    "whyThisTier": "NPS has too many inputs. Customers may love the product but hate the pricing.",
+    "goodRange": "N/A — eng doesn't own NPS",
+    "warningRange": "Used as eng metric",
+    "dangerRange": "Eng team goals tied to NPS",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Customer Impact Metrics (8.5) + SLO Compliance (3.5)",
+    "decisionRule": "Do not track. Use Customer Impact Metrics (8.5) with engineering scope instead."
+  },
+  {
+    "id": "I14",
+    "name": "Build Success Rate",
+    "slug": "build-success-rate",
+    "category": "Quality",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Near-100% often means tests aren't catching anything; the information value of a failed build is high. Distinguish flaky failures from legitimate failures.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Distinguish flaky failures (bad) from legitimate failures (good signal)",
+    "replaces": "",
+    "whyThisTier": "Expected to be high (> 95%). The actionable question is WHY the failures happen — flaky test rate answers this.",
+    "goodRange": "N/A — use Flaky Test Rate",
+    "warningRange": "< 90%",
+    "dangerRange": "Used as a KPI",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Flaky Test Rate (4.2) + CI Cycle Time (5.3)",
+    "decisionRule": "Do not track. Use Change Failure Rate (1.4) and Build & CI Cycle Time (5.3) instead."
+  },
+  {
+    "id": "I15",
+    "name": "Individual PR Count",
+    "slug": "individual-pr-count",
+    "category": "Activity",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Trivially gamed; penalizes mentoring, design, architecture, code review, incident response; destroys trust instantly when used in perf reviews.",
+    "emRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "N/A",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "Remove from all individual contexts immediately",
+    "replaces": "",
+    "whyThisTier": "If an EM cites individual PR counts in a performance review, they have lost credibility with the team permanently.",
+    "goodRange": "N/A — do not track per individual",
+    "warningRange": "Used in performance reviews",
+    "dangerRange": "Tied to compensation",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "",
+    "superiorReplacement": "Team PR Throughput (6.1) diagnostic only",
+    "decisionRule": "Do not track. Use PR Throughput at team level (6.1) instead."
+  },
+  {
+    "id": "5.9",
+    "name": "AI Tool Adoption & Trust Score",
+    "slug": "ai-tool-adoption-trust-score",
+    "category": "DevEx",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Track: % of team using AI tools, self-reported trust level, perceived productivity gain vs measured delivery impact. The gap between perceived (80%+ report gains) and measured (19% slowdown in RCTs) is the most important diagnostic signal of AI maturity.",
+    "emRank": {
+      "priority": "C",
+      "rank": 8
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 7
+    },
+    "mandatoryPairIds": [
+      "5.1",
+      "1.4"
+    ],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: add AI-specific questions to DX survey, correlate with delivery metrics",
+    "replaces": "",
+    "whyThisTier": "The gap between perceived and measured AI benefit is the most important diagnostic signal of AI maturity.",
+    "goodRange": "High adoption + trust aligns with delivery improvement",
+    "warningRange": "High perception gap (report gains but metrics flat)",
+    "dangerRange": "High adoption + delivery metrics declining",
+    "capabilityIds": [
+      "C7",
+      "C9"
+    ],
+    "observableIds": [
+      "C9-O2"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "Track: % of team using AI tools, self-reported trust level, perceived productivity gain vs measured delivery impact. The gap between perceived (80%+ report gains) and measured (19% slowdown in RCTs) is the most important diagnostic signal of AI maturity.",
+    "decisionRule": "Trust gap (perceived speed ≠ measured speed) → investigate AI workflow integration. Low trust + high adoption → cognitive overhead risk."
+  },
+  {
+    "id": "7.9",
+    "name": "Burnout Risk Index",
+    "slug": "burnout-risk-index",
+    "category": "People",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Based on Maslach dimensions: (1) Energy exhaustion, (2) Cynicism toward job, (3) Reduced professional efficacy. Survey 3 items quarterly. 55% of the broader workforce reports significant burnout. Chronic burnout arises from cognitive overload, lack of autonomy, impossible deadlines, and invisible toil.",
+    "emRank": {
+      "priority": "C",
+      "rank": 13
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 17
+    },
+    "mandatoryPairIds": [
+      "5.1",
+      "5.6"
+    ],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "Add 3 Maslach items to DX survey; baseline quarterly",
+    "replaces": "",
+    "whyThisTier": "New. Leading indicator of everything going wrong. 3-item Maslach survey captures energy, cynicism, and efficacy dimensions.",
+    "goodRange": "Low risk across all 3 dimensions",
+    "warningRange": "1-2 dimensions elevated",
+    "dangerRange": "All 3 dimensions high",
+    "capabilityIds": [
+      "C7",
+      "C12"
+    ],
+    "observableIds": [
+      "C12-O1"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI-driven work acceleration can mask burnout by increasing output while depleting engineers. Monitor alongside on-call burden and toil %.",
+    "decisionRule": "Burnout index >3 (high risk) → immediate workload intervention. Track as leading indicator for attrition."
+  },
+  {
+    "id": "9.4",
+    "name": "AI-Generated Code Security Scan Rate",
+    "slug": "ai-generated-code-security-scan-rate",
+    "category": "Security",
+    "tier": "secondary",
+    "type": "structural",
+    "description": "% of AI-generated code receiving security-specific review beyond standard CI. DORA AI Capabilities Model requires 'Clear AI Stance' including security governance.",
+    "emRank": {
+      "priority": "C",
+      "rank": 16
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 14
+    },
+    "mandatoryPairIds": [],
+    "cadence": "per-pr",
+    "dashboardPlacement": [],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: integrate AI code detection with security scanning pipeline",
+    "replaces": "",
+    "whyThisTier": "AI-generated code may introduce novel vulnerability patterns not caught by standard scanners. Security governance for AI code is non-negotiable.",
+    "goodRange": "100% of AI code scanned",
+    "warningRange": "50-99% scanned",
+    "dangerRange": "< 50% scanned",
+    "capabilityIds": [
+      "C5",
+      "C9",
+      "C13"
+    ],
+    "observableIds": [
+      "C13-O4"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "New. % of AI-generated code receiving security-specific review beyond standard CI. DORA AI Capabilities Model requires 'Clear AI Stance' including security governance.",
+    "decisionRule": "Scan coverage <80% of AI-generated code → security gap. Flag AI PRs without security review."
+  },
+  {
+    "id": "AI-1",
+    "name": "AI-Assisted PR Ratio",
+    "slug": "ai-assisted-pr-ratio",
+    "category": "AI-Era",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "% of PRs containing AI-generated code (self-reported or tool-tagged). Establishes baseline for correlating AI adoption with quality and review metrics. Without this, you can't diagnose whether AI is helping or hurting.",
+    "emRank": {
+      "priority": "C",
+      "rank": 8
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 7
+    },
+    "mandatoryPairIds": [
+      "1.4",
+      "5.4",
+      "AI-2"
+    ],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: add AI-assisted flag to PR template or use tool-based detection",
+    "replaces": "",
+    "whyThisTier": "Establishes baseline for correlating AI adoption with quality and review metrics. Without this, you can't diagnose whether AI is helping or hurting.",
+    "goodRange": "Tracked and correlated with quality metrics",
+    "warningRange": "Tracked but not correlated",
+    "dangerRange": "Not tracked at all",
+    "capabilityIds": ["C9"],
+    "observableIds": ["C9-O1"],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "Core AI-era metric. Establishes baseline for all AI quality and productivity analysis.",
+    "decisionRule": "Diagnostic only — track ratio to understand AI adoption level. Pair with AI-2 for quality context. Never incentivize higher ratio."
+  },
+  {
+    "id": "AI-2",
+    "name": "AI PR Quality Delta",
+    "slug": "ai-pr-quality-delta",
+    "category": "AI-Era",
+    "tier": "tertiary",
+    "type": "lagging",
+    "description": "Difference in CFR, rollback rate, and escaped defect rate between AI-assisted and human-authored PRs. The critical quality signal. If AI PRs have 2x the rollback rate, your verification process is insufficient. 9% increase in bug rates at scale (Faros AI, 2024).",
+    "emRank": {
+      "priority": "C",
+      "rank": 9
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 8
+    },
+    "mandatoryPairIds": [
+      "AI-1",
+      "1.4",
+      "4.4"
+    ],
+    "cadence": "monthly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: compare quality metrics between AI-flagged and human PRs",
+    "replaces": "",
+    "whyThisTier": "The critical quality signal for AI adoption. 9% increase in bug rates at scale (Faros AI, 2024).",
+    "goodRange": "AI PR quality within 5% of human PRs",
+    "warningRange": "AI PRs 5-15% worse",
+    "dangerRange": "AI PRs >15% worse quality",
+    "capabilityIds": ["C9"],
+    "observableIds": ["C9-O1"],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "The critical quality signal. If AI PRs have 2x the rollback rate, your verification process is insufficient.",
+    "decisionRule": "AI quality delta >5% worse → tighten AI PR review process. Delta improving → safe to scale adoption."
+  },
+  {
+    "id": "AI-3",
+    "name": "Verification Overhead Ratio",
+    "slug": "verification-overhead-ratio",
+    "category": "AI-Era",
+    "tier": "tertiary",
+    "type": "leading",
+    "description": "(Review time for AI PRs) / (Review time for human PRs). Expected range: 1.5x-2.5x for AI PRs. If >3x, AI is creating net-negative flow impact. Directly measures the verification bottleneck. 19% slowdown driven by verification cognitive overhead (METR RCT, 2024). 91% increase in review time (Faros AI, 2024).",
+    "emRank": {
+      "priority": "C",
+      "rank": 9
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 10
+    },
+    "mandatoryPairIds": [
+      "1.2",
+      "5.4"
+    ],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "em"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: segment review time by AI vs human PR flag",
+    "replaces": "",
+    "whyThisTier": "Directly measures the verification bottleneck. 19% slowdown driven by verification cognitive overhead (METR RCT, 2024).",
+    "goodRange": "< 1.5x",
+    "warningRange": "1.5x-3x",
+    "dangerRange": "> 3x (net-negative flow impact)",
+    "capabilityIds": ["C9"],
+    "observableIds": ["C9-O1"],
+    "emTier": "secondary",
+    "directorTier": "tertiary",
+    "aiEraImpact": "Directly measures the verification bottleneck. 91% increase in review time with AI adoption (Faros AI, 2024).",
+    "decisionRule": "Verification overhead >2x → AI creating net-negative flow impact. Investigate review tooling and AI output quality."
+  },
+  {
+    "id": "AI-4",
+    "name": "AI Readiness Score",
+    "slug": "ai-readiness-score",
+    "category": "AI-Era",
+    "tier": "secondary",
+    "type": "structural",
+    "description": "Composite score based on DORA AI Capabilities Model: (1) Clear AI stance/policy, (2) Healthy data ecosystems, (3) AI-accessible internal data, (4) Strong version control, (5) Small batch practices, (6) Quality internal platforms, (7) User-centric focus. Score each 0-2; total /14. Teams lacking user-centric focus that adopt AI often experience net-negative performance.",
+    "emRank": {
+      "priority": "M",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 7
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1 session: score org on 7 DORA AI capabilities (0-2 each)",
+    "replaces": "",
+    "whyThisTier": "Predicts whether AI investment will amplify or destabilize your org. Directly from DORA State of DevOps research.",
+    "goodRange": "> 10/14",
+    "warningRange": "6-10/14",
+    "dangerRange": "< 6/14",
+    "capabilityIds": ["C9"],
+    "observableIds": ["C9-O3"],
+    "emTier": null,
+    "directorTier": "secondary",
+    "aiEraImpact": "This score predicts whether AI will amplify or destabilize your org. Directly from DORA State of DevOps research.",
+    "decisionRule": "Readiness <40% → prerequisites missing, don't scale AI. 40-70% → targeted adoption. >70% → scale aggressively."
+  },
+  {
+    "id": "10.5",
+    "name": "AI Tooling ROI",
+    "slug": "ai-tooling-roi",
+    "category": "Cost",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "(AI tool cost per engineer) vs (measured delivery improvement). If your org spends $X/engineer/year on AI tools and measured Lead Time, CFR, and DX haven't improved, the investment isn't working. Compare perceived benefit (80%+ report gains) with measured benefit (delivery metrics).",
+    "emRank": {
+      "priority": "M",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 15
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "Quarterly: compare AI tool spend per engineer with delivery metric changes",
+    "replaces": "",
+    "whyThisTier": "Is the AI investment actually producing measured improvement? Compare perceived benefit with measured benefit.",
+    "goodRange": "Positive ROI: delivery metrics improved > cost",
+    "warningRange": "Neutral: no measurable delivery change",
+    "dangerRange": "Negative: spending with no improvement",
+    "capabilityIds": [
+      "C1",
+      "C9",
+      "C10"
+    ],
+    "observableIds": [
+      "C10-O3"
+    ],
+    "emTier": null,
+    "directorTier": "secondary",
+    "aiEraImpact": "New. (AI tool cost per engineer) vs (measured delivery improvement). If your org spends $X/engineer/year on AI tools and delivery metrics haven't improved, the investment isn't working.",
+    "decisionRule": "AI ROI negative after 2 quarters → reassess tooling investment. Track against delivery improvement, not perception."
+  },
+  {
+    "id": "I16",
+    "name": "AI Perceived Speed Gain",
+    "slug": "ai-perceived-speed-gain",
+    "category": "AI-Era",
+    "tier": "inferior",
+    "type": "lagging",
+    "description": "Perceived speed gain from AI tools without measured delivery data. The gap between perceived and actual impact (measured via 10.5 AI Tooling ROI and 5.9 AI Trust Score) is the real diagnostic — teams often overestimate AI benefit by 40-60%. Never use to justify AI investment; use measured delivery metrics instead.",
+    "emRank": {
+      "priority": "INF",
+      "rank": 99
+    },
+    "directorRank": {
+      "priority": "INF",
+      "rank": 99
+    },
+    "mandatoryPairIds": [],
+    "cadence": "never-as-kpi",
+    "dashboardPlacement": [],
+    "maturityPhase": 0,
+    "implementationEffort": "low",
+    "implementationNotes": "",
+    "replaces": "",
+    "whyThisTier": "Perception-based metric. 80%+ report gains; RCTs show 19% slowdown for experienced devs. Measure delivered outcomes, not perceived speed.",
+    "goodRange": "N/A — do not use as a KPI",
+    "warningRange": "Used as a KPI or target",
+    "dangerRange": "Used to evaluate individual engineers",
+    "capabilityIds": [],
+    "observableIds": [],
+    "emTier": "inferior",
+    "directorTier": "inferior",
+    "aiEraImpact": "Self-referential: using AI-generated productivity scores to evaluate AI adoption. 80%+ of engineers report gains; controlled studies show 19% slowdown for experienced developers (METR RCT, 2024).",
+    "superiorReplacement": "AI Tooling ROI (10.5) + AI-3 + AI-2",
+    "decisionRule": "Do not track. Use AI Tooling ROI (10.5) and AI Trust Score (5.9) instead."
+  }
+]

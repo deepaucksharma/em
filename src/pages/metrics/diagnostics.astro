@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import DiagnosticChainCard from '../../components/cards/DiagnosticChainCard.astro';
+import { diagnosticChains } from '../../lib/data';
+---
+
+<BaseLayout title="Diagnostic Chains" description="10 diagnostic investigation flows for when metrics trigger. Follow the chain to find root cause.">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[
+      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Diagnostic Chains' },
+    ]} />
+
+    <div class="mb-10">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Diagnostic Chains
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+        When a metric triggers, don't guess — follow the diagnostic chain. Each chain starts with a trigger condition
+        and walks you through the most likely root causes in order.
+      </p>
+      <div class="rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 p-5">
+        <h3 class="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-2">How to use diagnostic chains</h3>
+        <ol class="text-sm text-blue-600 dark:text-blue-400 space-y-1 list-decimal list-inside">
+          <li>Identify the metric that triggered (crossed threshold or trending badly)</li>
+          <li>Find the matching diagnostic chain below</li>
+          <li>Check each diagnostic step in order — the first anomaly is likely your root cause</li>
+          <li>Use the Director Question to determine scope and escalation path</li>
+        </ol>
+      </div>
+    </div>
+
+    <section class="space-y-4">
+      {diagnosticChains.map(chain => (
+        <DiagnosticChainCard chain={chain} />
+      ))}
+    </section>
+  </div>
+</BaseLayout>

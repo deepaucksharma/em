@@ -17,7 +17,12 @@
     "decisionFramework": "1. Listen: understand root cause (comp? growth? culture? manager?). 2. Assess: is this fixable? Be honest with yourself. 3. If fixable: make specific, genuine offer (not panicked counter). 4. If not fixable: wish them well, plan transition. 5. Inform your manager immediately. 6. Plan knowledge transfer. 7. Communicate to team. 8. Post-mortem: what could you have done differently?",
     "commonMistakes": "Panicked counter-offer that doesn't address root cause (buys 6 months at best). Guilt-tripping. Not telling your manager immediately. Not planning knowledge transfer. Ignoring the signal for the rest of the team.",
     "whatGoodLooksLike": "Root cause conversation within 24hrs. Honest assessment of fixability. If counter-offering: specific, addresses root cause, approved by leadership. If not: graceful exit with knowledge transfer plan. Team comms within 48hrs. Retrospective on retention practices.",
-    "mappingNotes": "Top performer retention scenario"
+    "mappingNotes": "Top performer retention scenario",
+    "suggestedMetricIds": [
+      "7.1",
+      "7.2",
+      "5.1"
+    ]
   },
   {
     "id": "P-C8-1",
@@ -38,7 +43,13 @@
     "decisionFramework": "1. Check: is the team handling it? If yes, trust them. 2. If team is struggling: provide guidance, don't take over. 3. Respond to manager with what you know. 4. Post-vacation: review incident response. 5. If team handled it well: celebrate. If not: identify gaps for training/process/runbooks.",
     "commonMistakes": "Taking over incident from vacation (undermines team, proves you haven't delegated). Going completely dark when your manager needs a response. Blaming team for not handling it perfectly. Using it as evidence that you can't take vacation.",
     "whatGoodLooksLike": "Team handles it using documented processes. You provide brief guidance if asked, but don't run the incident. Post-vacation retro focuses on process improvement, not blame. Your team proved they can function without you — that's a WIN.",
-    "mappingNotes": "Production incident during vacation"
+    "mappingNotes": "Production incident during vacation",
+    "suggestedMetricIds": [
+      "1.3",
+      "3.5",
+      "3.3",
+      "3.6"
+    ]
   },
   {
     "id": "P-C5-1",
@@ -59,7 +70,12 @@
     "decisionFramework": "1. Quantify the debt: specifically what gets cut, what's the future cost (hours, risk, incidents). 2. Present options: (A) Ship on time with known debt + remediation plan, (B) Extend deadline by X to do it right, (C) Reduce scope to hit deadline without debt. 3. Make trade-off PM's decision with full information. 4. If PM chooses debt: document the plan to pay it back. 5. Never: passive-aggressively build it 'right' and miss deadline.",
     "commonMistakes": "Just saying 'no' without alternatives. Passive compliance then complaining about tech debt later. Building it your way and missing the deadline. Not quantifying the actual cost of debt. Escalating without first trying to align directly with PM.",
     "whatGoodLooksLike": "You present 3 clear options with honest trade-offs. PM makes an informed decision. If debt is accepted: remediation plan is written, capacity allocated, and PM agrees to the payback timeline. No resentment — it was a joint decision with eyes open.",
-    "mappingNotes": "PM tech debt conflict"
+    "mappingNotes": "PM tech debt conflict",
+    "suggestedMetricIds": [
+      "8.6",
+      "8.4",
+      "1.2"
+    ]
   },
   {
     "id": "P-C12-1",
@@ -79,7 +95,12 @@
     "decisionFramework": "1. Talk to each privately: understand their perspective and concerns. 2. Separate the technical from the personal. 3. Resolve the technical disagreement: use RFC process, get external reviewer, make a decision. 4. Address the personal: specific feedback to each on behavior (not opinions). 5. Mediated conversation if needed. 6. Clear expectations going forward. 7. Follow up in 2 weeks.",
     "commonMistakes": "Ignoring it ('they'll work it out'). Taking sides publicly. Making it about who's right technically while ignoring interpersonal damage. Punishing both equally. Moving one to another team without addressing the root cause.",
     "whatGoodLooksLike": "Technical decision made through structured process (not by who argues louder). Both engineers receive specific, private feedback on behavior. Both acknowledge the impact on the team. Clear working agreement going forward. Follow-up confirms improvement. Team morale recovers.",
-    "mappingNotes": "Engineer conflict resolution"
+    "mappingNotes": "Engineer conflict resolution",
+    "suggestedMetricIds": [
+      "7.9",
+      "5.1",
+      "7.8"
+    ]
   },
   {
     "id": "P-C1-1",
@@ -101,7 +122,14 @@
     "decisionFramework": "1. Month 1: Listen and assess. Build trust. Understand WHY performance is low (people? process? scope? leadership?). 2. Month 2: Quick wins (fix one obvious pain point). Start 1:1 cadence. Begin addressing most critical performance gap. 3. Month 3: Comprehensive plan to leadership — honest assessment + proposed path. Begin formal performance processes where needed. 4. Communicate to team: 'here's what I've observed, here's what we're going to change, here's how I'll support you.'",
     "commonMistakes": "Making changes in week 1 before understanding context. Putting people on PIP immediately (you weren't there, you don't have evidence yet). Blaming previous EM publicly. Promising everything will be better without a plan. Sugar-coating the situation to leadership.",
     "whatGoodLooksLike": "Honest assessment to leadership at 30 days (with plan, not just problems). Trust built through listening and quick wins. Performance conversations started with clear expectations and genuine support. Team feels heard and sees a path forward. Measurable improvement at 90 days.",
-    "mappingNotes": "Inherit low-performing team"
+    "mappingNotes": "Inherit low-performing team",
+    "suggestedMetricIds": [
+      "5.1",
+      "7.1",
+      "7.9",
+      "1.2",
+      "1.4"
+    ]
   },
   {
     "id": "P-C1-2",
@@ -122,7 +150,12 @@
     "decisionFramework": "1. Prepare: talking points for affected and remaining team members. 2. Coordinate: logistics (access revocation, equipment, benefits information). 3. Day of: tell affected people first, in private, with humanity. 4. Same day: address remaining team honestly. 5. Following weeks: over-communicate stability, re-plan roadmap, address survivor guilt. 6. Don't pretend nothing happened.",
     "commonMistakes": "Leaking the news early. Being cold or scripted with affected people. Not being available for remaining team. Immediately jumping to 'let's focus on the work' without acknowledging grief. Not re-planning the roadmap (pretending you can do the same work with fewer people).",
     "whatGoodLooksLike": "Affected people treated with dignity and respect — they remember how they were treated. Remaining team hears honesty: what happened, what's changing, what's not. Roadmap re-planned publicly (team sees you're realistic). 1:1s with every remaining team member within 1 week. Zero additional voluntary attrition in following quarter.",
-    "mappingNotes": "Layoffs incoming — pre-disclosure"
+    "mappingNotes": "Layoffs incoming — pre-disclosure",
+    "suggestedMetricIds": [
+      "7.1",
+      "5.1",
+      "7.9"
+    ]
   },
   {
     "id": "P-C5-2",
@@ -143,7 +176,13 @@
     "decisionFramework": "1. Listen to VP's vision — understand the intent behind changes. 2. Identify: which changes are reasonable? Which are destructive? 3. Push back constructively on changes that would hurt (with data). 4. Shield team from unnecessary churn while supporting legitimate changes. 5. Communicate to team: what's changing, what's not, what you're advocating for. 6. Build trust with new VP through early results.",
     "commonMistakes": "Immediately complying with everything (your team suffers). Immediately resisting everything (you get replaced). Badmouthing the VP to your team. Letting team anxiety fester without addressing it. Not adapting at all to new leadership's style.",
     "whatGoodLooksLike": "You earn VP's trust by delivering results on their priorities. You protect your team from unnecessary churn. Changes that happen are well-communicated and well-executed. Team sees you as their advocate who also adapts to new reality. Six months later: VP trusts you, team trusts you, things are stable.",
-    "mappingNotes": "New VP changes everything"
+    "mappingNotes": "New VP changes everything",
+    "suggestedMetricIds": [
+      "1.2",
+      "3.5",
+      "5.1",
+      "8.4"
+    ]
   },
   {
     "id": "P-C6-2",
@@ -163,7 +202,12 @@
     "decisionFramework": "1. Don't confront them about job searching (it's their right). 2. Create opportunity for honest career conversation: 'How are you feeling about your growth here? What would make the next year exciting for you?' 3. Listen for the underlying need. 4. If you can address it: propose specific changes (scope, comp, growth path). 5. If you can't: be honest about constraints. 6. Either way: plan for potential departure (knowledge transfer, succession).",
     "commonMistakes": "Confronting them directly about interviewing (violation of trust). Panic counter-offer out of nowhere. Ignoring the signals hoping they'll stay. Punishing them with reduced access or scope. Telling their teammates.",
     "whatGoodLooksLike": "Proactive career conversation that feels natural, not surveillance-triggered. You address underlying needs (if possible) before an offer forces your hand. If they stay: because root cause was addressed. If they leave: you had time to plan. Either way: trust preserved.",
-    "mappingNotes": "Senior engineer quietly job searching"
+    "mappingNotes": "Senior engineer quietly job searching",
+    "suggestedMetricIds": [
+      "7.1",
+      "5.1",
+      "7.8"
+    ]
   },
   {
     "id": "P-C3-1",
@@ -184,7 +228,13 @@
     "decisionFramework": "1. Re-estimate honestly: what's actually required? What's the gap vs. plan? 2. Present options: (A) Full migration by deadline with X% overtime risk, (B) Phased migration — critical paths by deadline, remaining by Q4, (C) Full migration with additional resources. 3. Communicate gap EARLY — don't wait until deadline is missed. 4. If proceeding under pressure: protect team health (no sustained overtime), cut scope aggressively, track weekly.",
     "commonMistakes": "Hiding the gap ('we'll figure it out'). Asking team to work overtime for months. Promising delivery you know isn't realistic. Not flagging the risk until it's a crisis. Blaming the estimate instead of managing the situation.",
     "whatGoodLooksLike": "Risk flagged at earliest moment with clear options. Leadership makes informed trade-off decision. Team executes with realistic scope and sustainable pace. Weekly progress visible to stakeholders. If phased: phase 1 delivered on deadline, clear plan for phase 2. Team emerges without burnout.",
-    "mappingNotes": "Critical migration under deadline"
+    "mappingNotes": "Critical migration under deadline",
+    "suggestedMetricIds": [
+      "1.2",
+      "1.4",
+      "2.5",
+      "3.5"
+    ]
   },
   {
     "id": "P-C14-1",
@@ -204,7 +254,11 @@
     "decisionFramework": "1. Present evidence calmly: specific impact examples, peer feedback, cross-team comparison data you prepared. 2. Listen to counter-arguments: is there a valid point you're missing? 3. If your case is strong: hold firm with evidence. 4. If their case has merit: gracefully accept and adjust. 5. Either way: communicate outcome to your engineer honestly. 6. Never: throw the committee under the bus.",
     "commonMistakes": "Caving without defending your case. Getting emotional or combative. Not preparing comparison data in advance. Telling your engineer 'I fought for you but they overruled me' (blames the system, undermines trust in the process). Inflating evidence to win the argument.",
     "whatGoodLooksLike": "Strong, evidence-based case that even skeptics find credible. If you win: earned through preparation, not politics. If you lose: you understand why and can explain it honestly to your engineer. Your credibility in the room is intact or strengthened regardless of outcome.",
-    "mappingNotes": "Calibration downgrade fight"
+    "mappingNotes": "Calibration downgrade fight",
+    "suggestedMetricIds": [
+      "5.1",
+      "7.8"
+    ]
   },
   {
     "id": "P-C1-3",
@@ -225,7 +279,12 @@
     "decisionFramework": "1. Assess: should your team own this? (Impact on your goals, capacity, strategic value) 2. If yes: volunteer to drive. Write a proposal with scope, timeline, resource needs. 3. Get buy-in from other teams (pre-wire 1:1). 4. Establish DACI. 5. Drive to completion with regular cross-team syncs. 6. If no: identify who should own it and facilitate that conversation.",
     "commonMistakes": "Waiting for someone else to step up (it's been months — they won't). Volunteering without capacity (good intentions, failed execution). Trying to drive without explicit buy-in from participating teams. Not getting DACI clear upfront.",
     "whatGoodLooksLike": "You either own it and drive it to completion, or you facilitate someone else owning it. Cross-team initiative ships. Your role is visible to leadership. Political capital built through execution, not just volunteering. 'Drove [initiative] across [X] teams, delivering [Y] outcome.'",
-    "mappingNotes": "Stalled cross-team initiative"
+    "mappingNotes": "Stalled cross-team initiative",
+    "suggestedMetricIds": [
+      "2.6",
+      "1.2",
+      "8.1"
+    ]
   },
   {
     "id": "P-C14-2",
@@ -245,7 +304,12 @@
     "decisionFramework": "1. Understand the constraint: is this a hard mandate or guidance? What's driving it? 2. Present your strongest case: 'I can compress 2 of the 3, but this one engineer delivered [X] — here's the evidence.' 3. If Director insists across the board: push back with data one more time, clearly. 4. If overruled: you own the outcome — deliver feedback honestly to your engineers. 5. Never: blame your Director to your team.",
     "commonMistakes": "Silently complying and giving unfair ratings. Openly fighting your Director in calibration (burning political capital). Telling your engineers 'I wanted to give you Exceeds but my boss said no.' Distributing the pain randomly instead of based on evidence.",
     "whatGoodLooksLike": "You advocate clearly with evidence. You compress where reasonable and hold firm where it matters most. If compromised: you deliver honest feedback to affected engineers ('here's what you accomplished, here's the context for the rating, here's your growth path'). Trust preserved in both directions.",
-    "mappingNotes": "Forced ratings compression"
+    "mappingNotes": "Forced ratings compression",
+    "suggestedMetricIds": [
+      "7.1",
+      "7.9",
+      "5.1"
+    ]
   },
   {
     "id": "P-C11-1",
@@ -266,7 +330,12 @@
     "decisionFramework": "1. First: define team mission, scope, and technical vision (BEFORE hiring). 2. Hire tech lead first (partner on architecture and subsequent hiring). 3. Hiring loop: calibrated, structured, bar raiser. Don't lower bar for speed. 4. Onboard in waves (don't hire all 6 simultaneously). 5. Establish team charter, principles, and rituals from day 1. 6. First milestone should be deliberately achievable — team needs an early win.",
     "commonMistakes": "Hiring all 6 simultaneously (onboarding chaos). Not defining technical direction before hiring (building a team without a mission). Hiring fast at the expense of quality. Not establishing culture intentionally (letting it happen by accident). Setting unrealistic first milestone.",
     "whatGoodLooksLike": "Tech lead hired in month 1, contributing to architecture and hiring. Engineers hired in waves of 2, each wave onboarded before next. Team charter established early. First milestone delivered on time — team has confidence and momentum. By month 6: functioning, cohesive team with clear identity.",
-    "mappingNotes": "Build team from scratch"
+    "mappingNotes": "Build team from scratch",
+    "suggestedMetricIds": [
+      "7.3",
+      "7.4",
+      "7.5"
+    ]
   },
   {
     "id": "P-C6-3",
@@ -286,7 +355,13 @@
     "decisionFramework": "1. Diagnose: is this a skill gap, will gap, or situation gap? (Can't do it, won't do it, or set up to fail?) 2. If skill: invest in coaching — specific development plan with milestones. 3. If will: direct conversation about expectations and fit. 4. If situation: fix the situation (scope, support, resources). 5. Increase 1:1 cadence. 6. Set clear improvement timeline (60-90 days). 7. If no improvement: you need to make a change.",
     "commonMistakes": "Ignoring it hoping they'll figure it out. Taking over their EM responsibilities (they'll never develop). Replacing them without genuine coaching attempt. Not protecting their team during the transition. Waiting too long to act (the team suffers).",
     "whatGoodLooksLike": "Honest diagnosis shared with EM. Specific coaching plan with clear milestones. Increased support (not micromanagement). If they improve: great — you developed a manager. If not: managed transition with dignity, team protected, replacement plan ready.",
-    "mappingNotes": "Struggling EM (Director scenario)"
+    "mappingNotes": "Struggling EM (Director scenario)",
+    "suggestedMetricIds": [
+      "5.1",
+      "7.1",
+      "7.9",
+      "1.2"
+    ]
   },
   {
     "id": "P-C8-2",
@@ -306,7 +381,13 @@
     "decisionFramework": "1. First: resolve the incident (rollback, mitigation). 2. Communicate: status updates to stakeholders every 30min during incident. 3. Take ownership immediately with leadership: 'our deploy caused this, here's what we're doing.' 4. Post-incident: blameless post-mortem within 48hrs. 5. Action items with owners and deadlines. 6. Prevention: what process/test/check would have caught this? 7. Communicate lessons learned broadly.",
     "commonMistakes": "Pointing fingers at the engineer who deployed. Hiding or minimizing the impact. Not communicating status during the incident. Post-mortem that's actually a blame session. Promising 'it won't happen again' without systemic changes.",
     "whatGoodLooksLike": "Incident resolved quickly through documented process. Ownership taken immediately and clearly. Blameless post-mortem produces systemic improvements (not 'be more careful'). Action items completed within 2 weeks. Similar class of incident prevented going forward. Team trust preserved.",
-    "mappingNotes": "Outage caused by your deploy"
+    "mappingNotes": "Outage caused by your deploy",
+    "suggestedMetricIds": [
+      "1.4",
+      "1.3",
+      "3.3",
+      "3.5"
+    ]
   },
   {
     "id": "P-C5-3",
@@ -327,7 +408,12 @@
     "decisionFramework": "1. Understand the real ask: why your team? What's the actual need? 2. Assess honestly: can your team absorb this without degrading current work? What's the cost? 3. If no: propose alternatives (which team should own this? new team needed?). 4. If yes with conditions: 'we can take this if we deprioritize X or get Y headcount.' 5. Never: silently absorb scope that will crush your team.",
     "commonMistakes": "Accepting without understanding the cost. Declining without offering alternatives. Complaining to your team about leadership decisions. Absorbing it and burning out your team to prove you can handle it.",
     "whatGoodLooksLike": "Clear-eyed assessment presented to VP: 'here's what this would cost us' with specific trade-offs. If you accept: explicit agreement on what you're deprioritizing or what resources you're getting. If you decline: alternative proposal that solves the VP's actual problem. Either way: you're seen as thoughtful and solutions-oriented.",
-    "mappingNotes": "Asked to take misfit scope"
+    "mappingNotes": "Asked to take misfit scope",
+    "suggestedMetricIds": [
+      "8.4",
+      "2.5",
+      "2.6"
+    ]
   },
   {
     "id": "P-C5-4",
@@ -347,7 +433,12 @@
     "decisionFramework": "1. Quantify impact: how many incidents? Customer impact? Eng hours spent on workarounds? 2. Build relationship with platform EM (understand their constraints). 3. Propose mutual solutions: can you contribute a fix? Can you implement a fallback? 4. If blocked: escalate with data to Director level. 5. Parallel: build resilience against this dependency (circuit breakers, fallbacks, caching).",
     "commonMistakes": "Complaining without data. Escalating without first trying direct partnership. Building a competing solution in secret. Blaming the platform team publicly. Doing nothing and accepting the pain.",
     "whatGoodLooksLike": "Data-driven conversation with platform team. Mutual problem-solving — maybe you contribute the fix, they review and merge. Fallback strategy implemented regardless. If escalation needed: both EMs present jointly to leadership with shared facts and proposed solution. Relationship preserved.",
-    "mappingNotes": "Unreliable platform dependency"
+    "mappingNotes": "Unreliable platform dependency",
+    "suggestedMetricIds": [
+      "3.5",
+      "3.3",
+      "1.2"
+    ]
   },
   {
     "id": "P-C12-2",
@@ -368,7 +459,12 @@
     "decisionFramework": "1. Audit the full pipeline: where are candidates dropping off? (Sourcing? Screen? Onsite? Offer?) 2. Fix the pipeline, not the outcome: diverse sourcing channels, structured interviews with rubrics, diverse interview panels, bias training. 3. Fix retention too: is your team environment actually inclusive? Would diverse hires thrive? 4. Never: lower the bar or hire for optics. 5. This is a sustained effort, not a one-quarter initiative.",
     "commonMistakes": "Token hiring (one diverse hire into unwelcoming environment — they leave). Lowering the bar (insulting and counterproductive). Treating it as a checkbox exercise. Only fixing sourcing without fixing culture. Delegating entirely to recruiting team.",
     "whatGoodLooksLike": "Pipeline audited and fixed at each stage. Interview process restructured to reduce bias (structured rubrics, diverse panels). Culture assessed honestly — are diverse voices actually heard? Sustained effort over multiple quarters. Diversity improves AND inclusion improves AND bar maintained.",
-    "mappingNotes": "Zero diversity fix mandate"
+    "mappingNotes": "Zero diversity fix mandate",
+    "suggestedMetricIds": [
+      "7.7",
+      "5.1",
+      "7.4"
+    ]
   },
   {
     "id": "P-C7-1",
@@ -388,7 +484,12 @@
     "decisionFramework": "1. Understand the full context (you might not have it). Ask questions, not accusations. 2. If you still disagree after understanding context: make your case once, clearly, with data. 3. If overruled: disagree and commit. Execute fully. 4. Never: undermine the decision through passive resistance or complaining to your team. 5. If the decision fails: don't say 'I told you so.' Help fix it.",
     "commonMistakes": "Going along silently (your perspective was valuable and you withheld it). Fighting the same battle repeatedly after the decision is made. Telling your team 'I disagree but we have to do it' (undermines the decision and your leadership above). Sabotaging through half-hearted execution.",
     "whatGoodLooksLike": "You made your case clearly and respectfully. After the decision: you commit fully and execute as if it were your own idea. Your team sees you supporting the direction. If the decision proves wrong: you help course-correct without blame. Your Director remembers you raised the concern constructively.",
-    "mappingNotes": "Disagree with decision above you"
+    "mappingNotes": "Disagree with decision above you",
+    "suggestedMetricIds": [
+      "8.1",
+      "8.2",
+      "8.4"
+    ]
   },
   {
     "id": "P-C5-5",
@@ -410,7 +511,14 @@
     "decisionFramework": "1. Map current scope to Director-level rubric — identify gaps honestly. 2. Build evidence of Director-level work: cross-team impact, org-level strategy, developing other managers. 3. Get a sponsor (not just a mentor) at VP+ level. 4. Demonstrate you can operate at Director altitude while still delivering as EM. 5. Your promo case should be obvious before you submit it.",
     "commonMistakes": "Asking for the title without doing the job. Focusing on managing your team well (necessary but not sufficient — Directors operate across teams). Not building sponsor relationships. Waiting for your manager to nominate you instead of driving your own career. Neglecting your current team while chasing Director scope.",
     "whatGoodLooksLike": "You've been operating at Director level for 6+ months before the promo discussion. Cross-team impact is documented. You've developed at least one future EM. You have a sponsor who advocates for you. Your current team continues to thrive. The promo feels like recognition of reality, not aspiration.",
-    "mappingNotes": "Preparing own Director promotion"
+    "mappingNotes": "Preparing own Director promotion",
+    "suggestedMetricIds": [
+      "1.2",
+      "3.5",
+      "7.1",
+      "8.4",
+      "8.2"
+    ]
   },
   {
     "id": "P-C9-1",
@@ -430,7 +538,14 @@
     "decisionFramework": "1. Investigate root cause: is it real degradation or measurement artifact (team grew, monolith split, deploy definition changed)? 2. Correlate with outcomes: are incidents up? Is velocity actually down? Customer impact? 3. If real: identify bottleneck (CI pipeline? review queue? test suite? environment contention?). 4. If artifact: fix the measurement, communicate context to VP. 5. Either way: present findings with context, not just numbers. 6. Create improvement plan with team ownership, not top-down targets.",
     "commonMistakes": "Setting DORA targets as team KPIs (Goodhart's Law). Gaming deploy frequency by splitting deploys. Presenting raw numbers to VP without context. Blaming the team instead of investigating systemic causes. Ignoring the signal because \"team feels fine.\"",
     "whatGoodLooksLike": "Root cause identified within 1 week. VP gets context-rich update (not just \"we'll fix it\"). If real: targeted improvement with measurable progress within 1 quarter. If artifact: measurement corrected, team educated on what metrics actually mean. Metrics used as shared investigation tool, never punishment.",
-    "mappingNotes": "DORA decline investigation scenario — metrics as diagnostic"
+    "mappingNotes": "DORA decline investigation scenario — metrics as diagnostic",
+    "suggestedMetricIds": [
+      "1.2",
+      "1.4",
+      "1.1",
+      "5.1",
+      "2.5"
+    ]
   },
   {
     "id": "P-C10-1",
@@ -451,7 +566,13 @@
     "decisionFramework": "1. Map all current work to business impact tiers: critical (revenue/compliance), important (strategic), nice-to-have (quality-of-life). 2. Identify what STOPS — be explicit, write it down. 3. Assess team composition: performance, criticality of knowledge, single points of failure. 4. Optimize for org survival: protect critical path, maintain minimum viable team per area. 5. Prepare talking points for affected individuals (with your HR partner). 6. Tell affected people FIRST, with humanity. 7. Re-plan roadmap with remaining team within 1 week. 8. Communicate revised plan to stakeholders within 2 weeks.",
     "commonMistakes": "Spreading cuts evenly across teams (peanut butter approach). Cutting based solely on performance ratings. Not communicating what stops. Protecting pet projects over business-critical work. Delaying the conversation with affected people. Not re-planning the roadmap after cuts.",
     "whatGoodLooksLike": "Clear-eyed impact analysis delivered to leadership within days. Affected individuals told with dignity and support. Remaining team has revised, achievable roadmap within 1 week. Stakeholders know what's changing. Zero regrettable attrition from survivors. Team productive within 3-4 weeks.",
-    "mappingNotes": "Headcount reduction scenario — resource allocation under constraint"
+    "mappingNotes": "Headcount reduction scenario — resource allocation under constraint",
+    "suggestedMetricIds": [
+      "8.4",
+      "8.2",
+      "7.1",
+      "1.2"
+    ]
   },
   {
     "id": "P-C13-1",
@@ -472,13 +593,23 @@
     "decisionFramework": "1. Assess severity and blast radius immediately — what data is exposed, who is affected, what's the regulatory implication? 2. Communicate to your manager and stakeholders SAME DAY: feature timeline is shifting. 3. Assign your best engineer to the fix — this is not junior work. 4. Implement fix + write regression test + add to automated scanning to prevent recurrence. 5. Document root cause: how did this get to production? What process failed? 6. Close the loop with security team within SLA. 7. Post-fix: update threat model, add to security review checklist, share learning broadly.",
     "commonMistakes": "Treating it as security team's problem. Trying to fix it quietly without telling stakeholders about the feature delay. Assigning it to whoever is \"free\" instead of your most capable engineer. Fixing the symptom without addressing how it got to production. Not communicating the feature timeline impact upward.",
     "whatGoodLooksLike": "Vulnerability patched within 72hrs. Root cause documented. Process gap identified and closed (new automated check, updated review checklist). Stakeholders informed proactively about feature delay. Security team relationship strengthened, not adversarial. Team learns from it — similar vulnerability never recurs.",
-    "mappingNotes": "Critical security finding response scenario"
+    "mappingNotes": "Critical security finding response scenario",
+    "suggestedMetricIds": [
+      "9.1",
+      "9.3",
+      "9.2"
+    ]
   },
   {
     "id": "P-C3-2",
     "slug": "your-teams-tech-stack-becomes-deprecated-company-wide",
-    "observableIds": ["C3-O4", "C3-O6"],
-    "capabilityIds": ["C3"],
+    "observableIds": [
+      "C3-O4",
+      "C3-O6"
+    ],
+    "capabilityIds": [
+      "C3"
+    ],
     "title": "Your Team's Tech Stack Becomes Deprecated Company-Wide",
     "context": "Platform team announces your primary framework/language is sunset. Migration timeline is 18 months. You have 100K lines of code in the deprecated stack, active feature development in flight, and no one on your team has deep experience with the target stack.",
     "topicsActivated": [
@@ -487,13 +618,24 @@
     "decisionFramework": "1. Assess blast radius: how much of your codebase is affected? What's the dependency graph? Which services are most critical? 2. Evaluate team readiness: who has experience with the target stack? What training is needed? Budget learning time explicitly. 3. Negotiate timeline: 18 months may be unrealistic for 100K LOC — present data-driven counter-proposal if needed. 4. Choose migration strategy: strangler fig (incremental) vs. big bang rewrite. Almost always choose strangler fig. 5. Create migration backlog: prioritize by risk (most critical services first) and coupling (least coupled first for early wins). 6. Run feature development and migration in parallel — do NOT freeze features for 18 months. 7. Establish migration metrics: % migrated, velocity per sprint, blockers. Report weekly to platform team and leadership. 8. Negotiate for dedicated migration capacity (at least 30% of team bandwidth).",
     "commonMistakes": "Attempting a big-bang rewrite (historically fails at 100K+ LOC scale). Freezing all feature work to focus on migration (business won't tolerate it). Not investing in team upskilling early (migration stalls in month 3 when nobody knows the new stack). Treating migration as purely technical without communicating business impact upward. Waiting until month 12 to flag that the timeline is unrealistic. Not negotiating for dedicated capacity — trying to squeeze migration into 'spare time.'",
     "whatGoodLooksLike": "Strangler fig migration plan published within 2 weeks of announcement. Team upskilling started immediately (pairing sessions, training budget, internal tech talks). First service migrated within 6 weeks as proof of concept. Feature development continues at 70% capacity during migration. Weekly migration metrics visible to all stakeholders. Timeline renegotiated early if needed — with data, not excuses. Team emerges with new skills and stronger architecture. Zero production incidents caused by the migration itself.",
-    "mappingNotes": "Tech stack deprecation and large-scale migration planning"
+    "mappingNotes": "Tech stack deprecation and large-scale migration planning",
+    "suggestedMetricIds": [
+      "8.4",
+      "8.6",
+      "1.2",
+      "3.5"
+    ]
   },
   {
     "id": "P-C1-4",
     "slug": "merging-two-teams-after-acquisition-re-org",
-    "observableIds": ["C1-O3", "C1-O14"],
-    "capabilityIds": ["C1"],
+    "observableIds": [
+      "C1-O3",
+      "C1-O14"
+    ],
+    "capabilityIds": [
+      "C1"
+    ],
     "title": "Merging Two Teams After Acquisition/Re-org",
     "context": "Company acquired a startup. You're responsible for merging their 8-person team with your 12-person team. Different tech stacks (they use Python/Django, you use Java/Spring), different cultures (startup speed vs. enterprise process), different processes (they have no sprint planning, you run 2-week sprints with full ceremonies). Some role overlap exists. Both teams are anxious about who stays, who leads, and what changes.",
     "topicsActivated": [
@@ -502,13 +644,27 @@
     "decisionFramework": "1. Week 1: Meet every person on the acquired team individually — understand their role, concerns, what they value about their current culture. Listen more than you talk. 2. Week 2: Identify overlaps and complementary skills. Map who owns what. Do NOT make org changes yet. 3. Weeks 3-4: Establish shared rituals — joint standup, shared Slack channel, cross-team pairing sessions. Let cultures cross-pollinate before forcing convergence. 4. Month 2: Make org structure decisions — be transparent about rationale. If roles overlap, decide based on skill and contribution, not 'which team they came from.' 5. Month 2-3: Consolidate processes gradually — take the best of both. Don't force the acquired team to adopt all your processes wholesale. 6. Months 3-6: Tech stack convergence plan — decide on target stack with input from both teams. This is a multi-quarter effort. 7. Throughout: over-communicate. Ambiguity breeds anxiety and attrition.",
     "commonMistakes": "Treating the acquired team as subordinate ('you're joining us, adopt our ways'). Making org changes in week 1 before understanding the people. Forcing immediate tech stack convergence (creates resentment and risk). Ignoring cultural differences and expecting instant alignment. Losing key acquired talent because they feel undervalued. Not addressing role overlap directly — letting it fester into political infighting. Assuming your processes are better because you're the acquirer.",
     "whatGoodLooksLike": "Every acquired team member feels heard within the first 2 weeks. Org structure decisions made transparently with clear rationale. Best practices adopted from BOTH teams (acquired team sees their ideas valued). Zero regrettable attrition from either team in the first 6 months. Shared team identity emerges organically. Tech stack convergence plan is data-driven and has buy-in from engineers on both sides. By month 6: it's one team, not 'us and them.'",
-    "mappingNotes": "Post-acquisition team merger and cultural integration"
+    "mappingNotes": "Post-acquisition team merger and cultural integration",
+    "suggestedMetricIds": [
+      "1.2",
+      "5.1",
+      "7.1",
+      "2.5"
+    ]
   },
   {
     "id": "P-C8-3",
     "slug": "managing-through-a-major-security-incident-data-breach",
-    "observableIds": ["C8-O1", "C8-O2", "C13-O1", "C13-O2"],
-    "capabilityIds": ["C8", "C13"],
+    "observableIds": [
+      "C8-O1",
+      "C8-O2",
+      "C13-O1",
+      "C13-O2"
+    ],
+    "capabilityIds": [
+      "C8",
+      "C13"
+    ],
     "title": "Managing Through a Major Security Incident (Data Breach)",
     "context": "Security team discovers unauthorized data access to your team's service. Customer PII (names, emails, hashed passwords) may be compromised. The scope is unclear — could be hundreds or millions of records. Legal, PR, and the exec team are involved. Your team owns the affected service. The incident is already escalated to the CEO. Clock is ticking on regulatory notification requirements (72 hours under GDPR).",
     "topicsActivated": [
@@ -517,13 +673,24 @@
     "decisionFramework": "1. Immediate (Hour 0-4): Establish incident command structure. Your role is EM-level incident commander for the technical response. Contain the breach — revoke compromised credentials, patch the vulnerability, preserve forensic evidence (do NOT destroy logs). 2. Hour 4-12: Scope the impact — how many records, what data types, what time period. Work with security team on forensic analysis. Provide regular updates to exec war room (every 2 hours). 3. Hour 12-48: Support legal team with technical facts for regulatory notification. Prepare customer-facing technical explanation (work with PR). Continue forensic analysis — understand attack vector completely. 4. Day 2-7: Implement permanent fix (not just patch). Conduct thorough security review of adjacent systems. Begin post-incident review. 5. Week 2-4: Full post-mortem with systemic improvements. Security architecture review. Team well-being check — breaches are extremely stressful. 6. Throughout: protect your engineers from exec pressure. They need to focus on the technical response, not fielding questions from 15 VPs.",
     "commonMistakes": "Destroying evidence in the rush to fix (deleting logs, wiping servers). Downplaying severity to leadership ('it's probably not that bad'). Letting every executive directly ping your engineers for status. Not involving legal immediately (regulatory clock is ticking). Promising a root cause before forensics are complete. Blaming the engineer who wrote the vulnerable code. Not checking on your team's well-being during and after the crisis. Treating the post-mortem as optional because 'we already fixed it.'",
     "whatGoodLooksLike": "Breach contained within hours, not days. Forensic evidence preserved from minute one. Exec team gets regular, honest updates (not optimistic guesses). Legal has what they need for regulatory notification within 72 hours. Customer communication is transparent and accurate. Root cause identified and systemic fix implemented (not just a patch). Security review of adjacent systems completed. Post-mortem produces architectural improvements that prevent this class of vulnerability. Your team is recognized for their response, not blamed for the breach. No one burns out from the crisis.",
-    "mappingNotes": "Major security incident and data breach response"
+    "mappingNotes": "Major security incident and data breach response",
+    "suggestedMetricIds": [
+      "9.1",
+      "9.3",
+      "1.3",
+      "3.5"
+    ]
   },
   {
     "id": "P-C6-4",
     "slug": "your-skip-level-reports-are-unhappy-with-their-em",
-    "observableIds": ["C6-O6", "C6-O11"],
-    "capabilityIds": ["C6"],
+    "observableIds": [
+      "C6-O6",
+      "C6-O11"
+    ],
+    "capabilityIds": [
+      "C6"
+    ],
     "title": "Your Skip-Level Reports Are Unhappy With Their EM",
     "context": "In skip-level 1:1s, multiple engineers (3 out of 7) express frustration with their EM. Recurring themes: lack of career development conversations, micromanagement on technical decisions, poor communication about team priorities, and feeling unheard. The EM has been in role for 18 months and was promoted from within. Their self-assessment is that things are going well.",
     "topicsActivated": [
@@ -532,13 +699,25 @@
     "decisionFramework": "1. Validate the signal: are 3 engineers saying the same thing independently, or is this a clique? Are the themes consistent? Is there performance data that corroborates (retention risk, engagement survey scores, velocity trends)? 2. Do NOT relay skip-level feedback verbatim to the EM — that destroys skip-level trust. Instead, synthesize themes: 'I'm hearing signals that career development and communication could be stronger on your team.' 3. Have a direct coaching conversation with the EM: share observed themes (not attributing to specific people), ask for their perspective, listen for self-awareness. 4. Co-create a development plan: specific actions on career conversations (monthly with each report), delegation framework (decide which technical decisions they truly need to own vs. delegate), communication cadence (weekly team priorities update). 5. Set a 60-day checkpoint. Increase your own 1:1 cadence with this EM to weekly. 6. Follow up with skip-level reports in 30 and 60 days — is it improving? 7. If no improvement after 60 days with genuine coaching: this may be a performance conversation, not a coaching conversation.",
     "commonMistakes": "Sharing skip-level feedback directly with attribution ('Alex said you're micromanaging') — destroys skip-level trust permanently. Ignoring the signal because the EM's self-assessment is positive. Taking over the EM's responsibilities instead of coaching them. Moving engineers to other teams without addressing the root cause (the EM's behavior). Giving vague feedback ('you need to communicate better') without specific, actionable guidance. Waiting too long — 3 unhappy engineers become 5, then attrition starts.",
     "whatGoodLooksLike": "EM receives synthesized, actionable feedback without knowing who said what. Development plan has specific, measurable actions (not 'be better at communication'). EM shows genuine self-awareness and desire to improve. Skip-level reports notice improvement within 30-60 days. If EM improves: you developed a manager and built trust in both directions. If EM doesn't improve: you have documented pattern and can make a fair decision. Either way: skip-level reports trust that their feedback was heard and acted upon.",
-    "mappingNotes": "Skip-level dissatisfaction with EM — coaching and intervention"
+    "mappingNotes": "Skip-level dissatisfaction with EM — coaching and intervention",
+    "suggestedMetricIds": [
+      "5.1",
+      "7.8",
+      "7.1"
+    ]
   },
   {
     "id": "P-C10-2",
     "slug": "budget-is-frozen-but-commitments-remain",
-    "observableIds": ["C10-O2", "C10-O5", "C2-O2"],
-    "capabilityIds": ["C10", "C2"],
+    "observableIds": [
+      "C10-O2",
+      "C10-O5",
+      "C2-O2"
+    ],
+    "capabilityIds": [
+      "C10",
+      "C2"
+    ],
     "title": "Budget Is Frozen But Commitments Remain",
     "context": "Mid-year budget freeze announced. No new hires (you had 4 open reqs), no new vendor contracts, limited travel and conference budget. But your Q3-Q4 commitments haven't been adjusted. Leadership expects delivery on the original roadmap. Your team is already at capacity, and two of the open reqs were for a critical new initiative that starts next quarter.",
     "topicsActivated": [
@@ -547,13 +726,25 @@
     "decisionFramework": "1. Immediate: map every commitment to required capacity (people-weeks). Total it up. Compare to available capacity without the 4 missing hires. Quantify the gap precisely (e.g., 'we're 35% short of committed capacity'). 2. Tier your commitments: Tier 1 (must deliver — revenue, contractual, compliance), Tier 2 (should deliver — strategic, high-value), Tier 3 (could deliver — quality-of-life, nice-to-have). 3. Present the gap to leadership with options: (A) Cut Tier 3 entirely and reduce Tier 2 scope — deliver Tier 1 on time. (B) Delay Tier 2 to Q1 next year — deliver Tier 1 + reduced Tier 3. (C) Deliver everything with explicit quality/reliability trade-offs (not recommended). 4. Force the prioritization decision upward — do not silently absorb an impossible scope. 5. Communicate to team: 'here's what changed, here's what we're focusing on, here's what we're NOT doing.' 6. Explore creative solutions: internal transfers, contractor budget (if not frozen), automation of manual work, scope reduction on individual projects.",
     "commonMistakes": "Silently accepting the original commitments and burning out your team trying to deliver. Not quantifying the capacity gap with data (just saying 'we can't do it all'). Spreading the team thin across everything instead of cutting scope decisively. Waiting until Q3 delivery misses to raise the alarm. Not exploring creative alternatives (internal mobility, automation, scope negotiation). Complaining to your team about leadership instead of actively managing upward.",
     "whatGoodLooksLike": "Capacity gap quantified and presented to leadership within 1 week of freeze announcement. Prioritization framework forces explicit trade-off decisions at the leadership level. Team has a clear, achievable plan — they know what they're doing and what they're NOT doing. Creative alternatives explored and implemented where possible. Tier 1 commitments delivered on time. Leadership sees you as someone who manages constraints proactively, not someone who either over-promises or just complains. Team morale stays stable because expectations are realistic.",
-    "mappingNotes": "Budget freeze with unchanged commitments — constraint-based planning"
+    "mappingNotes": "Budget freeze with unchanged commitments — constraint-based planning",
+    "suggestedMetricIds": [
+      "8.4",
+      "8.3",
+      "2.5",
+      "1.2"
+    ]
   },
   {
     "id": "P-C10-3",
     "slug": "leading-a-cost-optimization-initiative-finops",
-    "observableIds": ["C10-O3", "C3-O9"],
-    "capabilityIds": ["C10", "C3"],
+    "observableIds": [
+      "C10-O3",
+      "C3-O9"
+    ],
+    "capabilityIds": [
+      "C10",
+      "C3"
+    ],
     "title": "Leading a Cost Optimization Initiative (FinOps)",
     "context": "CFO mandates 30% cloud cost reduction across engineering. You're asked to lead the initiative for your org (4 teams, ~40 engineers). Current monthly spend is $2M across AWS services. No one has a clear picture of what's driving costs. Teams have never been held accountable for infrastructure spend. Finance wants a plan in 2 weeks and results within the quarter.",
     "topicsActivated": [
@@ -562,13 +753,25 @@
     "decisionFramework": "1. Week 1 — Visibility: Get cost breakdown by team, service, and environment. Tag everything. Identify top 10 cost drivers (usually 80/20 rule applies — a few services drive most spend). Distinguish production from non-production costs. 2. Week 2 — Quick wins: Identify low-hanging fruit (unused resources, oversized instances, non-prod environments running 24/7, unattached EBS volumes, idle load balancers). These often yield 10-15% savings with minimal effort. 3. Week 2 — Plan: Present tiered savings plan: Tier 1 (quick wins, 10-15%, 2 weeks), Tier 2 (right-sizing and reserved instances, 10-15%, 6-8 weeks), Tier 3 (architectural changes — caching, serverless migration, data tiering, 5-10%, 1-2 quarters). 4. Execution: Assign cost owners per team. Create cost dashboards visible to all engineers. Set up weekly cost review cadence. Implement automated alerts for spend anomalies. 5. Sustainability: Bake cost awareness into architecture reviews and PR reviews. Make cloud cost a standing item in team retrospectives. Celebrate wins publicly. 6. Report to CFO monthly with progress against target, broken down by initiative.",
     "commonMistakes": "Promising 30% savings purely from quick wins (architectural changes are needed for the last 10-15%). Not tagging resources properly (you can't optimize what you can't measure). Making engineers feel punished for using cloud resources (kills innovation). Cutting non-prod environments that teams actually need for testing. Not setting up sustainable practices (costs creep back within 6 months). Treating it as a one-time project instead of an ongoing discipline. Over-optimizing and causing production reliability issues (saving $50K/month but causing outages that cost more).",
     "whatGoodLooksLike": "Full cost visibility achieved within 2 weeks. Quick wins (10-15%) delivered within first month. 30% target achieved within the quarter through combination of quick wins, right-sizing, and architectural improvements. Cost dashboards used by engineers proactively (not just finance). FinOps practices embedded in team culture — cost is considered in architecture decisions going forward. No production reliability degradation. CFO sees engineering as a partner in financial discipline, not a cost center to be squeezed.",
-    "mappingNotes": "Cloud cost optimization and FinOps leadership"
+    "mappingNotes": "Cloud cost optimization and FinOps leadership",
+    "suggestedMetricIds": [
+      "10.1",
+      "10.5",
+      "8.4"
+    ]
   },
   {
     "id": "P-C11-2",
     "slug": "managing-through-a-hiring-freeze",
-    "observableIds": ["C11-O1", "C11-O5", "C6-O4"],
-    "capabilityIds": ["C11", "C6"],
+    "observableIds": [
+      "C11-O1",
+      "C11-O5",
+      "C6-O4"
+    ],
+    "capabilityIds": [
+      "C11",
+      "C6"
+    ],
     "title": "Managing Through a Hiring Freeze",
     "context": "6-month hiring freeze announced company-wide. You have 3 open reqs mid-pipeline — one candidate just passed the onsite, another is in final round, and a third is at phone screen stage. Your team of 9 is already stretched across 3 projects. Two senior engineers are showing signs of burnout. One mid-level engineer recently mentioned they've been getting recruiter outreach. Attrition risk is real and you can't backfill.",
     "topicsActivated": [
@@ -577,13 +780,27 @@
     "decisionFramework": "1. Candidates in pipeline: Fight for exceptions for the candidate who passed onsite — they're the hardest to re-recruit later. Present the cost of losing them (recruiting fees, ramp time, offer expiration). For earlier-stage candidates: communicate honestly and keep them warm if possible. 2. Scope reduction: Immediately re-prioritize. With 9 people instead of planned 12, you cannot run 3 full projects. Present leadership with options: (A) 2 projects at full speed + 1 paused, (B) 3 projects at reduced scope, (C) rank order and leadership decides. 3. Retention: Individual conversations with each team member within 1 week. Understand their concerns. Invest in what you CAN offer — stretch assignments, learning opportunities, conference talks, visibility projects, flexible work arrangements. 4. Burnout mitigation: Reduce meeting load, protect focus time, be explicit about what's NOT getting done. No hero culture. 5. Internal mobility: Can you borrow people from teams with lower priority work? Propose temporary reallocation. 6. Plan for freeze end: Keep job descriptions updated, maintain recruiter relationships, have a priority order for reqs when hiring resumes.",
     "commonMistakes": "Accepting the freeze without fighting for in-pipeline candidates (especially post-onsite — you'll never get them back). Not adjusting scope to match reduced team (expecting 9 people to do the work of 12). Ignoring retention risk because 'where would they go in this market?' (good engineers always have options). Canceling all development investment (training, conferences, hackathons) — this is exactly when you need retention tools most. Burning out your best people by giving them the extra work. Not planning for freeze end — scrambling when hiring reopens wastes months.",
     "whatGoodLooksLike": "Exception secured for post-onsite candidate (or at least a genuine attempt with VP-level advocacy). Scope explicitly reduced and communicated to stakeholders — no silent over-commitment. Every team member has had a 1:1 within the first week addressing their concerns and growth path. Burnout signals monitored actively — workload redistributed, low-priority work paused. Zero regrettable attrition during freeze. When hiring reopens: reqs are ready, pipeline is warm, team hits the ground running.",
-    "mappingNotes": "Hiring freeze management and retention during constraints"
+    "mappingNotes": "Hiring freeze management and retention during constraints",
+    "suggestedMetricIds": [
+      "7.3",
+      "7.5",
+      "5.1",
+      "7.9"
+    ]
   },
   {
     "id": "P-C3-3",
     "slug": "your-product-is-being-sunset-deprecated",
-    "observableIds": ["C3-O6", "C1-O15", "C7-O4"],
-    "capabilityIds": ["C3", "C1", "C7"],
+    "observableIds": [
+      "C3-O6",
+      "C1-O15",
+      "C7-O4"
+    ],
+    "capabilityIds": [
+      "C3",
+      "C1",
+      "C7"
+    ],
     "title": "Your Product Is Being Sunset/Deprecated",
     "context": "Leadership decides to sunset your team's product — a service with 50K active users. Revenue doesn't justify continued investment. Users need to be migrated to an alternative (internal or third-party). Timeline is 9 months. Your team of 10 engineers built this product over 3 years. They're anxious about their futures — will they be laid off, reassigned, or forgotten?",
     "topicsActivated": [
@@ -592,6 +809,120 @@
     "decisionFramework": "1. People first (Day 1-3): Before talking about migration plans, address your team's concerns. Be transparent about what you know and don't know. Commit to advocating for every team member's next role. If you have guarantees about no layoffs, say so. If you don't, be honest about the uncertainty. 2. Migration planning (Week 1-2): Assess user segmentation — which users migrate to what alternative? Create migration tiers: self-serve users (automated migration tools), mid-tier (guided migration with docs), enterprise/high-touch (white-glove migration support). 3. Communication plan (Week 2): Draft user communication in partnership with PM and marketing. Give users maximum notice. Provide clear timelines, migration guides, and support channels. 4. Technical execution (Month 1-8): Build migration tooling, maintain product stability during wind-down (no new features, but fix critical bugs and security issues), decommission infrastructure in phases. 5. Team placement (Month 1-6): Work with your manager and HR to identify landing spots for every team member. Match skills and interests to open roles. Start conversations early — don't wait until month 8. 6. Knowledge transfer (Month 6-9): Document institutional knowledge, transfer ownership of any shared components, archive code and documentation. 7. Sunset (Month 9): Final user cutover, infrastructure decommission, retrospective on the product lifecycle.",
     "commonMistakes": "Not addressing team anxiety immediately (people start job searching externally on Day 1 if they feel uncertain). Treating migration as an afterthought (50K users migrating poorly creates customer support nightmares and brand damage). Letting product quality degrade during wind-down (users still depend on it until they're migrated). Not fighting for your team members' placement (they remember who advocated for them). Waiting until month 7 to start placing people (best roles are taken). Pretending the product was a failure (it served users for 3 years — honor that). Not doing a retrospective (valuable lessons about product-market fit, technical decisions, and lifecycle management).",
     "whatGoodLooksLike": "Every team member knows their next role by month 6 — zero involuntary departures. User migration is smooth: 90%+ migrated with minimal support tickets. Product quality maintained until final cutover — no embarrassing outages during sunset. User communication is transparent and empathetic — NPS impact minimized. Team morale stays functional throughout (it won't be great, but it stays professional). Retrospective captures genuine lessons learned. Team members look back and say 'that was hard, but it was handled well.'",
-    "mappingNotes": "Product sunset, user migration, and team reassignment"
+    "mappingNotes": "Product sunset, user migration, and team reassignment",
+    "suggestedMetricIds": [
+      "8.2",
+      "8.4",
+      "1.2"
+    ]
+  },
+  {
+    "id": "P-C2-1",
+    "slug": "quarterly-planning-product-engineering-disagree",
+    "observableIds": [
+      "C2-O1",
+      "C2-O2"
+    ],
+    "capabilityIds": [
+      "C2",
+      "C5"
+    ],
+    "title": "Quarterly Planning When Product and Engineering Disagree on Priorities",
+    "context": "It's planning season. Product wants to invest heavily in new features for a key customer segment. Engineering wants to pay down critical tech debt that's causing weekly incidents. Both sides have compelling data. You need to facilitate alignment.",
+    "topicsActivated": [
+      "Strategic Prioritization (Investment Balance), Cross-Functional Influence (PM Partnership), Decision Framing (Trade-off Communication)"
+    ],
+    "decisionFramework": "1. Quantify both sides: feature revenue impact vs. incident cost (engineer time, customer impact, pager fatigue). 2. Find the false dichotomy: can scope be split? Can debt be paid incrementally alongside features? 3. Use a 70/20/10 or similar framework: 70% features, 20% debt, 10% exploration — adjust ratios with data. 4. Create a shared artifact (investment portfolio view) both sides can see. 5. Agree on metrics to evaluate next quarter whether the split was right. 6. Escalate only if you've genuinely tried to align and can articulate the trade-off crisply.",
+    "commonMistakes": "Picking a side instead of facilitating trade-off analysis. Using vague 'tech debt' framing without specific incidents/costs. Letting loudest voice win. Deferring entirely to product ('they own the roadmap'). Committing to both without acknowledging capacity constraints.",
+    "whatGoodLooksLike": "Shared investment portfolio document with clear ratios. Both product and engineering feel heard. Trade-offs are explicit and documented. Success metrics defined for both feature and debt investments. Re-evaluation cadence agreed upon.",
+    "mappingNotes": "Strategic prioritization with cross-functional tension",
+    "suggestedMetricIds": [
+      "8.4",
+      "8.1",
+      "8.3",
+      "1.2"
+    ]
+  },
+  {
+    "id": "P-C2-2",
+    "slug": "asked-to-build-conflicting-with-okrs",
+    "observableIds": [
+      "C2-O2",
+      "C2-O3"
+    ],
+    "capabilityIds": [
+      "C2",
+      "C10"
+    ],
+    "title": "Asked to Build Something That Conflicts with Your OKRs",
+    "context": "A VP from another org asks your team to take on an urgent project that doesn't align with your quarterly OKRs. Your manager seems supportive of helping. Taking this on means dropping or delaying a committed OKR.",
+    "topicsActivated": [
+      "Strategic Prioritization (Saying No), Resource Allocation (Scope Management), Stakeholder Mgmt (Managing Up and Across)"
+    ],
+    "decisionFramework": "1. Clarify the ask: scope, timeline, why your team specifically. 2. Map impact: what gets dropped or delayed if you say yes. 3. Present trade-off to your manager explicitly: 'We can do X, but Y slips by Z weeks.' 4. If manager says do both: push back with data on capacity. 5. If you take it on: renegotiate OKRs formally — don't silently absorb. 6. Document the decision and who made it.",
+    "commonMistakes": "Silently absorbing the work and burning out the team. Saying yes without surfacing what gets dropped. Saying no without offering alternatives (different team, reduced scope, later timeline). Not looping in your manager before committing. Treating OKRs as immutable when the business context has changed.",
+    "whatGoodLooksLike": "Trade-off conversation with manager within 24 hours. Clear written communication to requesting VP with options. OKRs formally adjusted if work is accepted. Team understands why priorities shifted. No hero-mode — scope is right-sized to capacity.",
+    "mappingNotes": "Priority conflict with cross-org pressure",
+    "suggestedMetricIds": [
+      "8.1",
+      "8.4",
+      "8.3"
+    ]
+  },
+  {
+    "id": "P-C4-1",
+    "slug": "team-delivery-predictability-collapsed",
+    "observableIds": [
+      "C4-O1",
+      "C4-O2",
+      "C4-O8"
+    ],
+    "capabilityIds": [
+      "C4",
+      "C9"
+    ],
+    "title": "Your Team's Delivery Predictability Has Collapsed",
+    "context": "Over the past two quarters, your team has missed 70% of committed sprint goals. Stakeholders are losing trust. The team feels demoralized and says estimates are impossible given constant interruptions and changing requirements.",
+    "topicsActivated": [
+      "Operational Leadership (Delivery Cadence), Metrics & Measurement (Predictability), Team Health (Morale)"
+    ],
+    "decisionFramework": "1. Diagnose: categorize why work was missed — scope creep, interrupts, underestimation, dependencies, or changing priorities? 2. Measure interrupt load: what percentage of sprint capacity goes to unplanned work? 3. Right-size commitments: commit to less, deliver consistently. 4. Protect the sprint: create an interrupt buffer (e.g., 20% unplanned capacity) or designate an interrupt handler rotation. 5. Shorten planning horizon if needed (2-week sprints → 1-week). 6. Rebuild trust: show 3 consecutive on-target deliveries before expanding scope.",
+    "commonMistakes": "Adding more process (longer planning, more estimation ceremonies) without addressing root cause. Blaming the team for bad estimates when the real problem is scope creep. Committing to aggressive goals to 'make up' for missed ones. Not addressing the interrupt source (often another team or on-call). Tracking velocity as a performance metric instead of a planning tool.",
+    "whatGoodLooksLike": "Root cause analysis completed within 1 week. Interrupt load measured and buffer created. Commitments reduced to 70% of historical capacity. 3 consecutive sprints hitting >80% of commitments. Stakeholders see improving trend and regain trust. Team morale improves as they start hitting goals.",
+    "mappingNotes": "Delivery predictability recovery",
+    "suggestedMetricIds": [
+      "2.5",
+      "1.2",
+      "2.6",
+      "1.4",
+      "5.1"
+    ]
+  },
+  {
+    "id": "P-C4-2",
+    "slug": "inherit-team-no-operating-cadence",
+    "observableIds": [
+      "C4-O1",
+      "C4-O3",
+      "C4-O9"
+    ],
+    "capabilityIds": [
+      "C4"
+    ],
+    "title": "You Inherit a Team with No Operating Cadence",
+    "context": "You've just taken over a team that has no regular standup, no sprint planning, no retrospectives, and no documented on-call process. Work gets done through Slack threads and ad-hoc requests. The team is productive but chaotic, and knowledge is siloed.",
+    "topicsActivated": [
+      "Operational Leadership (Cadence Design), Developer Experience (Process), Culture (Norms)"
+    ],
+    "decisionFramework": "1. Observe first: spend 2 weeks understanding how work actually flows before changing anything. 2. Identify the biggest pain point (not your biggest concern — theirs). 3. Introduce ONE ceremony at a time. Start with a weekly sync — lowest friction, highest visibility. 4. Add planning/retro after the team sees value in the sync. 5. Document decisions and on-call in a shared runbook. 6. Don't over-process: match cadence to team size and maturity. A 4-person team doesn't need SAFe.",
+    "commonMistakes": "Introducing 5 new meetings in week 1. Copying your previous team's exact process. Not asking the team what's actually painful. Making process compliance the goal instead of outcomes. Assuming chaos means dysfunction — sometimes small teams work fine with minimal process.",
+    "whatGoodLooksLike": "2-week observation period before changes. Team co-designs the operating cadence. One ceremony introduced per 2-week cycle. Written runbook for on-call within 30 days. Team reports less chaos and fewer knowledge silos within 60 days. Process is lightweight and valued, not resented.",
+    "mappingNotes": "Operating cadence bootstrapping",
+    "suggestedMetricIds": [
+      "1.2",
+      "1.4",
+      "2.5",
+      "5.1"
+    ]
   }
 ]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "DC1",
+    "triggerMetricId": "1.2",
+    "triggerCondition": "Lead Time spiking",
+    "slug": "lead-time-spiking",
+    "directorQuestion": "Is this one team\u2019s problem (process) or multiple teams\u2019 problem (platform/architecture)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "5.4", "alsoCheckMetricIds": ["6.2"], "label": "Code Review Turnaround", "reason": "Often 40\u201360% of Lead Time. Check if reviews are the bottleneck. Check AI PR size (6.2) for inflated review load." },
+      { "order": 2, "checkMetricId": "5.3", "label": "Build & CI Cycle Time", "reason": "Slow tests, flaky reruns, or resource contention in CI." },
+      { "order": 3, "checkMetricId": "2.6", "alsoCheckMetricIds": ["6.5"], "label": "Blocked Work Rate + Cross-Team Dependencies", "reason": "Architectural coupling causing wait states. High cross-team dependency count signals organizational bottleneck." }
+    ]
+  },
+  {
+    "id": "DC2",
+    "triggerMetricId": "1.4",
+    "triggerCondition": "CFR climbing",
+    "slug": "cfr-climbing",
+    "directorQuestion": "Is quality declining because of testing gaps (invest in testing) or because people are overloaded (invest in capacity)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "4.1", "alsoCheckMetricIds": ["AI-2"], "label": "Test Coverage on Changed Paths", "reason": "New code without tests. Check if changed code paths have adequate coverage. Check AI PR quality delta (AI-2) for AI-specific quality issues." },
+      { "order": 2, "checkMetricId": "4.4", "label": "Escaped Defect Rate", "reason": "What\u2019s getting through? Identifies where testing and review gaps exist." },
+      { "order": 3, "checkMetricId": "5.2", "alsoCheckMetricIds": ["5.6"], "label": "Toil % + On-Call Burden", "reason": "Overloaded engineers rushing. High toil and on-call burden leave less time for careful work." }
+    ]
+  },
+  {
+    "id": "DC3",
+    "triggerMetricId": "3.3",
+    "triggerCondition": "Error Budget burning fast",
+    "slug": "error-budget-burning",
+    "directorQuestion": "Are we having new types of failures (architecture) or repeating old ones (follow-through failure)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "3.6", "label": "Incident Rate by Severity", "reason": "More incidents or bigger incidents? Identify which services are consuming the most budget." },
+      { "order": 2, "checkMetricId": "1.3", "label": "MTTR (Mean Time to Restore)", "reason": "Are incidents taking longer to resolve? Slow recovery amplifies budget consumption." },
+      { "order": 3, "checkMetricId": "3.7", "label": "Post-Incident Action Item Completion", "reason": "Are we fixing root causes? Unfinished action items from previous incidents cause repeat failures." }
+    ]
+  },
+  {
+    "id": "DC4",
+    "triggerMetricId": "3.5",
+    "triggerCondition": "SLO Compliance dropping",
+    "slug": "slo-compliance-dropping",
+    "directorQuestion": "Is this a capacity/architecture problem (invest) or a process/discipline problem (coach)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "3.3", "label": "Error Budget Burn Rate", "reason": "Gradual erosion or sudden breach? Determines if this is chronic degradation or acute incident." },
+      { "order": 2, "checkMetricId": "1.1", "alsoCheckMetricIds": ["1.4"], "label": "Deployment Frequency + CFR", "reason": "Shipping too aggressively? High deploy rate with rising CFR means releases are destabilizing services." },
+      { "order": 3, "checkMetricId": "1.3", "alsoCheckMetricIds": ["4.3"], "label": "MTTR + Rollback Rate", "reason": "Slow to recover when things break? If rollbacks are frequent or recovery is slow, the deploy pipeline needs investment." }
+    ]
+  },
+  {
+    "id": "DC5",
+    "triggerMetricId": "5.1",
+    "triggerCondition": "DX Score dropping",
+    "slug": "dx-score-dropping",
+    "directorQuestion": "Is this a tooling problem (platform investment) or a workload problem (capacity/scope)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "5.2", "label": "Toil %", "reason": "Increasing manual work. High toil directly erodes developer satisfaction and productivity." },
+      { "order": 2, "checkMetricId": "5.3", "alsoCheckMetricIds": ["4.2", "5.5"], "label": "CI Cycle Time + Flaky Test Rate + Cognitive Load", "reason": "Frustrating build experience. Slow CI, unreliable test results, and AI-induced cognitive overhead are top developer complaints." },
+      { "order": 3, "checkMetricId": "5.6", "alsoCheckMetricIds": ["5.5", "7.9"], "label": "On-Call Burden + Context Switching + Burnout", "reason": "Operational overload. Excessive on-call, fragmented attention, and burnout risk destroy focus and satisfaction." }
+    ]
+  },
+  {
+    "id": "DC6",
+    "triggerMetricId": "7.1",
+    "triggerCondition": "Regrettable Attrition rising",
+    "slug": "regrettable-attrition-rising",
+    "directorQuestion": "Is this a specific team/manager problem or an org-wide systemic issue?",
+    "steps": [
+      { "order": 1, "checkMetricId": "7.1", "alsoCheckMetricIds": ["7.2"], "label": "Attrition Pattern Analysis", "reason": "Themes from exit interviews \u2014 growth? comp? management? burnout? Classify departures to target interventions." },
+      { "order": 2, "checkMetricId": "5.1", "alsoCheckMetricIds": ["7.8"], "label": "DX Score + eNPS", "reason": "Was this predicted by leading indicators? Low DX and eNPS often precede attrition by 6\u201312 months." },
+      { "order": 3, "checkMetricId": "7.6", "alsoCheckMetricIds": ["7.9"], "label": "Span of Control + Burnout Risk", "reason": "Managers stretched too thin for coaching? High span of control and burnout risk correlate with disengagement and attrition." }
+    ]
+  },
+  {
+    "id": "DC7",
+    "triggerMetricId": "2.5",
+    "triggerCondition": "Sprint Commitment <70%",
+    "slug": "sprint-commitment-missed",
+    "directorQuestion": "Are we bad at planning (estimation) or bad at protecting capacity (interrupts)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "2.2", "label": "WIP (Work in Progress)", "reason": "Too much parallel work. High WIP means too much started, too little finished, and context switching overhead." },
+      { "order": 2, "checkMetricId": "2.6", "label": "Blocked Work Rate", "reason": "External dependencies blocking planned work. Blocked items cause missed commitments outside team control." },
+      { "order": 3, "checkMetricId": "3.6", "label": "Incident Rate", "reason": "Firefighting consuming planned capacity. Unplanned incident work steals sprint time." }
+    ]
+  },
+  {
+    "id": "DC8",
+    "triggerMetricId": "8.1",
+    "triggerCondition": "OKR Achievement <50%",
+    "slug": "okr-achievement-declining",
+    "directorQuestion": "Are OKRs failing because they\u2019re bad OKRs (alignment) or because we can\u2019t execute (delivery)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "2.5", "label": "Sprint Commitment Accuracy", "reason": "Can\u2019t deliver committed work. If sprints aren\u2019t met, quarterly OKRs won\u2019t be either." },
+      { "order": 2, "checkMetricId": "8.4", "label": "Investment Mix", "reason": "Too much \u201crun the business\u201d work. If KTLO and unplanned work dominate, strategic initiatives starve." },
+      { "order": 3, "checkMetricId": "6.5", "label": "Cross-Team Dependencies", "reason": "Blocked by other teams. High dependency count signals that OKR achievement requires cross-team coordination that isn\u2019t happening." }
+    ]
+  },
+  {
+    "id": "DC9",
+    "triggerMetricId": "10.1",
+    "triggerCondition": "Cost per Transaction rising",
+    "slug": "cost-per-transaction-rising",
+    "directorQuestion": "Is this a resource management problem (FinOps) or an architecture problem (engineering investment)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "10.2", "label": "Infrastructure Utilization", "reason": "Over-provisioning. Check if resources are allocated but underused." },
+      { "order": 2, "checkMetricId": "1.2", "label": "Delivery Bottleneck Analysis", "reason": "Decompose Lead Time by stage to identify if architecture inefficiency (N+1 queries, missing caching, slow builds) is causing cost increases through delivery slowdowns." },
+      { "order": 3, "checkMetricId": "8.6", "label": "Tech Debt Ratio", "reason": "Accumulated architectural debt causing expensive workarounds and inefficient resource usage." }
+    ]
+  },
+  {
+    "id": "DC10",
+    "triggerMetricId": "5.9",
+    "triggerCondition": "AI adoption but no delivery improvement",
+    "slug": "ai-adoption-no-improvement",
+    "directorQuestion": "Are we missing AI prerequisites (platform, small batches, testing) or is AI genuinely not suited to this codebase?",
+    "steps": [
+      { "order": 1, "checkMetricId": "5.9", "label": "AI Trust Score", "reason": "Engineers don\u2019t trust AI output \u2014 cognitive overhead eroding gains." },
+      { "order": 2, "checkMetricId": "AI-3", "label": "Verification Overhead Ratio", "reason": "Review time exploding \u2014 AI creating net-negative flow impact." },
+      { "order": 3, "checkMetricId": "AI-2", "alsoCheckMetricIds": ["AI-4"], "label": "AI PR Quality Delta + Readiness Score", "reason": "Quality declining or prerequisites (platform, version control, small batches) missing." }
+    ]
+  },
+  {
+    "id": "DC11",
+    "triggerMetricId": "1.1",
+    "triggerCondition": "Deployment Frequency drops >50% without reliability event",
+    "slug": "deployment-frequency-collapse",
+    "directorQuestion": "Is this a process overhead problem (approvals, CABs) or a capacity problem (team shrinkage, competing priorities)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "5.4", "alsoCheckMetricIds": ["6.2"], "label": "Review Process Overhead", "reason": "Check if approval processes or review bottlenecks are stalling deployments. AI-inflated PR sizes may be overwhelming reviewers." },
+      { "order": 2, "checkMetricId": "2.6", "alsoCheckMetricIds": ["5.6"], "label": "Team Capacity & Interrupts", "reason": "Check if blocked work, on-call burden, or unplanned interrupts are consuming deployment capacity." },
+      { "order": 3, "checkMetricId": "1.4", "alsoCheckMetricIds": ["3.7"], "label": "Post-Incident Risk Aversion", "reason": "After major incidents, teams often over-correct with excessive gates. Check if CFR fear is creating deployment paralysis." }
+    ]
+  },
+  {
+    "id": "DC12",
+    "triggerMetricId": "6.5",
+    "triggerCondition": "Cross-team dependency resolution time increasing",
+    "slug": "team-collaboration-breakdown",
+    "directorQuestion": "Is this an architectural coupling problem (invest in decoupling) or a communication problem (invest in processes)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "2.6", "label": "Blocked Work Rate", "reason": "Rising blocked work confirms dependency bottlenecks. Identify which teams are most frequently blocked and by whom." },
+      { "order": 2, "checkMetricId": "6.5", "alsoCheckMetricIds": ["7.6"], "label": "Knowledge Concentration + Span of Control", "reason": "High dependency count with narrow span of control suggests knowledge silos. Check if key individuals are bottlenecks." },
+      { "order": 3, "checkMetricId": "6.4", "alsoCheckMetricIds": ["5.1"], "label": "Communication Patterns", "reason": "Rising meeting load with declining DX suggests coordination overhead is crushing productivity. Consider architectural decoupling." }
+    ]
+  },
+  {
+    "id": "DC13",
+    "triggerMetricId": "7.5",
+    "triggerCondition": "New hire ramp time >2x baseline",
+    "slug": "onboarding-crisis",
+    "directorQuestion": "Is this an environment/tooling problem (platform investment) or a knowledge transfer problem (mentoring/documentation)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "5.7", "label": "Environment Setup Time", "reason": "If setup takes >1 day, the onboarding bottleneck starts before any code is written. Check IDP maturity." },
+      { "order": 2, "checkMetricId": "5.2", "alsoCheckMetricIds": ["5.6"], "label": "Mentor Availability", "reason": "High toil and on-call burden on senior engineers means no capacity for mentoring. New hires are left to figure things out alone." },
+      { "order": 3, "checkMetricId": "5.5", "alsoCheckMetricIds": ["5.8"], "label": "Documentation & Tooling Currency", "reason": "High cognitive load for new hires suggests documentation gaps or outdated tooling. Check IDP adoption as a proxy for self-service capability." }
+    ]
+  },
+  {
+    "id": "DC14",
+    "triggerMetricId": "8.4",
+    "triggerCondition": "KTLO/unplanned work exceeding target allocation",
+    "slug": "investment-mix-imbalanced",
+    "directorQuestion": "Is unplanned work growing (reactive problem) or is feature demand crowding out platform investment (prioritization problem)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "5.2", "alsoCheckMetricIds": ["3.6"], "label": "Toil % + Incident Rate", "reason": "Rising toil consuming discretionary capacity. High incident rate forces reactive work that crowds out planned investments." },
+      { "order": 2, "checkMetricId": "8.6", "alsoCheckMetricIds": ["8.3"], "label": "Tech Debt Ratio + Debt Age", "reason": "Accumulated debt forcing reactive maintenance. Old unresolved debt compounds into unplanned work as workarounds fail." },
+      { "order": 3, "checkMetricId": "2.6", "alsoCheckMetricIds": ["6.5"], "label": "Blocked Work + Cross-Team Dependencies", "reason": "Cross-team dependencies creating unplanned coordination overhead. High blocked rate signals capacity lost to waiting, not building." }
+    ]
+  },
+  {
+    "id": "DC15",
+    "triggerMetricId": "8.2",
+    "triggerCondition": "Declining % of work with measurable business impact",
+    "slug": "business-impact-attribution-declining",
+    "directorQuestion": "Are we measuring the wrong things (attribution methodology) or building the wrong things (prioritization)?",
+    "steps": [
+      { "order": 1, "checkMetricId": "8.1", "label": "OKR Achievement Rate", "reason": "If OKRs are hit but not attributed, the problem is measurement methodology — work is delivering value but tracking can't prove it." },
+      { "order": 2, "checkMetricId": "8.4", "alsoCheckMetricIds": ["8.3"], "label": "Investment Mix + Tech Debt Age", "reason": "If feature allocation is low, capacity is going to non-attributable work like maintenance and debt remediation." },
+      { "order": 3, "checkMetricId": "2.5", "alsoCheckMetricIds": ["2.6"], "label": "Sprint Commitment + Blocked Work", "reason": "If commitments are missed, planned attributable work isn't completing. Blocked work may indicate that attributable features are stuck in dependency queues." }
+    ]
+  }
+]

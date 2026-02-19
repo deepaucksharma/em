@@ -133,6 +133,50 @@
     },
     {
       "level": 4,
+      "title": "Senior Director of Engineering",
+      "slug": "senior-director-of-engineering",
+      "scope": "8-15 teams (60-150 engineers), manages multiple Directors and owns entire product verticals or engineering pillars",
+      "keyDifferences": [
+        "Manages Directors; responsible for leadership development across management layers",
+        "Owns engineering strategy for multiple business domains or an entire product vertical",
+        "Drives org-wide technical initiatives: platform migrations, architecture standards, build-vs-buy at scale",
+        "Represents engineering at company strategy level alongside VP and C-suite",
+        "Owns budget and headcount planning across multiple Director orgs",
+        "Leads through crisis at organizational scale — layoffs, acquisitions, major incidents"
+      ],
+      "capabilityExpectations": {
+        "C1": "high",
+        "C2": "high",
+        "C3": "high",
+        "C4": "high",
+        "C5": "high",
+        "C6": "high",
+        "C7": "high",
+        "C8": "high",
+        "C9": "high",
+        "C10": "high",
+        "C11": "high",
+        "C12": "high",
+        "C13": "high",
+        "C14": "high"
+      },
+      "promotionBlockers": [
+        "Cannot operate at company strategy altitude — stays in domain-level thinking",
+        "Does not develop Directors into senior leaders; leadership pipeline is thin",
+        "Struggles to build executive-level relationships outside engineering",
+        "Cannot drive org-wide change without VP air cover",
+        "Reactive to cross-domain dependencies rather than proactively aligning engineering pillars"
+      ],
+      "transitionSignals": [
+        "Trusted to represent the VP in executive forums and make binding decisions",
+        "Multiple Directors in their org are promotion-ready",
+        "Drove an org-wide transformation (platform, process, culture) end-to-end",
+        "Built coalitions across executive team for engineering-led initiatives",
+        "Engineering brand and culture under their purview attracts external leadership talent"
+      ]
+    },
+    {
+      "level": 5,
       "title": "VP of Engineering",
       "slug": "vp-of-engineering",
       "scope": "Entire engineering organization (60-300+ engineers), owns engineering as a function and sits on the leadership team",

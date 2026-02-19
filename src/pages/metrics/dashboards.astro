@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import DashboardWidgetCard from '../../components/cards/DashboardWidgetCard.astro';
+import { dashboardBlueprints } from '../../lib/data';
+
+const emDashboard = dashboardBlueprints.find(d => d.id === 'em')!;
+const directorDashboard = dashboardBlueprints.find(d => d.id === 'director')!;
+---
+
+<BaseLayout title="Dashboard Blueprints" description="Ready-to-build dashboard layouts for Engineering Managers and Directors.">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[
+      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Dashboard Blueprints' },
+    ]} />
+
+    <div class="mb-10">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Dashboard Blueprints
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Ready-to-build dashboard layouts for each role. Copy these blueprints into your observability tool
+        (Grafana, Datadog, Looker, etc.) and customize to your team's context.
+      </p>
+    </div>
+
+    <!-- Role Tabs -->
+    <div class="flex gap-2 mb-8 border-b border-gray-200 dark:border-gray-700">
+      <button class="dashboard-tab active px-4 py-2.5 text-sm font-medium border-b-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 -mb-px" data-role="em">
+        EM Dashboard
+      </button>
+      <button class="dashboard-tab px-4 py-2.5 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 -mb-px" data-role="director">
+        Director Dashboard
+      </button>
+    </div>
+
+    <!-- EM Dashboard -->
+    <div class="dashboard-panel" id="panel-em">
+      <div class="mb-6">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-1">{emDashboard.name}</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">{emDashboard.description} &middot; Cadence: {emDashboard.cadence}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {emDashboard.sections.map(section => (
+          <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+            <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">{section.name}</h3>
+            <div class="space-y-2">
+              {section.widgets.map(widget => (
+                <DashboardWidgetCard widget={widget} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Director Dashboard -->
+    <div class="dashboard-panel hidden" id="panel-director">
+      <div class="mb-6">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-1">{directorDashboard.name}</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">{directorDashboard.description} &middot; Cadence: {directorDashboard.cadence}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {directorDashboard.sections.map(section => (
+          <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
+            <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">{section.name}</h3>
+            <div class="space-y-2">
+              {section.widgets.map(widget => (
+                <DashboardWidgetCard widget={widget} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const tabs = document.querySelectorAll('.dashboard-tab');
+  const panels = document.querySelectorAll('.dashboard-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const role = (tab as HTMLElement).dataset.role;
+
+      tabs.forEach(t => {
+        t.classList.remove('active', 'border-blue-600', 'text-blue-600', 'dark:border-blue-400', 'dark:text-blue-400');
+        t.classList.add('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+      });
+      tab.classList.add('active', 'border-blue-600', 'text-blue-600', 'dark:border-blue-400', 'dark:text-blue-400');
+      tab.classList.remove('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+
+      panels.forEach(p => p.classList.add('hidden'));
+      document.getElementById(`panel-${role}`)?.classList.remove('hidden');
+    });
+  });
+</script>

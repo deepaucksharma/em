@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import RoadmapPhaseCard from '../../components/cards/RoadmapPhaseCard.astro';
+import { metricsRoadmap, metricsLaws } from '../../lib/data';
+---
+
+<BaseLayout title="Metrics Implementation Roadmap" description="4-phase implementation roadmap from foundation to excellence. Start with 8 primary metrics, build from there.">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumb items={[
+      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Implementation Roadmap' },
+    ]} />
+
+    <div class="mb-10">
+      <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
+        Implementation Roadmap
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+        Don't try to measure everything at once. This 4-phase roadmap starts with the 8 primary metrics
+        and progressively adds complexity as measurement muscle develops.
+      </p>
+
+      <!-- Phase stepper -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6">
+        {metricsRoadmap.map((phase, i) => (
+          <a href={`#phase-${phase.phase}`} class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-blue-300 dark:hover:border-blue-700 transition-colors shrink-0">
+            <span class:list={[
+              'w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white',
+              i === 0 ? 'bg-blue-500' : i === 1 ? 'bg-green-500' : i === 2 ? 'bg-purple-500' : 'bg-amber-500',
+            ]}>
+              {phase.phase}
+            </span>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{phase.name}</span>
+            <span class="text-xs text-gray-400 dark:text-gray-500">{phase.duration}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Three Laws -->
+    <section class="mb-10">
+      <h2 class="section-heading">Four Laws of Engineering Metrics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {metricsLaws.map(law => (
+          <div class="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5">
+            <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">{law.name}</div>
+            <p class="text-sm font-semibold text-amber-900 dark:text-amber-200 mb-2">{law.statement}</p>
+            <p class="text-sm text-amber-700 dark:text-amber-300">{law.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Phase Cards -->
+    <section class="space-y-8">
+      {metricsRoadmap.map(phase => (
+        <RoadmapPhaseCard phase={phase} />
+      ))}
+    </section>
+  </div>
+</BaseLayout>

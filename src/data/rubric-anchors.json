@@ -1,5 +1,6 @@
 [
   {
+    "anchorId": "C3-1",
     "capabilityId": "C3",
     "sourceTopic": "Technical Strategy & System Ownership",
     "level1Developing": "Follows existing technical direction set by TL/Staff. Participates in design reviews. Aware of tech debt but doesn't prioritize it systematically. Relies on senior engineers for architecture decisions.",
@@ -8,6 +9,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C9-1",
     "capabilityId": "C9",
     "sourceTopic": "Engineering Excellence & Delivery",
     "level1Developing": "Aware of DORA metrics but doesn't track consistently. Follows existing release processes. Notices developer experience issues but doesn't systematically address them. Sprint management is reactive.",
@@ -16,6 +18,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C13-1",
     "capabilityId": "C13",
     "sourceTopic": "Security & Operational Rigor",
     "level1Developing": "Ensures team follows security practices when reminded. Patches vulnerabilities reactively. Change management is informal. Compliance is handled last-minute before audits.",
@@ -24,6 +27,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C8-1",
     "capabilityId": "C8",
     "sourceTopic": "Operational Risk & Incident Management",
     "level1Developing": "Participates in incident response. Post-mortems happen but action items slip. On-call exists but rotation health isn't tracked. Launches happen without formal readiness review.",
@@ -32,6 +36,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C1-1",
     "capabilityId": "C1",
     "sourceTopic": "Org Design & Team Topologies",
     "level1Developing": "Inherits team structure and works within it. Recognizes ownership confusion when it causes problems. Understands Conway's Law conceptually but doesn't apply it proactively.",
@@ -40,6 +45,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C6-1",
     "capabilityId": "C6",
     "sourceTopic": "Team Health & Execution",
     "level1Developing": "Holds 1:1s but they're mostly status updates. Avoids difficult conversations. Capacity planning is rough estimate. Handles retention reactively (after notice given). Struggles with adversity communication.",
@@ -48,6 +54,7 @@
     "rationale": "Anchor 1/2: Covers EM-level coaching (1:1s, underperformance, retention, stretch assignments). Maps to C6-O1 through C6-O5."
   },
   {
+    "anchorId": "C11-1",
     "capabilityId": "C11",
     "sourceTopic": "Talent Acquisition & Team Building",
     "level1Developing": "Participates in hiring loops. Onboarding is informal (buddy system if lucky). Headcount requests are 'we need more people.' No engineering brand presence.",
@@ -56,6 +63,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C14-1",
     "capabilityId": "C14",
     "sourceTopic": "Performance, Calibration & Growth",
     "level1Developing": "Writes reviews but they're vague. Calibration prep is last-minute. Promotion packets are reactive ('they've been doing this for a while'). Avoids PIPs. Career conversations are infrequent.",
@@ -64,6 +72,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C12-1",
     "capabilityId": "C12",
     "sourceTopic": "Engineering Culture & Team Identity",
     "level1Developing": "Team culture exists by accident (whatever norms emerged). Recognition is sporadic. Knowledge sharing is informal. Inclusion is 'we treat everyone the same.'",
@@ -72,6 +81,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C6-2",
     "capabilityId": "C6",
     "sourceTopic": "Managing Managers (Director Track)",
     "level1Developing": "n/a for EM level. Early Director: still doing EM-level work. Skip-levels infrequent or awkward. EMs operate independently without cross-calibration. Delegation is uncomfortable.",
@@ -80,6 +90,7 @@
     "rationale": "Anchor 2/2: Covers Director-level EM development (coaching EMs, skip-levels, bench building). Maps to C6-O6 and C6-O7. Intentionally separate — different altitude of practice."
   },
   {
+    "anchorId": "C2-1",
     "capabilityId": "C2",
     "sourceTopic": "Strategic Alignment & Roadmapping",
     "level1Developing": "Plans reactively (PM tells you what to build). OKRs exist but are task lists. Engineering impact described in technical terms. Trade-offs implicit, not communicated.",
@@ -88,6 +99,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C5-1",
     "capabilityId": "C5",
     "sourceTopic": "Cross-Functional Partnership",
     "level1Developing": "Works with PM on features but relationship is transactional. Design involvement is late. Dependencies are managed reactively. TPM relationship undefined.",
@@ -96,6 +108,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C7-1",
     "capabilityId": "C7",
     "sourceTopic": "Stakeholder Management & Influence",
     "level1Developing": "Communicates status when asked. Frames asks in engineering terms. Delivers bad news late or sugar-coated. Political capital not actively built. No executive presence.",
@@ -104,6 +117,7 @@
     "rationale": "Anchor 1/2: Covers external-facing communication (status updates, bad news delivery, exec presentations, managing up). Maps to C7-O2 through C7-O5."
   },
   {
+    "anchorId": "C10-1",
     "capabilityId": "C10",
     "sourceTopic": "Budget, Headcount & Resource Planning",
     "level1Developing": "Requests headcount without financial framing. Cloud costs not tracked at team level. Build-vs-buy decisions are gut feel. Budget is someone else's problem.",
@@ -112,6 +126,7 @@
     "rationale": "Single anchor for capability."
   },
   {
+    "anchorId": "C7-2",
     "capabilityId": "C7",
     "sourceTopic": "Decision Making & Prioritization",
     "level1Developing": "Decisions made in meetings without documentation. Difficulty saying no. Most decisions escalated or deferred. First principles thinking is aspirational, not practiced.",
@@ -120,6 +135,7 @@
     "rationale": "Anchor 2/2: Covers decision architecture (DACI/RFC, trade-off framing, reversibility). Maps to C7-O1, C7-O6, C7-O7. Intentionally separate — communication vs decision-making are distinct sub-skills."
   },
   {
+    "anchorId": "C4-1",
     "capabilityId": "C4",
     "sourceTopic": "Derived from Engineering Excellence & Team Health execution practices",
     "level1Developing": "Follows existing processes. Sprint velocity inconsistent. Interrupts handled reactively. Remote practices undefined.",

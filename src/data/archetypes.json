@@ -1,0 +1,175 @@
+[
+  {
+    "id": "A1",
+    "name": "Harmonious High-Achievers",
+    "slug": "harmonious-high-achievers",
+    "signaturePattern": "Virtuous cycle of sustainable excellence. High stability, fast cadence, low friction, exceptional culture.",
+    "metricsProfile": "Elite DORA; SLOs consistently met; DX >4.0; regrettable attrition <3%. AI amplifies gains.",
+    "firstPriority": "Maintain and export practices. Coach other teams. Guard against complacency.",
+    "antiPatternIfIgnored": "Assumes this is \"normal\" and doesn't invest in maintaining the conditions that created it.",
+    "diagnosticMetricIds": ["1.2", "1.4", "5.1", "3.5", "7.1"],
+    "recommendedMetricIds": ["1.2", "1.4", "3.5", "5.1", "7.1", "8.2", "AI-1"],
+    "quantifiedThresholds": {
+      "leadTime": "< 1 day",
+      "cfr": "< 5%",
+      "dxScore": "> 4.0",
+      "attrition": "< 3%",
+      "sloCompliance": "> 97%"
+    }
+  },
+  {
+    "id": "A2",
+    "name": "Pragmatic Performers",
+    "slug": "pragmatic-performers",
+    "signaturePattern": "Sustainable balance of speed and stability. Predictable delivery. Mature platform foundation. Safe to adopt AI.",
+    "metricsProfile": "High DORA; solid SLO compliance; DX 3.5-4.0; moderate toil.",
+    "firstPriority": "Optimize (CI speed, review latency, error budget policy). Safe to layer AI tooling.",
+    "antiPatternIfIgnored": "Pushing for \"elite\" DORA without investing in the platform maturity to sustain it.",
+    "diagnosticMetricIds": ["1.2", "5.3", "5.4", "3.3", "5.1"],
+    "recommendedMetricIds": ["1.2", "3.3", "5.1", "5.4", "5.3", "AI-4", "2.5"],
+    "quantifiedThresholds": {
+      "leadTime": "1-3 days",
+      "cfr": "5-10%",
+      "dxScore": "3.5-4.0",
+      "sloCompliance": "94-97%"
+    }
+  },
+  {
+    "id": "A3",
+    "name": "Stable and Methodical",
+    "slug": "stable-and-methodical",
+    "signaturePattern": "Prioritize quality and reliability above all. Deliberate, high-quality delivery. Cadence too slow for aggressive go-to-market.",
+    "metricsProfile": "Low DF but very low CFR; strong SLO compliance; long Lead Time due to process, not dysfunction.",
+    "firstPriority": "Reduce unnecessary gates. Introduce risk-tiered release paths. Differentiate low-risk from high-risk changes.",
+    "antiPatternIfIgnored": "Treating slowness as laziness. The team is slow because they care about quality. Remove friction, don't add pressure.",
+    "diagnosticMetricIds": ["1.2", "1.1", "1.4", "3.5", "2.6"],
+    "recommendedMetricIds": ["1.2", "1.1", "1.4", "3.5", "5.4", "6.2", "2.6"],
+    "quantifiedThresholds": {
+      "leadTime": "3-7 days",
+      "cfr": "< 5%",
+      "deployFrequency": "< weekly",
+      "sloCompliance": "> 97%"
+    }
+  },
+  {
+    "id": "A4",
+    "name": "High-Impact, Low-Cadence",
+    "slug": "high-impact-low-cadence",
+    "signaturePattern": "Brilliant output but severe delivery bottlenecks. Structural understaffing, deep specialization, cross-team dependency stalls.",
+    "metricsProfile": "Long Lead Time; high blocked work rate; low DF; high individual output but low team throughput.",
+    "firstPriority": "Unblock: reduce cross-team dependencies, broaden knowledge distribution, staff the bottleneck.",
+    "antiPatternIfIgnored": "Celebrating heroic output while ignoring that the hero is a single point of failure and a flight risk.",
+    "diagnosticMetricIds": ["1.2", "2.6", "6.5", "1.1", "7.1"],
+    "recommendedMetricIds": ["1.2", "2.6", "6.5", "7.1", "5.6", "7.5", "2.5"],
+    "quantifiedThresholds": {
+      "leadTime": "> 7 days",
+      "blockedWorkRate": "> 20%",
+      "deployFrequency": "< weekly",
+      "crossTeamDeps": "> 5 per sprint"
+    }
+  },
+  {
+    "id": "A5",
+    "name": "Constrained by Process",
+    "slug": "constrained-by-process",
+    "signaturePattern": "Bureaucratic treadmill. Engineers know what to build but momentum destroyed by approvals, CABs, excessive meetings.",
+    "metricsProfile": "Lead Time dominated by wait states (not active work); meeting load high; DX low on \"friction\" items.",
+    "firstPriority": "Eliminate or streamline approval processes. Risk-tier changes. Introduce self-service deploy paths.",
+    "antiPatternIfIgnored": "Automating the wrong process. Don't digitize a bad workflow — eliminate it.",
+    "diagnosticMetricIds": ["1.2", "6.4", "5.1", "2.6", "5.2"],
+    "recommendedMetricIds": ["1.2", "6.4", "5.1", "5.2", "5.4", "2.6", "1.1"],
+    "quantifiedThresholds": {
+      "leadTime": "> 7 days (wait-dominated)",
+      "meetingLoad": "> 40% of work week",
+      "dxScore": "< 3.5 (friction items)",
+      "toilPercent": "> 30%"
+    }
+  },
+  {
+    "id": "A6",
+    "name": "Legacy Bottleneck",
+    "slug": "legacy-bottleneck",
+    "signaturePattern": "Capable engineers trapped in reactive firefighting against unstable, aging architecture. Trivial features require immense effort.",
+    "metricsProfile": "High MTTR; high CFR; CI/CD fragile; tech debt consuming >40% of capacity; DX very low.",
+    "firstPriority": "Invest in architecture and platform before optimizing flow. Ring-fence modernization capacity.",
+    "antiPatternIfIgnored": "Demanding DORA improvements without funding the architectural remediation that makes them possible.",
+    "diagnosticMetricIds": ["1.3", "1.4", "8.4", "5.1", "8.6"],
+    "recommendedMetricIds": ["1.3", "1.4", "8.4", "8.6", "5.1", "3.3", "5.2"],
+    "quantifiedThresholds": {
+      "leadTime": "> 7 days",
+      "cfr": "> 15%",
+      "mttr": "> 4 hours",
+      "techDebtCapacity": "> 40%",
+      "dxScore": "< 3.0"
+    }
+  },
+  {
+    "id": "A7",
+    "name": "Foundational Challenges",
+    "slug": "foundational-challenges",
+    "signaturePattern": "Constant high-pressure firefighting. Chronic slow delivery and systemic instability.",
+    "metricsProfile": "All DORA metrics poor; SLOs frequently breached or undefined; DX <3.0; high attrition.",
+    "firstPriority": "Stabilize first: basic CI/CD, incident response, on-call rotation, team safety. Metrics come after survival.",
+    "antiPatternIfIgnored": "Imposing a measurement framework on a team that is drowning. Fix the environment, then measure.",
+    "diagnosticMetricIds": ["1.2", "1.4", "1.3", "5.1", "7.1"],
+    "recommendedMetricIds": ["1.2", "1.4", "1.3", "5.1", "7.1", "7.9", "5.6"],
+    "quantifiedThresholds": {
+      "leadTime": "> 14 days",
+      "cfr": "> 25%",
+      "mttr": "> 8 hours",
+      "dxScore": "< 3.0",
+      "attrition": "> 10%"
+    }
+  },
+  {
+    "id": "A8",
+    "name": "Chaotic High-Variance",
+    "slug": "chaotic-high-variance",
+    "signaturePattern": "Oscillation between great sprints and terrible sprints. Unpredictable delivery with wild metric swings. Signals leadership instability or estimation failure.",
+    "metricsProfile": "DORA metrics swing >50% sprint-to-sprint; sprint commitment highly variable (40-90%); DX scores inconsistent across surveys; some weeks elite, some weeks crisis.",
+    "firstPriority": "Stabilize the basics: consistent sprint planning, protected capacity, interrupt budgets. Reduce variance before optimizing averages.",
+    "antiPatternIfIgnored": "Celebrating the good sprints while ignoring that the bad sprints destroy predictability and trust with stakeholders.",
+    "diagnosticMetricIds": ["2.5", "1.2", "2.2", "5.6", "7.9"],
+    "recommendedMetricIds": ["2.5", "1.2", "2.2", "5.6", "7.9", "2.6", "5.1"],
+    "quantifiedThresholds": {
+      "sprintCommitmentVariance": "> 30% swing between sprints",
+      "leadTimeVariance": "> 50% week-to-week",
+      "wipFluctuation": "2x-4x between sprints",
+      "burnoutRisk": "Medium-High"
+    }
+  },
+  {
+    "id": "A9",
+    "name": "Specialized Silo",
+    "slug": "specialized-silo",
+    "signaturePattern": "Deep expertise in narrow domains with minimal cross-training. High bus factor — metrics look OK on the surface but organization is structurally fragile.",
+    "metricsProfile": "DORA metrics appear healthy; review load heavily concentrated on 1-2 people; cross-team dependency resolution slow; knowledge concentration dangerous.",
+    "firstPriority": "Broaden knowledge distribution. Pair programming rotations. Document tribal knowledge. Staff redundancy for critical paths.",
+    "antiPatternIfIgnored": "Assuming healthy metrics mean a healthy team. One key departure away from cascade failure — the metrics won't warn you until it's too late.",
+    "diagnosticMetricIds": ["6.3", "6.5", "7.1", "5.4", "7.5"],
+    "recommendedMetricIds": ["6.3", "6.5", "7.1", "5.4", "7.5", "2.6", "5.1"],
+    "quantifiedThresholds": {
+      "reviewLoadConcentration": "> 60% on 1-2 reviewers",
+      "crossTeamDeps": "> 3 per sprint on single individual",
+      "newHireRampTime": "> 2x baseline",
+      "busFactor": "1-2 people for critical paths"
+    }
+  },
+  {
+    "id": "A10",
+    "name": "Stalled Transformation",
+    "slug": "stalled-transformation",
+    "signaturePattern": "Mid-migration between architectures or platforms. Not broken but not stable. Fragile state where old and new systems coexist with friction.",
+    "metricsProfile": "Metrics show mixed signals — some services improving while others degrade. Lead Time bimodal. Tech debt ratio climbing as migration stalls. Team morale declining from prolonged uncertainty.",
+    "firstPriority": "Complete the migration or make a deliberate decision to stop. The worst outcome is being stuck in the middle indefinitely. Set a deadline and staff accordingly.",
+    "antiPatternIfIgnored": "Assuming the migration will 'finish eventually.' Stalled transformations become permanent technical debt with compounding maintenance costs for both old and new systems.",
+    "diagnosticMetricIds": ["8.4", "8.6", "1.2", "5.1", "5.2"],
+    "recommendedMetricIds": ["8.4", "8.6", "1.2", "5.1", "5.2", "1.4", "7.1"],
+    "quantifiedThresholds": {
+      "migrationProgress": "< 50% after planned timeline",
+      "techDebtRatio": "> 30% and rising",
+      "leadTimeBimodal": "New services < 1 day, legacy > 7 days",
+      "dxScore": "Declining quarter-over-quarter"
+    }
+  }
+]

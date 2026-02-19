@@ -14,6 +14,15 @@ import interviewQuestionsData from '../data/interview-questions.json';
 import orgMaturityData from '../data/org-maturity.json';
 import careerProgressionData from '../data/career-progression.json';
 import measurementGuidanceData from '../data/measurement-guidance.json';
+import metricsData from '../data/metrics.json';
+import metricPairsData from '../data/metric-pairs.json';
+import diagnosticChainsData from '../data/diagnostic-chains.json';
+import dashboardBlueprintsData from '../data/dashboard-blueprints.json';
+import metricsRoadmapData from '../data/metrics-roadmap.json';
+import calibrationLanguageData from '../data/calibration-language.json';
+import archetypesData from '../data/archetypes.json';
+import priorityStacksData from '../data/priority-stacks.json';
+import techDebtEconomicsData from '../data/tech-debt-economics.json';
 
 // ── Types ──────────────────────────────────────────────
 
@@ -75,6 +84,7 @@ export interface Playbook {
   slug: string;
   observableIds: string[];
   capabilityIds: string[];
+  suggestedMetricIds: string[];
   title: string;
   context: string;
   topicsActivated: string[];
@@ -203,6 +213,166 @@ export interface MeasurementGuidance {
   dataSourceExamples: string[];
 }
 
+export interface Metric {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  tier: string;
+  type: string;
+  description: string;
+  decisionRule: string;
+  emRank: { priority: string; rank: number };
+  directorRank: { priority: string; rank: number };
+  mandatoryPairIds: string[];
+  cadence: string;
+  dashboardPlacement: string[];
+  maturityPhase: number;
+  implementationEffort: string;
+  implementationNotes: string;
+  replaces: string;
+  whyThisTier: string;
+  goodRange: string;
+  warningRange: string;
+  dangerRange: string;
+  capabilityIds: string[];
+  observableIds: string[];
+  emTier: string | null;
+  directorTier: string | null;
+  aiEraImpact: string;
+}
+
+export interface MetricPairSide {
+  id: string;
+  alsoIds?: string[];
+  role: string;
+}
+
+export interface MetricPair {
+  id: string;
+  name: string;
+  slug: string;
+  metricA: MetricPairSide;
+  metricB: MetricPairSide;
+  whyPaired: string;
+  withoutA: string;
+  withoutB: string;
+}
+
+export interface DiagnosticStep {
+  order: number;
+  checkMetricId: string;
+  alsoCheckMetricIds?: string[];
+  label: string;
+  reason: string;
+}
+
+export interface DiagnosticChain {
+  id: string;
+  triggerMetricId: string;
+  triggerCondition: string;
+  slug: string;
+  directorQuestion: string;
+  steps: DiagnosticStep[];
+}
+
+export interface DashboardWidget {
+  metricId: string;
+  displayType: string;
+  label: string;
+}
+
+export interface DashboardSection {
+  name: string;
+  position: string;
+  widgets: DashboardWidget[];
+}
+
+export interface DashboardBlueprint {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  cadence: string;
+  sections: DashboardSection[];
+}
+
+export interface RoadmapTask {
+  task: string;
+  effort: string;
+  successCriteria: string;
+}
+
+export interface RoadmapPhase {
+  phase: number;
+  name: string;
+  slug: string;
+  duration: string;
+  goal: string;
+  tasks: RoadmapTask[];
+  metricsActivated: string[];
+}
+
+export interface MetricsLaw {
+  id: string;
+  name: string;
+  statement: string;
+  description: string;
+  example: string;
+}
+
+export interface CalibrationLanguageEntry {
+  id: string;
+  metricId: string;
+  role: string;
+  context: string;
+  template: string;
+  variables: string[];
+  whenToUse: string;
+  antiPattern: string;
+}
+
+export interface Archetype {
+  id: string;
+  name: string;
+  slug: string;
+  signaturePattern: string;
+  metricsProfile: string;
+  firstPriority: string;
+  antiPatternIfIgnored: string;
+  diagnosticMetricIds: string[];
+  recommendedMetricIds: string[];
+  quantifiedThresholds?: Record<string, string>;
+}
+
+export interface PriorityStackEntry {
+  rank: number;
+  metricId: string;
+  dashboard: string;
+  cadence: string;
+  rationale: string;
+}
+
+export interface TechDebtDataPoint {
+  dataPoint: string;
+  source: string;
+  implication: string;
+}
+
+export interface CD3Example {
+  initiative: string;
+  duration: number;
+  weeklyValue: number;
+  cd3: number;
+  priority: number;
+}
+
+export interface StarterSequenceStep {
+  question: string;
+  noAction: string;
+  yesNext: boolean;
+}
+
 // ── Data accessors ─────────────────────────────────────
 
 export const capabilities = capabilitiesData as Capability[];
@@ -221,6 +391,22 @@ export const interviewQuestions = interviewQuestionsData as InterviewQuestion[];
 export const orgMaturity = (orgMaturityData as { levels: OrgMaturityLevel[] }).levels;
 export const careerLevels = (careerProgressionData as { levels: CareerLevel[] }).levels;
 export const measurementGuidance = measurementGuidanceData as MeasurementGuidance[];
+export const metrics = metricsData as Metric[];
+export const metricPairs = metricPairsData as MetricPair[];
+export const diagnosticChains = diagnosticChainsData as DiagnosticChain[];
+export const dashboardBlueprints = (dashboardBlueprintsData as { dashboards: DashboardBlueprint[] }).dashboards;
+export const metricsRoadmap = (metricsRoadmapData as { phases: RoadmapPhase[]; laws: MetricsLaw[] }).phases;
+export const metricsLaws = (metricsRoadmapData as { phases: RoadmapPhase[]; laws: MetricsLaw[] }).laws;
+export const calibrationLanguage = calibrationLanguageData as CalibrationLanguageEntry[];
+export const archetypes = archetypesData as Archetype[];
+export const priorityStacks = priorityStacksData as { em: PriorityStackEntry[]; director: PriorityStackEntry[] };
+export const techDebtEconomics = techDebtEconomicsData as {
+  coreNumbers: TechDebtDataPoint[];
+  investmentMandate: { target: string; description: string; strategies: string[] };
+  cd3: { formula: string; description: string; example: CD3Example[]; whenToUse: string; impact: string };
+  decisionTest: string[];
+  starterSequences: { em: StarterSequenceStep[]; director: StarterSequenceStep[] };
+};
 
 // ── Lookup helpers ─────────────────────────────────────
 
@@ -316,4 +502,125 @@ export function getRelatedCapabilities(capId: string): Capability[] {
   }
   secondaryIds.delete(capId);
   return [...secondaryIds].map(id => capById.get(id)).filter((c): c is Capability => !!c);
+}
+
+// ── Archetype lookup helpers ──────────────────────────
+
+const archById = new Map(archetypes.map(a => [a.id, a]));
+const archBySlug = new Map(archetypes.map(a => [a.slug, a]));
+
+export function getArchetype(idOrSlug: string): Archetype | undefined {
+  return archById.get(idOrSlug) ?? archBySlug.get(idOrSlug);
+}
+
+export function getArchetypeBySlug(slug: string): Archetype | undefined {
+  return archBySlug.get(slug);
+}
+
+// ── Metrics lookup helpers ────────────────────────────
+
+const metById = new Map(metrics.map(m => [m.id, m]));
+const metBySlug = new Map(metrics.map(m => [m.slug, m]));
+const mpById = new Map(metricPairs.map(mp => [mp.id, mp]));
+const dcById = new Map(diagnosticChains.map(dc => [dc.id, dc]));
+
+export function getMetric(idOrSlug: string): Metric | undefined {
+  return metById.get(idOrSlug) ?? metBySlug.get(idOrSlug);
+}
+
+export function getMetricsForCapability(capId: string): Metric[] {
+  return metrics.filter(m => m.capabilityIds.includes(capId));
+}
+
+export function getMetricsForTier(tier: string): Metric[] {
+  return metrics.filter(m => m.tier === tier);
+}
+
+export function getMetricsForPhase(phase: number): Metric[] {
+  const phaseData = metricsRoadmap.find(p => p.phase === phase);
+  if (!phaseData) return [];
+  return phaseData.metricsActivated.map(id => metById.get(id)).filter((m): m is Metric => !!m);
+}
+
+export function getMetricPairForMetric(metricId: string): MetricPair | undefined {
+  return metricPairs.find(mp => mp.metricA.id === metricId || mp.metricB.id === metricId);
+}
+
+export function getDiagnosticChainsForMetric(metricId: string): DiagnosticChain[] {
+  return diagnosticChains.filter(dc =>
+    dc.triggerMetricId === metricId ||
+    dc.steps.some(s => s.checkMetricId === metricId)
+  );
+}
+
+export function getCalibrationLanguageForMetric(metricId: string): CalibrationLanguageEntry[] {
+  return calibrationLanguage.filter(cl => cl.metricId === metricId);
+}
+
+export function getAllMetricCategories(): string[] {
+  return [...new Set(metrics.map(m => m.category))];
+}
+
+export function getMetricPair(id: string): MetricPair | undefined {
+  return mpById.get(id);
+}
+
+export function getDiagnosticChain(idOrSlug: string): DiagnosticChain | undefined {
+  return dcById.get(idOrSlug) ?? diagnosticChains.find(dc => dc.slug === idOrSlug);
+}
+
+export function getRecommendedMetricsForArchetype(archetypeId: string): Metric[] {
+  const arch = archById.get(archetypeId);
+  if (!arch || !arch.recommendedMetricIds) return [];
+  return arch.recommendedMetricIds.map(id => metById.get(id)).filter((m): m is Metric => !!m);
+}
+
+export function getRelatedMetrics(metricId: string): { metric: Metric; relationship: string }[] {
+  const related = new Map<string, string>();
+
+  // From mandatory pairs
+  const metric = metById.get(metricId);
+  if (metric) {
+    for (const pairId of metric.mandatoryPairIds) {
+      related.set(pairId, 'Mandatory Pair');
+    }
+  }
+
+  // From diagnostic chains
+  for (const dc of diagnosticChains) {
+    const involvedIds = [dc.triggerMetricId, ...dc.steps.map(s => s.checkMetricId), ...dc.steps.flatMap(s => s.alsoCheckMetricIds || [])];
+    if (involvedIds.includes(metricId)) {
+      for (const id of involvedIds) {
+        if (id && id !== metricId && !related.has(id)) {
+          related.set(id, 'Diagnostic Context');
+        }
+      }
+    }
+  }
+
+  // From same archetype diagnostic sets
+  for (const arch of archetypes) {
+    if (arch.diagnosticMetricIds.includes(metricId)) {
+      for (const id of arch.diagnosticMetricIds) {
+        if (id !== metricId && !related.has(id)) {
+          related.set(id, 'Same Archetype');
+        }
+      }
+    }
+  }
+
+  // From same roadmap phase
+  if (metric) {
+    const samePhaseMetrics = getMetricsForPhase(metric.maturityPhase);
+    for (const m of samePhaseMetrics) {
+      if (m.id !== metricId && !related.has(m.id)) {
+        related.set(m.id, 'Same Phase');
+      }
+    }
+  }
+
+  return [...related.entries()]
+    .map(([id, rel]) => ({ metric: metById.get(id)!, relationship: rel }))
+    .filter(r => r.metric != null)
+    .slice(0, 12);
 }

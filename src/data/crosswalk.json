@@ -491,7 +491,7 @@
     "origSubTopic": "Leading Through Layoffs/RIF",
     "primaryCapability": "C1",
     "secondaryCapability": "C7",
-    "mappingNotes": "Org-level leadership + communication. GAP: Crisis/change leadership",
+    "mappingNotes": "Org-level leadership + communication. Crisis/change leadership covered by C1 (org design through disruption), C7 (delivering difficult messages upward and downward), and C8 (operational risk management). See playbook P-C1-2.",
     "observableId": "C1-O8"
   },
   {
@@ -554,7 +554,7 @@
     "origSubTopic": "Inheriting a Team: Assessment",
     "primaryCapability": "C1",
     "secondaryCapability": "C9",
-    "mappingNotes": "Org assessment + measurement. GAP: Leadership transitions",
+    "mappingNotes": "Org assessment + measurement. Leadership transitions covered by C1-O1 (team assessment and cognitive load evaluation), C6 (coaching and team health baseline), and C9 (metrics baseline). See playbook P-C1-1.",
     "observableId": "C1-O13"
   },
   {

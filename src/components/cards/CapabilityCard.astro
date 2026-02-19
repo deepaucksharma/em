@@ -25,6 +25,6 @@ const cov = getCoverage(capability.id);
   </p>
   <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
     <span>{capability.observableCount} observables</span>
-    {cov && <span>{formatPercent(cov.coveragePercent)} coverage</span>}
+    {cov && <span title="Percentage of primary sub-topics covered by observables">{formatPercent(cov.coveragePercent)} coverage</span>}
   </div>
 </a>

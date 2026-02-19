@@ -1,0 +1,25 @@
+---
+interface Props {
+  tier: string;
+  size?: 'sm' | 'md';
+}
+
+const { tier, size = 'md' } = Astro.props;
+
+const tierConfig: Record<string, { label: string; class: string }> = {
+  primary: { label: 'Primary', class: 'badge-tier-primary' },
+  secondary: { label: 'Secondary', class: 'badge-tier-secondary' },
+  tertiary: { label: 'Tertiary', class: 'badge-tier-tertiary' },
+  activity: { label: 'Activity', class: 'badge-tier-activity' },
+  inferior: { label: 'Inferior', class: 'badge-tier-inferior' },
+  diagnostic: { label: 'Diagnostic', class: 'badge-tier-diagnostic' },
+  structural: { label: 'Structural', class: 'badge-tier-structural' },
+};
+
+const config = tierConfig[tier] || tierConfig.tertiary;
+const sizeClass = size === 'sm' ? 'text-[10px] px-1.5 py-0.5' : 'text-xs px-2.5 py-0.5';
+---
+
+<span class:list={['badge', config.class, sizeClass, 'font-medium']}>
+  {config.label}
+</span>

@@ -1744,5 +1744,1058 @@
     "domain": "People",
     "capabilityName": "Coaching & Talent Development",
     "id": "AP-33"
+  },
+  {
+    "title": "Quarterly Planning When Product and Engineering Disagree on Priorities",
+    "description": "It's planning season. Product wants to invest heavily in new features for a key customer segment. Engineering wants to p",
+    "type": "playbook",
+    "url": "/playbooks/quarterly-planning-product-engineering-disagree/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "P-C2-1"
+  },
+  {
+    "title": "Asked to Build Something That Conflicts with Your OKRs",
+    "description": "A VP from another org asks your team to take on an urgent project that doesn't align with your quarterly OKRs. Your mana",
+    "type": "playbook",
+    "url": "/playbooks/asked-to-build-conflicting-with-okrs/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "P-C2-2"
+  },
+  {
+    "title": "Your Team's Delivery Predictability Has Collapsed",
+    "description": "Over the past two quarters, your team has missed 70% of committed sprint goals. Stakeholders are losing trust. The team ",
+    "type": "playbook",
+    "url": "/playbooks/team-delivery-predictability-collapsed/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "P-C4-1"
+  },
+  {
+    "title": "You Inherit a Team with No Operating Cadence",
+    "description": "You've just taken over a team that has no regular standup, no sprint planning, no retrospectives, and no documented on-c",
+    "type": "playbook",
+    "url": "/playbooks/inherit-team-no-operating-cadence/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "P-C4-2"
+  },
+  {
+    "title": "The Blank Check",
+    "description": "The Blank Check \u2014 EM requests headcount without capacity models, ROI projections, or clear success criteria",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-blank-check/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-34"
+  },
+  {
+    "title": "The Infinite Runway",
+    "description": "The Infinite Runway \u2014 EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-infinite-runway/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-35"
+  },
+  {
+    "title": "Security as Afterthought",
+    "description": "Security as Afterthought \u2014 security reviews happen only after incidents, not as part of the development workflow",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/security-as-afterthought/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "AP-36"
+  },
+  {
+    "title": "Compliance Cramming",
+    "description": "Compliance Cramming \u2014 EM treats compliance as a periodic audit exercise rather than continuous posture",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/compliance-cramming/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "AP-37"
+  },
+  {
+    "title": "The Ivory Tower Architect",
+    "description": "The Ivory Tower Architect \u2014 EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-ivory-tower-architect/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-38"
+  },
+  {
+    "title": "The Vanity Dashboard",
+    "description": "The Vanity Dashboard \u2014 EM builds impressive-looking dashboards that measure activity instead of outcomes",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-vanity-dashboard/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-39"
+  },
+  {
+    "title": "1.2: Lead Time for Changes",
+    "description": "Most actionable DORA metric. Measures time from first commit to production deployment. Decomposes into fixable stages: review wait, build/test, deploy queue. Improving Lead Time naturally improves Deploy Frequency as a side effect.",
+    "type": "metric",
+    "url": "/metrics/lead-time-for-changes/",
+    "domain": "DORA",
+    "capabilityName": "DORA",
+    "id": "1.2"
+  },
+  {
+    "title": "1.4: Change Failure Rate",
+    "description": "Percentage of deployments causing failures requiring remediation. Essential quality counterweight to velocity. Without CFR, faster shipping might mean faster breaking. Directly tied to user impact and less gameable than bug counts.",
+    "type": "metric",
+    "url": "/metrics/change-failure-rate/",
+    "domain": "DORA",
+    "capabilityName": "DORA",
+    "id": "1.4"
+  },
+  {
+    "title": "3.3: Error Budget Remaining + Burn Rate",
+    "description": "The single best arbitration tool between velocity and reliability. Budget remaining tells you whether to ship freely or freeze and fix. Burn rate shows how fast reliability is degrading. Turns political arguments into math and forces SLI/SLO discipline as prerequisite.",
+    "type": "metric",
+    "url": "/metrics/error-budget-burn-rate/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "3.3"
+  },
+  {
+    "title": "3.5: SLO Compliance Rate",
+    "description": "The Director's reliability scorecard. Answers: 'Which services are chronically unreliable?' Drives investment decisions across the org. Policy-based, not political. Replaces vanity uptime numbers with customer-meaningful thresholds.",
+    "type": "metric",
+    "url": "/metrics/slo-compliance-rate/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "3.5"
+  },
+  {
+    "title": "5.1: Developer Satisfaction Score",
+    "description": "Only cheap, reliable leading indicator of attrition, velocity decline, and quality erosion. 5 questions, 10 minutes, quarterly. Every other people metric is lagging. Highest ROI people measurement.",
+    "type": "metric",
+    "url": "/metrics/developer-satisfaction-score/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.1"
+  },
+  {
+    "title": "7.1: Regrettable Attrition Rate",
+    "description": "A single regrettable departure costs $200K-$500K+. The rate alone is insufficient; pattern analysis (themes from exits by team/level/tenure) predicts and prevents the next one. Directors have most leverage here; EMs provide context.",
+    "type": "metric",
+    "url": "/metrics/regrettable-attrition-rate/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.1"
+  },
+  {
+    "title": "8.4: Engineering Investment Mix",
+    "description": "Answers 'where does our capacity actually go?' (features vs reliability vs debt vs security). Without this, Directors cannot defend budget, justify headcount, or explain why the roadmap takes longer than expected.",
+    "type": "metric",
+    "url": "/metrics/engineering-investment-mix/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "8.4"
+  },
+  {
+    "title": "8.2: Revenue / Business Impact Attribution",
+    "description": "How Directors justify their org's existence. Maps specific engineering work to specific business outcomes. Without it, you're at the mercy of whoever frames the narrative.",
+    "type": "metric",
+    "url": "/metrics/business-impact-attribution/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "8.2"
+  },
+  {
+    "title": "2.5: Sprint Commitment Accuracy",
+    "description": "Best proxy for predictability. 85%+ accuracy earns trust, autonomy, fewer 'when?' questions. Not primary because it's a planning metric, not a delivery system metric \u2014 it tells you how well you forecast, not how fast you ship.",
+    "type": "metric",
+    "url": "/metrics/sprint-commitment-accuracy/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "2.5"
+  },
+  {
+    "title": "1.3: Mean Time to Restore",
+    "description": "Important but reactive. You can't improve it without incidents to practice on. Heavily influenced by cross-team factors (observability, rollback infra). Primary for incident response maturity, secondary as an ongoing health metric.",
+    "type": "metric",
+    "url": "/metrics/mean-time-to-restore/",
+    "domain": "DORA",
+    "capabilityName": "DORA",
+    "id": "1.3"
+  },
+  {
+    "title": "5.6: On-Call Burden",
+    "description": "Fastest path to burnout and attrition. Outsized impact on affected engineers. Not primary because not all teams have significant on-call, and it doesn't aggregate well to org level.",
+    "type": "metric",
+    "url": "/metrics/on-call-burden/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.6"
+  },
+  {
+    "title": "3.1: SLI Definition",
+    "description": "Essential foundation for error budgets and SLO compliance. The work is in getting the SLI right \u2014 choosing user-centric indicators that reflect real customer experience. Once defined correctly, SLIs disappear into the SLO.",
+    "type": "metric",
+    "url": "/metrics/sli-definition/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "3.1"
+  },
+  {
+    "title": "3.2: SLO Target",
+    "description": "SLO targets negotiated with product and SRE. The prerequisite for error budgets. Without defined targets, reliability arguments remain political rather than mathematical.",
+    "type": "metric",
+    "url": "/metrics/slo-target/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "3.2"
+  },
+  {
+    "title": "3.6: Incident Rate by Severity",
+    "description": "Useful trend but poor primary metric: influenced by classification standards, doesn't capture impact (1 SEV1 > 50 SEV3s), doesn't prescribe action. Best used as context alongside SLO compliance.",
+    "type": "metric",
+    "url": "/metrics/incident-rate-by-severity/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "3.6"
+  },
+  {
+    "title": "8.1: OKR Achievement Rate",
+    "description": "Primary alignment tool, but achievement rate is secondary as a metric because: OKR quality varies wildly, percentage is influenced by target aggressiveness, and the value of OKRs is in the process, not the score.",
+    "type": "metric",
+    "url": "/metrics/okr-achievement-rate/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "8.1"
+  },
+  {
+    "title": "5.4: Code Review Turnaround Time",
+    "description": "Hidden tax on velocity \u2014 often 40-60% of Lead Time. Secondary because better decomposed from Lead Time than tracked independently; can be gamed with rubber-stamp fast reviews.",
+    "type": "metric",
+    "url": "/metrics/code-review-turnaround-time/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.4"
+  },
+  {
+    "title": "2.6: Blocked Work Rate",
+    "description": "Best diagnostic for cross-team dependency problems. Secondary because requires disciplined tracking, causes often outside EM control, overlaps with Lead Time decomposition. Most valuable for architectural/reorg arguments.",
+    "type": "metric",
+    "url": "/metrics/blocked-work-rate/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "2.6"
+  },
+  {
+    "title": "7.8: eNPS / Engagement Score",
+    "description": "Useful macro trend \u2014 if < 0, something is seriously wrong. Secondary because too coarse to act on, moves slowly, influenced by factors outside your control. Actionable detail comes from DX surveys and exit interviews.",
+    "type": "metric",
+    "url": "/metrics/enps-engagement-score/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.8"
+  },
+  {
+    "title": "10.1: Cloud Cost per Transaction/User",
+    "description": "Only cost metric that makes sense at scale because it normalizes for growth. Secondary overall because cost optimization that degrades reliability or velocity is a false economy. Fix delivery and reliability first.",
+    "type": "metric",
+    "url": "/metrics/cloud-cost-per-transaction/",
+    "domain": "Cost",
+    "capabilityName": "Cost",
+    "id": "10.1"
+  },
+  {
+    "title": "3.7: Post-Incident Action Item Completion Rate",
+    "description": "Process discipline metric. Secondary because completion without quality is hollow, and the effect of good follow-through shows up in declining incident rate and improving SLO compliance.",
+    "type": "metric",
+    "url": "/metrics/post-incident-action-item-completion-rate/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "3.7"
+  },
+  {
+    "title": "9.1: Vulnerability Remediation Time",
+    "description": "Only continuously relevant security metric. Secondary overall because managed through organizational process rather than sprint-level decisions. But Critical SLA (<24hrs) is non-negotiable.",
+    "type": "metric",
+    "url": "/metrics/vulnerability-remediation-time/",
+    "domain": "Security",
+    "capabilityName": "Security",
+    "id": "9.1"
+  },
+  {
+    "title": "4.3: Rollback Rate",
+    "description": "Most unambiguous quality signal \u2014 either you rolled back or you didn't. Secondary because all quality metrics are lagging, and CFR + error budget are better leading signals.",
+    "type": "metric",
+    "url": "/metrics/rollback-rate/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "4.3"
+  },
+  {
+    "title": "5.2: Developer Toil Hours",
+    "description": "Valuable for justifying platform/automation investment. Secondary because relies on self-reporting (inconsistent), impact shows up in DX scores and velocity more reliably, and 'toil' is subjective. Best used for specific business cases.",
+    "type": "metric",
+    "url": "/metrics/developer-toil-hours/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.2"
+  },
+  {
+    "title": "1.1: Deployment Frequency",
+    "description": "Most cited DORA metric but least useful as a primary: most gameable (split deploys), lagging indicator of Lead Time (LT improves \u2192 DF rises naturally), varies wildly by architecture. DF is a side effect of good Lead Time, not a goal.",
+    "type": "metric",
+    "url": "/metrics/deployment-frequency/",
+    "domain": "DORA",
+    "capabilityName": "DORA",
+    "id": "1.1"
+  },
+  {
+    "title": "2.1: Flow Time",
+    "description": "Overlaps with DORA Lead Time. Adds value only when you need to distinguish queue time from active work time. Keep in toolkit for deep dives, not on main dashboard.",
+    "type": "metric",
+    "url": "/metrics/flow-time/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "2.1"
+  },
+  {
+    "title": "2.3: Cycle Time",
+    "description": "Useful for estimation calibration but less powerful than Lead Time because it doesn't capture the deploy pipeline.",
+    "type": "metric",
+    "url": "/metrics/cycle-time/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "2.3"
+  },
+  {
+    "title": "2.4: Throughput",
+    "description": "Capacity planning input, not health metric. Items vary in size, making raw counts misleading. Sprint Commitment Accuracy is a better delivery health measure.",
+    "type": "metric",
+    "url": "/metrics/throughput/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "2.4"
+  },
+  {
+    "title": "2.2: WIP (Work in Progress)",
+    "description": "Process hygiene metric, not strategic signal. Consequences of high WIP are better measured through Lead Time and Cycle Time directly. Useful as a coaching tool in retros.",
+    "type": "metric",
+    "url": "/metrics/work-in-progress/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "2.2"
+  },
+  {
+    "title": "4.4: Escaped Defect Rate",
+    "description": "Useful for root-cause analysis but requires subjective classification. Business impact of escaped defects better captured through CFR and incident rate.",
+    "type": "metric",
+    "url": "/metrics/escaped-defect-rate/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "4.4"
+  },
+  {
+    "title": "4.1: Test Coverage (Critical Paths)",
+    "description": "Most misleading quality metric in software. High coverage \u2260 good tests. Use as code review conversation, not a KPI. The signal you want is 'do tests catch bugs?' \u2014 better measured through escaped defects and CFR.",
+    "type": "metric",
+    "url": "/metrics/test-coverage-critical-paths/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "4.1"
+  },
+  {
+    "title": "4.2: Flaky Test Rate",
+    "description": "Developer experience problem more than quality problem. Impact shows up in CI cycle time and DX scores. Flaky rate helps diagnose why DX is low, but DX score is the primary signal.",
+    "type": "metric",
+    "url": "/metrics/flaky-test-rate/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "4.2"
+  },
+  {
+    "title": "5.3: Build & CI Cycle Time",
+    "description": "Subset of Lead Time. Typically a platform team problem, not an EM decision. Impact captured through DX survey and Lead Time decomposition.",
+    "type": "metric",
+    "url": "/metrics/build-ci-cycle-time/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.3"
+  },
+  {
+    "title": "5.5: Cognitive Load Index",
+    "description": "DevEx framework identifies cognitive load as a core dimension. AI paradoxically increases cognitive load when engineers must verify, debug, and understand code they didn't write.",
+    "type": "metric",
+    "url": "/metrics/context-switching-rate/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.5"
+  },
+  {
+    "title": "5.7: Environment Setup Time",
+    "description": "Only matters during onboarding. Fix it once, check quarterly.",
+    "type": "metric",
+    "url": "/metrics/environment-setup-time/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.7"
+  },
+  {
+    "title": "5.8: IDP Adoption Rate",
+    "description": "Only relevant if you have a platform team. Adoption is a lagging indicator of platform quality. Impact shows up in CI time, setup time, and DX scores.",
+    "type": "metric",
+    "url": "/metrics/idp-adoption-rate/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.8"
+  },
+  {
+    "title": "7.2: Non-Regrettable Attrition Rate",
+    "description": "If non-regrettable attrition is 0%, you're not managing performance. Healthy range: 2-5% annually.",
+    "type": "metric",
+    "url": "/metrics/non-regrettable-attrition-rate/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.2"
+  },
+  {
+    "title": "7.3: Time to Hire",
+    "description": "Mostly recruiting operations, not engineering leadership. EM's lever is narrow (be responsive in interviews).",
+    "type": "metric",
+    "url": "/metrics/time-to-hire/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.3"
+  },
+  {
+    "title": "7.4: Offer Acceptance Rate",
+    "description": "Small sample sizes make it noisy. Root causes usually comp or brand (outside EM control).",
+    "type": "metric",
+    "url": "/metrics/offer-acceptance-rate/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.4"
+  },
+  {
+    "title": "7.5: New Hire Ramp Time",
+    "description": "Impact of slow ramp shows up in delivery metrics. Measured per hire; improves with one-time investments in onboarding.",
+    "type": "metric",
+    "url": "/metrics/new-hire-ramp-time/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.5"
+  },
+  {
+    "title": "7.6: Span of Control",
+    "description": "Changes infrequently (only reorgs/hiring). Effects of bad span show up in DX, attrition, delivery long before you notice the number. Check during reorgs.",
+    "type": "metric",
+    "url": "/metrics/span-of-control/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.6"
+  },
+  {
+    "title": "7.7: Diversity Metrics",
+    "description": "Not tertiary because they don't matter \u2014 they matter enormously. They operate on a different cadence and accountability structure. Pipeline and retention diversity are strategic, quarterly/annual concerns in hiring reviews and org planning. Parallel track, not lower priority.",
+    "type": "metric",
+    "url": "/metrics/diversity-metrics/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.7"
+  },
+  {
+    "title": "8.3: Cost of Delay",
+    "description": "Powerful but expensive to calculate. Only worth doing for major initiatives (>1 quarter of team effort). Use for specific high-stakes decisions, not ongoing tracking.",
+    "type": "metric",
+    "url": "/metrics/cost-of-delay/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "8.3"
+  },
+  {
+    "title": "8.5: Customer Impact Metrics",
+    "description": "Essential for product teams but influenced by many non-engineering factors. Engineering-specific impact is better captured through SLO compliance and revenue attribution.",
+    "type": "metric",
+    "url": "/metrics/customer-impact-metrics/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "8.5"
+  },
+  {
+    "title": "8.6: Tech Debt Ratio",
+    "description": "Important but imprecise. 'Tech debt' is subjective. Impact shows up in Lead Time, CFR, DX scores. Better to measure 'how much are we investing in reducing it?' (Investment Mix) and 'is velocity improving?' (outcome).",
+    "type": "metric",
+    "url": "/metrics/tech-debt-ratio/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "8.6"
+  },
+  {
+    "title": "9.2: Dependency Currency",
+    "description": "Preventive hygiene metric. Consequences show up in vulnerability remediation time. Largely automatable (Dependabot, Renovate). Set up, automate, check monthly.",
+    "type": "metric",
+    "url": "/metrics/dependency-currency/",
+    "domain": "Security",
+    "capabilityName": "Security",
+    "id": "9.2"
+  },
+  {
+    "title": "9.3: Compliance Audit Readiness",
+    "description": "Situational (regulated industries). Episodic (audit season). Primarily documentation. Invest once in automation, then monitor.",
+    "type": "metric",
+    "url": "/metrics/compliance-audit-readiness/",
+    "domain": "Security",
+    "capabilityName": "Security",
+    "id": "9.3"
+  },
+  {
+    "title": "10.2: Infrastructure Utilization Rate",
+    "description": "FinOps operational metric, not leadership metric. Impact shows up in cost per transaction.",
+    "type": "metric",
+    "url": "/metrics/infrastructure-utilization-rate/",
+    "domain": "Cost",
+    "capabilityName": "Cost",
+    "id": "10.2"
+  },
+  {
+    "title": "10.3: Cost per Engineer (Fully Loaded)",
+    "description": "Financial planning input, not engineering metric. Useful for ROI modeling, never on a dashboard.",
+    "type": "metric",
+    "url": "/metrics/cost-per-engineer/",
+    "domain": "Cost",
+    "capabilityName": "Cost",
+    "id": "10.3"
+  },
+  {
+    "title": "10.4: Revenue per Engineer",
+    "description": "Terrible operational metric: penalizes platform teams, varies by business model, influenced by factors outside engineering control, incentivizes headcount reduction over productivity. Annual narrative only.",
+    "type": "metric",
+    "url": "/metrics/revenue-per-engineer/",
+    "domain": "Cost",
+    "capabilityName": "Cost",
+    "id": "10.4"
+  },
+  {
+    "title": "6.1: PR Throughput (Team)",
+    "description": "Spot blocked teams, detect sudden disruption. A >50% week-over-week drop warrants immediate investigation. Team-level diagnostic only \u2014 never for individual performance.",
+    "type": "metric",
+    "url": "/metrics/pr-throughput-team/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "6.1"
+  },
+  {
+    "title": "6.2: PR Size Distribution",
+    "description": "Large PRs correlate with higher defect rates and slower reviews. If >30% of PRs are XL (>1000 lines), PR hygiene coaching is needed. Never penalize engineers for large PRs without context.",
+    "type": "metric",
+    "url": "/metrics/pr-size-distribution/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "6.2"
+  },
+  {
+    "title": "6.3: Review Load Distribution",
+    "description": "Bus factor risk and reviewer burnout signal. If one person is doing >50% of team reviews, rotation problem needs addressing. Never use review count as performance metric.",
+    "type": "metric",
+    "url": "/metrics/review-load-distribution/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "6.3"
+  },
+  {
+    "title": "6.4: Meeting Load",
+    "description": "Context switching and focus time erosion. ICs with >12 hrs/week in meetings need a calendar audit. Categorizing meetings as 'valuable' vs 'theater' creates political conflict; effect shows up in DX scores.",
+    "type": "metric",
+    "url": "/metrics/meeting-load/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "6.4"
+  },
+  {
+    "title": "6.5: Cross-Team Dependency Count",
+    "description": "Quantify organizational coupling for reorg/API arguments. >3 active dependencies per sprint warrants an architecture/ownership investigation. Evidence for org redesign, not blame.",
+    "type": "metric",
+    "url": "/metrics/cross-team-dependency-count/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "6.5"
+  },
+  {
+    "title": "I1: Lines of Code per Engineer",
+    "description": "Encourages bloated code; punishes refactoring, deletions, and concise solutions; penalizes debugging and design work. Universally discredited.",
+    "type": "metric",
+    "url": "/metrics/lines-of-code-per-engineer/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "I1"
+  },
+  {
+    "title": "I2: Commits per Engineer",
+    "description": "Micro-commits, noisy history, gaming; penalizes pairing, mobbing, and thoughtful architecture work.",
+    "type": "metric",
+    "url": "/metrics/commits-per-engineer/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "I2"
+  },
+  {
+    "title": "I3: Tickets Closed per Engineer",
+    "description": "Ticket slicing; busy work tickets; resistance to complex/ambiguous problems; penalizes systems thinking.",
+    "type": "metric",
+    "url": "/metrics/tickets-closed-per-engineer/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "I3"
+  },
+  {
+    "title": "I4: Story Points per Engineer",
+    "description": "Immediate point inflation; distorts estimation; turns planning tool into performance weapon; destroys trust between eng and product.",
+    "type": "metric",
+    "url": "/metrics/story-points-per-engineer/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "I4"
+  },
+  {
+    "title": "I5: Velocity (Points/Sprint) as KPI",
+    "description": "Point inflation, scope slicing, conservative estimation; rewards gaming over delivery. Velocity should be stable (for planning), not increasing (proof of productivity).",
+    "type": "metric",
+    "url": "/metrics/velocity-as-kpi/",
+    "domain": "Flow",
+    "capabilityName": "Flow",
+    "id": "I5"
+  },
+  {
+    "title": "I6: Raw Bug Count",
+    "description": "Punishes honest reporting; encourages hiding/reclassifying bugs; ignores severity entirely.",
+    "type": "metric",
+    "url": "/metrics/raw-bug-count/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "I6"
+  },
+  {
+    "title": "I7: % Bugs Fixed per Sprint",
+    "description": "Encourages tiny, low-impact fixes; defers hard systemic issues.",
+    "type": "metric",
+    "url": "/metrics/percent-bugs-fixed/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "I7"
+  },
+  {
+    "title": "I8: Test Coverage % (Headline)",
+    "description": "Easily gamed (meaningless assertions); high coverage coexists with poor quality; creates false confidence.",
+    "type": "metric",
+    "url": "/metrics/test-coverage-headline/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "I8"
+  },
+  {
+    "title": "I9: % Time Spent Coding",
+    "description": "Ignores necessary non-coding work (design, mentoring, incidents, planning); penalizes seniors and leaders; treats humans as resources to be utilized.",
+    "type": "metric",
+    "url": "/metrics/time-spent-coding/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "I9"
+  },
+  {
+    "title": "I10: Total Attrition Rate (Unclassified)",
+    "description": "Treats all departures as equivalent; can't distinguish healthy turnover from crisis; hides systemic issues.",
+    "type": "metric",
+    "url": "/metrics/total-attrition-unclassified/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "I10"
+  },
+  {
+    "title": "I11: Uptime % (Without Defined SLI)",
+    "description": "'What was up?' matters more than 'were we up?' 99.99% on a metric users don't feel is wasted effort; no defined measurement boundary; no error budget policy.",
+    "type": "metric",
+    "url": "/metrics/uptime-without-sli/",
+    "domain": "Reliability",
+    "capabilityName": "Reliability",
+    "id": "I11"
+  },
+  {
+    "title": "I12: Topline Revenue as Eng Metric",
+    "description": "Revenue is multi-causal (marketing, sales, pricing, seasonality); attribution to engineering is impossible at this level; creates false credit or false blame.",
+    "type": "metric",
+    "url": "/metrics/topline-revenue-eng-metric/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "I12"
+  },
+  {
+    "title": "I13: NPS Owned Solely by Engineering",
+    "description": "NPS influenced by support, pricing, UX, policies, market position; engineering is one of many factors; attribution is nearly impossible.",
+    "type": "metric",
+    "url": "/metrics/nps-owned-by-engineering/",
+    "domain": "Strategy",
+    "capabilityName": "Strategy",
+    "id": "I13"
+  },
+  {
+    "title": "I14: Build Success Rate",
+    "description": "Near-100% often means tests aren't catching anything; the information value of a failed build is high. Distinguish flaky failures from legitimate failures.",
+    "type": "metric",
+    "url": "/metrics/build-success-rate/",
+    "domain": "Quality",
+    "capabilityName": "Quality",
+    "id": "I14"
+  },
+  {
+    "title": "I15: Individual PR Count",
+    "description": "Trivially gamed; penalizes mentoring, design, architecture, code review, incident response; destroys trust instantly when used in perf reviews.",
+    "type": "metric",
+    "url": "/metrics/individual-pr-count/",
+    "domain": "Activity",
+    "capabilityName": "Activity",
+    "id": "I15"
+  },
+  {
+    "title": "Velocity \u2194 Quality",
+    "description": "Speed without a quality check incentivizes shipping broken code fast. Quality without a speed check incentivizes paralysis.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#velocity-quality",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP1"
+  },
+  {
+    "title": "Reliability \u2194 Velocity",
+    "description": "Reliability without velocity tracking leads to over-engineering. Velocity without reliability tracking leads to chaos. Error budgets exist specifically to balance these.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#reliability-velocity",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP2"
+  },
+  {
+    "title": "People \u2194 Delivery",
+    "description": "Happy teams that don\u2019t ship aren\u2019t sustainable. Productive teams that are miserable won\u2019t last. You need both to know if performance is real and sustainable.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#people-delivery",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP3"
+  },
+  {
+    "title": "Investment \u2194 Outcome",
+    "description": "Knowing where capacity goes is useless without knowing what it produced. Knowing what was produced without knowing what was invested is accidental, not strategic.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#investment-outcome",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP4"
+  },
+  {
+    "title": "Incidents \u2194 Follow-Through",
+    "description": "Counting incidents without tracking whether you fixed root causes means you\u2019ll count the same incidents again next quarter.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#incidents-follow-through",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP5"
+  },
+  {
+    "title": "Attrition \u2194 Classification",
+    "description": "Raw attrition rate is meaningless. Losing a low performer you were about to PIP is healthy. Losing your Staff engineer to a competitor is a crisis. Without classification, you can\u2019t tell the difference.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#attrition-classification",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP6"
+  },
+  {
+    "title": "Lead Time spiking",
+    "description": "Is this one team\u2019s problem (process) or multiple teams\u2019 problem (platform/architecture)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#lead-time-spiking",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC1"
+  },
+  {
+    "title": "CFR climbing",
+    "description": "Is quality declining because of testing gaps (invest in testing) or because people are overloaded (invest in capacity)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#cfr-climbing",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC2"
+  },
+  {
+    "title": "Error Budget burning fast",
+    "description": "Are we having new types of failures (architecture) or repeating old ones (follow-through failure)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#error-budget-burning",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC3"
+  },
+  {
+    "title": "SLO Compliance dropping",
+    "description": "Is this a capacity/architecture problem (invest) or a process/discipline problem (coach)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#slo-compliance-dropping",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC4"
+  },
+  {
+    "title": "DX Score dropping",
+    "description": "Is this a tooling problem (platform investment) or a workload problem (capacity/scope)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#dx-score-dropping",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC5"
+  },
+  {
+    "title": "Regrettable Attrition rising",
+    "description": "Is this a specific team/manager problem or an org-wide systemic issue?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#regrettable-attrition-rising",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC6"
+  },
+  {
+    "title": "Sprint Commitment <70%",
+    "description": "Are we bad at planning (estimation) or bad at protecting capacity (interrupts)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#sprint-commitment-missed",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC7"
+  },
+  {
+    "title": "OKR Achievement <50%",
+    "description": "Are OKRs failing because they\u2019re bad OKRs (alignment) or because we can\u2019t execute (delivery)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#okr-achievement-declining",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC8"
+  },
+  {
+    "title": "Cost per Transaction rising",
+    "description": "Is this a resource management problem (FinOps) or an architecture problem (engineering investment)?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#cost-per-transaction-rising",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC9"
+  },
+  {
+    "title": "5.9: AI Tool Adoption & Trust Score",
+    "description": "Track % of team using AI tools, trust level, and the gap between perceived and measured AI benefit.",
+    "type": "metric",
+    "url": "/metrics/ai-tool-adoption-trust-score/",
+    "domain": "DevEx",
+    "capabilityName": "DevEx",
+    "id": "5.9"
+  },
+  {
+    "title": "7.9: Burnout Risk Index",
+    "description": "Based on Maslach dimensions: energy exhaustion, cynicism, reduced professional efficacy. Survey 3 items quarterly.",
+    "type": "metric",
+    "url": "/metrics/burnout-risk-index/",
+    "domain": "People",
+    "capabilityName": "People",
+    "id": "7.9"
+  },
+  {
+    "title": "9.4: AI-Generated Code Security Scan Rate",
+    "description": "% of AI-generated code receiving security-specific review beyond standard CI.",
+    "type": "metric",
+    "url": "/metrics/ai-generated-code-security-scan-rate/",
+    "domain": "Security",
+    "capabilityName": "Security",
+    "id": "9.4"
+  },
+  {
+    "title": "AI-1: AI-Assisted PR Ratio",
+    "description": "% of PRs containing AI-generated code. Establishes baseline for correlating AI adoption with quality.",
+    "type": "metric",
+    "url": "/metrics/ai-assisted-pr-ratio/",
+    "domain": "AI-Era",
+    "capabilityName": "AI-Era",
+    "id": "AI-1"
+  },
+  {
+    "title": "AI-2: AI PR Quality Delta",
+    "description": "Difference in CFR, rollback rate, and escaped defect rate between AI-assisted and human-authored PRs.",
+    "type": "metric",
+    "url": "/metrics/ai-pr-quality-delta/",
+    "domain": "AI-Era",
+    "capabilityName": "AI-Era",
+    "id": "AI-2"
+  },
+  {
+    "title": "AI-3: Verification Overhead Ratio",
+    "description": "Review time for AI PRs divided by review time for human PRs. Measures the verification bottleneck.",
+    "type": "metric",
+    "url": "/metrics/verification-overhead-ratio/",
+    "domain": "AI-Era",
+    "capabilityName": "AI-Era",
+    "id": "AI-3"
+  },
+  {
+    "title": "AI-4: AI Readiness Score",
+    "description": "Composite score based on DORA AI Capabilities Model. Predicts whether AI will amplify or destabilize your org.",
+    "type": "metric",
+    "url": "/metrics/ai-readiness-score/",
+    "domain": "AI-Era",
+    "capabilityName": "AI-Era",
+    "id": "AI-4"
+  },
+  {
+    "title": "10.5: AI Tooling ROI",
+    "description": "AI tool cost per engineer vs measured delivery improvement. Is the AI investment working?",
+    "type": "metric",
+    "url": "/metrics/ai-tooling-roi/",
+    "domain": "Cost",
+    "capabilityName": "Cost",
+    "id": "10.5"
+  },
+  {
+    "title": "I16: AI Perceived Speed Gain",
+    "description": "80%+ report gains but RCTs show 19% slowdown. Measure outcomes, not perceptions.",
+    "type": "metric",
+    "url": "/metrics/ai-perceived-speed-gain/",
+    "domain": "AI-Era",
+    "capabilityName": "AI-Era",
+    "id": "I16"
+  },
+  {
+    "title": "AI Throughput \u2194 Verification",
+    "description": "AI accelerates code generation while reviews become rubber stamps. Without verification metrics, bug rates climb silently.",
+    "type": "metric-pair",
+    "url": "/metrics/pairs/#ai-throughput-verification",
+    "domain": "Metrics",
+    "capabilityName": "Mandatory Pairs",
+    "id": "MP7"
+  },
+  {
+    "title": "AI adoption but no delivery improvement",
+    "description": "Are we missing AI prerequisites or is AI genuinely not suited to this codebase?",
+    "type": "diagnostic-chain",
+    "url": "/metrics/diagnostics/#ai-adoption-no-improvement",
+    "domain": "Metrics",
+    "capabilityName": "Diagnostic Chains",
+    "id": "DC10"
+  },
+  {
+    "title": "Harmonious High-Achievers",
+    "description": "Virtuous cycle of sustainable excellence. High stability, fast cadence, low friction, exceptional culture.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#harmonious-high-achievers",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A1"
+  },
+  {
+    "title": "Pragmatic Performers",
+    "description": "Sustainable balance of speed and stability. Predictable delivery. Mature platform foundation.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#pragmatic-performers",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A2"
+  },
+  {
+    "title": "Stable and Methodical",
+    "description": "Prioritize quality and reliability above all. Deliberate, high-quality delivery.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#stable-and-methodical",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A3"
+  },
+  {
+    "title": "High-Impact, Low-Cadence",
+    "description": "Brilliant output but severe delivery bottlenecks. Structural understaffing and dependency stalls.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#high-impact-low-cadence",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A4"
+  },
+  {
+    "title": "Constrained by Process",
+    "description": "Bureaucratic treadmill. Momentum destroyed by approvals, CABs, excessive meetings.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#constrained-by-process",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A5"
+  },
+  {
+    "title": "Legacy Bottleneck",
+    "description": "Capable engineers trapped in reactive firefighting against unstable, aging architecture.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#legacy-bottleneck",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A6"
+  },
+  {
+    "title": "Foundational Challenges",
+    "description": "Constant high-pressure firefighting. Chronic slow delivery and systemic instability.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#foundational-challenges",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A7"
+  },
+  {
+    "title": "Chaotic High-Variance",
+    "description": "Oscillation between great sprints and terrible sprints. Unpredictable delivery with wild metric swings.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#chaotic-high-variance",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A8"
+  },
+  {
+    "title": "Specialized Silo",
+    "description": "Deep expertise in narrow domains with minimal cross-training. High bus factor — metrics look OK but organization is fragile.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#specialized-silo",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A9"
+  },
+  {
+    "title": "Stalled Transformation",
+    "description": "Mid-migration between architectures or platforms. Not broken but not stable. Fragile state.",
+    "type": "archetype",
+    "url": "/metrics/archetypes/#stalled-transformation",
+    "domain": "Metrics",
+    "capabilityName": "Archetypes",
+    "id": "A10"
+  },
+  {
+    "title": "Getting Started with Metrics",
+    "description": "30-minute onboarding path: pick your role, identify your team archetype, follow your starter sequence.",
+    "type": "page",
+    "url": "/metrics/getting-started/",
+    "domain": "Metrics",
+    "capabilityName": "Getting Started",
+    "id": "getting-started"
+  },
+  {
+    "title": "Metrics by Archetype",
+    "description": "Recommended metrics, dashboards, and diagnostic chains tailored to each organizational archetype.",
+    "type": "page",
+    "url": "/metrics/by-archetype/",
+    "domain": "Metrics",
+    "capabilityName": "By Archetype",
+    "id": "by-archetype"
   }
 ]

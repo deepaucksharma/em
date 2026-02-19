@@ -520,5 +520,101 @@
     "recoveryActions": "Stop being the first responder. When someone brings you a problem, ask 'what do you think we should do?' before offering your solution. Explicitly assign escalation ownership to team members as growth opportunities. Set boundaries: pick two nights a week you're offline and stick to it. Track how many problems you personally solved vs coached someone else through — shift the ratio. Tell your manager: 'I'm going to step back from X so [team member] can grow into it. Things might be bumpier for a sprint.' Your job is to build a team that doesn't need you for daily operations",
     "sourceTopic": "Coaching & Talent Development",
     "mappingNotes": "Hero EM → coaching approach / team independence observables"
+  },
+  {
+    "id": "AP-34",
+    "name": "The Blank Check",
+    "slug": "the-blank-check",
+    "capabilityId": "C10",
+    "observableIds": [
+      "C10-O1",
+      "C10-O5"
+    ],
+    "shortDesc": "The Blank Check — EM requests headcount without capacity models, ROI projections, or clear success criteria",
+    "warningSigns": "Headcount requests lack quantitative justification; 'we just need more people' is the default answer to delivery problems; no tracking of cost-per-outcome; hiring doesn't improve velocity proportionally",
+    "impact": "Budget credibility erodes; team grows without proportional output gains; leadership loses trust in EM's resource judgment; organization becomes bloated",
+    "recoveryActions": "Build a capacity model linking headcount to deliverables. Track cost-per-feature or cost-per-initiative. Present resource requests with 3 options (minimum/target/stretch) and expected ROI for each. Prove you can do more with current team before asking for more people",
+    "sourceTopic": "Resource Planning & Investment",
+    "mappingNotes": "Resource requests without rigor → headcount case / investment defense observables"
+  },
+  {
+    "id": "AP-35",
+    "name": "The Infinite Runway",
+    "slug": "the-infinite-runway",
+    "capabilityId": "C10",
+    "observableIds": [
+      "C10-O2",
+      "C10-O3"
+    ],
+    "shortDesc": "The Infinite Runway — EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
+    "warningSigns": "No cloud cost dashboards or attribution; cost spikes go unnoticed until finance flags them; 'we'll optimize later' is repeated quarterly; no cost targets per service; engineers have no visibility into cost of their services",
+    "impact": "Cloud costs grow 3-5x faster than revenue; surprise budget cuts when finance intervenes; engineers don't develop cost awareness; team has no practice cutting when eventually forced to",
+    "recoveryActions": "Implement cost attribution per service/team. Set cost targets and review monthly. Make cloud cost a regular sprint metric visible to engineers. Run a quarterly cost optimization sprint. Include cost impact in design reviews for new features",
+    "sourceTopic": "Resource Allocation & Cost Management",
+    "mappingNotes": "Unbounded spending → cost management / reprioritization observables"
+  },
+  {
+    "id": "AP-36",
+    "name": "Security as Afterthought",
+    "slug": "security-as-afterthought",
+    "capabilityId": "C13",
+    "observableIds": [
+      "C13-O1",
+      "C13-O2"
+    ],
+    "shortDesc": "Security as Afterthought — security reviews happen only after incidents, not as part of the development workflow",
+    "warningSigns": "No security checkpoints in CI/CD pipeline; vulnerability backlog is months old; security reviews only triggered by incidents or audits; 'we'll add security later' is common; no threat modeling for new features",
+    "impact": "Vulnerabilities accumulate silently; data breaches or compliance failures; reactive firefighting instead of prevention; team develops no security muscle memory; incident costs 10-100x higher than prevention",
+    "recoveryActions": "Add automated security scanning to CI/CD pipeline. Implement severity-based vulnerability SLAs. Require threat modeling for features touching auth, payments, or PII. Run quarterly security training. Make security debt visible alongside tech debt in sprint planning",
+    "sourceTopic": "Security & Compliance Posture",
+    "mappingNotes": "Reactive security → security checkpoints / vulnerability management observables"
+  },
+  {
+    "id": "AP-37",
+    "name": "Compliance Cramming",
+    "slug": "compliance-cramming",
+    "capabilityId": "C13",
+    "observableIds": [
+      "C13-O3",
+      "C13-O4"
+    ],
+    "shortDesc": "Compliance Cramming — EM treats compliance as a periodic audit exercise rather than continuous posture",
+    "warningSigns": "Compliance activities spike before audits; access reviews happen annually instead of quarterly; evidence collection is manual and rushed; team dreads audit season; permissions accumulate without review; compliance artifacts are stale",
+    "impact": "Audit findings and remediation consume weeks; compliance gaps create legal/financial risk; team treats compliance as punishment rather than practice; access sprawl creates security vulnerabilities",
+    "recoveryActions": "Automate evidence collection and compliance monitoring. Implement quarterly access reviews with auto-expiring elevated permissions. Build compliance checks into deployment pipeline. Treat compliance posture as an ongoing metric, not a periodic event",
+    "sourceTopic": "Security & Compliance Posture",
+    "mappingNotes": "Periodic compliance → access management / continuous compliance observables"
+  },
+  {
+    "id": "AP-38",
+    "name": "The Ivory Tower Architect",
+    "slug": "the-ivory-tower-architect",
+    "capabilityId": "C3",
+    "observableIds": [
+      "C3-O1",
+      "C3-O4"
+    ],
+    "shortDesc": "The Ivory Tower Architect — EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
+    "warningSigns": "Every project requires a complex design doc before any code is written; simple features get enterprise-grade architecture; 'best practices' block shipping; team velocity is low despite strong engineers; architecture astronaut tendencies",
+    "impact": "Delivery slows dramatically; team frustration with over-engineering; premature abstraction creates complexity; competitors ship faster; practical trade-offs are treated as technical sin",
+    "recoveryActions": "Match architectural rigor to project scope and reversibility. Use design docs only for high-impact, irreversible decisions. Set a time-box for design phases. Celebrate pragmatic solutions. Ask 'what's the simplest thing that could work?' before 'what's the ideal architecture?'",
+    "sourceTopic": "Systems Design & Architecture",
+    "mappingNotes": "Over-engineering → tech strategy / tech debt visibility observables"
+  },
+  {
+    "id": "AP-39",
+    "name": "The Vanity Dashboard",
+    "slug": "the-vanity-dashboard",
+    "capabilityId": "C9",
+    "observableIds": [
+      "C9-O1",
+      "C9-O3"
+    ],
+    "shortDesc": "The Vanity Dashboard — EM builds impressive-looking dashboards that measure activity instead of outcomes",
+    "warningSigns": "Dashboards show lines of code, PRs merged, or tickets closed; no connection between metrics and business outcomes; metrics always look good but customers are unhappy; no leading indicators — only lagging; team optimizes for metric movement rather than impact",
+    "impact": "False sense of productivity; real problems masked by green dashboards; leadership makes bad decisions based on misleading data; team becomes cynical about measurement; activity replaces impact as the success criteria",
+    "recoveryActions": "Audit every metric: does it connect to a customer or business outcome? Replace activity metrics with outcome metrics. Add leading indicators alongside lagging ones. Ask 'what would change if this metric moved?' — if nothing, remove it. Make dashboards a team tool for diagnosis, not a leadership reporting tool",
+    "sourceTopic": "Metrics, Measurement & Outcomes",
+    "mappingNotes": "Activity metrics → outcome metrics / metric-informed decisions observables"
   }
 ]

@@ -5,7 +5,7 @@
     "displayName": "Attrition Data",
     "description": "Regrettable vs non-regrettable attrition tracking, exit interview themes, retention metrics.",
     "evidenceStrength": "High",
-    "usageCount": 2
+    "usageCount": 3
   },
   {
     "typeKey": "audit_log",
@@ -29,7 +29,7 @@
     "displayName": "Checklist",
     "description": "Launch readiness checklist, security review checklist, or onboarding checklist.",
     "evidenceStrength": "Medium",
-    "usageCount": 1
+    "usageCount": 3
   },
   {
     "typeKey": "comms_plan",
@@ -37,7 +37,7 @@
     "displayName": "Communications Plan",
     "description": "Structured communication plan for re-orgs, launches, incidents, or major changes.",
     "evidenceStrength": "Medium",
-    "usageCount": 2
+    "usageCount": 4
   },
   {
     "typeKey": "dashboard",
@@ -45,7 +45,7 @@
     "displayName": "Dashboard",
     "description": "Live or screenshot of monitoring/tracking dashboard (DORA, team health, cost, etc.).",
     "evidenceStrength": "High",
-    "usageCount": 11
+    "usageCount": 14
   },
   {
     "typeKey": "decision_doc",
@@ -53,7 +53,7 @@
     "displayName": "Decision Document",
     "description": "Formal decision record: DACI, RFC, ADR, trade-off analysis, or investment proposal.",
     "evidenceStrength": "High",
-    "usageCount": 10
+    "usageCount": 14
   },
   {
     "typeKey": "design_doc",
@@ -61,7 +61,7 @@
     "displayName": "Design Document",
     "description": "Technical design doc, architecture proposal, or system design review artifact.",
     "evidenceStrength": "High",
-    "usageCount": 4
+    "usageCount": 6
   },
   {
     "typeKey": "doc",
@@ -69,7 +69,7 @@
     "displayName": "Document",
     "description": "Written artifact: strategy doc, tech spec, design doc, RFC, ADR, or similar.",
     "evidenceStrength": "High",
-    "usageCount": 60
+    "usageCount": 74
   },
   {
     "typeKey": "email",
@@ -77,7 +77,7 @@
     "displayName": "Email",
     "description": "Email thread demonstrating communication, alignment, escalation, or stakeholder management.",
     "evidenceStrength": "Medium",
-    "usageCount": 6
+    "usageCount": 8
   },
   {
     "typeKey": "hiring_guide",
@@ -85,7 +85,7 @@
     "displayName": "Hiring Guide",
     "description": "Interview rubric, hiring bar documentation, or role scorecard.",
     "evidenceStrength": "Medium",
-    "usageCount": 1
+    "usageCount": 2
   },
   {
     "typeKey": "incident_report",
@@ -101,7 +101,7 @@
     "displayName": "Interview Scorecard",
     "description": "Hiring loop feedback, bar raiser notes, or interview calibration records.",
     "evidenceStrength": "Medium",
-    "usageCount": 2
+    "usageCount": 3
   },
   {
     "typeKey": "meeting_note",
@@ -109,7 +109,7 @@
     "displayName": "Meeting Note",
     "description": "Notes from 1:1s, team meetings, skip-levels, calibration sessions, or retrospectives.",
     "evidenceStrength": "Medium",
-    "usageCount": 38
+    "usageCount": 47
   },
   {
     "typeKey": "metric",
@@ -117,7 +117,7 @@
     "displayName": "Metric",
     "description": "Quantitative measurement: DORA metrics, SLO data, sprint velocity, attrition rates, etc.",
     "evidenceStrength": "High",
-    "usageCount": 35
+    "usageCount": 43
   },
   {
     "typeKey": "note",
@@ -149,7 +149,7 @@
     "displayName": "Peer Feedback",
     "description": "Structured feedback from PM, Design, peer EMs, skip-level reports, or cross-functional partners.",
     "evidenceStrength": "High",
-    "usageCount": 4
+    "usageCount": 6
   },
   {
     "typeKey": "pipeline_config",
@@ -189,6 +189,6 @@
     "displayName": "Survey Data",
     "description": "Team health survey, engagement survey, onboarding NPS, or pulse survey results.",
     "evidenceStrength": "Medium",
-    "usageCount": 5
+    "usageCount": 6
   }
 ]

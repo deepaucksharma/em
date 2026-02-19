@@ -18,37 +18,112 @@ import { capabilities } from '../../lib/data';
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-      <a href="/self-assessment/tool/" class="card group block text-center">
-        <div class="text-3xl mb-3">📊</div>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
-          Interactive Assessment
-        </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400">
+      <a href="/self-assessment/tool/" class="card group block">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="w-8 h-8 text-blue-500 dark:text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            Interactive Assessment
+          </h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
           Rate yourself 1-5 on each capability with behavioral anchors as guides. Results saved locally and exportable as CSV.
         </p>
+        <div class="text-xs text-gray-500 dark:text-gray-400 space-y-1">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>1-5 scale with behavioral anchors per level</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>Visual gap analysis across all 6 domains</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>Saved in browser — revisit anytime</span>
+          </div>
+        </div>
       </a>
 
-      <a href="/self-assessment/feedback-bank/" class="card group block text-center">
-        <div class="text-3xl mb-3">💬</div>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
-          360 Feedback Bank
-        </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400">
+      <a href="/self-assessment/feedback-bank/" class="card group block">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="w-8 h-8 text-purple-500 dark:text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 1.136.845 2.1 1.976 2.193 1.07.089 2.15.135 3.24.135l3-3V18.75c1.131-.094 1.976-1.057 1.976-2.192V10.608c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15" />
+          </svg>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            360 Feedback Bank
+          </h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
           Curated questions for self-reflection, direct reports, peers, and managers — organized by capability.
         </p>
+        <div class="text-xs text-gray-500 dark:text-gray-400 space-y-1">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>4 audience perspectives per capability</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>Compare self-view with external perception</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            <span>Copy-ready for survey or 1:1 use</span>
+          </div>
+        </div>
       </a>
     </div>
 
+    <!-- Suggested Workflow -->
+    <section class="mb-8">
+      <h2 class="section-heading">Suggested Workflow</h2>
+      <div class="relative pl-8 space-y-6">
+        <div class="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+        <div class="relative">
+          <div class="absolute left-[-1.375rem] top-1 w-5 h-5 rounded-full bg-blue-500 text-white text-xs flex items-center justify-center font-bold">1</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Self-rate all 14 capabilities</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Use behavioral anchors to calibrate honestly. Score 1 (developing) through 5 (exemplary). Takes ~15 minutes.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute left-[-1.375rem] top-1 w-5 h-5 rounded-full bg-blue-500 text-white text-xs flex items-center justify-center font-bold">2</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Review your gap analysis</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Look for patterns: are gaps concentrated in one domain? Are strengths balanced across leadership dimensions?</p>
+        </div>
+        <div class="relative">
+          <div class="absolute left-[-1.375rem] top-1 w-5 h-5 rounded-full bg-purple-500 text-white text-xs flex items-center justify-center font-bold">3</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Collect 360 feedback</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Use the feedback bank to select questions for direct reports, peers, and your manager. Compare their view with yours.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute left-[-1.375rem] top-1 w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">4</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Build a development plan</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Pick 2-3 growth areas and use <a href="/learning-pathways/" class="text-blue-600 dark:text-blue-400 hover:underline">Learning Pathways</a> to find foundational, practical, and advanced resources.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute left-[-1.375rem] top-1 w-5 h-5 rounded-full bg-amber-500 text-white text-xs flex items-center justify-center font-bold">5</div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Reassess quarterly</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Ratings are saved locally. Revisit each quarter to track growth and adjust your plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Tools -->
     <section>
-      <h2 class="section-heading">How to Use</h2>
-      <div class="prose dark:prose-invert max-w-none">
-        <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
-          <li><strong>Start with self-assessment:</strong> Rate yourself on all 14 capabilities using the interactive tool. Use behavioral anchors to guide honest evaluation.</li>
-          <li><strong>Identify patterns:</strong> Look at your strengths (4-5) and growth areas (1-2). Are gaps concentrated in one domain?</li>
-          <li><strong>Gather feedback:</strong> Use the feedback bank to collect 360 input. Compare external perception with self-assessment.</li>
-          <li><strong>Build a plan:</strong> Use <a href="/learning-pathways/" class="text-blue-600 dark:text-blue-400 hover:underline">Learning Pathways</a> to create a development plan for your top growth areas.</li>
-          <li><strong>Reassess quarterly:</strong> Your ratings are saved locally. Revisit quarterly to track progress.</li>
-        </ul>
+      <h2 class="section-heading">Related Tools</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <a href="/career-progression/" class="card group block text-sm">
+          <h4 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Career Progression</h4>
+          <p class="text-gray-500 dark:text-gray-400 mt-1">Understand what's expected at your target level</p>
+        </a>
+        <a href="/rubric/" class="card group block text-sm">
+          <h4 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Rubric</h4>
+          <p class="text-gray-500 dark:text-gray-400 mt-1">Detailed behavioral anchors for each capability level</p>
+        </a>
+        <a href="/measurement-guide/" class="card group block text-sm">
+          <h4 class="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Measurement Guide</h4>
+          <p class="text-gray-500 dark:text-gray-400 mt-1">Leading indicators to track your progress</p>
+        </a>
       </div>
     </section>
   </div>

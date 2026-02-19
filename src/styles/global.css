@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Domain colors */
   --color-domain-strategy: #3b82f6;
@@ -159,4 +161,134 @@ body {
   font-weight: 700;
   letter-spacing: -0.025em;
   margin-bottom: 1.5rem;
+}
+
+/* Metric tier badges */
+@utility badge-tier-primary {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+
+  .dark & {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+    border-color: rgba(245, 158, 11, 0.3);
+  }
+}
+
+@utility badge-tier-secondary {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+
+  .dark & {
+    background-color: rgba(100, 116, 139, 0.15);
+    color: #cbd5e1;
+    border-color: rgba(100, 116, 139, 0.3);
+  }
+}
+
+@utility badge-tier-tertiary {
+  background-color: #fff7ed;
+  color: #9a3412;
+  border: 1px solid #fdba74;
+
+  .dark & {
+    background-color: rgba(249, 115, 22, 0.15);
+    color: #fdba74;
+    border-color: rgba(249, 115, 22, 0.3);
+  }
+}
+
+@utility badge-tier-activity {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+
+  .dark & {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+}
+
+@utility badge-tier-inferior {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+
+  .dark & {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+    border-color: rgba(239, 68, 68, 0.3);
+  }
+}
+
+@utility badge-tier-diagnostic {
+  background-color: theme(--color-teal-100);
+  color: theme(--color-teal-700);
+  .dark & {
+    background-color: color-mix(in srgb, theme(--color-teal-900) 30%, transparent);
+    color: theme(--color-teal-300);
+  }
+}
+
+@utility badge-tier-structural {
+  background-color: theme(--color-slate-100);
+  color: theme(--color-slate-700);
+  .dark & {
+    background-color: color-mix(in srgb, theme(--color-slate-900) 30%, transparent);
+    color: theme(--color-slate-300);
+  }
+}
+
+/* Metric type badges */
+@utility badge-type-leading {
+  background-color: #dcfce7;
+  color: #166534;
+
+  .dark & {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+  }
+}
+
+@utility badge-type-lagging {
+  background-color: #dbeafe;
+  color: #1e40af;
+
+  .dark & {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+  }
+}
+
+@utility badge-type-structural {
+  background-color: #f1f5f9;
+  color: #475569;
+
+  .dark & {
+    background-color: rgba(100, 116, 139, 0.15);
+    color: #cbd5e1;
+  }
+}
+
+@utility badge-category-ai-era {
+  background-color: #ede9fe;
+  color: #5b21b6;
+
+  .dark & {
+    background-color: rgba(139, 92, 246, 0.15);
+    color: #c4b5fd;
+  }
+}
+
+@utility badge-type-causal {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+
+  .dark & {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #d8b4fe;
+  }
 }

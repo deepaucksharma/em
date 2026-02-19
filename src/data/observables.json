@@ -9,7 +9,7 @@
       "decision_doc",
       "org_chart"
     ],
-    "defaultWeight": 0.114,
+    "defaultWeight": 0.11,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -31,7 +31,7 @@
         "id": "SIG-038",
         "observableId": "C1-O1",
         "capabilityId": "C1",
-        "signalText": "Key signal in re-org proposals: 'Team owns too much — proposed split based on cognitive load analysis'",
+        "signalText": "Key signal in re-org proposals: 'Team owns too much \u2014 proposed split based on cognitive load analysis'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Team Cognitive Load"
       }
@@ -47,12 +47,12 @@
       "decision_doc",
       "design_doc"
     ],
-    "defaultWeight": 0.086,
+    "defaultWeight": 0.081,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "Directors execute; EMs provide input on team-level implications",
-    "why": "Architecture mirrors org structure whether planned or not — fighting Conway's Law always loses",
+    "why": "Architecture mirrors org structure whether planned or not \u2014 fighting Conway's Law always loses",
     "how": "Map current arch to team structure, find misalignments, restructure teams to match desired architecture",
     "expectedResult": "Architecture and org structure reinforce each other; service boundaries align with team boundaries",
     "status": "CARRIED",
@@ -61,7 +61,7 @@
         "id": "SIG-039",
         "observableId": "C1-O2",
         "capabilityId": "C1",
-        "signalText": "Director-level insight: 'Applied inverse Conway — re-orged teams to align with target microservices architecture, enabling independent deployment'",
+        "signalText": "Director-level insight: 'Applied inverse Conway \u2014 re-orged teams to align with target microservices architecture, enabling independent deployment'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Conway's Law (Intentional)"
       }
@@ -77,13 +77,13 @@
       "comms_plan",
       "attrition_data"
     ],
-    "defaultWeight": 0.114,
+    "defaultWeight": 0.108,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "Directors initiate and own; EMs execute team-level transitions",
-    "why": "Poorly run re-orgs destroy trust and productivity for months — people leave because of how it was handled",
-    "how": "Communication plan (managers→ICs→broader org within 24hrs), phased transition, ownership transfer docs",
+    "why": "Poorly run re-orgs destroy trust and productivity for months \u2014 people leave because of how it was handled",
+    "how": "Communication plan (managers\u2192ICs\u2192broader org within 24hrs), phased transition, ownership transfer docs",
     "expectedResult": "Teams productive within 2-4 weeks; minimal attrition from re-org; people feel respected",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -94,6 +94,14 @@
         "signalText": "'Executed re-org of [X] engineers across [Y] teams with zero regrettable attrition and full productivity restored within 3 weeks'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Executing Re-orgs"
+      },
+      {
+        "id": "SIG-173",
+        "observableId": "C1-O3",
+        "capabilityId": "C1",
+        "signalText": "Observed during re-org: communicated rationale in team all-hands with empathy and clarity, answered hard questions directly, followed up individually with affected engineers within 24 hours.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Re-org Execution Quality"
       }
     ]
   },
@@ -107,7 +115,7 @@
       "meeting_note",
       "metric"
     ],
-    "defaultWeight": 0.086,
+    "defaultWeight": 0.081,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -132,12 +140,12 @@
     "capabilityId": "C1",
     "shortText": "Maintains single-threaded ownership registry with no ambiguity",
     "slug": "maintains-single-threaded-ownership-registry-with-no-ambiguity",
-    "fullExample": "Builds and maintains service→team→on-call→contact registry; resolves disputes by escalation, not by sharing ownership.",
+    "fullExample": "Builds and maintains service\u2192team\u2192on-call\u2192contact registry; resolves disputes by escalation, not by sharing ownership.",
     "evidenceTypes": [
       "doc",
       "dashboard"
     ],
-    "defaultWeight": 0.057,
+    "defaultWeight": 0.054,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -151,7 +159,7 @@
         "id": "SIG-042",
         "observableId": "C1-O5",
         "capabilityId": "C1",
-        "signalText": "Amazon principle applied broadly — calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'",
+        "signalText": "Amazon principle applied broadly \u2014 calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Single-Threaded Ownership"
       }
@@ -168,7 +176,7 @@
       "metric",
       "meeting_note"
     ],
-    "defaultWeight": 0.114,
+    "defaultWeight": 0.108,
     "requiredFrequency": "quarterly",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -206,12 +214,12 @@
       "dashboard",
       "survey_data"
     ],
-    "defaultWeight": 0.086,
+    "defaultWeight": 0.081,
     "requiredFrequency": "continuous",
     "emRelevance": "Low",
     "directorRelevance": "High",
     "levelNotes": "Directors own org-level dashboard; EMs provide team signals",
-    "why": "Org problems are invisible until they explode — attrition spike, burnout wave, disengagement crisis",
+    "why": "Org problems are invisible until they explode \u2014 attrition spike, burnout wave, disengagement crisis",
     "how": "Dashboard: attrition rate, engagement scores, skip-level themes, 1:1 signals, PTO usage; review monthly",
     "expectedResult": "Early intervention on emerging problems; sustained org health; leadership trust",
     "status": "CARRIED",
@@ -236,7 +244,7 @@
       "comms_plan",
       "metric"
     ],
-    "defaultWeight": 0.114,
+    "defaultWeight": 0.108,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -274,7 +282,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.086,
+    "defaultWeight": 0.081,
     "requiredFrequency": "continuous",
     "emRelevance": "Director-Only",
     "directorRelevance": "High",
@@ -304,12 +312,12 @@
       "decision_doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.086,
+    "defaultWeight": 0.081,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs apply to team; Directors apply across org",
-    "why": "Optimizing one team or metric can degrade the whole system — local maxima aren't global maxima",
+    "why": "Optimizing one team or metric can degrade the whole system \u2014 local maxima aren't global maxima",
     "how": "Map dependencies, identify feedback loops, check for unintended incentives, consult affected parties",
     "expectedResult": "Decisions improve the system, not just local metrics; fewer 'fixed A but broke B' situations",
     "status": "CARRIED",
@@ -334,7 +342,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.294,
+    "defaultWeight": 0.295,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -351,6 +359,16 @@
         "signalText": "EMs own team-level planning; Directors own org-level. 'Led H2 planning across [X] teams, aligned [Y] stakeholders, delivered [Z]% of committed roadmap'",
         "signalType": "metric",
         "sourceSubTopic": "Quarterly/Half Planning"
+      },
+      {
+        "id": "SIG-183",
+        "signalType": "promo_packet",
+        "signalText": "Led quarterly planning that resulted in 30% reallocation of engineering investment toward highest-impact business priorities, documented with clear ROI analysis"
+      },
+      {
+        "id": "SIG-184",
+        "signalType": "manager_observation",
+        "signalText": "Consistently produces planning artifacts that connect engineering work to business outcomes; stakeholders cite their planning process as a model for other teams"
       }
     ]
   },
@@ -359,7 +377,7 @@
     "capabilityId": "C2",
     "shortText": "Declines requests by making trade-offs visible, not by saying no",
     "slug": "declines-requests-by-making-trade-offs-visible-not-by-saying-no",
-    "fullExample": "Responds to scope request with: 'Yes, if we deprioritize X — would you like to make that trade-off?' with data on impact of each option.",
+    "fullExample": "Responds to scope request with: 'Yes, if we deprioritize X \u2014 would you like to make that trade-off?' with data on impact of each option.",
     "evidenceTypes": [
       "meeting_note",
       "email"
@@ -378,9 +396,19 @@
         "id": "SIG-134",
         "observableId": "C2-O2",
         "capabilityId": "C2",
-        "signalText": "The mark of a strong EM/Director: 'What you chose NOT to do, and why' — calibration values this over endless yeses",
+        "signalText": "The mark of a strong EM/Director: 'What you chose NOT to do, and why' \u2014 calibration values this over endless yeses",
         "signalType": "calibration_language",
         "sourceSubTopic": "Saying No Effectively"
+      },
+      {
+        "id": "SIG-185",
+        "signalType": "peer_feedback",
+        "signalText": "When they say no, it never feels like a rejection \u2014 they show you exactly what you'd be trading off and help you make the call yourself"
+      },
+      {
+        "id": "SIG-186",
+        "signalType": "promo_packet",
+        "signalText": "Deflected 5 out-of-scope requests in Q3 by presenting trade-off analyses that stakeholders described as 'the clearest prioritization communication they'd seen'"
       }
     ]
   },
@@ -399,7 +427,7 @@
     "directorRelevance": "High",
     "levelNotes": "Both levels; Directors model this for EMs",
     "why": "Ambiguity paralyzes teams that lack frameworks for deciding with incomplete information",
-    "how": "Cost of delay? Cost of being wrong? Can we reverse? High reversibility → decide fast; low → invest in analysis",
+    "how": "Cost of delay? Cost of being wrong? Can we reverse? High reversibility \u2192 decide fast; low \u2192 invest in analysis",
     "expectedResult": "Forward progress even in uncertainty; willingness to course-correct when new info arrives",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -407,9 +435,19 @@
         "id": "SIG-135",
         "observableId": "C2-O3",
         "capabilityId": "C2",
-        "signalText": "Leadership signal: 'Made [decision] with 70% confidence, built in reversibility, course-corrected at [point] — net outcome positive'",
+        "signalText": "Leadership signal: 'Made [decision] with 70% confidence, built in reversibility, course-corrected at [point] \u2014 net outcome positive'",
         "signalType": "metric",
         "sourceSubTopic": "Prioritization Under Ambiguity"
+      },
+      {
+        "id": "SIG-187",
+        "signalType": "manager_observation",
+        "signalText": "Distinguishes one-way door decisions from two-way door decisions and applies proportionate rigor; doesn't over-analyze reversible choices or under-analyze irreversible ones"
+      },
+      {
+        "id": "SIG-188",
+        "signalType": "peer_feedback",
+        "signalText": "In ambiguous situations where other teams stall, they find a way to make meaningful progress by scoping down the decision and iterating"
       }
     ]
   },
@@ -440,6 +478,16 @@
         "signalText": "First principles thinking separates strategic leaders from operational ones. 'Challenged assumption that [X was necessary], saved [Y] by redesigning from first principles'",
         "signalType": "calibration_language",
         "sourceSubTopic": "First Principles Analysis"
+      },
+      {
+        "id": "SIG-189",
+        "signalType": "promo_packet",
+        "signalText": "Challenged the team's assumption that a full rewrite was needed by applying first-principles analysis, resulting in a targeted migration that saved 3 months of engineering time"
+      },
+      {
+        "id": "SIG-190",
+        "signalType": "manager_observation",
+        "signalText": "Regularly surfaces assumptions that others take as given; asks 'why do we believe this?' in a way that sharpens team thinking rather than undermining confidence"
       }
     ]
   },
@@ -448,18 +496,18 @@
     "capabilityId": "C3",
     "shortText": "Authors and maintains multi-quarter technical vision with clear migration path",
     "slug": "authors-and-maintains-multi-quarter-technical-vision-with-clear-migration-path",
-    "fullExample": "Co-authors tech strategy doc with Staff engineers: current state → target state → migration path → success metrics. Reviews quarterly against delivery reality.",
+    "fullExample": "Co-authors tech strategy doc with Staff engineers: current state \u2192 target state \u2192 migration path \u2192 success metrics. Reviews quarterly against delivery reality.",
     "evidenceTypes": [
       "design_doc",
       "doc"
     ],
-    "defaultWeight": 0.192,
+    "defaultWeight": 0.179,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs co-author for their area; Directors set vision across org",
     "why": "Teams lack coherent direction without it; engineers make conflicting architectural decisions",
-    "how": "Collaborate with TL/Staff+ to author; structure as current→target→migration→metrics; review quarterly",
+    "how": "Collaborate with TL/Staff+ to author; structure as current\u2192target\u2192migration\u2192metrics; review quarterly",
     "expectedResult": "Team ships coherently toward goals; new engineers read one doc and understand system direction",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -483,7 +531,7 @@
       "design_doc",
       "doc"
     ],
-    "defaultWeight": 0.154,
+    "defaultWeight": 0.145,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -497,7 +545,7 @@
         "id": "SIG-002",
         "observableId": "C3-O2",
         "capabilityId": "C3",
-        "signalText": "Directors: 'Institutionalized design review process across org — reduced production incidents from design gaps by X%'",
+        "signalText": "Directors: 'Institutionalized design review process across org \u2014 reduced production incidents from design gaps by X%'",
         "signalType": "metric",
         "sourceSubTopic": "Architecture Review Process"
       },
@@ -508,6 +556,14 @@
         "signalText": "Conway's Law in practice: 'Realigned service boundaries to team topology, reduced cross-team deploy coordination by X%'",
         "signalType": "metric",
         "sourceSubTopic": "Modularity & Service Boundaries"
+      },
+      {
+        "id": "SIG-174",
+        "observableId": "C3-O2",
+        "capabilityId": "C3",
+        "signalText": "Observed in design reviews: asks probing questions about coupling and blast radius, pushes back on designs that create cross-team dependencies, references team topology constraints in architectural decisions.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Design Review Quality"
       }
     ]
   },
@@ -521,7 +577,7 @@
       "decision_doc",
       "metric"
     ],
-    "defaultWeight": 0.115,
+    "defaultWeight": 0.108,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -551,7 +607,7 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.115,
+    "defaultWeight": 0.108,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -582,7 +638,7 @@
       "dashboard",
       "metric"
     ],
-    "defaultWeight": 0.154,
+    "defaultWeight": 0.145,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -612,7 +668,7 @@
       "design_doc",
       "metric"
     ],
-    "defaultWeight": 0.115,
+    "defaultWeight": 0.108,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -642,7 +698,7 @@
       "doc",
       "dashboard"
     ],
-    "defaultWeight": 0.115,
+    "defaultWeight": 0.108,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -664,7 +720,7 @@
         "id": "SIG-008",
         "observableId": "C3-O7",
         "capabilityId": "C3",
-        "signalText": "Table-stakes expectation — absence is a red flag. 'Instrumented [X] services, reduced mean time to diagnose from Y hours to Z minutes'",
+        "signalText": "Table-stakes expectation \u2014 absence is a red flag. 'Instrumented [X] services, reduced mean time to diagnose from Y hours to Z minutes'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Observability Strategy"
       }
@@ -675,7 +731,7 @@
     "capabilityId": "C4",
     "shortText": "Establishes operating cadences with clear purposes and measurable outputs",
     "slug": "establishes-operating-cadences-with-clear-purposes-and-measurable-outputs",
-    "fullExample": "Creates quarterly planning, weekly ops review, and async status cadence — each with defined roles, inputs, and outputs. Eliminates 3 meetings with unclear purpose.",
+    "fullExample": "Creates quarterly planning, weekly ops review, and async status cadence \u2014 each with defined roles, inputs, and outputs. Eliminates 3 meetings with unclear purpose.",
     "evidenceTypes": [
       "doc",
       "calendar"
@@ -710,7 +766,7 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.172,
+    "defaultWeight": 0.175,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -724,7 +780,7 @@
         "id": "SIG-023",
         "observableId": "C4-O2",
         "capabilityId": "C4",
-        "signalText": "Execution credibility: 'Team delivers 85%+ of committed work consistently' — this earns trust and autonomy from leadership",
+        "signalText": "Execution credibility: 'Team delivers 85%+ of committed work consistently' \u2014 this earns trust and autonomy from leadership",
         "signalType": "metric",
         "sourceSubTopic": "Sprint/Cycle Health"
       },
@@ -732,7 +788,7 @@
         "id": "SIG-046",
         "observableId": "C4-O2",
         "capabilityId": "C4",
-        "signalText": "'Team delivers 85%+ of committed work consistently' — execution credibility that earns autonomy",
+        "signalText": "'Team delivers 85%+ of committed work consistently' \u2014 execution credibility that earns autonomy",
         "signalType": "metric",
         "sourceSubTopic": "Capacity Planning & Allocation"
       }
@@ -765,6 +821,14 @@
         "signalText": "Concrete impact: 'Reduced CI pipeline from 45min to 8min, reclaiming [X] developer-hours/week across team'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Performance (System & Tooling)"
+      },
+      {
+        "id": "SIG-175",
+        "observableId": "C4-O3",
+        "capabilityId": "C4",
+        "signalText": "Observed in sprint reviews: team consistently delivers within 10% of committed scope, EM flags risks early in standup rather than at sprint end, retro action items are tracked to completion.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Delivery Predictability"
       }
     ]
   },
@@ -784,7 +848,7 @@
     "directorRelevance": "Medium",
     "levelNotes": "EMs drive team-level; Directors track org-level toil reduction",
     "why": "Toil accumulates invisibly and drains capacity from value-creating work",
-    "how": "Run toil audit (1 week logging), calculate cost, prioritize by frequency × time × people affected",
+    "how": "Run toil audit (1 week logging), calculate cost, prioritize by frequency \u00d7 time \u00d7 people affected",
     "expectedResult": "Engineering time redirected from maintenance to value creation; morale improves",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -803,7 +867,7 @@
     "capabilityId": "C4",
     "shortText": "Implements risk-appropriate release process with automated rollback",
     "slug": "implements-risk-appropriate-release-process-with-automated-rollback",
-    "fullExample": "Deploys with canary (1%→10%→50%→100%), automated rollback triggers on error rate spike, feature flags decoupling deploy from release.",
+    "fullExample": "Deploys with canary (1%\u219210%\u219250%\u2192100%), automated rollback triggers on error rate spike, feature flags decoupling deploy from release.",
     "evidenceTypes": [
       "doc",
       "metric"
@@ -936,7 +1000,7 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.094,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -950,7 +1014,7 @@
         "id": "SIG-106",
         "observableId": "C5-O1",
         "capabilityId": "C5",
-        "signalText": "'Strong partner feedback from PM and Design' — explicit calibration dimension at most Big Tech companies",
+        "signalText": "'Strong partner feedback from PM and Design' \u2014 explicit calibration dimension at most Big Tech companies",
         "signalType": "calibration_language",
         "sourceSubTopic": "Triad Dynamics"
       }
@@ -966,7 +1030,7 @@
       "meeting_note",
       "decision_doc"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.095,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -996,7 +1060,7 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.071,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -1013,6 +1077,14 @@
         "signalText": "Director-level: 'Technical insight led to [product direction change], driving [Y] outcome that PM hadn't considered'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Technical Input to Product Strategy"
+      },
+      {
+        "id": "SIG-176",
+        "observableId": "C5-O3",
+        "capabilityId": "C5",
+        "signalText": "Observed in cross-functional syncs: PM and Design actively seek EM's input on scope trade-offs, EM raises technical constraints without blocking, disagreements resolved constructively in the room.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Cross-Functional Collaboration Quality"
       }
     ]
   },
@@ -1026,7 +1098,7 @@
       "meeting_note",
       "email"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.095,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1064,7 +1136,7 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.071,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -1110,7 +1182,7 @@
       "email",
       "meeting_note"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.071,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1148,7 +1220,7 @@
       "peer_feedback",
       "meeting_note"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.071,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -1178,7 +1250,7 @@
         "id": "SIG-119",
         "observableId": "C5-O7",
         "capabilityId": "C5",
-        "signalText": "Compound interest of engineering leadership — builds slowly, pays off enormously. 'Trusted advisor to [peer/senior leaders] for [domain] decisions'",
+        "signalText": "Compound interest of engineering leadership \u2014 builds slowly, pays off enormously. 'Trusted advisor to [peer/senior leaders] for [domain] decisions'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Building Political Capital"
       }
@@ -1194,12 +1266,12 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.095,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
     "levelNotes": "Directors use extensively; EMs learn the pattern",
-    "why": "Getting 4 teams to agree when you don't manage them is pure influence — cold meetings rarely converge",
+    "why": "Getting 4 teams to agree when you don't manage them is pure influence \u2014 cold meetings rarely converge",
     "how": "Pre-wire with 1:1s, create shared context doc, propose strawman, let others edit toward consensus",
     "expectedResult": "Org-level initiatives move forward without escalation; seen as someone who makes things happen",
     "status": "CARRIED",
@@ -1224,7 +1296,7 @@
       "peer_feedback",
       "meeting_note"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.071,
     "requiredFrequency": "continuous",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -1254,7 +1326,7 @@
       "decision_doc",
       "peer_feedback"
     ],
-    "defaultWeight": 0.051,
+    "defaultWeight": 0.048,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -1284,7 +1356,7 @@
       "note",
       "doc"
     ],
-    "defaultWeight": 0.119,
+    "defaultWeight": 0.111,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -1322,7 +1394,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.148,
+    "defaultWeight": 0.138,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -1336,9 +1408,17 @@
         "id": "SIG-047",
         "observableId": "C6-O2",
         "capabilityId": "C6",
-        "signalText": "THE hardest EM skill. Calibration committees notice avoidance — 'entire team rated Exceeds Expectations' is a credibility killer",
+        "signalText": "THE hardest EM skill. Calibration committees notice avoidance \u2014 'entire team rated Exceeds Expectations' is a credibility killer",
         "signalType": "calibration_language",
         "sourceSubTopic": "Handling Underperformance"
+      },
+      {
+        "id": "SIG-177",
+        "observableId": "C6-O2",
+        "capabilityId": "C6",
+        "signalText": "Observed in skip-levels: direct reports describe clear expectations and regular feedback from EM. EM addresses performance issues directly rather than routing around struggling engineers or reassigning their work silently.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Performance Conversation Quality"
       }
     ]
   },
@@ -1352,12 +1432,12 @@
       "note",
       "meeting_note"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.083,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs catch individual signals; Directors track patterns across teams",
-    "why": "By the time someone gives notice, the decision was made weeks ago — early signals are the intervention window",
+    "why": "By the time someone gives notice, the decision was made weeks ago \u2014 early signals are the intervention window",
     "how": "Watch for: reduced engagement, declining quality, withdrawing from optional activities; conduct stay interviews",
     "expectedResult": "Early intervention on retention risks; save key people before they mentally check out",
     "status": "CARRIED",
@@ -1398,7 +1478,7 @@
       "doc",
       "peer_feedback"
     ],
-    "defaultWeight": 0.119,
+    "defaultWeight": 0.111,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1436,7 +1516,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.083,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -1466,7 +1546,7 @@
       "note",
       "meeting_note"
     ],
-    "defaultWeight": 0.119,
+    "defaultWeight": 0.111,
     "requiredFrequency": "continuous",
     "emRelevance": "Director-Only",
     "directorRelevance": "High",
@@ -1480,7 +1560,7 @@
         "id": "SIG-092",
         "observableId": "C6-O6",
         "capabilityId": "C6",
-        "signalText": "Director's primary output is EM quality — measured by EM's team outcomes, EM's team health, EM's retention numbers",
+        "signalText": "Director's primary output is EM quality \u2014 measured by EM's team outcomes, EM's team health, EM's retention numbers",
         "signalType": "metric",
         "sourceSubTopic": "EM Coaching & Development"
       },
@@ -1488,7 +1568,7 @@
         "id": "SIG-093",
         "observableId": "C6-O6",
         "capabilityId": "C6",
-        "signalText": "Standard Director practice — absence is a red flag. 'Regular skip-level 1:1s identified [X] issue before it became a retention risk'",
+        "signalText": "Standard Director practice \u2014 absence is a red flag. 'Regular skip-level 1:1s identified [X] issue before it became a retention risk'",
         "signalType": "peer_feedback",
         "sourceSubTopic": "Skip-Level 1:1s"
       }
@@ -1504,7 +1584,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.083,
     "requiredFrequency": "continuous",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -1518,7 +1598,7 @@
         "id": "SIG-096",
         "observableId": "C6-O7",
         "capabilityId": "C6",
-        "signalText": "'Developed [X] engineers into management roles' — org building evidence. 'EM transition to new role had zero team disruption due to succession planning'",
+        "signalText": "'Developed [X] engineers into management roles' \u2014 org building evidence. 'EM transition to new role had zero team disruption due to succession planning'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Building EM Bench Strength"
       }
@@ -1563,7 +1643,7 @@
         "id": "SIG-133",
         "observableId": "C7-O1",
         "capabilityId": "C7",
-        "signalText": "Applied in practice: 'Classified [X] as reversible, shipped in 2 days instead of 2 weeks. Classified [Y] as irreversible, invested 3 weeks in analysis — avoided $Zm mistake'",
+        "signalText": "Applied in practice: 'Classified [X] as reversible, shipped in 2 days instead of 2 weeks. Classified [Y] as irreversible, invested 3 weeks in analysis \u2014 avoided $Zm mistake'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Reversible vs Irreversible Decisions"
       }
@@ -1572,7 +1652,7 @@
   {
     "id": "C7-O2",
     "capabilityId": "C7",
-    "shortText": "Adapts communication altitude to audience — exec summary to detailed appendix",
+    "shortText": "Adapts communication altitude to audience \u2014 exec summary to detailed appendix",
     "slug": "adapts-communication-altitude-to-audience-exec-summary-to-detailed-appendix",
     "fullExample": "Creates one-slide exec memo for VP and detailed appendix for engineering; same content, different altitude. Both audiences get what they need.",
     "evidenceTypes": [
@@ -1593,7 +1673,7 @@
         "id": "SIG-138",
         "observableId": "C7-O2",
         "capabilityId": "C7",
-        "signalText": "Director-level differentiation: same update tailored to 3 audiences — exec summary for VP (3 bullets, business impact), team-level detail for peers (technical trade-offs), and full context for IC contributors (implementation specifics). Skip-level feedback confirms: 'My manager communicates at the right level for each audience.'",
+        "signalText": "Director-level differentiation: same update tailored to 3 audiences \u2014 exec summary for VP (3 bullets, business impact), team-level detail for peers (technical trade-offs), and full context for IC contributors (implementation specifics). Skip-level feedback confirms: 'My manager communicates at the right level for each audience.'",
         "signalType": "peer_feedback",
         "sourceSubTopic": "Communication Altitude Adaptation"
       }
@@ -1602,7 +1682,7 @@
   {
     "id": "C7-O3",
     "capabilityId": "C7",
-    "shortText": "Communicates status proactively — wins, risks, and needs — earning autonomy",
+    "shortText": "Communicates status proactively \u2014 wins, risks, and needs \u2014 earning autonomy",
     "slug": "communicates-status-proactively-wins-risks-and-needs-earning-autonomy",
     "fullExample": "Weekly written update to manager: top 3 wins, top 3 risks, what I need from you. Manager says: 'always knows what's happening, no surprises.'",
     "evidenceTypes": [
@@ -1645,7 +1725,7 @@
     "directorRelevance": "High",
     "levelNotes": "Both levels; trust is built by how you handle bad news",
     "why": "Hiding bad news to 'try to fix it first' is how surprises destroy credibility",
-    "how": "Immediately: what happened → impact → why → what we're doing → what I need. Own it even if not your fault",
+    "how": "Immediately: what happened \u2192 impact \u2192 why \u2192 what we're doing \u2192 what I need. Own it even if not your fault",
     "expectedResult": "Leadership trusts you to handle problems; they learn issues from you first; credibility survives setbacks",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -1656,6 +1736,14 @@
         "signalText": "Trust is built by how you handle bad news. 'Flagged [project slip] early with mitigation plan, leadership appreciated transparency'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Delivering Bad News Upward"
+      },
+      {
+        "id": "SIG-178",
+        "observableId": "C7-O4",
+        "capabilityId": "C7",
+        "signalText": "Observed in exec reviews: delivers updates with appropriate altitude (business impact, not implementation detail), surfaces risks proactively with options rather than waiting to be asked, handles tough questions with composure.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Executive Communication Quality"
       }
     ]
   },
@@ -1683,7 +1771,7 @@
         "id": "SIG-118",
         "observableId": "C7-O5",
         "capabilityId": "C7",
-        "signalText": "'Strong executive presence in [review type]' — opens doors to Director+ scope and visibility",
+        "signalText": "'Strong executive presence in [review type]' \u2014 opens doors to Director+ scope and visibility",
         "signalType": "calibration_language",
         "sourceSubTopic": "Exec Reviews & Business Reviews"
       },
@@ -1691,7 +1779,7 @@
         "id": "SIG-121",
         "observableId": "C7-O5",
         "capabilityId": "C7",
-        "signalText": "The unlock for Director → Sr. Director/VP trajectory. 'Consistently delivers crisp executive communication' — noted in promo discussions",
+        "signalText": "The unlock for Director \u2192 Sr. Director/VP trajectory. 'Consistently delivers crisp executive communication' \u2014 noted in promo discussions",
         "signalType": "promo_packet",
         "sourceSubTopic": "Executive Communication"
       }
@@ -1783,7 +1871,7 @@
       "incident_report",
       "doc"
     ],
-    "defaultWeight": 0.278,
+    "defaultWeight": 0.253,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1800,6 +1888,14 @@
         "signalText": "EMs own team's incident readiness; Directors own org-level incident process. 'Implemented ICS model, reduced Sev1 duration by X%'",
         "signalType": "metric",
         "sourceSubTopic": "Incident Command Process"
+      },
+      {
+        "id": "SIG-179",
+        "observableId": "C8-O1",
+        "capabilityId": "C8",
+        "signalText": "Observed during Sev1 incident: EM took command role calmly, established clear communication cadence, delegated investigation while managing stakeholder updates, ran structured post-mortem within 48 hours.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Incident Response Behavior"
       }
     ]
   },
@@ -1813,7 +1909,7 @@
       "postmortem",
       "metric"
     ],
-    "defaultWeight": 0.278,
+    "defaultWeight": 0.253,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1843,7 +1939,7 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.222,
+    "defaultWeight": 0.202,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -1873,7 +1969,7 @@
       "doc",
       "checklist"
     ],
-    "defaultWeight": 0.222,
+    "defaultWeight": 0.202,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1887,7 +1983,7 @@
         "id": "SIG-033",
         "observableId": "C8-O4",
         "capabilityId": "C8",
-        "signalText": "Standard practice at Big Tech — EMs who skip this create visible risk. 'Zero Sev1 incidents on launches in [X] quarters through readiness discipline'",
+        "signalText": "Standard practice at Big Tech \u2014 EMs who skip this create visible risk. 'Zero Sev1 incidents on launches in [X] quarters through readiness discipline'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Launch Readiness Reviews"
       },
@@ -1895,7 +1991,7 @@
         "id": "SIG-034",
         "observableId": "C8-O4",
         "capabilityId": "C8",
-        "signalText": "'Identified and mitigated [X] failure modes proactively — prevented [estimated Y] incidents'",
+        "signalText": "'Identified and mitigated [X] failure modes proactively \u2014 prevented [estimated Y] incidents'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Failure Mode Analysis"
       },
@@ -1903,7 +1999,7 @@
         "id": "SIG-035",
         "observableId": "C8-O4",
         "capabilityId": "C8",
-        "signalText": "Cross-org risk awareness: 'Mapped [X] critical dependencies, implemented fallbacks — survived [upstream team]'s outage with zero customer impact'",
+        "signalText": "Cross-org risk awareness: 'Mapped [X] critical dependencies, implemented fallbacks \u2014 survived [upstream team]'s outage with zero customer impact'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Dependency Risk Assessment"
       }
@@ -1919,7 +2015,7 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.238,
+    "defaultWeight": 0.218,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1973,7 +2069,7 @@
       "survey_data",
       "metric"
     ],
-    "defaultWeight": 0.143,
+    "defaultWeight": 0.13,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1990,6 +2086,14 @@
         "signalText": "Directors track satisfaction trends across teams; EMs act on individual signals. Attrition spike after ignoring survey results = leadership failure",
         "signalType": "calibration_language",
         "sourceSubTopic": "Satisfaction & Well-being"
+      },
+      {
+        "id": "SIG-180",
+        "observableId": "C9-O2",
+        "capabilityId": "C9",
+        "signalText": "Observed in team meetings: EM references DORA metrics and developer satisfaction data naturally in planning discussions, uses data to justify engineering investments rather than relying on anecdotes or gut feel.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Data Literacy in Practice"
       }
     ]
   },
@@ -2003,7 +2107,7 @@
       "metric",
       "doc"
     ],
-    "defaultWeight": 0.095,
+    "defaultWeight": 0.086,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -2033,7 +2137,7 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.19,
+    "defaultWeight": 0.173,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -2063,13 +2167,13 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.19,
+    "defaultWeight": 0.173,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "Directors frame for VP audiences; EMs develop this skill",
     "why": "Engineering work described only in technical terms is invisible to business leadership",
-    "how": "Map technical improvements to business metrics: latency→conversion, reliability→retention, velocity→time-to-market",
+    "how": "Map technical improvements to business metrics: latency\u2192conversion, reliability\u2192retention, velocity\u2192time-to-market",
     "expectedResult": "Engineering investment justified in business terms; budget requests win",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2093,7 +2197,7 @@
       "metric",
       "doc"
     ],
-    "defaultWeight": 0.143,
+    "defaultWeight": 0.13,
     "requiredFrequency": "quarterly",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -2123,7 +2227,7 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.263,
+    "defaultWeight": 0.262,
     "requiredFrequency": "annual",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -2162,7 +2266,7 @@
   {
     "id": "C10-O2",
     "capabilityId": "C10",
-    "shortText": "Reprioritizes aggressively during cuts, communicating what stops — not just what continues",
+    "shortText": "Reprioritizes aggressively during cuts, communicating what stops \u2014 not just what continues",
     "slug": "reprioritizes-aggressively-during-cuts-communicating-what-stops-not-just-what-continues",
     "fullExample": "During 15% budget cut: stack-ranks all work, pauses bottom 20%, communicates cuts to stakeholders explicitly, maintains delivery on top-3 priorities.",
     "evidenceTypes": [
@@ -2232,7 +2336,7 @@
     "capabilityId": "C10",
     "shortText": "Optimizes team composition with principled FTE/contractor/vendor mix",
     "slug": "optimizes-team-composition-with-principled-ftecontractorvendor-mix",
-    "fullExample": "Evaluates work types: core differentiating work→FTE, commodity/surge work→contractor, specialized work→vendor. Saves 20% while maintaining velocity.",
+    "fullExample": "Evaluates work types: core differentiating work\u2192FTE, commodity/surge work\u2192contractor, specialized work\u2192vendor. Saves 20% while maintaining velocity.",
     "evidenceTypes": [
       "doc",
       "metric"
@@ -2297,13 +2401,13 @@
       "hiring_guide",
       "interview_scorecard"
     ],
-    "defaultWeight": 0.25,
+    "defaultWeight": 0.228,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs own team hiring quality; Directors standardize across org",
     "why": "Uncalibrated interviewers produce noisy signal; inconsistent bar creates quality variance",
-    "how": "Competency matrix, interviewer training (shadow→reverse-shadow→solo), independent write-ups, bar raiser role",
+    "how": "Competency matrix, interviewer training (shadow\u2192reverse-shadow\u2192solo), independent write-ups, bar raiser role",
     "expectedResult": "Consistent bar; reduced bias; better signal; candidates have good experience even if rejected",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2311,7 +2415,7 @@
         "id": "SIG-065",
         "observableId": "C11-O1",
         "capabilityId": "C11",
-        "signalText": "Big Tech hiring is committee-based — EM must ensure team's interviews generate strong signal. 'Trained [X] calibrated interviewers, interview-to-offer conversion improved Y%'",
+        "signalText": "Big Tech hiring is committee-based \u2014 EM must ensure team's interviews generate strong signal. 'Trained [X] calibrated interviewers, interview-to-offer conversion improved Y%'",
         "signalType": "metric",
         "sourceSubTopic": "Calibrated Hiring Loops"
       },
@@ -2328,14 +2432,14 @@
   {
     "id": "C11-O2",
     "capabilityId": "C11",
-    "shortText": "Maintains hiring bar under pressure — no warm body hires",
+    "shortText": "Maintains hiring bar under pressure \u2014 no warm body hires",
     "slug": "maintains-hiring-bar-under-pressure-no-warm-body-hires",
     "fullExample": "Despite 4 open reqs for 6 months, passes on borderline candidates; eventual hires all rated 'strong hire' with zero regrettable offers.",
     "evidenceTypes": [
       "interview_scorecard",
       "metric"
     ],
-    "defaultWeight": 0.2,
+    "defaultWeight": 0.182,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -2365,7 +2469,7 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.2,
+    "defaultWeight": 0.182,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -2390,6 +2494,14 @@
         "signalText": "Investment in people that calibration notices: 'Buddy program reduced new hire Time-to-first-PR from 2 weeks to 3 days'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Mentorship & Buddy Programs"
+      },
+      {
+        "id": "SIG-181",
+        "observableId": "C11-O3",
+        "capabilityId": "C11",
+        "signalText": "Observed in interview debriefs: EM calibrates interviewers on evidence quality, pushes back on vague 'culture fit' signals, ensures structured scoring rubric is applied consistently across candidates.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Interview Process Rigor"
       }
     ]
   },
@@ -2403,7 +2515,7 @@
       "survey_data",
       "doc"
     ],
-    "defaultWeight": 0.1,
+    "defaultWeight": 0.091,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -2433,7 +2545,7 @@
       "metric",
       "doc"
     ],
-    "defaultWeight": 0.15,
+    "defaultWeight": 0.136,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -2479,7 +2591,7 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.1,
+    "defaultWeight": 0.091,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -2509,7 +2621,7 @@
       "survey_data",
       "meeting_note"
     ],
-    "defaultWeight": 0.312,
+    "defaultWeight": 0.314,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -2609,6 +2721,14 @@
         "signalText": "Culture investment that compounds: 'Documentation coverage from X% to Y%, onboarding time reduced by Z%'",
         "signalType": "metric",
         "sourceSubTopic": "Knowledge Sharing Practices"
+      },
+      {
+        "id": "SIG-182",
+        "observableId": "C12-O3",
+        "capabilityId": "C12",
+        "signalText": "Observed in team meetings: diverse voices participate actively, EM facilitates equitably (draws out quieter members, time-boxes dominant speakers), async decision-making options provided for different working styles.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "Inclusive Team Dynamics"
       }
     ]
   },
@@ -2657,7 +2777,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs practice for team; Directors set org-level inclusion standards",
-    "why": "Inclusion must be proactive — absence of exclusion is not the same as belonging",
+    "why": "Inclusion must be proactive \u2014 absence of exclusion is not the same as belonging",
     "how": "Meeting facilitation (round-robin, written input), async options, equitable stretch/visibility distribution, measure equity",
     "expectedResult": "Diverse perspectives contribute; retention across demographics improves; innovation increases",
     "status": "CARRIED",
@@ -2696,9 +2816,19 @@
         "id": "SIG-024",
         "observableId": "C13-O1",
         "capabilityId": "C13",
-        "signalText": "EMs ensure team follows security processes — this is a compliance signal. Gaps here create VP-level visibility in the wrong way",
+        "signalText": "EMs ensure team follows security processes \u2014 this is a compliance signal. Gaps here create VP-level visibility in the wrong way",
         "signalType": "calibration_language",
         "sourceSubTopic": "Security Review Integration"
+      },
+      {
+        "id": "SIG-191",
+        "signalType": "metric",
+        "signalText": "Reduced security review bottleneck from 5 days to <1 day by embedding automated SAST/DAST scanning into CI pipeline, catching 85% of issues before human review"
+      },
+      {
+        "id": "SIG-192",
+        "signalType": "promo_packet",
+        "signalText": "Designed and implemented security-by-default development workflow adopted by 3 teams, reducing post-deploy security findings by 60%"
       }
     ]
   },
@@ -2726,9 +2856,19 @@
         "id": "SIG-025",
         "observableId": "C13-O2",
         "capabilityId": "C13",
-        "signalText": "Auditors and security teams track this. EM ownership is non-negotiable — 'Zero critical CVEs beyond SLA for [X] consecutive quarters'",
+        "signalText": "Auditors and security teams track this. EM ownership is non-negotiable \u2014 'Zero critical CVEs beyond SLA for [X] consecutive quarters'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Vulnerability Management"
+      },
+      {
+        "id": "SIG-193",
+        "signalType": "metric",
+        "signalText": "Maintained P0 vulnerability patch velocity under 48 hours and P1 under 7 days for 4 consecutive quarters; zero SLA breaches on critical vulnerabilities"
+      },
+      {
+        "id": "SIG-194",
+        "signalType": "manager_observation",
+        "signalText": "Treats vulnerability management as an ongoing practice, not a periodic exercise; team consistently patches within SLA without needing escalation"
       }
     ]
   },
@@ -2756,9 +2896,19 @@
         "id": "SIG-026",
         "observableId": "C13-O3",
         "capabilityId": "C13",
-        "signalText": "Compliance requirement at Big Tech — EMs who ignore this create org-level risk and VP-level escalations",
+        "signalText": "Compliance requirement at Big Tech \u2014 EMs who ignore this create org-level risk and VP-level escalations",
         "signalType": "calibration_language",
         "sourceSubTopic": "Access Control & Least Privilege"
+      },
+      {
+        "id": "SIG-195",
+        "signalType": "peer_feedback",
+        "signalText": "Their access review process is thorough but not burdensome \u2014 they automated the quarterly review and elevated permissions expire automatically, so we rarely have stale access"
+      },
+      {
+        "id": "SIG-196",
+        "signalType": "promo_packet",
+        "signalText": "Implemented automated access governance reducing over-privileged accounts by 70% and eliminating the quarterly manual access review burden for 200+ engineers"
       }
     ]
   },
@@ -2786,9 +2936,19 @@
         "id": "SIG-029",
         "observableId": "C13-O4",
         "capabilityId": "C13",
-        "signalText": "Table-stakes at Big Tech — SOC2, GDPR, internal controls. 'Clean audit for [X] consecutive cycles with zero findings'",
+        "signalText": "Table-stakes at Big Tech \u2014 SOC2, GDPR, internal controls. 'Clean audit for [X] consecutive cycles with zero findings'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Compliance & Audit Readiness"
+      },
+      {
+        "id": "SIG-197",
+        "signalType": "metric",
+        "signalText": "Achieved continuous SOC2 compliance with automated evidence collection; audit prep time reduced from 6 weeks to 3 days"
+      },
+      {
+        "id": "SIG-198",
+        "signalType": "peer_feedback",
+        "signalText": "Compliance used to be a dreaded annual exercise \u2014 now it runs continuously in the background and we barely notice it. That's entirely due to their leadership on automation"
       }
     ]
   },
@@ -2816,7 +2976,7 @@
         "id": "SIG-075",
         "observableId": "C14-O1",
         "capabilityId": "C14",
-        "signalText": "Core craft skill. Calibration committees can tell lazy reviews immediately — vague language ('did great work') vs. specific ('drove X resulting in Y, demonstrating next-level Z')",
+        "signalText": "Core craft skill. Calibration committees can tell lazy reviews immediately \u2014 vague language ('did great work') vs. specific ('drove X resulting in Y, demonstrating next-level Z')",
         "signalType": "calibration_language",
         "sourceSubTopic": "Writing Performance Reviews"
       }
@@ -2837,7 +2997,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs prepare individual cases; Directors run cross-EM calibration",
-    "why": "Your IC's rating lives or dies in calibration — you're their advocate in a room of competing advocates",
+    "why": "Your IC's rating lives or dies in calibration \u2014 you're their advocate in a room of competing advocates",
     "how": "1-page impact portfolio, peer feedback synthesis, cross-team comparison, anticipated pushback, practice delivery",
     "expectedResult": "People get ratings they deserve; you're credible in calibration room; no surprises",
     "status": "CARRIED",
@@ -2867,7 +3027,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs navigate for their team; Directors calibrate across EMs for consistency",
-    "why": "Every manager wants all their people rated highly — forced distribution means hard choices",
+    "why": "Every manager wants all their people rated highly \u2014 forced distribution means hard choices",
     "how": "Know company curve, differentiate honestly, prepare contested cases carefully, align with calibration peers",
     "expectedResult": "Fair differentiation; no surprises for reports; credibility with leadership and peers",
     "status": "CARRIED",
@@ -2876,7 +3036,7 @@
         "id": "SIG-077",
         "observableId": "C14-O3",
         "capabilityId": "C14",
-        "signalText": "Directors manage distribution across their EMs — the meta-calibration. 'Managed distribution across [X] EMs, maintained consistency and zero escalations'",
+        "signalText": "Directors manage distribution across their EMs \u2014 the meta-calibration. 'Managed distribution across [X] EMs, maintained consistency and zero escalations'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Ratings Distribution Management"
       },
@@ -2895,7 +3055,7 @@
     "capabilityId": "C14",
     "shortText": "Delivers performance feedback within 48hrs using SBI framework",
     "slug": "delivers-performance-feedback-within-48hrs-using-sbi-framework",
-    "fullExample": "Uses Situation→Behavior→Impact framework for all feedback. Never saves feedback for perf review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
+    "fullExample": "Uses Situation\u2192Behavior\u2192Impact framework for all feedback. Never saves feedback for perf review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
     "evidenceTypes": [
       "note",
       "meeting_note"
@@ -2914,7 +3074,7 @@
         "id": "SIG-078",
         "observableId": "C14-O4",
         "capabilityId": "C14",
-        "signalText": "'No surprises' policy — confirmed through skip-level feedback. Direct reports consistently say they know where they stand",
+        "signalText": "'No surprises' policy \u2014 confirmed through skip-level feedback. Direct reports consistently say they know where they stand",
         "signalType": "peer_feedback",
         "sourceSubTopic": "Delivering Performance Feedback"
       }
@@ -2944,7 +3104,7 @@
         "id": "SIG-079",
         "observableId": "C14-O5",
         "capabilityId": "C14",
-        "signalText": "'Promoted [X] engineers in [Y] cycles' — high-performing EM signal. Promo packet quality reflects EM craft",
+        "signalText": "'Promoted [X] engineers in [Y] cycles' \u2014 high-performing EM signal. Promo packet quality reflects EM craft",
         "signalType": "promo_packet",
         "sourceSubTopic": "Promo Packet Construction"
       }
@@ -2953,7 +3113,7 @@
   {
     "id": "C14-O6",
     "capabilityId": "C14",
-    "shortText": "Runs fair PIPs with genuine support and clean process — zero procedural issues",
+    "shortText": "Runs fair PIPs with genuine support and clean process \u2014 zero procedural issues",
     "slug": "runs-fair-pips-with-genuine-support-and-clean-process-zero-procedural-issues",
     "fullExample": "Specific gaps with examples, measurable criteria, 30-60 day timeline, weekly check-ins with documented progress, genuine coaching and resources. HR sees them as reliable partner.",
     "evidenceTypes": [
@@ -2982,7 +3142,7 @@
         "id": "SIG-084",
         "observableId": "C14-O6",
         "capabilityId": "C14",
-        "signalText": "The hardest thing an EM does. Avoidance is the most common failure mode — and it's visible in team health and calibration",
+        "signalText": "The hardest thing an EM does. Avoidance is the most common failure mode \u2014 and it's visible in team health and calibration",
         "signalType": "calibration_language",
         "sourceSubTopic": "Managing Out"
       },
@@ -2990,7 +3150,7 @@
         "id": "SIG-085",
         "observableId": "C14-O6",
         "capabilityId": "C14",
-        "signalText": "Company-specific knowledge that EMs must master — no room for error. 'Executed [X] performance processes with zero procedural issues'",
+        "signalText": "Company-specific knowledge that EMs must master \u2014 no room for error. 'Executed [X] performance processes with zero procedural issues'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Focus/Pivot/Dev Plan Mechanics"
       }
@@ -3007,7 +3167,7 @@
       "metric",
       "org_chart"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.027,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3038,7 +3198,7 @@
       "email",
       "attrition_data"
     ],
-    "defaultWeight": 0.014,
+    "defaultWeight": 0.013,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3068,7 +3228,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.014,
+    "defaultWeight": 0.013,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3099,7 +3259,7 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.038,
+    "defaultWeight": 0.036,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3174,8 +3334,8 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "Directors drive change management culture across org; EMs implement for their team. Covers both operational rhythm (C4) and reliability/risk prevention (formerly C8-O5) dimensions.",
-    "why": "Uncoordinated changes (config pushes, schema migrations, flag flips) are the #1 cause of production incidents — cascading failures that are entirely preventable through proportional change controls.",
-    "how": "Classify changes by blast radius × reversibility: low (automated gates), medium (peer review + canary/staged rollout), high (approval + maintenance window + rollback plan). Track all production changes for auditability.",
+    "why": "Uncoordinated changes (config pushes, schema migrations, flag flips) are the #1 cause of production incidents \u2014 cascading failures that are entirely preventable through proportional change controls.",
+    "how": "Classify changes by blast radius \u00d7 reversibility: low (automated gates), medium (peer review + canary/staged rollout), high (approval + maintenance window + rollback plan). Track all production changes for auditability.",
     "expectedResult": "Reduced change-induced incidents; process proportional to risk; teams can move fast on low-risk changes.",
     "status": "UPDATED",
     "calibrationSignals": [
@@ -3183,7 +3343,7 @@
         "id": "SIG-028",
         "observableId": "C4-O10",
         "capabilityId": "C4",
-        "signalText": "Directors drive change management culture across org. 'Implemented tiered change management — change-induced incidents reduced X%'",
+        "signalText": "Directors drive change management culture across org. 'Implemented tiered change management \u2014 change-induced incidents reduced X%'",
         "signalType": "metric",
         "sourceSubTopic": "Change Management Discipline"
       }
@@ -3230,7 +3390,7 @@
       "meeting_note",
       "email"
     ],
-    "defaultWeight": 0.058,
+    "defaultWeight": 0.054,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3260,7 +3420,7 @@
       "doc",
       "checklist"
     ],
-    "defaultWeight": 0.058,
+    "defaultWeight": 0.054,
     "requiredFrequency": "quarterly",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -3290,7 +3450,7 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.047,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3320,7 +3480,7 @@
       "meeting_note",
       "survey_data"
     ],
-    "defaultWeight": 0.077,
+    "defaultWeight": 0.072,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -3350,7 +3510,7 @@
       "meeting_note",
       "peer_feedback"
     ],
-    "defaultWeight": 0.077,
+    "defaultWeight": 0.072,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3380,7 +3540,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.077,
+    "defaultWeight": 0.072,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -3411,7 +3571,7 @@
       "comms_plan",
       "attrition_data"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.027,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3450,7 +3610,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.027,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3489,7 +3649,7 @@
       "metric",
       "design_doc"
     ],
-    "defaultWeight": 0.038,
+    "defaultWeight": 0.036,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -3528,7 +3688,7 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.027,
     "requiredFrequency": "quarterly",
     "emRelevance": "Low",
     "directorRelevance": "Medium",
@@ -3567,7 +3727,7 @@
       "email",
       "doc"
     ],
-    "defaultWeight": 0.038,
+    "defaultWeight": 0.036,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3605,7 +3765,7 @@
       "doc",
       "decision_doc"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.027,
     "requiredFrequency": "quarterly",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3644,9 +3804,9 @@
       "doc",
       "peer_feedback"
     ],
-    "defaultWeight": 0.034,
+    "defaultWeight": 0.032,
     "requiredFrequency": "continuous",
-    "emRelevance": "Low",
+    "emRelevance": "Director-Only",
     "directorRelevance": "High",
     "levelNotes": "Director-level capability. Directors must diagnose EM skill gaps and provide structured coaching, not just delegate to HR.",
     "why": "Struggling EMs create cascading team problems. Without coaching, they either fail visibly or plateau invisibly, dragging team outcomes for quarters.",
@@ -3682,7 +3842,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.034,
+    "defaultWeight": 0.032,
     "requiredFrequency": "quarterly",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3721,12 +3881,12 @@
       "checklist",
       "metric"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.045,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs ensure team compliance with established frameworks; Directors build compliance architecture and own audit readiness across the org.",
-    "why": "Regulatory violations carry existential risk — fines, lawsuits, lost customer trust. Reactive compliance is always more expensive and disruptive than proactive frameworks.",
+    "why": "Regulatory violations carry existential risk \u2014 fines, lawsuits, lost customer trust. Reactive compliance is always more expensive and disruptive than proactive frameworks.",
     "how": "Map applicable regulations (GDPR, SOX, HIPAA, PCI) to engineering practices. Build automated compliance checks into CI/CD. Create self-serve compliance patterns for common scenarios. Maintain audit trail for data access and changes. Run compliance readiness reviews before launches.",
     "expectedResult": "Audits pass cleanly; compliance is embedded in engineering workflow, not bolted on; teams ship without regulatory surprises.",
     "status": "NEW",
@@ -3760,7 +3920,7 @@
       "metric",
       "decision_doc"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.045,
     "requiredFrequency": "quarterly",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -3799,12 +3959,12 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.045,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs own team-level flag hygiene and experimentation frameworks; Directors set governance standards and track compliance across teams.",
-    "why": "Feature flags without lifecycle management become permanent technical debt. Forgotten flags create exponential complexity — 10 flags means 1024 possible code paths that nobody tests.",
+    "why": "Feature flags without lifecycle management become permanent technical debt. Forgotten flags create exponential complexity \u2014 10 flags means 1024 possible code paths that nobody tests.",
     "how": "Every flag gets: owner, purpose, expiry date, cleanup ticket at creation time. Automated alerts when flags exceed expiry. Dashboard showing active flags per team. Quarterly cleanup sprints. Flag interaction testing for long-lived flags.",
     "expectedResult": "Active flag count stays manageable; no production incidents from forgotten flags; experimentation velocity maintained without accumulating debt.",
     "status": "NEW",
@@ -3838,13 +3998,13 @@
       "metric",
       "decision_doc"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.045,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "Medium",
     "levelNotes": "EMs ensure team follows testing standards and interprets results correctly; Directors set org-level experimentation governance and partner with data science.",
-    "why": "Bad A/B testing is worse than no testing — it gives false confidence. Underpowered tests, peeking at results, and cherry-picked metrics lead to shipping features that don't actually work.",
-    "how": "Require power analysis before experiment launch. Set minimum run duration based on traffic. Ban peeking — use sequential testing if early stopping needed. Pre-register primary metric. Require practical significance threshold, not just statistical significance. Review results with data science partner.",
+    "why": "Bad A/B testing is worse than no testing \u2014 it gives false confidence. Underpowered tests, peeking at results, and cherry-picked metrics lead to shipping features that don't actually work.",
+    "how": "Require power analysis before experiment launch. Set minimum run duration based on traffic. Ban peeking \u2014 use sequential testing if early stopping needed. Pre-register primary metric. Require practical significance threshold, not just statistical significance. Review results with data science partner.",
     "expectedResult": "Product decisions backed by valid experimental evidence; no shipped features based on noise; team develops experimentation intuition.",
     "status": "NEW",
     "calibrationSignals": [
@@ -3877,7 +4037,7 @@
       "doc",
       "hiring_guide"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.045,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3916,7 +4076,7 @@
       "interview_scorecard",
       "metric"
     ],
-    "defaultWeight": 0.05,
+    "defaultWeight": 0.045,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "Medium",

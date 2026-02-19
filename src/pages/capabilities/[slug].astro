@@ -6,6 +6,7 @@ import ObservableCard from '../../components/cards/ObservableCard.astro';
 import AntiPatternCard from '../../components/cards/AntiPatternCard.astro';
 import PlaybookCard from '../../components/cards/PlaybookCard.astro';
 import CapabilityCard from '../../components/cards/CapabilityCard.astro';
+import MetricCard from '../../components/cards/MetricCard.astro';
 import {
   capabilities,
   getCapability,
@@ -18,6 +19,7 @@ import {
   getLearningPathway,
   getMeasurementGuidance,
   getInterviewQuestionsForCapability,
+  getMetricsForCapability,
 } from '../../lib/data';
 import { formatPercent } from '../../lib/utils';
 
@@ -38,6 +40,7 @@ const related = getRelatedCapabilities(cap.id);
 const pathway = getLearningPathway(cap.id);
 const measurement = getMeasurementGuidance(cap.id);
 const iqCount = getInterviewQuestionsForCapability(cap.id).length;
+const relatedMetrics = getMetricsForCapability(cap.id);
 ---
 
 <ContentLayout title={`${cap.id}: ${cap.name}`} description={cap.description} currentSlug={cap.slug}>
@@ -51,7 +54,7 @@ const iqCount = getInterviewQuestionsForCapability(cap.id).length;
     <div class="flex items-center gap-3 mb-3 flex-wrap">
       <Badge text={cap.domain} variant="domain" domain={cap.domain} />
       <span class="text-sm text-gray-500 dark:text-gray-400">{observables.length} observables</span>
-      {cov && <span class="text-sm text-gray-500 dark:text-gray-400">{formatPercent(cov.coveragePercent)} coverage</span>}
+      {cov && <span class="text-sm text-gray-500 dark:text-gray-400" title="Percentage of primary sub-topics covered by observables">{formatPercent(cov.coveragePercent)} coverage</span>}
     </div>
     <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
       {cap.name}
@@ -241,6 +244,22 @@ const iqCount = getInterviewQuestionsForCapability(cap.id).length;
         <span>Suggested cadence: <strong class="text-gray-700 dark:text-gray-300">{measurement.suggestedCadence}</strong></span>
         <a href="/measurement-guide/" class="text-blue-600 dark:text-blue-400 hover:underline">Full measurement guide &rarr;</a>
       </div>
+    </section>
+  )}
+
+  <!-- Related Metrics -->
+  {relatedMetrics.length > 0 && (
+    <section class="mb-10">
+      <h2 class="section-heading">Related Metrics</h2>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Specific named metrics from the metrics framework that relate to this capability.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {relatedMetrics.map(m => (
+          <MetricCard metric={m} compact />
+        ))}
+      </div>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
+        <a href="/metrics/" class="text-blue-600 dark:text-blue-400 hover:underline">View all metrics &rarr;</a>
+      </p>
     </section>
   )}
 

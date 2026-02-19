@@ -1,0 +1,319 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StatsBar from '../../components/ui/StatsBar.astro';
+import MetricCard from '../../components/cards/MetricCard.astro';
+import TierBadge from '../../components/ui/TierBadge.astro';
+import { metrics, metricPairs, diagnosticChains, metricsLaws, getAllMetricCategories, archetypes, priorityStacks } from '../../lib/data';
+
+const tiers = ['primary', 'secondary', 'tertiary', 'activity', 'inferior'];
+const tierCounts = tiers.map(t => ({ tier: t, count: metrics.filter(m => m.tier === t).length }));
+
+const aiEraCount = metrics.filter(m => m.category === 'AI-Era').length;
+
+const stats = [
+  { value: metrics.length, label: 'Total Metrics' },
+  { value: tierCounts.find(t => t.tier === 'primary')!.count, label: 'Primary Metrics' },
+  { value: metricPairs.length, label: 'Mandatory Pairs' },
+  { value: diagnosticChains.length, label: 'Diagnostic Chains' },
+  { value: aiEraCount, label: 'AI-Era Metrics' },
+  { value: archetypes.length, label: 'Archetypes' },
+];
+
+const categories = getAllMetricCategories();
+---
+
+<BaseLayout title="Metrics Reference" description="Engineering metrics framework with 78 specific metrics, mandatory pairs, diagnostic chains, and dashboard blueprints.">
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-amber-50 via-orange-50/50 to-white dark:from-gray-800 dark:via-slate-800 dark:to-gray-900 border-b border-gray-200 dark:border-gray-800 overflow-hidden">
+    <div class="hero-pattern absolute inset-0 pointer-events-none"></div>
+    <svg class="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] dark:opacity-[0.04] pointer-events-none" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="100" r="120" stroke="currentColor" stroke-width="1.5" class="text-amber-600 dark:text-amber-400" />
+      <rect x="200" y="180" width="160" height="160" rx="12" stroke="currentColor" stroke-width="1.5" class="text-orange-500 dark:text-orange-400" />
+      <polygon points="100,350 180,250 260,350" stroke="currentColor" stroke-width="1.5" fill="none" class="text-amber-500 dark:text-amber-300" />
+    </svg>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+          Engineering Metrics Reference
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-2">
+          The Definitive Guide to Engineering Metrics
+        </p>
+        <p class="text-lg text-gray-500 dark:text-gray-400 mb-8">
+          {metrics.length} named metrics across {categories.length} categories, organized into tiers with mandatory pairs,
+          diagnostic chains, dashboard blueprints, and calibration language templates.
+        </p>
+        <p class="text-sm text-amber-700 dark:text-amber-400 font-medium mb-6">
+          Start with Primary. Add Secondary when habitual. Tertiary only for diagnostics.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/metrics/getting-started/" class="inline-flex items-center px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+            Getting Started Guide
+          </a>
+          <a href="#metrics-grid" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            Browse Metrics
+          </a>
+          <a href="/metrics/pairs/" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            Mandatory Pairs
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Stats -->
+    <section class="-mt-8 mb-16 relative z-10">
+      <StatsBar stats={stats} />
+    </section>
+
+    <!-- Four Laws -->
+    <section class="mb-16">
+      <h2 class="section-heading">Four Laws of Engineering Metrics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {metricsLaws.map(law => (
+          <div class="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5">
+            <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">{law.name}</div>
+            <p class="text-sm font-semibold text-amber-900 dark:text-amber-200 mb-2">{law.statement}</p>
+            <p class="text-sm text-amber-700 dark:text-amber-300">{law.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tier & Category Filter -->
+    <section class="mb-16" id="metrics-grid">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-4">
+        <h2 class="section-heading mb-0">Metrics by Tier</h2>
+        <div class="flex items-center gap-2">
+          <button id="view-grid" class="view-toggle p-2 rounded-lg bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" title="Card view">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6z" /></svg>
+          </button>
+          <button id="view-table" class="view-toggle p-2 rounded-lg text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" title="Table view">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tier filters -->
+      <div class="flex flex-wrap gap-2 mb-3" id="tier-filters">
+        <button class="tier-filter-btn active px-3 py-1.5 rounded-lg text-sm font-medium transition-colors bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" data-tier="all">All</button>
+        {tiers.filter(t => t !== 'inferior' && t !== 'activity').map(tier => (
+          <button class="tier-filter-btn px-3 py-1.5 rounded-lg text-sm font-medium transition-colors text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800" data-tier={tier}>
+            {tier.charAt(0).toUpperCase() + tier.slice(1)}
+          </button>
+        ))}
+        <button class="tier-filter-btn px-3 py-1.5 rounded-lg text-sm font-medium transition-colors text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800" data-tier="activity">Activity</button>
+        <button class="tier-filter-btn px-3 py-1.5 rounded-lg text-sm font-medium transition-colors text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800" data-tier="inferior">Inferior</button>
+      </div>
+
+      <!-- Category filters -->
+      <div class="flex flex-wrap gap-2 mb-6" id="category-filters">
+        <button class="cat-filter-btn active px-2.5 py-1 rounded-md text-xs font-medium transition-colors bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300" data-category="all">All Categories</button>
+        {categories.map(cat => (
+          <button class="cat-filter-btn px-2.5 py-1 rounded-md text-xs font-medium transition-colors text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800" data-category={cat}>{cat}</button>
+        ))}
+      </div>
+
+      <!-- Card Grid View -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="metrics-container">
+        {metrics.map(m => (
+          <div class="metric-card-wrapper" data-tier={m.tier} data-category={m.category}>
+            <MetricCard metric={m} />
+          </div>
+        ))}
+      </div>
+
+      <!-- Table View (hidden by default) -->
+      <div id="metrics-table" class="hidden overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-700">
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900 dark:hover:text-white" data-sort="id">ID</th>
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900 dark:hover:text-white" data-sort="name">Name</th>
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900 dark:hover:text-white" data-sort="category">Category</th>
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900 dark:hover:text-white" data-sort="tier">Tier</th>
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400">Cadence</th>
+              <th class="text-center py-3 px-3 font-semibold text-gray-500 dark:text-gray-400">EM Rank</th>
+              <th class="text-center py-3 px-3 font-semibold text-gray-500 dark:text-gray-400">Dir Rank</th>
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400">Phase</th>
+              <th class="text-left py-3 px-3 font-semibold text-gray-500 dark:text-gray-400">Effort</th>
+            </tr>
+          </thead>
+          <tbody>
+            {metrics.map(m => (
+              <tr class="metric-table-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50" data-tier={m.tier} data-category={m.category}>
+                <td class="py-2 px-3 font-mono text-xs text-gray-500 dark:text-gray-400">{m.id}</td>
+                <td class="py-2 px-3">
+                  <a href={`/metrics/${m.slug}/`} class="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 text-sm">{m.name}</a>
+                </td>
+                <td class="py-2 px-3 text-xs text-gray-500 dark:text-gray-400">{m.category}</td>
+                <td class="py-2 px-3"><TierBadge tier={m.tier} size="sm" /></td>
+                <td class="py-2 px-3 text-xs text-gray-500 dark:text-gray-400">{m.cadence}</td>
+                <td class="py-2 px-3 text-center text-xs text-gray-500 dark:text-gray-400">{m.emRank.rank < 99 ? m.emRank.rank : '-'}</td>
+                <td class="py-2 px-3 text-center text-xs text-gray-500 dark:text-gray-400">{m.directorRank.rank < 99 ? m.directorRank.rank : '-'}</td>
+                <td class="py-2 px-3 text-xs text-gray-500 dark:text-gray-400">{m.maturityPhase > 0 ? `P${m.maturityPhase}` : '-'}</td>
+                <td class="py-2 px-3 text-xs text-gray-500 dark:text-gray-400 capitalize">{m.implementationEffort}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Quick Links (ordered by workflow) -->
+    <section class="mb-16">
+      <h2 class="section-heading">Explore the Framework</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/metrics/getting-started/" class="card group block text-center border-2 border-amber-200 dark:border-amber-800">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.841m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+          </svg>
+          <h3 class="font-semibold text-amber-700 dark:text-amber-300 group-hover:text-amber-600 dark:group-hover:text-amber-400">Getting Started</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">30-minute onboarding from zero to actionable metrics</p>
+        </a>
+        <a href="/metrics/quick-reference/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Quick Reference</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Priority stacks, routines, and decision tests</p>
+        </a>
+        <a href="/metrics/dashboards/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Dashboard Blueprints</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">EM & Director dashboard layouts</p>
+        </a>
+        <a href="/metrics/diagnostics/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Diagnostic Chains</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{diagnosticChains.length} step-by-step investigation flows</p>
+        </a>
+        <a href="/metrics/language-bank/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Calibration Language</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Templates for QBRs, promos, and VP reports</p>
+        </a>
+        <a href="/metrics/by-archetype/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Metrics by Archetype</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{archetypes.length} archetypes with tailored metric recommendations</p>
+        </a>
+        <a href="/metrics/pairs/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Mandatory Pairs</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">{metricPairs.length} metric pairs with counterweight analysis</p>
+        </a>
+        <a href="/metrics/roadmap/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Implementation Roadmap</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">4-phase rollout from foundation to excellence</p>
+        </a>
+        <a href="/metrics/economics/" class="card group block text-center">
+          <svg class="w-8 h-8 text-amber-500 dark:text-amber-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Tech Debt Economics</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">CD3 prioritization and investment framework</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b20 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  :global(.dark) .hero-pattern {
+    background-image: radial-gradient(circle, #f59e0b10 1px, transparent 1px);
+  }
+</style>
+
+<script>
+  let activeTier = 'all';
+  let activeCategory = 'all';
+
+  function applyFilters() {
+    const cards = document.querySelectorAll('.metric-card-wrapper');
+    const rows = document.querySelectorAll('.metric-table-row');
+
+    const filterEl = (el: Element) => {
+      const elTier = (el as HTMLElement).dataset.tier;
+      const elCat = (el as HTMLElement).dataset.category;
+      const tierMatch = activeTier === 'all' || elTier === activeTier;
+      const catMatch = activeCategory === 'all' || elCat === activeCategory;
+      (el as HTMLElement).style.display = tierMatch && catMatch ? '' : 'none';
+    };
+
+    cards.forEach(filterEl);
+    rows.forEach(filterEl);
+  }
+
+  // Tier filters
+  const tierButtons = document.querySelectorAll('.tier-filter-btn');
+  tierButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTier = (btn as HTMLElement).dataset.tier || 'all';
+      tierButtons.forEach(b => {
+        b.classList.remove('active', 'bg-blue-50', 'text-blue-700', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+        b.classList.add('text-gray-500', 'hover:bg-gray-100', 'dark:text-gray-400', 'dark:hover:bg-gray-800');
+      });
+      btn.classList.add('active', 'bg-blue-50', 'text-blue-700', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+      btn.classList.remove('text-gray-500', 'hover:bg-gray-100', 'dark:text-gray-400', 'dark:hover:bg-gray-800');
+      applyFilters();
+    });
+  });
+
+  // Category filters
+  const catButtons = document.querySelectorAll('.cat-filter-btn');
+  catButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = (btn as HTMLElement).dataset.category || 'all';
+      catButtons.forEach(b => {
+        b.classList.remove('active', 'bg-gray-200', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
+        b.classList.add('text-gray-500', 'hover:bg-gray-100', 'dark:text-gray-400', 'dark:hover:bg-gray-800');
+      });
+      btn.classList.add('active', 'bg-gray-200', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
+      btn.classList.remove('text-gray-500', 'hover:bg-gray-100', 'dark:text-gray-400', 'dark:hover:bg-gray-800');
+      applyFilters();
+    });
+  });
+
+  // View toggle
+  const gridBtn = document.getElementById('view-grid');
+  const tableBtn = document.getElementById('view-table');
+  const gridView = document.getElementById('metrics-container');
+  const tableView = document.getElementById('metrics-table');
+
+  gridBtn?.addEventListener('click', () => {
+    gridView?.classList.remove('hidden');
+    tableView?.classList.add('hidden');
+    gridBtn.classList.add('bg-blue-50', 'text-blue-700', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+    gridBtn.classList.remove('text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
+    tableBtn?.classList.remove('bg-blue-50', 'text-blue-700', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+    tableBtn?.classList.add('text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
+  });
+
+  tableBtn?.addEventListener('click', () => {
+    gridView?.classList.add('hidden');
+    tableView?.classList.remove('hidden');
+    tableBtn.classList.add('bg-blue-50', 'text-blue-700', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+    tableBtn.classList.remove('text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
+    gridBtn?.classList.remove('bg-blue-50', 'text-blue-700', 'dark:bg-blue-900/30', 'dark:text-blue-300');
+    gridBtn?.classList.add('text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
+  });
+</script>
