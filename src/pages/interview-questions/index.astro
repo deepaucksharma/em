@@ -3,7 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import InterviewQuestionCard from '../../components/cards/InterviewQuestionCard.astro';
 import Badge from '../../components/ui/Badge.astro';
-import { getCapability } from '../../lib/data';
+import { getCapability, capabilities } from '../../lib/data';
+import { getDomainColor } from '../../lib/utils';
 import { url } from '../../lib/url';
 import interviewData from '../../data/interview-questions.json';
 
@@ -20,6 +21,12 @@ const questions = interviewData as {
 
 const emQuestions = questions.filter(q => q.level === 'em');
 const directorQuestions = questions.filter(q => q.level === 'director');
+
+// Get unique capabilities that have interview questions
+const capIdsWithQuestions = [...new Set(questions.map(q => q.capabilityId))].sort();
+const capsWithQuestions = capIdsWithQuestions
+  .map(id => getCapability(id))
+  .filter((c): c is NonNullable<typeof c> => c !== undefined);
 ---
 
 <BaseLayout title="Interview Questions" description="Behavioral, situational, and technical interview questions for EM and Director roles.">
@@ -34,23 +41,49 @@ const directorQuestions = questions.filter(q => q.level === 'director');
         {questions.length} interview questions mapped to leadership capabilities. Each includes follow-ups, green flags, and red flags.
       </p>
 
-      <div class="flex flex-wrap gap-2">
-        <a href={url("/interview-questions/em/")} class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors">
-          EM ({emQuestions.length})
-        </a>
-        <a href={url("/interview-questions/director/")} class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-800/40 transition-colors">
-          Director ({directorQuestions.length})
-        </a>
+      <div class="mb-3">
+        <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">By Level</p>
+        <div class="flex flex-wrap gap-2">
+          <a href={url("/interview-questions/em/")} class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors">
+            EM ({emQuestions.length})
+          </a>
+          <a href={url("/interview-questions/director/")} class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-800/40 transition-colors">
+            Director ({directorQuestions.length})
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">By Capability</p>
+        <div class="flex flex-wrap gap-1.5">
+          {capsWithQuestions.map(cap => {
+            const count = questions.filter(q => q.capabilityId === cap.id).length;
+            return (
+              <a href={`#cap-${cap.id}`} class:list={['text-xs px-2 py-0.5 rounded-full border transition-colors', getDomainColor(cap.domain).text, 'border-gray-200 dark:border-gray-700 hover:border-current bg-white dark:bg-gray-900']}>
+                {cap.id} ({count})
+              </a>
+            );
+          })}
+        </div>
       </div>
     </div>
 
-    <div class="space-y-3">
-      {questions.map(q => {
-        const cap = getCapability(q.capabilityId);
-        return (
-          <InterviewQuestionCard question={q} capabilityName={cap?.name} />
-        );
-      })}
-    </div>
+    {capsWithQuestions.map(cap => {
+      const capQuestions = questions.filter(q => q.capabilityId === cap.id);
+      return (
+        <section id={`cap-${cap.id}`} class="mb-8 scroll-mt-4">
+          <h2 class:list={['text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2', getDomainColor(cap.domain).text]}>
+            <Badge text={cap.domain} variant="domain" domain={cap.domain} />
+            {cap.id}: {cap.name}
+            <span class="text-gray-400 dark:text-gray-500 font-normal">({capQuestions.length})</span>
+          </h2>
+          <div class="space-y-3">
+            {capQuestions.map(q => (
+              <InterviewQuestionCard question={q} capabilityName={cap.name} />
+            ))}
+          </div>
+        </section>
+      );
+    })}
   </div>
 </BaseLayout>

@@ -1782,15 +1782,6 @@
     "id": "P-C4-2"
   },
   {
-    "title": "The Blank Check",
-    "description": "The Blank Check \u2014 EM requests headcount without capacity models, ROI projections, or clear success criteria",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-blank-check/",
-    "domain": "Strategy",
-    "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-34"
-  },
-  {
     "title": "The Infinite Runway",
     "description": "The Infinite Runway \u2014 EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
     "type": "anti-pattern",
@@ -2764,7 +2755,7 @@
   },
   {
     "title": "Specialized Silo",
-    "description": "Deep expertise in narrow domains with minimal cross-training. High bus factor — metrics look OK but organization is fragile.",
+    "description": "Deep expertise in narrow domains with minimal cross-training. High bus factor \u2014 metrics look OK but organization is fragile.",
     "type": "archetype",
     "url": "/metrics/archetypes/#specialized-silo",
     "domain": "Metrics",
@@ -2797,5 +2788,239 @@
     "domain": "Metrics",
     "capabilityName": "By Archetype",
     "id": "by-archetype"
+  },
+  {
+    "title": "C12-O6: Maintains cultural continuity through leadership transitions and team growth",
+    "description": "When onboarding a new tech lead, pairs them with culture carriers and ensures they absorb existing norms before introducing changes. During rapid growth, scales culture through structured mentoring rather than hoping new hires absorb it organically.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O6"
+  },
+  {
+    "title": "C12-O7: Creates explicit feedback channels ensuring every voice is heard, not just the loudest",
+    "description": "Implements anonymous team health surveys, rotating meeting facilitators, and written-first discussion formats that ensure introverts and underrepresented voices have equal opportunity to contribute.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O7"
+  },
+  {
+    "title": "C12-O8: Proactively addresses toxic behaviors before they become normalized team patterns",
+    "description": "When observing dismissive code review comments from a senior engineer, addresses it in 1:1 within 24 hours, resets expectations with the team publicly, and monitors for recurrence rather than waiting for an HR complaint.",
+    "type": "observable",
+    "url": "/capabilities/culture-norms-shaping/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "C12-O8"
+  },
+  {
+    "title": "C10-O6: Presents resource requests as tiered options with quantified trade-offs for each level",
+    "description": "Instead of requesting 5 headcount, presents three options: (A) 2 heads \u2014 deliver core features only, delay platform work 6 months; (B) 4 heads \u2014 core + platform, accept tech debt in monitoring; (C) 6 heads \u2014 full roadmap with reliability investment. Each option includes timeline, risk, and ROI.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O6"
+  },
+  {
+    "title": "C10-O7: Tracks and communicates cost-per-outcome to demonstrate engineering ROI",
+    "description": "Maintains a running dashboard showing cost-per-feature, cost-per-customer-served, and engineering investment by workstream category (growth, reliability, platform, debt). Uses this to justify investments and identify efficiency opportunities.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O7"
+  },
+  {
+    "title": "C10-O8: Proactively reallocates capacity to highest-impact work without waiting for top-down direction",
+    "description": "When a planned project's expected impact decreases due to market changes, proposes reallocating two engineers to a higher-ROI reliability initiative without waiting for quarterly planning. Communicates the shift with data and gets alignment within a week.",
+    "type": "observable",
+    "url": "/capabilities/resource-allocation-tradeoffs/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "C10-O8"
+  },
+  {
+    "title": "C7-O8: Structures difficult conversations with preparation, empathy, and clear follow-through",
+    "description": "Before delivering a promotion rejection, documents specific gaps with examples, prepares a development plan, schedules a private 1:1 with sufficient time, delivers the message with empathy, and follows up with written summary and action items within 24 hours.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O8"
+  },
+  {
+    "title": "C7-O9: Scales communication systems as org grows \u2014 replaces hallway decisions with documented processes",
+    "description": "As team grows from 8 to 25 engineers, replaces informal decision-making with an RFC process, introduces weekly written status updates replacing daily syncs, and creates tiered communication channels (urgent/informational/discussion).",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O9"
+  },
+  {
+    "title": "C7-O10: Distributes decision authority using clear frameworks \u2014 knows which decisions need consensus vs. a driver",
+    "description": "Maintains a decision authority matrix: team norms require consensus, technical design decisions use DACI with tech lead as Driver, tooling choices are delegated to individual engineers, and architecture bets require EM + TL alignment. Team knows which decisions they can make autonomously.",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O10"
+  },
+  {
+    "title": "C14-O7: Maintains continuous performance signal through ongoing documentation, not end-of-cycle reconstruction",
+    "description": "Keeps running performance notes for each report updated weekly. When review cycle arrives, has 6 months of specific examples ready \u2014 not scrambling to remember what happened. Shares feedback themes in 1:1s monthly so reviews contain zero surprises.",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O7"
+  },
+  {
+    "title": "C14-O8: Manages high performers with differentiated development plans and retention-conscious conversations",
+    "description": "Identifies top performers' growth aspirations proactively, creates stretch assignments aligned to next-level expectations, has quarterly career conversations (not just at review time), and flags retention risks to leadership before they become emergencies.",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O8"
+  },
+  {
+    "title": "C2-O5: Maintains an explicit 'not doing' list that communicates strategic trade-offs to stakeholders",
+    "description": "Quarterly planning output includes not just the roadmap but a named list of requests deliberately declined with rationale. Stakeholders understand what was deprioritized and why, reducing re-litigation.",
+    "type": "observable",
+    "url": "/capabilities/strategic-prioritization/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2-O5"
+  },
+  {
+    "title": "C2-O6: Connects engineering investment to business outcomes with measurable success criteria",
+    "description": "Every major engineering initiative has defined success metrics tied to business outcomes before work begins. Team can articulate why they're building what they're building in business terms, not just technical terms.",
+    "type": "observable",
+    "url": "/capabilities/strategic-prioritization/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "C2-O6"
+  },
+  {
+    "title": "C8-O7: Builds system resilience through proactive chaos engineering and game days",
+    "description": "Schedules quarterly game days that simulate production failures with heroes explicitly excluded. Tests runbook accuracy, on-call readiness, and failover procedures before real incidents occur.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O7"
+  },
+  {
+    "title": "C8-O8: Manages error budgets to balance reliability investment against feature velocity",
+    "description": "Defines SLOs with product team and maintains error budgets. When budget is consumed, automatically shifts team focus to reliability work. When budget is healthy, uses it to justify faster feature shipping with acceptable risk.",
+    "type": "observable",
+    "url": "/capabilities/incidents-risk-reliability/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "C8-O8"
+  },
+  {
+    "title": "AP-40: The Missing Stair \u2014 EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them",
+    "description": "New hires warned informally about 'how to handle' a specific person; team has workarounds for someone's behavior; complaints in skip-levels about someone EM hasn't addressed; code review avoidance patterns around one person; 1:1s with other reports frequently mention the same person",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-missing-stair/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-40"
+  },
+  {
+    "title": "AP-41: Culture Tourism \u2014 EM treats culture building as periodic events (off-sites, pizza, team lunches) rather than daily structural practices",
+    "description": "Team building = quarterly off-sites; culture initiative = Slack emoji reactions; no written team norms; culture conversations only happen when engagement scores drop; fun activities substituted for addressing real team dysfunction; 'we have great culture' but people are leaving",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/culture-tourism/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-41"
+  },
+  {
+    "title": "AP-42: Peanut Butter Spreading \u2014 EM distributes resources evenly across all projects instead of concentrating on highest-impact bets",
+    "description": "Every project gets exactly 1-2 engineers; no project has enough resources to succeed; everything moves slowly; nothing gets killed; team feels spread thin; 'we're working on everything' but shipping nothing meaningful",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/peanut-butter-spreading/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-42"
+  },
+  {
+    "title": "AP-43: The Telephone Game \u2014 information degrades as it passes through management layers because there's no source-of-truth documentation",
+    "description": "Team's understanding of strategy differs from leadership's intent; 'I heard from my manager who heard from their manager' is common; written strategy docs don't exist or are stale; different teams interpret the same directive differently; confusion after all-hands about what was actually decided",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-telephone-game/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-43"
+  },
+  {
+    "title": "AP-44: The Recency Trap \u2014 EM's performance assessment dominated by last 6 weeks instead of full review period, rewarding or punishing based on timing rather than sustained performance",
+    "description": "Review feedback mostly references recent projects; engineers who had strong H1 but quiet H2 get middling reviews; someone's one mistake in November overshadows 10 months of excellence; EM can't cite specific examples from early in the review period; performance rating correlates with what happened last month, not the full cycle",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-recency-trap/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-44"
+  },
+  {
+    "title": "P-C12-3: Your Team Culture Is Deteriorating After Rapid Growth",
+    "description": "Your team doubled from 6 to 12 in 3 months. Skip-level feedback reveals new hires feel excluded, original team members feel their culture is gone, and collaboration norms are breaking down.",
+    "type": "playbook",
+    "url": "/playbooks/your-team-culture-is-deteriorating-after-rapid-growth/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "P-C12-3"
+  },
+  {
+    "title": "P-C12-4: Addressing a Toxic Senior Engineer the Team Works Around",
+    "description": "Your most technically skilled senior engineer is dismissive in code reviews, dominates discussions, and makes junior engineers afraid to speak up. The team has learned to 'work around' this person, but you're losing good people.",
+    "type": "playbook",
+    "url": "/playbooks/addressing-a-toxic-team-member-senior-engineer-others-avoid/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "P-C12-4"
+  },
+  {
+    "title": "P-C10-4: Asked to Do More With Fewer People After Layoffs",
+    "description": "After a round of layoffs, your team lost 3 of 10 engineers. Leadership still expects the same deliverables. Team morale is low, survivors are anxious, and you need to figure out what's actually possible.",
+    "type": "playbook",
+    "url": "/playbooks/asked-to-do-more-with-fewer-people-after-layoffs/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "P-C10-4"
+  },
+  {
+    "title": "P-C7-2: Communicating a Major Technical Decision Not Everyone Agrees With",
+    "description": "After an RFC process, you've decided to migrate from microservices back to a modular monolith. Senior engineers are split \u2014 some are excited, others feel their microservices expertise is being devalued. You need to communicate the decision without creating factions.",
+    "type": "playbook",
+    "url": "/playbooks/communicating-a-major-technical-decision-that-not-everyone-agrees-with/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "P-C7-2"
+  },
+  {
+    "title": "P-C7-3: Your Team Has Communication Debt \u2014 Decisions Aren't Documented",
+    "description": "Your team has grown from 5 to 15 people. Key technical decisions live in Slack threads, hallway conversations, and individual memories. New hires can't find context. The same decisions are relitigated monthly. You're drowning in 'quick syncs'.",
+    "type": "playbook",
+    "url": "/playbooks/your-team-has-communication-debt-decisions-not-documented/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "P-C7-3"
+  },
+  {
+    "title": "P-C14-3: High Performer Wants Promotion But Isn't Ready",
+    "description": "Your best engineer is pushing hard for promotion to Senior. They're technically excellent and deliver consistently, but they lack the influence, mentoring, and scope leadership expected at the next level. They're getting impatient and you're worried about retention.",
+    "type": "playbook",
+    "url": "/playbooks/high-performer-wants-promotion-but-isnt-ready/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "P-C14-3"
   }
 ]

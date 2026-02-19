@@ -8,7 +8,7 @@ const capMap = new Map(capabilities.map(c => [c.id, c]));
 const capIds = [...new Set(playbooks.flatMap(p => p.capabilityIds))].sort();
 ---
 
-<BaseLayout title="Playbooks" description="23 scenario-based playbooks for engineering leadership.">
+<BaseLayout title="Playbooks" description={`${playbooks.length} scenario-based playbooks for engineering leadership.`}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[{ label: 'Playbooks' }]} />
 

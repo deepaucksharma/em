@@ -95,10 +95,13 @@ export interface Playbook {
 }
 
 export interface RubricAnchor {
+  anchorId: string;
   capabilityId: string;
   sourceTopic: string;
   level1Developing: string;
+  level2Emerging: string;
   level3Competent: string;
+  level4Distinguished: string;
   level5Advanced: string;
   rationale: string;
 }

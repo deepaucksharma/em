@@ -105,7 +105,7 @@
         "title": "Opportunity Cost Thinking for Engineers",
         "type": "video",
         "description": "A talk on applying economic thinking to engineering prioritization, understanding that every choice to build one thing is a choice not to build something else.",
-        "url": "https://www.youtube.com/results?search_query=opportunity+cost+engineering+leaders"
+        "url": ""
       }
     ],
     "practical": [
@@ -348,7 +348,7 @@
         "title": "Stakeholder Mapping for Engineering Leaders",
         "type": "video",
         "description": "A talk on identifying key stakeholders, understanding their motivations and concerns, and developing tailored influence strategies for each.",
-        "url": "https://www.youtube.com/results?search_query=stakeholder+mapping+engineering+leaders"
+        "url": ""
       }
     ],
     "practical": [
@@ -428,7 +428,7 @@
       {
         "title": "Growth Mindset and Engineering Teams",
         "type": "article",
-        "description": "How to cultivate a growth mindset culture on engineering teams, moving from a fixed-ability worldview to one where skills are developed through deliberate practice and stretch assignments.",
+        "description": "A foundational 2016 article whose research remains widely cited. Covers how to cultivate a growth mindset culture on engineering teams, moving from a fixed-ability worldview to one where skills are developed through deliberate practice and stretch assignments.",
         "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means"
       }
     ],
@@ -537,6 +537,18 @@
         "type": "tool",
         "description": "A structured pre-mortem process for stress-testing decisions before committing, imagining future failure and working backward to identify hidden risks and assumptions.",
         "url": "https://www.atlassian.com/team-playbook/plays/pre-mortem"
+      },
+      {
+        "title": "A Thorough Team Guide to RFCs",
+        "type": "article",
+        "description": "LeadDev's comprehensive guide to implementing RFC processes for structured team decision-making, including templates, stakeholder engagement, and documentation standards.",
+        "url": "https://leaddev.com/software-quality/thorough-team-guide-rfcs"
+      },
+      {
+        "title": "How to Scale Decision-Making with Circles",
+        "type": "article",
+        "description": "Framework for distributing decision authority across organizational levels using nested circles of authority, reducing bottlenecks while maintaining coherence.",
+        "url": "https://leaddev.com/software-quality/how-scale-decision-making-your-organization-circles"
       }
     ],
     "advanced": [
@@ -618,6 +630,12 @@
         "type": "tool",
         "description": "Set up and use error budget tracking to make reliability investment decisions data-driven, balancing feature velocity with reliability based on SLO consumption rates.",
         "url": "https://sre.google/workbook/implementing-slos/"
+      },
+      {
+        "title": "Trust is the Ultimate Driver of Engineering Excellence",
+        "type": "article",
+        "description": "How trust-building practices improve incident response, blameless post-mortems, and team resilience through transparent decision-making and accountability.",
+        "url": "https://leaddev.com/culture/trust-ultimate-driver-engineering-excellence"
       }
     ],
     "advanced": [
@@ -753,7 +771,7 @@
         "title": "Theory of Constraints for Software Teams",
         "type": "video",
         "description": "A talk on applying Goldratt's Theory of Constraints to software engineering, identifying bottlenecks and allocating resources to maximize throughput of the entire system.",
-        "url": "https://www.youtube.com/results?search_query=theory+of+constraints+software+development"
+        "url": ""
       }
     ],
     "practical": [
@@ -779,7 +797,13 @@
         "title": "Investment Portfolio Tracker",
         "type": "tool",
         "description": "A tracking tool that categorizes all engineering work by investment type and visualizes allocation over time, enabling leaders to ensure investment ratios match strategic intent.",
-        "url": "https://lethain.com/magnitudes-of-exploration/"
+        "url": ""
+      },
+      {
+        "title": "5 Best Practices for Annual Budget Planning",
+        "type": "article",
+        "description": "Kevin Dallaire's guide to aligning engineering budgets with strategic priorities, including headcount ROI frameworks and zero-based evaluation approaches.",
+        "url": "https://leaddev.com/career-development/5-best-practices-annual-budget-planning"
       }
     ],
     "advanced": [
@@ -831,9 +855,9 @@
         "url": "https://review.firstround.com/the-anatomy-of-the-perfect-technical-interview-from-a-former-amazon-vp"
       },
       {
-        "title": "The First 90 Days for Engineering Hires",
-        "type": "article",
-        "description": "How to design onboarding programs that get new engineers to full productivity quickly, covering documentation, buddy systems, starter projects, and milestone check-ins.",
+        "title": "The First 90 Days \u2014 Michael Watkins",
+        "type": "book",
+        "description": "Michael Watkins essential guide for leaders in transition, applicable to designing onboarding programs that get new engineers to full productivity quickly, covering ramp-up strategies, milestone check-ins, and early wins.",
         "url": "https://www.amazon.com/First-90-Days-Strategies-Expanded/dp/1422188612"
       }
     ],
@@ -941,7 +965,19 @@
         "title": "Psychological Safety Assessment Tool",
         "type": "tool",
         "description": "A lightweight survey instrument for measuring psychological safety on your team, with specific questions adapted for engineering contexts and guidance on interpreting results.",
-        "url": "https://rework.withgoogle.com/guides/understanding-team-effectiveness"
+        "url": ""
+      },
+      {
+        "title": "In it for the Long Haul: Long-Term Team Building",
+        "type": "article",
+        "description": "LeadDev article on building resilient team culture through sustained investment in relationships, mentoring structures, and institutional knowledge documentation.",
+        "url": "https://leaddev.com/culture/it-long-haul-long-term-team-building"
+      },
+      {
+        "title": "Creating an Inclusive Team Culture in Times of Change",
+        "type": "article",
+        "description": "Yenny Cheung's framework for maintaining inclusive culture during organizational transitions, including decision-making patterns and psychological safety practices.",
+        "url": "https://leaddev.com/culture/creating-inclusive-team-culture-times-change"
       }
     ],
     "advanced": [
@@ -981,9 +1017,9 @@
         "url": "https://www.cl.cam.ac.uk/~rja14/book.html"
       },
       {
-        "title": "The Phoenix Project (Security Thread)",
+        "title": "The Phoenix Project",
         "type": "book",
-        "description": "Gene Kim's novel includes a security subplot that illustrates how security and compliance can be integrated into delivery processes rather than being gatekeeping functions.",
+        "description": "Gene Kim novel about IT transformation, illustrating operational discipline themes \u2014 including change management, risk controls, and cross-functional collaboration \u2014 that are directly relevant to building a strong security and compliance posture.",
         "url": "https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290"
       },
       {
@@ -1104,6 +1140,18 @@
         "type": "tool",
         "description": "A tool for capturing feedback and accomplishments throughout the review period, preventing recency bias and ensuring performance reviews reflect the full body of work.",
         "url": "https://lattice.com/"
+      },
+      {
+        "title": "Rejecting Promotions, PIPs, and Other Dreaded Conversations",
+        "type": "article",
+        "description": "Christos Chatzis's framework for structuring difficult performance conversations with preparation, specific examples, and clear follow-through.",
+        "url": "https://leaddev.com/communication/rejecting-promotions-pips-other-dreaded-conversations"
+      },
+      {
+        "title": "A Manager's Guide to Performance Calibration",
+        "type": "article",
+        "description": "LeadDev guide to running effective calibration sessions, avoiding the bell curve trap, and maintaining cross-team consistency in performance evaluation.",
+        "url": "https://leaddev.com/management/managers-guide-performance-calibration"
       }
     ],
     "advanced": [

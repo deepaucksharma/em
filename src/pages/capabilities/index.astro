@@ -21,6 +21,13 @@ const capsByDomain = DOMAIN_ORDER.map(domain => ({
       <p class="text-lg text-gray-600 dark:text-gray-400">
         {capabilities.length} capabilities across {DOMAIN_ORDER.length} domains — the building blocks of engineering leadership.
       </p>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+        Each capability defines a distinct competency area that engineering managers and directors are expected to develop.
+        Capabilities are grouped into domains and assessed through observable behaviors, rubric anchors, and calibration signals.
+        Use the <a href={url("/self-assessment/")} class="text-blue-600 dark:text-blue-400 hover:underline">self-assessment tool</a> to
+        rate yourself, or explore the <a href={url("/rubric/")} class="text-blue-600 dark:text-blue-400 hover:underline">rubric</a> for
+        detailed behavioral descriptions at each level.
+      </p>
     </div>
 
     {capsByDomain.map(({ domain, capabilities: caps }) => (

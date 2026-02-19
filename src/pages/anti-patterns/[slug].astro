@@ -2,7 +2,7 @@
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import Badge from '../../components/ui/Badge.astro';
-import { antiPatterns, getCapability, observables } from '../../lib/data';
+import { antiPatterns, getCapability, observables, capabilities } from '../../lib/data';
 import { url } from '../../lib/url';
 
 export function getStaticPaths() {
@@ -73,7 +73,7 @@ const relatedObs = observables.filter(o => ap.observableIds.includes(o.id));
           {relatedObs.map(obs => (
             <li>
               <a
-                href={cap ? url(`/capabilities/${cap.slug}/#${obs.id.toLowerCase()}`) : '#'}
+                href={(() => { const obsCap = capabilities.find(c => c.id === obs.capabilityId); return obsCap ? url(`/capabilities/${obsCap.slug}/#${obs.id.toLowerCase()}`) : '#'; })()}
                 class="flex items-start gap-2 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
                 <span class="font-mono text-xs text-gray-400 dark:text-gray-500 mt-0.5 shrink-0">{obs.id}</span>

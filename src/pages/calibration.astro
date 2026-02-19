@@ -15,7 +15,7 @@ const signalsByCapability = capabilities.map(cap => ({
 })).filter(g => g.signals.length > 0);
 ---
 
-<BaseLayout title="Calibration Signals" description="138 calibration signals for promo packets, reviews, and career conversations.">
+<BaseLayout title="Calibration Signals" description={`${calibrationSignals.length} calibration signals for promo packets, reviews, and career conversations.`}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[{ label: 'Calibration Signals' }]} />
 

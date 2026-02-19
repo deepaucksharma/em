@@ -7,7 +7,7 @@ import careerData from '../../data/career-progression.json';
 const career = careerData as { levels: any[] };
 ---
 
-<BaseLayout title="Career Progression" description="Four-level career progression from EM to VP with capability expectations.">
+<BaseLayout title="Career Progression" description="Five-level career progression from EM to VP with capability expectations.">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[{ label: 'Career Progression' }]} />
 
@@ -16,12 +16,12 @@ const career = careerData as { levels: any[] };
         Career Progression
       </h1>
       <p class="text-lg text-gray-600 dark:text-gray-400">
-        Four levels of engineering leadership with scope, capability expectations, promotion blockers, and transition signals.
+        Five levels of engineering leadership with scope, capability expectations, promotion blockers, and transition signals.
       </p>
     </div>
 
     {/* Horizontal progression overview */}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
       {career.levels.map(level => (
         <CareerLevelCard level={level} />
       ))}

@@ -54,7 +54,8 @@
         "Owns cross-team coordination and dependency management within their area",
         "Drives technical strategy and architecture decisions for their product area",
         "Represents engineering in cross-functional leadership forums",
-        "Leads hiring strategy across multiple teams including pipeline building"
+        "Leads hiring strategy across multiple teams including pipeline building",
+        "Coaches and develops direct reports (EMs/tech leads) as emerging leaders"
       ],
       "capabilityExpectations": {
         "C1": "medium",
@@ -108,10 +109,10 @@
         "C5": "high",
         "C6": "high",
         "C7": "high",
-        "C8": "medium",
+        "C8": "high",
         "C9": "high",
         "C10": "high",
-        "C11": "medium",
+        "C11": "high",
         "C12": "high",
         "C13": "high",
         "C14": "high"

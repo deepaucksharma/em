@@ -12,7 +12,7 @@
     "name": "Strategic Prioritization",
     "domain": "Strategy",
     "primarySubTopics": 4,
-    "observables": 4,
+    "observables": 6,
     "coveragePercent": 100.0
   },
   {
@@ -52,15 +52,15 @@
     "name": "Decision Framing & Communication",
     "domain": "Stakeholder",
     "primarySubTopics": 11,
-    "observables": 7,
-    "coveragePercent": 64.0
+    "observables": 10,
+    "coveragePercent": 91.0
   },
   {
     "capabilityId": "C8",
     "name": "Incidents, Risk & Reliability",
     "domain": "Reliability",
     "primarySubTopics": 6,
-    "observables": 6,
+    "observables": 8,
     "coveragePercent": 100.0
   },
   {
@@ -76,8 +76,8 @@
     "name": "Resource Allocation & Tradeoffs",
     "domain": "Strategy",
     "primarySubTopics": 8,
-    "observables": 5,
-    "coveragePercent": 62.0
+    "observables": 8,
+    "coveragePercent": 100.0
   },
   {
     "capabilityId": "C11",
@@ -92,8 +92,8 @@
     "name": "Culture & Norms Shaping",
     "domain": "People",
     "primarySubTopics": 8,
-    "observables": 5,
-    "coveragePercent": 62.0
+    "observables": 8,
+    "coveragePercent": 100.0
   },
   {
     "capabilityId": "C13",
@@ -108,7 +108,7 @@
     "name": "Performance Management & Calibration",
     "domain": "People",
     "primarySubTopics": 9,
-    "observables": 6,
-    "coveragePercent": 67.0
+    "observables": 8,
+    "coveragePercent": 89.0
   }
 ]

@@ -13,20 +13,35 @@ const rubricByCapability = capabilities.map(cap => ({
 })).filter(g => g.anchors.length > 0);
 ---
 
-<BaseLayout title="Rubric" description="Full rubric overview with 3-level behavioral anchors for all 14 capabilities.">
+<BaseLayout title="Rubric" description={`Full rubric overview with 5-level behavioral anchors for all ${capabilities.length} capabilities.`}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[{ label: 'Rubric' }]} />
 
     <div class="mb-8">
       <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">Rubric Overview</h1>
       <p class="text-lg text-gray-600 dark:text-gray-400">
-        {rubricAnchors.length} behavioral anchors across 3 levels — Developing, Competent, and Advanced — for self-assessment and calibration.
+        {rubricAnchors.length} behavioral anchors across 5 levels for self-assessment and calibration.
       </p>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+        Each anchor covers a distinct sub-dimension of the capability. Primary levels are Developing (1), Competent (3), and Advanced (5).
+        Intermediate levels Emerging (2) and Distinguished (4) describe transition behaviors for coaching conversations.
+        Use this rubric alongside the <a href={url("/self-assessment/")} class="text-blue-600 dark:text-blue-400 hover:underline">self-assessment tool</a> to
+        rate yourself, or reference it during <a href={url("/calibration/")} class="text-blue-600 dark:text-blue-400 hover:underline">calibration</a> conversations.
+      </p>
+    </div>
+
+    {/* Jump-to navigation */}
+    <div class="mb-8 flex flex-wrap gap-2">
+      {rubricByCapability.map(({ capability: cap }) => (
+        <a href={`#${cap.id}`} class:list={['text-xs px-2.5 py-1 rounded-full border transition-colors', getDomainColor(cap.domain).text, 'border-gray-200 dark:border-gray-700 hover:border-current bg-white dark:bg-gray-900']}>
+          {cap.id}
+        </a>
+      ))}
     </div>
 
     <div class="space-y-8">
       {rubricByCapability.map(({ capability: cap, anchors }) => (
-        <section class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+        <section id={cap.id} class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden scroll-mt-4">
           <div class:list={['px-6 py-4 border-b border-gray-200 dark:border-gray-700', getDomainColor(cap.domain).bg]}>
             <div class="flex items-center gap-3">
               <Badge text={cap.domain} variant="domain" domain={cap.domain} />
@@ -38,23 +53,57 @@ const rubricByCapability = capabilities.map(cap => ({
 
           {anchors.map((anchor, i) => (
             <div class:list={['px-6 py-5', i > 0 && 'border-t border-gray-100 dark:border-gray-800']}>
-              {anchors.length > 1 && (
-                <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3">{anchor.sourceTopic}</p>
-              )}
+              <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3">{anchor.sourceTopic}</p>
+
+              {/* Primary levels: L1, L3, L5 */}
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
-                  <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Developing</h4>
+                  <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-[10px] font-bold mr-1.5">1</span>
+                    Developing
+                  </h4>
                   <p class="text-sm text-gray-700 dark:text-gray-300">{anchor.level1Developing}</p>
                 </div>
                 <div class="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
-                  <h4 class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">Competent</h4>
+                  <h4 class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-200 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-[10px] font-bold mr-1.5">3</span>
+                    Competent
+                  </h4>
                   <p class="text-sm text-blue-800 dark:text-blue-300">{anchor.level3Competent}</p>
                 </div>
                 <div class="bg-green-50 dark:bg-green-950/20 rounded-lg p-4">
-                  <h4 class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">Advanced</h4>
+                  <h4 class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-200 dark:bg-green-900 text-green-700 dark:text-green-300 text-[10px] font-bold mr-1.5">5</span>
+                    Advanced
+                  </h4>
                   <p class="text-sm text-green-800 dark:text-green-300">{anchor.level5Advanced}</p>
                 </div>
               </div>
+
+              {/* Intermediate levels: L2, L4 — shown as progression indicators */}
+              <details class="mt-3 group">
+                <summary class="text-xs font-medium text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-700 dark:hover:text-gray-300 select-none">
+                  Show progression indicators (L2 Emerging, L4 Distinguished)
+                </summary>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                  <div class="bg-amber-50 dark:bg-amber-950/20 rounded-lg p-4 border border-dashed border-amber-200 dark:border-amber-800">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2">
+                      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-200 dark:bg-amber-900 text-amber-700 dark:text-amber-300 text-[10px] font-bold mr-1.5">2</span>
+                      Emerging
+                      <span class="font-normal normal-case ml-1 text-amber-500 dark:text-amber-500">(transitioning toward Competent)</span>
+                    </h4>
+                    <p class="text-sm text-amber-800 dark:text-amber-300">{anchor.level2Emerging}</p>
+                  </div>
+                  <div class="bg-purple-50 dark:bg-purple-950/20 rounded-lg p-4 border border-dashed border-purple-200 dark:border-purple-800">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400 mb-2">
+                      <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 dark:bg-purple-900 text-purple-700 dark:text-purple-300 text-[10px] font-bold mr-1.5">4</span>
+                      Distinguished
+                      <span class="font-normal normal-case ml-1 text-purple-500 dark:text-purple-500">(transitioning toward Advanced)</span>
+                    </h4>
+                    <p class="text-sm text-purple-800 dark:text-purple-300">{anchor.level4Distinguished}</p>
+                  </div>
+                </div>
+              </details>
             </div>
           ))}
         </section>

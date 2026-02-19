@@ -168,7 +168,7 @@
     "capabilityId": "C2",
     "question": "How do you balance investment between new feature development, technical debt reduction, and platform reliability across your org?",
     "level": "director",
-    "questionType": "technical",
+    "questionType": "behavioral",
     "followUps": [
       "How do you ensure tech debt work actually gets done rather than perpetually deferred?",
       "What metrics do you use to know the balance is right?"
@@ -636,7 +636,7 @@
     "capabilityId": "C7",
     "question": "How do you structure decision-making across your organization? What decisions do you own, what do your managers own, and how do you ensure consistency?",
     "level": "director",
-    "questionType": "technical",
+    "questionType": "behavioral",
     "followUps": [
       "Give me an example of a decision you explicitly pushed down to a manager that you were tempted to make yourself.",
       "How do you handle it when two of your managers make conflicting decisions?"
@@ -730,7 +730,7 @@
     "capabilityId": "C8",
     "question": "How do you think about risk management for your engineering organization? How do you identify and mitigate risks before they become incidents?",
     "level": "director",
-    "questionType": "technical",
+    "questionType": "behavioral",
     "followUps": [
       "Give me an example of a risk you identified proactively and how you mitigated it.",
       "How do you balance risk mitigation with speed of delivery?"
@@ -1009,7 +1009,7 @@
     "capabilityId": "C11",
     "question": "How do you scale your hiring process as your organization grows from 30 to 100 engineers while maintaining quality and consistency?",
     "level": "director",
-    "questionType": "technical",
+    "questionType": "behavioral",
     "followUps": [
       "How do you calibrate interviewers to ensure consistency across hiring panels?",
       "What metrics do you track to evaluate hiring process effectiveness?"
@@ -1642,6 +1642,390 @@
       "Doesn't consider maintenance and operational costs",
       "Makes technology decisions unilaterally",
       "No evaluation of alternatives"
+    ]
+  },
+  {
+    "id": "IQ-71",
+    "capabilityId": "C12",
+    "question": "Tell me about a time you inherited or observed a team culture that was unhealthy. How did you diagnose the issues and what did you change?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you measure whether the culture actually changed?",
+      "What resistance did you encounter and how did you handle it?",
+      "How long did it take to see real change?"
+    ],
+    "lookFor": [
+      "Systematic diagnosis rather than gut feel",
+      "Specific actions beyond 'team building events'",
+      "Patience \u2014 understanding culture change takes months",
+      "Measurement of cultural outcomes"
+    ],
+    "redFlags": [
+      "Only mentions surface-level interventions (pizza, off-sites)",
+      "Blames the team rather than examining structural causes",
+      "No evidence of measuring change",
+      "Replaced the team instead of addressing culture"
+    ]
+  },
+  {
+    "id": "IQ-72",
+    "capabilityId": "C12",
+    "question": "Describe how you've intentionally designed team norms or a team charter. What principles did you establish and how did you reinforce them?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you get buy-in from the team rather than imposing norms top-down?",
+      "What happened when someone violated the norms?",
+      "How did you onboard new team members into these norms?"
+    ],
+    "lookFor": [
+      "Collaborative norm-setting rather than dictating",
+      "Written, explicit norms rather than assumed",
+      "Enforcement through coaching, not punishment",
+      "Regular revisiting and updating of norms"
+    ],
+    "redFlags": [
+      "Norms imposed without team input",
+      "No mechanism for enforcement or evolution",
+      "Confuses rules with culture",
+      "Never revisited norms after initial creation"
+    ]
+  },
+  {
+    "id": "IQ-73",
+    "capabilityId": "C12",
+    "question": "How do you ensure every team member has equal opportunity to contribute, especially quieter or underrepresented members?",
+    "level": "em",
+    "questionType": "situational",
+    "followUps": [
+      "How do you track whether opportunity distribution is actually equitable?",
+      "Can you give a specific example of a structural change you made to improve inclusion?",
+      "How do you handle someone who consistently dominates discussions?"
+    ],
+    "lookFor": [
+      "Structural solutions (rotating facilitators, written-first processes) not just good intentions",
+      "Awareness of power dynamics and privilege",
+      "Tracking mechanisms for opportunity distribution",
+      "Willingness to address dominant behaviors"
+    ],
+    "redFlags": [
+      "Claims everyone already has equal opportunity without evidence",
+      "Relies on 'open door policy' without structural support",
+      "Hasn't noticed or addressed participation imbalances",
+      "Conflates equality with equity"
+    ]
+  },
+  {
+    "id": "IQ-74",
+    "capabilityId": "C12",
+    "question": "Tell me about a time you had to address toxic behavior from a high-performing team member. What was the behavior, how did you handle it, and what was the outcome?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you balance the person's technical contributions against their behavioral impact?",
+      "How did the rest of the team respond to your intervention?",
+      "What would you do differently next time?"
+    ],
+    "lookFor": [
+      "Swift action \u2014 didn't let the behavior persist for months",
+      "Specific behavioral feedback, not personality attacks",
+      "Willingness to enforce standards regardless of seniority",
+      "Awareness of the team-wide impact of individual behavior"
+    ],
+    "redFlags": [
+      "Tolerated the behavior because the person was technically strong",
+      "Only acted after an HR complaint or attrition",
+      "Vague feedback that didn't address specific behaviors",
+      "Doesn't acknowledge the team-wide cost of toxic behavior"
+    ]
+  },
+  {
+    "id": "IQ-75",
+    "capabilityId": "C10",
+    "question": "Describe a time you had to make difficult resource allocation decisions \u2014 where you had more work than capacity. How did you decide what to fund and what to cut?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you communicate the trade-offs to stakeholders?",
+      "What framework did you use to evaluate competing priorities?",
+      "How did you handle pushback from stakeholders whose projects were cut?"
+    ],
+    "lookFor": [
+      "Data-driven prioritization framework, not gut feel",
+      "Transparent communication of trade-offs",
+      "Willingness to make hard calls and say no",
+      "Evidence of stakeholder management around the decision"
+    ],
+    "redFlags": [
+      "Tried to do everything (peanut-butter spreading)",
+      "Made decisions without stakeholder input or communication",
+      "Can't articulate the criteria used for prioritization",
+      "Avoided making cuts and let the team burn out instead"
+    ]
+  },
+  {
+    "id": "IQ-76",
+    "capabilityId": "C10",
+    "question": "Tell me about a time you built a business case for headcount or significant engineering investment. How did you quantify the ROI?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "What data did you use to support your case?",
+      "How did you present different investment tiers and their trade-offs?",
+      "What happened when the request was partially approved?"
+    ],
+    "lookFor": [
+      "Quantified ROI, not just qualitative arguments",
+      "Multiple options presented with clear trade-offs",
+      "Understanding of financial/business context",
+      "Ability to adapt when full request isn't approved"
+    ],
+    "redFlags": [
+      "Only argument was 'we need more people'",
+      "No ROI quantification or business case",
+      "Binary ask (all or nothing) rather than tiered options",
+      "Couldn't adapt to partial approval"
+    ]
+  },
+  {
+    "id": "IQ-77",
+    "capabilityId": "C10",
+    "question": "How do you decide the right mix of full-time engineers, contractors, and vendor solutions for your team? Walk me through a real example.",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "What criteria do you use to determine what should be done in-house vs. outsourced?",
+      "How do you manage quality and knowledge transfer with contractors?",
+      "What are the hidden costs of vendor solutions that most managers miss?"
+    ],
+    "lookFor": [
+      "Principled framework for build-vs-buy-vs-contract decisions",
+      "Understanding of total cost of ownership beyond salary",
+      "Awareness of knowledge transfer and quality risks",
+      "Experience managing mixed teams effectively"
+    ],
+    "redFlags": [
+      "No framework \u2014 decisions made ad hoc",
+      "Only considers cost, not knowledge retention or quality",
+      "Treats contractors as second-class team members",
+      "No experience managing vendor relationships"
+    ]
+  },
+  {
+    "id": "IQ-78",
+    "capabilityId": "C10",
+    "question": "Tell me about a time you proactively identified and eliminated wasteful spending or inefficient resource usage on your team.",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you identify the waste?",
+      "How did you quantify the savings?",
+      "How did you communicate this to leadership?"
+    ],
+    "lookFor": [
+      "Proactive identification, not responding to cost-cutting pressure",
+      "Quantified impact of the optimization",
+      "Balanced approach \u2014 didn't cut things that created future risk",
+      "Communicated results to leadership demonstrating business acumen"
+    ],
+    "redFlags": [
+      "Only optimized when forced to by budget pressure",
+      "Can't quantify the impact",
+      "Cut corners that created technical debt or reliability risk",
+      "No awareness of cost management as a leadership responsibility"
+    ]
+  },
+  {
+    "id": "IQ-79",
+    "capabilityId": "C7",
+    "question": "Tell me about a time you had to deliver a difficult message to your team or leadership \u2014 something they didn't want to hear. How did you prepare and deliver it?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you decide when to deliver the message?",
+      "What was the reaction and how did you handle it?",
+      "What would you do differently next time?"
+    ],
+    "lookFor": [
+      "Delivered early rather than delaying",
+      "Preparation with specific data and proposed solutions",
+      "Empathy in delivery combined with clarity",
+      "Ownership of the message rather than deflecting"
+    ],
+    "redFlags": [
+      "Delayed delivery hoping the problem would resolve itself",
+      "Delivered without a plan or proposed solutions",
+      "Blamed others or deflected responsibility",
+      "Sugar-coated to the point of obscuring the message"
+    ]
+  },
+  {
+    "id": "IQ-80",
+    "capabilityId": "C7",
+    "question": "Describe a technical or strategic decision you made that was controversial. How did you frame the decision, communicate it, and handle disagreement?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you ensure dissenters felt heard while still moving forward?",
+      "How did you document the decision and alternatives considered?",
+      "When did you revisit the decision to see if it was working?"
+    ],
+    "lookFor": [
+      "Clear decision framework (DACI, RFC, or similar)",
+      "Documentation of alternatives and rationale",
+      "Respect for dissent combined with decisiveness",
+      "Post-decision follow-up and review"
+    ],
+    "redFlags": [
+      "Made unilateral decisions without input",
+      "Couldn't handle disagreement constructively",
+      "No documentation of the decision process",
+      "Never revisited to evaluate outcomes"
+    ]
+  },
+  {
+    "id": "IQ-81",
+    "capabilityId": "C7",
+    "question": "How do you adapt your communication style when presenting to different audiences \u2014 engineers, product managers, executives? Give me a specific example.",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you know if your communication was effective?",
+      "What's the biggest communication failure you've had and what did you learn?",
+      "How do you handle when your audience isn't understanding your point?"
+    ],
+    "lookFor": [
+      "Conscious altitude adjustment (detail vs. summary)",
+      "Audience awareness and empathy",
+      "Specific examples of adapting the same message",
+      "Self-awareness about communication failures"
+    ],
+    "redFlags": [
+      "Same communication style regardless of audience",
+      "Too deep in technical detail with executives",
+      "Too shallow with engineers (perceived as not technical)",
+      "No awareness of when communication is failing"
+    ]
+  },
+  {
+    "id": "IQ-82",
+    "capabilityId": "C7",
+    "question": "Tell me about a time your team or organization was making a decision that kept getting revisited. How did you break the loop?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "What was causing the revisitation?",
+      "What process or framework did you introduce?",
+      "How did you prevent the same pattern from recurring?"
+    ],
+    "lookFor": [
+      "Root cause analysis of why decisions were being revisited",
+      "Introduction of process or framework to prevent recurrence",
+      "Balance between inclusivity and decisiveness",
+      "Documentation as a tool for closure"
+    ],
+    "redFlags": [
+      "Forced a decision through without addressing underlying concerns",
+      "Couldn't identify the root cause of revisitation",
+      "No systemic fix \u2014 just made this one decision stick",
+      "Blamed others for indecision"
+    ]
+  },
+  {
+    "id": "IQ-83",
+    "capabilityId": "C14",
+    "question": "Walk me through how you prepare for and navigate a performance calibration session. How do you ensure fair outcomes for your reports?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you handle when a peer manager's calibration standard is very different from yours?",
+      "What do you do when the calibration committee pushes back on your ratings?",
+      "How do you address recency bias in calibration discussions?"
+    ],
+    "lookFor": [
+      "Thorough preparation with evidence portfolio for each report",
+      "Understanding of calibration purpose (consistency, not ranking)",
+      "Willingness to advocate for reports with data",
+      "Honest differentiation rather than Lake Wobegon ratings"
+    ],
+    "redFlags": [
+      "Goes in without prepared evidence",
+      "Treats calibration as adversarial rather than collaborative",
+      "Rates everyone the same to avoid conflict",
+      "Can't articulate why their ratings differ from peer managers'"
+    ]
+  },
+  {
+    "id": "IQ-84",
+    "capabilityId": "C14",
+    "question": "Tell me about a time you had to put someone on a performance improvement plan. How did you approach it, and what happened?",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How did you decide that a PIP was necessary rather than continued coaching?",
+      "What support did you provide during the PIP period?",
+      "How did the team perceive and react to the situation?"
+    ],
+    "lookFor": [
+      "PIP as a genuine improvement tool, not a firing process",
+      "Clear, measurable success criteria",
+      "Real coaching and support during the PIP",
+      "Prior feedback and coaching before PIP was initiated"
+    ],
+    "redFlags": [
+      "PIP with no prior feedback \u2014 first time hearing about problems",
+      "PIP designed to fail (unrealistic goals, no support)",
+      "No documentation of coaching prior to PIP",
+      "Sees PIP solely as legal cover for termination"
+    ]
+  },
+  {
+    "id": "IQ-85",
+    "capabilityId": "C14",
+    "question": "How do you build promotion cases for your engineers? Describe your approach to identifying readiness and building evidence over time.",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "How do you handle an engineer who wants to be promoted but isn't ready?",
+      "How do you ensure equitable promotion opportunities across your team?",
+      "How do you balance sponsoring promotions with maintaining a high bar?"
+    ],
+    "lookFor": [
+      "Long-term evidence building, not last-minute scramble",
+      "Deliberate gap identification and stretch assignment creation",
+      "Honest conversations about readiness with specific feedback",
+      "Equitable approach across different backgrounds and styles"
+    ],
+    "redFlags": [
+      "Promotes for retention rather than readiness",
+      "Can't articulate the difference between current level and next level",
+      "Builds promotion cases only when explicitly asked",
+      "Inequitable pattern \u2014 some engineers consistently overlooked"
+    ]
+  },
+  {
+    "id": "IQ-86",
+    "capabilityId": "C14",
+    "question": "How do you manage performance feedback as a continuous practice versus an end-of-cycle surprise? Give me a specific example of how you've avoided review surprises.",
+    "level": "em",
+    "questionType": "behavioral",
+    "followUps": [
+      "What's your system for tracking performance throughout the cycle?",
+      "How do you ensure feedback is timely \u2014 within days, not months?",
+      "How do you balance real-time feedback with formal review cycles?"
+    ],
+    "lookFor": [
+      "Continuous documentation and feedback cadence",
+      "No surprises at review time \u2014 themes discussed throughout cycle",
+      "Specific tracking system (running notes, brag docs, etc.)",
+      "Integration of feedback into regular 1:1s"
+    ],
+    "redFlags": [
+      "Scrambles to write reviews from memory at cycle end",
+      "Reports are surprised by review feedback",
+      "No system for ongoing tracking",
+      "Feedback only delivered during formal review cycles"
     ]
   }
 ]

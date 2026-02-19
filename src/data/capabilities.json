@@ -20,7 +20,7 @@
     "primarySubTopics": [
       "4"
     ],
-    "observableCount": 4,
+    "observableCount": 6,
     "v5Status": "CARRIED"
   },
   {
@@ -80,7 +80,7 @@
     "primarySubTopics": [
       "11"
     ],
-    "observableCount": 7,
+    "observableCount": 10,
     "v5Status": "CARRIED"
   },
   {
@@ -92,7 +92,7 @@
     "primarySubTopics": [
       "6"
     ],
-    "observableCount": 6,
+    "observableCount": 8,
     "v5Status": "UPDATED"
   },
   {
@@ -116,7 +116,7 @@
     "primarySubTopics": [
       "8"
     ],
-    "observableCount": 5,
+    "observableCount": 8,
     "v5Status": "CARRIED"
   },
   {
@@ -140,7 +140,7 @@
     "primarySubTopics": [
       "8"
     ],
-    "observableCount": 5,
+    "observableCount": 8,
     "v5Status": "CARRIED"
   },
   {
@@ -164,7 +164,7 @@
     "primarySubTopics": [
       "9"
     ],
-    "observableCount": 6,
+    "observableCount": 8,
     "v5Status": "NEW"
   }
 ]

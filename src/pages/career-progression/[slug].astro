@@ -103,7 +103,7 @@ const expectationColors: Record<string, { bg: string; text: string }> = {
     <section class="mb-10">
       <h2 class="section-heading">Transition Signals</h2>
       <div class="bg-green-50 dark:bg-green-950/20 rounded-xl border border-green-200 dark:border-green-800 p-4">
-        <p class="text-sm text-green-700 dark:text-green-300 mb-3">Signs you're ready for the next level:</p>
+        <p class="text-sm text-green-700 dark:text-green-300 mb-3">{level.level === 5 ? "Indicators of sustained excellence at this level:" : "Signs you're ready for the next level:"}</p>
         <ul class="space-y-2">
           {level.transitionSignals.map((signal: string) => (
             <li class="text-sm text-green-700 dark:text-green-300 flex items-start gap-2">

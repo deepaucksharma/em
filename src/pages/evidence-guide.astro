@@ -2,16 +2,62 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/ui/Breadcrumb.astro';
 import Badge from '../components/ui/Badge.astro';
-import { evidenceTypes } from '../lib/data';
+import { evidenceTypes, observables, capabilities } from '../lib/data';
+import { url } from '../lib/url';
 
 const byStrength = {
   High: evidenceTypes.filter(e => e.evidenceStrength === 'High'),
   Medium: evidenceTypes.filter(e => e.evidenceStrength === 'Medium'),
   Low: evidenceTypes.filter(e => e.evidenceStrength === 'Low'),
 };
+
+// Build a map of evidence type -> capabilities that use it
+const evidenceToCapabilities: Record<string, Set<string>> = {};
+for (const obs of observables) {
+  for (const et of obs.evidenceTypes) {
+    if (!evidenceToCapabilities[et]) evidenceToCapabilities[et] = new Set();
+    evidenceToCapabilities[et].add(obs.capabilityId);
+  }
+}
+
+// Evidence quality examples
+const evidenceExamples: Record<string, { strong: string; weak: string }> = {
+  'metric': {
+    strong: '"Reduced MTTR from 4hrs to 20min through automated rollback, verified over 3 quarters"',
+    weak: '"Improved system performance" (no specifics, no baseline, no timeframe)',
+  },
+  'peer_feedback': {
+    strong: '"PM: their technical input changed our Q3 roadmap priorities, resulting in 15% faster time-to-market"',
+    weak: '"Great partner to work with" (vague, no specific impact or behavior cited)',
+  },
+  'promo_packet': {
+    strong: '"Drove migration of 3 services to new platform, adopted by 5 teams, saving 200 eng-hours/quarter"',
+    weak: '"Led important technical projects" (no scope, no outcome, no adoption evidence)',
+  },
+  'calibration_language': {
+    strong: '"Consistently delivers 85%+ of committed scope; team cites clear expectations as key strength"',
+    weak: '"Strong performer, exceeds expectations" (no behavioral specifics)',
+  },
+  'manager_observation': {
+    strong: '"In exec review, delivered updates at business-impact altitude, surfaced risks proactively with options"',
+    weak: '"Does well in meetings" (no observable behavior described)',
+  },
+  'self_assessment': {
+    strong: '"I implemented DACI for all team decisions this quarter, reducing revisitation by 40%"',
+    weak: '"I\'m good at decision making" (no evidence of specific behavior or outcome)',
+  },
+  'skip_level': {
+    strong: '"My manager follows through on 1:1 commitments and I always know where I stand on performance"',
+    weak: '"Things are fine" (no specifics about manager behaviors)',
+  },
+  'artifact': {
+    strong: 'Design doc showing trade-off analysis with 3 options evaluated, decision rationale documented',
+    weak: 'Meeting notes from a planning session (no decision framework visible)',
+  },
+};
 ---
 
-<BaseLayout title="Evidence Guide" description="24 evidence types with strength ratings and usage guidance.">
+<BaseLayout title="Evidence Guide" description={`${evidenceTypes.length} evidence types with strength ratings and usage guidance.`}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[{ label: 'Evidence Guide' }]} />
 
@@ -19,6 +65,10 @@ const byStrength = {
       <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">Evidence Guide</h1>
       <p class="text-lg text-gray-600 dark:text-gray-400">
         {evidenceTypes.length} evidence types for documenting leadership capability — organized by strength.
+      </p>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+        Strong evidence is specific, behavioral, and includes measurable outcomes. Weak evidence is vague, opinion-based, or lacks context.
+        Combine multiple evidence types for the most credible assessment — a metric backed by peer feedback is stronger than either alone.
       </p>
     </div>
 
@@ -30,18 +80,50 @@ const byStrength = {
           <span class="text-sm font-normal text-gray-500 dark:text-gray-400">({types.length})</span>
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {types.map(et => (
-            <div class="card">
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="font-semibold text-gray-900 dark:text-white">{et.displayName}</h3>
-                <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{et.typeKey}</span>
+          {types.map(et => {
+            const capIds = evidenceToCapabilities[et.typeKey] || new Set();
+            const linkedCaps = capabilities.filter(c => capIds.has(c.id));
+            const example = evidenceExamples[et.typeKey];
+            return (
+              <div class="card">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="font-semibold text-gray-900 dark:text-white">{et.displayName}</h3>
+                  <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{et.typeKey}</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{et.description}</p>
+
+                {example && (
+                  <div class="mb-3 space-y-1.5">
+                    <div class="text-xs">
+                      <span class="font-semibold text-green-600 dark:text-green-400">Strong: </span>
+                      <span class="text-gray-600 dark:text-gray-400">{example.strong}</span>
+                    </div>
+                    <div class="text-xs">
+                      <span class="font-semibold text-red-500 dark:text-red-400">Weak: </span>
+                      <span class="text-gray-600 dark:text-gray-400">{example.weak}</span>
+                    </div>
+                  </div>
+                )}
+
+                <div class="text-xs text-gray-500 dark:text-gray-400 mb-2">
+                  Used by {et.usageCount} observables
+                </div>
+
+                {linkedCaps.length > 0 && (
+                  <div class="flex flex-wrap gap-1 pt-2 border-t border-gray-100 dark:border-gray-800">
+                    {linkedCaps.slice(0, 6).map(cap => (
+                      <a href={url(`/capabilities/${cap.slug}/`)} class="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                        {cap.id}
+                      </a>
+                    ))}
+                    {linkedCaps.length > 6 && (
+                      <span class="text-[10px] px-1.5 py-0.5 text-gray-400">+{linkedCaps.length - 6} more</span>
+                    )}
+                  </div>
+                )}
               </div>
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{et.description}</p>
-              <div class="text-xs text-gray-500 dark:text-gray-400">
-                Used by {et.usageCount} observables
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     ))}
