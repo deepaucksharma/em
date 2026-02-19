@@ -1,6 +1,7 @@
 ---
 import { capabilities } from '../../lib/data';
 import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+import { url } from '../../lib/url';
 
 interface Props {
   currentSlug?: string;
@@ -52,7 +53,7 @@ const DOMAIN_HEX: Record<string, string> = {
           <div class="hidden absolute z-30 mt-1 py-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 min-w-[200px] max-h-[300px] overflow-y-auto" data-domain-menu>
             {caps.map(cap => (
               <a
-                href={`/capabilities/${cap.slug}/`}
+                href={url(`/capabilities/${cap.slug}/`)}
                 class:list={[
                   'block px-3 py-1.5 text-sm transition-colors',
                   currentSlug === cap.slug

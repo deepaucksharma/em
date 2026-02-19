@@ -3,6 +3,7 @@ import Badge from '../ui/Badge.astro';
 import type { Capability } from '../../lib/data';
 import { getCoverage } from '../../lib/data';
 import { formatPercent } from '../../lib/utils';
+import { url } from '../../lib/url';
 
 interface Props {
   capability: Capability;
@@ -12,7 +13,7 @@ const { capability } = Astro.props;
 const cov = getCoverage(capability.id);
 ---
 
-<a href={`/capabilities/${capability.slug}/`} class="card group block">
+<a href={url(`/capabilities/${capability.slug}/`)} class="card group block">
   <div class="flex items-start justify-between mb-3">
     <Badge text={capability.domain} variant="domain" domain={capability.domain} />
     <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{capability.id}</span>

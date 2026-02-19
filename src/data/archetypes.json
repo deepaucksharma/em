@@ -135,7 +135,7 @@
       "sprintCommitmentVariance": "> 30% swing between sprints",
       "leadTimeVariance": "> 50% week-to-week",
       "wipFluctuation": "2x-4x between sprints",
-      "burnoutRisk": "Medium-High"
+      "burnoutRisk": "> 3.0 on 5-point Maslach scale"
     }
   },
   {

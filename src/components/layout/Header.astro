@@ -1,44 +1,47 @@
 ---
+import { url } from '../../lib/url';
+
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Capabilities', href: '/capabilities/' },
-  { label: 'Anti-Patterns', href: '/anti-patterns/' },
-  { label: 'Playbooks', href: '/playbooks/' },
-  { label: 'Rubric', href: '/rubric/' },
+  { label: 'Home', href: url('/') },
+  { label: 'Capabilities', href: url('/capabilities/') },
+  { label: 'Anti-Patterns', href: url('/anti-patterns/') },
+  { label: 'Playbooks', href: url('/playbooks/') },
+  { label: 'Rubric', href: url('/rubric/') },
 ];
 
 const developItems = [
-  { label: 'Learning Pathways', href: '/learning-pathways/' },
-  { label: 'Self-Assessment', href: '/self-assessment/' },
-  { label: 'Career Progression', href: '/career-progression/' },
+  { label: 'Learning Pathways', href: url('/learning-pathways/') },
+  { label: 'Self-Assessment', href: url('/self-assessment/') },
+  { label: 'Career Progression', href: url('/career-progression/') },
 ];
 
 const resourceItems = [
-  { label: 'Interview Questions', href: '/interview-questions/' },
-  { label: 'Org Maturity Model', href: '/org-maturity/' },
-  { label: 'Measurement Guide', href: '/measurement-guide/' },
-  { label: 'Calibration Signals', href: '/calibration/' },
-  { label: 'Evidence Guide', href: '/evidence-guide/' },
+  { label: 'Interview Questions', href: url('/interview-questions/') },
+  { label: 'Org Maturity Model', href: url('/org-maturity/') },
+  { label: 'Measurement Guide', href: url('/measurement-guide/') },
+  { label: 'Calibration Signals', href: url('/calibration/') },
+  { label: 'Evidence Guide', href: url('/evidence-guide/') },
 ];
 
 const metricsItems = [
-  { label: 'Getting Started', href: '/metrics/getting-started/' },
-  { label: 'Metrics Reference', href: '/metrics/' },
-  { label: 'Quick Reference', href: '/metrics/quick-reference/' },
-  { label: 'Dashboard Blueprints', href: '/metrics/dashboards/' },
-  { label: 'Diagnostic Chains', href: '/metrics/diagnostics/' },
-  { label: 'Metrics by Archetype', href: '/metrics/by-archetype/' },
-  { label: 'Organizational Archetypes', href: '/metrics/archetypes/' },
-  { label: 'Mandatory Pairs', href: '/metrics/pairs/' },
-  { label: 'Calibration Language', href: '/metrics/language-bank/' },
-  { label: 'Implementation Roadmap', href: '/metrics/roadmap/' },
-  { label: 'Tech Debt Economics', href: '/metrics/economics/' },
+  { label: 'Getting Started', href: url('/metrics/getting-started/') },
+  { label: 'Metrics Reference', href: url('/metrics/') },
+  { label: 'Quick Reference', href: url('/metrics/quick-reference/') },
+  { label: 'Dashboard Blueprints', href: url('/metrics/dashboards/') },
+  { label: 'Diagnostic Chains', href: url('/metrics/diagnostics/') },
+  { label: 'Metrics by Archetype', href: url('/metrics/by-archetype/') },
+  { label: 'Organizational Archetypes', href: url('/metrics/archetypes/') },
+  { label: 'Mandatory Pairs', href: url('/metrics/pairs/') },
+  { label: 'Calibration Language', href: url('/metrics/language-bank/') },
+  { label: 'Implementation Roadmap', href: url('/metrics/roadmap/') },
+  { label: 'Tech Debt Economics', href: url('/metrics/economics/') },
 ];
 
 const currentPath = Astro.url.pathname;
+const homeHref = url('/');
 
 function isActive(href: string) {
-  return currentPath === href || (href !== '/' && currentPath.startsWith(href));
+  return currentPath === href || (href !== homeHref && currentPath.startsWith(href));
 }
 
 function isDropdownActive(items: { href: string }[]) {
@@ -50,7 +53,7 @@ function isDropdownActive(items: { href: string }[]) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 font-bold text-lg">
+      <a href={url('/')} class="flex items-center gap-2 font-bold text-lg">
         <span class="text-blue-600 dark:text-blue-400">EM</span>
         <span class="hidden sm:inline text-gray-900 dark:text-white">Leadership Matrix</span>
       </a>
@@ -171,10 +174,10 @@ function isDropdownActive(items: { href: string }[]) {
         </div>
 
         <a
-          href="/about/"
+          href={url('/about/')}
           class:list={[
             'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-            isActive('/about/')
+            isActive(url('/about/'))
               ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
               : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800',
           ]}
@@ -283,10 +286,10 @@ function isDropdownActive(items: { href: string }[]) {
         </a>
       ))}
       <a
-        href="/about/"
+        href={url('/about/')}
         class:list={[
           'block px-3 py-2 rounded-lg text-sm font-medium mt-2',
-          isActive('/about/')
+          isActive(url('/about/'))
             ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
             : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800',
         ]}

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import DashboardWidgetCard from '../../components/cards/DashboardWidgetCard.astro';
 import { dashboardBlueprints } from '../../lib/data';
+import { url } from '../../lib/url';
 
 const emDashboard = dashboardBlueprints.find(d => d.id === 'em')!;
 const directorDashboard = dashboardBlueprints.find(d => d.id === 'director')!;
@@ -11,7 +12,7 @@ const directorDashboard = dashboardBlueprints.find(d => d.id === 'director')!;
 <BaseLayout title="Dashboard Blueprints" description="Ready-to-build dashboard layouts for Engineering Managers and Directors.">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[
-      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Metrics', href: url('/metrics/') },
       { label: 'Dashboard Blueprints' },
     ]} />
 

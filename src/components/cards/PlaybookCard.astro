@@ -2,6 +2,7 @@
 import Badge from '../ui/Badge.astro';
 import type { Playbook } from '../../lib/data';
 import { getCapability } from '../../lib/data';
+import { url } from '../../lib/url';
 
 interface Props {
   playbook: Playbook;
@@ -11,7 +12,7 @@ const { playbook } = Astro.props;
 const caps = playbook.capabilityIds.map(id => getCapability(id)).filter(Boolean);
 ---
 
-<a href={`/playbooks/${playbook.slug}/`} class="card group block">
+<a href={url(`/playbooks/${playbook.slug}/`)} class="card group block">
   <div class="flex items-start gap-2 mb-3 flex-wrap">
     {caps.map(cap => cap && (
       <Badge text={cap.domain} variant="domain" domain={cap.domain} />

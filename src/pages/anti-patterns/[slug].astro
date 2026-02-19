@@ -3,6 +3,7 @@ import ContentLayout from '../../layouts/ContentLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { antiPatterns, getCapability, observables } from '../../lib/data';
+import { url } from '../../lib/url';
 
 export function getStaticPaths() {
   return antiPatterns.map(ap => ({
@@ -18,7 +19,7 @@ const relatedObs = observables.filter(o => ap.observableIds.includes(o.id));
 
 <ContentLayout title={`${ap.id}: ${ap.name}`} description={ap.shortDesc} showSidebar={false}>
   <Breadcrumb items={[
-    { label: 'Anti-Patterns', href: '/anti-patterns/' },
+    { label: 'Anti-Patterns', href: url('/anti-patterns/') },
     { label: `${ap.id}: ${ap.name}` },
   ]} />
 
@@ -27,7 +28,7 @@ const relatedObs = observables.filter(o => ap.observableIds.includes(o.id));
       {cap && <Badge text={cap.domain} variant="domain" domain={cap.domain} />}
       <span class="text-sm font-mono text-gray-400 dark:text-gray-500">{ap.id}</span>
       {cap && (
-        <a href={`/capabilities/${cap.slug}/`} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
+        <a href={url(`/capabilities/${cap.slug}/`)} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400">
           {cap.id}: {cap.name}
         </a>
       )}
@@ -72,7 +73,7 @@ const relatedObs = observables.filter(o => ap.observableIds.includes(o.id));
           {relatedObs.map(obs => (
             <li>
               <a
-                href={cap ? `/capabilities/${cap.slug}/#${obs.id.toLowerCase()}` : '#'}
+                href={cap ? url(`/capabilities/${cap.slug}/#${obs.id.toLowerCase()}`) : '#'}
                 class="flex items-start gap-2 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
                 <span class="font-mono text-xs text-gray-400 dark:text-gray-500 mt-0.5 shrink-0">{obs.id}</span>
@@ -87,7 +88,7 @@ const relatedObs = observables.filter(o => ap.observableIds.includes(o.id));
     {cap && (
       <section class="mb-8">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Related Capability</h2>
-        <a href={`/capabilities/${cap.slug}/`} class="card block group">
+        <a href={url(`/capabilities/${cap.slug}/`)} class="card block group">
           <Badge text={cap.domain} variant="domain" domain={cap.domain} />
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-2">
             {cap.id}: {cap.name}

@@ -3,12 +3,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import DiagnosticChainCard from '../../components/cards/DiagnosticChainCard.astro';
 import { diagnosticChains } from '../../lib/data';
+import { url } from '../../lib/url';
 ---
 
 <BaseLayout title="Diagnostic Chains" description="10 diagnostic investigation flows for when metrics trigger. Follow the chain to find root cause.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[
-      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Metrics', href: url('/metrics/') },
       { label: 'Diagnostic Chains' },
     ]} />
 
@@ -33,7 +34,9 @@ import { diagnosticChains } from '../../lib/data';
 
     <section class="space-y-4">
       {diagnosticChains.map(chain => (
-        <DiagnosticChainCard chain={chain} />
+        <div id={chain.slug}>
+          <DiagnosticChainCard chain={chain} />
+        </div>
       ))}
     </section>
   </div>

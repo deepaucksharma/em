@@ -73,7 +73,7 @@
     "metricB": { "id": "5.4", "alsoIds": ["6.2", "1.4", "4.4"], "role": "Verification counterweight" },
     "whyPaired": "AI accelerates code generation while reviews become rubber stamps on larger PRs. Without verification metrics, bug rates climb silently.",
     "withoutA": "No visibility into how much code is AI-generated \u2014 can\u2019t diagnose quality or review bottlenecks.",
-    "withoutB": "AI accelerates code generation while reviews become rubber stamps on 154% larger PRs, and bug rates climb 9%.",
+    "withoutB": "AI accelerates code generation while reviews become rubber stamps on 154% larger PRs (Faros AI, 2024), and bug rates climb 9% (Faros AI, 2024).",
     "balancingStrategy": "If AI PR review time > 1.5x human PR review time, reduce AI PR size limits or add automated pre-review checks. If AI CFR delta > 5%, pause AI adoption expansion."
   }
 ]

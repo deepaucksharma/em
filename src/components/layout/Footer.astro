@@ -1,4 +1,5 @@
 ---
+import { url } from '../../lib/url';
 ---
 
 <footer class="bg-gray-50 dark:bg-gray-950 mt-12">
@@ -9,45 +10,45 @@
       <div>
         <h3 class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">Framework</h3>
         <div class="space-y-2">
-          <a href="/capabilities/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Capabilities</a>
-          <a href="/anti-patterns/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Anti-Patterns</a>
-          <a href="/playbooks/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Playbooks</a>
-          <a href="/rubric/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Rubric</a>
+          <a href={url("/capabilities/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Capabilities</a>
+          <a href={url("/anti-patterns/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Anti-Patterns</a>
+          <a href={url("/playbooks/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Playbooks</a>
+          <a href={url("/rubric/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Rubric</a>
         </div>
       </div>
       <div>
         <h3 class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">Metrics</h3>
         <div class="space-y-2">
-          <a href="/metrics/getting-started/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Getting Started</a>
-          <a href="/metrics/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Metrics Reference</a>
-          <a href="/metrics/quick-reference/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Quick Reference</a>
-          <a href="/metrics/dashboards/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Dashboards</a>
-          <a href="/metrics/diagnostics/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Diagnostic Chains</a>
-          <a href="/metrics/by-archetype/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Metrics by Archetype</a>
+          <a href={url("/metrics/getting-started/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Getting Started</a>
+          <a href={url("/metrics/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Metrics Reference</a>
+          <a href={url("/metrics/quick-reference/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Quick Reference</a>
+          <a href={url("/metrics/dashboards/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Dashboards</a>
+          <a href={url("/metrics/diagnostics/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Diagnostic Chains</a>
+          <a href={url("/metrics/by-archetype/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Metrics by Archetype</a>
         </div>
       </div>
       <div>
         <h3 class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">Develop</h3>
         <div class="space-y-2">
-          <a href="/learning-pathways/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Learning Pathways</a>
-          <a href="/self-assessment/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Self-Assessment</a>
-          <a href="/career-progression/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Career Progression</a>
+          <a href={url("/learning-pathways/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Learning Pathways</a>
+          <a href={url("/self-assessment/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Self-Assessment</a>
+          <a href={url("/career-progression/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Career Progression</a>
         </div>
       </div>
       <div>
         <h3 class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">Resources</h3>
         <div class="space-y-2">
-          <a href="/interview-questions/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Interview Questions</a>
-          <a href="/org-maturity/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Org Maturity</a>
-          <a href="/measurement-guide/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Measurement Guide</a>
+          <a href={url("/interview-questions/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Interview Questions</a>
+          <a href={url("/org-maturity/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Org Maturity</a>
+          <a href={url("/measurement-guide/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Measurement Guide</a>
         </div>
       </div>
       <div>
         <h3 class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">More</h3>
         <div class="space-y-2">
-          <a href="/calibration/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Calibration Signals</a>
-          <a href="/evidence-guide/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Evidence Guide</a>
-          <a href="/about/" class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
+          <a href={url("/calibration/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Calibration Signals</a>
+          <a href={url("/evidence-guide/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Evidence Guide</a>
+          <a href={url("/about/")} class="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">About</a>
         </div>
       </div>
     </div>

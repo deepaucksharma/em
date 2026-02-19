@@ -3,12 +3,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import MetricPairCard from '../../components/cards/MetricPairCard.astro';
 import { metricPairs, metricsLaws } from '../../lib/data';
+import { url } from '../../lib/url';
 ---
 
 <BaseLayout title="Mandatory Metric Pairs" description="7 mandatory metric pairs that must always be reported together. Never use a speed metric without its quality counterweight.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[
-      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Metrics', href: url('/metrics/') },
       { label: 'Mandatory Pairs' },
     ]} />
 
@@ -22,16 +23,22 @@ import { metricPairs, metricsLaws } from '../../lib/data';
       </p>
     </div>
 
-    <!-- Three Laws Callout -->
+    <!-- Four Laws Reference -->
     <section class="mb-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {metricsLaws.map(law => (
-          <div class="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5">
-            <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">{law.name}</div>
-            <p class="text-sm font-semibold text-amber-900 dark:text-amber-200 mb-2">{law.statement}</p>
-            <p class="text-xs text-amber-700 dark:text-amber-300 italic">{law.example}</p>
+      <div class="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-5">
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+          </svg>
+          <div>
+            <p class="text-sm font-semibold text-amber-900 dark:text-amber-200">
+              These pairs are governed by the <a href={url("/metrics/roadmap/#four-laws")} class="underline font-bold hover:text-amber-700 dark:hover:text-amber-100">Four Laws of Engineering Metrics</a>
+            </p>
+            <p class="text-xs text-amber-700 dark:text-amber-300 mt-1">
+              The Decision Law, The Counterweight Law, The Goodhart Law, and The Amplification Law define how metrics interact and when they become dangerous.
+            </p>
           </div>
-        ))}
+        </div>
       </div>
     </section>
 

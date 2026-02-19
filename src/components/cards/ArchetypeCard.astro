@@ -2,6 +2,7 @@
 import type { Archetype } from '../../lib/data';
 import { getMetric } from '../../lib/data';
 import { getSeverityColors } from '../../lib/metrics-colors';
+import { url } from '../../lib/url';
 
 interface Props {
   archetype: Archetype;
@@ -62,7 +63,7 @@ const diagnosticMetrics = archetype.diagnosticMetricIds.map(id => getMetric(id))
           <div class="flex flex-wrap gap-1.5">
             {diagnosticMetrics.map(m => m && (
               <a
-                href={`/metrics/${m.slug}/`}
+                href={url(`/metrics/${m.slug}/`)}
                 class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-300 transition-colors"
               >
                 <span class="font-mono">{m.id}</span>

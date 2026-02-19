@@ -1,4 +1,6 @@
 ---
+import { url } from '../../lib/url';
+
 interface Crumb {
   label: string;
   href?: string;
@@ -14,7 +16,7 @@ const { items } = Astro.props;
 <nav aria-label="Breadcrumb" class="mb-6">
   <ol class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400">
     <li>
-      <a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
+      <a href={url("/")} class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a>
     </li>
     {items.map((item, i) => (
       <li class="flex items-center gap-1.5">

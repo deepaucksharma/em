@@ -1,7 +1,7 @@
 {
   "coreNumbers": [
     { "dataPoint": "Tech debt = 20-40% of technology estate value (before depreciation)", "source": "McKinsey", "implication": "This is a board-level financial liability, not an engineering preference." },
-    { "dataPoint": "US tech debt: $2.41T annually; $1.52T to remediate", "source": "Industry analysis", "implication": "The aggregate cost exceeds the GDP of most countries." },
+    { "dataPoint": "US cost of poor software quality: $2.41T annually; $1.52T to remediate", "source": "Consortium for Information & Software Quality (CISQ), 2022", "implication": "The aggregate cost exceeds the GDP of most countries." },
     { "dataPoint": "33-42% of developer time spent on debt, maintenance, legacy code", "source": "Stripe, CodeScene", "implication": "Every dollar of engineering salary, 33-42 cents goes to fighting the past instead of building the future." },
     { "dataPoint": "10-20% of 'new feature' budget is covertly diverted to debt work", "source": "McKinsey", "implication": "Feature budgets are already subsidizing debt silently. Making it explicit gives leadership honest data." },
     { "dataPoint": ">50% of IT budget on legacy integration = 'technical bankruptcy'", "source": "Accenture, Forrester", "implication": "At this point, delivering new value is nearly impossible without greenfield rewrite." },
@@ -9,6 +9,7 @@
   ],
   "investmentMandate": {
     "target": "15-20%",
+    "source": "McKinsey, industry consensus",
     "description": "Protect 15-20% of engineering capacity for debt remediation, platform health, and modernization. This is non-negotiable.",
     "strategies": [
       "Reframe the language: never say 'refactoring' or 'tech debt.' Say 'reliability investment,' 'productivity enablement,' or 'delivery acceleration.'",
@@ -21,10 +22,10 @@
     "formula": "CD3 = Weekly Financial Value / Weeks to Deliver",
     "description": "Sequence work by highest CD3, not highest total value. Prioritizing by highest total value locks up capacity for long durations before delivering any value.",
     "example": [
-      { "initiative": "Auth migration", "duration": 4, "weeklyValue": 1500, "cd3": 0.375, "priority": 4 },
-      { "initiative": "Checkout optimization", "duration": 2, "weeklyValue": 2000, "cd3": 1.0, "priority": 1 },
-      { "initiative": "Platform rewrite", "duration": 10, "weeklyValue": 8500, "cd3": 0.85, "priority": 3 },
-      { "initiative": "Search reliability", "duration": 7, "weeklyValue": 6000, "cd3": 0.857, "priority": 2 }
+      { "initiative": "Auth migration", "duration": 4, "weeklyValue": 1500, "cd3": 375, "priority": 4 },
+      { "initiative": "Checkout optimization", "duration": 2, "weeklyValue": 2000, "cd3": 1000, "priority": 1 },
+      { "initiative": "Platform rewrite", "duration": 10, "weeklyValue": 8500, "cd3": 850, "priority": 3 },
+      { "initiative": "Search reliability", "duration": 7, "weeklyValue": 6000, "cd3": 857, "priority": 2 }
     ],
     "whenToUse": "Major initiatives (>1 quarter of team effort). Not for sprint-level ticket prioritization.",
     "impact": "In enterprise portfolios, CD3 sequencing reduces aggregate delay costs 20-60%."

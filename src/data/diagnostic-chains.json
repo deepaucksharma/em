@@ -139,7 +139,7 @@
     "directorQuestion": "Is this an architectural coupling problem (invest in decoupling) or a communication problem (invest in processes)?",
     "steps": [
       { "order": 1, "checkMetricId": "2.6", "label": "Blocked Work Rate", "reason": "Rising blocked work confirms dependency bottlenecks. Identify which teams are most frequently blocked and by whom." },
-      { "order": 2, "checkMetricId": "6.5", "alsoCheckMetricIds": ["7.6"], "label": "Knowledge Concentration + Span of Control", "reason": "High dependency count with narrow span of control suggests knowledge silos. Check if key individuals are bottlenecks." },
+      { "order": 2, "checkMetricId": "6.5", "alsoCheckMetricIds": ["7.6"], "label": "Dependency Pattern + Span of Control", "reason": "High dependency count with narrow span of control suggests knowledge silos. Check if key individuals are bottlenecks." },
       { "order": 3, "checkMetricId": "6.4", "alsoCheckMetricIds": ["5.1"], "label": "Communication Patterns", "reason": "Rising meeting load with declining DX suggests coordination overhead is crushing productivity. Consider architectural decoupling." }
     ]
   },
@@ -152,7 +152,7 @@
     "steps": [
       { "order": 1, "checkMetricId": "5.7", "label": "Environment Setup Time", "reason": "If setup takes >1 day, the onboarding bottleneck starts before any code is written. Check IDP maturity." },
       { "order": 2, "checkMetricId": "5.2", "alsoCheckMetricIds": ["5.6"], "label": "Mentor Availability", "reason": "High toil and on-call burden on senior engineers means no capacity for mentoring. New hires are left to figure things out alone." },
-      { "order": 3, "checkMetricId": "5.5", "alsoCheckMetricIds": ["5.8"], "label": "Documentation & Tooling Currency", "reason": "High cognitive load for new hires suggests documentation gaps or outdated tooling. Check IDP adoption as a proxy for self-service capability." }
+      { "order": 3, "checkMetricId": "5.5", "alsoCheckMetricIds": ["5.8"], "label": "Cognitive Load + IDP Adoption", "reason": "High cognitive load for new hires suggests documentation gaps or outdated tooling. Check IDP adoption as a proxy for self-service capability." }
     ]
   },
   {

@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import InterviewQuestionCard from '../../components/cards/InterviewQuestionCard.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { getCapability } from '../../lib/data';
+import { url } from '../../lib/url';
 import interviewData from '../../data/interview-questions.json';
 
 const questions = interviewData as {
@@ -34,10 +35,10 @@ const directorQuestions = questions.filter(q => q.level === 'director');
       </p>
 
       <div class="flex flex-wrap gap-2">
-        <a href="/interview-questions/em/" class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors">
+        <a href={url("/interview-questions/em/")} class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors">
           EM ({emQuestions.length})
         </a>
-        <a href="/interview-questions/director/" class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-800/40 transition-colors">
+        <a href={url("/interview-questions/director/")} class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-800/40 transition-colors">
           Director ({directorQuestions.length})
         </a>
       </div>

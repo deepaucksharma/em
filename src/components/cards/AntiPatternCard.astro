@@ -2,6 +2,7 @@
 import Badge from '../ui/Badge.astro';
 import type { AntiPattern } from '../../lib/data';
 import { getCapability } from '../../lib/data';
+import { url } from '../../lib/url';
 
 interface Props {
   antiPattern: AntiPattern;
@@ -11,7 +12,7 @@ const { antiPattern } = Astro.props;
 const cap = getCapability(antiPattern.capabilityId);
 ---
 
-<a href={`/anti-patterns/${antiPattern.slug}/`} class="card group block">
+<a href={url(`/anti-patterns/${antiPattern.slug}/`)} class="card group block">
   <div class="flex items-start justify-between mb-3">
     {cap && <Badge text={cap.domain} variant="domain" domain={cap.domain} />}
     <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{antiPattern.id}</span>

@@ -3,6 +3,7 @@ import ContentLayout from '../../layouts/ContentLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { playbooks, getCapability, getMetric, observables } from '../../lib/data';
+import { url } from '../../lib/url';
 
 export function getStaticPaths() {
   return playbooks.map(pb => ({
@@ -19,14 +20,14 @@ const suggestedMetrics = (pb.suggestedMetricIds ?? []).map(id => getMetric(id)).
 
 <ContentLayout title={pb.title} description={pb.context} showSidebar={false}>
   <Breadcrumb items={[
-    { label: 'Playbooks', href: '/playbooks/' },
+    { label: 'Playbooks', href: url('/playbooks/') },
     { label: pb.title },
   ]} />
 
   <div class="max-w-3xl">
     <div class="flex items-center gap-2 mb-4 flex-wrap">
       {caps.map(cap => cap && (
-        <a href={`/capabilities/${cap.slug}/`}>
+        <a href={url(`/capabilities/${cap.slug}/`)}>
           <Badge text={`${cap.id}: ${cap.name}`} variant="domain" domain={cap.domain} />
         </a>
       ))}
@@ -88,7 +89,7 @@ const suggestedMetrics = (pb.suggestedMetricIds ?? []).map(id => getMetric(id)).
         <div class="flex flex-wrap gap-2">
           {suggestedMetrics.map(met => met && (
             <a
-              href={`/metrics/${met.slug}/`}
+              href={url(`/metrics/${met.slug}/`)}
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-blue-50 text-blue-700 dark:bg-blue-950/30 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-950/50 transition-colors border border-blue-100 dark:border-blue-900"
             >
               <span class="font-mono text-[10px] text-blue-400 dark:text-blue-500">{met.id}</span>
@@ -108,7 +109,7 @@ const suggestedMetrics = (pb.suggestedMetricIds ?? []).map(id => getMetric(id)).
             return (
               <li>
                 <a
-                  href={obsCap ? `/capabilities/${obsCap.slug}/#${obs.id.toLowerCase()}` : '#'}
+                  href={obsCap ? url(`/capabilities/${obsCap.slug}/#${obs.id.toLowerCase()}`) : '#'}
                   class="flex items-start gap-2 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                 >
                   <span class="font-mono text-xs text-gray-400 dark:text-gray-500 mt-0.5 shrink-0">{obs.id}</span>
@@ -126,7 +127,7 @@ const suggestedMetrics = (pb.suggestedMetricIds ?? []).map(id => getMetric(id)).
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Related Capabilities</h2>
         <div class="space-y-3">
           {caps.map(cap => cap && (
-            <a href={`/capabilities/${cap.slug}/`} class="card block group">
+            <a href={url(`/capabilities/${cap.slug}/`)} class="card block group">
               <Badge text={cap.domain} variant="domain" domain={cap.domain} />
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-2">
                 {cap.id}: {cap.name}

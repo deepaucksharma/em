@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import TierBadge from '../../components/ui/TierBadge.astro';
 import { metrics, priorityStacks, techDebtEconomics, getMetric } from '../../lib/data';
+import { url } from '../../lib/url';
 
 const inferiorMetrics = metrics.filter(m => m.tier === 'inferior');
 const activityMetrics = metrics.filter(m => m.tier === 'activity');
@@ -24,7 +25,7 @@ const dashboardLabels: Record<string, string> = {
 <BaseLayout title="Metrics Quick Reference" description="Priority stacks, starter sequences, decision tests, and metric selection guidance.">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[
-      { label: 'Metrics', href: '/metrics/' },
+      { label: 'Metrics', href: url('/metrics/') },
       { label: 'Quick Reference' },
     ]} />
 
@@ -43,6 +44,19 @@ const dashboardLabels: Record<string, string> = {
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
         Ranked 1-15 for each role. Start at #1 and add metrics only when the previous ones are habitual and driving decisions.
       </p>
+
+      <!-- Priority Code Legend -->
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-4 mb-6">
+        <h3 class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Priority Codes</h3>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600 dark:text-gray-400">
+          <span><strong class="text-amber-700 dark:text-amber-300">T3</strong> — Top 3 (start here)</span>
+          <span><strong class="text-blue-700 dark:text-blue-300">C</strong> — Core (add when T3 habitual)</span>
+          <span><strong class="text-gray-700 dark:text-gray-300">D</strong> — Diagnostic (use when investigating)</span>
+          <span><strong class="text-gray-500 dark:text-gray-400">M</strong> — Monitor (background awareness)</span>
+          <span><strong class="text-gray-400 dark:text-gray-500">CTX</strong> — Context only (not a KPI)</span>
+          <span><strong class="text-gray-400 dark:text-gray-500">N/A</strong> — Not applicable for this role</span>
+        </div>
+      </div>
 
       <div class="mb-4">
         <div class="flex gap-2" id="stack-tabs">
@@ -84,7 +98,7 @@ const dashboardLabels: Record<string, string> = {
                   </td>
                   <td class="py-2.5 px-3">
                     {m ? (
-                      <a href={`/metrics/${m.slug}/`} class="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
+                      <a href={url(`/metrics/${m.slug}/`)} class="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
                         {m.name}
                       </a>
                     ) : (
@@ -135,7 +149,7 @@ const dashboardLabels: Record<string, string> = {
                   </td>
                   <td class="py-2.5 px-3">
                     {m ? (
-                      <a href={`/metrics/${m.slug}/`} class="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
+                      <a href={url(`/metrics/${m.slug}/`)} class="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
                         {m.name}
                       </a>
                     ) : (
@@ -169,9 +183,9 @@ const dashboardLabels: Record<string, string> = {
           <h3 class="text-sm font-bold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-4">EM Monday Routine</h3>
           <p class="text-xs text-cyan-600 dark:text-cyan-400 mb-3">10 minutes every Monday</p>
           <ol class="text-sm text-cyan-800 dark:text-cyan-200 space-y-2 list-decimal list-inside">
-            <li>Check <a href="/metrics/lead-time-for-changes/" class="underline">Lead Time</a> trend — any spikes?</li>
-            <li>Check <a href="/metrics/change-failure-rate/" class="underline">CFR</a> — any failed deployments last week?</li>
-            <li>Check <a href="/metrics/error-budget-burn-rate/" class="underline">Error Budget</a> burn rate — ship or freeze?</li>
+            <li>Check <a href={url("/metrics/lead-time-for-changes/")} class="underline">Lead Time</a> trend — any spikes?</li>
+            <li>Check <a href={url("/metrics/change-failure-rate/")} class="underline">CFR</a> — any failed deployments last week?</li>
+            <li>Check <a href={url("/metrics/error-budget-burn-rate/")} class="underline">Error Budget</a> burn rate — ship or freeze?</li>
             <li>Scan blocked work — any items stuck >3 days?</li>
           </ol>
         </div>
@@ -179,54 +193,90 @@ const dashboardLabels: Record<string, string> = {
           <h3 class="text-sm font-bold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-4">EM Monthly Review</h3>
           <p class="text-xs text-cyan-600 dark:text-cyan-400 mb-3">30 minutes at month end</p>
           <ol class="text-sm text-cyan-800 dark:text-cyan-200 space-y-2 list-decimal list-inside">
-            <li>Review <a href="/metrics/developer-satisfaction-score/" class="underline">DX Score</a> trend (quarterly) or proxy signals</li>
-            <li>Check <a href="/metrics/slo-compliance-rate/" class="underline">SLO Compliance</a> across team services</li>
-            <li>Review <a href="/metrics/code-review-turnaround-time/" class="underline">Code Review Turnaround</a> — bottleneck growing?</li>
-            <li>Run relevant <a href="/metrics/diagnostics/" class="underline">diagnostic chain</a> for any triggered metrics</li>
-            <li>Prepare sprint review data using <a href="/metrics/language-bank/" class="underline">calibration language</a></li>
+            <li>Review <a href={url("/metrics/developer-satisfaction-score/")} class="underline">DX Score</a> trend (quarterly) or proxy signals</li>
+            <li>Check <a href={url("/metrics/slo-compliance-rate/")} class="underline">SLO Compliance</a> across team services</li>
+            <li>Review <a href={url("/metrics/code-review-turnaround-time/")} class="underline">Code Review Turnaround</a> — bottleneck growing?</li>
+            <li>Run relevant <a href={url("/metrics/diagnostics/")} class="underline">diagnostic chain</a> for any triggered metrics</li>
+            <li>Prepare sprint review data using <a href={url("/metrics/language-bank/")} class="underline">calibration language</a></li>
           </ol>
         </div>
         <div class="rounded-xl border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/20 p-5">
           <h3 class="text-sm font-bold text-orange-700 dark:text-orange-300 uppercase tracking-wider mb-4">Director Monthly Review</h3>
           <p class="text-xs text-orange-600 dark:text-orange-400 mb-3">45 minutes at month end</p>
           <ol class="text-sm text-orange-800 dark:text-orange-200 space-y-2 list-decimal list-inside">
-            <li>Portfolio review: <a href="/metrics/regrettable-attrition-rate/" class="underline">Attrition</a> + <a href="/metrics/slo-compliance-rate/" class="underline">SLO</a> across all teams</li>
-            <li><a href="/metrics/archetypes/" class="underline">Archetype check</a> — has any team's pattern shifted?</li>
-            <li>Review <a href="/metrics/engineering-investment-mix/" class="underline">Investment Mix</a> against 15-20% debt target</li>
-            <li>Check <a href="/metrics/ai-tool-adoption-trust-score/" class="underline">AI Trust</a> and readiness trends</li>
-            <li>Prepare QBR data using <a href="/metrics/language-bank/" class="underline">calibration language</a></li>
+            <li>Portfolio review: <a href={url("/metrics/regrettable-attrition-rate/")} class="underline">Attrition</a> + <a href={url("/metrics/slo-compliance-rate/")} class="underline">SLO</a> across all teams</li>
+            <li><a href={url("/metrics/archetypes/")} class="underline">Archetype check</a> — has any team's pattern shifted?</li>
+            <li>Review <a href={url("/metrics/engineering-investment-mix/")} class="underline">Investment Mix</a> against 15-20% debt target</li>
+            <li>Check <a href={url("/metrics/ai-tool-adoption-trust-score/")} class="underline">AI Trust</a> and readiness trends</li>
+            <li>Prepare QBR data using <a href={url("/metrics/language-bank/")} class="underline">calibration language</a></li>
           </ol>
         </div>
       </div>
     </section>
 
-    <!-- "Why Not This Metric?" Table (moved up) -->
+    <!-- "Why Not This Metric?" Table -->
     <section class="mb-16">
       <h2 class="section-heading">"Why Not This Metric?" Table</h2>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-        Common metrics that seem useful but are inferior choices. Each has a better alternative.
-      </p>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm border-collapse">
-          <thead>
-            <tr class="border-b border-gray-200 dark:border-gray-700">
-              <th class="text-left py-3 px-4 font-semibold text-red-600 dark:text-red-400">Don't Use</th>
-              <th class="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">Why It's Inferior</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[...inferiorMetrics, ...activityMetrics].map(m => (
-              <tr class="border-b border-gray-100 dark:border-gray-800">
-                <td class="py-3 px-4">
-                  <a href={`/metrics/${m.slug}/`} class="font-medium text-red-700 dark:text-red-400 hover:text-red-500 line-through decoration-1">
-                    {m.name}
-                  </a>
-                </td>
-                <td class="py-3 px-4 text-gray-600 dark:text-gray-400">{m.whyThisTier}</td>
+
+      <!-- Inferior Metrics -->
+      <div class="mb-8">
+        <h3 class="text-sm font-bold text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">Inferior Metrics (Never Use as KPI)</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          These metrics are fundamentally flawed as KPIs. Each has a better alternative that measures the same signal without the perverse incentives.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-gray-700">
+                <th class="text-left py-3 px-4 font-semibold text-red-600 dark:text-red-400">Don't Use</th>
+                <th class="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">Why It's Inferior</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {inferiorMetrics.map(m => (
+                <tr class="border-b border-gray-100 dark:border-gray-800">
+                  <td class="py-3 px-4">
+                    <a href={url(`/metrics/${m.slug}/`)} class="font-medium text-red-700 dark:text-red-400 hover:text-red-500 line-through decoration-1">
+                      {m.name}
+                    </a>
+                  </td>
+                  <td class="py-3 px-4 text-gray-600 dark:text-gray-400">{m.whyThisTier}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Activity Metrics -->
+      <div>
+        <h3 class="text-sm font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-2">Activity Metrics (Diagnostic Only)</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          These metrics have legitimate diagnostic value — use them to investigate anomalies or contextualize primary metrics.
+          However, they should never be used as standalone KPIs or targets, as they measure activity rather than outcomes.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-gray-700">
+                <th class="text-left py-3 px-4 font-semibold text-amber-600 dark:text-amber-400">Diagnostic Only</th>
+                <th class="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">Why Not a KPI</th>
+              </tr>
+            </thead>
+            <tbody>
+              {activityMetrics.map(m => (
+                <tr class="border-b border-gray-100 dark:border-gray-800">
+                  <td class="py-3 px-4">
+                    <a href={url(`/metrics/${m.slug}/`)} class="font-medium text-amber-700 dark:text-amber-400 hover:text-amber-500">
+                      {m.name}
+                    </a>
+                  </td>
+                  <td class="py-3 px-4 text-gray-600 dark:text-gray-400">{m.whyThisTier}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -345,10 +395,10 @@ const dashboardLabels: Record<string, string> = {
                 </div>
                 <div class="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
                 <div class="space-y-2 w-full">
-                  <a href="/metrics/lead-time-for-changes/" class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
+                  <a href={url("/metrics/lead-time-for-changes/")} class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
                     <strong>Lead Time</strong> + <strong>CFR</strong>
                   </a>
-                  <a href="/metrics/sprint-commitment-accuracy/" class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                  <a href={url("/metrics/sprint-commitment-accuracy/")} class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     Sprint Commitment
                   </a>
                 </div>
@@ -360,10 +410,10 @@ const dashboardLabels: Record<string, string> = {
                 </div>
                 <div class="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
                 <div class="space-y-2 w-full">
-                  <a href="/metrics/error-budget-burn-rate/" class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
+                  <a href={url("/metrics/error-budget-burn-rate/")} class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
                     <strong>Error Budget</strong> + <strong>Actions</strong>
                   </a>
-                  <a href="/metrics/slo-compliance-rate/" class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                  <a href={url("/metrics/slo-compliance-rate/")} class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     SLO Compliance
                   </a>
                 </div>
@@ -375,10 +425,10 @@ const dashboardLabels: Record<string, string> = {
                 </div>
                 <div class="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
                 <div class="space-y-2 w-full">
-                  <a href="/metrics/developer-satisfaction-score/" class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
+                  <a href={url("/metrics/developer-satisfaction-score/")} class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
                     <strong>DX Score</strong> + <strong>Attrition</strong>
                   </a>
-                  <a href="/metrics/burnout-risk-index/" class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                  <a href={url("/metrics/burnout-risk-index/")} class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     Burnout Risk Index
                   </a>
                 </div>
@@ -390,10 +440,10 @@ const dashboardLabels: Record<string, string> = {
                 </div>
                 <div class="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
                 <div class="space-y-2 w-full">
-                  <a href="/metrics/engineering-investment-mix/" class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
+                  <a href={url("/metrics/engineering-investment-mix/")} class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
                     <strong>Investment Mix</strong> + <strong>Attribution</strong>
                   </a>
-                  <a href="/metrics/economics/" class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                  <a href={url("/metrics/economics/")} class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     Tech Debt Economics
                   </a>
                 </div>
@@ -405,10 +455,10 @@ const dashboardLabels: Record<string, string> = {
                 </div>
                 <div class="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
                 <div class="space-y-2 w-full">
-                  <a href="/metrics/ai-assisted-pr-ratio/" class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
+                  <a href={url("/metrics/ai-assisted-pr-ratio/")} class="block px-3 py-2 rounded-lg bg-amber-50 dark:bg-amber-950/10 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-colors">
                     <strong>AI PR Ratio</strong> + <strong>Verification</strong>
                   </a>
-                  <a href="/metrics/ai-tool-adoption-trust-score/" class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                  <a href={url("/metrics/ai-tool-adoption-trust-score/")} class="block px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     AI Trust Score
                   </a>
                 </div>

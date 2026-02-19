@@ -2,6 +2,7 @@
 import TierBadge from '../ui/TierBadge.astro';
 import type { Metric } from '../../lib/data';
 import { getCategoryColor } from '../../lib/metrics-colors';
+import { url } from '../../lib/url';
 
 interface Props {
   metric: Metric;
@@ -15,13 +16,13 @@ const typeClass = `badge-type-${metric.type}`;
 ---
 
 {compact ? (
-  <a href={`/metrics/${metric.slug}/`} class="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-gray-800 transition-colors group">
+  <a href={url(`/metrics/${metric.slug}/`)} class="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-gray-800 transition-colors group">
     <TierBadge tier={metric.tier} size="sm" />
     <span class="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 truncate">{metric.name}</span>
     <span class:list={['badge text-[10px]', categoryColor]}>{metric.category}</span>
   </a>
 ) : (
-  <a href={`/metrics/${metric.slug}/`} class="card group block">
+  <a href={url(`/metrics/${metric.slug}/`)} class="card group block">
     <div class="flex items-center justify-between mb-2">
       <TierBadge tier={metric.tier} size="sm" />
       <span class="text-xs font-mono text-gray-400 dark:text-gray-500">{metric.id}</span>

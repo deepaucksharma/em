@@ -1,6 +1,7 @@
 ---
 import { capabilities } from '../../lib/data';
 import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+import { url } from '../../lib/url';
 
 interface Props {
   currentSlug?: string;
@@ -25,7 +26,7 @@ const capsByDomain = DOMAIN_ORDER.map(domain => ({
           {caps.map(cap => (
             <li>
               <a
-                href={`/capabilities/${cap.slug}/`}
+                href={url(`/capabilities/${cap.slug}/`)}
                 class:list={[
                   'block px-2 py-1 text-sm rounded-md transition-colors',
                   currentSlug === cap.slug

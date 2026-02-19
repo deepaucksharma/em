@@ -326,7 +326,7 @@
     "context": "1-on-1",
     "template": "I want to discuss your performance trajectory. Here's what I'm seeing: {observation}. The gap between current state and expectations: {gap}. Specific examples: {examples}. What I need to see in the next {timeframe}: {expectations}. Support I'll provide: {support}. Let's check in on {checkInDate}.",
     "variables": ["observation", "gap", "examples", "timeframe", "expectations", "support", "checkInDate"],
-    "whenToUse": "Difficult performance conversations that need clear framing — connecting individual performance to team metrics and retention health",
+    "whenToUse": "Difficult performance conversations that need clear framing — connecting individual performance patterns to team metrics. Unaddressed performance gaps contribute to regrettable attrition when high performers lose confidence in management.",
     "antiPattern": "Avoid: vague feedback ('you need to step up'). Every concern must have specific examples and measurable improvement criteria."
   },
   {

@@ -1,5 +1,6 @@
 ---
 import { getCapability } from '../../lib/data';
+import { url } from '../../lib/url';
 
 interface Props {
   level: {
@@ -69,7 +70,7 @@ const focusCaps = level.capabilityFocus.map(id => getCapability(id)).filter(Bool
         <h4 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Capability Focus</h4>
         <div class="flex flex-wrap gap-2">
           {focusCaps.map(cap => cap && (
-            <a href={`/capabilities/${cap.slug}/`} class="text-xs px-2 py-1 rounded-full bg-white/60 dark:bg-gray-800/60 text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700 transition-colors">
+            <a href={url(`/capabilities/${cap.slug}/`)} class="text-xs px-2 py-1 rounded-full bg-white/60 dark:bg-gray-800/60 text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700 transition-colors">
               {cap.id}: {cap.name}
             </a>
           ))}

@@ -22,6 +22,7 @@ import {
   getMetricsForCapability,
 } from '../../lib/data';
 import { formatPercent } from '../../lib/utils';
+import { url } from '../../lib/url';
 
 export function getStaticPaths() {
   return capabilities.map(cap => ({
@@ -45,7 +46,7 @@ const relatedMetrics = getMetricsForCapability(cap.id);
 
 <ContentLayout title={`${cap.id}: ${cap.name}`} description={cap.description} currentSlug={cap.slug}>
   <Breadcrumb items={[
-    { label: 'Capabilities', href: '/capabilities/' },
+    { label: 'Capabilities', href: url('/capabilities/') },
     { label: `${cap.id}: ${cap.name}` },
   ]} />
 
@@ -190,7 +191,7 @@ const relatedMetrics = getMetricsForCapability(cap.id);
         </div>
       </div>
       <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
-        <a href="/learning-pathways/" class="text-blue-600 dark:text-blue-400 hover:underline">View all learning pathways &rarr;</a>
+        <a href={url("/learning-pathways/")} class="text-blue-600 dark:text-blue-400 hover:underline">View all learning pathways &rarr;</a>
       </p>
     </section>
   )}
@@ -242,7 +243,7 @@ const relatedMetrics = getMetricsForCapability(cap.id);
       </div>
       <div class="flex items-center gap-4 mt-3 text-sm text-gray-500 dark:text-gray-400">
         <span>Suggested cadence: <strong class="text-gray-700 dark:text-gray-300">{measurement.suggestedCadence}</strong></span>
-        <a href="/measurement-guide/" class="text-blue-600 dark:text-blue-400 hover:underline">Full measurement guide &rarr;</a>
+        <a href={url("/measurement-guide/")} class="text-blue-600 dark:text-blue-400 hover:underline">Full measurement guide &rarr;</a>
       </div>
     </section>
   )}
@@ -258,7 +259,7 @@ const relatedMetrics = getMetricsForCapability(cap.id);
         ))}
       </div>
       <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">
-        <a href="/metrics/" class="text-blue-600 dark:text-blue-400 hover:underline">View all metrics &rarr;</a>
+        <a href={url("/metrics/")} class="text-blue-600 dark:text-blue-400 hover:underline">View all metrics &rarr;</a>
       </p>
     </section>
   )}
@@ -273,7 +274,7 @@ const relatedMetrics = getMetricsForCapability(cap.id);
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
         Behavioral, situational, and technical interview questions mapped to this capability.
       </p>
-      <a href="/interview-questions/" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 text-sm font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+      <a href={url("/interview-questions/")} class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 text-sm font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>

@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import CapabilityCard from '../../components/cards/CapabilityCard.astro';
 import { capabilities } from '../../lib/data';
 import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+import { url } from '../../lib/url';
 
 const capsByDomain = DOMAIN_ORDER.map(domain => ({
   domain,
@@ -27,7 +28,7 @@ const capsByDomain = DOMAIN_ORDER.map(domain => ({
         <div class="flex items-center gap-3 mb-4">
           <h2 class:list={['text-xl font-bold', getDomainColor(domain).text]}>{domain}</h2>
           <span class="text-sm text-gray-500 dark:text-gray-400">{caps.length} capabilities</span>
-          <a href={`/domains/${domain.toLowerCase()}/`} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 ml-auto">
+          <a href={url(`/domains/${domain.toLowerCase()}/`)} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 ml-auto">
             View domain &rarr;
           </a>
         </div>

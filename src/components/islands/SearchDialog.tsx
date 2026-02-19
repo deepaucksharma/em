@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import searchData from '../../data/search-index.json';
+import { url } from '../../lib/url';
 
 interface SearchEntry {
   title: string;
@@ -111,7 +112,7 @@ export default function SearchDialog() {
       e.preventDefault();
       setSelectedIndex(i => Math.max(i - 1, 0));
     } else if (e.key === 'Enter' && results[selectedIndex]) {
-      window.location.href = results[selectedIndex].item.url;
+      window.location.href = url(results[selectedIndex].item.url);
     } else if (e.key === 'Escape') {
       setOpen(false);
     }
@@ -179,7 +180,7 @@ export default function SearchDialog() {
           {results.map((result, i) => (
             <a
               key={result.item.id + result.item.type}
-              href={result.item.url}
+              href={url(result.item.url)}
               style={{
                 display: 'flex',
                 alignItems: 'flex-start',

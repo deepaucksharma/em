@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import InterviewQuestionCard from '../../components/cards/InterviewQuestionCard.astro';
 import { getCapability } from '../../lib/data';
+import { url } from '../../lib/url';
 import interviewData from '../../data/interview-questions.json';
 
 const questions = interviewData as {
@@ -31,7 +32,7 @@ const filtered = questions.filter(q => q.level === level);
 <BaseLayout title={`${levelLabel} Interview Questions`} description={`Interview questions for ${levelLabel} candidates.`}>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <Breadcrumb items={[
-      { label: 'Interview Questions', href: '/interview-questions/' },
+      { label: 'Interview Questions', href: url('/interview-questions/') },
       { label: levelLabel },
     ]} />
 

@@ -71,7 +71,7 @@
         { "task": "Compliance automation", "effort": "high", "successCriteria": ">90% of controls with automated evidence" },
         { "task": "Cost of Delay modeling for major bets", "effort": "medium", "successCriteria": "Used to break ties in prioritization at least once per quarter" }
       ],
-      "metricsActivated": ["10.1", "10.2", "10.3", "10.4", "5.8", "9.2", "9.3", "6.1", "6.2", "6.3", "6.4", "6.5"],
+      "metricsActivated": ["10.1", "10.2", "10.3", "5.8", "9.2", "9.3", "6.1", "6.2", "6.3", "6.4", "6.5"],
       "exitCriteria": "Board-level narrative: \u201cEngineering efficiency improved X% (cost/transaction). We\u2019re [archetype] on DORA. Platform serves Nx users with <2x headcount. AI investment produces measured Y% improvement in Lead Time. Regrettable attrition is below industry benchmark. Technical debt allocation is protected at Z%.\u201d"
     }
   ],
@@ -92,7 +92,7 @@
     },
     {
       "id": "L3",
-      "name": "Goodhart\u2019s Law (Applied)",
+      "name": "The Goodhart Law",
       "statement": "A metric used for individual evaluation destroys the system it measures.",
       "description": "The moment commit counts appear in a performance review, commit counts become meaningless. System metrics measure systems, not people.",
       "example": "Target: 80% test coverage. Result: Engineers write trivial tests for getters/setters to hit the number. The coverage metric looks great while critical business logic remains untested."

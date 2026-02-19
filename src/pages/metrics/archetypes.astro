@@ -3,9 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import ArchetypeCard from '../../components/cards/ArchetypeCard.astro';
 import { archetypes, metricsLaws } from '../../lib/data';
+import { url } from '../../lib/url';
+
+const pageDescription = `${archetypes.length} organizational archetypes from the DORA research program. Diagnose your team's systemic conditions before applying any metric.`;
 ---
 
-<BaseLayout title="Organizational Archetypes" description="7 organizational archetypes from the 2025 DORA research. Diagnose your team's systemic conditions before applying any metric.">
+<BaseLayout title="Organizational Archetypes" description={pageDescription}>
   <!-- Hero -->
   <section class="relative bg-gradient-to-br from-amber-50 via-orange-50/50 to-white dark:from-gray-800 dark:via-slate-800 dark:to-gray-900 border-b border-gray-200 dark:border-gray-800 overflow-hidden">
     <div class="hero-pattern absolute inset-0 pointer-events-none"></div>
@@ -18,10 +21,10 @@ import { archetypes, metricsLaws } from '../../lib/data';
       <div class="max-w-3xl">
         <nav class="mb-6">
           <ol class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400">
-            <li><a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a></li>
+            <li><a href={url("/")} class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a></li>
             <li class="flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-              <a href="/metrics/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Metrics</a>
+              <a href={url("/metrics/")} class="hover:text-gray-900 dark:hover:text-white transition-colors">Metrics</a>
             </li>
             <li class="flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
@@ -36,14 +39,14 @@ import { archetypes, metricsLaws } from '../../lib/data';
           Before applying any metric, identify your archetype.
         </p>
         <p class="text-lg text-gray-500 dark:text-gray-400 mb-8">
-          The 2025 DORA research established that delivery performance must be contextualized by systemic conditions.
+          The DORA research program established that delivery performance must be contextualized by systemic conditions.
           {archetypes.length} archetypes capture the full spectrum from sustainable excellence to foundational crisis.
         </p>
         <div class="flex flex-wrap gap-3">
           <a href="#archetypes-list" class="inline-flex items-center px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
             View Archetypes
           </a>
-          <a href="/metrics/diagnostics/" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <a href={url("/metrics/diagnostics/")} class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
             Diagnostic Chains
           </a>
         </div>
@@ -80,6 +83,26 @@ import { archetypes, metricsLaws } from '../../lib/data';
       ))}
     </section>
 
+    <!-- Hybrid Patterns Note -->
+    <section class="mb-12">
+      <div class="rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/20 p-6">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+          </svg>
+          <div>
+            <h3 class="text-sm font-bold text-blue-800 dark:text-blue-300 uppercase tracking-wider mb-2">Hybrid Patterns</h3>
+            <p class="text-sm text-blue-700 dark:text-blue-200 leading-relaxed">
+              Most teams won't map perfectly to a single archetype. It's common to exhibit characteristics of 2-3 archetypes simultaneously
+              (e.g., a Legacy Bottleneck team that's also Constrained by Process). When this happens, prioritize the archetype whose
+              <strong>first priority</strong> addresses the most urgent systemic risk. Use the diagnostic thresholds to determine which
+              archetype's conditions are most severe, and start there. Revisit your archetype classification quarterly as conditions evolve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Cross-links -->
     <section class="space-y-4">
       <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6 text-center">
@@ -87,7 +110,7 @@ import { archetypes, metricsLaws } from '../../lib/data';
         <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
           Each archetype has a customized set of recommended metrics, dashboard configuration notes, and diagnostic chains.
         </p>
-        <a href="/metrics/by-archetype/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+        <a href={url("/metrics/by-archetype/")} class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
@@ -99,7 +122,7 @@ import { archetypes, metricsLaws } from '../../lib/data';
         <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
           Once you've identified your archetype, use the diagnostic chains to investigate metric anomalies step by step.
         </p>
-        <a href="/metrics/diagnostics/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+        <a href={url("/metrics/diagnostics/")} class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>

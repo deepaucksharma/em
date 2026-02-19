@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { capabilities, getCapability } from '../../lib/data';
 import { DOMAIN_ORDER, getDomainColor } from '../../lib/utils';
+import { url } from '../../lib/url';
 import learningData from '../../data/learning-pathways.json';
 
 type LearningItem = { title: string; type: string; description: string; url?: string };
@@ -53,7 +54,7 @@ const typeIcon: Record<string, string> = {
             <div class="flex items-center gap-3 mb-4">
               <Badge text={cap.domain} variant="domain" domain={cap.domain} />
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                <a href={`/capabilities/${cap.slug}/`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <a href={url(`/capabilities/${cap.slug}/`)} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   {cap.id}: {cap.name}
                 </a>
               </h3>

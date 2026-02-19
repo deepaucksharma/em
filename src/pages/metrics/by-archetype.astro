@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import TierBadge from '../../components/ui/TierBadge.astro';
 import { archetypes, getMetric, diagnosticChains, metricsRoadmap, getRecommendedMetricsForArchetype } from '../../lib/data';
 import { getSeverityColors } from '../../lib/metrics-colors';
+import { url } from '../../lib/url';
 ---
 
 <BaseLayout title="Metrics by Archetype" description="Recommended metrics, dashboards, and diagnostic chains tailored to each organizational archetype.">
@@ -13,7 +14,7 @@ import { getSeverityColors } from '../../lib/metrics-colors';
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div class="max-w-3xl">
         <Breadcrumb items={[
-          { label: 'Metrics', href: '/metrics/' },
+          { label: 'Metrics', href: url('/metrics/') },
           { label: 'By Archetype' },
         ]} />
         <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
@@ -27,7 +28,7 @@ import { getSeverityColors } from '../../lib/metrics-colors';
           Find your archetype and get a customized starting point.
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="/metrics/getting-started/" class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <a href={url("/metrics/getting-started/")} class="inline-flex items-center px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
             Not sure which archetype? Take the quiz
           </a>
         </div>
@@ -92,7 +93,7 @@ import { getSeverityColors } from '../../lib/metrics-colors';
                   <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Recommended Metrics</h3>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {recommended.map((m, i) => (
-                      <a href={`/metrics/${m.slug}/`} class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 px-3 py-2 hover:border-amber-300 dark:hover:border-amber-700 transition-colors">
+                      <a href={url(`/metrics/${m.slug}/`)} class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 px-3 py-2 hover:border-amber-300 dark:hover:border-amber-700 transition-colors">
                         <span class:list={['inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold', i < 3 ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400']}>
                           {i + 1}
                         </span>
@@ -121,11 +122,20 @@ import { getSeverityColors } from '../../lib/metrics-colors';
                   <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Diagnostic Chains to Watch</h3>
                   <div class="flex flex-wrap gap-2">
                     {relevantChains.map(dc => (
-                      <a href={`/metrics/diagnostics/#${dc.slug}`} class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-xs font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+                      <a href={url(`/metrics/diagnostics/#${dc.slug}`)} class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-xs font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
                         {dc.id}: {dc.triggerCondition}
                       </a>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Tier Override Note - show for archetypes where activity-tier metrics are top-ranked */}
+              {(arch.id === 'A9' || arch.id === 'A8') && (
+                <div class="rounded-lg bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 p-3 mt-4">
+                  <p class="text-xs text-blue-700 dark:text-blue-300">
+                    <strong>Note:</strong> Archetype-specific recommendations may override general tier-based adoption guidance when structural risk demands it. Activity-tier metrics may appear at higher priority positions for this archetype.
+                  </p>
                 </div>
               )}
 
@@ -147,10 +157,10 @@ import { getSeverityColors } from '../../lib/metrics-colors';
         Follow the getting started guide to go from archetype identification to habitual measurement in 90 days.
       </p>
       <div class="flex flex-wrap justify-center gap-3">
-        <a href="/metrics/getting-started/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+        <a href={url("/metrics/getting-started/")} class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
           Getting Started Guide
         </a>
-        <a href="/metrics/dashboards/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+        <a href={url("/metrics/dashboards/")} class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
           Dashboard Blueprints
         </a>
       </div>

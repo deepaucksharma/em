@@ -1,4 +1,6 @@
 ---
+import { url } from '../../lib/url';
+
 interface Props {
   level: {
     level: number;
@@ -24,7 +26,7 @@ const levelColors: Record<number, { accent: string; bg: string; border: string }
 const colors = levelColors[level.level] || levelColors[1];
 ---
 
-<a href={`/career-progression/${level.slug}/`} class:list={['card group block', active && `ring-2 ring-blue-400 dark:ring-blue-600`]}>
+<a href={url(`/career-progression/${level.slug}/`)} class:list={['card group block', active && `ring-2 ring-blue-400 dark:ring-blue-600`]}>
   <div class="flex items-center gap-3 mb-3">
     <span class:list={['text-2xl font-extrabold', colors.accent]}>L{level.level}</span>
     <div>

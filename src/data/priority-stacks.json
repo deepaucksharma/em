@@ -2,7 +2,7 @@
   "em": [
     { "rank": 1, "metricId": "1.2", "dashboard": "main", "cadence": "weekly", "rationale": "Most actionable, causal, decomposable delivery metric. Fix the long pole and everything else improves." },
     { "rank": 2, "metricId": "3.3", "dashboard": "main", "cadence": "weekly", "rationale": "The arbitration tool. Budget remaining → ship. Budget burned → freeze. Turns politics into math." },
-    { "rank": 3, "metricId": "5.4", "dashboard": "main", "cadence": "weekly", "rationale": "Often 40-60% of Lead Time. The #1 AI-era bottleneck — AI-generated PRs inflate review load. Biggest lever for LT improvement." },
+    { "rank": 3, "metricId": "5.4", "dashboard": "main", "cadence": "weekly", "rationale": "Often 40-60% of Lead Time. A top AI-era bottleneck — AI-generated PRs inflate review load. Biggest lever for LT improvement." },
     { "rank": 4, "metricId": "1.4", "dashboard": "main", "cadence": "weekly", "rationale": "Quality counterweight to velocity. Without it, you might be shipping garbage fast." },
     { "rank": 5, "metricId": "5.1", "dashboard": "main", "cadence": "quarterly", "rationale": "Only cheap, reliable leading indicator of attrition and velocity decline. 5 questions, 10 minutes." },
     { "rank": 6, "metricId": "2.5", "dashboard": "main", "cadence": "per-sprint", "rationale": "Best proxy for predictability. 85%+ earns trust and autonomy." },

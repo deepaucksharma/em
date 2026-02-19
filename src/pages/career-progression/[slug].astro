@@ -3,6 +3,7 @@ import ContentLayout from '../../layouts/ContentLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { getCapability } from '../../lib/data';
+import { url } from '../../lib/url';
 import careerData from '../../data/career-progression.json';
 
 const career = careerData as { levels: any[] };
@@ -33,7 +34,7 @@ const expectationColors: Record<string, { bg: string; text: string }> = {
 <ContentLayout title={level.title} description={level.scope} currentSlug={slug} showSidebar={false}>
   <div class="max-w-4xl mx-auto">
     <Breadcrumb items={[
-      { label: 'Career Progression', href: '/career-progression/' },
+      { label: 'Career Progression', href: url('/career-progression/') },
       { label: level.title },
     ]} />
 
@@ -64,7 +65,7 @@ const expectationColors: Record<string, { bg: string; text: string }> = {
       <h2 class="section-heading">Capability Expectations</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {capExpectations.map(({ capability: cap, expectation }) => cap && (
-          <a href={`/capabilities/${cap.slug}/`} class="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+          <a href={url(`/capabilities/${cap.slug}/`)} class="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
             <div class="flex items-center gap-2">
               <Badge text={cap.domain} variant="domain" domain={cap.domain} />
               <span class="text-sm text-gray-700 dark:text-gray-300">{cap.id}: {cap.name}</span>

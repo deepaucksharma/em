@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/ui/Breadcrumb.astro';
 import { techDebtEconomics } from '../../lib/data';
+import { url } from '../../lib/url';
 
 const { coreNumbers, investmentMandate, cd3, decisionTest } = techDebtEconomics;
 
@@ -22,10 +23,10 @@ const cd3Sorted = [...cd3.example].sort((a, b) => a.priority - b.priority);
       <div class="max-w-3xl">
         <nav class="mb-6">
           <ol class="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400">
-            <li><a href="/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a></li>
+            <li><a href={url("/")} class="hover:text-gray-900 dark:hover:text-white transition-colors">Home</a></li>
             <li class="flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-              <a href="/metrics/" class="hover:text-gray-900 dark:hover:text-white transition-colors">Metrics</a>
+              <a href={url("/metrics/")} class="hover:text-gray-900 dark:hover:text-white transition-colors">Metrics</a>
             </li>
             <li class="flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
@@ -106,6 +107,9 @@ const cd3Sorted = [...cd3.example].sort((a, b) => a.priority - b.priority);
     <!-- CD3 Prioritization -->
     <section id="cd3" class="mb-16">
       <h2 class="section-heading text-gray-900 dark:text-white">CD3 Prioritization</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-2">
+        <strong>CD3</strong> stands for <em>Cost of Delay Divided by Duration</em> — a mathematical approach to sequencing work by economic impact.
+      </p>
       <p class="text-gray-600 dark:text-gray-400 mb-6">
         {cd3.description}
       </p>
@@ -154,7 +158,7 @@ const cd3Sorted = [...cd3.example].sort((a, b) => a.priority - b.priority);
                   <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">{row.initiative}</td>
                   <td class="px-4 py-3 text-right text-gray-600 dark:text-gray-400 font-mono">{row.duration}</td>
                   <td class="px-4 py-3 text-right text-gray-600 dark:text-gray-400 font-mono">${row.weeklyValue.toLocaleString()}</td>
-                  <td class="px-4 py-3 text-right font-mono font-bold text-gray-900 dark:text-white">{row.cd3.toFixed(3)}</td>
+                  <td class="px-4 py-3 text-right font-mono font-bold text-gray-900 dark:text-white">${row.cd3.toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
@@ -199,17 +203,17 @@ const cd3Sorted = [...cd3.example].sort((a, b) => a.priority - b.priority);
         <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
           <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-2">Investment Mix (8.4)</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Place on your QBR dashboard. Track quarterly capacity split between features, reliability, debt, and security.</p>
-          <a href="/metrics/engineering-investment-mix/" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">View metric detail &rarr;</a>
+          <a href={url("/metrics/engineering-investment-mix/")} class="text-sm text-blue-600 dark:text-blue-400 hover:underline">View metric detail &rarr;</a>
         </div>
         <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5">
           <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-2">Tech Debt Ratio (8.6)</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Track on drill-down dashboard. Use trend to justify remediation investment and monitor paydown progress.</p>
-          <a href="/metrics/tech-debt-ratio/" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">View metric detail &rarr;</a>
+          <a href={url("/metrics/tech-debt-ratio/")} class="text-sm text-blue-600 dark:text-blue-400 hover:underline">View metric detail &rarr;</a>
         </div>
       </div>
       <div class="mt-4 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 p-4">
         <p class="text-sm text-amber-800 dark:text-amber-300">
-          <strong>Archetype context:</strong> If you're an <a href="/metrics/archetypes/#legacy-bottleneck" class="underline font-medium">A6: Legacy Bottleneck</a> team, Investment Mix and Tech Debt Ratio are your primary investment arguments. Use CD3 above to prioritize which debt to pay down first.
+          <strong>Archetype context:</strong> If you're an <a href={url("/metrics/archetypes/#legacy-bottleneck")} class="underline font-medium">A6: Legacy Bottleneck</a> team, Investment Mix and Tech Debt Ratio are your primary investment arguments. Use CD3 above to prioritize which debt to pay down first.
         </p>
       </div>
     </section>
@@ -222,10 +226,10 @@ const cd3Sorted = [...cd3.example].sort((a, b) => a.priority - b.priority);
           Use the Investment Mix metric to monitor the ratio of feature work, reliability investment, and debt remediation across your portfolio.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
-          <a href="/metrics/engineering-investment-mix/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
+          <a href={url("/metrics/engineering-investment-mix/")} class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition-colors">
             Investment Mix Detail
           </a>
-          <a href="/metrics/dashboards/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+          <a href={url("/metrics/dashboards/")} class="inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
             Dashboard Blueprints
           </a>
         </div>

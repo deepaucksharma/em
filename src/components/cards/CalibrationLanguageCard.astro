@@ -1,6 +1,7 @@
 ---
 import type { CalibrationLanguageEntry } from '../../lib/data';
 import { getMetric } from '../../lib/data';
+import { url } from '../../lib/url';
 
 interface Props {
   entry: CalibrationLanguageEntry;
@@ -48,7 +49,7 @@ const highlightedTemplate = entry.template.replace(
       {entry.role.toUpperCase()}
     </span>
     {metric && (
-      <a href={`/metrics/${metric.slug}/`} class="text-xs text-blue-600 dark:text-blue-400 hover:underline">
+      <a href={url(`/metrics/${metric.slug}/`)} class="text-xs text-blue-600 dark:text-blue-400 hover:underline">
         {metric.name}
       </a>
     )}
