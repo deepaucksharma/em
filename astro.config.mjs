@@ -3,7 +3,8 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://engineering-leadership-matrix.dev',
+  site: 'https://deepaucksharma.github.io',
+  base: '/em',
   integrations: [
     react(),
     sitemap(),
