@@ -1617,7 +1617,7 @@
       "C14-O7"
     ],
     "capabilityId": "C14",
-    "shortDesc": "Manager avoids giving negative performance feedback, creating a predictable failure cascade: small issues go unaddressed for months, the engineer has no signal to course-correct, performance degrades further, and the first honest feedback arrives as a PIP or low rating — destroying trust and making recovery nearly impossible because the engineer never had a chance to improve.",
+    "shortDesc": "Manager avoids giving negative performance feedback until it's too late, letting small issues compound for months without a signal to course-correct. The first honest feedback arrives as a PIP or low rating, destroying trust and making recovery nearly impossible because the engineer never had a chance to improve.",
     "warningSigns": [
       "1:1 notes show only positive feedback for an engineer whose performance is declining",
       "Manager uses phrases like 'they'll figure it out' or 'I don't want to micromanage'",

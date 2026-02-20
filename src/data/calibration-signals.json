@@ -11,7 +11,7 @@
     "id": "SIG-002",
     "observableId": "C3-O2",
     "capabilityId": "C3",
-    "signalText": "Directors: 'Institutionalized design review process across org \u2014 reduced production incidents from design gaps by X%'. Google's design review process requires a TL-reviewed design doc for any change touching >500 lines or crossing service boundaries; Meta's similar threshold is any project exceeding 2 eng-weeks.",
+    "signalText": "Directors: 'Institutionalized design review process across org — reduced production incidents from design gaps by X%'. Google's design review process requires a TL-reviewed design doc for any change touching >500 lines or crossing service boundaries; Meta's similar threshold is any project exceeding 2 eng-weeks.",
     "signalType": "metric",
     "sourceSubTopic": "Architecture Review Process"
   },
@@ -59,7 +59,7 @@
     "id": "SIG-008",
     "observableId": "C3-O7",
     "capabilityId": "C3",
-    "signalText": "Table-stakes expectation \u2014 absence is a red flag. 'Instrumented [X] services, reduced mean time to diagnose from Y hours to Z minutes'. Google's observability standard requires every service to have SLIs with automated alerting; Netflix's approach mandates distributed tracing on 100% of requests across all microservices.",
+    "signalText": "Table-stakes expectation — absence is a red flag. 'Instrumented [X] services, reduced mean time to diagnose from Y hours to Z minutes'. Google's observability standard requires every service to have SLIs with automated alerting; Netflix's approach mandates distributed tracing on 100% of requests across all microservices.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Observability Strategy"
   },
@@ -147,7 +147,7 @@
     "id": "SIG-019",
     "observableId": "C4-O4",
     "capabilityId": "C4",
-    "signalText": "Leverage-thinking: 'Automated [X], saving [Y] eng-hours/quarter, equivalent to [Z] FTE capacity reclaimed'. Amazon's 'Invent and Simplify' leadership principle rewards automation that eliminates toil; Google SRE mandates that teams spend no more than 50% of time on operational toil \u2014 exceeding this triggers a formal review to automate or re-architect.",
+    "signalText": "Leverage-thinking: 'Automated [X], saving [Y] eng-hours/quarter, equivalent to [Z] FTE capacity reclaimed'. Amazon's 'Invent and Simplify' leadership principle rewards automation that eliminates toil; Google SRE mandates that teams spend no more than 50% of time on operational toil — exceeding this triggers a formal review to automate or re-architect.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Toil Reduction & Automation"
   },
@@ -179,7 +179,7 @@
     "id": "SIG-023",
     "observableId": "C4-O2",
     "capabilityId": "C4",
-    "signalText": "Execution credibility: 'Team delivers 85%+ of committed scope for 3+ consecutive quarters' \u2014 this earns trust and autonomy from leadership. Amazon's OP1/OP2 planning process tracks commit-vs-deliver ratio at the VP level; teams consistently below 80% face escalation. Google's OKR framework expects 70% achievement on stretch goals as healthy.",
+    "signalText": "Execution credibility: 'Team delivers 85%+ of committed scope for 3+ consecutive quarters' — this earns trust and autonomy from leadership. Amazon's OP1/OP2 planning process tracks commit-vs-deliver ratio at the VP level; teams consistently below 80% face escalation. Google's OKR framework expects 70% achievement on stretch goals as healthy.",
     "signalType": "metric",
     "sourceSubTopic": "Sprint/Cycle Health"
   },
@@ -187,7 +187,7 @@
     "id": "SIG-024",
     "observableId": "C13-O1",
     "capabilityId": "C13",
-    "signalText": "EMs ensure team follows security processes \u2014 this is a compliance signal. Gaps here create VP-level visibility in the wrong way",
+    "signalText": "EMs ensure team follows security processes — this is a compliance signal. Gaps here create VP-level visibility in the wrong way",
     "signalType": "manager_observation",
     "sourceSubTopic": "Security Review Integration"
   },
@@ -195,7 +195,7 @@
     "id": "SIG-025",
     "observableId": "C13-O2",
     "capabilityId": "C13",
-    "signalText": "Auditors and security teams track this. EM ownership is non-negotiable \u2014 'Zero critical CVEs beyond SLA for [X] consecutive quarters'",
+    "signalText": "Auditors and security teams track this. EM ownership is non-negotiable — 'Zero critical CVEs beyond SLA for [X] consecutive quarters'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Vulnerability Management"
   },
@@ -203,7 +203,7 @@
     "id": "SIG-026",
     "observableId": "C13-O3",
     "capabilityId": "C13",
-    "signalText": "Compliance requirement at Big Tech \u2014 EMs who ignore this create org-level risk and VP-level escalations",
+    "signalText": "Compliance requirement at Big Tech — EMs who ignore this create org-level risk and VP-level escalations",
     "signalType": "calibration_language",
     "sourceSubTopic": "Access Control & Least Privilege"
   },
@@ -219,7 +219,7 @@
     "id": "SIG-028",
     "observableId": "C4-O10",
     "capabilityId": "C4",
-    "signalText": "Directors drive change management culture across org. 'Implemented tiered change management \u2014 change-induced incidents reduced X%'",
+    "signalText": "Directors drive change management culture across org. 'Implemented tiered change management — change-induced incidents reduced X%'",
     "signalType": "metric",
     "sourceSubTopic": "Change Management Discipline"
   },
@@ -227,7 +227,7 @@
     "id": "SIG-029",
     "observableId": "C13-O4",
     "capabilityId": "C13",
-    "signalText": "Table-stakes at Big Tech \u2014 SOC2, GDPR, internal controls. 'Zero P1/P2 findings in 3+ consecutive audit cycles with automated evidence collection'",
+    "signalText": "Table-stakes at Big Tech — SOC2, GDPR, internal controls. 'Zero P1/P2 findings in 3+ consecutive audit cycles with automated evidence collection'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Compliance & Audit Readiness"
   },
@@ -259,7 +259,7 @@
     "id": "SIG-033",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "Standard practice at Big Tech \u2014 EMs who skip this create visible risk. 'Zero Sev1 incidents on launches in [X] quarters through readiness discipline'. Google's Launch Readiness Review (LRR) is a mandatory gate requiring sign-off from SRE, security, and privacy before any user-facing launch; Amazon's Operational Readiness Review (ORR) checklist has 100+ items covering scaling, monitoring, and rollback.",
+    "signalText": "Standard practice at Big Tech — EMs who skip this create visible risk. 'Zero Sev1 incidents on launches in [X] quarters through readiness discipline'. Google's Launch Readiness Review (LRR) is a mandatory gate requiring sign-off from SRE, security, and privacy before any user-facing launch; Amazon's Operational Readiness Review (ORR) checklist has 100+ items covering scaling, monitoring, and rollback.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Launch Readiness Reviews"
   },
@@ -267,7 +267,7 @@
     "id": "SIG-034",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "'Identified and mitigated [X] failure modes proactively \u2014 prevented [estimated Y] incidents'. Netflix's Chaos Engineering practice (Chaos Monkey, Chaos Kong) requires teams to prove resilience through regular failure injection in production; Google's DiRT exercises simulate multi-region failures annually to validate disaster recovery.",
+    "signalText": "'Identified and mitigated [X] failure modes proactively — prevented [estimated Y] incidents'. Netflix's Chaos Engineering practice (Chaos Monkey, Chaos Kong) requires teams to prove resilience through regular failure injection in production; Google's DiRT exercises simulate multi-region failures annually to validate disaster recovery.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Failure Mode Analysis"
   },
@@ -275,7 +275,7 @@
     "id": "SIG-035",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "Cross-org risk awareness: 'Mapped [X] critical dependencies, implemented fallbacks \u2014 survived [upstream team]'s outage with zero customer impact' Google's Production Readiness Review (PRR) requires explicit dependency mapping with fallback strategies documented; Amazon's architecture review board mandates that services degrade gracefully when any single dependency fails.",
+    "signalText": "Cross-org risk awareness: 'Mapped [X] critical dependencies, implemented fallbacks — survived [upstream team]'s outage with zero customer impact' Google's Production Readiness Review (PRR) requires explicit dependency mapping with fallback strategies documented; Amazon's architecture review board mandates that services degrade gracefully when any single dependency fails.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Dependency Risk Assessment"
   },
@@ -299,7 +299,7 @@
     "id": "SIG-038",
     "observableId": "C1-O1",
     "capabilityId": "C1",
-    "signalText": "Key signal in re-org proposals: 'Team owns too much \u2014 proposed split based on cognitive load analysis'",
+    "signalText": "Key signal in re-org proposals: 'Team owns too much — proposed split based on cognitive load analysis'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Team Cognitive Load"
   },
@@ -307,7 +307,7 @@
     "id": "SIG-039",
     "observableId": "C1-O2",
     "capabilityId": "C1",
-    "signalText": "Director-level insight: 'Applied inverse Conway \u2014 re-orged teams to align with target microservices architecture, enabling independent deployment'. Amazon's VP-level org reviews explicitly evaluate whether team boundaries mirror service boundaries; Netflix credits its 'full-cycle developer' model (teams own end-to-end) for achieving hundreds of deploys per day.",
+    "signalText": "Director-level insight: 'Applied inverse Conway — re-orged teams to align with target microservices architecture, enabling independent deployment'. Amazon's VP-level org reviews explicitly evaluate whether team boundaries mirror service boundaries; Netflix credits its 'full-cycle developer' model (teams own end-to-end) for achieving hundreds of deploys per day.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Conway's Law (Intentional)"
   },
@@ -331,7 +331,7 @@
     "id": "SIG-042",
     "observableId": "C1-O5",
     "capabilityId": "C1",
-    "signalText": "Amazon principle applied broadly \u2014 calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'. Amazon's Leadership Principle 'Ownership' is the most frequently cited in promo docs; candidates must demonstrate they 'never say that's not my job.'. Google's equivalent is 'no haunted graveyards' \u2014 every system must have a clear owning team.",
+    "signalText": "Amazon principle applied broadly — calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'. Amazon's Leadership Principle 'Ownership' is the most frequently cited in promo docs; candidates must demonstrate they 'never say that's not my job.'. Google's equivalent is 'no haunted graveyards' — every system must have a clear owning team.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Single-Threaded Ownership"
   },
@@ -339,7 +339,7 @@
     "id": "SIG-043",
     "observableId": "C12-O1",
     "capabilityId": "C12",
-    "signalText": "Google's Project Aristotle (2015): #1 predictor of team effectiveness. Measured through skip-level feedback and team health surveys. The study found psychological safety was the strongest predictor of team performance across 180+ teams, above dependability, structure, meaning, and impact \u2014 this finding is now embedded in Google's manager training and team health assessment frameworks.",
+    "signalText": "Google's Project Aristotle (2015): #1 predictor of team effectiveness. Measured through skip-level feedback and team health surveys. The study found psychological safety was the strongest predictor of team performance across 180+ teams, above dependability, structure, meaning, and impact — this finding is now embedded in Google's manager training and team health assessment frameworks.",
     "signalType": "peer_feedback",
     "sourceSubTopic": "Building Psychological Safety"
   },
@@ -371,7 +371,7 @@
     "id": "SIG-047",
     "observableId": "C6-O2",
     "capabilityId": "C6",
-    "signalText": "THE hardest EM skill. Calibration committees notice avoidance \u2014 'entire team rated Exceeds Expectations' is a credibility killer. Google calibration committees explicitly flag managers with no 'Needs Improvement' ratings across 2+ cycles as potential calibration problems; Amazon's stack-ranking guidance expects a roughly normal distribution across teams >8 people.",
+    "signalText": "THE hardest EM skill. Calibration committees notice avoidance — 'entire team rated Exceeds Expectations' is a credibility killer. Google calibration committees explicitly flag managers with no 'Needs Improvement' ratings across 2+ cycles as potential calibration problems; Amazon's stack-ranking guidance expects a roughly normal distribution across teams >8 people.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Handling Underperformance"
   },
@@ -427,7 +427,7 @@
     "id": "SIG-054",
     "observableId": "C6-O3",
     "capabilityId": "C6",
-    "signalText": "Retention is a lagging indicator \u2014 leading indicators include engagement scores, 1:1 sentiment trends, and skip-level candor. 'Identified flight risk 3 months before resignation through [engagement signal], intervened with [action]'",
+    "signalText": "Retention is a lagging indicator — leading indicators include engagement scores, 1:1 sentiment trends, and skip-level candor. 'Identified flight risk 3 months before resignation through [engagement signal], intervened with [action]'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Flight Risk Leading Indicators"
   },
@@ -443,7 +443,7 @@
     "id": "SIG-056",
     "observableId": "C10-O2",
     "capabilityId": "C10",
-    "signalText": "'During [X]% budget cut, re-prioritized roadmap, maintained delivery on top-3 priorities, transparently paused [Y]'. Amazon Leadership Principle 'Frugality' treats budget constraint navigation as a leadership differentiator \u2014 maintaining delivery through cuts is an explicit promotion signal.",
+    "signalText": "'During [X]% budget cut, re-prioritized roadmap, maintained delivery on top-3 priorities, transparently paused [Y]'. Amazon Leadership Principle 'Frugality' treats budget constraint navigation as a leadership differentiator — maintaining delivery through cuts is an explicit promotion signal.",
     "signalType": "metric",
     "sourceSubTopic": "Budget Cuts & Doing More With Less"
   },
@@ -515,7 +515,7 @@
     "id": "SIG-065",
     "observableId": "C11-O1",
     "capabilityId": "C11",
-    "signalText": "Big Tech hiring is committee-based \u2014 EM must ensure team's interviews generate strong signal. 'Trained [X] calibrated interviewers, interview-to-offer conversion improved Y%'",
+    "signalText": "Big Tech hiring is committee-based — EM must ensure team's interviews generate strong signal. 'Trained [X] calibrated interviewers, interview-to-offer conversion improved Y%'",
     "signalType": "metric",
     "sourceSubTopic": "Calibrated Hiring Loops"
   },
@@ -595,7 +595,7 @@
     "id": "SIG-075",
     "observableId": "C14-O1",
     "capabilityId": "C14",
-    "signalText": "Core craft skill. Calibration committees can tell lazy reviews immediately \u2014 vague language ('did great work') vs. specific ('drove X resulting in Y, demonstrating next-level Z'). Google calibration committees explicitly flag vague language as evidence of insufficient manager investment; Amazon's promo narratives must follow the STAR format (Situation, Task, Action, Result) with quantified impact for every claim.",
+    "signalText": "Core craft skill. Calibration committees can tell lazy reviews immediately — vague language ('did great work') vs. specific ('drove X resulting in Y, demonstrating next-level Z'). Google calibration committees explicitly flag vague language as evidence of insufficient manager investment; Amazon's promo narratives must follow the STAR format (Situation, Task, Action, Result) with quantified impact for every claim.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Writing Performance Reviews"
   },
@@ -611,7 +611,7 @@
     "id": "SIG-077",
     "observableId": "C14-O3",
     "capabilityId": "C14",
-    "signalText": "Directors manage distribution across their EMs \u2014 the meta-calibration. 'Managed distribution across [X] EMs, maintained consistency and zero escalations'",
+    "signalText": "Directors manage distribution across their EMs — the meta-calibration. 'Managed distribution across [X] EMs, maintained consistency and zero escalations'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Ratings Distribution Management"
   },
@@ -619,7 +619,7 @@
     "id": "SIG-078",
     "observableId": "C14-O4",
     "capabilityId": "C14",
-    "signalText": "'No surprises' policy \u2014 confirmed through skip-level feedback. Direct reports consistently say they know where they stand",
+    "signalText": "'No surprises' policy — confirmed through skip-level feedback. Direct reports consistently say they know where they stand",
     "signalType": "peer_feedback",
     "sourceSubTopic": "Delivering Performance Feedback"
   },
@@ -627,7 +627,7 @@
     "id": "SIG-079",
     "observableId": "C14-O5",
     "capabilityId": "C14",
-    "signalText": "'Promoted [X] engineers in [Y] cycles' \u2014 high-performing EM signal. Promo packet quality reflects EM craft. At Google, promotion packets require peer reviews from outside the direct team evidencing cross-team impact; Amazon's promo docs require a 6-pager narrative with specific Leadership Principle mappings for every significant achievement.",
+    "signalText": "'Promoted [X] engineers in [Y] cycles' — high-performing EM signal. Promo packet quality reflects EM craft. At Google, promotion packets require peer reviews from outside the direct team evidencing cross-team impact; Amazon's promo docs require a 6-pager narrative with specific Leadership Principle mappings for every significant achievement.",
     "signalType": "promo_packet",
     "sourceSubTopic": "Promo Packet Construction"
   },
@@ -667,7 +667,7 @@
     "id": "SIG-084",
     "observableId": "C14-O6",
     "capabilityId": "C14",
-    "signalText": "The hardest thing an EM does. Avoidance is the most common failure mode \u2014 and it's visible in team health and calibration. Netflix's Keeper Test asks managers 'Would I fight to keep this person?' \u2014 avoidance of this honest assessment is the most common failure mode for underperforming manager cultures.",
+    "signalText": "The hardest thing an EM does. Avoidance is the most common failure mode — and it's visible in team health and calibration. Netflix's Keeper Test asks managers 'Would I fight to keep this person?' — avoidance of this honest assessment is the most common failure mode for underperforming manager cultures.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Managing Out"
   },
@@ -675,7 +675,7 @@
     "id": "SIG-085",
     "observableId": "C14-O6",
     "capabilityId": "C14",
-    "signalText": "Company-specific knowledge that EMs must master \u2014 no room for error. 'Executed [X] performance processes with zero procedural issues'",
+    "signalText": "Company-specific knowledge that EMs must master — no room for error. 'Executed [X] performance processes with zero procedural issues'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Focus/Pivot/Dev Plan Mechanics"
   },
@@ -683,7 +683,7 @@
     "id": "SIG-086",
     "observableId": "C12-O2",
     "capabilityId": "C12",
-    "signalText": "Intentional culture-building signal: 'Established team charter adopted by [X] engineers, referenced in onboarding and retros'. Spotify squads create explicit team charters covering mission, working agreements, and decision-making authority \u2014 these are reviewed quarterly and referenced in retrospectives.",
+    "signalText": "Intentional culture-building signal: 'Established team charter adopted by [X] engineers, referenced in onboarding and retros'. Spotify squads create explicit team charters covering mission, working agreements, and decision-making authority — these are reviewed quarterly and referenced in retrospectives.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Team Charter & Working Agreement"
   },
@@ -731,7 +731,7 @@
     "id": "SIG-092",
     "observableId": "C6-O6",
     "capabilityId": "C6",
-    "signalText": "Director's primary output is EM quality \u2014 measured by EM's team outcomes, EM's team health, EM's retention numbers",
+    "signalText": "Director's primary output is EM quality — measured by EM's team outcomes, EM's team health, EM's retention numbers",
     "signalType": "metric",
     "sourceSubTopic": "EM Coaching & Development"
   },
@@ -739,7 +739,7 @@
     "id": "SIG-093",
     "observableId": "C6-O6",
     "capabilityId": "C6",
-    "signalText": "Standard Director practice \u2014 absence is a red flag. 'Regular skip-level 1:1s identified [X] issue before it became a retention risk'",
+    "signalText": "Standard Director practice — absence is a red flag. 'Regular skip-level 1:1s identified [X] issue before it became a retention risk'",
     "signalType": "peer_feedback",
     "sourceSubTopic": "Skip-Level 1:1s"
   },
@@ -763,7 +763,7 @@
     "id": "SIG-096",
     "observableId": "C6-O7",
     "capabilityId": "C6",
-    "signalText": "'Developed [X] engineers into management roles' \u2014 org building evidence. 'EM transition to new role had zero team disruption due to succession planning'",
+    "signalText": "'Developed [X] engineers into management roles' — org building evidence. 'EM transition to new role had zero team disruption due to succession planning'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Building EM Bench Strength"
   },
@@ -835,7 +835,7 @@
     "id": "SIG-105",
     "observableId": "C9-O5",
     "capabilityId": "C9",
-    "signalText": "The highest-leverage framing skill for EM/Director: 'Reduced p99 latency 40%, driving estimated 2% conversion lift worth $Xm ARR'. Amazon weekly business reviews demand this exact translation from technical metrics to customer and revenue outcomes \u2014 every operational metric must link to a business result.",
+    "signalText": "The highest-leverage framing skill for EM/Director: 'Reduced p99 latency 40%, driving estimated 2% conversion lift worth $Xm ARR'. Amazon weekly business reviews demand this exact translation from technical metrics to customer and revenue outcomes — every operational metric must link to a business result.",
     "signalType": "metric",
     "sourceSubTopic": "Measuring Engineering Impact"
   },
@@ -843,7 +843,7 @@
     "id": "SIG-106",
     "observableId": "C5-O1",
     "capabilityId": "C5",
-    "signalText": "'Strong partner feedback from PM and Design' \u2014 explicit calibration dimension at most Big Tech companies. Meta's performance review process requires explicit cross-functional peer feedback from PM and Design partners; Google's EM calibration includes a 'collaboration' dimension where peer feedback from product and UX is weighted heavily.",
+    "signalText": "'Strong partner feedback from PM and Design' — explicit calibration dimension at most Big Tech companies. Meta's performance review process requires explicit cross-functional peer feedback from PM and Design partners; Google's EM calibration includes a 'collaboration' dimension where peer feedback from product and UX is weighted heavily.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Triad Dynamics"
   },
@@ -939,7 +939,7 @@
     "id": "SIG-118",
     "observableId": "C7-O5",
     "capabilityId": "C7",
-    "signalText": "'Strong executive presence in [review type]' \u2014 opens doors to Director+ scope and visibility Amazon VP-level reviews follow 6-pager format requiring written narrative read silently before discussion; Google exec reviews expect 3-slide max format: 'what happened, so what, now what.' Mastering the local exec review format is a prerequisite for Director-level scope.",
+    "signalText": "'Strong executive presence in [review type]' — opens doors to Director+ scope and visibility Amazon VP-level reviews follow 6-pager format requiring written narrative read silently before discussion; Google exec reviews expect 3-slide max format: 'what happened, so what, now what.' Mastering the local exec review format is a prerequisite for Director-level scope.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Exec Reviews & Business Reviews"
   },
@@ -947,7 +947,7 @@
     "id": "SIG-119",
     "observableId": "C5-O7",
     "capabilityId": "C5",
-    "signalText": "Compound interest of engineering leadership \u2014 builds slowly, pays off enormously. 'Trusted advisor to [peer/senior leaders] for [domain] decisions'",
+    "signalText": "Compound interest of engineering leadership — builds slowly, pays off enormously. 'Trusted advisor to [peer/senior leaders] for [domain] decisions'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Building Political Capital"
   },
@@ -963,7 +963,7 @@
     "id": "SIG-121",
     "observableId": "C7-O5",
     "capabilityId": "C7",
-    "signalText": "The unlock for Director \u2192 Sr. Director/VP trajectory. 'Consistently delivers crisp executive communication' \u2014 noted in promo discussions. Amazon's Sr. Manager-to-Director bar requires demonstrating 'earns trust at VP level through crisp written narratives'; Google's Director promo packets must include evidence of effective communication at skip-level and above, typically citing specific exec review presentations.",
+    "signalText": "The unlock for Director → Sr. Director/VP trajectory. 'Consistently delivers crisp executive communication' — noted in promo discussions. Amazon's Sr. Manager-to-Director bar requires demonstrating 'earns trust at VP level through crisp written narratives'; Google's Director promo packets must include evidence of effective communication at skip-level and above, typically citing specific exec review presentations.",
     "signalType": "promo_packet",
     "sourceSubTopic": "Executive Communication"
   },
@@ -1059,7 +1059,7 @@
     "id": "SIG-133",
     "observableId": "C7-O1",
     "capabilityId": "C7",
-    "signalText": "Applied in practice: 'Classified [X] as reversible, shipped in 2 days instead of 2 weeks. Classified [Y] as irreversible, invested 3 weeks in analysis \u2014 avoided $Zm mistake'. Amazon's Leadership Principle 'Bias for Action' distinguishes Type 1 (irreversible, high-stakes) from Type 2 (reversible, move fast) decisions; Jeff Bezos's shareholder letters formalized this as foundational to Amazon's decision velocity.",
+    "signalText": "Applied in practice: 'Classified [X] as reversible, shipped in 2 days instead of 2 weeks. Classified [Y] as irreversible, invested 3 weeks in analysis — avoided $Zm mistake'. Amazon's Leadership Principle 'Bias for Action' distinguishes Type 1 (irreversible, high-stakes) from Type 2 (reversible, move fast) decisions; Jeff Bezos's shareholder letters formalized this as foundational to Amazon's decision velocity.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Reversible vs Irreversible Decisions"
   },
@@ -1067,7 +1067,7 @@
     "id": "SIG-134",
     "observableId": "C2-O2",
     "capabilityId": "C2",
-    "signalText": "The mark of a strong EM/Director: 'What you chose NOT to do, and why' \u2014 calibration values this over endless yeses",
+    "signalText": "The mark of a strong EM/Director: 'What you chose NOT to do, and why' — calibration values this over endless yeses",
     "signalType": "calibration_language",
     "sourceSubTopic": "Saying No Effectively"
   },
@@ -1075,7 +1075,7 @@
     "id": "SIG-135",
     "observableId": "C2-O3",
     "capabilityId": "C2",
-    "signalText": "Leadership signal: 'Made [decision] with 70% confidence, built in reversibility, course-corrected at [point] \u2014 net outcome positive'",
+    "signalText": "Leadership signal: 'Made [decision] with 70% confidence, built in reversibility, course-corrected at [point] — net outcome positive'",
     "signalType": "metric",
     "sourceSubTopic": "Prioritization Under Ambiguity"
   },
@@ -1099,7 +1099,7 @@
     "id": "SIG-138",
     "observableId": "C7-O2",
     "capabilityId": "C7",
-    "signalText": "Director-level differentiation: same update tailored to 3 audiences \u2014 exec summary for VP (3 bullets, business impact), team-level detail for peers (technical trade-offs), and full context for IC contributors (implementation specifics). Skip-level feedback confirms: 'My manager communicates at the right level for each audience.'",
+    "signalText": "Director-level differentiation: same update tailored to 3 audiences — exec summary for VP (3 bullets, business impact), team-level detail for peers (technical trade-offs), and full context for IC contributors (implementation specifics). Skip-level feedback confirms: 'My manager communicates at the right level for each audience.'",
     "signalType": "peer_feedback",
     "sourceSubTopic": "Communication Altitude Adaptation"
   },
@@ -1307,7 +1307,7 @@
     "id": "SIG-164",
     "observableId": "C9-O8",
     "capabilityId": "C9",
-    "signalText": "Data-driven culture signal. 'Established A/B testing governance with mandatory power analysis. Caught [X] underpowered experiments before shipping. Pre-registered metrics for all experiments.' Netflix and Meta run thousands of A/B experiments annually with mandatory statistical rigor \u2014 shipping without proper experiment design is considered a quality failure.",
+    "signalText": "Data-driven culture signal. 'Established A/B testing governance with mandatory power analysis. Caught [X] underpowered experiments before shipping. Pre-registered metrics for all experiments.' Netflix and Meta run thousands of A/B experiments annually with mandatory statistical rigor — shipping without proper experiment design is considered a quality failure.",
     "signalType": "calibration_language",
     "sourceSubTopic": "A/B Testing Standards"
   },
@@ -1452,7 +1452,7 @@
     "capabilityId": "C2",
     "observableId": "C2-O2",
     "signalType": "peer_feedback",
-    "signalText": "When they say no, it never feels like a rejection \u2014 they show you exactly what you'd be trading off and help you make the call yourself",
+    "signalText": "When they say no, it never feels like a rejection — they show you exactly what you'd be trading off and help you make the call yourself",
     "sourceSubTopic": "Saying No Effectively"
   },
   {
@@ -1532,7 +1532,7 @@
     "capabilityId": "C13",
     "observableId": "C13-O3",
     "signalType": "peer_feedback",
-    "signalText": "Their access review process is thorough but not burdensome \u2014 they automated the quarterly review and elevated permissions expire automatically, so we rarely have stale access",
+    "signalText": "Their access review process is thorough but not burdensome — they automated the quarterly review and elevated permissions expire automatically, so we rarely have stale access",
     "sourceSubTopic": "Access Control & Least Privilege"
   },
   {
@@ -1540,7 +1540,7 @@
     "capabilityId": "C13",
     "observableId": "C13-O3",
     "signalType": "promo_packet",
-    "signalText": "Implemented automated access governance reducing over-privileged accounts by 70% and eliminating the quarterly manual access review burden for 200+ engineers. Google achieved continuous compliance through automated evidence pipelines that map controls to code \u2014 SOC2 evidence is generated as a byproduct of normal development, not a separate audit exercise.",
+    "signalText": "Implemented automated access governance reducing over-privileged accounts by 70% and eliminating the quarterly manual access review burden for 200+ engineers. Google achieved continuous compliance through automated evidence pipelines that map controls to code — SOC2 evidence is generated as a byproduct of normal development, not a separate audit exercise.",
     "sourceSubTopic": "Access Control & Least Privilege"
   },
   {
@@ -1556,14 +1556,14 @@
     "capabilityId": "C13",
     "observableId": "C13-O4",
     "signalType": "peer_feedback",
-    "signalText": "Compliance used to be a dreaded annual exercise \u2014 now it runs continuously in the background and we barely notice it. That's entirely due to their leadership on automation",
+    "signalText": "Compliance used to be a dreaded annual exercise — now it runs continuously in the background and we barely notice it. That's entirely due to their leadership on automation",
     "sourceSubTopic": "Compliance & Audit Readiness"
   },
   {
     "id": "SIG-196",
     "observableId": "C12-O6",
     "capabilityId": "C12",
-    "signalText": "Cultural stewardship during growth: 'Scaled team from 8 to 20 while maintaining top-quartile engagement scores \u2014 structured culture onboarding, buddy system, and quarterly norms review'",
+    "signalText": "Cultural stewardship during growth: 'Scaled team from 8 to 20 while maintaining top-quartile engagement scores — structured culture onboarding, buddy system, and quarterly norms review'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Cultural Continuity"
   },
@@ -1571,7 +1571,7 @@
     "id": "SIG-197",
     "observableId": "C12-O7",
     "capabilityId": "C12",
-    "signalText": "Inclusive participation: 'Restructured design review process with written-first input \u2014 participation from underrepresented team members increased from 30% to 75%'. Stripe's writing culture uses written-first RFC processes that produce measurably more inclusive participation than verbal-first meetings, particularly for remote and underrepresented team members.",
+    "signalText": "Inclusive participation: 'Restructured design review process with written-first input — participation from underrepresented team members increased from 30% to 75%'. Stripe's writing culture uses written-first RFC processes that produce measurably more inclusive participation than verbal-first meetings, particularly for remote and underrepresented team members.",
     "signalType": "metric",
     "sourceSubTopic": "Inclusive Feedback Channels"
   },
@@ -1579,7 +1579,7 @@
     "id": "SIG-198",
     "observableId": "C12-O8",
     "capabilityId": "C12",
-    "signalText": "Culture enforcement: 'Addressed senior engineer's dismissive behavior within 48 hours \u2014 behavior improved within 30 days, team psychological safety scores recovered by next survey'",
+    "signalText": "Culture enforcement: 'Addressed senior engineer's dismissive behavior within 48 hours — behavior improved within 30 days, team psychological safety scores recovered by next survey'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Toxic Behavior Intervention"
   },
@@ -1587,7 +1587,7 @@
     "id": "SIG-199",
     "observableId": "C10-O6",
     "capabilityId": "C10",
-    "signalText": "Resource planning maturity: 'Every headcount request includes three tiers with quantified ROI and explicit trade-offs \u2014 leadership approval rate increased from 40% to 85%'. Amazon's 6-pager culture requires headcount requests to include a narrative with quantified alternatives \u2014 tier-based ROI framing mirrors this discipline.",
+    "signalText": "Resource planning maturity: 'Every headcount request includes three tiers with quantified ROI and explicit trade-offs — leadership approval rate increased from 40% to 85%'. Amazon's 6-pager culture requires headcount requests to include a narrative with quantified alternatives — tier-based ROI framing mirrors this discipline.",
     "signalType": "metric",
     "sourceSubTopic": "Tiered Resource Planning"
   },
@@ -1595,7 +1595,7 @@
     "id": "SIG-200",
     "observableId": "C10-O7",
     "capabilityId": "C10",
-    "signalText": "FinOps discipline: 'Established cost-per-transaction dashboards \u2014 identified $300K/year in idle infrastructure, redirected savings to reliability investment'. Amazon FinOps practice mandates per-service cost attribution; teams that cannot explain their cost-per-transaction are considered operationally immature.",
+    "signalText": "FinOps discipline: 'Established cost-per-transaction dashboards — identified $300K/year in idle infrastructure, redirected savings to reliability investment'. Amazon FinOps practice mandates per-service cost attribution; teams that cannot explain their cost-per-transaction are considered operationally immature.",
     "signalType": "metric",
     "sourceSubTopic": "Engineering ROI Tracking"
   },
@@ -1603,7 +1603,7 @@
     "id": "SIG-201",
     "observableId": "C10-O8",
     "capabilityId": "C10",
-    "signalText": "Dynamic reallocation: 'Proactively reallocated 3 engineers from diminishing-return project to critical reliability initiative mid-quarter \u2014 SLA improvement from 99.5% to 99.95% with no stakeholder escalation'",
+    "signalText": "Dynamic reallocation: 'Proactively reallocated 3 engineers from diminishing-return project to critical reliability initiative mid-quarter — SLA improvement from 99.5% to 99.95% with no stakeholder escalation'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Dynamic Resource Reallocation"
   },
@@ -1611,7 +1611,7 @@
     "id": "SIG-202",
     "observableId": "C7-O8",
     "capabilityId": "C7",
-    "signalText": "Difficult conversation skill: 'Delivered 12 difficult messages in H2 (promotion rejections, project cancellations, performance concerns) \u2014 all within 48 hours of trigger, zero surprises in skip-levels'",
+    "signalText": "Difficult conversation skill: 'Delivered 12 difficult messages in H2 (promotion rejections, project cancellations, performance concerns) — all within 48 hours of trigger, zero surprises in skip-levels'",
     "signalType": "metric",
     "sourceSubTopic": "Difficult Conversations"
   },
@@ -1619,7 +1619,7 @@
     "id": "SIG-203",
     "observableId": "C7-O9",
     "capabilityId": "C7",
-    "signalText": "Communication scaling: 'Introduced RFC process + decision log as team grew to 20 \u2014 meeting hours per engineer dropped 35%, decision revisitation incidents dropped from 8/quarter to 1'",
+    "signalText": "Communication scaling: 'Introduced RFC process + decision log as team grew to 20 — meeting hours per engineer dropped 35%, decision revisitation incidents dropped from 8/quarter to 1'",
     "signalType": "metric",
     "sourceSubTopic": "Communication Scaling"
   },
@@ -1627,7 +1627,7 @@
     "id": "SIG-204",
     "observableId": "C7-O10",
     "capabilityId": "C7",
-    "signalText": "Distributed authority: 'Documented decision authority matrix \u2014 team now makes 85% of decisions autonomously, escalation rate down 60%, team reports feeling more empowered in engagement survey'",
+    "signalText": "Distributed authority: 'Documented decision authority matrix — team now makes 85% of decisions autonomously, escalation rate down 60%, team reports feeling more empowered in engagement survey'",
     "signalType": "metric",
     "sourceSubTopic": "Decision Authority Distribution"
   },
@@ -1635,7 +1635,7 @@
     "id": "SIG-205",
     "observableId": "C14-O7",
     "capabilityId": "C14",
-    "signalText": "Continuous documentation practice: 'Maintained weekly performance notes for all reports \u2014 review preparation time dropped from 2 weeks to 3 days, zero 'surprise' complaints in post-review feedback'",
+    "signalText": "Continuous documentation practice: 'Maintained weekly performance notes for all reports — review preparation time dropped from 2 weeks to 3 days, zero 'surprise' complaints in post-review feedback'",
     "signalType": "metric",
     "sourceSubTopic": "Continuous Performance Documentation"
   },
@@ -1643,7 +1643,7 @@
     "id": "SIG-206",
     "observableId": "C14-O8",
     "capabilityId": "C14",
-    "signalText": "High performer investment: 'Created stretch assignment program for top performers \u2014 3 of 4 achieved promotion readiness within 12 months, zero regrettable departures from top-performer cohort'",
+    "signalText": "High performer investment: 'Created stretch assignment program for top performers — 3 of 4 achieved promotion readiness within 12 months, zero regrettable departures from top-performer cohort'",
     "signalType": "metric",
     "sourceSubTopic": "High Performer Development"
   },
@@ -1651,7 +1651,7 @@
     "id": "SIG-207",
     "observableId": "C2-O5",
     "capabilityId": "C2",
-    "signalText": "Strategic trade-off transparency: 'Published not-doing list alongside roadmap \u2014 stakeholder re-litigation dropped 65%, team focus improved measurably'",
+    "signalText": "Strategic trade-off transparency: 'Published not-doing list alongside roadmap — stakeholder re-litigation dropped 65%, team focus improved measurably'",
     "signalType": "metric",
     "sourceSubTopic": "Strategic Trade-off Transparency"
   },
@@ -1659,7 +1659,7 @@
     "id": "SIG-208",
     "observableId": "C2-O6",
     "capabilityId": "C2",
-    "signalText": "Outcome-connected planning: 'Required business success metrics for all initiatives \u2014 identified 2 low-impact projects mid-quarter and reallocated to higher-ROI work'",
+    "signalText": "Outcome-connected planning: 'Required business success metrics for all initiatives — identified 2 low-impact projects mid-quarter and reallocated to higher-ROI work'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Outcome-Connected Planning"
   },
@@ -1667,7 +1667,7 @@
     "id": "SIG-209",
     "observableId": "C8-O7",
     "capabilityId": "C8",
-    "signalText": "Proactive resilience: 'Quarterly game days discovered 5 runbook gaps and 3 tooling issues before production impact \u2014 MTTR improved 40% in real incidents'",
+    "signalText": "Proactive resilience: 'Quarterly game days discovered 5 runbook gaps and 3 tooling issues before production impact — MTTR improved 40% in real incidents'",
     "signalType": "metric",
     "sourceSubTopic": "Proactive Resilience Testing"
   },
@@ -1675,7 +1675,7 @@
     "id": "SIG-210",
     "observableId": "C8-O8",
     "capabilityId": "C8",
-    "signalText": "Error budget discipline: 'Implemented SLO-based error budgets \u2014 automatically triggered reliability sprint when checkout service consumed 80% of monthly budget, preventing SLA breach'",
+    "signalText": "Error budget discipline: 'Implemented SLO-based error budgets — automatically triggered reliability sprint when checkout service consumed 80% of monthly budget, preventing SLA breach'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Error Budget Management"
   },
@@ -1691,7 +1691,7 @@
     "id": "SIG-212",
     "observableId": "C13-O6",
     "capabilityId": "C13",
-    "signalText": "CI/CD security gates: 'Automated scanning blocks critical vulnerabilities at build time \u2014 zero critical findings in production for 6 months'",
+    "signalText": "CI/CD security gates: 'Automated scanning blocks critical vulnerabilities at build time — zero critical findings in production for 6 months'",
     "signalType": "metric",
     "sourceSubTopic": "Automated Security Scanning"
   },
@@ -1699,7 +1699,7 @@
     "id": "SIG-213",
     "observableId": "C13-O7",
     "capabilityId": "C13",
-    "signalText": "Threat modeling practice: 'Required STRIDE threat models for auth and payment features \u2014 caught 5 design-level vulnerabilities before implementation'. Google's BeyondCorp zero-trust architecture emerged from systematic threat modeling at the design phase \u2014 catching vulnerabilities before code is written is 100x cheaper than post-deploy remediation.",
+    "signalText": "Threat modeling practice: 'Required STRIDE threat models for auth and payment features — caught 5 design-level vulnerabilities before implementation'. Google's BeyondCorp zero-trust architecture emerged from systematic threat modeling at the design phase — catching vulnerabilities before code is written is 100x cheaper than post-deploy remediation.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Threat Modeling"
   },
@@ -1707,7 +1707,7 @@
     "id": "SIG-214",
     "observableId": "C11-O9",
     "capabilityId": "C11",
-    "signalText": "Structured hiring: 'Implemented competency-mapped rubrics and independent scoring \u2014 interviewer agreement improved 30%, offer-to-accept rate 80%'",
+    "signalText": "Structured hiring: 'Implemented competency-mapped rubrics and independent scoring — interviewer agreement improved 30%, offer-to-accept rate 80%'",
     "signalType": "metric",
     "sourceSubTopic": "Structured Interview Design"
   },
@@ -1715,7 +1715,7 @@
     "id": "SIG-215",
     "observableId": "C11-O10",
     "capabilityId": "C11",
-    "signalText": "Competitive hiring: 'Won 4 of 5 competing offers against FAANG by differentiating on career velocity and impact \u2014 all hires retained at 1 year'",
+    "signalText": "Competitive hiring: 'Won 4 of 5 competing offers against FAANG by differentiating on career velocity and impact — all hires retained at 1 year'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Competitive Hiring Strategy"
   },
@@ -1723,7 +1723,7 @@
     "id": "SIG-216",
     "observableId": "C11-O11",
     "capabilityId": "C11",
-    "signalText": "Pipeline optimization: 'Instrumented full hiring funnel \u2014 identified technical screen bottleneck, redesigned assessment, improved pass-through rate from 25% to 45%'",
+    "signalText": "Pipeline optimization: 'Instrumented full hiring funnel — identified technical screen bottleneck, redesigned assessment, improved pass-through rate from 25% to 45%'",
     "signalType": "metric",
     "sourceSubTopic": "Hiring Pipeline Analytics"
   },
@@ -1731,7 +1731,7 @@
     "id": "SIG-217",
     "observableId": "C4-O12",
     "capabilityId": "C4",
-    "signalText": "Bottleneck resolution: 'Value stream mapping identified CI pipeline as primary bottleneck (45min avg build) \u2014 parallelized build stages, reduced to 12min, cycle time improved 30%'",
+    "signalText": "Bottleneck resolution: 'Value stream mapping identified CI pipeline as primary bottleneck (45min avg build) — parallelized build stages, reduced to 12min, cycle time improved 30%'",
     "signalType": "metric",
     "sourceSubTopic": "Velocity Bottleneck Analysis"
   },
@@ -1739,7 +1739,7 @@
     "id": "SIG-218",
     "observableId": "C4-O13",
     "capabilityId": "C4",
-    "signalText": "Focus time protection: 'Implemented no-meeting mornings \u2014 engineers report 5+ hours of daily focus time, complex feature velocity improved 35%'",
+    "signalText": "Focus time protection: 'Implemented no-meeting mornings — engineers report 5+ hours of daily focus time, complex feature velocity improved 35%'",
     "signalType": "metric",
     "sourceSubTopic": "Focus Time Protection"
   },
@@ -1747,7 +1747,7 @@
     "id": "SIG-219",
     "observableId": "C9-O9",
     "capabilityId": "C9",
-    "signalText": "Metric pairing: 'Paired deployment frequency with change failure rate \u2014 shipping 3x faster while maintaining <5% failure rate, proving velocity and quality are not inherently opposed'. Google DORA research confirms elite teams optimize all four metrics simultaneously \u2014 pairing is how mature orgs prevent Goodhart's Law gaming.",
+    "signalText": "Metric pairing: 'Paired deployment frequency with change failure rate — shipping 3x faster while maintaining <5% failure rate, proving velocity and quality are not inherently opposed'. Google DORA research confirms elite teams optimize all four metrics simultaneously — pairing is how mature orgs prevent Goodhart's Law gaming.",
     "signalType": "metric",
     "sourceSubTopic": "Metric Pairings"
   },
@@ -1755,7 +1755,7 @@
     "id": "SIG-220",
     "observableId": "C9-O10",
     "capabilityId": "C9",
-    "signalText": "Metrics maturity: 'Started with 3 DORA metrics, retired 1, added developer satisfaction survey \u2014 every active metric informed a decision within 90 days'. Google's SPACE framework extends DORA by adding satisfaction, performance, activity, communication, and efficiency dimensions \u2014 mature teams evolve beyond deployment metrics alone.",
+    "signalText": "Metrics maturity: 'Started with 3 DORA metrics, retired 1, added developer satisfaction survey — every active metric informed a decision within 90 days'. Google's SPACE framework extends DORA by adding satisfaction, performance, activity, communication, and efficiency dimensions — mature teams evolve beyond deployment metrics alone.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Metrics Maturity Evolution"
   },
@@ -1763,7 +1763,7 @@
     "id": "SIG-221",
     "observableId": "C3-O11",
     "capabilityId": "C3",
-    "signalText": "Tech debt visibility: 'Quantified top 5 tech debt items in business terms \u2014 secured 20% capacity allocation, remediated items saving estimated $400K/year in engineering time'",
+    "signalText": "Tech debt visibility: 'Quantified top 5 tech debt items in business terms — secured 20% capacity allocation, remediated items saving estimated $400K/year in engineering time'",
     "signalType": "metric",
     "sourceSubTopic": "Tech Debt Quantification"
   },
@@ -1771,7 +1771,7 @@
     "id": "SIG-222",
     "observableId": "C5-O16",
     "capabilityId": "C5",
-    "signalText": "Triad alignment: 'Shared OKRs with PM and Design lead \u2014 zero cross-functional escalations in Q4, joint satisfaction scores 4.7/5'",
+    "signalText": "Triad alignment: 'Shared OKRs with PM and Design lead — zero cross-functional escalations in Q4, joint satisfaction scores 4.7/5'",
     "signalType": "metric",
     "sourceSubTopic": "Product Triad Alignment"
   },
@@ -1779,7 +1779,7 @@
     "id": "SIG-223",
     "observableId": "C6-O13",
     "capabilityId": "C6",
-    "signalText": "Career pathway clarity: 'Documented IC and management tracks \u2014 100% of reports have career plans, Staff IC track retained 3 senior engineers who would have otherwise sought management elsewhere'",
+    "signalText": "Career pathway clarity: 'Documented IC and management tracks — 100% of reports have career plans, Staff IC track retained 3 senior engineers who would have otherwise sought management elsewhere'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Career Pathway Design"
   },
@@ -1787,7 +1787,7 @@
     "id": "SIG-224",
     "observableId": "C1-O16",
     "capabilityId": "C1",
-    "signalText": "Strategic alignment: 'Translated company H2 strategy into 4 team OKRs with measurable business outcomes \u2014 3 of 4 hit target, cross-team dependency map prevented 2 potential mid-quarter blockers'",
+    "signalText": "Strategic alignment: 'Translated company H2 strategy into 4 team OKRs with measurable business outcomes — 3 of 4 hit target, cross-team dependency map prevented 2 potential mid-quarter blockers'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Business Strategy to Team Goals"
   },
@@ -1795,7 +1795,7 @@
     "id": "SIG-225",
     "observableId": "C1-O16",
     "capabilityId": "C1",
-    "signalText": "Director-level: 'Established quarterly strategy decomposition process across 5 teams \u2014 85% of team goals now have explicit business outcome metrics, up from 30% before'",
+    "signalText": "Director-level: 'Established quarterly strategy decomposition process across 5 teams — 85% of team goals now have explicit business outcome metrics, up from 30% before'",
     "signalType": "metric",
     "sourceSubTopic": "Cross-Team Goal Alignment"
   },
@@ -1803,7 +1803,7 @@
     "id": "SIG-226",
     "observableId": "C7-O11",
     "capabilityId": "C7",
-    "signalText": "Trade-off clarity: 'Presented platform migration proposal with explicit cost section \u2014 Team B loses 2 weeks of roadmap, Team C takes on temporary operational burden \u2014 leadership approved with full awareness of costs'",
+    "signalText": "Trade-off clarity: 'Presented platform migration proposal with explicit cost section — Team B loses 2 weeks of roadmap, Team C takes on temporary operational burden — leadership approved with full awareness of costs'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Trade-off Communication"
   },
@@ -1811,7 +1811,7 @@
     "id": "SIG-227",
     "observableId": "C7-O11",
     "capabilityId": "C7",
-    "signalText": "Decision durability metric: 'Decisions presented with explicit trade-off framing had 90% stick rate vs 55% for decisions where costs were implicit \u2014 reduced re-litigation meetings by 40%'",
+    "signalText": "Decision durability metric: 'Decisions presented with explicit trade-off framing had 90% stick rate vs 55% for decisions where costs were implicit — reduced re-litigation meetings by 40%'",
     "signalType": "metric",
     "sourceSubTopic": "Explicit Trade-off Framing"
   },
@@ -1819,7 +1819,7 @@
     "id": "SIG-228",
     "observableId": "C14-O9",
     "capabilityId": "C14",
-    "signalText": "Exit management signal: 'Managed 3 exits this year \u2014 all completed with full knowledge transfer, zero legal escalations, and post-departure survey showed remaining team trusted the process was fair'. Netflix's approach to exits emphasizes generous severance with clean, respectful process \u2014 the 'alumni test' is whether departed employees speak well of how they were treated.",
+    "signalText": "Exit management signal: 'Managed 3 exits this year — all completed with full knowledge transfer, zero legal escalations, and post-departure survey showed remaining team trusted the process was fair'. Netflix's approach to exits emphasizes generous severance with clean, respectful process — the 'alumni test' is whether departed employees speak well of how they were treated.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Managed Exit Execution"
   },
@@ -1827,7 +1827,7 @@
     "id": "SIG-229",
     "observableId": "C14-O9",
     "capabilityId": "C14",
-    "signalText": "Director-level: 'Established managed exit playbook across org \u2014 standardized timeline, communication templates, and knowledge transfer checklist; reduced average exit timeline from 6 weeks of ambiguity to 3 weeks of structured transition'",
+    "signalText": "Director-level: 'Established managed exit playbook across org — standardized timeline, communication templates, and knowledge transfer checklist; reduced average exit timeline from 6 weeks of ambiguity to 3 weeks of structured transition'",
     "signalType": "metric",
     "sourceSubTopic": "Exit Process Standardization"
   },
@@ -1835,7 +1835,7 @@
     "id": "SIG-230",
     "observableId": "C2-O5",
     "capabilityId": "C2",
-    "signalText": "Prioritization discipline: 'Killed 2 in-flight projects mid-quarter when outcome data showed <10% of projected impact \u2014 reallocated team to higher-ROI work, stakeholders aligned within 1 week'",
+    "signalText": "Prioritization discipline: 'Killed 2 in-flight projects mid-quarter when outcome data showed <10% of projected impact — reallocated team to higher-ROI work, stakeholders aligned within 1 week'",
     "signalType": "metric",
     "sourceSubTopic": "Outcome-Driven Prioritization"
   },
@@ -1843,7 +1843,7 @@
     "id": "SIG-231",
     "observableId": "C2-O6",
     "capabilityId": "C2",
-    "signalText": "Goal-setting maturity: 'Team co-creates OKRs with measurable outcomes (not task lists) \u2014 85% key result achievement rate, zero OKRs with dependencies on other teams without explicit agreements'",
+    "signalText": "Goal-setting maturity: 'Team co-creates OKRs with measurable outcomes (not task lists) — 85% key result achievement rate, zero OKRs with dependencies on other teams without explicit agreements'",
     "signalType": "calibration_language",
     "sourceSubTopic": "OKR Design Quality"
   },
@@ -1851,7 +1851,7 @@
     "id": "SIG-232",
     "observableId": "C8-O7",
     "capabilityId": "C8",
-    "signalText": "Incident readiness: 'Pre-wrote failure playbooks for top 5 risk scenarios \u2014 when first major incident hit, team responded in 12 minutes using the playbook vs. estimated 2+ hours without it'",
+    "signalText": "Incident readiness: 'Pre-wrote failure playbooks for top 5 risk scenarios — when first major incident hit, team responded in 12 minutes using the playbook vs. estimated 2+ hours without it'",
     "signalType": "metric",
     "sourceSubTopic": "Pre-Incident Preparation"
   },
@@ -1859,7 +1859,7 @@
     "id": "SIG-233",
     "observableId": "C8-O2",
     "capabilityId": "C8",
-    "signalText": "On-call health: 'Reduced alert noise 70% by triaging all alerts (actionable vs. noise) \u2014 on-call pages dropped from 15/week to 3, zero requests to leave rotation in Q4'",
+    "signalText": "On-call health: 'Reduced alert noise 70% by triaging all alerts (actionable vs. noise) — on-call pages dropped from 15/week to 3, zero requests to leave rotation in Q4'",
     "signalType": "metric",
     "sourceSubTopic": "On-Call Sustainability"
   },
@@ -1867,7 +1867,7 @@
     "id": "SIG-234",
     "observableId": "C8-O3",
     "capabilityId": "C8",
-    "signalText": "Post-mortem effectiveness: 'Post-mortem action item completion rate 90% \u2014 repeat incidents from same root cause dropped to zero in Q3, team views post-mortems as valuable learning, not bureaucracy'",
+    "signalText": "Post-mortem effectiveness: 'Post-mortem action item completion rate 90% — repeat incidents from same root cause dropped to zero in Q3, team views post-mortems as valuable learning, not bureaucracy'",
     "signalType": "metric",
     "sourceSubTopic": "Post-Mortem Quality"
   },
@@ -1875,7 +1875,7 @@
     "id": "SIG-235",
     "observableId": "C9-O9",
     "capabilityId": "C9",
-    "signalText": "Anti-gaming design: 'Replaced single deployment frequency target with paired metrics (DF + CFR + PR size) \u2014 gaming stopped, team engaged with metrics as diagnostic tools, identified genuine bottleneck in code review turnaround'. Spotify's Health Check model uses multi-dimensional self-assessment across 8+ dimensions specifically to prevent single-metric gaming.",
+    "signalText": "Anti-gaming design: 'Replaced single deployment frequency target with paired metrics (DF + CFR + PR size) — gaming stopped, team engaged with metrics as diagnostic tools, identified genuine bottleneck in code review turnaround'. Spotify's Health Check model uses multi-dimensional self-assessment across 8+ dimensions specifically to prevent single-metric gaming.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Metric Pairing for Integrity"
   },
@@ -1883,7 +1883,7 @@
     "id": "SIG-236",
     "observableId": "C11-O10",
     "capabilityId": "C11",
-    "signalText": "EVP differentiation: 'Articulated mission-driven value proposition emphasizing impact per engineer and career velocity \u2014 won 6 of 8 competing offers despite 20% lower total comp, all hires thriving at 12 months'",
+    "signalText": "EVP differentiation: 'Articulated mission-driven value proposition emphasizing impact per engineer and career velocity — won 6 of 8 competing offers despite 20% lower total comp, all hires thriving at 12 months'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Employer Value Proposition"
   },
@@ -1891,7 +1891,7 @@
     "id": "SIG-237",
     "observableId": "C11-O11",
     "capabilityId": "C11",
-    "signalText": "Pipeline diagnosis: 'Identified interviewer miscalibration as root cause of 4-month hiring drought \u2014 recalibrated team using mock interviews, first offer extended within 3 weeks of fix'",
+    "signalText": "Pipeline diagnosis: 'Identified interviewer miscalibration as root cause of 4-month hiring drought — recalibrated team using mock interviews, first offer extended within 3 weeks of fix'",
     "signalType": "metric",
     "sourceSubTopic": "Hiring Pipeline Diagnosis"
   },
@@ -1899,7 +1899,7 @@
     "id": "SIG-238",
     "observableId": "C14-O1",
     "capabilityId": "C14",
-    "signalText": "Calibration preparation: 'Ran pre-calibration sessions with peer managers to identify bias and inconsistency before formal calibration \u2014 eliminated 3 instances of recency bias and 2 of similarity bias across the group'. Google runs pre-calibration sessions where peer managers review each other's cases to surface bias before the formal calibration meeting \u2014 this catches recency bias and halo effects systematically.",
+    "signalText": "Calibration preparation: 'Ran pre-calibration sessions with peer managers to identify bias and inconsistency before formal calibration — eliminated 3 instances of recency bias and 2 of similarity bias across the group'. Google runs pre-calibration sessions where peer managers review each other's cases to surface bias before the formal calibration meeting — this catches recency bias and halo effects systematically.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Pre-Calibration Quality"
   },
@@ -1907,7 +1907,7 @@
     "id": "SIG-239",
     "observableId": "C14-O7",
     "capabilityId": "C14",
-    "signalText": "Feedback distillation: 'Trained myself to distill each review into one sentence the engineer will remember \u2014 feedback retention (measured in follow-up 1:1s) improved from ~40% to ~85%'",
+    "signalText": "Feedback distillation: 'Trained myself to distill each review into one sentence the engineer will remember — feedback retention (measured in follow-up 1:1s) improved from ~40% to ~85%'",
     "signalType": "metric",
     "sourceSubTopic": "Feedback Clarity"
   },
@@ -1915,7 +1915,7 @@
     "id": "SIG-240",
     "observableId": "C1-O4",
     "capabilityId": "C1",
-    "signalText": "Reorg leadership: 'Led team through 2 reorgs in 18 months \u2014 addressed belonging, predictability, and significance needs proactively through personalized 1:1s, zero regrettable attrition during either transition'",
+    "signalText": "Reorg leadership: 'Led team through 2 reorgs in 18 months — addressed belonging, predictability, and significance needs proactively through personalized 1:1s, zero regrettable attrition during either transition'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Organizational Change Navigation"
   },
@@ -1923,7 +1923,7 @@
     "id": "SIG-241",
     "observableId": "C5-O1",
     "capabilityId": "C5",
-    "signalText": "Cross-team quick wins: 'Started new cross-team partnership by identifying 3 low-friction quick wins \u2014 delivered in first 2 weeks, built trust foundation that enabled successful 6-month platform migration'",
+    "signalText": "Cross-team quick wins: 'Started new cross-team partnership by identifying 3 low-friction quick wins — delivered in first 2 weeks, built trust foundation that enabled successful 6-month platform migration'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Cross-Team Trust Building"
   },
@@ -1931,7 +1931,7 @@
     "id": "SIG-242",
     "observableId": "C6-O1",
     "capabilityId": "C6",
-    "signalText": "Non-technical coaching: 'Coached senior engineer on scope breakdown and stakeholder communication \u2014 not just code quality \u2014 resulting in first independently-led cross-team project, promotion case built naturally'",
+    "signalText": "Non-technical coaching: 'Coached senior engineer on scope breakdown and stakeholder communication — not just code quality — resulting in first independently-led cross-team project, promotion case built naturally'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Whole-Engineer Development"
   },
@@ -1939,7 +1939,7 @@
     "id": "SIG-243",
     "observableId": "C3-O11",
     "capabilityId": "C3",
-    "signalText": "Tech debt business case: 'Categorized tech debt by type (velocity-blocking, risk-amplifying, cost-inflating) \u2014 business case showed top 3 items costing $600K/year in workarounds, secured dedicated 20% capacity allocation'",
+    "signalText": "Tech debt business case: 'Categorized tech debt by type (velocity-blocking, risk-amplifying, cost-inflating) — business case showed top 3 items costing $600K/year in workarounds, secured dedicated 20% capacity allocation'",
     "signalType": "metric",
     "sourceSubTopic": "Tech Debt Categorization"
   },
@@ -1947,7 +1947,7 @@
     "id": "SIG-244",
     "observableId": "C13-O3",
     "capabilityId": "C13",
-    "signalText": "Continuous compliance: 'Automated evidence collection for all repeat audit findings \u2014 next audit had zero repeat findings, prep time dropped from 3 weeks to 2 days'",
+    "signalText": "Continuous compliance: 'Automated evidence collection for all repeat audit findings — next audit had zero repeat findings, prep time dropped from 3 weeks to 2 days'",
     "signalType": "metric",
     "sourceSubTopic": "Audit Readiness Automation"
   },
@@ -1955,7 +1955,7 @@
     "id": "SIG-245",
     "observableId": "C13-O6",
     "capabilityId": "C13",
-    "signalText": "Proportional security gates: 'Defined security-sensitive triggers for threat model requirement \u2014 30% of features needed review, 70% shipped with automated scanning only, zero escaped vulnerabilities, no deployment bottleneck'",
+    "signalText": "Proportional security gates: 'Defined security-sensitive triggers for threat model requirement — 30% of features needed review, 70% shipped with automated scanning only, zero escaped vulnerabilities, no deployment bottleneck'",
     "signalType": "metric",
     "sourceSubTopic": "Proportional Security Review"
   },
@@ -1963,7 +1963,7 @@
     "id": "SIG-246",
     "observableId": "C11-O9",
     "capabilityId": "C11",
-    "signalText": "Interview standardization: 'Standardized rubrics with independent scoring \u2014 interviewer pass rate variance narrowed from 50% spread to 15%, candidate experience scores improved 25%'",
+    "signalText": "Interview standardization: 'Standardized rubrics with independent scoring — interviewer pass rate variance narrowed from 50% spread to 15%, candidate experience scores improved 25%'",
     "signalType": "metric",
     "sourceSubTopic": "Interview Process Scaling"
   },
@@ -1971,7 +1971,7 @@
     "id": "SIG-247",
     "observableId": "C14-O1",
     "capabilityId": "C14",
-    "signalText": "Calibration facilitation: 'Led cross-team calibration for 30 engineers across 4 teams \u2014 pre-calibration caught 5 bias instances, meeting completed in under 3 hours, zero surprise feedback in post-review survey'",
+    "signalText": "Calibration facilitation: 'Led cross-team calibration for 30 engineers across 4 teams — pre-calibration caught 5 bias instances, meeting completed in under 3 hours, zero surprise feedback in post-review survey'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Cross-Team Calibration"
   },
@@ -1979,7 +1979,7 @@
     "id": "SIG-248",
     "observableId": "C4-O12",
     "capabilityId": "C4",
-    "signalText": "Focused execution: 'Mobilized team for 6-week critical deadline \u2014 paused all other work, split into autonomous pairs, delivered on time with no weekend work, team reported high energy despite intensity'",
+    "signalText": "Focused execution: 'Mobilized team for 6-week critical deadline — paused all other work, split into autonomous pairs, delivered on time with no weekend work, team reported high energy despite intensity'",
     "signalType": "calibration_language",
     "sourceSubTopic": "High-Stakes Execution"
   },
@@ -1987,7 +1987,7 @@
     "id": "SIG-249",
     "observableId": "C3-O1",
     "capabilityId": "C3",
-    "signalText": "Steel thread architecture: 'Required steel thread (thinnest end-to-end production path) before full feature build for all major projects \u2014 integration issues caught 6-8 weeks earlier, no cross-team surprise failures at launch'",
+    "signalText": "Steel thread architecture: 'Required steel thread (thinnest end-to-end production path) before full feature build for all major projects — integration issues caught 6-8 weeks earlier, no cross-team surprise failures at launch'",
     "signalType": "metric",
     "sourceSubTopic": "Steel Thread Design Pattern"
   },
@@ -1995,7 +1995,7 @@
     "id": "SIG-250",
     "observableId": "C5-O16",
     "capabilityId": "C5",
-    "signalText": "Trifecta model: 'Adopted named Eng-PM-Design trifecta with shared accountability \u2014 decisions made within the triad without escalation, feature delivery predictability improved from 60% to 85%'",
+    "signalText": "Trifecta model: 'Adopted named Eng-PM-Design trifecta with shared accountability — decisions made within the triad without escalation, feature delivery predictability improved from 60% to 85%'",
     "signalType": "metric",
     "sourceSubTopic": "Product Trifecta Partnership"
   },
@@ -2003,7 +2003,7 @@
     "id": "SIG-251",
     "observableId": "C2-O1",
     "capabilityId": "C2",
-    "signalText": "OKR quality: 'Redesigned OKRs from task lists to measurable outcomes \u2014 team co-creates goals, 85% KR achievement rate with all KRs tied to business metrics, zero binary checkboxes'",
+    "signalText": "OKR quality: 'Redesigned OKRs from task lists to measurable outcomes — team co-creates goals, 85% KR achievement rate with all KRs tied to business metrics, zero binary checkboxes'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Outcome-Based Goal Setting"
   },
@@ -2011,7 +2011,7 @@
     "id": "SIG-252",
     "observableId": "C2-O5",
     "capabilityId": "C2",
-    "signalText": "Focus protection: 'Protected 40% capacity for planned strategic work \u2014 quarterly goal completion improved from 35% to 80% by requiring stakeholders to trade priorities rather than add them'",
+    "signalText": "Focus protection: 'Protected 40% capacity for planned strategic work — quarterly goal completion improved from 35% to 80% by requiring stakeholders to trade priorities rather than add them'",
     "signalType": "metric",
     "sourceSubTopic": "Strategic Capacity Protection"
   },
@@ -2019,7 +2019,7 @@
     "id": "SIG-253",
     "observableId": "C8-O1",
     "capabilityId": "C8",
-    "signalText": "Never solve the same problem twice: 'Created incident knowledge base from post-mortems \u2014 repeat incidents dropped to zero over 6 months, 30% of on-call time freed for proactive reliability work'",
+    "signalText": "Never solve the same problem twice: 'Created incident knowledge base from post-mortems — repeat incidents dropped to zero over 6 months, 30% of on-call time freed for proactive reliability work'",
     "signalType": "metric",
     "sourceSubTopic": "Incident Knowledge Management"
   },
@@ -2027,7 +2027,7 @@
     "id": "SIG-254",
     "observableId": "C10-O1",
     "capabilityId": "C10",
-    "signalText": "Budget partnership: 'Presented joint eng+product budget to CFO \u2014 approved in one revision cycle with 90% of tier-2 ask, because every headcount linked to a roadmap deliverable with timeline impact.'",
+    "signalText": "Budget partnership: 'Presented joint eng+product budget to CFO — approved in one revision cycle with 90% of tier-2 ask, because every headcount linked to a roadmap deliverable with timeline impact.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Annual Budget Planning"
   },
@@ -2035,7 +2035,7 @@
     "id": "SIG-255",
     "observableId": "C10-O6",
     "capabilityId": "C10",
-    "signalText": "Negotiation readiness: 'Pre-identified which tier-3 investments to defer \u2014 when finance requested 20% cut, responded within 24 hours with revised plan and explicit trade-offs, maintaining trust.'",
+    "signalText": "Negotiation readiness: 'Pre-identified which tier-3 investments to defer — when finance requested 20% cut, responded within 24 hours with revised plan and explicit trade-offs, maintaining trust.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Annual Budget Planning"
   },
@@ -2043,7 +2043,7 @@
     "id": "SIG-256",
     "observableId": "C10-O7",
     "capabilityId": "C10",
-    "signalText": "Historical grounding: 'Analyzed 3-year budget vs. actuals trend \u2014 identified consistent underspend on tooling and overspend on contractors, proposed rebalancing that saved $200K while improving developer productivity.'",
+    "signalText": "Historical grounding: 'Analyzed 3-year budget vs. actuals trend — identified consistent underspend on tooling and overspend on contractors, proposed rebalancing that saved $200K while improving developer productivity.'",
     "signalType": "metric",
     "sourceSubTopic": "Resource Allocation Strategy"
   },
@@ -2051,7 +2051,7 @@
     "id": "SIG-257",
     "observableId": "C10-O5",
     "capabilityId": "C10",
-    "signalText": "Strategic constraint navigation: 'During hiring freeze, negotiated contractor-to-FTE conversion for 2 critical roles \u2014 lower total cost with higher retention, accepted by finance because of ROI model.'",
+    "signalText": "Strategic constraint navigation: 'During hiring freeze, negotiated contractor-to-FTE conversion for 2 critical roles — lower total cost with higher retention, accepted by finance because of ROI model.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Resource Allocation Under Constraints"
   },
@@ -2059,7 +2059,7 @@
     "id": "SIG-258",
     "observableId": "C12-O2",
     "capabilityId": "C12",
-    "signalText": "Intentional ritual design: 'Introduced monthly cross-functional metrics review \u2014 within 3 months, engineers proactively flagged business-impacting technical decisions without being asked.'",
+    "signalText": "Intentional ritual design: 'Introduced monthly cross-functional metrics review — within 3 months, engineers proactively flagged business-impacting technical decisions without being asked.'",
     "signalType": "manager_observation",
     "sourceSubTopic": "Culture Rituals"
   },
@@ -2067,7 +2067,7 @@
     "id": "SIG-259",
     "observableId": "C12-O4",
     "capabilityId": "C12",
-    "signalText": "Bottom-up innovation channel: 'Structured monthly ideation sessions produced 4 shipped features from engineer proposals in 6 months \u2014 team ownership scores increased 15 points.'. Google's 20% time and Spotify's hack weeks are structured innovation channels \u2014 the key is that proposals get real resources and shipping paths, not just brainstorming.",
+    "signalText": "Bottom-up innovation channel: 'Structured monthly ideation sessions produced 4 shipped features from engineer proposals in 6 months — team ownership scores increased 15 points.'. Google's 20% time and Spotify's hack weeks are structured innovation channels — the key is that proposals get real resources and shipping paths, not just brainstorming.",
     "signalType": "metric",
     "sourceSubTopic": "Culture Rituals"
   },
@@ -2075,7 +2075,7 @@
     "id": "SIG-260",
     "observableId": "C12-O1",
     "capabilityId": "C12",
-    "signalText": "Post-disruption recovery: 'After layoffs, ran individual listening sessions with all 14 remaining team members before making any changes. Published 30-60-90 stability plan. Attrition: zero regrettable departures in following quarter.'. Netflix's approach to post-disruption transparency emphasizes that leaders must address uncertainty directly before asking teams to re-engage \u2014 silence after layoffs destroys trust faster than bad news.",
+    "signalText": "Post-disruption recovery: 'After layoffs, ran individual listening sessions with all 14 remaining team members before making any changes. Published 30-60-90 stability plan. Attrition: zero regrettable departures in following quarter.'. Netflix's approach to post-disruption transparency emphasizes that leaders must address uncertainty directly before asking teams to re-engage — silence after layoffs destroys trust faster than bad news.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Psychological Safety"
   },
@@ -2083,7 +2083,7 @@
     "id": "SIG-261",
     "observableId": "C12-O7",
     "capabilityId": "C12",
-    "signalText": "Accountability without blame: 'Shifted team retrospectives from 'what went wrong' to 'what did we learn and what will we do differently' \u2014 action item completion rate improved from 40% to 85%, and engineers started volunteering ownership of improvements.'",
+    "signalText": "Accountability without blame: 'Shifted team retrospectives from 'what went wrong' to 'what did we learn and what will we do differently' — action item completion rate improved from 40% to 85%, and engineers started volunteering ownership of improvements.'",
     "signalType": "manager_observation",
     "sourceSubTopic": "Accountability Culture"
   },
@@ -2091,7 +2091,7 @@
     "id": "SIG-262",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "Proactive risk discovery: 'Ran quarterly game day exercises simulating database failover, region outage, and dependency timeout \u2014 identified 3 critical gaps before they became incidents, with fixes deployed within sprint.'",
+    "signalText": "Proactive risk discovery: 'Ran quarterly game day exercises simulating database failover, region outage, and dependency timeout — identified 3 critical gaps before they became incidents, with fixes deployed within sprint.'",
     "signalType": "metric",
     "sourceSubTopic": "Proactive Risk Management"
   },
@@ -2099,7 +2099,7 @@
     "id": "SIG-263",
     "observableId": "C8-O3",
     "capabilityId": "C8",
-    "signalText": "Alert quality ownership: 'Established monthly alert hygiene review \u2014 team deleted 40% of alerts as non-actionable, refined thresholds on remaining. Alert-to-action ratio improved from 1:8 to 1:2, on-call satisfaction score up 30 points.'",
+    "signalText": "Alert quality ownership: 'Established monthly alert hygiene review — team deleted 40% of alerts as non-actionable, refined thresholds on remaining. Alert-to-action ratio improved from 1:8 to 1:2, on-call satisfaction score up 30 points.'",
     "signalType": "metric",
     "sourceSubTopic": "On-Call Health"
   },
@@ -2107,7 +2107,7 @@
     "id": "SIG-264",
     "observableId": "C11-O11",
     "capabilityId": "C11",
-    "signalText": "Process efficiency: 'Reduced interview rounds from 7 to 4 while maintaining quality bar \u2014 time-to-offer decreased from 28 to 12 days, offer acceptance rate increased from 65% to 85% because we stopped losing candidates to faster competitors.'. Google found that reducing interview rounds while improving question quality maintained hiring accuracy \u2014 their research shows diminishing signal after 4 structured interviews.",
+    "signalText": "Process efficiency: 'Reduced interview rounds from 7 to 4 while maintaining quality bar — time-to-offer decreased from 28 to 12 days, offer acceptance rate increased from 65% to 85% because we stopped losing candidates to faster competitors.'. Google found that reducing interview rounds while improving question quality maintained hiring accuracy — their research shows diminishing signal after 4 structured interviews.",
     "signalType": "metric",
     "sourceSubTopic": "Hiring Pipeline Optimization"
   },
@@ -2115,7 +2115,7 @@
     "id": "SIG-265",
     "observableId": "C11-O7",
     "capabilityId": "C11",
-    "signalText": "Bias reduction through structure: 'Rewrote interview rubrics to require specific behavioral examples \u2014 eliminated subjective 'culture fit' criteria, introduced independent scoring before debrief. Under-leveling rate for underrepresented candidates dropped from 23% to 5%.'. Google's structured hiring research found that requiring specific behavioral examples and independent scoring before debrief eliminated 60% of bias in leveling decisions.",
+    "signalText": "Bias reduction through structure: 'Rewrote interview rubrics to require specific behavioral examples — eliminated subjective 'culture fit' criteria, introduced independent scoring before debrief. Under-leveling rate for underrepresented candidates dropped from 23% to 5%.'. Google's structured hiring research found that requiring specific behavioral examples and independent scoring before debrief eliminated 60% of bias in leveling decisions.",
     "signalType": "metric",
     "sourceSubTopic": "Inclusive Hiring"
   },
@@ -2123,7 +2123,7 @@
     "id": "SIG-266",
     "observableId": "C5-O3",
     "capabilityId": "C5",
-    "signalText": "Engineering-led product influence: 'Identified performance bottleneck from production data that product hadn't surfaced \u2014 proposed and shipped optimization that improved conversion by 12%. Established precedent for engineering contributing to product discovery.'",
+    "signalText": "Engineering-led product influence: 'Identified performance bottleneck from production data that product hadn't surfaced — proposed and shipped optimization that improved conversion by 12%. Established precedent for engineering contributing to product discovery.'",
     "signalType": "manager_observation",
     "sourceSubTopic": "Product Strategy Influence"
   },
@@ -2131,7 +2131,7 @@
     "id": "SIG-267",
     "observableId": "C5-O10",
     "capabilityId": "C5",
-    "signalText": "Scope ambiguity navigation: 'When product management was understaffed, stepped into product gap: ran customer interviews, defined requirements for 2 features, and delivered both \u2014 earned trust that expanded engineering's strategic voice permanently.'",
+    "signalText": "Scope ambiguity navigation: 'When product management was understaffed, stepped into product gap: ran customer interviews, defined requirements for 2 features, and delivered both — earned trust that expanded engineering's strategic voice permanently.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Cross-Functional Influence"
   },
@@ -2139,7 +2139,7 @@
     "id": "SIG-268",
     "observableId": "C14-O7",
     "capabilityId": "C14",
-    "signalText": "Continuous performance documentation: 'Maintained monthly performance notes for all 12 directs \u2014 review cycle prep took 2 hours per person instead of 2 days, and every rating was backed by 6+ specific examples with dates.'",
+    "signalText": "Continuous performance documentation: 'Maintained monthly performance notes for all 12 directs — review cycle prep took 2 hours per person instead of 2 days, and every rating was backed by 6+ specific examples with dates.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Continuous Performance Tracking"
   },
@@ -2147,7 +2147,7 @@
     "id": "SIG-269",
     "observableId": "C14-O8",
     "capabilityId": "C14",
-    "signalText": "High-performer differentiation: 'Created individualized growth plans for top 3 performers \u2014 one got a stretch architecture role, one got external conference speaking, one got cross-team project lead. All three stayed through a year of industry layoffs.'",
+    "signalText": "High-performer differentiation: 'Created individualized growth plans for top 3 performers — one got a stretch architecture role, one got external conference speaking, one got cross-team project lead. All three stayed through a year of industry layoffs.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "High Performer Retention"
   },
@@ -2155,7 +2155,7 @@
     "id": "SIG-270",
     "observableId": "C4-O7",
     "capabilityId": "C4",
-    "signalText": "Interrupt management: 'Implemented interrupt budget of 15% capacity with designated interrupt handler rotation \u2014 unplanned work dropped from 40% to 18% of sprint capacity, and sprint completion rate improved from 65% to 88%.'",
+    "signalText": "Interrupt management: 'Implemented interrupt budget of 15% capacity with designated interrupt handler rotation — unplanned work dropped from 40% to 18% of sprint capacity, and sprint completion rate improved from 65% to 88%.'",
     "signalType": "metric",
     "sourceSubTopic": "Focus Protection"
   },
@@ -2163,7 +2163,7 @@
     "id": "SIG-271",
     "observableId": "C4-O12",
     "capabilityId": "C4",
-    "signalText": "Velocity bottleneck diagnosis: 'Used value stream mapping to identify code review as throughput bottleneck \u2014 review queue averaged 3 days. Introduced review pairing and async-first reviews, reducing to 8 hours. Cycle time improved 35%.'",
+    "signalText": "Velocity bottleneck diagnosis: 'Used value stream mapping to identify code review as throughput bottleneck — review queue averaged 3 days. Introduced review pairing and async-first reviews, reducing to 8 hours. Cycle time improved 35%.'",
     "signalType": "metric",
     "sourceSubTopic": "Delivery Velocity"
   },
@@ -2171,7 +2171,7 @@
     "id": "SIG-272",
     "observableId": "C9-O9",
     "capabilityId": "C9",
-    "signalText": "Metric pairing discipline: 'Paired velocity metric with quality metric \u2014 when team optimized for story points, defect rate spiked. Added defect escape rate as counter-metric and coached team on the trade-off. Both metrics improved within 2 quarters.'",
+    "signalText": "Metric pairing discipline: 'Paired velocity metric with quality metric — when team optimized for story points, defect rate spiked. Added defect escape rate as counter-metric and coached team on the trade-off. Both metrics improved within 2 quarters.'",
     "signalType": "manager_observation",
     "sourceSubTopic": "Balanced Metrics"
   },
@@ -2179,7 +2179,7 @@
     "id": "SIG-273",
     "observableId": "C9-O10",
     "capabilityId": "C9",
-    "signalText": "Maturity-appropriate metrics: 'New team started with just 3 metrics (cycle time, deployment frequency, escaped defects). Resisted pressure to add DORA/SPACE dashboards until team had 6 months of baseline data and could interpret trends meaningfully.'. Google's DORA team advises starting with a small set of metrics and expanding only as teams develop the capability to act on the data \u2014 premature dashboarding creates metric theater.",
+    "signalText": "Maturity-appropriate metrics: 'New team started with just 3 metrics (cycle time, deployment frequency, escaped defects). Resisted pressure to add DORA/SPACE dashboards until team had 6 months of baseline data and could interpret trends meaningfully.'. Google's DORA team advises starting with a small set of metrics and expanding only as teams develop the capability to act on the data — premature dashboarding creates metric theater.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Metrics Maturity"
   },
@@ -2187,7 +2187,7 @@
     "id": "SIG-274",
     "observableId": "C10-O2",
     "capabilityId": "C10",
-    "signalText": "Reprioritization communication: 'When 3 engineers were pulled for incident response, immediately published updated timeline for all active projects with explicit 'what stops, what slows, what continues' \u2014 stakeholders thanked the transparency instead of discovering delays later.'",
+    "signalText": "Reprioritization communication: 'When 3 engineers were pulled for incident response, immediately published updated timeline for all active projects with explicit 'what stops, what slows, what continues' — stakeholders thanked the transparency instead of discovering delays later.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Reprioritization Under Constraint"
   },
@@ -2195,7 +2195,7 @@
     "id": "SIG-275",
     "observableId": "C10-O4",
     "capabilityId": "C10",
-    "signalText": "Team composition optimization: 'Identified that 60% of contractor spend was on roles that should be FTE for knowledge retention. Built business case for 4 contractor-to-FTE conversions \u2014 net savings of $180K/year with improved institutional knowledge and reduced onboarding overhead.'",
+    "signalText": "Team composition optimization: 'Identified that 60% of contractor spend was on roles that should be FTE for knowledge retention. Built business case for 4 contractor-to-FTE conversions — net savings of $180K/year with improved institutional knowledge and reduced onboarding overhead.'",
     "signalType": "metric",
     "sourceSubTopic": "Team Composition"
   },
@@ -2203,7 +2203,7 @@
     "id": "SIG-276",
     "observableId": "C12-O3",
     "capabilityId": "C12",
-    "signalText": "Knowledge sharing institutionalized: 'Established weekly tech talks rotation \u2014 90% of team presented within 6 months. Bus factor improved from 1.2 to 3.1 on critical systems. New hires cited tech talks as top onboarding resource in post-onboarding surveys.'. Google's Project Oxygen identified knowledge sharing and coaching as two of the top 10 manager behaviors that predict team performance \u2014 institutionalized tech talks operationalize both.",
+    "signalText": "Knowledge sharing institutionalized: 'Established weekly tech talks rotation — 90% of team presented within 6 months. Bus factor improved from 1.2 to 3.1 on critical systems. New hires cited tech talks as top onboarding resource in post-onboarding surveys.'. Google's Project Oxygen identified knowledge sharing and coaching as two of the top 10 manager behaviors that predict team performance — institutionalized tech talks operationalize both.",
     "signalType": "metric",
     "sourceSubTopic": "Knowledge Sharing"
   },
@@ -2219,7 +2219,7 @@
     "id": "SIG-278",
     "observableId": "C13-O2",
     "capabilityId": "C13",
-    "signalText": "Vulnerability SLA discipline: 'Established severity-based patching SLAs (critical: 48hrs, high: 7 days, medium: 30 days). Compliance rate: 95% for critical, 88% for high. Mean time to remediate for critical vulns dropped from 12 days to 36 hours.'. Amazon and Google both enforce severity-based patching SLAs with automated tracking \u2014 critical: 24-48hrs, high: 7 days. Teams with SLA breaches face deployment freezes until remediation is complete.",
+    "signalText": "Vulnerability SLA discipline: 'Established severity-based patching SLAs (critical: 48hrs, high: 7 days, medium: 30 days). Compliance rate: 95% for critical, 88% for high. Mean time to remediate for critical vulns dropped from 12 days to 36 hours.'. Amazon and Google both enforce severity-based patching SLAs with automated tracking — critical: 24-48hrs, high: 7 days. Teams with SLA breaches face deployment freezes until remediation is complete.",
     "signalType": "metric",
     "sourceSubTopic": "Vulnerability Management"
   },
@@ -2227,7 +2227,7 @@
     "id": "SIG-279",
     "observableId": "C13-O6",
     "capabilityId": "C13",
-    "signalText": "Supply chain readiness: 'Implemented SBOM generation in CI/CD for all production services. When Log4Shell-class vulnerability dropped, identified all 23 affected services within 15 minutes vs. previous incident where blast radius assessment took 2 days.'. Google's container security and Amazon's SBOM requirements for all production services became industry standard after Log4Shell \u2014 teams without automated dependency tracking face audit findings.",
+    "signalText": "Supply chain readiness: 'Implemented SBOM generation in CI/CD for all production services. When Log4Shell-class vulnerability dropped, identified all 23 affected services within 15 minutes vs. previous incident where blast radius assessment took 2 days.'. Google's container security and Amazon's SBOM requirements for all production services became industry standard after Log4Shell — teams without automated dependency tracking face audit findings.",
     "signalType": "metric",
     "sourceSubTopic": "Supply Chain Security"
   },
@@ -2235,7 +2235,7 @@
     "id": "SIG-280",
     "observableId": "C11-O3",
     "capabilityId": "C11",
-    "signalText": "Onboarding iteration: 'Reduced time-to-first-deploy from 14 days to 3 days over 4 cohorts by acting on 90-day exit survey feedback. Key fix: replaced 'read the wiki' with structured buddy-guided first-week tasks.'. Meta's Bootcamp reduces time-to-first-commit to under 1 week through structured onboarding with production tasks from day one \u2014 the gold standard for engineering onboarding velocity.",
+    "signalText": "Onboarding iteration: 'Reduced time-to-first-deploy from 14 days to 3 days over 4 cohorts by acting on 90-day exit survey feedback. Key fix: replaced 'read the wiki' with structured buddy-guided first-week tasks.'. Meta's Bootcamp reduces time-to-first-commit to under 1 week through structured onboarding with production tasks from day one — the gold standard for engineering onboarding velocity.",
     "signalType": "metric",
     "sourceSubTopic": "Onboarding Effectiveness"
   },
@@ -2251,7 +2251,7 @@
     "id": "SIG-282",
     "observableId": "C10-O3",
     "capabilityId": "C10",
-    "signalText": "Cloud cost ownership: 'Implemented per-service cost attribution dashboards and made cost a first-class metric in sprint reviews. Teams self-identified $400K in optimization opportunities within first quarter \u2014 no top-down mandates needed.'. Amazon embeds FinOps reviews into weekly business reviews; Google Cloud's FinOps Foundation recommends cost attribution as a team-level responsibility, not a centralized finance function.",
+    "signalText": "Cloud cost ownership: 'Implemented per-service cost attribution dashboards and made cost a first-class metric in sprint reviews. Teams self-identified $400K in optimization opportunities within first quarter — no top-down mandates needed.'. Amazon embeds FinOps reviews into weekly business reviews; Google Cloud's FinOps Foundation recommends cost attribution as a team-level responsibility, not a centralized finance function.",
     "signalType": "metric",
     "sourceSubTopic": "Cloud Cost Management"
   },
@@ -2259,7 +2259,7 @@
     "id": "SIG-283",
     "observableId": "C10-O8",
     "capabilityId": "C10",
-    "signalText": "Proactive capacity reallocation: 'Identified two teams with excess capacity after feature launch stabilized. Proposed cross-team lending model \u2014 3 engineers redeployed to high-priority initiative, delivering 6 weeks earlier than original plan without any new hires.'",
+    "signalText": "Proactive capacity reallocation: 'Identified two teams with excess capacity after feature launch stabilized. Proposed cross-team lending model — 3 engineers redeployed to high-priority initiative, delivering 6 weeks earlier than original plan without any new hires.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Dynamic Resource Allocation"
   },
@@ -2267,7 +2267,7 @@
     "id": "SIG-284",
     "observableId": "C2-O2",
     "capabilityId": "C2",
-    "signalText": "Trade-off visibility: 'When VP requested urgent feature, responded within 4 hours with impact matrix: what stops, what slows, what continues. VP chose to defer their request after seeing the trade-offs \u2014 praised the transparent framing.'",
+    "signalText": "Trade-off visibility: 'When VP requested urgent feature, responded within 4 hours with impact matrix: what stops, what slows, what continues. VP chose to defer their request after seeing the trade-offs — praised the transparent framing.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Saying No Through Trade-offs"
   },
@@ -2275,7 +2275,7 @@
     "id": "SIG-285",
     "observableId": "C2-O3",
     "capabilityId": "C2",
-    "signalText": "Decision-making under ambiguity: 'In fast-moving market with incomplete data, classified decisions as one-way vs. two-way doors. Made 12 two-way door decisions in one quarter with feature flags for safe rollback. Reversed 2 that didn't work \u2014 team learned fast without catastrophic risk.'",
+    "signalText": "Decision-making under ambiguity: 'In fast-moving market with incomplete data, classified decisions as one-way vs. two-way doors. Made 12 two-way door decisions in one quarter with feature flags for safe rollback. Reversed 2 that didn't work — team learned fast without catastrophic risk.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Ambiguity Navigation"
   },
@@ -2291,7 +2291,7 @@
     "id": "SIG-287",
     "observableId": "C7-O3",
     "capabilityId": "C7",
-    "signalText": "Proactive status communication: 'Established weekly status cadence with consistent format \u2014 shipped, at risk, blocked, help needed. After 8 weeks, VP said: I never have to ask how engineering is doing, I already know. Autonomy increased because trust was earned through transparency.'",
+    "signalText": "Proactive status communication: 'Established weekly status cadence with consistent format — shipped, at risk, blocked, help needed. After 8 weeks, VP said: I never have to ask how engineering is doing, I already know. Autonomy increased because trust was earned through transparency.'",
     "signalType": "manager_observation",
     "sourceSubTopic": "Status Communication"
   },
@@ -2315,7 +2315,7 @@
     "id": "SIG-290",
     "observableId": "C12-O8",
     "capabilityId": "C12",
-    "signalText": "Manager addresses toxic behavior patterns within 1 week of identification \u2014 does not wait for formal complaints or performance review cycles to intervene on behaviors that damage team trust",
+    "signalText": "Manager addresses toxic behavior patterns within 1 week of identification — does not wait for formal complaints or performance review cycles to intervene on behaviors that damage team trust",
     "signalType": "calibration_language",
     "sourceSubTopic": "Toxic Behavior Intervention"
   },
@@ -2323,7 +2323,7 @@
     "id": "SIG-291",
     "observableId": "C12-O8",
     "capabilityId": "C12",
-    "signalText": "Team has explicit behavioral norms documented in team charter, and manager references them when addressing violations \u2014 interventions feel principled rather than personal",
+    "signalText": "Team has explicit behavioral norms documented in team charter, and manager references them when addressing violations — interventions feel principled rather than personal",
     "signalType": "calibration_language",
     "sourceSubTopic": "Toxic Behavior Intervention"
   },
@@ -2331,7 +2331,7 @@
     "id": "SIG-292",
     "observableId": "C14-O2",
     "capabilityId": "C14",
-    "signalText": "Manager prepares calibration cases with 3+ specific examples per rating dimension, anticipates which ratings will be challenged, and has pre-built counter-arguments grounded in observable behavior rather than general impressions. Google calibration best practice: managers who anticipate challenges and prepare counter-evidence earn 'calibration credibility' \u2014 their assessments carry more weight in future sessions.",
+    "signalText": "Manager prepares calibration cases with 3+ specific examples per rating dimension, anticipates which ratings will be challenged, and has pre-built counter-arguments grounded in observable behavior rather than general impressions. Google calibration best practice: managers who anticipate challenges and prepare counter-evidence earn 'calibration credibility' — their assessments carry more weight in future sessions.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Calibration Preparation & Evidence"
   },
@@ -2339,7 +2339,7 @@
     "id": "SIG-293",
     "observableId": "C14-O2",
     "capabilityId": "C14",
-    "signalText": "During calibration sessions, manager advocates effectively for their reports without inflating \u2014 peers trust the manager's assessments because they are consistently evidence-based and honest about gaps",
+    "signalText": "During calibration sessions, manager advocates effectively for their reports without inflating — peers trust the manager's assessments because they are consistently evidence-based and honest about gaps",
     "signalType": "calibration_language",
     "sourceSubTopic": "Calibration Preparation & Evidence"
   },
@@ -2347,7 +2347,7 @@
     "id": "SIG-294",
     "observableId": "C14-O4",
     "capabilityId": "C14",
-    "signalText": "Performance feedback is delivered within 48 hours of the observed behavior using Situation-Behavior-Impact format \u2014 engineers always know where they stand and are never surprised at review time. Amazon's anytime feedback tool enables real-time peer feedback that managers incorporate into performance conversations \u2014 the 48-hour feedback window ensures behavioral coaching happens while context is fresh.",
+    "signalText": "Performance feedback is delivered within 48 hours of the observed behavior using Situation-Behavior-Impact format — engineers always know where they stand and are never surprised at review time. Amazon's anytime feedback tool enables real-time peer feedback that managers incorporate into performance conversations — the 48-hour feedback window ensures behavioral coaching happens while context is fresh.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Timely Performance Feedback"
   },
@@ -2355,7 +2355,7 @@
     "id": "SIG-295",
     "observableId": "C14-O5",
     "capabilityId": "C14",
-    "signalText": "Manager maintains a running promotion document for each promotion-track engineer with gap analysis updated monthly \u2014 engineers see a clear path from current performance to next level with specific evidence milestones. Amazon's promotion process requires a detailed document with specific examples mapped to each Leadership Principle at the next level \u2014 managers who maintain running promotion docs produce significantly stronger packets.",
+    "signalText": "Manager maintains a running promotion document for each promotion-track engineer with gap analysis updated monthly — engineers see a clear path from current performance to next level with specific evidence milestones. Amazon's promotion process requires a detailed document with specific examples mapped to each Leadership Principle at the next level — managers who maintain running promotion docs produce significantly stronger packets.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Promotion Evidence Building"
   },
@@ -2363,7 +2363,7 @@
     "id": "SIG-296",
     "observableId": "C12-O5",
     "capabilityId": "C12",
-    "signalText": "Manager proactively accommodates neurodivergent team members \u2014 provides agendas before meetings, offers written alternatives to verbal-only discussions, and adapts growth frameworks to recognize strengths-based contributions rather than requiring conformity to neurotypical communication patterns",
+    "signalText": "Manager proactively accommodates neurodivergent team members — provides agendas before meetings, offers written alternatives to verbal-only discussions, and adapts growth frameworks to recognize strengths-based contributions rather than requiring conformity to neurotypical communication patterns",
     "signalType": "calibration_language",
     "sourceSubTopic": "Neurodiversity & Inclusive Practices"
   },
@@ -2371,7 +2371,7 @@
     "id": "SIG-297",
     "observableId": "C12-O4",
     "capabilityId": "C12",
-    "signalText": "Team has built identity and pride around their systems through naming, branding, or ownership rituals \u2014 engineers feel ownership of 'their' service and take pride in its health, using identity as a motivation lever especially for internal tools and legacy systems",
+    "signalText": "Team has built identity and pride around their systems through naming, branding, or ownership rituals — engineers feel ownership of 'their' service and take pride in its health, using identity as a motivation lever especially for internal tools and legacy systems",
     "signalType": "calibration_language",
     "sourceSubTopic": "Team Identity & Application Ownership"
   },
@@ -2379,7 +2379,7 @@
     "id": "SIG-298",
     "observableId": "C12-O7",
     "capabilityId": "C12",
-    "signalText": "Manager uses structured facilitation techniques in meetings \u2014 silent brainstorming before discussion, round-robin input, joint working agreements for 1:1s \u2014 ensuring quieter voices contribute equally rather than defaulting to whoever speaks first or loudest",
+    "signalText": "Manager uses structured facilitation techniques in meetings — silent brainstorming before discussion, round-robin input, joint working agreements for 1:1s — ensuring quieter voices contribute equally rather than defaulting to whoever speaks first or loudest",
     "signalType": "calibration_language",
     "sourceSubTopic": "Inclusive Meeting Facilitation"
   },
@@ -2387,7 +2387,7 @@
     "id": "SIG-299",
     "observableId": "C12-O6",
     "capabilityId": "C12",
-    "signalText": "Manager treats internal transfers out as a positive cultural signal \u2014 actively supports team members exploring other roles, maintains alumni relationships, and frames mobility as evidence that the team develops people others want rather than hoarding talent",
+    "signalText": "Manager treats internal transfers out as a positive cultural signal — actively supports team members exploring other roles, maintains alumni relationships, and frames mobility as evidence that the team develops people others want rather than hoarding talent",
     "signalType": "calibration_language",
     "sourceSubTopic": "Internal Mobility & Cultural Health"
   },
@@ -2395,7 +2395,7 @@
     "id": "SIG-300",
     "observableId": "C12-O4",
     "capabilityId": "C12",
-    "signalText": "Team runs regular hackathons or innovation days that serve dual purpose: generating creative solutions AND building cross-functional belonging \u2014 participants report increased connection to peers and ability to 'imagine new identities' within the engineering org",
+    "signalText": "Team runs regular hackathons or innovation days that serve dual purpose: generating creative solutions AND building cross-functional belonging — participants report increased connection to peers and ability to 'imagine new identities' within the engineering org",
     "signalType": "calibration_language",
     "sourceSubTopic": "Hackathons & Innovation Rituals"
   },
@@ -2403,7 +2403,7 @@
     "id": "SIG-301",
     "observableId": "C12-O8",
     "capabilityId": "C12",
-    "signalText": "Manager recognizes and addresses 'conversation smells' \u2014 subtle communication anti-patterns like chronic sarcasm, passive-aggressive Slack messages, or dismissive responses in code review \u2014 intervening at the micro-toxicity stage before patterns harden into overt toxic behavior",
+    "signalText": "Manager recognizes and addresses 'conversation smells' — subtle communication anti-patterns like chronic sarcasm, passive-aggressive Slack messages, or dismissive responses in code review — intervening at the micro-toxicity stage before patterns harden into overt toxic behavior",
     "signalType": "calibration_language",
     "sourceSubTopic": "Micro-Toxicity Detection & Early Intervention"
   },
@@ -2411,7 +2411,7 @@
     "id": "SIG-302",
     "observableId": "C3-O2",
     "capabilityId": "C3",
-    "signalText": "Manager has established explicit guardrails for AI-assisted development \u2014 AI-generated code undergoes the same review standards as human-written code, with additional scrutiny for comprehension (the engineer can explain what the code does and why), security implications, and long-term maintainability",
+    "signalText": "Manager has established explicit guardrails for AI-assisted development — AI-generated code undergoes the same review standards as human-written code, with additional scrutiny for comprehension (the engineer can explain what the code does and why), security implications, and long-term maintainability",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Architecture Governance"
   },
@@ -2419,7 +2419,7 @@
     "id": "SIG-303",
     "observableId": "C3-O4",
     "capabilityId": "C3",
-    "signalText": "Tech debt tracking explicitly includes AI-generated code debt \u2014 monitoring for DRY violations, duplicated logic across AI-generated modules, and code that no team member fully understands, with metrics showing AI-debt trends alongside traditional tech debt",
+    "signalText": "Tech debt tracking explicitly includes AI-generated code debt — monitoring for DRY violations, duplicated logic across AI-generated modules, and code that no team member fully understands, with metrics showing AI-debt trends alongside traditional tech debt",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Generated Tech Debt Management"
   },
@@ -2427,7 +2427,7 @@
     "id": "SIG-304",
     "observableId": "C3-O1",
     "capabilityId": "C3",
-    "signalText": "Architecture decisions are made through a structured advice process \u2014 any engineer can propose and make architectural decisions after consulting affected parties and documenting the decision in an ADR, distributing architecture ownership rather than centralizing it in a review board",
+    "signalText": "Architecture decisions are made through a structured advice process — any engineer can propose and make architectural decisions after consulting affected parties and documenting the decision in an ADR, distributing architecture ownership rather than centralizing it in a review board",
     "signalType": "calibration_language",
     "sourceSubTopic": "Decentralized Architecture Governance"
   },
@@ -2435,7 +2435,7 @@
     "id": "SIG-305",
     "observableId": "C3-O2",
     "capabilityId": "C3",
-    "signalText": "Team uses automated architectural fitness functions \u2014 codified checks in CI that verify non-functional requirements (dependency direction, module coupling, API compatibility, performance budgets) so architecture governance scales without requiring manual review of every change",
+    "signalText": "Team uses automated architectural fitness functions — codified checks in CI that verify non-functional requirements (dependency direction, module coupling, API compatibility, performance budgets) so architecture governance scales without requiring manual review of every change",
     "signalType": "calibration_language",
     "sourceSubTopic": "Automated Architecture Governance"
   },
@@ -2443,7 +2443,7 @@
     "id": "SIG-306",
     "observableId": "C3-O1",
     "capabilityId": "C3",
-    "signalText": "Technical roadmap explicitly allocates capacity for experimentation \u2014 spikes, proof-of-concepts, and hypothesis-driven technical bets are first-class roadmap items with clear success criteria and time-boxes, not just ad-hoc explorations squeezed between feature work",
+    "signalText": "Technical roadmap explicitly allocates capacity for experimentation — spikes, proof-of-concepts, and hypothesis-driven technical bets are first-class roadmap items with clear success criteria and time-boxes, not just ad-hoc explorations squeezed between feature work",
     "signalType": "calibration_language",
     "sourceSubTopic": "Technical Experimentation & Innovation"
   },
@@ -2451,7 +2451,7 @@
     "id": "SIG-307",
     "observableId": "C1-O1",
     "capabilityId": "C1",
-    "signalText": "Leader has redesigned team structures and operating models to leverage AI capabilities \u2014 explicit human-AI task boundaries defined, cognitive load calculations updated to account for AI-augmented workflows, and headcount requests justified against what AI tooling cannot accomplish",
+    "signalText": "Leader has redesigned team structures and operating models to leverage AI capabilities — explicit human-AI task boundaries defined, cognitive load calculations updated to account for AI-augmented workflows, and headcount requests justified against what AI tooling cannot accomplish",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Era Org Design"
   },
@@ -2459,7 +2459,7 @@
     "id": "SIG-308",
     "observableId": "C1-O7",
     "capabilityId": "C1",
-    "signalText": "Leader monitors for 'hollow middle' effects after org flattening \u2014 tracks whether ICs or staff engineers are absorbing management responsibilities without title or compensation, watches for succession gaps created by permanent removal of leadership layers, and intervenes when accountability exists without authority",
+    "signalText": "Leader monitors for 'hollow middle' effects after org flattening — tracks whether ICs or staff engineers are absorbing management responsibilities without title or compensation, watches for succession gaps created by permanent removal of leadership layers, and intervenes when accountability exists without authority",
     "signalType": "calibration_language",
     "sourceSubTopic": "Post-Flattening Org Health"
   },
@@ -2467,7 +2467,7 @@
     "id": "SIG-309",
     "observableId": "C11-O9",
     "capabilityId": "C11",
-    "signalText": "Interview process explicitly addresses AI tool usage \u2014 clear policy communicated to candidates on whether AI tools are allowed during assessments, interview rubrics evaluate engineering judgment and system design reasoning rather than code production speed, and assessment formats are designed to surface thinking process not just output",
+    "signalText": "Interview process explicitly addresses AI tool usage — clear policy communicated to candidates on whether AI tools are allowed during assessments, interview rubrics evaluate engineering judgment and system design reasoning rather than code production speed, and assessment formats are designed to surface thinking process not just output",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Era Interview Design"
   },
@@ -2475,7 +2475,7 @@
     "id": "SIG-310",
     "observableId": "C11-O8",
     "capabilityId": "C11",
-    "signalText": "Interviewers are calibrated on AI-era assessment \u2014 trained to distinguish between candidates who can direct AI tools effectively and those who understand the underlying engineering, with explicit guidance on how to evaluate AI-assisted work samples without penalizing or rewarding AI usage itself",
+    "signalText": "Interviewers are calibrated on AI-era assessment — trained to distinguish between candidates who can direct AI tools effectively and those who understand the underlying engineering, with explicit guidance on how to evaluate AI-assisted work samples without penalizing or rewarding AI usage itself",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Era Interviewer Calibration"
   },
@@ -2483,7 +2483,7 @@
     "id": "SIG-311",
     "observableId": "C9-O1",
     "capabilityId": "C9",
-    "signalText": "Leader selects and applies productivity frameworks (DORA, SPACE, DX Core 4) appropriate to organizational maturity \u2014 understands that DORA measures delivery performance, SPACE captures developer experience breadth, and DX Core 4 provides a unified prescriptive model (Speed/Effectiveness/Quality/Impact) rather than applying frameworks dogmatically",
+    "signalText": "Leader selects and applies productivity frameworks (DORA, SPACE, DX Core 4) appropriate to organizational maturity — understands that DORA measures delivery performance, SPACE captures developer experience breadth, and DX Core 4 provides a unified prescriptive model (Speed/Effectiveness/Quality/Impact) rather than applying frameworks dogmatically",
     "signalType": "calibration_language",
     "sourceSubTopic": "Productivity Framework Selection Maturity"
   },
@@ -2491,7 +2491,7 @@
     "id": "SIG-312",
     "observableId": "C9-O5",
     "capabilityId": "C9",
-    "signalText": "Leader measures AI tool effectiveness using a three-dimensional framework \u2014 utilization (adoption rate and penetration), impact (time saved and performance benchmarks vs. baseline), and cost (TCO including license, training, and maintenance overhead) \u2014 rather than relying on vanity metrics like acceptance rate that track usage without measuring outcomes",
+    "signalText": "Leader measures AI tool effectiveness using a three-dimensional framework — utilization (adoption rate and penetration), impact (time saved and performance benchmarks vs. baseline), and cost (TCO including license, training, and maintenance overhead) — rather than relying on vanity metrics like acceptance rate that track usage without measuring outcomes",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Tool Effectiveness Measurement"
   },
@@ -2499,7 +2499,7 @@
     "id": "SIG-313",
     "observableId": "C8-O7",
     "capabilityId": "C8",
-    "signalText": "Team has explicit incident readiness for AI-generated code failures \u2014 monitoring for AI-specific incident patterns (cascading failures through opaque logic, comprehension gaps during diagnosis), maintaining human expertise for systems with significant AI-generated components, and governance guardrails for any AI agents involved in incident response",
+    "signalText": "Team has explicit incident readiness for AI-generated code failures — monitoring for AI-specific incident patterns (cascading failures through opaque logic, comprehension gaps during diagnosis), maintaining human expertise for systems with significant AI-generated components, and governance guardrails for any AI agents involved in incident response",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Era Incident Readiness"
   },
@@ -2507,7 +2507,7 @@
     "id": "SIG-314",
     "observableId": "C3-O2",
     "capabilityId": "C3",
-    "signalText": "Leader validates architecture decisions using steel threads \u2014 building the thinnest possible production-grade end-to-end flow that exercises riskiest integrations before committing to full implementation, surfacing caching issues, versioning needs, and cross-team dependencies in days rather than months of upfront design",
+    "signalText": "Leader validates architecture decisions using steel threads — building the thinnest possible production-grade end-to-end flow that exercises riskiest integrations before committing to full implementation, surfacing caching issues, versioning needs, and cross-team dependencies in days rather than months of upfront design",
     "signalType": "calibration_language",
     "sourceSubTopic": "Steel Thread Architecture Validation"
   },
@@ -2515,7 +2515,7 @@
     "id": "SIG-315",
     "observableId": "C3-O11",
     "capabilityId": "C3",
-    "signalText": "Leader differentiates between three types of technical burden requiring distinct remediation strategies \u2014 deliberate debt (set repayment terms at incurrence), natural depreciation (ongoing maintenance, not project-based cleanup), and architectural change (cost of new requirements, not legacy accumulation) \u2014 rather than labeling everything 'tech debt' and applying a single treatment",
+    "signalText": "Leader differentiates between three types of technical burden requiring distinct remediation strategies — deliberate debt (set repayment terms at incurrence), natural depreciation (ongoing maintenance, not project-based cleanup), and architectural change (cost of new requirements, not legacy accumulation) — rather than labeling everything 'tech debt' and applying a single treatment",
     "signalType": "calibration_language",
     "sourceSubTopic": "Tech Debt Taxonomy and Targeted Remediation"
   },
@@ -2523,7 +2523,7 @@
     "id": "SIG-316",
     "observableId": "C8-O7",
     "capabilityId": "C8",
-    "signalText": "Team designs disaster recovery as a minimal independent system on a separate cloud provider \u2014 not a replica of production but a standalone service supporting only core features, constantly tested in production, activatable in seconds, and costing a fraction of primary infrastructure (Monzo pattern: 6 engineers, 1% of cloud bill for full cloud failover capability)",
+    "signalText": "Team designs disaster recovery as a minimal independent system on a separate cloud provider — not a replica of production but a standalone service supporting only core features, constantly tested in production, activatable in seconds, and costing a fraction of primary infrastructure (Monzo pattern: 6 engineers, 1% of cloud bill for full cloud failover capability)",
     "signalType": "calibration_language",
     "sourceSubTopic": "Minimal Independent DR Architecture"
   },
@@ -2531,7 +2531,7 @@
     "id": "SIG-317",
     "observableId": "C8-O3",
     "capabilityId": "C8",
-    "signalText": "On-call design prioritizes compassion as a structural principle \u2014 each team decides their own schedule based on pager load and lifestyles, handover times optimize for the person finishing their shift (who carries more stress), overrides for personal commitments are a default process rather than an exception, and on-call hours are compensated",
+    "signalText": "On-call design prioritizes compassion as a structural principle — each team decides their own schedule based on pager load and lifestyles, handover times optimize for the person finishing their shift (who carries more stress), overrides for personal commitments are a default process rather than an exception, and on-call hours are compensated",
     "signalType": "calibration_language",
     "sourceSubTopic": "Compassionate On-Call Design"
   },
@@ -2539,7 +2539,7 @@
     "id": "SIG-318",
     "observableId": "C9-O1",
     "capabilityId": "C9",
-    "signalText": "Leader measures the inner development loop (actual active coding time from first IDE activity to final session) alongside delivery metrics \u2014 using inner-loop metrics like Diff Authoring Time to A/B test tooling investments and quantify the impact of platform changes on developer productivity, rather than relying solely on cycle time which conflates active work with waiting time",
+    "signalText": "Leader measures the inner development loop (actual active coding time from first IDE activity to final session) alongside delivery metrics — using inner-loop metrics like Diff Authoring Time to A/B test tooling investments and quantify the impact of platform changes on developer productivity, rather than relying solely on cycle time which conflates active work with waiting time",
     "signalType": "calibration_language",
     "sourceSubTopic": "Inner-Loop Developer Metrics"
   },
@@ -2547,7 +2547,7 @@
     "id": "SIG-319",
     "observableId": "C9-O3",
     "capabilityId": "C9",
-    "signalText": "Leader recognizes that AI coding tool metrics (acceptance rate, lines generated, suggestion frequency) are usage metrics not outcome metrics \u2014 tracking code generation incentivizes more code when less would suffice (Goodhart's Law), and the real value of AI tools is often invisible in dashboards: speeding up context acquisition in unfamiliar codebases, especially for new hires",
+    "signalText": "Leader recognizes that AI coding tool metrics (acceptance rate, lines generated, suggestion frequency) are usage metrics not outcome metrics — tracking code generation incentivizes more code when less would suffice (Goodhart's Law), and the real value of AI tools is often invisible in dashboards: speeding up context acquisition in unfamiliar codebases, especially for new hires",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Tool Metrics Discipline"
   },
@@ -2555,7 +2555,7 @@
     "id": "SIG-320",
     "observableId": "C1-O1",
     "capabilityId": "C1",
-    "signalText": "Leader evaluates whether stable long-lived teams or periodic re-teaming better serves organizational needs \u2014 understands demand-led planning as an alternative model where teams of 20-200 self-select into new formations quarterly based on expected demand, balancing delivery, discovery, and continuous improvement, rather than defaulting to stable teams as the only high-performance configuration",
+    "signalText": "Leader evaluates whether stable long-lived teams or periodic re-teaming better serves organizational needs — understands demand-led planning as an alternative model where teams of 20-200 self-select into new formations quarterly based on expected demand, balancing delivery, discovery, and continuous improvement, rather than defaulting to stable teams as the only high-performance configuration",
     "signalType": "calibration_language",
     "sourceSubTopic": "Demand-Led Team Formation"
   },
@@ -2563,7 +2563,7 @@
     "id": "SIG-321",
     "observableId": "C11-O1",
     "capabilityId": "C11",
-    "signalText": "Hiring process includes explicit countermeasures for coordinated AI-powered candidate fraud \u2014 verifying candidate identity across interview rounds (different people may appear for multi-round interviews), using behavioral signals to detect deepfakes (hand movement across face, virtual background removal), probing for depth beyond AI-generated responses using STAR method and tool-specific opinion questions, and awareness that scam operations submit AI-generated tailored resumes at industrial scale",
+    "signalText": "Hiring process includes explicit countermeasures for coordinated AI-powered candidate fraud — verifying candidate identity across interview rounds (different people may appear for multi-round interviews), using behavioral signals to detect deepfakes (hand movement across face, virtual background removal), probing for depth beyond AI-generated responses using STAR method and tool-specific opinion questions, and awareness that scam operations submit AI-generated tailored resumes at industrial scale",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Powered Hiring Fraud Detection"
   },
@@ -2571,7 +2571,7 @@
     "id": "SIG-322",
     "observableId": "C14-O8",
     "capabilityId": "C14",
-    "signalText": "Leader counteracts visibility bias in performance assessment \u2014 recognizes that publicly recognized engineers are often doing the most visible work, not the best work. Actively surfaces invisible contributions (code reviews, infrastructure improvements, mentoring) by having PMs call out reviewers by name, highlighting operational work at all-hands, and asking reports directly how they prefer to be recognized rather than defaulting to public channels that create anxiety",
+    "signalText": "Leader counteracts visibility bias in performance assessment — recognizes that publicly recognized engineers are often doing the most visible work, not the best work. Actively surfaces invisible contributions (code reviews, infrastructure improvements, mentoring) by having PMs call out reviewers by name, highlighting operational work at all-hands, and asking reports directly how they prefer to be recognized rather than defaulting to public channels that create anxiety",
     "signalType": "calibration_language",
     "sourceSubTopic": "Visibility Bias in Performance Recognition"
   },
@@ -2579,7 +2579,7 @@
     "id": "SIG-323",
     "observableId": "C14-O5",
     "capabilityId": "C14",
-    "signalText": "Leader proactively supports Staff+ engineers through the 'performance cliff' \u2014 the psychological transition where old success metrics (shipping features, team-level impact) no longer apply, feedback becomes sparse, and the shift to org-level influence creates a vacuum of direction. Provides explicit new success criteria for Staff+ scope, maintains regular feedback despite the ambiguity, and normalizes the disorientation of operating at a new altitude",
+    "signalText": "Leader proactively supports Staff+ engineers through the 'performance cliff' — the psychological transition where old success metrics (shipping features, team-level impact) no longer apply, feedback becomes sparse, and the shift to org-level influence creates a vacuum of direction. Provides explicit new success criteria for Staff+ scope, maintains regular feedback despite the ambiguity, and normalizes the disorientation of operating at a new altitude",
     "signalType": "calibration_language",
     "sourceSubTopic": "Staff+ Performance Cliff Support"
   },
@@ -2587,7 +2587,7 @@
     "id": "SIG-324",
     "observableId": "C14-O2",
     "capabilityId": "C14",
-    "signalText": "Leader distinguishes between Maven (deep specialist with high individual throughput) and Guru (good developer who is an even better teacher, sees roots of misunderstandings, supports learning without just telling) archetypes \u2014 strategically minimizes Guru's solo work time to maximize their multiplier effect on team capability through pairing, upskilling, and knowledge transfer",
+    "signalText": "Leader distinguishes between Maven (deep specialist with high individual throughput) and Guru (good developer who is an even better teacher, sees roots of misunderstandings, supports learning without just telling) archetypes — strategically minimizes Guru's solo work time to maximize their multiplier effect on team capability through pairing, upskilling, and knowledge transfer",
     "signalType": "calibration_language",
     "sourceSubTopic": "Maven vs Guru Performance Archetypes"
   },
@@ -2595,7 +2595,7 @@
     "id": "SIG-325",
     "observableId": "C5-O4",
     "capabilityId": "C5",
-    "signalText": "Leader approaches alignment as a negative-space problem \u2014 rather than trying to define and achieve abstract 'alignment', systematically identifies and eliminates specific misalignment signals (conflicting priorities surfacing in standups, duplicated work across teams, decisions being relitigated, stakeholders surprised by outcomes) and treats each as a concrete problem to diagnose and fix",
+    "signalText": "Leader approaches alignment as a negative-space problem — rather than trying to define and achieve abstract 'alignment', systematically identifies and eliminates specific misalignment signals (conflicting priorities surfacing in standups, duplicated work across teams, decisions being relitigated, stakeholders surprised by outcomes) and treats each as a concrete problem to diagnose and fix",
     "signalType": "calibration_language",
     "sourceSubTopic": "Anti-Misalignment Diagnostic Approach"
   },
@@ -2603,7 +2603,7 @@
     "id": "SIG-326",
     "observableId": "C7-O8",
     "capabilityId": "C7",
-    "signalText": "Leader applies blameless post-mortem methodology to people-system failures \u2014 when culture breakdowns, trust erosion, or team dysfunction occurs, runs the same structured analysis (timeline, contributing factors, action items) used for technical incidents, treating cultural problems with equal rigor and systematic follow-through rather than addressing them informally or not at all",
+    "signalText": "Leader applies blameless post-mortem methodology to people-system failures — when culture breakdowns, trust erosion, or team dysfunction occurs, runs the same structured analysis (timeline, contributing factors, action items) used for technical incidents, treating cultural problems with equal rigor and systematic follow-through rather than addressing them informally or not at all",
     "signalType": "calibration_language",
     "sourceSubTopic": "Cultural Post-Mortems for People-System Failures"
   },
@@ -2611,7 +2611,7 @@
     "id": "SIG-327",
     "observableId": "C13-O3",
     "capabilityId": "C13",
-    "signalText": "Authorization model explicitly addresses non-human actors \u2014 AI agents operate faster than humans and require precise, contextual authorization that traditional identity infrastructure was never designed for. Team has defined which systems AI agents can access, what actions they can take autonomously vs. with human approval, and how authorization adapts when agent behavior changes or scope creeps",
+    "signalText": "Authorization model explicitly addresses non-human actors — AI agents operate faster than humans and require precise, contextual authorization that traditional identity infrastructure was never designed for. Team has defined which systems AI agents can access, what actions they can take autonomously vs. with human approval, and how authorization adapts when agent behavior changes or scope creeps",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Agent Authorization Governance"
   },
@@ -2619,7 +2619,7 @@
     "id": "SIG-328",
     "observableId": "C3-O4",
     "capabilityId": "C3",
-    "signalText": "Leader tracks verification debt as a distinct category from traditional tech debt \u2014 the growing gap between AI-generated code volume and team capacity to validate it, evidenced by increased code duplication (GitClear: 10x increase in duplicate blocks since AI adoption), inflated output metrics masking quality degradation, and developers spending more time debugging AI-generated code than writing equivalent code from scratch",
+    "signalText": "Leader tracks verification debt as a distinct category from traditional tech debt — the growing gap between AI-generated code volume and team capacity to validate it, evidenced by increased code duplication (GitClear: 10x increase in duplicate blocks since AI adoption), inflated output metrics masking quality degradation, and developers spending more time debugging AI-generated code than writing equivalent code from scratch",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Verification Debt Management"
   },
@@ -2627,7 +2627,7 @@
     "id": "SIG-330",
     "observableId": "C8-O8",
     "capabilityId": "C8",
-    "signalText": "Leader defines SLIs that map to user-visible impact rather than infrastructure metrics \u2014 'successful checkout in <2s' rather than 'CPU <80%'. Each SLI has a documented measurement method, data source, and owner. Google SRE principle: if your SLI doesn't correlate with user happiness, it's the wrong SLI.",
+    "signalText": "Leader defines SLIs that map to user-visible impact rather than infrastructure metrics — 'successful checkout in <2s' rather than 'CPU <80%'. Each SLI has a documented measurement method, data source, and owner. Google SRE principle: if your SLI doesn't correlate with user happiness, it's the wrong SLI.",
     "signalType": "calibration_language",
     "sourceSubTopic": "SLI Definition Quality"
   },
@@ -2635,7 +2635,7 @@
     "id": "SIG-331",
     "observableId": "C8-O8",
     "capabilityId": "C8",
-    "signalText": "SLO targets are set through negotiation between engineering and product \u2014 not aspirational '99.99%' without capacity analysis. Leader can articulate the cost curve: 'Moving from 99.9% to 99.95% availability requires $X in redundancy and reduces feature velocity by Y%'. SLO is reviewed quarterly and adjusted based on error budget consumption trends.",
+    "signalText": "SLO targets are set through negotiation between engineering and product — not aspirational '99.99%' without capacity analysis. Leader can articulate the cost curve: 'Moving from 99.9% to 99.95% availability requires $X in redundancy and reduces feature velocity by Y%'. SLO is reviewed quarterly and adjusted based on error budget consumption trends.",
     "signalType": "calibration_language",
     "sourceSubTopic": "SLO Target Setting"
   },
@@ -2643,7 +2643,7 @@
     "id": "SIG-332",
     "observableId": "C12-O2",
     "capabilityId": "C12",
-    "signalText": "Leader treats eNPS as a lagging diagnostic, not a target \u2014 investigates root causes when scores drop rather than running 'engagement initiatives' that address symptoms. Can correlate engagement trends with specific events (re-orgs, on-call changes, leadership shifts) and demonstrate that structural fixes moved the score, not pizza parties.",
+    "signalText": "Leader treats eNPS as a lagging diagnostic, not a target — investigates root causes when scores drop rather than running 'engagement initiatives' that address symptoms. Can correlate engagement trends with specific events (re-orgs, on-call changes, leadership shifts) and demonstrate that structural fixes moved the score, not pizza parties.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Engagement Score Diagnostic Use"
   },
@@ -2651,7 +2651,7 @@
     "id": "SIG-333",
     "observableId": "C9-O9",
     "capabilityId": "C9",
-    "signalText": "Leader measures the quality differential between AI-assisted and human-authored PRs \u2014 tracking review revision cycles, post-merge defect rates, and test coverage gaps. Uses this data to calibrate AI tool adoption rather than relying on acceptance rates: 'AI-assisted PRs have 1.3x review cycles but ship 40% faster \u2014 net positive when paired with enhanced test requirements.'",
+    "signalText": "Leader measures the quality differential between AI-assisted and human-authored PRs — tracking review revision cycles, post-merge defect rates, and test coverage gaps. Uses this data to calibrate AI tool adoption rather than relying on acceptance rates: 'AI-assisted PRs have 1.3x review cycles but ship 40% faster — net positive when paired with enhanced test requirements.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI PR Quality Measurement"
   },
@@ -2659,8 +2659,64 @@
     "id": "SIG-334",
     "observableId": "C9-O10",
     "capabilityId": "C9",
-    "signalText": "Leader tracks verification overhead as a distinct cost center \u2014 measuring review time spent validating AI-generated code vs. human-authored code, and the ratio of AI output volume to human validation capacity. When verification overhead exceeds 30% of review time, triggers process adjustments: smaller AI-generated PRs, mandatory test coverage thresholds, or domain-scoped AI usage policies.",
+    "signalText": "Leader tracks verification overhead as a distinct cost center — measuring review time spent validating AI-generated code vs. human-authored code, and the ratio of AI output volume to human validation capacity. When verification overhead exceeds 30% of review time, triggers process adjustments: smaller AI-generated PRs, mandatory test coverage thresholds, or domain-scoped AI usage policies.",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Verification Overhead Management"
+  },
+  {
+    "id": "SIG-329",
+    "observableId": "C5-O13",
+    "capabilityId": "C5",
+    "signalText": "The 90-day window determines trajectory. \"Established credibility by [quick win] in first 6 weeks, built stakeholder trust through listening before changing, earned mandate for [larger initiative].\"",
+    "signalType": "peer_feedback",
+    "sourceSubTopic": "New Leader Credibility"
+  },
+  {
+    "id": "SIG-335",
+    "observableId": "C5-O11",
+    "capabilityId": "C5",
+    "signalText": "Prepared a 2-page leadership transition brief for incoming VP that was cited as 'the most useful onboarding artifact I received' — covered team mission, top wins, current bets, and biggest risk.",
+    "signalType": "promo_packet",
+    "sourceSubTopic": "Leadership Transitions"
+  },
+  {
+    "id": "SIG-336",
+    "observableId": "C5-O11",
+    "capabilityId": "C5",
+    "signalText": "When our director changed, they had a 1:1 with the new leader within 3 days and a written alignment doc within a week. The rest of us were still figuring out what the change meant while their team had already confirmed priorities.",
+    "signalType": "peer_feedback",
+    "sourceSubTopic": "Leadership Transitions"
+  },
+  {
+    "id": "SIG-337",
+    "observableId": "C5-O12",
+    "capabilityId": "C5",
+    "signalText": "Co-developed 4 pre-approved privacy design patterns with Legal, reducing launch-blocking reviews from 3 weeks to 2 days for 80% of feature launches across the org.",
+    "signalType": "promo_packet",
+    "sourceSubTopic": "Legal/Privacy Partnership Patterns"
+  },
+  {
+    "id": "SIG-338",
+    "observableId": "C5-O12",
+    "capabilityId": "C5",
+    "signalText": "Their team ships features through compliance faster than anyone else because they invested upfront in reusable patterns. Other teams now use their self-serve checklists as a template.",
+    "signalType": "peer_feedback",
+    "sourceSubTopic": "Legal/Privacy Partnership Patterns"
+  },
+  {
+    "id": "SIG-339",
+    "observableId": "C5-O13",
+    "capabilityId": "C5",
+    "signalText": "Completed structured 90-day onboarding: 3 weeks listening (1:1s with all directs and key ICs), delivered a visible quick win (eliminated a 45-minute weekly status meeting) by week 5, then proposed larger changes with earned credibility.",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "New Leader Credibility"
+  },
+  {
+    "id": "SIG-340",
+    "observableId": "C5-O13",
+    "capabilityId": "C5",
+    "signalText": "Achieved team confidence score of 4.3/5 in 60-day pulse check after joining as new EM, up from 3.1 under previous leadership, by prioritizing listening and quick wins over immediate process changes.",
+    "signalType": "metric",
+    "sourceSubTopic": "New Leader Credibility"
   }
 ]

@@ -30,11 +30,11 @@ const DOMAIN_COLORS: Record<string, string> = {
 };
 
 const LEVEL_LABELS: Record<number, string> = {
-  1: 'Beginning',
-  2: 'Developing',
+  1: 'Developing',
+  2: 'Emerging',
   3: 'Competent',
-  4: 'Advanced',
-  5: 'Expert',
+  4: 'Distinguished',
+  5: 'Advanced',
 };
 
 const STORAGE_KEY = 'em-matrix-self-assessment';

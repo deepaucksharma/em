@@ -28,7 +28,7 @@
     "maturityPhase": 1,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: instrument CI/CD timestamps for each stage",
-    "replaces": "Velocity (story points/sprint), Tickets closed/sprint",
+    "replaces": "I5",
     "whyThisTier": "Most actionable DORA metric. Decomposes into fixable stages (review wait, build, deploy queue). The causal metric in the DORA family — improving LT naturally improves DF as a side effect.",
     "goodRange": "< 1 day",
     "warningRange": "1-7 days",
@@ -77,7 +77,7 @@
     "maturityPhase": 1,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: tag failed deploys in CI/CD, link incidents to changes",
-    "replaces": "Bug count, Defects per sprint",
+    "replaces": "I6",
     "whyThisTier": "Primary: essential quality counterweight to velocity. Without CFR, faster shipping might mean faster breaking. Less gameable than bug counts and directly tied to user impact.",
     "goodRange": "< 5%",
     "warningRange": "5-15%",
@@ -124,18 +124,16 @@
     "maturityPhase": 2,
     "implementationEffort": "high",
     "implementationNotes": "4-8 wks: requires SLO/error budget infrastructure, then compute remaining and burn rate",
-    "replaces": "Uptime % without policy, Gut-feel reliability arguments",
+    "replaces": "I11",
     "whyThisTier": "The single best arbitration tool between velocity and reliability. Budget remaining → ship freely. Budget exhausted → freeze and fix. Turns political arguments into math.",
     "goodRange": "> 50% remaining, < 1x burn",
     "warningRange": "10-50% remaining, 1-3x burn",
     "dangerRange": "< 10% remaining, > 3x burn",
     "capabilityIds": [
-      "C5",
       "C8",
       "C9"
     ],
     "observableIds": [
-      "C5-O3",
       "C8-O2"
     ],
     "emTier": "primary",
@@ -170,19 +168,16 @@
     "maturityPhase": 2,
     "implementationEffort": "high",
     "implementationNotes": "4-8 wks: define SLOs per service, instrument SLIs, build compliance dashboard",
-    "replaces": "Uptime %, Incident count as reliability measure",
+    "replaces": "I11",
     "whyThisTier": "The Director's reliability scorecard. Answers: 'Which services are chronically unreliable?' Drives investment decisions across the org. Policy-based, not political.",
     "goodRange": "> 97% of SLOs met",
     "warningRange": "94-97% met",
     "dangerRange": "< 94% met",
     "capabilityIds": [
-      "C5",
       "C8",
       "C9"
     ],
     "observableIds": [
-      "C5-O1",
-      "C5-O3",
       "C8-O2"
     ],
     "emTier": "secondary",
@@ -220,7 +215,7 @@
     "maturityPhase": 1,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: design survey (DX Core 4 framework), deploy quarterly, track trends",
-    "replaces": "Anecdotal 'vibes', Surprise attrition",
+    "replaces": "I10",
     "whyThisTier": "Only cheap, reliable leading indicator of attrition, velocity decline, and quality erosion. 5 questions, 10 minutes, quarterly. Highest ROI people measurement.",
     "goodRange": "> 4.0/5.0",
     "warningRange": "3.0-4.0",
@@ -269,7 +264,7 @@
     "maturityPhase": 2,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: work with HR to classify departures as regrettable/non-regrettable, code exit interviews",
-    "replaces": "Total attrition rate (unclassified)",
+    "replaces": "I10",
     "whyThisTier": "A single regrettable departure costs $200K-$500K+. Pattern analysis predicts and prevents the next one. The ultimate people signal.",
     "goodRange": "< 5% annually",
     "warningRange": "5-10% annually",
@@ -317,7 +312,7 @@
     "maturityPhase": 3,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: tag all work items by category (feature/reliability/debt/security), compute percentages",
-    "replaces": "No portfolio view, Ad hoc allocation driven by the loudest stakeholder",
+    "replaces": "",
     "whyThisTier": "Answers 'where does our capacity actually go?' Without this, Directors cannot defend budget, justify headcount, or explain why the roadmap takes longer than expected.",
     "goodRange": "Intentional and balanced",
     "warningRange": "> 40% in any single category",
@@ -364,7 +359,7 @@
     "maturityPhase": 3,
     "implementationEffort": "high",
     "implementationNotes": "4-8 wks: partner with data science to attribute eng changes to business metrics",
-    "replaces": "Topline revenue as eng metric, NPS owned solely by eng",
+    "replaces": "I12",
     "whyThisTier": "How Directors justify their org's existence. Maps specific engineering work to specific business outcomes. Without it, you're at the mercy of whoever frames the narrative.",
     "goodRange": "> 60% attributable",
     "warningRange": "30-60% attributable",
@@ -410,7 +405,7 @@
     "maturityPhase": 1,
     "implementationEffort": "low",
     "implementationNotes": "1 wk: define sprint goals explicitly, track binary hit/miss each sprint",
-    "replaces": "Velocity (story points/sprint) as KPI",
+    "replaces": "I5",
     "whyThisTier": "Best proxy for predictability. Not primary because it's a planning metric — tells you how well you forecast, not how fast you ship.",
     "goodRange": "> 85%",
     "warningRange": "70-85%",
@@ -452,18 +447,16 @@
     "maturityPhase": 1,
     "implementationEffort": "medium",
     "implementationNotes": "1-2 wks: join deploy events with incident data",
-    "replaces": "Time to acknowledge (not restore)",
+    "replaces": "",
     "whyThisTier": "Important but reactive. Can't improve without incidents to practice on. Primary for incident response maturity, secondary as ongoing health metric.",
     "goodRange": "< 1 hour",
     "warningRange": "1-4 hours",
     "dangerRange": "> 4 hours",
     "capabilityIds": [
-      "C5",
       "C8",
       "C9"
     ],
     "observableIds": [
-      "C5-O2",
       "C8-O1"
     ],
     "emTier": "secondary",
@@ -536,17 +529,16 @@
     "maturityPhase": 2,
     "implementationEffort": "high",
     "implementationNotes": "2-4 wks per service: define user-centric SLIs, instrument measurement",
-    "replaces": "Uptime % without defined measurement",
+    "replaces": "I11",
     "whyThisTier": "Essential foundation but a definition exercise, not an ongoing dashboard concern. Once defined correctly, you track SLOs and error budgets, not raw SLIs.",
     "goodRange": "All critical services have defined SLIs",
     "warningRange": "Some services missing SLIs",
     "dangerRange": "No SLIs defined",
     "capabilityIds": [
-      "C5",
       "C8"
     ],
     "observableIds": [
-      "C5-O3"
+      "C8-O2"
     ],
     "emTier": "structural",
     "directorTier": "structural",
@@ -581,11 +573,10 @@
     "warningRange": "Some services missing targets",
     "dangerRange": "No SLO targets defined",
     "capabilityIds": [
-      "C5",
       "C8"
     ],
     "observableIds": [
-      "C5-O3"
+      "C8-O2"
     ],
     "emTier": "structural",
     "directorTier": "structural",
@@ -616,17 +607,15 @@
     "maturityPhase": 2,
     "implementationEffort": "low",
     "implementationNotes": "1 wk: aggregate from incident management tool with severity tags",
-    "replaces": "Total incident count (ignoring severity)",
+    "replaces": "",
     "whyThisTier": "Tertiary for EMs (felt directly), secondary for Directors (heat map across services). Classification standards vary, making cross-team comparison unreliable without normalization.",
     "goodRange": "Decreasing trend",
     "warningRange": "Flat trend",
     "dangerRange": "Increasing trend",
     "capabilityIds": [
-      "C5",
       "C8"
     ],
     "observableIds": [
-      "C5-O1",
       "C8-O1"
     ],
     "emTier": "tertiary",
@@ -661,7 +650,7 @@
     "maturityPhase": 3,
     "implementationEffort": "medium",
     "implementationNotes": "Ongoing per quarter: write outcome-oriented OKRs with measurable KRs, score quarterly",
-    "replaces": "Feature completion %",
+    "replaces": "",
     "whyThisTier": "Primary alignment tool but secondary as a metric: OKR quality varies, % influenced by target aggressiveness, value is in the process not the score.",
     "goodRange": "60-80% (stretch goals)",
     "warningRange": "< 40% or > 90%",
@@ -835,7 +824,7 @@
     "maturityPhase": 4,
     "implementationEffort": "high",
     "implementationNotes": "4-8 wks: map infra costs to services, define business transaction units, normalize for growth",
-    "replaces": "Absolute cloud spend (not normalized for growth)",
+    "replaces": "",
     "whyThisTier": "Only cost metric that makes sense at scale. Secondary because cost optimization that degrades reliability or velocity is a false economy.",
     "goodRange": "Decreasing trend",
     "warningRange": "Flat trend",
@@ -885,13 +874,10 @@
     "warningRange": "70-90% on time",
     "dangerRange": "< 70% on time",
     "capabilityIds": [
-      "C5",
       "C8",
       "C9"
     ],
     "observableIds": [
-      "C5-O2",
-      "C5-O4",
       "C8-O3"
     ],
     "emTier": "tertiary",
@@ -924,13 +910,12 @@
     "maturityPhase": 3,
     "implementationEffort": "medium",
     "implementationNotes": "2-3 wks: define SLAs by severity, track from security scanning tool",
-    "replaces": "Number of open vulnerabilities (without time dimension)",
+    "replaces": "",
     "whyThisTier": "Only continuously relevant security metric. Critical SLA (<24hrs) is non-negotiable.",
     "goodRange": "Critical < 24hrs, High < 7d",
     "warningRange": "Critical 1-3d, High 7-30d",
     "dangerRange": "Critical > 3d, High > 30d",
     "capabilityIds": [
-      "C5",
       "C9",
       "C13"
     ],
@@ -964,19 +949,17 @@
     "maturityPhase": 2,
     "implementationEffort": "low",
     "implementationNotes": "1 wk: tag rollback deploys in CI/CD, calculate rate per deployment",
-    "replaces": "Bug reopen rate",
+    "replaces": "I6",
     "whyThisTier": "Most unambiguous quality signal. Secondary because CFR + error budget are better leading signals.",
     "goodRange": "< 2%",
     "warningRange": "2-5%",
     "dangerRange": "> 5%",
     "capabilityIds": [
       "C4",
-      "C5",
       "C8"
     ],
     "observableIds": [
-      "C4-O5",
-      "C5-O1"
+      "C4-O5"
     ],
     "emTier": "tertiary",
     "directorTier": "tertiary",
@@ -1005,7 +988,7 @@
     "maturityPhase": 3,
     "implementationEffort": "low",
     "implementationNotes": "1 wk: self-report process, categorize toil sources",
-    "replaces": "% time spent coding (which penalizes mentoring, design, review)",
+    "replaces": "I9",
     "whyThisTier": "Valuable for justifying platform/automation investment. Relies on self-reporting, impact shows up in DX scores and velocity more reliably.",
     "goodRange": "< 10% of time",
     "warningRange": "10-25%",
@@ -1168,7 +1151,7 @@
     "maturityPhase": 2,
     "implementationEffort": "low",
     "implementationNotes": "1 wk: count completed items per sprint/week",
-    "replaces": "Velocity (story points/sprint)",
+    "replaces": "I5",
     "whyThisTier": "Capacity planning input, not health metric. Items vary in size making raw counts misleading.",
     "goodRange": "Stable or increasing trend",
     "warningRange": "Declining trend",
@@ -1247,7 +1230,7 @@
     "maturityPhase": 3,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: tag production bugs, link to releases, classify",
-    "replaces": "Raw bug count",
+    "replaces": "I6",
     "whyThisTier": "Useful for root-cause analysis but requires subjective classification. Business impact better captured through CFR and incident rate.",
     "goodRange": "< 1 per release",
     "warningRange": "1-3 per release",
@@ -1287,7 +1270,7 @@
     "maturityPhase": 3,
     "implementationEffort": "medium",
     "implementationNotes": "2-4 wks: integrate coverage tool with CI, focus on critical path coverage not absolute",
-    "replaces": "Test coverage % (absolute)",
+    "replaces": "I8",
     "whyThisTier": "Most misleading quality metric in software. High coverage ≠ good tests. Use as code review conversation, not a KPI.",
     "goodRange": "Critical paths > 80%",
     "warningRange": "Critical paths 50-80%",
@@ -1893,7 +1876,6 @@
     "warningRange": "60-80%",
     "dangerRange": "< 60%",
     "capabilityIds": [
-      "C5",
       "C13"
     ],
     "observableIds": [
@@ -1932,7 +1914,6 @@
     "warningRange": "60-90%",
     "dangerRange": "< 60% or manual evidence",
     "capabilityIds": [
-      "C5",
       "C13"
     ],
     "observableIds": [
@@ -2446,7 +2427,7 @@
     "category": "Quality",
     "tier": "inferior",
     "type": "lagging",
-    "description": "Encourages tiny, low-impact fixes; defers hard systemic issues.",
+    "description": "Encourages tiny, low-impact fixes while deferring hard systemic issues; teams game the metric by splitting easy fixes into multiple tickets and avoiding root-cause investigations that would reduce overall bug volume.",
     "emRank": {
       "priority": "N/A",
       "rank": 99
@@ -2871,7 +2852,6 @@
     "warningRange": "50-99% scanned",
     "dangerRange": "< 50% scanned",
     "capabilityIds": [
-      "C5",
       "C9",
       "C13"
     ],
@@ -3128,5 +3108,168 @@
     "aiEraImpact": "Self-referential: using AI-generated productivity scores to evaluate AI adoption. 80%+ of engineers report gains; controlled studies show 19% slowdown for experienced developers (METR RCT, 2024).",
     "superiorReplacement": "AI Tooling ROI (10.5) + AI-3 + AI-2",
     "decisionRule": "Do not track. Use AI Tooling ROI (10.5) and AI Trust Score (5.9) instead."
+  },
+  {
+    "id": "11.1",
+    "name": "Stakeholder NPS for Engineering Partnership",
+    "slug": "stakeholder-nps-engineering-partnership",
+    "category": "Stakeholder",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Quarterly survey of product, design, and business stakeholders rating their satisfaction with engineering partnership. Measures perceived responsiveness, communication quality, and collaborative effectiveness. The most direct signal of cross-functional relationship health.",
+    "emRank": {
+      "priority": "C",
+      "rank": 12
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 10
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 3,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: design 5-question survey, establish quarterly cadence, build trend dashboard",
+    "replaces": "",
+    "whyThisTier": "Direct perception metric from key partners. Secondary because survey-based and lagging, but uniquely captures relationship quality that delivery metrics miss.",
+    "goodRange": "NPS > 50",
+    "warningRange": "NPS 20-50",
+    "dangerRange": "NPS < 20",
+    "capabilityIds": [
+      "C5"
+    ],
+    "observableIds": [
+      "C5-O1",
+      "C5-O5"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI tools may change stakeholder expectations for engineering speed. Monitor whether AI adoption improves or degrades partnership satisfaction scores.",
+    "decisionRule": "NPS <20 → investigate specific friction points with stakeholder interviews. Declining trend over 2 quarters → executive attention needed."
+  },
+  {
+    "id": "11.2",
+    "name": "Cross-Functional Project On-Time Delivery Rate",
+    "slug": "cross-functional-project-on-time-delivery-rate",
+    "category": "Stakeholder",
+    "tier": "secondary",
+    "type": "lagging",
+    "description": "Percentage of cross-functional projects (involving 2+ teams or functions) delivered within the committed timeline. Measures coordination effectiveness and dependency management across organizational boundaries.",
+    "emRank": {
+      "priority": "C",
+      "rank": 14
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 12
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "low",
+    "implementationNotes": "1-2 wks: tag cross-functional projects in project tracker, compare committed vs actual dates",
+    "replaces": "",
+    "whyThisTier": "Concrete outcome metric for cross-team execution. Secondary because on-time delivery is influenced by many factors beyond cross-functional skill.",
+    "goodRange": "> 80% on time",
+    "warningRange": "60-80% on time",
+    "dangerRange": "< 60% on time",
+    "capabilityIds": [
+      "C5"
+    ],
+    "observableIds": [
+      "C5-O4",
+      "C5-O8"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI may reduce individual task duration but cross-functional coordination overhead remains human. Track whether AI adoption reduces or increases cross-team delivery predictability.",
+    "decisionRule": "On-time rate <60% → audit dependency management and pre-wiring practices. Identify recurring blockers across projects."
+  },
+  {
+    "id": "11.3",
+    "name": "Cross-Team Request SLA Resolution Rate",
+    "slug": "cross-team-request-sla-resolution-rate",
+    "category": "Stakeholder",
+    "tier": "secondary",
+    "type": "leading",
+    "description": "Percentage of cross-team requests (API integrations, platform support, shared service changes) resolved within agreed SLAs. Leading indicator of partnership health — SLA misses create friction before it shows up in NPS.",
+    "emRank": {
+      "priority": "C",
+      "rank": 13
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 11
+    },
+    "mandatoryPairIds": [],
+    "cadence": "monthly",
+    "dashboardPlacement": [
+      "em",
+      "director"
+    ],
+    "maturityPhase": 2,
+    "implementationEffort": "medium",
+    "implementationNotes": "2-3 wks: define SLAs per request type, track in ticketing system, build resolution rate dashboard",
+    "replaces": "",
+    "whyThisTier": "Leading indicator of cross-functional friction. Secondary because SLA definitions vary and gaming is possible, but directionally reliable.",
+    "goodRange": "> 90% within SLA",
+    "warningRange": "75-90% within SLA",
+    "dangerRange": "< 75% within SLA",
+    "capabilityIds": [
+      "C5"
+    ],
+    "observableIds": [
+      "C5-O4",
+      "C5-O5"
+    ],
+    "emTier": "secondary",
+    "directorTier": "secondary",
+    "aiEraImpact": "AI-assisted triage and routing may improve resolution times. Track whether AI tooling adoption correlates with SLA improvement.",
+    "decisionRule": "SLA resolution <75% → identify bottleneck teams and negotiate capacity allocation. Chronic misses on specific request types → invest in self-service or automation."
+  },
+  {
+    "id": "11.4",
+    "name": "Strategic Planning Inclusion Rate",
+    "slug": "strategic-planning-inclusion-rate",
+    "category": "Stakeholder",
+    "tier": "tertiary",
+    "type": "structural",
+    "description": "Percentage of strategic planning cycles where engineering leadership is included from the ideation phase (not just execution). Structural indicator of whether engineering has earned a seat at the strategy table.",
+    "emRank": {
+      "priority": "D",
+      "rank": 25
+    },
+    "directorRank": {
+      "priority": "C",
+      "rank": 15
+    },
+    "mandatoryPairIds": [],
+    "cadence": "quarterly",
+    "dashboardPlacement": [],
+    "maturityPhase": 3,
+    "implementationEffort": "low",
+    "implementationNotes": "1 wk: audit last 4 planning cycles for engineering inclusion timing, establish tracking",
+    "replaces": "",
+    "whyThisTier": "Structural indicator of influence maturity. Tertiary because binary (included or not) and hard to improve directly — it's an outcome of sustained cross-functional trust.",
+    "goodRange": "> 90% of planning cycles",
+    "warningRange": "60-90%",
+    "dangerRange": "< 60% or engineering consulted only at execution phase",
+    "capabilityIds": [
+      "C5"
+    ],
+    "observableIds": [
+      "C5-O3",
+      "C5-O9"
+    ],
+    "emTier": "tertiary",
+    "directorTier": "secondary",
+    "aiEraImpact": "As AI shifts what's technically feasible, early engineering involvement in strategy becomes more critical. Engineering leaders who can articulate AI-enabled possibilities earn earlier inclusion.",
+    "decisionRule": "Inclusion <60% → engineering is perceived as execution-only. Invest in proactive technical strategy communication and sponsor relationship building."
   }
 ]

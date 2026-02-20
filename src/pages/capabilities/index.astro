@@ -34,7 +34,7 @@ const capsByDomain = DOMAIN_ORDER.map(domain => ({
       <section class="mb-10">
         <div class="flex items-center gap-3 mb-4">
           <h2 class:list={['text-xl font-bold', getDomainColor(domain).text]}>{domain}</h2>
-          <span class="text-sm text-gray-500 dark:text-gray-400">{caps.length} capabilities</span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">{caps.length} {caps.length === 1 ? 'capability' : 'capabilities'}</span>
           <a href={url(`/domains/${domain.toLowerCase()}/`)} class="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 ml-auto">
             View domain &rarr;
           </a>

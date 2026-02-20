@@ -13,6 +13,7 @@ export const METRIC_CATEGORY_COLORS: Record<string, string> = {
   Security: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300',
   Cost: 'bg-slate-100 text-slate-700 dark:bg-slate-700/50 dark:text-slate-300',
   'AI-Era': 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
+  Stakeholder: 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300',
 };
 
 /** Text-only colors for category headings in sidebar */
@@ -28,6 +29,7 @@ export const METRIC_CATEGORY_TEXT_COLORS: Record<string, string> = {
   Security: 'text-orange-600 dark:text-orange-400',
   Cost: 'text-slate-600 dark:text-slate-400',
   'AI-Era': 'text-violet-600 dark:text-violet-400',
+  Stakeholder: 'text-teal-600 dark:text-teal-400',
 };
 
 /** Small dot colors for tier indicators in sidebar */
