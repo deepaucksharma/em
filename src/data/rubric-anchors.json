@@ -6,7 +6,7 @@
     "level1Developing": "Inherits team structure and works within it. Recognizes ownership confusion when it causes problems. Understands Conway's Law conceptually but doesn't apply it proactively.",
     "level2Emerging": "Recognizes when team structure causes friction. Beginning to track ownership gaps. Starts to think about Conway's Law in practice but doesn't initiate structural changes.",
     "level3Competent": "Assesses team cognitive load and advocates for structural changes. Maintains clear ownership registry. Proposes and executes team splits/merges when needed. Applies Conway's Law to align architecture and org structure.",
-    "level4Distinguished": "Proactively proposes team topology changes with data-backed rationale. Executes team changes with minimal disruption. Conway's Law applied intentionally to align architecture and teams. Starting to influence org-level topology decisions.",
+    "level4Distinguished": "Proactively proposes team topology changes based on cognitive load analysis and value-stream mapping, influencing org-level design before bottlenecks surface. Executes team changes with minimal disruption. Conway's Law applied intentionally to shape architecture through team structure.",
     "level5Advanced": "Designs team topology for the org. Re-orgs executed with <1 regrettable departure per re-org cycle. Platform team justification and creation. Inverse Conway maneuver applied successfully. Team topology rationale articulated to VP+ with architectural alignment evidence. Company benchmark: Amazon's org design principles — single-threaded ownership, two-pizza teams, and API boundaries between teams — exemplify this level of structural thinking applied at scale.",
     "rationale": "Anchor 1/2: Covers structural design (team splits/merges, ownership, Conway's Law). Maps to C1-O1 through C1-O5."
   },
@@ -118,7 +118,7 @@
     "level3Competent": "1:1s are trust-building with career development mix. Addresses underperformance within 2 weeks of identification. Capacity model accounts for interrupts, on-call, PTO. Retention managed proactively (stay interviews, flight risk identification). Leads team through adversity with honest communication.",
     "level4Distinguished": "Team scores 4.0+ on psychological safety survey (Edmondson scale or equivalent) and trending upward. Performance issues addressed promptly and constructively. Capacity model refined and accurate. Proactive retention achieving results — team members cite manager as reason for staying.",
     "level5Advanced": "Team scores 4.0+ on psychological safety survey (Edmondson scale or equivalent) consistently. Zero avoidance of difficult conversations. Team executes predictably at sustainable pace. <1 regrettable departure per 12 engineers per rolling 12 months. Team navigates crises with minimal productivity loss. Company benchmark: Google's Project Oxygen and manager effectiveness research identified coaching as the #1 behavior distinguishing great managers, measured through anonymous upward feedback surveys.",
-    "rationale": "Anchor 1/2: Covers EM-level coaching (1:1s, underperformance, retention, stretch assignments). Maps to C6-O1 through C6-O5."
+    "rationale": "Anchor 1/2: Covers EM-level coaching (1:1s, underperformance, retention, stretch assignments, Staff+ management, career development). Maps to C6-O1 through C6-O5, C6-O8 (stay interviews), C6-O9 (Staff+ management), C6-O10 (career conversations), C6-O13 (career pathways)."
   },
   {
     "anchorId": "C6-2",
@@ -129,7 +129,7 @@
     "level3Competent": "Regular skip-level 1:1s providing org insight. EMs coached on management craft (not just project management). Cross-EM calibration sessions before perf cycles. Delegation boundaries clear. EM bench strength being developed.",
     "level4Distinguished": "Skip-levels providing actionable org insights. EMs coached on full management craft. Cross-EM calibration well-established. Delegation boundaries clear and respected. EM bench showing readiness for growth.",
     "level5Advanced": "EMs are independently strong leaders. Skip-level insights drive proactive org interventions. Calibration standards consistent across all EMs. EM pipeline producing ready managers. Director operates at Director altitude consistently. Org health monitored and maintained systematically. Company benchmark: Amazon evaluates Directors on how independently their EMs operate — Director-level heroics are a failure mode, not a strength.",
-    "rationale": "Anchor 2/2: Covers Director-level EM development (coaching EMs, skip-levels, bench building). Maps to C6-O6 and C6-O7. Intentionally separate — different altitude of practice."
+    "rationale": "Anchor 2/2: Covers Director-level EM development (coaching EMs, skip-levels, bench building, succession planning). Maps to C6-O6, C6-O7, C6-O11 (coaching struggling EMs), C6-O12 (succession plans). Intentionally separate — different altitude of practice."
   },
   {
     "anchorId": "C7-1",
@@ -140,7 +140,7 @@
     "level3Competent": "Proactive weekly written updates. Proposals framed in business terms with ROI. Bad news delivered early with mitigation plan. Political capital built through consistent delivery and helping others. Demonstrates comfort in exec reviews.",
     "level4Distinguished": "Communication trusted by leadership. Proposals consistently well-framed with business impact. Bad news delivered early with clear mitigation options. Political capital built through consistent follow-through. Demonstrates comfort and effectiveness in exec reviews.",
     "level5Advanced": "Leadership trusts completely — maximum autonomy earned. Cross-org alignment driven without escalation. Executive communication is crisp and confident. Sponsors at VP+ level actively advocate for you. Seen as a leader beyond engineering function. Company benchmark: Amazon's 6-pager narrative format eliminates slide-deck hand-waving and forces structured thinking, while Netflix's 'context, not control' model delegates decisions with clear strategic framing.",
-    "rationale": "Anchor 1/2: Covers external-facing communication (status updates, bad news delivery, exec presentations, managing up). Maps to C7-O2 through C7-O5."
+    "rationale": "Anchor 1/2: Covers external-facing communication (status updates, bad news delivery, exec presentations, managing up, difficult conversations, communication scaling). Maps to C7-O2 through C7-O5, C7-O8 (difficult conversations), C7-O9 (communication scaling), C7-O11 (explicit trade-off communication)."
   },
   {
     "anchorId": "C7-2",
@@ -151,7 +151,7 @@
     "level3Competent": "DACI/RFC culture established. Decisions classified by reversibility and handled appropriately. Says no with trade-off framing. First principles analysis applied to significant decisions. Systems thinking catches second-order effects.",
     "level4Distinguished": "Decision framework adopted within team and recognized by peers. Prioritization under ambiguity is a developing strength. First principles thinking applied regularly. Systems thinking catches most second-order effects.",
     "level5Advanced": "Decision framework is the org standard. Prioritization under ambiguity is a strength — forward progress in uncertain situations. First principles thinking produces novel solutions. Systems thinking prevents cross-org negative externalities. Decision quality recognized by peers and leadership. Company benchmark: Amazon's Type 1/Type 2 decision framework and 'disagree and commit' principle provide structural clarity for decision-making at scale.",
-    "rationale": "Anchor 2/2: Covers decision architecture (DACI/RFC, trade-off framing, reversibility). Maps to C7-O1, C7-O6, C7-O7. Intentionally separate — communication vs decision-making are distinct sub-skills."
+    "rationale": "Anchor 2/2: Covers decision architecture (DACI/RFC, trade-off framing, reversibility, authority distribution). Maps to C7-O1, C7-O6, C7-O7, C7-O10 (decision authority distribution). Intentionally separate — communication vs decision-making are distinct sub-skills."
   },
   {
     "anchorId": "C8-1",
@@ -173,7 +173,7 @@
     "level3Competent": "Proactive failure mode analysis for all significant changes. Launch readiness reviews enforced with documented criteria. Dependency risks mapped and mitigated. Vendor risk registry maintained for critical dependencies.",
     "level4Distinguished": "Risk reduction is systematic across team portfolio. Cross-team failure modes identified and addressed. Game days reveal novel failure modes that get fixed. Teams proactively build resilience. Starting to influence org-wide risk practices.",
     "level5Advanced": "Org-level risk reduction framework owned and continuously improved. Cross-org failure mode analysis prevents systemic incidents. Culture of proactive resilience building. Vendor dependency abstraction reduces single-point-of-failure risk across the org. Company benchmark: Netflix's chaos engineering practice (Chaos Monkey) proactively tests resilience, and Amazon's pre-mortem process identifies failure modes before they occur in production.",
-    "rationale": "Anchor 2/2: Covers proactive risk management (failure mode analysis, launch readiness, dependency risk, vendor management). Maps to C8-O4 through C8-O6. Intentionally separate from incident response — proactive vs. reactive are distinct sub-skills."
+    "rationale": "Anchor 2/2: Covers proactive risk management (failure mode analysis, launch readiness, dependency risk, vendor management, chaos engineering, error budgets). Maps to C8-O4 through C8-O6, C8-O7 (chaos engineering and game days), C8-O8 (error budget management). Intentionally separate from incident response — proactive vs. reactive are distinct sub-skills."
   },
   {
     "anchorId": "C9-1",
@@ -184,7 +184,7 @@
     "level3Competent": "Reviews DORA metric dashboard weekly; discusses trends in team standup at least biweekly. Owns release quality and process for team. Runs developer experience improvements quarterly (top 2 pain points). Meeting 85%+ sprint commitment accuracy for 3+ consecutive quarters. Toil tracked and reduced systematically.",
     "level4Distinguished": "DORA metrics trending toward elite levels. Developer experience investments showing measurable ROI. Delivery practices being adopted by adjacent teams. Engineering productivity data used in leadership discussions.",
     "level5Advanced": "DORA metrics at elite level across teams. Developer experience investments justified with ROI data. Delivery practices standardized across org. Teams benchmark against each other constructively. Engineering productivity narrative presented to leadership. Company benchmark: Google and Microsoft's SPACE framework balances satisfaction, performance, activity, communication, and efficiency — preventing any single metric from dominating the productivity narrative.",
-    "rationale": "Anchor 1/2: Covers metric infrastructure (DORA tracking, developer experience, delivery metrics, dashboards). Maps to C9-O1 through C9-O3, C9-O7."
+    "rationale": "Anchor 1/2: Covers metric infrastructure (DORA tracking, developer experience, delivery metrics, dashboards, metric pairings, maturity adaptation). Maps to C9-O1 through C9-O3, C9-O7, C9-O9 (metric pairings), C9-O10 (metric maturity adaptation)."
   },
   {
     "anchorId": "C9-2",
