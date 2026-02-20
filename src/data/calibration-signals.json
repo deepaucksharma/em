@@ -2622,5 +2622,45 @@
     "signalText": "Leader tracks verification debt as a distinct category from traditional tech debt \u2014 the growing gap between AI-generated code volume and team capacity to validate it, evidenced by increased code duplication (GitClear: 10x increase in duplicate blocks since AI adoption), inflated output metrics masking quality degradation, and developers spending more time debugging AI-generated code than writing equivalent code from scratch",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI Verification Debt Management"
+  },
+  {
+    "id": "SIG-330",
+    "observableId": "C8-O8",
+    "capabilityId": "C8",
+    "signalText": "Leader defines SLIs that map to user-visible impact rather than infrastructure metrics \u2014 'successful checkout in <2s' rather than 'CPU <80%'. Each SLI has a documented measurement method, data source, and owner. Google SRE principle: if your SLI doesn't correlate with user happiness, it's the wrong SLI.",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "SLI Definition Quality"
+  },
+  {
+    "id": "SIG-331",
+    "observableId": "C8-O8",
+    "capabilityId": "C8",
+    "signalText": "SLO targets are set through negotiation between engineering and product \u2014 not aspirational '99.99%' without capacity analysis. Leader can articulate the cost curve: 'Moving from 99.9% to 99.95% availability requires $X in redundancy and reduces feature velocity by Y%'. SLO is reviewed quarterly and adjusted based on error budget consumption trends.",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "SLO Target Setting"
+  },
+  {
+    "id": "SIG-332",
+    "observableId": "C12-O2",
+    "capabilityId": "C12",
+    "signalText": "Leader treats eNPS as a lagging diagnostic, not a target \u2014 investigates root causes when scores drop rather than running 'engagement initiatives' that address symptoms. Can correlate engagement trends with specific events (re-orgs, on-call changes, leadership shifts) and demonstrate that structural fixes moved the score, not pizza parties.",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Engagement Score Diagnostic Use"
+  },
+  {
+    "id": "SIG-333",
+    "observableId": "C9-O9",
+    "capabilityId": "C9",
+    "signalText": "Leader measures the quality differential between AI-assisted and human-authored PRs \u2014 tracking review revision cycles, post-merge defect rates, and test coverage gaps. Uses this data to calibrate AI tool adoption rather than relying on acceptance rates: 'AI-assisted PRs have 1.3x review cycles but ship 40% faster \u2014 net positive when paired with enhanced test requirements.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI PR Quality Measurement"
+  },
+  {
+    "id": "SIG-334",
+    "observableId": "C9-O10",
+    "capabilityId": "C9",
+    "signalText": "Leader tracks verification overhead as a distinct cost center \u2014 measuring review time spent validating AI-generated code vs. human-authored code, and the ratio of AI output volume to human validation capacity. When verification overhead exceeds 30% of review time, triggers process adjustments: smaller AI-generated PRs, mandatory test coverage thresholds, or domain-scoped AI usage policies.",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI Verification Overhead Management"
   }
 ]
