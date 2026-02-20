@@ -20,10 +20,10 @@
       "Attend design reviews (even if not the deepest technical voice).",
       "Build opinion through asking questions, not pretending to know.",
       "Own tech debt visibility even if you don't write the code.",
-      "At Google, EMs co-own a written tech strategy doc alongside TLs, reviewed quarterly \u2014 absence of architectural opinion is a gap, not a feature."
+      "At Google, EMs co-own a written tech strategy doc alongside TLs, reviewed quarterly — absence of architectural opinion is a gap, not a feature."
     ],
     "sourceTopic": "Technical Strategy & System Ownership",
-    "mappingNotes": "Architecture without vision \u2192 tech vision observable"
+    "mappingNotes": "Architecture without vision → tech vision observable"
   },
   {
     "id": "AP-02",
@@ -48,7 +48,7 @@
       "Amazon's Single-Threaded Leadership model explicitly separates strategic ownership (EM) from technical execution (principal engineer), preventing this bottleneck by design."
     ],
     "sourceTopic": "Technical Strategy & System Ownership",
-    "mappingNotes": "Over-involved architect \u2192 architecture decisions/delegation observable"
+    "mappingNotes": "Over-involved architect → architecture decisions/delegation observable"
   },
   {
     "id": "AP-03",
@@ -56,24 +56,33 @@
     "slug": "metrics-theater",
     "observableIds": [
       "C9-O1",
-      "C9-O3"
+      "C9-O3",
+      "C9-O5"
     ],
     "capabilityId": "C9",
-    "shortDesc": "Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows, or engineers game metrics to hit targets. Beautiful charts mask declining real productivity while the team becomes cynical about measurement.",
+    "shortDesc": "Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows — dashboards measure activity instead of outcomes, metrics get gamed, and beautiful charts mask declining real productivity",
     "warningSigns": [
-      "Beautiful dashboards nobody looks at",
-      "metrics improve but team doesn't feel faster",
-      "metrics targets become team KPIs used in performance reviews",
-      "'deploy frequency' gamed by splitting deploys"
+      "Beautiful dashboards nobody looks at or acts on",
+      "Metrics improve but team doesn't feel faster and customers are unhappy",
+      "Metrics targets become team KPIs used in performance reviews",
+      "'Deploy frequency' gamed by splitting deploys",
+      "Dashboards show lines of code, PRs merged, or tickets closed without connection to business outcomes",
+      "No leading indicators — only lagging",
+      "Team optimizes for metric movement rather than impact"
     ],
     "impact": "False confidence in team health; real problems invisible behind green dashboards; team cynicism about measurement; productivity actually declining",
     "recoveryActions": [
       "Use metrics as diagnostic tools, never performance targets.",
-      "Ask 'what does this metric tell us about friction?' not 'how do we improve this number?' Share metrics with team as shared investigation, not report card.",
-      "Google's DORA research team treats metrics as diagnostic signals, never as individual performance targets \u2014 a principle that prevents the gaming this pattern describes."
+      "Ask 'what does this metric tell us about friction?' not 'how do we improve this number?'",
+      "Audit every metric: does it connect to a customer or business outcome? Replace activity metrics with outcome metrics.",
+      "Add leading indicators alongside lagging ones.",
+      "Share metrics with team as shared investigation, not report card.",
+      "Ask 'what would change if this metric moved?' — if nothing, remove it.",
+      "Google's DORA research team treats metrics as diagnostic signals, never as individual performance targets — a principle that prevents the gaming this pattern describes.",
+      "See Playbook: 'DORA Metrics Show Decline But Team Feels Fine' (P-C9-1) for how to investigate metric signals without punishing the team."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
-    "mappingNotes": "Metrics theater \u2192 outcome metrics / activity metrics observables"
+    "mappingNotes": "Metrics theater → outcome metrics / activity metrics observables"
   },
   {
     "id": "AP-04",
@@ -97,10 +106,10 @@
       "Track velocity AND quality together (they're a pair, not a trade-off).",
       "Set minimum quality bar that can't be traded for speed.",
       "Celebrate reliability wins as much as feature launches.",
-      "Netflix pairs deployment velocity with chaos engineering results \u2014 speed without resilience is a red flag in engineering reviews, not a badge of honor."
+      "Netflix pairs deployment velocity with chaos engineering results — speed without resilience is a red flag in engineering reviews, not a badge of honor."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
-    "mappingNotes": "Velocity obsession \u2192 incident response / delivery quality observables"
+    "mappingNotes": "Velocity obsession → incident response / delivery quality observables"
   },
   {
     "id": "AP-05",
@@ -112,7 +121,7 @@
       "C13-O2"
     ],
     "capabilityId": "C13",
-    "shortDesc": "EM treats security as the security team's job rather than embedding it in the engineering workflow \u2014 security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
+    "shortDesc": "EM treats security as the security team's job rather than embedding it in the engineering workflow — security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
     "warningSigns": [
       "Security reviews are afterthoughts or skipped",
       "No security checkpoints in CI/CD pipeline",
@@ -123,7 +132,7 @@
     ],
     "impact": "Security incidents that damage customer trust; compliance failures with VP-level visibility; forced emergency patching disrupting planned work; regulatory penalties",
     "recoveryActions": [
-      "Embed security in the development workflow \u2014 add automated security scanning to CI/CD pipeline.",
+      "Embed security in the development workflow — add automated security scanning to CI/CD pipeline.",
       "Security champion rotation within team.",
       "Include security in launch checklist and require threat modeling for features touching auth, payments, or PII.",
       "Make vulnerability SLA as visible as uptime SLA with severity-based targets.",
@@ -132,7 +141,7 @@
       "Google's BeyondCorp model and production security reviews require automated security scanning in every CI/CD pipeline; known vulnerabilities block deployment by default."
     ],
     "sourceTopic": "Security & Operational Rigor",
-    "mappingNotes": "Security as afterthought \u2192 security integration observables"
+    "mappingNotes": "Security as afterthought → security integration observables"
   },
   {
     "id": "AP-06",
@@ -157,10 +166,11 @@
       "Rotate incident commander role.",
       "Game days with heroes explicitly excluded.",
       "Celebrate process, not heroics.",
-      "Google SRE mandates that no single person handles more than 25% of on-call pages; rotation health is a team-level metric, making hero dependence structurally impossible."
+      "Google SRE mandates that no single person handles more than 25% of on-call pages; rotation health is a team-level metric, making hero dependence structurally impossible.",
+      "See Playbook: 'Major Production Incident During Your Vacation' (P-C8-1) for how to test whether your team can function without the hero."
     ],
     "sourceTopic": "Operational Risk & Incident Management",
-    "mappingNotes": "Hero culture \u2192 incident command / on-call health observables"
+    "mappingNotes": "Hero culture → incident command / on-call health observables"
   },
   {
     "id": "AP-07",
@@ -185,10 +195,10 @@
       "Ban 'human error' as root cause.",
       "Celebrate people who surface near-misses.",
       "Track action item completion, not blame.",
-      "Google popularized blameless postmortems where root causes must be systemic \u2014 'human error' is never accepted as a root cause, forcing teams to find the process gap."
+      "Google popularized blameless postmortems where root causes must be systemic — 'human error' is never accepted as a root cause, forcing teams to find the process gap."
     ],
     "sourceTopic": "Operational Risk & Incident Management",
-    "mappingNotes": "Blame post-mortems \u2192 blameless post-mortem observable"
+    "mappingNotes": "Blame post-mortems → blameless post-mortem observable"
   },
   {
     "id": "AP-08",
@@ -211,10 +221,10 @@
       "Diagnose root cause before proposing structural change.",
       "Ask: 'Would this problem exist regardless of team structure?' Most execution problems are process/people/leadership problems, not org chart problems.",
       "Minimum 6 months between structural changes.",
-      "Spotify's Squad model provides stable team structure even as product priorities shift \u2014 teams own domains, not projects, which eliminates the impulse to re-org for every new initiative."
+      "Spotify's Squad model provides stable team structure even as product priorities shift — teams own domains, not projects, which eliminates the impulse to re-org for every new initiative."
     ],
     "sourceTopic": "Org Design & Team Topologies",
-    "mappingNotes": "Re-org addiction \u2192 re-org execution / signal recognition observables"
+    "mappingNotes": "Re-org addiction → re-org execution / signal recognition observables"
   },
   {
     "id": "AP-09",
@@ -237,10 +247,11 @@
       "Rule: every system, metric, and customer-facing surface has exactly one team owner.",
       "Resolve disputes within 1 week (escalate if needed).",
       "Quarterly ownership review.",
-      "Amazon requires every service to have a single-threaded owner documented in an internal service registry; ownership gaps are surfaced and escalated weekly."
+      "Amazon requires every service to have a single-threaded owner documented in an internal service registry; ownership gaps are surfaced and escalated weekly.",
+      "See Playbook: 'A Cross-Team Initiative Is Stalled Because No One Owns It' (P-C1-3) for the step-by-step on how to resolve ownership ambiguity for cross-team work."
     ],
     "sourceTopic": "Org Design & Team Topologies",
-    "mappingNotes": "Fuzzy ownership \u2192 ownership registry observable"
+    "mappingNotes": "Fuzzy ownership → ownership registry observable"
   },
   {
     "id": "AP-10",
@@ -265,10 +276,11 @@
       "Use SBI framework to make feedback specific.",
       "Set personal goal: address one difficult issue per week.",
       "Get coaching from your manager on delivery.",
-      "Netflix's culture of radical candor expects managers to deliver direct feedback within 48 hours \u2014 avoiding difficult conversations is itself treated as a performance issue."
+      "Netflix's culture of radical candor expects managers to deliver direct feedback within 48 hours — avoiding difficult conversations is itself treated as a performance issue.",
+      "See Playbook: 'Two of Your Engineers Are in Conflict' (P-C12-1) for structured conflict resolution, and track improvement via metric M-7.8 (Manager Effectiveness Score)."
     ],
     "sourceTopic": "Team Health & Execution",
-    "mappingNotes": "Conflict avoidance \u2192 underperformance / feedback observables"
+    "mappingNotes": "Conflict avoidance → underperformance / feedback observables"
   },
   {
     "id": "AP-11",
@@ -294,7 +306,7 @@
       "Google's Project Aristotle research identified psychological safety as the #1 predictor of team effectiveness; mandatory quarterly skip-level surveys help surface problems that 1:1s miss."
     ],
     "sourceTopic": "Team Health & Execution",
-    "mappingNotes": "The bubble \u2192 psychological safety observable"
+    "mappingNotes": "The bubble → psychological safety observable"
   },
   {
     "id": "AP-12",
@@ -305,23 +317,23 @@
       "C4-O7"
     ],
     "capabilityId": "C7",
-    "shortDesc": "EM is always available, always responsive, and burning out while modeling unsustainable behavior",
+    "shortDesc": "EM is always available, always responsive, and burning out — modeling unsustainable pace that the team feels pressured to match",
     "warningSigns": [
-      "EM responds to Slack at midnight",
-      "team feels guilty taking PTO because EM never does",
-      "EM can't delegate because 'it's faster to do it myself'",
-      "EM's manager doesn't know EM is underwater"
+      "EM responds to Slack at midnight and on weekends",
+      "Team feels guilty taking PTO because EM never does",
+      "EM's personal health and relationships are suffering",
+      "Manager praises EM's 'dedication' without seeing the burnout trajectory"
     ],
     "impact": "EM burnout and potential departure; team adopts unsustainable norms; no one takes vacation; EM becomes bottleneck; quality of EM's decisions degrades with fatigue",
     "recoveryActions": [
-      "Set and enforce personal boundaries visibly.",
-      "Delegate explicitly (not 'do you mind' but 'you own this').",
-      "Take PTO and be unreachable.",
-      "Tell your manager you're overloaded \u2014 it's not a weakness.",
-      "Microsoft's Model-Coach-Care framework explicitly treats sustainable pace as a leadership competency \u2014 manager heroics are a failure mode, not a strength."
+      "Set and enforce personal boundaries visibly — the team takes cues from your behavior.",
+      "Take PTO and be genuinely unreachable to prove the team can function without you.",
+      "Tell your manager you're overloaded — it's not a weakness, it's a signal.",
+      "Track your own working hours for a month and share the data with your manager.",
+      "Microsoft's Model-Coach-Care framework explicitly treats sustainable pace as a leadership competency — leaders who model overwork are failing, not succeeding."
     ],
     "sourceTopic": "Team Health & Execution",
-    "mappingNotes": "24/7 manager \u2192 proactive status / focus protection observables"
+    "mappingNotes": "24/7 manager → proactive status / focus protection observables"
   },
   {
     "id": "AP-13",
@@ -345,10 +357,11 @@
       "Show leadership the cost of bad hires (in months of lost productivity, management time, and team morale).",
       "Track quality-of-hire metrics.",
       "Better to be understaffed for 3 months than to have a bad hire for 12.",
-      "Amazon's Bar Raiser program gives an independent interviewer veto power specifically to prevent pressure-driven hiring compromises, structurally protecting quality."
+      "Amazon's Bar Raiser program gives an independent interviewer veto power specifically to prevent pressure-driven hiring compromises, structurally protecting quality.",
+      "See Playbook: 'You Need to Build a New Team From Scratch' (P-C11-1) for how to hire under pressure without lowering the bar."
     ],
     "sourceTopic": "Talent Acquisition & Team Building",
-    "mappingNotes": "Hiring bar collapse \u2192 calibrated hiring / bar maintenance observables"
+    "mappingNotes": "Hiring bar collapse → calibrated hiring / bar maintenance observables"
   },
   {
     "id": "AP-14",
@@ -375,7 +388,7 @@
       "Meta's structured hiring rubrics evaluate demonstrated competencies rather than 'culture fit,' and interview panels are deliberately composed for diversity of perspective."
     ],
     "sourceTopic": "Talent Acquisition & Team Building",
-    "mappingNotes": "Clone factory \u2192 hiring process / inclusive practices observables"
+    "mappingNotes": "Clone factory → hiring process / inclusive practices observables"
   },
   {
     "id": "AP-15",
@@ -398,10 +411,11 @@
       "PIPs with real support and realistic goals.",
       "Track: what percentage of PIPs result in improvement? If zero, your PIPs are exit processes dressed up as development.",
       "Be honest with yourself about intent.",
-      "Netflix replaces traditional PIPs with honest conversations and the Keeper Test: 'Would I fight to keep this person?' If not, a generous severance and respectful exit."
+      "Netflix replaces traditional PIPs with honest conversations and the Keeper Test: 'Would I fight to keep this person?' If not, a generous severance and respectful exit.",
+      "See Playbook: 'One of Your EMs Is Struggling' (P-C6-3) for the skill/will/situation diagnostic framework before initiating formal performance management."
     ],
     "sourceTopic": "Performance, Calibration & Growth",
-    "mappingNotes": "Permanent PIP \u2192 fair PIP process observable"
+    "mappingNotes": "Permanent PIP → fair PIP process observable"
   },
   {
     "id": "AP-16",
@@ -424,11 +438,12 @@
       "Separate retention from promotion.",
       "Retention levers: comp adjustment, scope change, recognition, project assignment.",
       "Promotion: only when sustained next-level evidence exists.",
-      "Have honest career conversation: 'you're valued at current level \u2014 here's what next level requires'",
-      "Google's promo committee model separates the promotion decision from the direct manager, preventing emotional retention-driven promotions and ensuring cross-team calibration."
+      "Have honest career conversation: 'you're valued at current level — here's what next level requires'",
+      "Google's promo committee model separates the promotion decision from the direct manager, preventing emotional retention-driven promotions and ensuring cross-team calibration.",
+      "See Playbook: 'Your Manager Asks You to Rate Everyone Meets Expectations' (P-C14-2) for how to navigate calibration pressure without compromising integrity."
     ],
     "sourceTopic": "Performance, Calibration & Growth",
-    "mappingNotes": "Promotion as retention \u2192 promotion evidence / high performer management observables"
+    "mappingNotes": "Promotion as retention → promotion evidence / high performer management observables"
   },
   {
     "id": "AP-17",
@@ -451,10 +466,11 @@
       "Honest self-check: is everyone on your team truly exceeding? If yes, you have an exceptional team AND you should still differentiate within 'exceeds'",
       "Calibrate with peer managers.",
       "Get comfortable with the discomfort of honest differentiation.",
-      "Amazon's calibration process requires managers to justify clustering at any rating level with specific evidence, making Lake Wobegon ratings structurally difficult to sustain."
+      "Amazon's calibration process requires managers to justify clustering at any rating level with specific evidence, making Lake Wobegon ratings structurally difficult to sustain.",
+      "See Playbook: 'Calibration Committee Wants to Downgrade Your Engineer's Rating' (P-C14-1) for how evidence-based calibration prevents this pattern."
     ],
     "sourceTopic": "Performance, Calibration & Growth",
-    "mappingNotes": "Lake Wobegon effect \u2192 ratings distribution / calibration observables"
+    "mappingNotes": "Lake Wobegon effect → ratings distribution / calibration observables"
   },
   {
     "id": "AP-18",
@@ -482,7 +498,7 @@
       "Spotify runs quarterly team Health Checks where squads explicitly rate and discuss cultural dimensions like psychological safety and mission clarity, making culture a deliberate practice."
     ],
     "sourceTopic": "Engineering Culture & Team Identity",
-    "mappingNotes": "Culture by accident \u2192 team charter / psychological safety observables"
+    "mappingNotes": "Culture by accident → team charter / psychological safety observables"
   },
   {
     "id": "AP-19",
@@ -503,12 +519,12 @@
     "recoveryActions": [
       "Strict discipline: redirect ICs back to their EM.",
       "Give feedback to EMs privately, not publicly through their ICs.",
-      "Define what Director owns vs EM owns \u2014 and stick to it.",
-      "If you don't trust an EM to manage, coach them or replace them \u2014 don't work around them.",
-      "Amazon's Leadership Principles include 'Hire and Develop the Best' \u2014 Directors are evaluated on how independently their EMs operate, not on how involved they remain in day-to-day decisions."
+      "Define what Director owns vs EM owns — and stick to it.",
+      "If you don't trust an EM to manage, coach them or replace them — don't work around them.",
+      "Amazon's Leadership Principles include 'Hire and Develop the Best' — Directors are evaluated on how independently their EMs operate, not on how involved they remain in day-to-day decisions."
     ],
     "sourceTopic": "Managing Managers (Director Track)",
-    "mappingNotes": "Super-EM Director \u2192 delegation at Director altitude observable"
+    "mappingNotes": "Super-EM Director → delegation at Director altitude observable"
   },
   {
     "id": "AP-20",
@@ -537,7 +553,7 @@
       "Meta requires Directors to maintain regular skip-level 1:1s and monthly org health reviews; absence from these is flagged explicitly in upward feedback cycles."
     ],
     "sourceTopic": "Managing Managers (Director Track)",
-    "mappingNotes": "Absent Director \u2192 EM coaching / bench building observables"
+    "mappingNotes": "Absent Director → EM coaching / bench building observables"
   },
   {
     "id": "AP-21",
@@ -562,10 +578,11 @@
       "Participate in product strategy, not just execution.",
       "Push back on features without clear outcome metrics.",
       "Establish OKRs that include engineering health, not just feature delivery.",
-      "Spotify mandates that squads own outcomes (metrics), not just outputs (features) \u2014 teams can push back on feature requests that don't connect to their squad mission and OKRs."
+      "Spotify mandates that squads own outcomes (metrics), not just outputs (features) — teams can push back on feature requests that don't connect to their squad mission and OKRs.",
+      "See Playbook: 'PM Wants to Ship a Feature You Know Will Create Tech Debt' (P-C5-1) for how to negotiate engineering investment within a feature-driven org."
     ],
     "sourceTopic": "Strategic Alignment & Roadmapping",
-    "mappingNotes": "Feature factory \u2192 structured planning / trade-off framing observables"
+    "mappingNotes": "Feature factory → structured planning / trade-off framing observables"
   },
   {
     "id": "AP-22",
@@ -589,10 +606,11 @@
       "Regular triad syncs.",
       "Build personal relationships with PM and Design counterparts.",
       "Model collaborative behavior.",
-      "Spotify's trio model (Engineering Lead + Product Manager + Designer) operates as co-equal partners with shared OKRs, structurally preventing the adversarial dynamic."
+      "Spotify's trio model (Engineering Lead + Product Manager + Designer) operates as co-equal partners with shared OKRs, structurally preventing the adversarial dynamic.",
+      "See Playbook: 'PM Wants to Ship a Feature You Know Will Create Tech Debt' (P-C5-1) for constructive disagreement with PM that preserves the partnership."
     ],
     "sourceTopic": "Cross-Functional Partnership",
-    "mappingNotes": "Adversarial triad \u2192 triad health / PM disagreement observables"
+    "mappingNotes": "Adversarial triad → triad health / PM disagreement observables"
   },
   {
     "id": "AP-23",
@@ -614,12 +632,12 @@
     "recoveryActions": [
       "Over-communicate, especially about risks and problems.",
       "Rule: your manager should never be surprised by anything about your team.",
-      "Flag risks early with your assessment and plan \u2014 even if you're still working on it.",
+      "Flag risks early with your assessment and plan — even if you're still working on it.",
       "Bad news doesn't age well.",
       "Amazon's 'escalation is not failure' culture expects leaders to surface risks early; weekly business reviews are designed to catch problems before they surprise leadership."
     ],
     "sourceTopic": "Stakeholder Management & Influence",
-    "mappingNotes": "Surprise factory \u2192 proactive status / bad news delivery observables"
+    "mappingNotes": "Surprise factory → proactive status / bad news delivery observables"
   },
   {
     "id": "AP-24",
@@ -643,7 +661,7 @@
       "Google ties headcount allocation to demonstrated impact, not org size; VP reviews evaluate impact-per-engineer, making empire building visible and unrewarded."
     ],
     "sourceTopic": "Stakeholder Management & Influence",
-    "mappingNotes": "Empire building \u2192 scope navigation / political capital observables"
+    "mappingNotes": "Empire building → scope navigation / political capital observables"
   },
   {
     "id": "AP-25",
@@ -679,7 +697,7 @@
       "Google requires resource requests to include three options (minimum/target/stretch) with quantified ROI for each; finance partners validate assumptions before approval."
     ],
     "sourceTopic": "Budget, Headcount & Resource Planning",
-    "mappingNotes": "Blank check mentality \u2192 headcount ROI / cost management observables"
+    "mappingNotes": "Blank check mentality → headcount ROI / cost management observables"
   },
   {
     "id": "AP-26",
@@ -690,33 +708,32 @@
       "C2-O3"
     ],
     "capabilityId": "C7",
-    "shortDesc": "Every decision requires exhaustive analysis, committees, and consensus before action",
+    "shortDesc": "Every decision requires exhaustive analysis and data-gathering before action — the team is stuck in perpetual research mode",
     "warningSigns": [
-      "Simple decisions take weeks",
-      "team waits for EM approval on everything",
-      "meetings to plan meetings",
-      "'let's get more data' as default response",
-      "reversible decisions treated as irreversible"
+      "Simple decisions take weeks because 'we need more data'",
+      "Team waits for EM approval on everything",
+      "Meetings to plan meetings",
+      "'Let's get more data' is the default response to any decision",
+      "Decision documents grow to 10+ pages for reversible choices"
     ],
     "impact": "Slow delivery; team frustration; missed opportunities; competitors move faster; perception as indecisive leader",
     "recoveryActions": [
-      "Classify every decision: reversible (most) \u2192 decide in <24hrs.",
-      "Irreversible \u2192 invest in analysis with a deadline.",
-      "Default to action with monitoring, not analysis.",
-      "Delegate decisions aggressively. 'What's the worst that happens if we're wrong?'",
-      "Amazon classifies decisions as Type 1 (irreversible, need deep analysis) vs.",
-      "Type 2 (reversible, bias for action) \u2014 most decisions are Type 2 and should be made at 70% information."
+      "Classify every decision by reversibility: reversible decisions (most) should be made in under 24 hours with monitoring.",
+      "Set analysis deadlines: irreversible decisions get a time-boxed analysis period, not open-ended research.",
+      "Default to action with monitoring, not more analysis.",
+      "Delegate decisions aggressively — ask 'what's the worst that happens if we're wrong?'",
+      "Amazon classifies decisions as Type 1 (irreversible, need deep analysis) vs. Type 2 (reversible, bias for action) — most decisions are Type 2 and should be made at 70% information."
     ],
     "sourceTopic": "Decision Making & Prioritization",
-    "mappingNotes": "Analysis paralysis \u2192 DACI framework / reversibility matching observables"
+    "mappingNotes": "Analysis paralysis → DACI framework / reversibility matching observables"
   },
   {
     "id": "AP-27",
     "name": "The Yes Machine",
     "slug": "the-yes-machine",
     "observableIds": [
-      "C2-O1",
-      "C2-O2"
+      "C2-O2",
+      "C2-O5"
     ],
     "capabilityId": "C2",
     "shortDesc": "EM agrees to every request from stakeholders without pushing back or making trade-offs visible, leaving the team chronically overcommitted. Deadlines slip, quality degrades, and credibility collapses as the gap between promises and delivery widens every quarter.",
@@ -732,10 +749,10 @@
       "Practice saying: 'Yes, and here's what we'd need to deprioritize.' Track commitments against capacity (make overcommitment visible).",
       "One uncomfortable 'no' is better than ten broken 'yes' commitments.",
       "Your team will thank you for protecting their focus.",
-      "Amazon's 'disagree and commit' principle gives leaders a structured way to voice dissent with data while fully committing once a decision is made \u2014 saying no is expected, not punished."
+      "Amazon's 'disagree and commit' principle gives leaders a structured way to voice dissent with data while fully committing once a decision is made — saying no is expected, not punished."
     ],
     "sourceTopic": "Decision Making & Prioritization",
-    "mappingNotes": "Yes machine \u2192 planning process / trade-off visibility observables"
+    "mappingNotes": "Yes machine → planning process / trade-off visibility observables"
   },
   {
     "id": "AP-28",
@@ -760,11 +777,11 @@
       "Block 1:1 time as immovable.",
       "Write down each report's career goals and review monthly.",
       "Ask yourself: 'If I disappeared for a week, would the code or the people suffer more?' The answer tells you where you're underinvesting.",
-      "Find your IC fix through mentoring, architecture reviews, or prototyping \u2014 not through owning production code paths.",
-      "Meta explicitly tracks manager effectiveness through engagement surveys and promotion rates of direct reports \u2014 coding output is not counted as a management effectiveness metric."
+      "Find your IC fix through mentoring, architecture reviews, or prototyping — not through owning production code paths.",
+      "Meta explicitly tracks manager effectiveness through engagement surveys and promotion rates of direct reports — coding output is not counted as a management effectiveness metric."
     ],
     "sourceTopic": "Coaching & Talent Development",
-    "mappingNotes": "IC trap \u2192 career development / growth plan observables"
+    "mappingNotes": "IC trap → career development / growth plan observables"
   },
   {
     "id": "AP-29",
@@ -790,11 +807,11 @@
       "For each one, ask 'when did this metric last change a decision I made?' Kill any metric that hasn't driven a decision in 90 days.",
       "Limit team-visible dashboards to 3-5 metrics maximum.",
       "Use metrics as diagnostic tools when something feels wrong, not as continuous surveillance.",
-      "Ask the team: 'which of these measurements are actually useful to you?' \u2014 you'll be surprised how few they value.",
+      "Ask the team: 'which of these measurements are actually useful to you?' — you'll be surprised how few they value.",
       "Microsoft's SPACE framework deliberately combines perceptual measures (satisfaction, well-being) with behavioral measures (activity, efficiency), preventing single-metric surveillance."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
-    "mappingNotes": "Death by metrics \u2192 outcome metrics / activity metrics observables"
+    "mappingNotes": "Death by metrics → outcome metrics / activity metrics observables"
   },
   {
     "id": "AP-30",
@@ -818,45 +835,44 @@
     "recoveryActions": [
       "Distinguish between decisions that need consensus (values, team norms, architectural bets) and those that need a driver (most implementation decisions, process tweaks, tooling choices).",
       "Use DACI or similar framework: one Decider, not a committee.",
-      "Set decision deadlines: 'We'll decide by Thursday.",
-      "Share input by Wednesday.' When consensus isn't reached, make the call yourself and explain your reasoning.",
-      "Consensus means 'everyone can commit,' not 'everyone's first choice wins'",
-      "Amazon's single-threaded owner model assigns one person to make the call after gathering input \u2014 consensus is explicitly not required for Type 2 (reversible) decisions."
+      "Set decision deadlines: 'We'll decide by Thursday. Share input by Wednesday.' When consensus isn't reached, make the call yourself and explain your reasoning.",
+      "Remember: consensus means 'everyone can commit,' not 'everyone's first choice wins.'",
+      "Amazon's single-threaded owner model assigns one person to make the call after gathering input — consensus is explicitly not required for Type 2 (reversible) decisions."
     ],
     "sourceTopic": "Decision Framing & Communication",
-    "mappingNotes": "Consensus trap \u2192 decision framework / DACI observables"
+    "mappingNotes": "Consensus trap → decision framework / DACI observables"
   },
   {
     "id": "AP-31",
-    "name": "Meeting Debt",
+    "name": "Meeting Debt & Process Cargo Cult",
     "slug": "meeting-debt",
     "observableIds": [
       "C4-O1",
       "C4-O7"
     ],
     "capabilityId": "C4",
-    "shortDesc": "Team drowning in ceremonies and syncs until engineers have less than two hours of uninterrupted focus time per day",
+    "shortDesc": "Team drowning in ceremonies, syncs, and rituals that nobody can justify — agile processes adopted by name without understanding their purpose, leaving engineers with less than two hours of uninterrupted focus time per day",
     "warningSigns": [
-      "Engineers' calendars are a wall of color",
-      "standup + planning + retro + sync + all-hands + skip-level + architecture review + demo + backlog grooming = most of the week",
-      "people code at night or on weekends to get 'real work' done",
-      "meetings have meetings as prerequisites",
-      "'quick sync' is the most common calendar invite",
-      "nobody can explain which meetings are mandatory vs optional"
+      "Engineers' calendars are a wall of color with less than 2 hours of focus time per day",
+      "Standups are status reports to the manager, not team coordination",
+      "Retros generate the same action items every sprint but they're never completed",
+      "Sprint planning is task assignment, not collaborative estimation",
+      "Nobody can explain which meetings are mandatory vs optional, or why any ceremony exists",
+      "'Quick sync' is the most common calendar invite",
+      "Process was adopted wholesale from another team or textbook without adaptation"
     ],
-    "impact": "Deep work becomes impossible; complex problems don't get solved because nobody has contiguous time to think; engineers burned out from context-switching; productivity paradox \u2014 everyone's busy but nothing ships; senior engineers leave for companies that protect focus time; junior engineers never learn to do deep work because the environment doesn't allow it",
+    "impact": "Deep work becomes impossible; complex problems don't get solved because nobody has contiguous time to think; engineers burned out from context-switching; productivity paradox — everyone's busy but nothing ships; senior engineers leave for companies that protect focus time; junior engineers never learn to do deep work because the environment doesn't allow it",
     "recoveryActions": [
-      "Calendar audit: have every team member screenshot their week.",
-      "Count hours of uninterrupted blocks of 2+ hours.",
-      "Target: minimum 4 hours of focus time per day per engineer.",
+      "Calendar audit: have every team member screenshot their week and count hours of uninterrupted 2+ hour blocks.",
+      "Target minimum 4 hours of focus time per day per engineer.",
+      "For every ceremony, ask: 'What problem does this solve for our team?' If no one can answer, cancel it.",
       "Cancel bottom 30% of recurring meetings immediately and see if anyone notices.",
-      "Establish meeting-free blocks (e.g., no meetings before noon).",
-      "For every new meeting proposed, kill an existing one.",
-      "Default to async: if it can be a Slack thread, a Loom, or a doc comment, it shouldn't be a meeting.",
-      "Shopify ran a company-wide 'calendar purge,' deleting all recurring meetings and adding visible meeting cost calculators to every invite to make the overhead tangible."
+      "Adapt remaining ceremonies to your team's actual needs — async standups, shorter retros, meeting-free blocks.",
+      "Measure ceremony value: does the retro generate completed action items? Does standup unblock people? Kill what doesn't deliver.",
+      "Shopify's 'chaos monkey for meetings' periodically cancels all recurring meetings, requiring each one to justify its existence to be reinstated."
     ],
     "sourceTopic": "Operational Leadership & Rhythm",
-    "mappingNotes": "Meeting debt \u2192 operational cadence / focus protection observables"
+    "mappingNotes": "Meeting debt → operational cadence / focus protection observables"
   },
   {
     "id": "AP-32",
@@ -880,14 +896,14 @@
     "recoveryActions": [
       "Quality over quantity: fewer, better docs that are actually maintained.",
       "Assign owners to critical docs with quarterly review dates.",
-      "Archive ruthlessly \u2014 stale docs are worse than no docs because they erode trust.",
+      "Archive ruthlessly — stale docs are worse than no docs because they erode trust.",
       "Make documentation discoverable: if people can't find it in 60 seconds, it doesn't exist.",
       "Only mandate documentation for high-leverage things: onboarding, runbooks, architecture decisions, API contracts.",
       "Let the team decide the right level for everything else.",
       "Stripe's writing culture mandates fewer, higher-quality documents with clear owners and quarterly review dates; stale docs are archived aggressively rather than left to mislead."
     ],
     "sourceTopic": "Operational Leadership & Rhythm",
-    "mappingNotes": "Documentation hoarding \u2192 knowledge management / operational process observables"
+    "mappingNotes": "Documentation hoarding → knowledge management / operational process observables"
   },
   {
     "id": "AP-33",
@@ -898,29 +914,27 @@
       "C6-O7"
     ],
     "capabilityId": "C6",
-    "shortDesc": "Manager who solves every problem personally, takes over every escalation, and works unsustainable hours while the team never develops independence",
+    "shortDesc": "Manager who solves every problem personally, takes over every escalation, and absorbs all challenging work — the team never develops independence",
     "warningSigns": [
-      "EM is on every incident bridge",
-      "EM's Slack activity is 3x anyone else's",
-      "team defaults to 'let's ask [EM]' instead of figuring it out",
-      "EM works 60+ hour weeks regularly",
-      "when EM takes PTO things fall apart",
-      "team members aren't growing because EM absorbs all the challenging problems",
-      "EM's manager praises their 'dedication' without seeing the dysfunction"
+      "EM is on every incident bridge and every escalation call",
+      "Team defaults to 'let's ask the EM' instead of figuring it out",
+      "When EM takes PTO, things fall apart because no one else has context",
+      "Team members aren't growing because EM absorbs all the challenging problems",
+      "EM's Slack activity is 3x anyone else's"
     ],
-    "impact": "EM burns out \u2014 not if, when; team never develops problem-solving skills or ownership; single point of failure at the management layer; when EM inevitably leaves (burnout, promotion, or departure), the team collapses; creates unsustainable expectations for the next EM; team members' careers stall because they never get stretch opportunities; the organization rewards the dysfunction by praising the EM's heroics",
+    "impact": "EM burns out — not if, when; team never develops problem-solving skills or ownership; single point of failure at the management layer; when EM inevitably leaves (burnout, promotion, or departure), the team collapses; creates unsustainable expectations for the next EM; team members' careers stall because they never get stretch opportunities; the organization rewards the dysfunction by praising the EM's heroics",
     "recoveryActions": [
       "Stop being the first responder.",
       "When someone brings you a problem, ask 'what do you think we should do?' before offering your solution.",
       "Explicitly assign escalation ownership to team members as growth opportunities.",
       "Set boundaries: pick two nights a week you're offline and stick to it.",
-      "Track how many problems you personally solved vs coached someone else through \u2014 shift the ratio.",
+      "Track how many problems you personally solved vs coached someone else through — shift the ratio.",
       "Tell your manager: 'I'm going to step back from X so [team member] can grow into it.",
       "Things might be bumpier for a sprint.' Your job is to build a team that doesn't need you for daily operations.",
-      "Google's manager effectiveness survey explicitly measures whether the manager develops team independence \u2014 heroic individual contribution by the manager scores poorly."
+      "Google's manager effectiveness survey explicitly measures whether the manager develops team independence — heroic individual contribution by the manager scores poorly."
     ],
     "sourceTopic": "Coaching & Talent Development",
-    "mappingNotes": "Hero EM \u2192 coaching approach / team independence observables"
+    "mappingNotes": "Hero EM → coaching approach / team independence observables"
   },
   {
     "id": "AP-35",
@@ -949,7 +963,7 @@
       "Amazon's FinOps practice requires every team to track cost-per-transaction and present monthly cost attribution reports, treating infrastructure cost as a first-class design constraint."
     ],
     "sourceTopic": "Resource Allocation & Cost Management",
-    "mappingNotes": "Unbounded spending \u2192 cost management / reprioritization observables"
+    "mappingNotes": "Unbounded spending → cost management / reprioritization observables"
   },
   {
     "id": "AP-37",
@@ -976,13 +990,13 @@
       "Automate evidence collection and compliance monitoring continuously.",
       "Implement quarterly access reviews with auto-expiring elevated permissions.",
       "Build compliance checks into deployment pipeline.",
-      "Track unique audit findings \u2014 repeat findings indicate a checkbox approach.",
+      "Track unique audit findings — repeat findings indicate a checkbox approach.",
       "Require genuine threat models, not template copies.",
       "Treat compliance posture as an ongoing metric, not a periodic event.",
-      "Netflix's security approach treats compliance as a byproduct of strong security posture, not the goal \u2014 continuous monitoring and automated evidence collection replace periodic audit scrambles."
+      "Netflix's security approach treats compliance as a byproduct of strong security posture, not the goal — continuous monitoring and automated evidence collection replace periodic audit scrambles."
     ],
     "sourceTopic": "Security & Compliance Posture",
-    "mappingNotes": "Periodic compliance \u2192 access management / continuous compliance observables"
+    "mappingNotes": "Periodic compliance → access management / continuous compliance observables"
   },
   {
     "id": "AP-38",
@@ -1008,38 +1022,10 @@
       "Set a time-box for design phases.",
       "Celebrate pragmatic solutions.",
       "Ask 'what's the simplest thing that could work?' before 'what's the ideal architecture?'",
-      "Amazon's Working Backwards process starts with the customer PR/FAQ, not the architecture \u2014 forcing pragmatic delivery focus and preventing architectural purity from overriding customer value."
+      "Amazon's Working Backwards process starts with the customer PR/FAQ, not the architecture — forcing pragmatic delivery focus and preventing architectural purity from overriding customer value."
     ],
     "sourceTopic": "Systems Design & Architecture",
-    "mappingNotes": "Over-engineering \u2192 tech strategy / tech debt visibility observables"
-  },
-  {
-    "id": "AP-39",
-    "name": "The Vanity Dashboard",
-    "slug": "the-vanity-dashboard",
-    "capabilityId": "C9",
-    "observableIds": [
-      "C9-O3",
-      "C9-O5"
-    ],
-    "shortDesc": "EM builds impressive-looking dashboards that measure activity instead of outcomes",
-    "warningSigns": [
-      "Dashboards show lines of code, PRs merged, or tickets closed",
-      "no connection between metrics and business outcomes",
-      "metrics always look good but customers are unhappy",
-      "no leading indicators \u2014 only lagging",
-      "team optimizes for metric movement rather than impact"
-    ],
-    "impact": "False sense of productivity; real problems masked by green dashboards; leadership makes bad decisions based on misleading data; team becomes cynical about measurement; activity replaces impact as the success criteria",
-    "recoveryActions": [
-      "Audit every metric: does it connect to a customer or business outcome? Replace activity metrics with outcome metrics.",
-      "Add leading indicators alongside lagging ones.",
-      "Ask 'what would change if this metric moved?' \u2014 if nothing, remove it.",
-      "Make dashboards a team tool for diagnosis, not a leadership reporting tool.",
-      "Google's Eng Productivity team uses the SPACE framework to distinguish between satisfaction, performance, activity, communication, and efficiency \u2014 preventing any single activity metric from becoming the dashboard."
-    ],
-    "sourceTopic": "Metrics, Measurement & Outcomes",
-    "mappingNotes": "Activity metrics \u2192 outcome metrics / metric-informed decisions observables"
+    "mappingNotes": "Over-engineering → tech strategy / tech debt visibility observables"
   },
   {
     "id": "AP-40",
@@ -1058,17 +1044,17 @@
       "code review avoidance patterns around one person",
       "1:1s with other reports frequently mention the same person"
     ],
-    "impact": "Psychological safety destroyed for everyone except the problem person; high performers leave because they shouldn't have to compensate; team energy diverted to managing around one person instead of doing work; EM's credibility eroded \u2014 team sees the avoidance",
+    "impact": "Psychological safety destroyed for everyone except the problem person; high performers leave because they shouldn't have to compensate; team energy diverted to managing around one person instead of doing work; EM's credibility eroded — team sees the avoidance",
     "recoveryActions": [
       "Name it: acknowledge the problem exists instead of hoping it resolves.",
       "Document specific behaviors (not personality traits) with dates and impact.",
       "Deliver direct feedback with clear expectations and timeline.",
       "If behavior doesn't change, escalate to PIP or managed exit.",
-      "The team is watching how you handle this \u2014 inaction is a decision that signals tolerance.",
-      "Google's culture research shows that teams with one unaddressed toxic member have 30-40% lower psychological safety scores \u2014 the cost of inaction is measurable."
+      "The team is watching how you handle this — inaction is a decision that signals tolerance.",
+      "Google's culture research shows that teams with one unaddressed toxic member have 30-40% lower psychological safety scores — the cost of inaction is measurable."
     ],
     "sourceTopic": "Engineering Culture & Team Identity",
-    "mappingNotes": "Missing stair \u2192 psychological safety / toxic behavior intervention observables"
+    "mappingNotes": "Missing stair → psychological safety / toxic behavior intervention observables"
   },
   {
     "id": "AP-41",
@@ -1091,11 +1077,11 @@
     "impact": "Surface-level camaraderie masks deep team dysfunction; real culture problems never addressed; budget spent on events instead of structural changes; team cynical about 'culture initiatives'; new hires experience disconnect between marketed culture and reality",
     "recoveryActions": [
       "Culture is daily decisions, not quarterly events.",
-      "Audit: are your team norms written? Does hiring reinforce desired culture? Does recognition align with values? Does the feedback process surface real issues? Events complement structural culture \u2014 they can't substitute for it.",
-      "Stripe's culture is embedded in their writing culture, hiring rubrics, and feedback norms \u2014 not in their office perks or events."
+      "Audit: are your team norms written? Does hiring reinforce desired culture? Does recognition align with values? Does the feedback process surface real issues? Events complement structural culture — they can't substitute for it.",
+      "Stripe's culture is embedded in their writing culture, hiring rubrics, and feedback norms — not in their office perks or events."
     ],
     "sourceTopic": "Engineering Culture & Team Identity",
-    "mappingNotes": "Culture tourism \u2192 team charter / recognition rituals observables"
+    "mappingNotes": "Culture tourism → team charter / recognition rituals observables"
   },
   {
     "id": "AP-42",
@@ -1122,10 +1108,10 @@
       "Explicitly pause or kill bottom-tier projects.",
       "Better to ship 3 things excellently than 8 things poorly.",
       "Communicate the focusing decision with rationale.",
-      "Amazon's two-pizza team model implicitly prevents peanut-butter spreading \u2014 if a project can't justify a full team, it either gets killed or folded into an existing team's scope."
+      "Amazon's two-pizza team model implicitly prevents peanut-butter spreading — if a project can't justify a full team, it either gets killed or folded into an existing team's scope."
     ],
     "sourceTopic": "Resource Allocation & Cost Management",
-    "mappingNotes": "Peanut butter spreading \u2192 aggressive reprioritization / capacity reallocation observables"
+    "mappingNotes": "Peanut butter spreading → aggressive reprioritization / capacity reallocation observables"
   },
   {
     "id": "AP-43",
@@ -1150,11 +1136,11 @@
       "Every important decision, strategy shift, and priority change should have a single written source of truth accessible to everyone affected.",
       "Use 'strategy on a page' documents.",
       "After verbal communication, follow up with written summary.",
-      "Ask team to reflect back what they understood \u2014 check for signal loss.",
-      "Amazon's 6-pager culture ensures that strategic communication is written, precise, and readable by anyone in the org \u2014 eliminating the telephone game by design."
+      "Ask team to reflect back what they understood — check for signal loss.",
+      "Amazon's 6-pager culture ensures that strategic communication is written, precise, and readable by anyone in the org — eliminating the telephone game by design."
     ],
     "sourceTopic": "Decision Framing & Communication",
-    "mappingNotes": "Telephone game \u2192 communication altitude / scaling communication observables"
+    "mappingNotes": "Telephone game → communication altitude / scaling communication observables"
   },
   {
     "id": "AP-44",
@@ -1175,15 +1161,15 @@
     ],
     "impact": "Reviews feel unfair; high performers who had a rough final month get underrated; coasting employees who happened to have a good recent week get overrated; trust in the review process erodes; engineers learn to time their visible work around review deadlines",
     "recoveryActions": [
-      "Keep running performance notes updated weekly \u2014 not reconstructed at review time.",
+      "Keep running performance notes updated weekly — not reconstructed at review time.",
       "Review your notes at the start of cycle, middle, and end to weight the full period.",
       "Ask for peer feedback that covers the full cycle.",
       "Use brag docs that engineers maintain throughout the cycle.",
       "Structure your review to explicitly address each quarter.",
-      "Google's Perf encourages managers to maintain 'snippets' \u2014 weekly notes on each report \u2014 ensuring full-cycle visibility rather than recency-dependent assessment."
+      "Google's Perf encourages managers to maintain 'snippets' — weekly notes on each report — ensuring full-cycle visibility rather than recency-dependent assessment."
     ],
     "sourceTopic": "Performance, Calibration & Growth",
-    "mappingNotes": "Recency trap \u2192 continuous performance documentation / evidence-based reviews observables"
+    "mappingNotes": "Recency trap → continuous performance documentation / evidence-based reviews observables"
   },
   {
     "id": "AP-46",
@@ -1213,35 +1199,7 @@
       "Google's structured interviewing program requires predefined rubrics and independent scoring, reducing hiring variance by 40% compared to unstructured interviews."
     ],
     "sourceTopic": "Talent Acquisition & Team Building",
-    "mappingNotes": "Vibes-based hire \u2192 structured interview / competency rubric observables"
-  },
-  {
-    "id": "AP-47",
-    "name": "Process Cargo Cult",
-    "slug": "process-cargo-cult",
-    "observableIds": [
-      "C4-O1",
-      "C4-O7"
-    ],
-    "capabilityId": "C4",
-    "shortDesc": "EM adopts agile ceremonies and processes by name without understanding their purpose, running rituals that deliver no value",
-    "warningSigns": [
-      "Standups are status reports to the manager (not team coordination)",
-      "retros generate the same action items every sprint (never completed)",
-      "sprint planning is task assignment (not collaborative estimation)",
-      "team does 'scrum' but can't explain why any ceremony exists",
-      "ceremonies take up 30%+ of the week",
-      "process was adopted wholesale from another team without adaptation"
-    ],
-    "impact": "Team resents process as overhead; ceremonies consume time without value; engineers work around the process instead of through it; agile transformation fails because the form is adopted without the substance; velocity decreases as process overhead increases",
-    "recoveryActions": [
-      "For every ceremony, ask: 'What problem does this solve for our team?' If no one can answer, cancel it.",
-      "Adapt ceremonies to your team's actual needs (not the textbook version).",
-      "Measure ceremony value: does the retro generate completed action items? Does standup unblock people? Kill low-value ceremonies and see if anyone notices.",
-      "Spotify evolved away from textbook Scrum because they adapted processes to squad needs rather than following prescriptive frameworks \u2014 each squad chose the practices that actually worked for them."
-    ],
-    "sourceTopic": "Operational Leadership & Rhythm",
-    "mappingNotes": "Process cargo cult \u2192 ceremony value / operational cadence observables"
+    "mappingNotes": "Vibes-based hire → structured interview / competency rubric observables"
   },
   {
     "id": "AP-48",
@@ -1263,13 +1221,13 @@
     ],
     "impact": "Every problem is discovered too late for cheap intervention; firefighting replaces prevention; team and leadership feel like they're always reacting; confidence in measurement erodes because metrics only confirm what everyone already knew; proactive management impossible",
     "recoveryActions": [
-      "For every lagging indicator, identify a leading counterpart: attrition \u2192 engagement survey scores; incidents \u2192 error budget consumption rate; missed deadlines \u2192 sprint burndown trajectory.",
+      "For every lagging indicator, identify a leading counterpart: attrition → engagement survey scores; incidents → error budget consumption rate; missed deadlines → sprint burndown trajectory.",
       "Make leading indicators the primary dashboard and lagging indicators the validation.",
       "Review leading indicators weekly, lagging indicators monthly.",
       "Google's DORA team explicitly distinguishes leading (deployment frequency, lead time) from lagging (change failure rate, MTTR) metrics, using pairs to enable both prediction and validation."
     ],
     "sourceTopic": "Metrics, Measurement & Outcomes",
-    "mappingNotes": "Lagging-only dashboard \u2192 metric pairing / leading indicator observables"
+    "mappingNotes": "Lagging-only dashboard → metric pairing / leading indicator observables"
   },
   {
     "id": "AP-49",
@@ -1295,10 +1253,10 @@
       "Quantify each item: 'This debt costs us X engineer-days per sprint in workarounds and creates Y risk of incidents.' Present quarterly tech debt report to leadership.",
       "Secure explicit capacity allocation (minimum 15-20% of engineering time).",
       "Track remediation ROI to justify continued investment.",
-      "Amazon includes tech debt in their PRFAQ process \u2014 every initiative must account for the debt it creates and the plan to manage it."
+      "Amazon includes tech debt in their PRFAQ process — every initiative must account for the debt it creates and the plan to manage it."
     ],
     "sourceTopic": "Systems Design & Architecture",
-    "mappingNotes": "Invisible tech debt \u2192 tech debt quantification / business-terms communication observables"
+    "mappingNotes": "Invisible tech debt → tech debt quantification / business-terms communication observables"
   },
   {
     "id": "AP-50",
@@ -1324,10 +1282,10 @@
       "Participate actively in cross-team forums.",
       "Contribute to shared platforms even when it's not the fastest path for your team.",
       "Track cross-team dependencies and proactively unblock them.",
-      "Ask: 'Would a peer team describe us as good partners?' Spotify's squad model works because squads are measured on shared outcomes, not just squad-level metrics \u2014 squad health checks include collaboration with other squads."
+      "Ask: 'Would a peer team describe us as good partners?' Spotify's squad model works because squads are measured on shared outcomes, not just squad-level metrics — squad health checks include collaboration with other squads."
     ],
     "sourceTopic": "Cross-Functional Partnership",
-    "mappingNotes": "Silo builder \u2192 cross-team collaboration / triad alignment observables"
+    "mappingNotes": "Silo builder → cross-team collaboration / triad alignment observables"
   },
   {
     "id": "AP-51",
@@ -1338,7 +1296,7 @@
       "C6-O13"
     ],
     "capabilityId": "C6",
-    "shortDesc": "Someone promoted into management because they were the best IC, without any management training, coaching, or support \u2014 and expected to figure it out",
+    "shortDesc": "Someone promoted into management because they were the best IC, without any management training, coaching, or support — and expected to figure it out",
     "warningSigns": [
       "New EM still doing 50%+ IC work",
       "1:1s are technical problem-solving sessions, not coaching conversations",
@@ -1352,11 +1310,11 @@
       "First 90 days: pair with experienced EM mentor, reduce IC commitments to <20%, provide management training (feedback, 1:1s, performance management).",
       "Define what success looks like as an EM (not IC metrics).",
       "Regular check-ins with skip-level on transition health.",
-      "Offer an explicit return-to-IC path if management isn't the right fit \u2014 removing this stigma retains great engineers who tried management honestly.",
+      "Offer an explicit return-to-IC path if management isn't the right fit — removing this stigma retains great engineers who tried management honestly.",
       "Google provides structured EM training (Managing@Google) for all new managers, and explicitly offers return-to-IC without stigma within the first year."
     ],
     "sourceTopic": "Coaching & Talent Development",
-    "mappingNotes": "Accidental manager \u2192 career pathway / IC-to-EM transition observables"
+    "mappingNotes": "Accidental manager → career pathway / IC-to-EM transition observables"
   },
   {
     "id": "AP-52",
@@ -1377,15 +1335,15 @@
       "OKRs are set by leadership and handed to the team",
       "nobody can articulate why these objectives matter to the business"
     ],
-    "impact": "Team ships features without measuring impact; 'achieved 100% of OKRs' but business outcomes didn't move; OKRs become performative \u2014 teams game the system by setting easily achievable tasks; real strategic thinking replaced by task execution; team loses agency because goals were dictated, not co-created",
+    "impact": "Team ships features without measuring impact; 'achieved 100% of OKRs' but business outcomes didn't move; OKRs become performative — teams game the system by setting easily achievable tasks; real strategic thinking replaced by task execution; team loses agency because goals were dictated, not co-created",
     "recoveryActions": [
-      "Key results should answer 'how will we know we succeeded?' not 'what will we build?' Rewrite binary KRs as measurable outcomes: instead of 'Ship search feature' \u2192 'Reduce time-to-find from 45s to 15s.' Limit to 2-4 objectives with 2-3 KRs each.",
-      "Let the team co-create OKRs \u2014 when people own their goals, they're motivated by them.",
-      "Make objectives independent \u2014 you should be able to achieve any objective without first achieving another.",
-      "Review OKRs mid-quarter and adjust if context has changed \u2014 rigid OKRs in a changing environment produce the wrong outcomes on time."
+      "Key results should answer 'how will we know we succeeded?' not 'what will we build?' Rewrite binary KRs as measurable outcomes: instead of 'Ship search feature' → 'Reduce time-to-find from 45s to 15s.' Limit to 2-4 objectives with 2-3 KRs each.",
+      "Let the team co-create OKRs — when people own their goals, they're motivated by them.",
+      "Make objectives independent — you should be able to achieve any objective without first achieving another.",
+      "Review OKRs mid-quarter and adjust if context has changed — rigid OKRs in a changing environment produce the wrong outcomes on time."
     ],
     "sourceTopic": "Strategic Prioritization & Goals",
-    "mappingNotes": "Task-list OKR \u2192 outcome measurement / goal-setting quality observables"
+    "mappingNotes": "Task-list OKR → outcome measurement / goal-setting quality observables"
   },
   {
     "id": "AP-53",
@@ -1396,7 +1354,7 @@
       "C2-O5"
     ],
     "capabilityId": "C2",
-    "shortDesc": "Everything is urgent, nothing is strategic \u2014 team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
+    "shortDesc": "Everything is urgent, nothing is strategic — team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
     "warningSigns": [
       "Roadmap changes weekly based on whoever shouted last",
       "team can't finish multi-week projects because priorities shift mid-sprint",
@@ -1409,14 +1367,14 @@
     "recoveryActions": [
       "Distinguish urgent from important using a simple framework: urgent (real deadline, real consequence) vs. important (high impact, no immediate deadline) vs. noise (someone wants it, no real consequence).",
       "Protect capacity: explicitly reserve 30-40% of team capacity for planned strategic work that cannot be interrupted.",
-      "Force stakeholder prioritization: when a new 'urgent' request arrives, ask which current commitment should be deprioritized to make room \u2014 if nothing can be deprioritized, the new request isn't actually the priority.",
+      "Force stakeholder prioritization: when a new 'urgent' request arrives, ask which current commitment should be deprioritized to make room — if nothing can be deprioritized, the new request isn't actually the priority.",
       "Make the cost visible: track how many planned commitments were completed vs. interrupted each quarter.",
       "Present this to leadership as 'we completed 3 of 8 quarterly goals because 5 were interrupted by ad-hoc requests.' The data makes the problem undeniable.",
-      "Basecamp's Shape Up methodology explicitly time-boxes work into 6-week cycles with no interruptions allowed mid-cycle, forcing stakeholders to wait for the next cycle \u2014 a structural solution to the urgency treadmill.",
+      "Basecamp's Shape Up methodology explicitly time-boxes work into 6-week cycles with no interruptions allowed mid-cycle, forcing stakeholders to wait for the next cycle — a structural solution to the urgency treadmill.",
       "Atlassian uses 'ShipIt days' and protected sprint commitments where only P0 incidents can break the sprint contract, making the cost of interruption visible through a formal exception process."
     ],
     "sourceTopic": "Strategic Prioritization & Goals",
-    "mappingNotes": "Urgency treadmill \u2192 prioritization discipline / stakeholder management observables"
+    "mappingNotes": "Urgency treadmill → prioritization discipline / stakeholder management observables"
   },
   {
     "id": "AP-54",
@@ -1427,7 +1385,7 @@
       "C1-O4"
     ],
     "capabilityId": "C1",
-    "shortDesc": "New leader makes drastic changes in first weeks without understanding context \u2014 scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
+    "shortDesc": "New leader makes drastic changes in first weeks without understanding context — scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
     "warningSigns": [
       "Announces major changes before completing 1:1s with all directs",
       "Dismisses existing processes as 'broken' without understanding why they exist",
@@ -1440,12 +1398,12 @@
       "Pause all announced changes and communicate a structured assessment period",
       "Conduct proper 30-day listening tour with every team member and key stakeholders",
       "Map existing processes to the problems they were designed to solve before eliminating them",
-      "Separate genuine problems from style preferences \u2014 only act on the former first",
+      "Separate genuine problems from style preferences — only act on the former first",
       "Build credibility through quick wins on acknowledged pain points before tackling structural changes",
-      "GitLab's handbook-first culture documents why every process exists, giving new leaders context before they change anything \u2014 the handbook serves as institutional memory that prevents well-intentioned but uninformed disruption."
+      "GitLab's handbook-first culture documents why every process exists, giving new leaders context before they change anything — the handbook serves as institutional memory that prevents well-intentioned but uninformed disruption."
     ],
     "sourceTopic": "Org-Level Thinking (New Leader Entry)",
-    "mappingNotes": "Based on LeadDev 'Five management anti-patterns and why they happen' \u2014 The Wrecking Ball pattern."
+    "mappingNotes": "Based on LeadDev 'Five management anti-patterns and why they happen' — The Wrecking Ball pattern."
   },
   {
     "id": "AP-55",
@@ -1498,12 +1456,12 @@
       "Establish a personal filter: 'Does this information change what my team should do today?'",
       "Translate executive concerns into specific, actionable asks before sharing with the team",
       "Protect the team's context: share decisions and relevant context, not the sausage-making",
-      "Build an interrupt budget \u2014 cap the number of 'urgent' redirections per sprint",
+      "Build an interrupt budget — cap the number of 'urgent' redirections per sprint",
       "Practice the 3-sentence rule: situation, what it means for us, what we're doing about it",
-      "Shopify's leadership principle of 'trust the team' means managers explicitly filter organizational noise \u2014 EMs are expected to translate exec priorities into team-level context without passing through the anxiety."
+      "Shopify's leadership principle of 'trust the team' means managers explicitly filter organizational noise — EMs are expected to translate exec priorities into team-level context without passing through the anxiety."
     ],
     "sourceTopic": "Operational Leadership (Information Filtering)",
-    "mappingNotes": "Based on LeadDev 'Five management anti-patterns' \u2014 The Funnel pattern. Manager acts as stress amplifier rather than filter."
+    "mappingNotes": "Based on LeadDev 'Five management anti-patterns' — The Funnel pattern. Manager acts as stress amplifier rather than filter."
   },
   {
     "id": "AP-57",
@@ -1514,7 +1472,7 @@
       "C8-O8"
     ],
     "capabilityId": "C8",
-    "shortDesc": "Team accumulates alerts over time but nobody removes them \u2014 engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
+    "shortDesc": "Team accumulates alerts over time but nobody removes them — engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
     "warningSigns": [
       "On-call engineers routinely mute or snooze alerts without investigating",
       "New alert rules get added after incidents but old ones are never removed",
@@ -1524,16 +1482,16 @@
     ],
     "impact": "Critical alerts get lost in the noise, increasing MTTA and MTTR for real incidents. On-call engineers burn out from frequent low-value pages, especially off-hours. Team develops learned helplessness around alert quality. Customer-facing reliability suffers because the signal-to-noise ratio has collapsed.",
     "recoveryActions": [
-      "Audit every alert: classify as actionable, needs-refinement, or delete \u2014 if nobody can explain what action to take, delete it",
+      "Audit every alert: classify as actionable, needs-refinement, or delete — if nobody can explain what action to take, delete it",
       "Shift to SLO-based alerting tied to customer-facing metrics (error rate, latency, availability) rather than infrastructure thresholds",
-      "Route alerts to owning teams by service tag \u2014 on-call should be the expert, not a proxy",
+      "Route alerts to owning teams by service tag — on-call should be the expert, not a proxy",
       "Establish regular alert hygiene reviews (monthly) where on-call engineers propose alerts to remove or refine",
       "Track alert-to-action ratio as a reliability health metric",
-      "Datadog practices 'alert-driven development' where every alert must have a runbook link and a clear owner \u2014 alerts without runbooks are automatically flagged for removal during monthly hygiene reviews.",
+      "Datadog practices 'alert-driven development' where every alert must have a runbook link and a clear owner — alerts without runbooks are automatically flagged for removal during monthly hygiene reviews.",
       "LinkedIn's SRE team enforces a strict signal-to-noise ratio target and runs quarterly 'alert amnesty' events where engineers can safely delete alerts without fear of blame."
     ],
     "sourceTopic": "Incidents, Risk & Reliability (Alert Management)",
-    "mappingNotes": "Based on LeadDev 'How to avoid alert fatigue' \u2014 most alerts accumulate because engineers are scared of removing them."
+    "mappingNotes": "Based on LeadDev 'How to avoid alert fatigue' — most alerts accumulate because engineers are scared of removing them."
   },
   {
     "id": "AP-58",
@@ -1544,7 +1502,7 @@
       "C11-O11"
     ],
     "capabilityId": "C11",
-    "shortDesc": "Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages \u2014 top candidates drop out while mediocre ones persist",
+    "shortDesc": "Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages — top candidates drop out while mediocre ones persist",
     "warningSigns": [
       "Candidate drop-off rate exceeds 40% between offer and first interview",
       "Total interview process takes more than 3 weeks end-to-end",
@@ -1554,15 +1512,15 @@
     ],
     "impact": "Lose top candidates who have multiple offers and won't wait. Process favors candidates with time flexibility (employed at slow-moving companies) over those with high demand. Each additional round adds cost without adding signal. Hiring velocity drops, leaving teams understaffed longer. Candidate experience damages employer brand.",
     "recoveryActions": [
-      "Map each interview round to a specific, non-overlapping signal it provides \u2014 eliminate rounds with redundant signal",
+      "Map each interview round to a specific, non-overlapping signal it provides — eliminate rounds with redundant signal",
       "Set a maximum of 4-5 total interactions (including screen) with a 2-week end-to-end target",
       "Replace 'add another round' instinct with 'improve rubric quality in existing rounds'",
       "Track conversion rates at each stage and identify where drop-off exceeds industry benchmarks",
       "Run a candidate experience survey and act on the feedback",
-      "Figma and Linear cap their engineering interview process at 4 total rounds with a 10-day target from screen to offer, explicitly trading false-negative risk for candidate quality \u2014 they'd rather lose a marginal hire than lose a great one to process fatigue."
+      "Figma and Linear cap their engineering interview process at 4 total rounds with a 10-day target from screen to offer, explicitly trading false-negative risk for candidate quality — they'd rather lose a marginal hire than lose a great one to process fatigue."
     ],
     "sourceTopic": "Hiring, Onboarding & Role Design (Process Design)",
-    "mappingNotes": "Based on LeadDev articles on rethinking engineer hiring strategy and 2025 hiring trends \u2014 bloated processes chase away talent."
+    "mappingNotes": "Based on LeadDev articles on rethinking engineer hiring strategy and 2025 hiring trends — bloated processes chase away talent."
   },
   {
     "id": "AP-59",
@@ -1573,26 +1531,26 @@
       "C5-O1"
     ],
     "capabilityId": "C5",
-    "shortDesc": "Engineering leader defers entirely to product for direction \u2014 never challenges priorities, never proposes technical opportunities, never shapes strategy \u2014 treating engineering as a feature factory that builds whatever is asked",
+    "shortDesc": "Engineering leader defers entirely to product for direction — never challenges priorities, never proposes technical opportunities, never shapes strategy — accepting a subordinate role rather than acting as a co-owner",
     "warningSigns": [
-      "Engineering roadmap is 100% product-driven with no technical investment or innovation items",
       "EM never pushes back on feasibility, timeline, or approach during planning",
       "Engineers complain that 'product just throws things over the wall'",
       "Technical debt grows unchecked because no one advocates for engineering priorities",
-      "Team has no input into what gets built, only how"
+      "Team has no input into what gets built, only how",
+      "Engineering leader is absent from product discovery, customer research, and strategy discussions"
     ],
     "impact": "Engineering team loses ownership and motivation. Technical debt accumulates because no one advocates for platform investment. Product makes commitments without understanding technical constraints, leading to rushed delivery and quality issues. Best engineers leave for organizations where they have more influence. Engineering becomes a cost center in leadership's eyes rather than a strategic partner.",
     "recoveryActions": [
-      "Start contributing to product discovery \u2014 attend customer research sessions, review analytics, propose solutions not just implementations",
+      "Start contributing to product discovery — attend customer research sessions, review analytics, propose solutions not just implementations",
       "Reserve 15-20% of engineering capacity for technical investment and defend it in planning",
       "Frame technical proposals in business language: 'reducing API latency by 200ms increases conversion by X%'",
       "Build a regular cadence of engineering-led product insights (data you see that product doesn't)",
       "Establish joint roadmap ownership with product counterpart rather than receiving a spec",
-      "Airbnb's engineering leaders co-own product outcomes alongside PMs \u2014 engineering isn't measured on output (features shipped) but on impact (metrics moved), which structurally prevents the order-taker dynamic.",
+      "Airbnb's engineering leaders co-own product outcomes alongside PMs — engineering isn't measured on output (features shipped) but on impact (metrics moved), which structurally prevents the order-taker dynamic.",
       "Intercom's R&D teams use a 'dual-track' model where engineers participate in discovery alongside designers and PMs, making it impossible to be just an order-taker because engineers are embedded in the 'what' as well as the 'how.'"
     ],
     "sourceTopic": "Cross-Functional Influence (Product Partnership)",
-    "mappingNotes": "Based on LeadDev 'Drive product gaps as an engineering leader' \u2014 engineering leaders can influence product effectively even without strong product management."
+    "mappingNotes": "Based on LeadDev 'Drive product gaps as an engineering leader' — engineering leaders can influence product effectively even without strong product management."
   },
   {
     "id": "AP-60",
@@ -1603,24 +1561,24 @@
       "C14-O7"
     ],
     "capabilityId": "C14",
-    "shortDesc": "Manager avoids giving negative performance feedback until it's too late \u2014 minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
+    "shortDesc": "Manager avoids giving negative performance feedback until it's too late — minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
     "warningSigns": [
       "1:1 notes show only positive feedback for an engineer whose performance is declining",
       "Manager uses phrases like 'they'll figure it out' or 'I don't want to micromanage'",
       "Performance review rating is a surprise to the engineer",
-      "Manager confuses being nice with being kind \u2014 avoids discomfort at the cost of the person's growth",
+      "Manager confuses being nice with being kind — avoids discomfort at the cost of the person's growth",
       "High performers on the team are frustrated that low performance goes unaddressed"
     ],
-    "impact": "The underperforming engineer loses months or years of potential growth because nobody told them the truth. High performers leave because they see uneven accountability. When feedback finally arrives, it feels punitive rather than developmental. Manager loses credibility with the team. Leadership debt compounds \u2014 the cost of delayed feedback is always higher than the cost of an uncomfortable conversation.",
+    "impact": "The underperforming engineer loses months or years of potential growth because nobody told them the truth. High performers leave because they see uneven accountability. When feedback finally arrives, it feels punitive rather than developmental. Manager loses credibility with the team. Leadership debt compounds — the cost of delayed feedback is always higher than the cost of an uncomfortable conversation.",
     "recoveryActions": [
       "Schedule a direct conversation within 48 hours using SBI format (Situation-Behavior-Impact)",
       "Acknowledge the delay: 'I should have raised this sooner, and that's on me'",
-      "Establish a regular cadence of documented feedback \u2014 at minimum monthly written notes",
-      "Build conflict literacy through practice \u2014 start with lower-stakes feedback and build up",
+      "Establish a regular cadence of documented feedback — at minimum monthly written notes",
+      "Build conflict literacy through practice — start with lower-stakes feedback and build up",
       "Reframe feedback as a gift: withholding it is not kindness, it's neglect"
     ],
     "sourceTopic": "Performance Management & Calibration (Feedback Delivery)",
-    "mappingNotes": "Based on LeadDev 'The cost of skipping hard conversations' \u2014 leadership debt from delayed feedback compounds faster than technical debt."
+    "mappingNotes": "Based on LeadDev 'The cost of skipping hard conversations' — leadership debt from delayed feedback compounds faster than technical debt."
   },
   {
     "id": "AP-61",
@@ -1631,17 +1589,17 @@
       "C8-O7"
     ],
     "capabilityId": "C8",
-    "shortDesc": "Team runs post-mortems after every incident but action items die in a backlog \u2014 the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
+    "shortDesc": "Team runs post-mortems after every incident but action items die in a backlog — the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
     "warningSigns": [
       "Post-mortem action item completion rate is below 50%",
       "The same root cause appears in multiple post-mortems across quarters",
       "Engineers say 'we talked about this last time' during incident response",
       "Action items are assigned but never tracked or reviewed",
-      "Post-mortems feel performative \u2014 people attend but don't expect change"
+      "Post-mortems feel performative — people attend but don't expect change"
     ],
-    "impact": "Same incidents recur, eroding customer trust and team morale. Engineers lose faith in the post-mortem process because nothing changes. On-call burden increases because systemic fixes never land. The team develops learned helplessness about reliability \u2014 incidents feel inevitable rather than preventable.",
+    "impact": "Same incidents recur, eroding customer trust and team morale. Engineers lose faith in the post-mortem process because nothing changes. On-call burden increases because systemic fixes never land. The team develops learned helplessness about reliability — incidents feel inevitable rather than preventable.",
     "recoveryActions": [
-      "Assign every action item a single owner and a due date \u2014 review completion weekly in team standup",
+      "Assign every action item a single owner and a due date — review completion weekly in team standup",
       "Track action-item-to-prevention ratio: how many action items actually prevented a future incident",
       "Limit post-mortem action items to 3-5 highest-leverage items instead of exhaustive lists",
       "Schedule a monthly 'incident learning review' that examines patterns across incidents, not just individual events",
@@ -1659,7 +1617,7 @@
       "C3-O1"
     ],
     "capabilityId": "C3",
-    "shortDesc": "Technology choices driven by what looks impressive on resumes rather than what solves the actual problem \u2014 team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
+    "shortDesc": "Technology choices driven by what looks impressive on resumes rather than what solves the actual problem — team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
     "warningSigns": [
       "Architecture is designed for a scale the product has never seen and may never reach",
       "Nobody can articulate what business problem the chosen technology solves better than simpler alternatives",
@@ -1671,9 +1629,9 @@
     "recoveryActions": [
       "Require every architecture proposal to answer: 'What problem does this solve, and what's the simplest thing that could work?'",
       "Evaluate technology choices using TCO including operational cost, hiring difficulty, and cognitive load",
-      "Establish a 'boring technology' principle \u2014 default to proven, well-understood tools unless there's a compelling reason not to",
+      "Establish a 'boring technology' principle — default to proven, well-understood tools unless there's a compelling reason not to",
       "Create a team tech radar with explicit adopt/trial/assess/hold categories to channel experimentation productively",
-      "Celebrate engineers who choose boring, effective solutions \u2014 not just those who introduce novel ones"
+      "Celebrate engineers who choose boring, effective solutions — not just those who introduce novel ones"
     ],
     "sourceTopic": "Systems Design & Architecture (Technology Selection)",
     "mappingNotes": "Based on resume-driven development patterns widely discussed in engineering leadership. The incentive structure is broken when choosing complexity is rewarded more than choosing simplicity."
@@ -1687,7 +1645,7 @@
       "C1-O7"
     ],
     "capabilityId": "C1",
-    "shortDesc": "Leader avoids making difficult organizational decisions \u2014 lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
+    "shortDesc": "Leader avoids making difficult organizational decisions — lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
     "warningSigns": [
       "Known team dysfunction persists for months without intervention",
       "Leader deflects organizational problems with 'let's give it more time'",
@@ -1695,16 +1653,16 @@
       "Talented people leave citing organizational issues that were never resolved",
       "Leader is surprised by problems that were visible to everyone else for months"
     ],
-    "impact": "Org health degrades gradually until a crisis forces action \u2014 but by then, the best people have left and trust is eroded. The leader's credibility suffers because the team sees problems being ignored. Small, manageable issues become large, expensive ones. The org develops a culture where raising concerns feels pointless because nothing changes.",
+    "impact": "Org health degrades gradually until a crisis forces action — but by then, the best people have left and trust is eroded. The leader's credibility suffers because the team sees problems being ignored. Small, manageable issues become large, expensive ones. The org develops a culture where raising concerns feels pointless because nothing changes.",
     "recoveryActions": [
       "Establish a regular org health review with explicit metrics (attrition, engagement, skip-level themes)",
-      "Build a decision log for organizational issues \u2014 track what's been raised, when, and what action was taken",
+      "Build a decision log for organizational issues — track what's been raised, when, and what action was taken",
       "Set a 30-day rule: any organizational concern raised twice must have an action plan within 30 days",
       "Seek coaching or peer support for developing comfort with organizational conflict",
-      "Reframe avoidance: inaction is itself a decision with consequences \u2014 the cost of not deciding is real"
+      "Reframe avoidance: inaction is itself a decision with consequences — the cost of not deciding is real"
     ],
     "sourceTopic": "Org-Level Thinking (Organizational Decision Making)",
-    "mappingNotes": "Complementary to The Wrecking Ball (AP-54) \u2014 where that anti-pattern is about acting too fast, this one is about acting too slow."
+    "mappingNotes": "Complementary to The Wrecking Ball (AP-54) — where that anti-pattern is about acting too fast, this one is about acting too slow."
   },
   {
     "id": "AP-64",
@@ -1715,7 +1673,7 @@
       "C9-O9"
     ],
     "capabilityId": "C9",
-    "shortDesc": "Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure \u2014 velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
+    "shortDesc": "Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure — velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
     "warningSigns": [
       "Story points per sprint increase but customer satisfaction or feature adoption doesn't improve",
       "Team debates how to 'count' work to maximize the metric rather than how to deliver value",
@@ -1727,9 +1685,9 @@
     "recoveryActions": [
       "Pair every target metric with a counter-metric (velocity + defect rate, throughput + cycle time)",
       "Use metrics as diagnostic tools in team discussions, never as individual performance measures",
-      "Rotate or retire metrics periodically \u2014 if a metric has been stable for 3 quarters, it may no longer be useful",
+      "Rotate or retire metrics periodically — if a metric has been stable for 3 quarters, it may no longer be useful",
       "When presenting metrics, always include qualitative context: what the numbers mean, not just what they show",
-      "Educate the team on Goodhart's Law explicitly \u2014 naming the trap makes it easier to avoid"
+      "Educate the team on Goodhart's Law explicitly — naming the trap makes it easier to avoid"
     ],
     "sourceTopic": "Metrics, Measurement & Outcomes (Metric Dysfunction)",
     "mappingNotes": "Based on Goodhart's Law and LeadDev articles on metrics gaming and the 'flawed five' engineering productivity metrics."
@@ -1743,7 +1701,7 @@
       "C11-O10"
     ],
     "capabilityId": "C11",
-    "shortDesc": "Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency \u2014 making the team a place people can't leave rather than a place people want to stay",
+    "shortDesc": "Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency — making the team a place people can't leave rather than a place people want to stay",
     "warningSigns": [
       "Internal transfer requests are discouraged or slow-walked",
       "Manager gives vague growth plans but blocks concrete opportunities (leading projects on other teams, rotations)",
@@ -1753,14 +1711,14 @@
     ],
     "impact": "Engineers eventually leave the company entirely instead of transferring internally. Team builds resentment rather than loyalty. Manager's reputation as a talent hoarder spreads, making recruiting harder. The company loses people it could have retained in a different role. Growth-oriented engineers avoid joining the team.",
     "recoveryActions": [
-      "Reframe internal transfers as a positive signal \u2014 you're developing people other teams want",
+      "Reframe internal transfers as a positive signal — you're developing people other teams want",
       "Build a succession plan so no single departure creates a crisis",
       "Actively sponsor engineer growth even when it means losing them: 'I'd rather you grow here than leave the company'",
       "Track internal mobility as a positive metric alongside external attrition",
-      "Create rotation opportunities proactively \u2014 3-month cross-team projects build skills and expand networks"
+      "Create rotation opportunities proactively — 3-month cross-team projects build skills and expand networks"
     ],
     "sourceTopic": "Hiring, Onboarding & Role Design (Talent Mobility)",
-    "mappingNotes": "Based on LeadDev retention articles \u2014 talent hoarding creates the opposite of the intended effect. The best retention strategy is making people want to stay, not making it hard to leave."
+    "mappingNotes": "Based on LeadDev retention articles — talent hoarding creates the opposite of the intended effect. The best retention strategy is making people want to stay, not making it hard to leave."
   },
   {
     "id": "AP-66",
@@ -1771,24 +1729,24 @@
       "C2-O6"
     ],
     "capabilityId": "C2",
-    "shortDesc": "leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams \u2014 the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
+    "shortDesc": "leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams — the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
     "warningSigns": [
       "Engineers cannot articulate how their current project connects to the company's top 3 priorities",
       "Strategy documents use abstract language ('leverage synergies,' 'drive innovation') that doesn't map to concrete engineering decisions",
       "Teams discover conflicting priorities because the strategy was too high-level to resolve real trade-offs",
-      "Quarterly planning feels disconnected from the annual strategy \u2014 teams plan bottom-up with no top-down constraint",
+      "Quarterly planning feels disconnected from the annual strategy — teams plan bottom-up with no top-down constraint",
       "Leadership presents the same strategic slide deck for 3+ quarters while the market and team have moved on"
     ],
-    "impact": "Engineering effort scatters across locally-optimal projects that don't add up to strategic progress. Teams make reasonable decisions in isolation that are globally incoherent. The strategy becomes a source of cynicism rather than alignment \u2014 people stop reading strategy documents because they've never influenced daily work. Leadership blames execution when the real failure is translation: turning strategic intent into engineering priorities with clear success criteria.",
+    "impact": "Engineering effort scatters across locally-optimal projects that don't add up to strategic progress. Teams make reasonable decisions in isolation that are globally incoherent. The strategy becomes a source of cynicism rather than alignment — people stop reading strategy documents because they've never influenced daily work. Leadership blames execution when the real failure is translation: turning strategic intent into engineering priorities with clear success criteria.",
     "recoveryActions": [
       "Translate every strategic pillar into 2-3 specific engineering bets with measurable outcomes and time horizons",
-      "Run a 'strategy connection' exercise: ask each team lead to map their top 3 projects to strategic priorities \u2014 gaps reveal translation failures",
+      "Run a 'strategy connection' exercise: ask each team lead to map their top 3 projects to strategic priorities — gaps reveal translation failures",
       "Replace abstract strategy language with concrete decision criteria: 'When we face a trade-off between X and Y, we choose X because...'",
-      "Review and refresh strategy quarterly \u2014 a strategy that doesn't evolve with new information is a strategy that's being ignored",
+      "Review and refresh strategy quarterly — a strategy that doesn't evolve with new information is a strategy that's being ignored",
       "Make the strategy visible in sprint planning and roadmap reviews, not just annual kickoffs"
     ],
     "sourceTopic": "Strategy & Vision (Strategy-Execution Translation)",
-    "mappingNotes": "Based on LeadDev 'When the movie isn't like the book: Failure modes in strategic alignment' \u2014 strategy fails not because it's wrong but because it's never translated into terms teams can act on."
+    "mappingNotes": "Based on LeadDev 'When the movie isn't like the book: Failure modes in strategic alignment' — strategy fails not because it's wrong but because it's never translated into terms teams can act on."
   },
   {
     "id": "AP-67",
@@ -1799,7 +1757,7 @@
       "C4-O3"
     ],
     "capabilityId": "C4",
-    "shortDesc": "team neglects operational health \u2014 toil reduction, developer experience, and technical debt \u2014 because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
+    "shortDesc": "team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
     "warningSigns": [
       "Engineers spend more than 30% of their time on repetitive manual tasks that could be automated",
       "The team has had 'fix the build pipeline' or 'reduce deploy time' on the backlog for 3+ quarters without progress",
@@ -1807,16 +1765,16 @@
       "New engineers say 'this is painful' about basic workflows that the team has normalized",
       "Every sprint planning starts with 'we'll do tech debt next sprint' and it never happens"
     ],
-    "impact": "Toil compounds \u2014 manual operational work consumes the time needed to build automation that would eliminate that toil. The team enters a death spiral where declining velocity creates pressure for more shortcuts, which generate more toil. Developer experience degrades until senior engineers leave for teams with better tooling. The remaining team lacks the capacity or institutional knowledge to dig out. What started as a prioritization choice becomes an engineering capability crisis.",
+    "impact": "Toil compounds — manual operational work consumes the time needed to build automation that would eliminate that toil. The team enters a death spiral where declining velocity creates pressure for more shortcuts, which generate more toil. Developer experience degrades until senior engineers leave for teams with better tooling. The remaining team lacks the capacity or institutional knowledge to dig out. What started as a prioritization choice becomes an engineering capability crisis.",
     "recoveryActions": [
       "Establish a fixed capacity allocation: 20-30% of every sprint is reserved for operational health, non-negotiably",
-      "Track toil explicitly \u2014 measure hours spent on repetitive manual tasks weekly and set reduction targets",
+      "Track toil explicitly — measure hours spent on repetitive manual tasks weekly and set reduction targets",
       "Start with the highest-leverage automation: the one manual task that every engineer does multiple times per week",
-      "Make developer experience metrics visible to leadership \u2014 deploy frequency, build time, onboarding time-to-first-commit",
+      "Make developer experience metrics visible to leadership — deploy frequency, build time, onboarding time-to-first-commit",
       "Frame operational investment in business terms: 'Reducing deploy time from 45 min to 5 min recovers X engineer-hours per week'"
     ],
     "sourceTopic": "Operational & Process Excellence (Operational Health)",
-    "mappingNotes": "Based on LeadDev 'What is toil and why is it damaging your engineering org?' and 'How to break the cycle of tech debt' \u2014 toil creates a self-reinforcing trap where the team lacks capacity to fix the thing that's consuming their capacity."
+    "mappingNotes": "Based on LeadDev 'What is toil and why is it damaging your engineering org?' and 'How to break the cycle of tech debt' — toil creates a self-reinforcing trap where the team lacks capacity to fix the thing that's consuming their capacity."
   },
   {
     "id": "AP-68",
@@ -1827,7 +1785,7 @@
       "C5-O6"
     ],
     "capabilityId": "C5",
-    "shortDesc": "engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment \u2014 stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
+    "shortDesc": "engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment — stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
     "warningSigns": [
       "Stakeholders learn about project delays in the same meeting where the deadline was supposed to be met",
       "Engineering leader uses optimistic framing ('we're working on it') when the project is materially off track",
@@ -1835,16 +1793,16 @@
       "Status reports consistently show green/on-track until suddenly flipping to red with no amber warning period",
       "The engineering leader avoids 1:1s with their VP or product counterpart during difficult periods"
     ],
-    "impact": "Each surprise erodes stakeholder trust compoundingly \u2014 the first late project is forgiven, the third triggers micromanagement. Business leaders lose confidence in engineering's ability to self-manage and start demanding detailed progress reports, daily standups with leadership, or scope commitments with penalty clauses. The engineering leader's credibility and autonomy shrink with each surprise. Eventually, product and business make decisions without engineering input because they've learned that engineering's input is unreliable.",
+    "impact": "Each surprise erodes stakeholder trust compoundingly — the first late project is forgiven, the third triggers micromanagement. Business leaders lose confidence in engineering's ability to self-manage and start demanding detailed progress reports, daily standups with leadership, or scope commitments with penalty clauses. The engineering leader's credibility and autonomy shrink with each surprise. Eventually, product and business make decisions without engineering input because they've learned that engineering's input is unreliable.",
     "recoveryActions": [
       "Adopt a 'no surprises' principle: any risk with >30% likelihood of impacting timeline gets communicated within 48 hours of identification",
       "Practice the formula: 'Here's what happened, here's the impact, here's what we're doing about it, here's when I'll update you next'",
-      "Build in regular risk reviews with stakeholders \u2014 weekly 15-minute syncs where you proactively share what's on track and what's not",
+      "Build in regular risk reviews with stakeholders — weekly 15-minute syncs where you proactively share what's on track and what's not",
       "Reframe early bad news as a trust-building opportunity: leaders who surface problems early are seen as reliable, not as failures",
-      "Track your prediction accuracy \u2014 compare initial estimates to actuals and use the data to calibrate future commitments"
+      "Track your prediction accuracy — compare initial estimates to actuals and use the data to calibrate future commitments"
     ],
     "sourceTopic": "Stakeholder & Product (Stakeholder Communication)",
-    "mappingNotes": "Based on LeadDev 'Getting good at delivering bad news' \u2014 the cost of late bad news is always higher than the cost of early bad news. Trust is built by reliability of information, not by optimism."
+    "mappingNotes": "Based on LeadDev 'Getting good at delivering bad news' — the cost of late bad news is always higher than the cost of early bad news. Trust is built by reliability of information, not by optimism."
   },
   {
     "id": "AP-69",
@@ -1855,7 +1813,7 @@
       "C10-O1"
     ],
     "capabilityId": "C10",
-    "shortDesc": "manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration \u2014 projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
+    "shortDesc": "manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration — projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
     "warningSigns": [
       "Sprint commitments assume every engineer is available for 8 productive hours per day, 5 days per week",
       "Any unplanned work (production incident, urgent bug, exec request) immediately puts the sprint at risk",
@@ -1863,16 +1821,16 @@
       "Project timelines are built on best-case estimates with no contingency buffer",
       "The team consistently delivers 60-70% of sprint commitments but the plan is never adjusted"
     ],
-    "impact": "When capacity is planned at 100%, every surprise becomes a crisis. Teams develop a reputation for missing deadlines even though they're working harder than ever. Engineers burn out because there's no slack for the human aspects of work \u2014 thinking, learning, helping colleagues. Quality declines because code review and testing are squeezed out by delivery pressure. The paradox: teams running at 70-80% planned utilization actually deliver more reliably than teams planned at 100%, because they can absorb variability without cascading failures.",
+    "impact": "When capacity is planned at 100%, every surprise becomes a crisis. Teams develop a reputation for missing deadlines even though they're working harder than ever. Engineers burn out because there's no slack for the human aspects of work — thinking, learning, helping colleagues. Quality declines because code review and testing are squeezed out by delivery pressure. The paradox: teams running at 70-80% planned utilization actually deliver more reliably than teams planned at 100%, because they can absorb variability without cascading failures.",
     "recoveryActions": [
-      "Plan capacity at 70-80% \u2014 reserve 20-30% for unplanned work, collaboration, and investment",
+      "Plan capacity at 70-80% — reserve 20-30% for unplanned work, collaboration, and investment",
       "Track actual vs. planned capacity over 4-6 sprints to establish your team's real available capacity",
-      "Make the buffer explicit and visible: 'We plan 32 of 40 hours per engineer per week' \u2014 this isn't laziness, it's engineering for reliability",
+      "Make the buffer explicit and visible: 'We plan 32 of 40 hours per engineer per week' — this isn't laziness, it's engineering for reliability",
       "When leadership asks why the team isn't 'fully utilized,' explain with data: show the correlation between planned utilization rate and delivery predictability",
       "Categorize unplanned work (incidents, support, urgent requests) to identify patterns that can be planned for"
     ],
     "sourceTopic": "Resource Allocation (Capacity Planning)",
-    "mappingNotes": "Based on LeadDev 'How to reserve engineering capacity and deliver projects on time' \u2014 teams at 70-80% planned utilization outperform those at 100% because they can absorb the variability that always exists in knowledge work."
+    "mappingNotes": "Based on LeadDev 'How to reserve engineering capacity and deliver projects on time' — teams at 70-80% planned utilization outperform those at 100% because they can absorb the variability that always exists in knowledge work."
   },
   {
     "id": "AP-70",
@@ -1883,24 +1841,24 @@
       "C12-O7"
     ],
     "capabilityId": "C12",
-    "shortDesc": "during periods of uncertainty \u2014 layoffs, reorgs, strategy pivots \u2014 the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
+    "shortDesc": "during periods of uncertainty — layoffs, reorgs, strategy pivots — the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
     "warningSigns": [
       "Manager says 'don't worry about it' when the team raises concerns about organizational changes",
-      "Reassurances prove wrong repeatedly \u2014 'no more layoffs' is followed by another round within months",
+      "Reassurances prove wrong repeatedly — 'no more layoffs' is followed by another round within months",
       "Team members stop asking questions in all-hands because they've learned the answers won't be honest",
       "Manager avoids the topic entirely, hoping uncertainty will resolve itself without acknowledgment",
       "Private Slack channels and hallway conversations replace official channels as the trusted information source"
     ],
-    "impact": "Each hollow reassurance depletes the manager's credibility account. The team develops a discount rate for everything the manager says \u2014 they assume optimistic framing means things are worse than stated. Psychological safety collapses because the team learns that raising concerns gets dismissal rather than honesty. Top performers, who have the most options, leave first because they trust their own assessment more than management's reassurances. The remaining team is anxious, disengaged, and focused on self-preservation rather than team goals.",
+    "impact": "Each hollow reassurance depletes the manager's credibility account. The team develops a discount rate for everything the manager says — they assume optimistic framing means things are worse than stated. Psychological safety collapses because the team learns that raising concerns gets dismissal rather than honesty. Top performers, who have the most options, leave first because they trust their own assessment more than management's reassurances. The remaining team is anxious, disengaged, and focused on self-preservation rather than team goals.",
     "recoveryActions": [
       "Replace reassurance with honesty: 'Here's what I know, here's what I don't know, and here's when I expect to know more'",
       "Acknowledge what you cannot promise: 'I can't guarantee there won't be more changes, but I can tell you what I'm doing to advocate for this team'",
-      "Create a regular cadence for uncertainty updates \u2014 even if the update is 'no new information,' the consistency builds trust",
+      "Create a regular cadence for uncertainty updates — even if the update is 'no new information,' the consistency builds trust",
       "Name the emotions: 'I know this is unsettling. It's okay to feel that way. Let's talk about what we can control'",
-      "After the uncertainty resolves, do a retrospective on how communication went \u2014 learn from what helped and what didn't"
+      "After the uncertainty resolves, do a retrospective on how communication went — learn from what helped and what didn't"
     ],
     "sourceTopic": "Team Culture & Belonging (Communication During Uncertainty)",
-    "mappingNotes": "Based on LeadDev 'Build psychological safety in a world of layoffs' \u2014 vague optimism during uncertainty is more damaging than honest difficulty because it signals that the leader either doesn't know the truth or doesn't respect the team enough to share it."
+    "mappingNotes": "Based on LeadDev 'Build psychological safety in a world of layoffs' — vague optimism during uncertainty is more damaging than honest difficulty because it signals that the leader either doesn't know the truth or doesn't respect the team enough to share it."
   },
   {
     "id": "AP-71",
@@ -1911,24 +1869,24 @@
       "C13-O6"
     ],
     "capabilityId": "C13",
-    "shortDesc": "automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction \u2014 the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
+    "shortDesc": "automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction — the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
     "warningSigns": [
       "Security scanner dashboard shows 500+ open findings and the number grows every week",
       "Engineers dismiss scanner alerts as 'mostly false positives' without verifying",
       "Critical vulnerabilities sit unpatched for weeks because they're buried in a backlog of low-severity findings",
       "The team disabled or ignored security scanning in CI because it blocked too many deploys for non-issues",
-      "Nobody owns vulnerability triage \u2014 findings go into a shared queue that nobody monitors"
+      "Nobody owns vulnerability triage — findings go into a shared queue that nobody monitors"
     ],
-    "impact": "The security scanning investment delivers negative value \u2014 it generates noise that obscures real risk rather than reducing it. Engineers develop contempt for security tooling because it cries wolf constantly. When a genuine critical vulnerability appears, it gets the same treatment as the hundreds of low-severity findings: acknowledged, backlogged, forgotten. The organization has the appearance of security diligence (tools are running, dashboards exist) while actual security posture degrades.",
+    "impact": "The security scanning investment delivers negative value — it generates noise that obscures real risk rather than reducing it. Engineers develop contempt for security tooling because it cries wolf constantly. When a genuine critical vulnerability appears, it gets the same treatment as the hundreds of low-severity findings: acknowledged, backlogged, forgotten. The organization has the appearance of security diligence (tools are running, dashboards exist) while actual security posture degrades.",
     "recoveryActions": [
-      "Assign a single owner for vulnerability triage \u2014 one person or rotating role who reviews every finding weekly",
+      "Assign a single owner for vulnerability triage — one person or rotating role who reviews every finding weekly",
       "Implement severity-based SLAs: critical = 48 hours, high = 7 days, medium = 30 days, low = next quarter",
       "Aggressively tune scanners: suppress known false positives, configure severity thresholds, and accept risk on low-impact findings formally",
-      "Track signal-to-noise ratio: what percentage of scanner findings led to actual fixes vs. dismissals \u2014 if >80% are dismissed, the tool needs reconfiguration",
-      "Separate the vulnerability backlog from the feature backlog \u2014 make security work visible with its own tracking and reporting"
+      "Track signal-to-noise ratio: what percentage of scanner findings led to actual fixes vs. dismissals — if >80% are dismissed, the tool needs reconfiguration",
+      "Separate the vulnerability backlog from the feature backlog — make security work visible with its own tracking and reporting"
     ],
     "sourceTopic": "Security & Compliance (Vulnerability Management)",
-    "mappingNotes": "Based on LeadDev articles on security-engineering relationship dynamics and vulnerability management \u2014 the scanner is only as valuable as the triage process behind it. Without effective prioritization, more scanning creates more noise, not more security."
+    "mappingNotes": "Based on LeadDev articles on security-engineering relationship dynamics and vulnerability management — the scanner is only as valuable as the triage process behind it. Without effective prioritization, more scanning creates more noise, not more security."
   },
   {
     "id": "AP-72",
@@ -1939,24 +1897,24 @@
       "C13-O6"
     ],
     "capabilityId": "C13",
-    "shortDesc": "engineers routinely circumvent security controls \u2014 disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing \u2014 because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity",
+    "shortDesc": "engineers routinely circumvent security controls — disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing — because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity",
     "warningSigns": [
       "Engineers disable or skip security scanning steps in CI pipelines to unblock deploys",
       "Threat modeling is marked 'N/A' for features that clearly handle sensitive data because the team is behind schedule",
       "Developers use personal accounts, hardcoded tokens, or shared credentials for testing and staging",
-      "Security exceptions become the norm \u2014 more features ship with exceptions than without",
+      "Security exceptions become the norm — more features ship with exceptions than without",
       "The security team discovers bypassed controls only during quarterly audits or after incidents"
     ],
     "impact": "The organization pays the cost of security processes (tooling, policy documentation, team time) without getting the benefit. Real vulnerabilities ship to production through the gaps created by bypasses. When an incident occurs, investigation reveals that existing controls would have caught it if they hadn't been circumvented. The security team loses credibility because their processes clearly aren't working, even though the root cause is organizational, not technical. Engineers develop a habit of treating security as optional, which becomes very hard to reverse.",
     "recoveryActions": [
-      "Audit current bypass patterns \u2014 survey engineers anonymously about which security steps they routinely skip and why",
+      "Audit current bypass patterns — survey engineers anonymously about which security steps they routinely skip and why",
       "Fix the top 3 friction points: if scanning takes 20 minutes, invest in making it take 2 minutes rather than making it mandatory-but-slow",
       "Make security controls non-bypassable for high-risk paths (production deploys, auth changes, data access) while allowing more flexibility for low-risk changes",
-      "Reframe security as a shared engineering quality standard, not an external gate \u2014 include security in definition of done alongside tests and code review",
-      "Track bypass rate as a metric: percentage of deploys that skip any security step \u2014 trending down means the process is becoming less painful"
+      "Reframe security as a shared engineering quality standard, not an external gate — include security in definition of done alongside tests and code review",
+      "Track bypass rate as a metric: percentage of deploys that skip any security step — trending down means the process is becoming less painful"
     ],
     "sourceTopic": "Security & Compliance (Security Process Adoption)",
-    "mappingNotes": "Based on LeadDev 'Overcoming security hurdles to push engineering velocity' \u2014 engineers bypass security not because they don't care, but because the controls are designed for compliance rather than developer experience."
+    "mappingNotes": "Based on LeadDev 'Overcoming security hurdles to push engineering velocity' — engineers bypass security not because they don't care, but because the controls are designed for compliance rather than developer experience."
   },
   {
     "id": "AP-73",
@@ -1967,23 +1925,23 @@
       "C13-O2"
     ],
     "capabilityId": "C13",
-    "shortDesc": "team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation \u2014 day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk",
+    "shortDesc": "team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation — day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk",
     "warningSigns": [
       "Audit preparation is a 2-4 week scramble to gather evidence and update documentation that's been stale since the last audit",
       "Engineers can't describe the security practices the company is certified for without looking at the compliance docs",
-      "Access reviews happen the week before the audit, not continuously \u2014 stale permissions accumulate for months",
+      "Access reviews happen the week before the audit, not continuously — stale permissions accumulate for months",
       "Compliance evidence is generated retroactively rather than as a byproduct of actual security practices",
       "The certification badge is prominently displayed on the sales page but the security team knows the daily reality doesn't match"
     ],
     "impact": "The certification creates a false sense of security for customers, leadership, and the team itself. Real risk goes unmanaged because the compliance program measures documentation, not actual practice. When a breach occurs, investigation reveals that the certified controls weren't being followed, creating legal liability and destroying customer trust far more severely than if the company had never been certified. The compliance program consumes significant resources (audit fees, preparation time, documentation) without reducing actual risk.",
     "recoveryActions": [
-      "Automate compliance evidence collection \u2014 access logs, change records, vulnerability scan results should be generated continuously, not prepared for audits",
+      "Automate compliance evidence collection — access logs, change records, vulnerability scan results should be generated continuously, not prepared for audits",
       "Align certification requirements with actual engineering practices: if a control isn't sustainable, either change the practice or change the certification scope",
-      "Run internal mini-audits monthly \u2014 spot-check 3-5 controls to ensure continuous compliance rather than periodic cramming",
-      "Make compliance metrics visible to engineering: access review completion rate, vulnerability SLA adherence, training completion \u2014 treat these like engineering SLOs",
+      "Run internal mini-audits monthly — spot-check 3-5 controls to ensure continuous compliance rather than periodic cramming",
+      "Make compliance metrics visible to engineering: access review completion rate, vulnerability SLA adherence, training completion — treat these like engineering SLOs",
       "Build compliance into engineering workflows so evidence is a byproduct of work, not a separate artifact: automated access management, built-in audit trails, continuous scanning"
     ],
     "sourceTopic": "Security & Compliance (Compliance Integrity)",
-    "mappingNotes": "Based on LeadDev articles on compliance-heavy industry testing and born-left security \u2014 certifications should reflect reality, not create an alternative reality that only exists during audit windows."
+    "mappingNotes": "Based on LeadDev articles on compliance-heavy industry testing and born-left security — certifications should reflect reality, not create an alternative reality that only exists during audit windows."
   }
 ]

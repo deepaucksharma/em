@@ -234,30 +234,6 @@
     ]
   },
   {
-    "id": "IQ-11",
-    "capabilityId": "C3",
-    "question": "Describe a time you had to make a build-vs-buy decision for a significant piece of infrastructure. Walk me through your analysis and the outcome.",
-    "level": "director",
-    "questionType": "behavioral",
-    "followUps": [
-      "How did you account for long-term maintenance costs in your analysis?",
-      "What would have changed your decision?",
-      "How did you handle internal disagreement about the direction?"
-    ],
-    "lookFor": [
-      "Comprehensive cost analysis including TCO, not just upfront cost",
-      "Considered team capability and hiring implications",
-      "Evaluated strategic differentiation vs. commodity infrastructure",
-      "Made a reversible or staged decision where possible"
-    ],
-    "redFlags": [
-      "Made the decision based purely on engineering preference",
-      "Did not consider ongoing operational costs",
-      "Ignored vendor risk or lock-in considerations",
-      "Could not explain the decision criteria used"
-    ]
-  },
-  {
     "id": "IQ-12",
     "capabilityId": "C3",
     "question": "How do you ensure your organization's technical architecture evolves to support a 10x increase in scale over the next two years?",
@@ -728,7 +704,7 @@
   {
     "id": "IQ-32",
     "capabilityId": "C8",
-    "question": "How do you think about risk management for your engineering organization? How do you identify and mitigate risks before they become incidents?",
+    "question": "How do you think about risk management across your engineering organization? What systems do you have for identifying portfolio-level risks — technical debt, single points of failure, key-person dependencies — and how do you communicate them to executive leadership?",
     "level": "director",
     "questionType": "behavioral",
     "followUps": [
@@ -838,29 +814,6 @@
       "No measurement plan; assumes the value is self-evident",
       "Cannot define what success looks like at 3, 6, and 12 month horizons",
       "Ignores internal customer satisfaction as a signal"
-    ]
-  },
-  {
-    "id": "IQ-37",
-    "capabilityId": "C10",
-    "question": "Tell me about a time you had to make a difficult headcount tradeoff. How did you decide where to invest limited headcount?",
-    "level": "em",
-    "questionType": "behavioral",
-    "followUps": [
-      "How did you communicate the tradeoff to the team that didn't get the headcount?",
-      "What data did you use to support your recommendation?"
-    ],
-    "lookFor": [
-      "Used a clear framework to evaluate competing needs",
-      "Considered both immediate delivery needs and long-term team health",
-      "Communicated the rationale transparently",
-      "Explored creative alternatives like retraining or shifting existing team members"
-    ],
-    "redFlags": [
-      "Allocated headcount based on who complained the loudest",
-      "No framework for comparing competing investment options",
-      "Did not communicate the rationale to affected teams",
-      "Only considered short-term project needs, not long-term capacity building"
     ]
   },
   {
@@ -1573,30 +1526,6 @@
     ]
   },
   {
-    "id": "IQ-69",
-    "capabilityId": "C3",
-    "level": "em",
-    "question": "Tell me about a time your team accumulated significant technical debt. How did you make it visible and get investment to address it?",
-    "questionType": "behavioral",
-    "followUps": [
-      "How did you quantify the impact of the debt?",
-      "How did you prioritize which debt to pay down?",
-      "How did you balance debt work with feature delivery?"
-    ],
-    "lookFor": [
-      "Quantifies tech debt impact in business terms",
-      "Has a framework for prioritizing debt",
-      "Negotiates debt investment as part of planning",
-      "Tracks debt reduction progress"
-    ],
-    "redFlags": [
-      "Can't explain tech debt to non-technical stakeholders",
-      "Treats all debt as equally important",
-      "Either ignores debt entirely or stops feature work to fix it",
-      "No system for preventing new debt accumulation"
-    ]
-  },
-  {
     "id": "IQ-70",
     "capabilityId": "C3",
     "level": "director",
@@ -1605,13 +1534,16 @@
     "followUps": [
       "What criteria did you use?",
       "How did you account for total cost of ownership?",
-      "How did you manage the organizational change aspect?"
+      "How did you manage the organizational change aspect?",
+      "How did you account for long-term maintenance costs?",
+      "How did you handle internal disagreement about the direction?"
     ],
     "lookFor": [
       "Structured evaluation framework",
       "Considers TCO not just initial cost",
       "Involves engineering team in evaluation",
-      "Plans for migration and adoption, not just selection"
+      "Plans for migration and adoption, not just selection",
+      "Evaluated strategic differentiation vs. commodity infrastructure"
     ],
     "redFlags": [
       "Always builds when buying would be better (or vice versa)",
@@ -1725,13 +1657,15 @@
     "followUps": [
       "How did you communicate the trade-offs to stakeholders?",
       "What framework did you use to evaluate competing priorities?",
-      "How did you handle pushback from stakeholders whose projects were cut?"
+      "How did you handle pushback from stakeholders whose projects were cut?",
+      "How did you communicate the tradeoff to the team that didn't get the resources?"
     ],
     "lookFor": [
       "Data-driven prioritization framework, not gut feel",
       "Transparent communication of trade-offs",
       "Willingness to make hard calls and say no",
-      "Evidence of stakeholder management around the decision"
+      "Evidence of stakeholder management around the decision",
+      "Explored creative alternatives like retraining or shifting existing team members"
     ],
     "redFlags": [
       "Tried to do everything (peanut-butter spreading)",
@@ -2367,7 +2301,7 @@
   {
     "id": "IQ-102",
     "capabilityId": "C8",
-    "question": "Tell me about your approach to risk management as an engineering leader. How do you prepare your team for things going wrong?",
+    "question": "Tell me about how you prepare your team for things going wrong. Walk me through a specific example where your preparation paid off during a real incident.",
     "level": "em",
     "questionType": "behavioral",
     "followUps": [
@@ -2541,7 +2475,8 @@
     "followUps": [
       "How did you quantify the cost of the tech debt in business terms?",
       "What allocation model do you use — dedicated sprints, percentage of capacity, or something else?",
-      "How do you track whether the tech debt investment is paying off?"
+      "How do you track whether the tech debt investment is paying off?",
+      "How did you prioritize which debt to pay down first?"
     ],
     "lookFor": [
       "Frames tech debt in business terms — cost of delay, incident risk, velocity impact",

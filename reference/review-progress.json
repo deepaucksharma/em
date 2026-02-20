@@ -1,0 +1,542 @@
+{
+  "metadata": {
+    "totalArticles": 2852,
+    "tier1Count": 502,
+    "tier2Count": 1034,
+    "tier3Count": 1316,
+    "startDate": "2026-02-19",
+    "lastUpdated": "2026-02-20"
+  },
+  "sessions": [
+    {
+      "session": 1,
+      "date": "2026-02-19",
+      "focus": "C12, C10, C7, C14, C2, C8 \u2014 Lowest coverage capabilities",
+      "articlesReviewed": 18,
+      "additions": {
+        "observables": 15,
+        "antiPatterns": 5,
+        "playbooks": 6,
+        "interviewQuestions": 16,
+        "calibrationSignals": 15,
+        "learningPathways": 8,
+        "measurementGuidance": 24
+      },
+      "capabilitiesEnriched": [
+        "C2",
+        "C7",
+        "C8",
+        "C10",
+        "C12",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C7": "64% \u2192 91%",
+        "C10": "62% \u2192 100%",
+        "C12": "62% \u2192 100%",
+        "C14": "67% \u2192 89%",
+        "C2": "100% (4\u21926 observables)",
+        "C8": "100% (6\u21928 observables)"
+      }
+    },
+    {
+      "session": 2,
+      "date": "2026-02-19",
+      "focus": "C13 Security, C11 Hiring",
+      "articlesReviewed": 10,
+      "additions": {
+        "observables": 6,
+        "antiPatterns": 2,
+        "playbooks": 2,
+        "interviewQuestions": 4,
+        "calibrationSignals": 6,
+        "learningPathways": 3,
+        "measurementGuidance": 8
+      },
+      "capabilitiesEnriched": [
+        "C13",
+        "C11"
+      ],
+      "coverageImpact": {
+        "C13": "100% (4\u21927 observables, depth significantly improved)",
+        "C11": "80% \u2192 100% (8\u219211 observables)"
+      }
+    },
+    {
+      "session": 3,
+      "date": "2026-02-19",
+      "focus": "C4 Operational, C9 Metrics",
+      "articlesReviewed": 8,
+      "additions": {
+        "observables": 4,
+        "antiPatterns": 2,
+        "playbooks": 2,
+        "interviewQuestions": 6,
+        "calibrationSignals": 4,
+        "learningPathways": 3,
+        "measurementGuidance": 8
+      },
+      "capabilitiesEnriched": [
+        "C4",
+        "C9"
+      ],
+      "coverageImpact": {
+        "C4": "85% \u2192 100% (11\u219213 observables)",
+        "C9": "89% \u2192 100% (8\u219210 observables)"
+      }
+    },
+    {
+      "session": 4,
+      "date": "2026-02-19",
+      "focus": "C1, C3, C5, C6 depth scan",
+      "articlesReviewed": 6,
+      "additions": {
+        "observables": 3,
+        "antiPatterns": 3,
+        "playbooks": 2,
+        "interviewQuestions": 0,
+        "calibrationSignals": 3,
+        "learningPathways": 0,
+        "measurementGuidance": 2
+      },
+      "capabilitiesEnriched": [
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "coverageImpact": {
+        "C3": "91% \u2192 100% (10\u219211 observables)",
+        "C5": "94% \u2192 100% (15\u219216 observables)",
+        "C6": "100% (12\u219213 observables, depth improved)"
+      }
+    },
+    {
+      "session": 5,
+      "date": "2026-02-19",
+      "focus": "Close remaining coverage gaps: C1, C7, C14",
+      "articlesReviewed": 0,
+      "additions": {
+        "observables": 3,
+        "antiPatterns": 0,
+        "playbooks": 0,
+        "interviewQuestions": 0,
+        "calibrationSignals": 6,
+        "learningPathways": 0,
+        "measurementGuidance": 0
+      },
+      "capabilitiesEnriched": [
+        "C1",
+        "C7",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C1": "94% \u2192 100% (15\u219216 observables)",
+        "C7": "91% \u2192 100% (10\u219211 observables)",
+        "C14": "89% \u2192 100% (8\u21929 observables)"
+      },
+      "notes": "Added dedicated observables for previously-shared sub-topics: C1-O16 (Aligning Team Goals to Business Strategy), C7-O11 (Trade-off Communication), C14-O9 (Managing Out)"
+    },
+    {
+      "session": 6,
+      "date": "2026-02-20",
+      "focus": "Depth enrichment: IQs for C2/C8/C11/C3/C6, Playbooks for C8/C9",
+      "articlesReviewed": 14,
+      "additions": {
+        "interviewQuestions": 16,
+        "playbooks": 4,
+        "calibrationSignals": 14
+      },
+      "capabilitiesEnriched": [
+        "C1",
+        "C2",
+        "C3",
+        "C5",
+        "C6",
+        "C8",
+        "C9",
+        "C11",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C2": "IQ: 4\u21928",
+        "C8": "IQ: 4\u21928, PB: 3\u21925",
+        "C11": "IQ: 4\u21928",
+        "C3": "IQ: 6\u21928",
+        "C6": "IQ: 6\u21928",
+        "C9": "PB: 3\u21925"
+      },
+      "notes": "Selective enrichment based on critical reading of 14 LeadDev articles. Focused on capabilities with thinnest interview question and playbook coverage. Added based on genuine insight value, not just coverage gaps."
+    },
+    {
+      "session": 7,
+      "date": "2026-02-20",
+      "focus": "Playbooks for C13/C11/C14/C4, Anti-patterns for C2, Learning pathway article refs",
+      "articlesReviewed": 11,
+      "additions": {
+        "playbooks": 5,
+        "antiPatterns": 2,
+        "calibrationSignals": 10,
+        "learningPathwayArticles": 7
+      },
+      "capabilitiesEnriched": [
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C7",
+        "C8",
+        "C9",
+        "C11",
+        "C13",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C13": "PB: 3\u21925",
+        "C11": "PB: 4\u21925",
+        "C14": "PB: 4\u21925",
+        "C4": "PB: 7\u21928",
+        "C2": "AP: 2\u21924"
+      },
+      "notes": "Selective enrichment from 11 LeadDev articles. Focused on capabilities with thinnest playbook and anti-pattern coverage. Added steel threads, trifecta model, and Beast Mode as calibration signals. Updated 7 learning pathways with article references."
+    },
+    {
+      "session": 8,
+      "date": "2026-02-20",
+      "focus": "Depth pass: C12 culture playbooks, C10 budget playbook, C1/C10/C4 anti-patterns, C10/C12 calibration signals",
+      "articlesReviewed": 10,
+      "additions": {
+        "playbooks": 3,
+        "antiPatterns": 3,
+        "calibrationSignals": 8
+      },
+      "capabilitiesEnriched": [
+        "C1",
+        "C4",
+        "C10",
+        "C12",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C12": "PB: 4\u21926, CS: 12\u219216",
+        "C10": "PB: 6\u21927, CS: 11\u219215, AP: 3\u21924",
+        "C1": "AP: 3\u21924",
+        "C4": "AP: 3\u21924"
+      },
+      "notes": "Focused on thinnest content areas. C12 playbooks moved from problem-fixing to proactive culture building (rituals, post-disruption recovery). C10 gained proactive budget planning playbook complementing existing reactive playbooks. Anti-patterns added for new-leader entry mistakes, isolated budget planning, and stress funneling."
+    },
+    {
+      "session": 9,
+      "date": "2026-02-20",
+      "focus": "Close remaining AP gaps: C8/C11/C5 anti-patterns + depth calibration signals",
+      "articlesReviewed": 8,
+      "additions": {
+        "antiPatterns": 3,
+        "calibrationSignals": 6
+      },
+      "capabilitiesEnriched": [
+        "C5",
+        "C8",
+        "C11"
+      ],
+      "coverageImpact": {
+        "C8": "AP: 3\u21924, CS: 17\u219219",
+        "C11": "AP: 3\u21924, CS: 21\u219223",
+        "C5": "AP: 3\u21924, CS: 27\u219229"
+      },
+      "notes": "Targeted the last three capabilities with only 3 anti-patterns each. Alert Noise Normalization (C8) captures the creeping desensitization from accumulated non-actionable alerts. Interview Marathon (C11) addresses bloated hiring processes that chase away talent. The Order Taker (C5) describes the passive engineering leader who never shapes product strategy. All based on genuine article insights."
+    },
+    {
+      "session": 10,
+      "date": "2026-02-20",
+      "focus": "Playbooks for C2/C3/C7 + thin calibration signals for C14/C4/C9",
+      "articlesReviewed": 9,
+      "additions": {
+        "playbooks": 3,
+        "calibrationSignals": 6
+      },
+      "capabilitiesEnriched": [
+        "C2",
+        "C3",
+        "C4",
+        "C7",
+        "C9",
+        "C10",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C2": "PB: 5\u21926",
+        "C3": "PB: 5\u21926",
+        "C7": "PB: 5\u21926",
+        "C14": "CS: 16\u219218",
+        "C4": "CS: 17\u219219",
+        "C9": "CS: 17\u219219"
+      },
+      "notes": "Targeted remaining thin playbook areas (C2/C3/C7 at 5) with high-value scenarios: priority overload, strategic tech debt management, and high-stakes decision-making under pressure. All three based on multiple LeadDev articles with genuine frameworks (RICE, 70/20/10, ADR). Calibration signals added for C14 (continuous performance tracking), C4 (interrupt management, bottleneck diagnosis), and C9 (metric pairing, maturity-appropriate metrics)."
+    },
+    {
+      "session": 11,
+      "date": "2026-02-20",
+      "focus": "Close remaining playbook gaps (C11/C13) + depth signals for C10/C12/C13/C11",
+      "articlesReviewed": 8,
+      "additions": {
+        "playbooks": 2,
+        "calibrationSignals": 8
+      },
+      "capabilitiesEnriched": [
+        "C10",
+        "C11",
+        "C12",
+        "C13"
+      ],
+      "coverageImpact": {
+        "C11": "PB: 5\u21926, CS: 23\u219225",
+        "C13": "PB: 5\u21926, CS: 17\u219219",
+        "C10": "CS: 15\u219217",
+        "C12": "CS: 16\u219218"
+      },
+      "notes": "C11 onboarding playbook based on LeadDev articles on engineering onboarding efficiency (buddy system, progressive structure, time-to-productivity metrics). C13 supply chain vulnerability playbook based on XZ Utils lessons and SBOM best practices. Calibration signals target the 4 thinnest CS capabilities, all grounded in specific LeadDev retention, security, and knowledge-sharing content."
+    },
+    {
+      "session": 12,
+      "date": "2026-02-20",
+      "focus": "Final playbook pass (C14/C7/C9) + signal depth for C10/C2/C7",
+      "articlesReviewed": 8,
+      "additions": {
+        "playbooks": 3,
+        "calibrationSignals": 6
+      },
+      "capabilitiesEnriched": [
+        "C2",
+        "C5",
+        "C7",
+        "C9",
+        "C10",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C14": "PB: 6\u21927",
+        "C7": "PB: 6\u21927, CS: 18\u219220",
+        "C9": "PB: 6\u21927",
+        "C10": "CS: 17\u219219",
+        "C2": "CS: 18\u219220"
+      },
+      "notes": "Three high-value practical playbooks: PIP management (based on LeadDev PIP articles \u2014 genuine developmental approach), deadline miss communication (based on 'Getting good at delivering bad news'), and metrics cold start (based on 'Introducing engineering metrics' and 'Metrics at every level'). Signals targeted the two thinnest C7 observables (C7-O2 and C7-O3 both had only 1 signal each) and brought C10 closer to average."
+    },
+    {
+      "session": 13,
+      "date": "2026-02-20",
+      "focus": "Final playbook floor equalization (C2/C11/C13\u21927) + learning pathway depth (C1/C5/C6)",
+      "articlesReviewed": 8,
+      "additions": {
+        "playbooks": 3,
+        "learningPathways": 6
+      },
+      "capabilitiesEnriched": [
+        "C1",
+        "C2",
+        "C5",
+        "C6",
+        "C7",
+        "C11",
+        "C13"
+      ],
+      "coverageImpact": {
+        "C2": "PB: 6\u21927",
+        "C11": "PB: 6\u21927",
+        "C13": "PB: 6\u21927",
+        "C1": "LP: 4P\u21926P",
+        "C5": "LP: 4P\u21926P",
+        "C6": "LP: 4P\u21926P"
+      },
+      "notes": "All 14 capabilities now have 7+ playbooks. Three high-value scenarios: killing a project with sunk cost (based on pivot/sunk cost articles), winning candidates in competitive market (based on hiring paradox articles), and building security capability from scratch (based on shift-left/born-left security articles). Learning pathways enriched with 6 curated LeadDev article references for the thinnest capabilities."
+    },
+    {
+      "session": 14,
+      "date": "2026-02-20",
+      "focus": "Raise anti-pattern floor: C1/C3/C8/C9/C11/C14 from 4\u21925",
+      "articlesReviewed": 7,
+      "additions": {
+        "antiPatterns": 6
+      },
+      "capabilitiesEnriched": [
+        "C1",
+        "C3",
+        "C8",
+        "C9",
+        "C11",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C14": "AP: 4\u21925 (Feedback Avoidance Loop)",
+        "C8": "AP: 4\u21925 (Incident Amnesia)",
+        "C3": "AP: 4\u21925 (Resume-Driven Architecture)",
+        "C1": "AP: 4\u21925 (The Ostrich Leader)",
+        "C9": "AP: 4\u21925 (The Goodhart Trap)",
+        "C11": "AP: 4\u21925 (The Talent Hostage)"
+      },
+      "notes": "Raised anti-pattern floor for 6 capabilities from 4 to 5. Each anti-pattern fills a genuine gap: Feedback Avoidance (managers who avoid tough conversations), Incident Amnesia (post-mortems without follow-through), Resume-Driven Architecture (technology choices for resumes not problems), The Ostrich Leader (avoiding organizational decisions), The Goodhart Trap (metrics gaming), and The Talent Hostage (hoarding talent by blocking mobility). Based on LeadDev articles on hard conversations, incident learning, and retention."
+    },
+    {
+      "session": 15,
+      "date": "2026-02-20",
+      "focus": "Raise anti-pattern floor: C2/C4/C5/C10/C12/C13 from 4 to 5",
+      "articlesReviewed": 7,
+      "additions": {
+        "antiPatterns": 6
+      },
+      "capabilitiesEnriched": [
+        "C2",
+        "C4",
+        "C5",
+        "C10",
+        "C12",
+        "C13"
+      ],
+      "coverageImpact": {
+        "C2": "AP: 4->5 (The Ivory Tower Strategy)",
+        "C4": "AP: 4->5 (The Toil Spiral)",
+        "C5": "AP: 4->5 (The Stakeholder Surprise)",
+        "C10": "AP: 4->5 (The 100% Utilization Fallacy)",
+        "C12": "AP: 4->5 (The Reassurance Trap)",
+        "C13": "AP: 4->5 (Vulnerability Noise Blindness)"
+      },
+      "notes": "Raised anti-pattern floor for all remaining 6 capabilities from 4 to 5. All 14 capabilities now have 5+ anti-patterns. Each fills a genuine gap: Ivory Tower Strategy (strategy disconnected from execution), Toil Spiral (operational health starved by feature pressure), Stakeholder Surprise (blindsiding stakeholders with late bad news), 100% Utilization Fallacy (no slack capacity in planning), Reassurance Trap (hollow optimism during uncertainty), Vulnerability Noise Blindness (scanner fatigue burying real risks). Based on LeadDev articles on strategic alignment, toil, stakeholder communication, capacity planning, psychological safety during layoffs, and security tooling."
+    },
+    {
+      "session": 16,
+      "date": "2026-02-20",
+      "focus": "Learning pathway depth (C2/C3/C4/C10/C13 to 7) + calibration signal floor raise (C12/C14)",
+      "articlesReviewed": 10,
+      "additions": {
+        "learningPathways": 10,
+        "calibrationSignals": 8
+      },
+      "capabilitiesEnriched": [
+        "C2",
+        "C3",
+        "C4",
+        "C10",
+        "C12",
+        "C13",
+        "C14"
+      ],
+      "coverageImpact": {
+        "C2": "LP: 5P->7P",
+        "C3": "LP: 5P->7P",
+        "C4": "LP: 5P->7P",
+        "C10": "LP: 5P->7P",
+        "C13": "LP: 5P->7P",
+        "C12": "CS: 18->22 (O5, O8 from 1->3 signals each)",
+        "C14": "CS: 18->22 (O2, O4, O5 from 1->2-3 signals each)"
+      },
+      "notes": "All 14 capabilities now have 7+ practical learning pathway resources. Targeted 1-signal observables in C12 (inclusive practices, toxic behavior intervention) and C14 (calibration preparation, feedback delivery, promotion evidence). Based on LeadDev articles on technical strategy, OKRs, architecture decisions, developer experience, budget planning, resource scarcity, and security integration."
+    },
+    {
+      "session": 17,
+      "date": "2026-02-20",
+      "focus": "Fix C13 anti-pattern gap from consolidation (3\u21925)",
+      "articlesReviewed": 3,
+      "additions": {
+        "antiPatterns": 2
+      },
+      "capabilitiesEnriched": [
+        "C13"
+      ],
+      "coverageImpact": {
+        "C13": "AP: 3->5 (The Shadow Bypass + The Certification Facade)"
+      },
+      "notes": "C13 had dropped to 3 anti-patterns after AP-36 and AP-45 were consolidated in earlier sessions. Added two new anti-patterns to restore the floor: The Shadow Bypass (engineers circumventing security controls due to friction) and The Certification Facade (maintaining certifications without following certified practices day-to-day). All 14 capabilities now confirmed at 5+ anti-patterns."
+    },
+    {
+      "session": 18,
+      "date": "2026-02-20",
+      "focus": "Systematic C12 article review (51 Tier 1 articles, ranks 2-56)",
+      "articlesReviewed": 51,
+      "additions": {
+        "playbooks": 1,
+        "learningPathways": 3,
+        "calibrationSignals": 6
+      },
+      "capabilitiesEnriched": [
+        "C12"
+      ],
+      "coverageImpact": {
+        "C12": "PB: 7->8, LP: 6P->9P, CS: 22->28 (6 novel signals from article insights)"
+      },
+      "notes": "Systematic review of all 51 Tier 1 C12 articles. 41 covered by existing content, 10 with actionable findings. New playbook for driving culture change against organizational resistance (based on Jason Wong's hostile environment talk). Learning pathways enriched with force multiplier hiring, psychological safety ritual, and remote culture framework. Calibration signals capture novel concepts: neurodiversity accommodation, application identity as culture, inclusive facilitation techniques, internal mobility as health signal, hackathons for belonging, and conversation smell detection."
+    },
+    {
+      "session": 19,
+      "date": "2026-02-20",
+      "focus": "Systematic C3 article review (102 Tier 1 articles)",
+      "articlesReviewed": 102,
+      "additions": {
+        "learningPathways": 2,
+        "calibrationSignals": 5
+      },
+      "capabilitiesEnriched": [
+        "C3"
+      ],
+      "coverageImpact": {
+        "C3": "CS: 19->24 (AI governance, decentralized arch, fitness functions, experimentation), LP: 7P->9P"
+      },
+      "notes": "Systematic review of all 102 Tier 1 C3 articles. ~90 covered by existing content. Biggest gap: AI architecture governance \u2014 no existing C3 content addressed AI-generated code debt or AI tool evaluation. Added calibration signals for AI code review guardrails, AI-generated debt tracking, decentralized architecture advice process, automated fitness functions, and experimentation as roadmap element. Learning pathways enriched with AI code debt article and architecture advice process."
+    },
+    {
+      "session": 20,
+      "date": "2026-02-20",
+      "focus": "Systematic review of C7 (47), C11 (35), C1 (34) = 116 Tier 1 articles",
+      "articlesReviewed": 116,
+      "additions": {
+        "learningPathways": 3,
+        "calibrationSignals": 4
+      },
+      "capabilitiesEnriched": [
+        "C1",
+        "C11"
+      ],
+      "coverageImpact": {
+        "C7": "All 47 articles covered by existing content \u2014 zero gaps",
+        "C11": "CS: AI-era interview design + interviewer calibration on AI tools, LP: +2 AI hiring articles",
+        "C1": "CS: AI-driven org redesign + post-flattening leadership vacuum, LP: +1 AI-augmented team article"
+      },
+      "notes": "C7 is the most comprehensively covered capability \u2014 all 47 articles map to existing 11 observables, 5 APs, 7+ playbooks. C11 gap: AI-era hiring (interview design for AI-augmented candidates, interviewer calibration on AI tool usage). C1 gaps: AI-driven org redesign (human-AI task boundaries, operating model changes) and post-flattening leadership vacuum (permanent removal of management layers creating hollow middle)."
+    }
+  ],
+  "totalAdditions": {
+    "observables": 31,
+    "antiPatterns": 34,
+    "playbooks": 36,
+    "interviewQuestions": 42,
+    "calibrationSignals": 115,
+    "learningPathways": 38,
+    "measurementGuidance": 42
+  },
+  "grandTotal": 338,
+  "dataFileTotals": {
+    "observables": 147,
+    "antiPatterns": 70,
+    "playbooks": 69,
+    "interviewQuestions": 112,
+    "calibrationSignals": 310,
+    "searchIndex": 405,
+    "pages": 229
+  },
+  "coverageFinal": {
+    "C1": "100% (16 obs)",
+    "C2": "100% (6 obs)",
+    "C3": "100% (11 obs)",
+    "C4": "100% (13 obs)",
+    "C5": "100% (16 obs)",
+    "C6": "100% (13 obs)",
+    "C7": "100% (11 obs)",
+    "C8": "100% (8 obs)",
+    "C9": "100% (10 obs)",
+    "C10": "100% (8 obs)",
+    "C11": "100% (11 obs)",
+    "C12": "100% (8 obs)",
+    "C13": "100% (7 obs)",
+    "C14": "100% (9 obs)"
+  },
+  "remainingTier1": 108
+}

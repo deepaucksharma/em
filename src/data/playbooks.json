@@ -204,7 +204,7 @@
     "slug": "you-discover-a-senior-engineer-is-quietly-job-searching",
     "observableIds": [
       "C6-O3",
-      "C6-O4"
+      "C6-O8"
     ],
     "capabilityIds": [
       "C6"
@@ -381,9 +381,9 @@
       "Performance (Underperformance)",
       "Team Health (First 90 Days for the EM's team)"
     ],
-    "decisionFramework": "1. Diagnose: is this a skill gap, will gap, or situation gap? (Can't do it, won't do it, or set up to fail?) 2. If skill: invest in coaching — specific development plan with milestones. 3. If will: direct conversation about expectations and fit. 4. If situation: fix the situation (scope, support, resources). 5. Increase 1:1 cadence. 6. Set clear improvement timeline (60-90 days). 7. If no improvement: you need to make a change.",
-    "commonMistakes": "Ignoring it hoping they'll figure it out. Taking over their EM responsibilities (they'll never develop). Replacing them without genuine coaching attempt. Not protecting their team during the transition. Waiting too long to act (the team suffers).",
-    "whatGoodLooksLike": "Honest diagnosis shared with EM. Specific coaching plan with clear milestones. Increased support (not micromanagement). If they improve: great — you developed a manager. If not: managed transition with dignity, team protected, replacement plan ready. Industry reference: Microsoft's Model-Coach-Care framework provides a diagnostic lens — is this a skill gap (coach), will gap (direct conversation), or situation gap (fix the environment)? Amazon measures Directors on how independently their EMs operate.",
+    "decisionFramework": "1. Diagnose the root cause first — don't assume: is this a skill gap (can't do it), will gap (won't do it), or situation gap (set up to fail — wrong scope, inadequate resources, inherited dysfunction)? Each requires a fundamentally different intervention. 2. If skill gap: build a structured coaching plan with specific milestones — weekly 1:1s focused on the exact skills needed (e.g., running effective team meetings, giving direct feedback, technical credibility). See P-C6-4 for detailed coaching frameworks. 3. If will gap: have a direct, honest conversation about expectations and mutual fit. Some people don't want to be managers — creating a path back to IC can be a win for everyone. 4. If situation gap: fix the situation before judging the person. Reduce scope, add a TL, remove a toxic team member, clarify expectations with your leadership. 5. Set a clear 60-90 day improvement window with explicit success criteria. Document what improvement looks like so both of you can measure it objectively.",
+    "commonMistakes": "Ignoring it hoping they'll figure it out — the EM's team suffers while you wait. Taking over their responsibilities yourself — they never develop and you become the bottleneck. Not diagnosing the root cause (skill/will/situation) and applying the wrong intervention. Waiting too long to act while the team's best engineers start interviewing elsewhere. Replacing them without any genuine coaching attempt, which signals to your other EMs that they have no safety net.",
+    "whatGoodLooksLike": "Honest root-cause diagnosis shared with the EM within 1 week. Specific coaching plan with measurable milestones (not vague 'be better at X'). If skill gap: EM shows measurable improvement within 60 days because the coaching addressed the actual gap. If situation gap: you fixed the environment and the EM thrived — proving your diagnostic was right. If will gap: managed transition with dignity, the EM's team was protected throughout, and replacement was ready. Microsoft's Model-Coach-Care framework provides the diagnostic lens: skill gap (coach), will gap (direct conversation), situation gap (fix the environment).",
     "mappingNotes": "Struggling EM (Director scenario)",
     "suggestedMetricIds": [
       "5.1",
@@ -908,7 +908,7 @@
       "Cross-Functional Influence (PM Partnership)",
       "Decision Framing (Trade-off Communication)"
     ],
-    "decisionFramework": "1. Quantify both sides: feature revenue impact vs. incident cost (engineer time, customer impact, pager fatigue). 2. Find the false dichotomy: can scope be split? Can debt be paid incrementally alongside features? 3. Use a 70/20/10 or similar framework: 70% features, 20% debt, 10% exploration — adjust ratios with data. 4. Create a shared artifact (investment portfolio view) both sides can see. 5. Agree on metrics to evaluate next quarter whether the split was right. 6. Escalate only if you've genuinely tried to align and can articulate the trade-off crisply.",
+    "decisionFramework": "1. Quantify both sides: feature revenue impact vs. incident cost (engineer time, customer impact, pager fatigue). 2. Find the false dichotomy: can scope be split? Can debt be paid incrementally alongside features? 3. Use a capacity allocation framework (e.g., 70/20/10 — see P-C3-4 for detailed implementation): 70% features, 20% debt, 10% exploration — adjust ratios with data. 4. Create a shared artifact (investment portfolio view) both sides can see. 5. Agree on metrics to evaluate next quarter whether the split was right. 6. Escalate only if you've genuinely tried to align and can articulate the trade-off crisply.",
     "commonMistakes": "Picking a side instead of facilitating trade-off analysis. Using vague 'tech debt' framing without specific incidents/costs. Letting loudest voice win. Deferring entirely to product ('they own the roadmap'). Committing to both without acknowledging capacity constraints.",
     "whatGoodLooksLike": "Shared investment portfolio document with clear ratios. Both product and engineering feel heard. Trade-offs are explicit and documented. Success metrics defined for both feature and debt investments. Re-evaluation cadence agreed upon. Industry reference: Amazon's 6-pager narrative format forces explicit trade-off documentation between competing investments. Google's OKR framework requires measurable outcomes for both feature and infrastructure investments, preventing either from being 'just trust us.'",
     "mappingNotes": "Strategic prioritization with cross-functional tension",
@@ -1081,8 +1081,8 @@
       "Stakeholder Mgmt (Expectation Setting)",
       "Team Health (Post-Layoff Recovery)"
     ],
-    "decisionFramework": "1. Immediate (Week 1): Acknowledge the loss with the team — don't pretend things are normal. Address survivor anxiety directly. 2. Assess (Week 1-2): Map remaining capacity honestly. Identify critical path work vs. nice-to-haves. 3. Present options (Week 2-3): Go to leadership with tiered plan — (A) what's possible with current team, (B) what requires deprioritizing, (C) what needs to stop entirely. Use data, not emotions. 4. Communicate (Week 3): Share the new reality with team and stakeholders. Be specific about what stops. 5. Protect (Ongoing): Shield team from creeping scope. Monitor burnout signals aggressively. 6. Optimize (Month 2+): Identify automation and process improvements that multiply remaining capacity.",
-    "commonMistakes": "Accepting all original commitments and expecting the team to absorb the load. Not acknowledging the emotional impact of layoffs. Presenting a single option instead of tiered trade-offs. Burning out remaining team trying to prove the layoffs weren't needed. Not renegotiating timelines with stakeholders. Being vague about what stops — 'we'll try our best' is not a plan.",
+    "decisionFramework": "1. Acknowledge first, plan second (Week 1): Before any roadmap discussion, hold honest conversations with your team. Name what happened, honor the people who left, and address survivor anxiety directly. 'We lost good people, and this affects us all. Here's what I know, here's what I don't.' 2. Assess capacity and emotional readiness (Week 1-2): Map remaining capacity honestly, but also assess team morale. A team in shock can't deliver at 100% of mathematical capacity — plan for 70-80% utilization in the first quarter. 3. Present tiered options to leadership (Week 2-3): Go to leadership with clear trade-offs — (A) what's deliverable with current team at sustainable pace, (B) what requires timeline extensions, (C) what needs to stop entirely. Frame this as protecting the investment in the remaining team, not complaining about headcount. 4. Rebuild team identity (Month 1-2): The team's identity has been disrupted. Redistribute ownership thoughtfully, create new rituals, and invest in the remaining team's growth to signal commitment. 5. Monitor for delayed attrition (Ongoing): The biggest risk post-layoffs is losing people you intended to keep. Increase 1:1 frequency, watch for disengagement signals, and proactively discuss career growth with top performers.",
+    "commonMistakes": "Immediately jumping to roadmap replanning without acknowledging the emotional impact. Treating this as a purely resource-allocation problem when it's also a trust and morale crisis. Being vague about what stops — 'we'll try our best' is not a plan. Not renegotiating timelines with external stakeholders. Burning out remaining team trying to prove the layoffs weren't needed. Ignoring survivor guilt and anxiety in skip-level conversations.",
     "whatGoodLooksLike": "Honest capacity assessment within 2 weeks. Tiered options presented to leadership with quantified trade-offs. At least 30% of previous scope explicitly deprioritized or stopped. Team morale stabilized within 6 weeks (measured). No additional regrettable departures in the quarter following layoffs. Industry reference: Shopify's 2023 post-layoff playbook focused on radical scope reduction rather than expecting remaining team to absorb the load — leadership explicitly killed projects proportional to headcount reduction.",
     "mappingNotes": "Post-layoff resource management scenario",
     "suggestedMetricIds": [
@@ -1097,7 +1097,7 @@
     "observableIds": [
       "C7-O1",
       "C7-O6",
-      "C7-O10"
+      "C7-O8"
     ],
     "capabilityIds": [
       "C7"
@@ -1141,8 +1141,8 @@
     "whatGoodLooksLike": "Within 6 weeks: lightweight RFC template adopted, decision log created and maintained, new hires can find context for major decisions without asking. Within 3 months: same-decision relitigations drop measurably. Communication overhead per person decreases as team scales. Industry reference: Spotify's decision log (DACI-based) ensures every significant decision has a single documented source of truth accessible to the entire squad and stakeholders.",
     "mappingNotes": "Communication debt and documentation scaling scenario",
     "suggestedMetricIds": [
-      "1.2",
-      "2.1"
+      "2.3",
+      "2.5"
     ]
   },
   {
@@ -1190,7 +1190,7 @@
       "Culture (Bias in Assessment)"
     ],
     "decisionFramework": "1. Diagnose (Week 1): Pull conversion rates by interview stage. Where's the biggest drop-off? Is it consistent across interviewers? 2. Audit (Week 1-2): Review recent interview scorecards. Are scores specific (behavioral evidence) or vague ('didn't seem senior enough')? Are rubrics being used? Is scoring happening before debrief? 3. Calibrate (Week 2-3): Run a calibration session with all interviewers using a mock candidate. Identify scoring discrepancies. 4. Fix (Week 3-4): Revise rubrics with specific behavioral anchors. Retrain interviewers. Implement independent scoring before debrief. 5. Monitor (Ongoing): Track conversion rates weekly, interviewer agreement rates, and candidate feedback scores.",
-    "commonMistakes": "Blaming recruiting for candidate quality without examining your process. Not tracking per-interviewer pass rates (one miscalibrated interviewer can tank your pipeline). Using vague rubrics that different interviewers interpret differently. Not collecting candidate feedback on the interview experience. Lowering the bar instead of fixing the process.",
+    "commonMistakes": "Blaming recruiting for candidate quality without examining your interview process. Using vague rubrics that different interviewers interpret differently. Not collecting candidate feedback on the interview experience. Lowering the bar instead of fixing the process. Assuming the process works because some good candidates get through.",
     "whatGoodLooksLike": "Root cause identified within 2 weeks. Rubrics revised with specific behavioral anchors. Interviewer calibration complete. Conversion rate improving within 6 weeks. Hire within 8 weeks of fix. Candidate experience scores improving. Industry reference: Meta's structured interviewing program requires predefined rubrics with behavioral anchors and independent scoring, achieving consistent evaluation across thousands of interviews per month.",
     "mappingNotes": "Broken interview process diagnosis scenario",
     "suggestedMetricIds": [
@@ -1219,8 +1219,8 @@
     "whatGoodLooksLike": "Within 6 weeks: team owns their ceremonies, retro action items >80% completion rate, standup is team coordination (not status report), sprint commitments are team-made (not EM-assigned). Team describes their process as 'what works for us' rather than 'what we're supposed to do.' Industry reference: Spotify evolved away from prescriptive Scrum because squads adapted processes to their actual needs — the best agile teams don't follow a framework, they continuously improve how they work.",
     "mappingNotes": "Cargo cult agile diagnosis and fix scenario",
     "suggestedMetricIds": [
-      "2.1",
-      "1.2"
+      "2.5",
+      "2.4"
     ]
   },
   {
@@ -1384,33 +1384,6 @@
     ]
   },
   {
-    "id": "P-C9-4",
-    "slug": "choosing-the-right-metrics-framework-for-your-teams-maturity",
-    "observableIds": [
-      "C9-O1",
-      "C9-O10"
-    ],
-    "capabilityIds": [
-      "C9",
-      "C4"
-    ],
-    "title": "Choosing the Right Metrics Framework for Your Team's Maturity",
-    "context": "You've been asked to implement DORA metrics, but your team has no CI/CD pipeline, manual deployments, and no incident tracking. Jumping to DORA feels premature but leadership wants 'engineering productivity metrics'.",
-    "topicsActivated": [
-      "Metrics (Framework Selection)",
-      "Stakeholder Mgmt (Expectation Management)",
-      "Operational Maturity (Right-Sizing Measurement)"
-    ],
-    "decisionFramework": "1. Assess readiness (Week 1): DORA metrics require automated deployment, version control, and incident tracking as data sources. If those don't exist, DORA metrics will be meaningless or manually fabricated. Be honest with leadership about this. 2. Propose a maturity-appropriate starting point (Week 2): For immature teams: start with 3 handcrafted metrics — cycle time (PR open to merge), deployment count (however you deploy), and a simple happiness pulse. These require minimal tooling. 3. Build the foundation (Month 1-2): Get CI/CD in place, automate deployment tracking, implement basic incident logging. These are prerequisites for meaningful DORA metrics — and they deliver value independently. 4. Graduate to DORA (Month 3-4): Once automated data sources exist, DORA metrics become meaningful. Add deployment frequency, lead time for changes, change failure rate, and MTTR. 5. Evolve beyond DORA (Month 6+): DORA captures throughput and stability but misses developer experience, learning, and innovation. Add developer satisfaction surveys and outcome metrics when DORA is well-established.",
-    "commonMistakes": "Implementing DORA metrics without the tooling to generate accurate data. Manually tracking DORA metrics (defeats the purpose). Treating DORA as the only metrics needed (misses satisfaction, learning). Jumping to complex frameworks before basic measurement discipline exists. Telling leadership 'we can't measure anything' instead of proposing a maturity-appropriate starting point.",
-    "whatGoodLooksLike": "Honest conversation with leadership about current maturity within 1 week. Maturity-appropriate metrics live within 3 weeks. CI/CD and deployment automation improved as a side benefit. DORA metrics implemented with real data by month 4. Team trusts the metrics because they've been involved in building the measurement system from the start. Nathen Harvey's insight from 'Are DORA metrics right for your team': DORA requires automated data collection as a prerequisite — without it, you're measuring fiction.",
-    "mappingNotes": "Metrics framework maturity selection scenario",
-    "suggestedMetricIds": [
-      "2.1",
-      "1.2"
-    ]
-  },
-  {
     "id": "P-C13-3",
     "slug": "your-team-keeps-failing-security-audits-with-the-same-findings",
     "observableIds": [
@@ -1448,7 +1421,7 @@
       "C8"
     ],
     "title": "Balancing Security Risk With Shipping Speed After a Close Call",
-    "context": "A near-miss security incident revealed that a feature shipped without a threat model — a known SQL injection vulnerability was caught in production monitoring before it was exploited. Leadership wants to know how this happened and what you're doing to prevent it.",
+    "context": "A near-miss security incident revealed that a feature shipped without a threat model — a misconfigured API endpoint was exposing customer PII to unauthenticated requests, caught in production monitoring before data was exfiltrated. Leadership wants to know how this happened and what you are doing to prevent it.",
     "topicsActivated": [
       "Security (Shift-Left Practices)",
       "Risk Management (Near-Miss Response)",
@@ -1481,8 +1454,8 @@
       "Metrics (Hiring Funnel Analytics)",
       "Culture (Interview Quality at Scale)"
     ],
-    "decisionFramework": "1. Standardize the rubric (Week 1-2): Define the 4-6 competencies you're evaluating. Create a shared rubric with behavioral anchors for each scoring level. Every interviewer uses the same rubric, every candidate gets the same evaluation framework. 2. Separate scoring from discussion (Week 2): Require interviewers to submit scores independently before the debrief meeting. This prevents anchoring bias where the loudest interviewer's opinion dominates. 3. Build a data feedback loop (Month 1): Track per-interviewer pass rates, per-stage conversion rates, and score distributions. If one interviewer rejects 80% of candidates while peers reject 30%, that's a calibration problem, not a candidate quality problem. 4. Train interviewers (Month 1-2): Run calibration sessions using past candidate recordings or mock interviews. Align on what a 3/5 vs. 4/5 looks like on your rubric. 5. Optimize the funnel (Month 2-3): Use progressive questions that build on each other (simulating real work) rather than disconnected algorithmic puzzles. Track which interview stages are most predictive of on-the-job success and iterate. 6. Protect engineer time (Ongoing): Cap interview load per engineer. Rotate interviewers. Consider dedicated interview blocks to protect focus time on non-interview days.",
-    "commonMistakes": "Letting each interviewer design their own questions and evaluation criteria. Debriefing before individual scores are submitted (anchoring). Not tracking per-interviewer calibration (one miscalibrated interviewer tanks your pipeline). Using LeetCode-style puzzles that test interview prep, not job skills. Burning out your best engineers with interview load.",
+    "decisionFramework": "1. Design the interview funnel as a system (Week 1): Map each round to the specific, non-overlapping signal it provides. If two rounds test similar skills, consolidate. Target 4-5 total interactions (including recruiter screen) with a 2-week end-to-end target. 2. Build an interviewer training program (Week 2-3): At 50 hires/year, you need 15-20 calibrated interviewers. Create a training program: shadow 2 interviews, reverse-shadow 1, certified after calibration review. Track interviewer load and rotate to prevent burnout. 3. Automate coordination (Month 1): Scheduling at scale is a major bottleneck. Implement automated scheduling, standardized feedback forms with mandatory submission before debrief, and a candidate tracking dashboard. 4. Implement quality controls (Month 1-2): Track per-interviewer pass rates and flag outliers for recalibration. Monitor candidate-stage drop-off rates against industry benchmarks. Run quarterly calibration sessions using recorded mock interviews. 5. Protect candidate experience at scale (Ongoing): High volume creates a temptation to depersonalize. Set maximum response-time SLAs, assign a dedicated hiring coordinator, and run candidate experience surveys after every loop.",
+    "commonMistakes": "Letting each interviewer design their own questions and evaluation criteria. Debriefing before individual scores are submitted (anchoring bias). Burning out your best engineers with interview load without tracking or rotating. Using the same 3 interviewers for every candidate instead of building a deep bench. Not automating scheduling — manual coordination becomes the bottleneck at scale. Adding more interview rounds instead of improving existing ones when a bad hire happens.",
     "whatGoodLooksLike": "Rubric adopted within 2 weeks, independent scoring within 3 weeks. Interview experience consistent across candidates. Per-interviewer pass rates converge within 15% after calibration. Funnel data informing process improvements monthly. Time-to-hire decreasing while quality-of-hire stable or improving. GitLab's experience: standardized rubrics with Google Sheets automation to track scoring allowed them to test hypotheses (e.g., 'Do candidates need Vue experience specifically, or does any modern framework predict success?') and verify assumptions with data rather than opinions.",
     "mappingNotes": "Interview process scaling and standardization scenario",
     "suggestedMetricIds": [
@@ -1539,7 +1512,7 @@
     "mappingNotes": "Time-constrained high-stakes execution scenario",
     "suggestedMetricIds": [
       "1.2",
-      "2.1"
+      "1.4"
     ]
   },
   {
@@ -1649,8 +1622,9 @@
     "whatGoodLooksLike": "Within 2 weeks: team is focused on 2-3 priorities, shipping tempo increases. Within a month: stakeholders reference the priority list in their own planning. The LeadDev article on the 'priority zero trap' captures it well: if everything is a priority then nothing is, and a prioritization system isn't about finding the perfect order — it's about creating a shared language for trade-offs.",
     "mappingNotes": "Based on LeadDev 'Avoiding the priority zero trap' and 'Building a prioritization framework.'",
     "suggestedMetricIds": [
-      "1.2",
-      "2.1"
+      "2.2",
+      "2.6",
+      "8.4"
     ]
   },
   {
@@ -1687,7 +1661,7 @@
     "observableIds": [
       "C7-O1",
       "C7-O10",
-      "C7-O6"
+      "C7-O11"
     ],
     "capabilityIds": [
       "C7",
@@ -1829,22 +1803,25 @@
     ],
     "capabilityIds": [
       "C9",
-      "C7"
+      "C7",
+      "C4"
     ],
     "title": "Introducing Engineering Metrics to a Team That Has None",
-    "context": "Your engineering organization has no systematic metrics. Leadership makes decisions based on gut feel and anecdotes. When asked 'how is engineering doing?' you struggle to answer beyond 'we shipped X features.' You want to introduce metrics but you're worried about creating a surveillance culture or picking the wrong things to measure.",
+    "context": "Your engineering organization has no systematic metrics. Leadership makes decisions based on gut feel and anecdotes. When asked 'how is engineering doing?' you struggle to answer beyond 'we shipped X features.' You may not even have the tooling prerequisites — no CI/CD pipeline, manual deployments, no incident tracking — which means jumping straight to DORA or SPACE feels premature. You want to introduce metrics but you're worried about creating a surveillance culture or picking the wrong things to measure.",
     "topicsActivated": [
       "Metrics (Cold Start Strategy)",
       "Culture (Measurement Without Surveillance)",
       "Communication (Data-Driven Storytelling)"
     ],
-    "decisionFramework": "1. Start with one metric (Month 1): If you have to pick one metric, pick cycle time — the elapsed time from first commit to production deploy. It benefits the business (faster innovation wins customers), correlates with code quality (faster cycles produce more stable code), and correlates with developer satisfaction. One metric, well-understood, beats a dashboard nobody trusts. 2. Address engineers' problems first (Month 1-2): Introduce metrics that solve problems engineers already feel. If they complain about slow deploys, measure deployment frequency. If they complain about flaky tests, measure test reliability. When metrics address real pain, adoption is natural. When they feel like surveillance, resistance is inevitable. 3. Add process metrics gradually (Month 2-3): Layer in throughput and flow efficiency to identify bottlenecks. These are diagnostic tools, never performance measures for individuals. Be explicit: 'We measure systems, not people.' 4. Connect to business outcomes (Month 3-4): Work with product and business stakeholders to map engineering metrics to business impact. Deployment frequency → feature velocity → time to market. Cycle time → iteration speed → customer responsiveness. This is how engineering stops being seen as a cost center. 5. Evolve as you mature (Ongoing): Resist the temptation to adopt DORA, SPACE, or DX Core 4 on day one. Start simple, build baseline data for 2-3 months, then evaluate which framework fits your organization's maturity. Metrics are indicators, not ends — be prepared to retire metrics that no longer serve you.",
-    "commonMistakes": "Launching a comprehensive dashboard on day one that overwhelms everyone. Measuring individual developer output (lines of code, commits, PRs) rather than system flow. Not explaining why metrics are being introduced, triggering fear. Using metrics punitively, destroying the trust needed for honest measurement. Adopting a framework (DORA, SPACE) without understanding what questions you're trying to answer.",
-    "whatGoodLooksLike": "Within 3 months: team references cycle time in planning discussions, bottlenecks are identified from data rather than anecdotes. Within 6 months: leadership receives a monthly engineering health report grounded in data. Engineers advocate for the metrics because they solve real problems. The LeadDev articles on metrics converge on a key insight: if you must focus on one metric, focus on cycle time — it benefits everyone.",
+    "decisionFramework": "1. Assess readiness and start with one metric (Month 1): Before adopting any framework, check your tooling prerequisites — DORA requires automated deployment, version control, and incident tracking as data sources. If those don't exist, DORA metrics will be manually fabricated. If you have to pick one metric, pick cycle time — the elapsed time from first commit to production deploy. It benefits the business, correlates with code quality, and correlates with developer satisfaction. One metric, well-understood, beats a dashboard nobody trusts. 2. Address engineers' problems first (Month 1-2): Introduce metrics that solve problems engineers already feel. If they complain about slow deploys, measure deployment frequency. If they complain about flaky tests, measure test reliability. When metrics address real pain, adoption is natural. Simultaneously, invest in CI/CD and deployment automation as prerequisites for meaningful measurement later. 3. Add process metrics gradually (Month 2-3): Layer in throughput and flow efficiency to identify bottlenecks. These are diagnostic tools, never performance measures for individuals. Be explicit: 'We measure systems, not people.' 4. Graduate to DORA when ready (Month 3-4): Once automated data sources exist, DORA metrics become meaningful. Add deployment frequency, lead time for changes, change failure rate, and MTTR. Connect to business outcomes by mapping engineering metrics to business impact: deployment frequency → feature velocity → time to market; cycle time → iteration speed → customer responsiveness. 5. Evolve beyond DORA (Month 6+): DORA captures throughput and stability but misses developer experience, learning, and innovation. Add developer satisfaction surveys and outcome metrics when DORA is well-established. Resist the temptation to adopt DORA, SPACE, or DX Core 4 on day one — start simple, build baseline data, then evaluate which framework fits your organization's maturity.",
+    "commonMistakes": "Launching a comprehensive dashboard on day one that overwhelms everyone. Measuring individual developer output (lines of code, commits, PRs) rather than system flow. Not explaining why metrics are being introduced, triggering fear. Using metrics punitively, destroying the trust needed for honest measurement. Implementing DORA metrics without the tooling to generate accurate data. Manually tracking DORA metrics (defeats the purpose). Telling leadership 'we can't measure anything' instead of proposing a maturity-appropriate starting point.",
+    "whatGoodLooksLike": "Within 3 weeks: maturity-appropriate starter metrics live. Within 3 months: team references cycle time in planning discussions, bottlenecks are identified from data rather than anecdotes, CI/CD and deployment automation improved as a side benefit. Within 6 months: leadership receives a monthly engineering health report grounded in data, engineers advocate for the metrics because they solve real problems. Team trusts the metrics because they've been involved in building the measurement system from the start. Nathen Harvey's insight: DORA requires automated data collection as a prerequisite — without it, you're measuring fiction. If you must focus on one metric, focus on cycle time — it benefits everyone.",
     "mappingNotes": "Based on LeadDev 'Introducing engineering metrics to your organization', 'Engineering metrics at every level', and 'The flawed five engineering productivity metrics.'",
     "suggestedMetricIds": [
       "1.1",
-      "2.2"
+      "2.2",
+      "2.1",
+      "1.2"
     ]
   },
   {
@@ -1871,8 +1848,8 @@
     "whatGoodLooksLike": "Project stops within 2 weeks of the decision. Team is redirected to high-impact work and morale recovers within a month. The freed capacity delivers visible value in the next quarter. Leadership credits you for making a hard call, not for wasting resources. Future projects include explicit checkpoints for go/no-go reassessment. The LeadDev article on product pivots captures a key insight: take time to celebrate what the team did learn, even when the project didn't succeed.",
     "mappingNotes": "Based on sunk cost decision frameworks and LeadDev 'Leading your engineering team through an unexpected product pivot.'",
     "suggestedMetricIds": [
-      "1.2",
-      "2.1"
+      "8.3",
+      "8.4"
     ]
   },
   {
@@ -1929,6 +1906,33 @@
       "9.2",
       "3.5",
       "9.1"
+    ]
+  },
+  {
+    "id": "P-C12-7",
+    "slug": "driving-culture-change-against-organizational-resistance",
+    "observableIds": [
+      "C12-O1",
+      "C12-O2",
+      "C12-O8"
+    ],
+    "capabilityIds": [
+      "C12"
+    ],
+    "title": "Driving Culture Change Against Organizational Resistance",
+    "context": "You've been hired or promoted to improve engineering culture, but the broader organization actively resists change. Legacy norms, hostile leadership, or institutional inertia work against your efforts. Your skip-level doesn't see culture as a priority, peers are indifferent or defensive, and your team is cynical from failed past initiatives. You believe the culture needs to change, but you lack the organizational power to mandate it.",
+    "topicsActivated": [
+      "Culture (Grassroots Change Strategy)",
+      "Stakeholder (Coalition Building)",
+      "People (Team as Microculture)"
+    ],
+    "decisionFramework": "1. Assess the landscape honestly (Week 1-2): Before trying to change anything, understand the system you're in. Map the power dynamics: who benefits from the current culture, who suffers, who has influence. Identify the 2-3 most damaging cultural norms and the 2-3 people who might be natural allies. Be honest about your scope of influence — you can likely change your team's microculture, you may be able to influence your org, and you probably cannot change the company alone. 2. Build your team as a proof-of-concept (Month 1-2): Create the culture you want within your team first. Establish explicit norms (team charter), model the behavior you want to see, and protect your team from the worst of the broader culture. When your team starts outperforming, you have evidence, not just arguments. This is 'seeding' — growing something healthy in a controlled environment. 3. Build coalitions, not crusades (Month 2-4): Find 2-3 peer managers who share your concerns. Start informal alliances — shared rituals, cross-team norms, joint retros. Coalition-building is slower than top-down mandates but more durable. A single manager asking for change is a complaint; five managers asking together is a movement. 4. Choose your battles deliberately (Ongoing): You cannot fix everything. Pick the 1-2 cultural changes that would have the most impact and are most achievable given your influence. Focus your energy there. Let smaller issues go — fighting every battle guarantees you win none. The battles worth fighting are the ones that affect psychological safety and retention. 5. Know your limits and your exit criteria (Ongoing): Not every culture can be saved from inside. Set a personal timeline: if after 6-12 months of genuine effort, the organizational culture hasn't improved or has gotten worse, consider whether staying serves your team or just enables the dysfunction. The hardest leadership decision is sometimes 'I cannot fix this from here.' That's not failure — it's clarity.",
+    "commonMistakes": "Going it alone without building coalitions — the 'lone crusader' burns out. Trying to change everything at once instead of focusing on 1-2 high-impact norms. Expecting organizational culture to change on your timeline rather than building incrementally. Confusing protecting your team with isolating them — your team needs to function within the broader org, not as an island. Staying too long in a genuinely toxic environment out of misplaced loyalty or sunk cost.",
+    "whatGoodLooksLike": "Your team has a visibly healthier culture than the surrounding org. Peer managers start asking how you did it and adopting similar practices. At least one cultural norm you championed spreads beyond your team. You have honest clarity about what you can and cannot change. If you leave, the cultural improvements you built persist because they're embedded in team practices, not dependent on your presence. Jason Wong's LeadDev talk on culture change in hostile environments captures the key insight: know the limits of what you can change, and invest your energy where it can actually make a difference.",
+    "mappingNotes": "Based on LeadDev 'Culture change in a hostile environment' (Jason Wong, ActBlue). Fills a genuine gap — existing C12 playbooks assume cooperative organizational context.",
+    "suggestedMetricIds": [
+      "6.1",
+      "6.2"
     ]
   }
 ]
