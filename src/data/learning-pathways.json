@@ -69,6 +69,12 @@
         "type": "article",
         "description": "How engineering leaders must redesign team structures and operating models to leverage AI capabilities \u2014 explicit human-AI task boundaries, updated cognitive load calculations, and the shift from headcount scaling to capability scaling.",
         "url": "https://leaddev.com/technical-direction/the-ai-augmented-team-rethinking-roles-skills-and-leadership"
+      },
+      {
+        "title": "Shaped by Demand: The Power of Fluid Teams (LeadDev)",
+        "type": "article",
+        "description": "Dan North's demand-led planning model \u2014 teams of 20-200 people reorganize quarterly based on expected demand via big-room self-selection. Balances delivery, discovery, and Kaizen. Challenges the stable long-lived team orthodoxy with 10+ years of evolution.",
+        "url": "https://leaddev.com/team/shaped-by-demand-the-power-of-fluid-teams"
       }
     ],
     "advanced": [
@@ -279,6 +285,18 @@
         "type": "article",
         "description": "Andrew Harmel-Law's decentralized architecture decision model \u2014 anyone can make architectural decisions after consulting affected parties, replacing ivory-tower mandates with distributed ownership.",
         "url": "https://leaddev.com/technical-direction/facilitating-software-architecture-andrew-harmel-law-conversation"
+      },
+      {
+        "title": "Steel Threads Are the Missing Link in Your System Design (LeadDev)",
+        "type": "article",
+        "description": "The steel thread approach to architecture validation \u2014 building the thinnest possible production-grade end-to-end flow to exercise riskiest integrations, surface issues in days not months, and force cross-team collaboration.",
+        "url": "https://leaddev.com/software-quality/steel-threads-missing-link-your-system-design"
+      },
+      {
+        "title": "AI Won't Fix Developer Productivity Unless You Fix Context First (LeadDev)",
+        "type": "article",
+        "description": "Context engineering as a named discipline \u2014 organizations with 500 developers lose up to $7.9M annually from context inefficiencies. Self-serve documentation access makes developers 4.4x more productive. Build a context layer linking decisions, discussions, and system history before investing in AI tools.",
+        "url": "https://leaddev.com/technical-direction/ai-wont-fix-developer-productivity-unless-you-fix-context-first"
       }
     ],
     "advanced": [
@@ -471,6 +489,12 @@
         "type": "article",
         "description": "Framework for owning mistakes, managing emotional reactions, and preserving trust when communicating difficult information.",
         "url": "https://leaddev.com/team/getting-good-delivering-bad-news"
+      },
+      {
+        "title": "Anti-Misalignment: Nobody Knows What Alignment Is (LeadDev/Richard Kim)",
+        "type": "article",
+        "description": "Reframes alignment as a negative-space problem \u2014 nobody knows what alignment IS, but everyone knows what misalignment FEELS like. Alignment = flow between people where the group feels like a trusted extension of yourself. Most alignment work is actually anti-misalignment: systematically removing misalignment rather than trying to add alignment.",
+        "url": "https://leaddev.com/team/anti-misalignment-nobody-knows-what-alignment-is"
       }
     ],
     "advanced": [
@@ -657,6 +681,12 @@
         "type": "article",
         "description": "Framework for distributing decision authority across organizational levels using nested circles of authority, reducing bottlenecks while maintaining coherence.",
         "url": "https://leaddev.com/software-quality/how-scale-decision-making-your-organization-circles"
+      },
+      {
+        "title": "Cultural Post Mortems: Learning and Recovering When People Systems Fail (LeadDev)",
+        "type": "article",
+        "description": "Applies blameless post-mortem methodology to people-system failures \u2014 culture breakdowns, trust erosion, team dysfunction. Treats cultural incidents with the same structured rigor as technical incidents.",
+        "url": "https://leaddev.com/culture/cultural-post-mortems-approach-learning-recovering-when-people-systems-fail"
       }
     ],
     "advanced": [
@@ -756,6 +786,24 @@
         "type": "article",
         "description": "Alternative to traditional risk registers that assumes failures will happen and pre-writes response playbooks. Both a practical preparation tool and a psychological one that makes hard conversations easier.",
         "url": "https://leaddev.com/leadership/when-not-if-playbook-method-managing-risk"
+      },
+      {
+        "title": "Is AI-Assisted Coding an Incident Magnet? (LeadDev)",
+        "type": "article",
+        "description": "How AI-generated code creates a new incident class \u2014 code ships faster but with less human comprehension, eroding domain expertise needed for incident diagnosis and creating cascading failures through opaque AI decision chains.",
+        "url": "https://leaddev.com/software-quality/ai-assisted-coding-incident-magnet"
+      },
+      {
+        "title": "How Monzo Built a Stand-In Platform to Sidestep Costly Outages (LeadDev)",
+        "type": "article",
+        "description": "Monzo's standalone minimal DR system on a separate cloud provider (GCP vs primary AWS) \u2014 built by 6 engineers, costs 1% of total cloud bill, supports core banking features, constantly tested in production, activatable in seconds.",
+        "url": "https://leaddev.com/operations-and-incidents/how-monzo-built-a-stand-in-platform-to-sidestep-costly-outages"
+      },
+      {
+        "title": "The Twin Mandate: What Leaders Still Don't Get About Observability (LeadDev)",
+        "type": "article",
+        "description": "Charity Majors on observability's dual mandate \u2014 external (customer happiness) and internal (developer experience). Observability 2.0: move from three pillars with multiple sources of truth to one source of truth (wide structured log events). Observability should roll up to software engineering, not infrastructure.",
+        "url": "https://leaddev.com/operations-and-incidents/the-twin-mandate-what-leaders-still-dont-get-about-observability"
       }
     ],
     "advanced": [
@@ -849,6 +897,18 @@
         "type": "article",
         "description": "Framework for pairing complementary engineering metrics to prevent single-metric optimization, ensuring speed and quality are balanced in measurement.",
         "url": "https://leaddev.com/reporting/keep-your-delivery-balance-these-metrics-pairings"
+      },
+      {
+        "title": "How DX Core 4 Aims to Unify Developer Productivity Frameworks (LeadDev)",
+        "type": "article",
+        "description": "The DX Core 4 framework (Speed, Effectiveness, Quality, Impact) as a prescriptive meta-model that subsumes DORA and SPACE \u2014 practical guidance on framework selection based on organizational maturity.",
+        "url": "https://leaddev.com/reporting/dx-core-4-aims-to-unify-developer-productivity-frameworks"
+      },
+      {
+        "title": "What Is Diff Authoring Time? The Developer Metric Taking Meta by Storm (LeadDev)",
+        "type": "article",
+        "description": "Meta's Diff Authoring Time (DAT) measures the inner development loop \u2014 actual active time from first IDE activity to final session. Average DAT at Meta is 50 minutes. Used to A/B test tooling investments: React compiler yielded 33% improvement, code sharing >50% improvement.",
+        "url": "https://leaddev.com/reporting/what-is-diff-authoring-time-developer-metric-taking-meta-by-storm"
       }
     ],
     "advanced": [
@@ -1059,6 +1119,12 @@
         "type": "article",
         "description": "The equity and effectiveness implications of AI in hiring \u2014 from candidates using AI during assessments to companies requiring AI proficiency as a hiring signal. Navigating the shift without amplifying bias.",
         "url": "https://leaddev.com/hiring/ai-first-hiring-everywhere-not-slowing-down"
+      },
+      {
+        "title": "Your Top Job Candidate Might Be a Coordinated AI Scam (LeadDev)",
+        "type": "article",
+        "description": "How scammers operate from call centers \u2014 scraping job postings, using AI to generate tailored resumes at scale, rotating different people through multi-round interviews. Detection: disable virtual backgrounds, hand-movement deepfake tests, STAR method probing, in-depth tool opinion questions.",
+        "url": "https://leaddev.com/hiring/your-top-job-candidate-might-be-coordinated-ai-scam"
       }
     ],
     "advanced": [
@@ -1368,6 +1434,12 @@
         "type": "article",
         "description": "Practical guide to cross-team calibration, pre-calibration sessions for bias detection, and distilling feedback into one memorable sentence. Emphasizes fairness through evidence and process.",
         "url": "https://leaddev.com/hiring/navigating-engineering-performance-reviews-part-two"
+      },
+      {
+        "title": "Mind the Gap: Navigating the Staff+ Performance Cliff (LeadDev)",
+        "type": "article",
+        "description": "The 'Performance Cliff' \u2014 a named psychological phenomenon where highly capable engineers feel lost stepping into Staff+ roles. Old success metrics no longer apply, feedback becomes sparse, and the transition from team-focused to org-level impact creates a vacuum of direction.",
+        "url": "https://leaddev.com/career-ladders-and-progression/mind-the-gap-navigating-the-staff-performance-cliff"
       }
     ],
     "advanced": [

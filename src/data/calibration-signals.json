@@ -2478,5 +2478,149 @@
     "signalText": "Interviewers are calibrated on AI-era assessment \u2014 trained to distinguish between candidates who can direct AI tools effectively and those who understand the underlying engineering, with explicit guidance on how to evaluate AI-assisted work samples without penalizing or rewarding AI usage itself",
     "signalType": "calibration_language",
     "sourceSubTopic": "AI-Era Interviewer Calibration"
+  },
+  {
+    "id": "SIG-311",
+    "observableId": "C9-O1",
+    "capabilityId": "C9",
+    "signalText": "Leader selects and applies productivity frameworks (DORA, SPACE, DX Core 4) appropriate to organizational maturity \u2014 understands that DORA measures delivery performance, SPACE captures developer experience breadth, and DX Core 4 provides a unified prescriptive model (Speed/Effectiveness/Quality/Impact) rather than applying frameworks dogmatically",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Productivity Framework Selection Maturity"
+  },
+  {
+    "id": "SIG-312",
+    "observableId": "C9-O5",
+    "capabilityId": "C9",
+    "signalText": "Leader measures AI tool effectiveness using a three-dimensional framework \u2014 utilization (adoption rate and penetration), impact (time saved and performance benchmarks vs. baseline), and cost (TCO including license, training, and maintenance overhead) \u2014 rather than relying on vanity metrics like acceptance rate that track usage without measuring outcomes",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI Tool Effectiveness Measurement"
+  },
+  {
+    "id": "SIG-313",
+    "observableId": "C8-O7",
+    "capabilityId": "C8",
+    "signalText": "Team has explicit incident readiness for AI-generated code failures \u2014 monitoring for AI-specific incident patterns (cascading failures through opaque logic, comprehension gaps during diagnosis), maintaining human expertise for systems with significant AI-generated components, and governance guardrails for any AI agents involved in incident response",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI-Era Incident Readiness"
+  },
+  {
+    "id": "SIG-314",
+    "observableId": "C3-O2",
+    "capabilityId": "C3",
+    "signalText": "Leader validates architecture decisions using steel threads \u2014 building the thinnest possible production-grade end-to-end flow that exercises riskiest integrations before committing to full implementation, surfacing caching issues, versioning needs, and cross-team dependencies in days rather than months of upfront design",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Steel Thread Architecture Validation"
+  },
+  {
+    "id": "SIG-315",
+    "observableId": "C3-O11",
+    "capabilityId": "C3",
+    "signalText": "Leader differentiates between three types of technical burden requiring distinct remediation strategies \u2014 deliberate debt (set repayment terms at incurrence), natural depreciation (ongoing maintenance, not project-based cleanup), and architectural change (cost of new requirements, not legacy accumulation) \u2014 rather than labeling everything 'tech debt' and applying a single treatment",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Tech Debt Taxonomy and Targeted Remediation"
+  },
+  {
+    "id": "SIG-316",
+    "observableId": "C8-O7",
+    "capabilityId": "C8",
+    "signalText": "Team designs disaster recovery as a minimal independent system on a separate cloud provider \u2014 not a replica of production but a standalone service supporting only core features, constantly tested in production, activatable in seconds, and costing a fraction of primary infrastructure (Monzo pattern: 6 engineers, 1% of cloud bill for full cloud failover capability)",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Minimal Independent DR Architecture"
+  },
+  {
+    "id": "SIG-317",
+    "observableId": "C8-O3",
+    "capabilityId": "C8",
+    "signalText": "On-call design prioritizes compassion as a structural principle \u2014 each team decides their own schedule based on pager load and lifestyles, handover times optimize for the person finishing their shift (who carries more stress), overrides for personal commitments are a default process rather than an exception, and on-call hours are compensated",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Compassionate On-Call Design"
+  },
+  {
+    "id": "SIG-318",
+    "observableId": "C9-O1",
+    "capabilityId": "C9",
+    "signalText": "Leader measures the inner development loop (actual active coding time from first IDE activity to final session) alongside delivery metrics \u2014 using inner-loop metrics like Diff Authoring Time to A/B test tooling investments and quantify the impact of platform changes on developer productivity, rather than relying solely on cycle time which conflates active work with waiting time",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Inner-Loop Developer Metrics"
+  },
+  {
+    "id": "SIG-319",
+    "observableId": "C9-O3",
+    "capabilityId": "C9",
+    "signalText": "Leader recognizes that AI coding tool metrics (acceptance rate, lines generated, suggestion frequency) are usage metrics not outcome metrics \u2014 tracking code generation incentivizes more code when less would suffice (Goodhart's Law), and the real value of AI tools is often invisible in dashboards: speeding up context acquisition in unfamiliar codebases, especially for new hires",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI Tool Metrics Discipline"
+  },
+  {
+    "id": "SIG-320",
+    "observableId": "C1-O1",
+    "capabilityId": "C1",
+    "signalText": "Leader evaluates whether stable long-lived teams or periodic re-teaming better serves organizational needs \u2014 understands demand-led planning as an alternative model where teams of 20-200 self-select into new formations quarterly based on expected demand, balancing delivery, discovery, and continuous improvement, rather than defaulting to stable teams as the only high-performance configuration",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Demand-Led Team Formation"
+  },
+  {
+    "id": "SIG-321",
+    "observableId": "C11-O1",
+    "capabilityId": "C11",
+    "signalText": "Hiring process includes explicit countermeasures for coordinated AI-powered candidate fraud \u2014 verifying candidate identity across interview rounds (different people may appear for multi-round interviews), using behavioral signals to detect deepfakes (hand movement across face, virtual background removal), probing for depth beyond AI-generated responses using STAR method and tool-specific opinion questions, and awareness that scam operations submit AI-generated tailored resumes at industrial scale",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI-Powered Hiring Fraud Detection"
+  },
+  {
+    "id": "SIG-322",
+    "observableId": "C14-O8",
+    "capabilityId": "C14",
+    "signalText": "Leader counteracts visibility bias in performance assessment \u2014 recognizes that publicly recognized engineers are often doing the most visible work, not the best work. Actively surfaces invisible contributions (code reviews, infrastructure improvements, mentoring) by having PMs call out reviewers by name, highlighting operational work at all-hands, and asking reports directly how they prefer to be recognized rather than defaulting to public channels that create anxiety",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Visibility Bias in Performance Recognition"
+  },
+  {
+    "id": "SIG-323",
+    "observableId": "C14-O5",
+    "capabilityId": "C14",
+    "signalText": "Leader proactively supports Staff+ engineers through the 'performance cliff' \u2014 the psychological transition where old success metrics (shipping features, team-level impact) no longer apply, feedback becomes sparse, and the shift to org-level influence creates a vacuum of direction. Provides explicit new success criteria for Staff+ scope, maintains regular feedback despite the ambiguity, and normalizes the disorientation of operating at a new altitude",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Staff+ Performance Cliff Support"
+  },
+  {
+    "id": "SIG-324",
+    "observableId": "C14-O2",
+    "capabilityId": "C14",
+    "signalText": "Leader distinguishes between Maven (deep specialist with high individual throughput) and Guru (good developer who is an even better teacher, sees roots of misunderstandings, supports learning without just telling) archetypes \u2014 strategically minimizes Guru's solo work time to maximize their multiplier effect on team capability through pairing, upskilling, and knowledge transfer",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Maven vs Guru Performance Archetypes"
+  },
+  {
+    "id": "SIG-325",
+    "observableId": "C5-O4",
+    "capabilityId": "C5",
+    "signalText": "Leader approaches alignment as a negative-space problem \u2014 rather than trying to define and achieve abstract 'alignment', systematically identifies and eliminates specific misalignment signals (conflicting priorities surfacing in standups, duplicated work across teams, decisions being relitigated, stakeholders surprised by outcomes) and treats each as a concrete problem to diagnose and fix",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Anti-Misalignment Diagnostic Approach"
+  },
+  {
+    "id": "SIG-326",
+    "observableId": "C7-O8",
+    "capabilityId": "C7",
+    "signalText": "Leader applies blameless post-mortem methodology to people-system failures \u2014 when culture breakdowns, trust erosion, or team dysfunction occurs, runs the same structured analysis (timeline, contributing factors, action items) used for technical incidents, treating cultural problems with equal rigor and systematic follow-through rather than addressing them informally or not at all",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Cultural Post-Mortems for People-System Failures"
+  },
+  {
+    "id": "SIG-327",
+    "observableId": "C13-O3",
+    "capabilityId": "C13",
+    "signalText": "Authorization model explicitly addresses non-human actors \u2014 AI agents operate faster than humans and require precise, contextual authorization that traditional identity infrastructure was never designed for. Team has defined which systems AI agents can access, what actions they can take autonomously vs. with human approval, and how authorization adapts when agent behavior changes or scope creeps",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI Agent Authorization Governance"
+  },
+  {
+    "id": "SIG-328",
+    "observableId": "C3-O4",
+    "capabilityId": "C3",
+    "signalText": "Leader tracks verification debt as a distinct category from traditional tech debt \u2014 the growing gap between AI-generated code volume and team capacity to validate it, evidenced by increased code duplication (GitClear: 10x increase in duplicate blocks since AI adoption), inflated output metrics masking quality degradation, and developers spending more time debugging AI-generated code than writing equivalent code from scratch",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "AI Verification Debt Management"
   }
 ]
