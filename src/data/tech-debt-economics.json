@@ -1,11 +1,35 @@
 {
   "coreNumbers": [
-    { "dataPoint": "Tech debt = 20-40% of technology estate value (before depreciation)", "source": "McKinsey", "implication": "This is a board-level financial liability, not an engineering preference." },
-    { "dataPoint": "US cost of poor software quality: $2.41T annually; $1.52T to remediate", "source": "Consortium for Information & Software Quality (CISQ), 2022", "implication": "The aggregate cost exceeds the GDP of most countries." },
-    { "dataPoint": "33-42% of developer time spent on debt, maintenance, legacy code", "source": "Stripe, CodeScene", "implication": "Every dollar of engineering salary, 33-42 cents goes to fighting the past instead of building the future." },
-    { "dataPoint": "10-20% of 'new feature' budget is covertly diverted to debt work", "source": "McKinsey", "implication": "Feature budgets are already subsidizing debt silently. Making it explicit gives leadership honest data." },
-    { "dataPoint": ">50% of IT budget on legacy integration = 'technical bankruptcy'", "source": "Accenture, Forrester", "implication": "At this point, delivering new value is nearly impossible without greenfield rewrite." },
-    { "dataPoint": "Paying down debt frees up to 50% more time for value-generating work", "source": "McKinsey", "implication": "The ROI of debt remediation is not abstract — it's measured in developer-hours returned to feature work." }
+    {
+      "dataPoint": "Tech debt = 20-40% of technology estate value (before depreciation)",
+      "source": "McKinsey",
+      "implication": "This is a board-level financial liability, not an engineering preference."
+    },
+    {
+      "dataPoint": "US cost of poor software quality: $2.41T annually; $1.52T to remediate",
+      "source": "Consortium for Information & Software Quality (CISQ), 2022",
+      "implication": "The aggregate cost exceeds the GDP of most countries."
+    },
+    {
+      "dataPoint": "33-42% of developer time spent on debt, maintenance, legacy code",
+      "source": "Stripe, CodeScene",
+      "implication": "Every dollar of engineering salary, 33-42 cents goes to fighting the past instead of building the future."
+    },
+    {
+      "dataPoint": "10-20% of 'new feature' budget is covertly diverted to debt work",
+      "source": "McKinsey",
+      "implication": "Feature budgets are already subsidizing debt silently. Making it explicit gives leadership honest data."
+    },
+    {
+      "dataPoint": ">50% of IT budget on legacy integration = 'technical bankruptcy'",
+      "source": "Accenture, Forrester",
+      "implication": "At this point, delivering new value is nearly impossible without greenfield rewrite."
+    },
+    {
+      "dataPoint": "Paying down debt frees up to 50% more time for value-generating work",
+      "source": "McKinsey",
+      "implication": "The ROI of debt remediation is not abstract — it's measured in developer-hours returned to feature work."
+    }
   ],
   "investmentMandate": {
     "target": "15-20%",
@@ -22,10 +46,34 @@
     "formula": "CD3 = Weekly Financial Value / Weeks to Deliver",
     "description": "Sequence work by highest CD3, not highest total value. Prioritizing by highest total value locks up capacity for long durations before delivering any value.",
     "example": [
-      { "initiative": "Auth migration", "duration": 4, "weeklyValue": 1500, "cd3": 375, "priority": 4 },
-      { "initiative": "Checkout optimization", "duration": 2, "weeklyValue": 2000, "cd3": 1000, "priority": 1 },
-      { "initiative": "Platform rewrite", "duration": 10, "weeklyValue": 8500, "cd3": 850, "priority": 3 },
-      { "initiative": "Search reliability", "duration": 7, "weeklyValue": 6000, "cd3": 857, "priority": 2 }
+      {
+        "initiative": "Auth migration",
+        "duration": 4,
+        "weeklyValue": 1500,
+        "cd3": 375,
+        "priority": 4
+      },
+      {
+        "initiative": "Checkout optimization",
+        "duration": 2,
+        "weeklyValue": 2000,
+        "cd3": 1000,
+        "priority": 1
+      },
+      {
+        "initiative": "Platform rewrite",
+        "duration": 10,
+        "weeklyValue": 8500,
+        "cd3": 850,
+        "priority": 3
+      },
+      {
+        "initiative": "Search reliability",
+        "duration": 7,
+        "weeklyValue": 6000,
+        "cd3": 857.14,
+        "priority": 2
+      }
     ],
     "whenToUse": "Major initiatives (>1 quarter of team effort). Not for sprint-level ticket prioritization.",
     "impact": "In enterprise portfolios, CD3 sequencing reduces aggregate delay costs 20-60%."
@@ -39,14 +87,38 @@
   ],
   "starterSequences": {
     "em": [
-      { "question": "Can you state your team's Lead Time by stage?", "noAction": "Instrument your pipeline. This is job #1.", "yesNext": true },
-      { "question": "Does your team have SLOs with enforced error budgets?", "noAction": "Define SLIs → set SLOs → track budget. Job #2.", "yesNext": true },
-      { "question": "Have you run a DX survey in the last 90 days and acted on the top issue?", "noAction": "5 questions. 10 minutes. Follow through publicly. Job #3.", "yesNext": false }
+      {
+        "question": "Can you state your team's Lead Time by stage?",
+        "noAction": "Instrument your pipeline. This is job #1.",
+        "yesNext": true
+      },
+      {
+        "question": "Does your team have SLOs with enforced error budgets?",
+        "noAction": "Define SLIs → set SLOs → track budget. Job #2.",
+        "yesNext": true
+      },
+      {
+        "question": "Have you run a DX survey in the last 90 days and acted on the top issue?",
+        "noAction": "5 questions. 10 minutes. Follow through publicly. Job #3.",
+        "yesNext": false
+      }
     ],
     "director": [
-      { "question": "Can you classify your last 4 departures as regrettable/non-regrettable AND state the top theme?", "noAction": "Build the classification system. Job #1.", "yesNext": true },
-      { "question": "Can you show SLO compliance across your top 10 services AND name the 2 most chronically unreliable?", "noAction": "Ensure SLOs exist → track compliance → invest. Job #2.", "yesNext": true },
-      { "question": "Can you state your org's investment mix AND attribute one business outcome to engineering work?", "noAction": "Tag work, model impact, present at QBR. Job #3.", "yesNext": false }
+      {
+        "question": "Can you classify your last 4 departures as regrettable/non-regrettable AND state the top theme?",
+        "noAction": "Build the classification system. Job #1.",
+        "yesNext": true
+      },
+      {
+        "question": "Can you show SLO compliance across your top 10 services AND name the 2 most chronically unreliable?",
+        "noAction": "Ensure SLOs exist → track compliance → invest. Job #2.",
+        "yesNext": true
+      },
+      {
+        "question": "Can you state your org's investment mix AND attribute one business outcome to engineering work?",
+        "noAction": "Tag work, model impact, present at QBR. Job #3.",
+        "yesNext": false
+      }
     ]
   }
 }

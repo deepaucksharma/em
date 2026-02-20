@@ -753,15 +753,15 @@
     "primaryCapability": "C14",
     "secondaryCapability": "C7",
     "mappingNotes": "People management + communication",
-    "observableId": "C14-O6"
+    "observableId": "C14-O9"
   },
   {
     "origTopic": "Performance, Calibration & Growth",
     "origPrinciple": "Underperformance & Exits",
     "origSubTopic": "Focus/Pivot/Dev Plan Mechanics",
     "primaryCapability": "C14",
-    "secondaryCapability": "C14",
-    "mappingNotes": "Core coaching",
+    "secondaryCapability": "C6",
+    "mappingNotes": "Performance management + coaching",
     "observableId": "C14-O6"
   },
   {
@@ -915,7 +915,7 @@
     "primaryCapability": "C7",
     "secondaryCapability": "C2",
     "mappingNotes": "Communication + prioritization",
-    "observableId": "C7-O7"
+    "observableId": "C7-O11"
   },
   {
     "origTopic": "Strategic Alignment & Roadmapping",
@@ -933,7 +933,7 @@
     "primaryCapability": "C1",
     "secondaryCapability": "C2",
     "mappingNotes": "Org-level thinking + prioritization",
-    "observableId": "C1-O6"
+    "observableId": "C1-O16"
   },
   {
     "origTopic": "Strategic Alignment & Roadmapping",

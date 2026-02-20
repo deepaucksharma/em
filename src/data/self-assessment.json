@@ -2,11 +2,26 @@
   {
     "capabilityId": "C1",
     "behavioralAnchors": [
-      {"level": 1, "description": "Focuses primarily on own team's backlog; limited visibility into cross-team dynamics or org-level priorities"},
-      {"level": 2, "description": "Aware of adjacent teams' work and occasionally considers upstream/downstream impacts when planning"},
-      {"level": 3, "description": "Regularly maps team objectives to org-level goals; identifies cross-team dependencies and raises them proactively"},
-      {"level": 4, "description": "Drives alignment across multiple teams; connects disparate workstreams into coherent org narratives for leadership"},
-      {"level": 5, "description": "Shapes org-wide systems thinking; proactively identifies and resolves cross-org tensions before they surface as blockers"}
+      {
+        "level": 1,
+        "description": "Focuses primarily on own team's backlog; limited visibility into cross-team dynamics or org-level priorities"
+      },
+      {
+        "level": 2,
+        "description": "Aware of adjacent teams' work and occasionally considers upstream/downstream impacts when planning"
+      },
+      {
+        "level": 3,
+        "description": "Regularly maps team objectives to org-level goals; identifies cross-team dependencies and raises them proactively"
+      },
+      {
+        "level": 4,
+        "description": "Drives alignment across multiple teams; connects disparate workstreams into coherent org narratives for leadership"
+      },
+      {
+        "level": 5,
+        "description": "Shapes org-wide systems thinking; proactively identifies and resolves cross-org tensions before they surface as blockers"
+      }
     ],
     "gapQuestions": [
       "When did you last identify a cross-team dependency before it caused problems?",
@@ -15,20 +30,47 @@
       "When was the last time you changed your team's direction based on an org-level insight you surfaced yourself?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How well do I connect my team's day-to-day work to the broader organizational strategy?"},
-      {"audience": "direct-report", "question": "Does your manager clearly explain how your team's work fits into the larger company direction?"},
-      {"audience": "peer", "question": "How effectively does this manager anticipate and communicate cross-team impacts from their team's work?"},
-      {"audience": "manager", "question": "How well does this manager demonstrate understanding of org-level dynamics beyond their immediate team?"}
+      {
+        "audience": "self",
+        "question": "How well do I connect my team's day-to-day work to the broader organizational strategy?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager clearly explain how your team's work fits into the larger company direction?"
+      },
+      {
+        "audience": "peer",
+        "question": "How effectively does this manager anticipate and communicate cross-team impacts from their team's work?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager demonstrate understanding of org-level dynamics beyond their immediate team?"
+      }
     ]
   },
   {
     "capabilityId": "C2",
     "behavioralAnchors": [
-      {"level": 1, "description": "Treats all requests as equally urgent; team frequently context-switches without clear rationale"},
-      {"level": 2, "description": "Maintains a prioritized backlog but struggles to say no to new requests or make explicit tradeoff decisions"},
-      {"level": 3, "description": "Uses clear frameworks (impact vs effort, strategic alignment) to prioritize; communicates tradeoffs to stakeholders"},
-      {"level": 4, "description": "Proactively re-prioritizes based on changing business context; builds stakeholder consensus around difficult tradeoff decisions"},
-      {"level": 5, "description": "Sets the strategic prioritization bar for the org; creates reusable frameworks that other teams adopt for their own planning"}
+      {
+        "level": 1,
+        "description": "Treats all requests as equally urgent; team frequently context-switches without clear rationale"
+      },
+      {
+        "level": 2,
+        "description": "Maintains a prioritized backlog but struggles to say no to new requests or make explicit tradeoff decisions"
+      },
+      {
+        "level": 3,
+        "description": "Uses clear frameworks (impact vs effort, strategic alignment) to prioritize; communicates tradeoffs to stakeholders"
+      },
+      {
+        "level": 4,
+        "description": "Proactively re-prioritizes based on changing business context; builds stakeholder consensus around difficult tradeoff decisions"
+      },
+      {
+        "level": 5,
+        "description": "Sets the strategic prioritization bar for the org; creates reusable frameworks that other teams adopt for their own planning"
+      }
     ],
     "gapQuestions": [
       "What was the last significant project or request you explicitly deprioritized, and how did you communicate that decision?",
@@ -37,41 +79,96 @@
       "When was the last time you killed or descoped an in-flight project based on new strategic information?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How confident am I in my ability to make and defend prioritization tradeoffs under ambiguity?"},
-      {"audience": "direct-report", "question": "Does your manager provide clear reasoning when priorities shift, so you understand what matters most and why?"},
-      {"audience": "peer", "question": "When competing priorities arise, how effectively does this manager negotiate tradeoffs that balance multiple teams' needs?"},
-      {"audience": "manager", "question": "How well does this manager align their team's priorities with the most impactful strategic bets for the organization?"}
+      {
+        "audience": "self",
+        "question": "How confident am I in my ability to make and defend prioritization tradeoffs under ambiguity?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager provide clear reasoning when priorities shift, so you understand what matters most and why?"
+      },
+      {
+        "audience": "peer",
+        "question": "When competing priorities arise, how effectively does this manager negotiate tradeoffs that balance multiple teams' needs?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager align their team's priorities with the most impactful strategic bets for the organization?"
+      }
     ]
   },
   {
     "capabilityId": "C3",
     "behavioralAnchors": [
-      {"level": 1, "description": "Defers all architecture decisions to senior ICs; unable to evaluate technical tradeoffs or ask probing design questions"},
-      {"level": 2, "description": "Understands basic system components and can follow technical discussions; occasionally asks clarifying questions about scalability or reliability"},
-      {"level": 3, "description": "Actively participates in design reviews; asks pointed questions about failure modes, operational burden, and migration paths"},
-      {"level": 4, "description": "Guides teams toward architectures that balance business constraints with technical excellence; ensures designs account for operational realities"},
-      {"level": 5, "description": "Shapes the org's technical vision and architectural principles; brokers cross-team architectural decisions that resolve systemic technical debt"}
+      {
+        "level": 1,
+        "description": "Defers all architecture decisions to senior ICs; unable to evaluate technical tradeoffs or ask probing design questions"
+      },
+      {
+        "level": 2,
+        "description": "Understands basic system components and can follow technical discussions; occasionally asks clarifying questions about scalability or reliability"
+      },
+      {
+        "level": 3,
+        "description": "Actively participates in design reviews; asks pointed questions about failure modes, operational burden, and migration paths"
+      },
+      {
+        "level": 4,
+        "description": "Guides teams toward architectures that balance business constraints with technical excellence; ensures designs account for operational realities"
+      },
+      {
+        "level": 5,
+        "description": "Shapes the org's technical vision and architectural principles; brokers cross-team architectural decisions that resolve systemic technical debt"
+      }
     ],
     "gapQuestions": [
       "In the last design review you attended, what specific technical tradeoff did you push the team to think harder about?",
       "How do you ensure that architectural decisions account for operational cost, not just development velocity?",
-      "When was the last time you challenged a technical approach proposed by a senior engineer, and what was the outcome?"
+      "When was the last time you challenged a technical approach proposed by a senior engineer, and what was the outcome?",
+      "How do you decide when to invest in paying down tech debt versus building new features, and what data informs that decision?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How effectively do I contribute to technical design discussions beyond just approving what senior engineers propose?"},
-      {"audience": "direct-report", "question": "Does your manager add meaningful perspective to architecture and design discussions, or do they primarily defer to others?"},
-      {"audience": "peer", "question": "How well does this manager ensure their team's architectural decisions consider cross-team impacts and long-term maintainability?"},
-      {"audience": "manager", "question": "How effectively does this manager balance technical ambition with practical delivery constraints in systems design?"}
+      {
+        "audience": "self",
+        "question": "How effectively do I contribute to technical design discussions beyond just approving what senior engineers propose?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager add meaningful perspective to architecture and design discussions, or do they primarily defer to others?"
+      },
+      {
+        "audience": "peer",
+        "question": "How well does this manager ensure their team's architectural decisions consider cross-team impacts and long-term maintainability?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager balance technical ambition with practical delivery constraints in systems design?"
+      }
     ]
   },
   {
     "capabilityId": "C4",
     "behavioralAnchors": [
-      {"level": 1, "description": "Team operates without consistent rituals; standups, retros, and planning happen sporadically or feel unproductive"},
-      {"level": 2, "description": "Basic operational cadences exist but are inconsistently enforced; blockers surface late and sprint commitments are frequently missed"},
-      {"level": 3, "description": "Runs a predictable operational rhythm with clear sprint goals, effective retros, and visible tracking of commitments and blockers"},
-      {"level": 4, "description": "Continuously tunes team processes based on retrospective data; adapts rituals to team maturity and project phase without over-engineering"},
-      {"level": 5, "description": "Establishes operational patterns that scale across teams; coaches other managers on building sustainable delivery cadences"}
+      {
+        "level": 1,
+        "description": "Team operates without consistent rituals; standups, retros, and planning happen sporadically or feel unproductive"
+      },
+      {
+        "level": 2,
+        "description": "Basic operational cadences exist but are inconsistently enforced; blockers surface late and sprint commitments are frequently missed"
+      },
+      {
+        "level": 3,
+        "description": "Runs a predictable operational rhythm with clear sprint goals, effective retros, and visible tracking of commitments and blockers"
+      },
+      {
+        "level": 4,
+        "description": "Continuously tunes team processes based on retrospective data; adapts rituals to team maturity and project phase without over-engineering"
+      },
+      {
+        "level": 5,
+        "description": "Establishes operational patterns that scale across teams; coaches other managers on building sustainable delivery cadences"
+      }
     ],
     "gapQuestions": [
       "How often does your team deliver on sprint commitments, and what do you do when the pattern shows consistent over- or under-commitment?",
@@ -80,41 +177,96 @@
       "When was the last time you intentionally changed a team ritual because it stopped serving its purpose?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How well do I maintain a healthy operational rhythm that helps my team deliver predictably without creating process overhead?"},
-      {"audience": "direct-report", "question": "Are team rituals (standups, retros, planning) consistently useful, or do they feel like checkbox activities?"},
-      {"audience": "peer", "question": "How reliably does this manager's team deliver on commitments and surface risks early?"},
-      {"audience": "manager", "question": "How effectively does this manager run their team's operations to produce predictable, high-quality output?"}
+      {
+        "audience": "self",
+        "question": "How well do I maintain a healthy operational rhythm that helps my team deliver predictably without creating process overhead?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Are team rituals (standups, retros, planning) consistently useful, or do they feel like checkbox activities?"
+      },
+      {
+        "audience": "peer",
+        "question": "How reliably does this manager's team deliver on commitments and surface risks early?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager run their team's operations to produce predictable, high-quality output?"
+      }
     ]
   },
   {
     "capabilityId": "C5",
     "behavioralAnchors": [
-      {"level": 1, "description": "Primarily interacts within own team; rarely engages product, design, or other functions unless brought into a meeting"},
-      {"level": 2, "description": "Has working relationships with immediate cross-functional partners but influence is limited to reactive problem-solving"},
-      {"level": 3, "description": "Proactively builds relationships with product, design, and business stakeholders; co-creates roadmaps and jointly owns outcomes"},
-      {"level": 4, "description": "Trusted advisor across functions; regularly shapes product direction and business decisions by bringing engineering perspective to strategic conversations"},
-      {"level": 5, "description": "Drives cross-functional alignment at the org level; resolves inter-team conflicts and builds coalitions for complex multi-team initiatives"}
+      {
+        "level": 1,
+        "description": "Primarily interacts within own team; rarely engages product, design, or other functions unless brought into a meeting"
+      },
+      {
+        "level": 2,
+        "description": "Has working relationships with immediate cross-functional partners but influence is limited to reactive problem-solving"
+      },
+      {
+        "level": 3,
+        "description": "Proactively builds relationships with product, design, and business stakeholders; co-creates roadmaps and jointly owns outcomes"
+      },
+      {
+        "level": 4,
+        "description": "Trusted advisor across functions; regularly shapes product direction and business decisions by bringing engineering perspective to strategic conversations"
+      },
+      {
+        "level": 5,
+        "description": "Drives cross-functional alignment at the org level; resolves inter-team conflicts and builds coalitions for complex multi-team initiatives"
+      }
     ],
     "gapQuestions": [
       "When was the last time you influenced a product or business decision by proactively bringing an engineering insight to the table?",
       "How do you build trust with cross-functional partners who have competing priorities?",
-      "Can you describe a situation where you brokered agreement between engineering and another function on a contentious tradeoff?"
+      "Can you describe a situation where you brokered agreement between engineering and another function on a contentious tradeoff?",
+      "How do you manage upward — ensuring your skip-level and cross-functional sponsors understand your team's impact and advocate for your priorities?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How effectively do I build influence with cross-functional partners beyond my direct engineering team?"},
-      {"audience": "direct-report", "question": "Does your manager effectively represent engineering's perspective and needs to product, design, and other partners?"},
-      {"audience": "peer", "question": "How well does this manager collaborate across functions to drive shared outcomes rather than optimizing only for engineering?"},
-      {"audience": "manager", "question": "How effectively does this manager build cross-functional relationships and drive alignment on shared objectives?"}
+      {
+        "audience": "self",
+        "question": "How effectively do I build influence with cross-functional partners beyond my direct engineering team?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager effectively represent engineering's perspective and needs to product, design, and other partners?"
+      },
+      {
+        "audience": "peer",
+        "question": "How well does this manager collaborate across functions to drive shared outcomes rather than optimizing only for engineering?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager build cross-functional relationships and drive alignment on shared objectives?"
+      }
     ]
   },
   {
     "capabilityId": "C6",
     "behavioralAnchors": [
-      {"level": 1, "description": "Conducts 1:1s infrequently or without structure; provides little feedback beyond annual reviews; team members unclear on growth paths"},
-      {"level": 2, "description": "Holds regular 1:1s and provides occasional feedback but lacks a systematic approach to individual development planning"},
-      {"level": 3, "description": "Maintains active development plans for each report; gives timely, specific feedback tied to observable behaviors and career goals"},
-      {"level": 4, "description": "Creates stretch opportunities calibrated to individual growth edges; develops engineers into tech leads and future managers through deliberate sponsorship"},
-      {"level": 5, "description": "Builds a talent development culture where coaching cascades; alumni consistently credit this manager as pivotal to their career trajectory"}
+      {
+        "level": 1,
+        "description": "Conducts 1:1s infrequently or without structure; provides little feedback beyond annual reviews; team members unclear on growth paths"
+      },
+      {
+        "level": 2,
+        "description": "Holds regular 1:1s and provides occasional feedback but lacks a systematic approach to individual development planning"
+      },
+      {
+        "level": 3,
+        "description": "Maintains active development plans for each report; gives timely, specific feedback tied to observable behaviors and career goals"
+      },
+      {
+        "level": 4,
+        "description": "Creates stretch opportunities calibrated to individual growth edges; develops engineers into tech leads and future managers through deliberate sponsorship"
+      },
+      {
+        "level": 5,
+        "description": "Builds a talent development culture where coaching cascades; alumni consistently credit this manager as pivotal to their career trajectory"
+      }
     ],
     "gapQuestions": [
       "For each of your direct reports, can you articulate their top growth area and what specific opportunity you have created to address it?",
@@ -123,41 +275,96 @@
       "Which of your reports is closest to a promotion, and what specific evidence gap remains?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How consistently do I invest in the growth and development of each individual on my team, not just the high performers?"},
-      {"audience": "direct-report", "question": "Does your manager give you actionable feedback regularly, and do you feel they are actively invested in your career growth?"},
-      {"audience": "peer", "question": "How effectively does this manager develop talent on their team, and do their engineers grow visibly over time?"},
-      {"audience": "manager", "question": "How well does this manager identify and develop future leaders on their team through coaching and sponsorship?"}
+      {
+        "audience": "self",
+        "question": "How consistently do I invest in the growth and development of each individual on my team, not just the high performers?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager give you actionable feedback regularly, and do you feel they are actively invested in your career growth?"
+      },
+      {
+        "audience": "peer",
+        "question": "How effectively does this manager develop talent on their team, and do their engineers grow visibly over time?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager identify and develop future leaders on their team through coaching and sponsorship?"
+      }
     ]
   },
   {
     "capabilityId": "C7",
     "behavioralAnchors": [
-      {"level": 1, "description": "Presents decisions after the fact with little context; stakeholders feel surprised or uninformed about key tradeoffs"},
-      {"level": 2, "description": "Communicates decisions clearly but does not proactively frame the alternatives considered or the risks of each option"},
-      {"level": 3, "description": "Frames decisions with clear options, tradeoffs, and recommendations; tailors communication to the audience's context and concerns"},
-      {"level": 4, "description": "Builds decision frameworks that help stakeholders make faster, higher-quality choices; anticipates objections and addresses them preemptively"},
-      {"level": 5, "description": "Sets the communication standard for the org; decision memos and escalation frameworks they create are adopted as organizational templates"}
+      {
+        "level": 1,
+        "description": "Presents decisions after the fact with little context; stakeholders feel surprised or uninformed about key tradeoffs"
+      },
+      {
+        "level": 2,
+        "description": "Communicates decisions clearly but does not proactively frame the alternatives considered or the risks of each option"
+      },
+      {
+        "level": 3,
+        "description": "Frames decisions with clear options, tradeoffs, and recommendations; tailors communication to the audience's context and concerns"
+      },
+      {
+        "level": 4,
+        "description": "Builds decision frameworks that help stakeholders make faster, higher-quality choices; anticipates objections and addresses them preemptively"
+      },
+      {
+        "level": 5,
+        "description": "Sets the communication standard for the org; decision memos and escalation frameworks they create are adopted as organizational templates"
+      }
     ],
     "gapQuestions": [
       "When was the last time you wrote a decision document that included explicit alternatives, risks, and a clear recommendation?",
       "How do you adjust your communication style when presenting to executives versus your engineering team?",
-      "Can you recall a decision that went poorly because stakeholders were not adequately informed of the tradeoffs?"
+      "Can you recall a decision that went poorly because stakeholders were not adequately informed of the tradeoffs?",
+      "What is your process for documenting important decisions so that future team members understand not just what was decided, but why?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How effectively do I frame decisions so that stakeholders can quickly understand the tradeoffs and make informed choices?"},
-      {"audience": "direct-report", "question": "Does your manager clearly communicate the reasoning behind major decisions, including what alternatives were considered?"},
-      {"audience": "peer", "question": "How well does this manager communicate technical decisions and tradeoffs to non-technical stakeholders?"},
-      {"audience": "manager", "question": "How effectively does this manager frame and communicate decisions, especially when escalating issues or proposing changes?"}
+      {
+        "audience": "self",
+        "question": "How effectively do I frame decisions so that stakeholders can quickly understand the tradeoffs and make informed choices?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager clearly communicate the reasoning behind major decisions, including what alternatives were considered?"
+      },
+      {
+        "audience": "peer",
+        "question": "How well does this manager communicate technical decisions and tradeoffs to non-technical stakeholders?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager frame and communicate decisions, especially when escalating issues or proposing changes?"
+      }
     ]
   },
   {
     "capabilityId": "C8",
     "behavioralAnchors": [
-      {"level": 1, "description": "Reacts to incidents without a structured response process; postmortems are skipped or blame-oriented; recurring issues persist"},
-      {"level": 2, "description": "Follows incident response procedures when prompted but does not proactively improve runbooks or drive systemic fixes from postmortems"},
-      {"level": 3, "description": "Runs blameless postmortems consistently; ensures action items are tracked and completed; maintains up-to-date runbooks and on-call rotations"},
-      {"level": 4, "description": "Uses incident patterns to drive proactive reliability investments; builds a team culture where reliability is a first-class engineering concern"},
-      {"level": 5, "description": "Shapes org-wide incident management practices; establishes reliability review processes and SLO frameworks that prevent classes of incidents"}
+      {
+        "level": 1,
+        "description": "Reacts to incidents without a structured response process; postmortems are skipped or blame-oriented; recurring issues persist"
+      },
+      {
+        "level": 2,
+        "description": "Follows incident response procedures when prompted but does not proactively improve runbooks or drive systemic fixes from postmortems"
+      },
+      {
+        "level": 3,
+        "description": "Runs blameless postmortems consistently; ensures action items are tracked and completed; maintains up-to-date runbooks and on-call rotations"
+      },
+      {
+        "level": 4,
+        "description": "Uses incident patterns to drive proactive reliability investments; builds a team culture where reliability is a first-class engineering concern"
+      },
+      {
+        "level": 5,
+        "description": "Shapes org-wide incident management practices; establishes reliability review processes and SLO frameworks that prevent classes of incidents"
+      }
     ],
     "gapQuestions": [
       "What percentage of your postmortem action items from the last quarter are completed, and how do you track them?",
@@ -166,20 +373,47 @@
       "How do you prepare your team for on-call, and what do you do when on-call burden becomes unsustainable?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How well do I balance reactive incident response with proactive reliability investment for my team's services?"},
-      {"audience": "direct-report", "question": "Does your manager ensure the team learns from incidents and follows through on postmortem action items?"},
-      {"audience": "peer", "question": "How effectively does this manager's team handle incidents, and do their services improve in reliability over time?"},
-      {"audience": "manager", "question": "How well does this manager manage operational risk and drive reliability improvements across their domain?"}
+      {
+        "audience": "self",
+        "question": "How well do I balance reactive incident response with proactive reliability investment for my team's services?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager ensure the team learns from incidents and follows through on postmortem action items?"
+      },
+      {
+        "audience": "peer",
+        "question": "How effectively does this manager's team handle incidents, and do their services improve in reliability over time?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager manage operational risk and drive reliability improvements across their domain?"
+      }
     ]
   },
   {
     "capabilityId": "C9",
     "behavioralAnchors": [
-      {"level": 1, "description": "Relies on anecdotes and gut feeling to assess team performance; no defined metrics for delivery, quality, or impact"},
-      {"level": 2, "description": "Tracks basic delivery metrics (velocity, bug counts) but does not connect them to business outcomes or use them to drive decisions"},
-      {"level": 3, "description": "Defines and tracks outcome-oriented metrics (lead time, deployment frequency, customer impact); uses data to surface problems and inform planning"},
-      {"level": 4, "description": "Builds dashboards and reporting that connect engineering activity to business results; uses metrics to tell compelling stories in leadership forums"},
-      {"level": 5, "description": "Establishes measurement frameworks adopted across the org; drives a data-informed culture where teams self-correct based on leading indicators"}
+      {
+        "level": 1,
+        "description": "Relies on anecdotes and gut feeling to assess team performance; no defined metrics for delivery, quality, or impact"
+      },
+      {
+        "level": 2,
+        "description": "Tracks basic delivery metrics (velocity, bug counts) but does not connect them to business outcomes or use them to drive decisions"
+      },
+      {
+        "level": 3,
+        "description": "Defines and tracks outcome-oriented metrics (lead time, deployment frequency, customer impact); uses data to surface problems and inform planning"
+      },
+      {
+        "level": 4,
+        "description": "Builds dashboards and reporting that connect engineering activity to business results; uses metrics to tell compelling stories in leadership forums"
+      },
+      {
+        "level": 5,
+        "description": "Establishes measurement frameworks adopted across the org; drives a data-informed culture where teams self-correct based on leading indicators"
+      }
     ],
     "gapQuestions": [
       "What are the top 3 metrics you use to assess your team's health and effectiveness, and when did you last act on what they told you?",
@@ -187,20 +421,47 @@
       "Can you point to a decision you changed or a project you stopped because the data showed it was not delivering expected outcomes?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How effectively do I use data and metrics to drive decisions rather than relying on intuition or anecdote?"},
-      {"audience": "direct-report", "question": "Does your manager use metrics fairly and transparently to assess team progress, rather than as a punitive tool?"},
-      {"audience": "peer", "question": "How well does this manager use data to communicate their team's impact and inform cross-team decisions?"},
-      {"audience": "manager", "question": "How effectively does this manager measure and communicate the outcomes and impact of their team's work?"}
+      {
+        "audience": "self",
+        "question": "How effectively do I use data and metrics to drive decisions rather than relying on intuition or anecdote?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager use metrics fairly and transparently to assess team progress, rather than as a punitive tool?"
+      },
+      {
+        "audience": "peer",
+        "question": "How well does this manager use data to communicate their team's impact and inform cross-team decisions?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager measure and communicate the outcomes and impact of their team's work?"
+      }
     ]
   },
   {
     "capabilityId": "C10",
     "behavioralAnchors": [
-      {"level": 1, "description": "Accepts all incoming work without evaluating team capacity; team is chronically overcommitted and individuals are stretched thin"},
-      {"level": 2, "description": "Aware of capacity constraints but struggles to push back on scope or make explicit tradeoff proposals to leadership"},
-      {"level": 3, "description": "Maintains a clear picture of team capacity; makes explicit tradeoff proposals when new work arrives and negotiates scope effectively"},
-      {"level": 4, "description": "Proactively reallocates resources based on shifting priorities; builds flexible team structures that can absorb change without burnout"},
-      {"level": 5, "description": "Optimizes resource allocation across multiple teams; influences headcount and investment decisions with data-driven capacity models"}
+      {
+        "level": 1,
+        "description": "Accepts all incoming work without evaluating team capacity; team is chronically overcommitted and individuals are stretched thin"
+      },
+      {
+        "level": 2,
+        "description": "Aware of capacity constraints but struggles to push back on scope or make explicit tradeoff proposals to leadership"
+      },
+      {
+        "level": 3,
+        "description": "Maintains a clear picture of team capacity; makes explicit tradeoff proposals when new work arrives and negotiates scope effectively"
+      },
+      {
+        "level": 4,
+        "description": "Proactively reallocates resources based on shifting priorities; builds flexible team structures that can absorb change without burnout"
+      },
+      {
+        "level": 5,
+        "description": "Optimizes resource allocation across multiple teams; influences headcount and investment decisions with data-driven capacity models"
+      }
     ],
     "gapQuestions": [
       "When was the last time you said no to a request or proposed a scope reduction because your team was at capacity?",
@@ -209,20 +470,47 @@
       "How do you balance investing in long-term technical health versus short-term delivery pressure?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How well do I manage my team's capacity to ensure sustainable delivery without chronic overcommitment?"},
-      {"audience": "direct-report", "question": "Does your manager protect the team from overcommitment and make thoughtful tradeoffs when new work is added?"},
-      {"audience": "peer", "question": "How effectively does this manager allocate resources and negotiate scope when competing demands arise?"},
-      {"audience": "manager", "question": "How well does this manager balance resource allocation across competing priorities while maintaining team sustainability?"}
+      {
+        "audience": "self",
+        "question": "How well do I manage my team's capacity to ensure sustainable delivery without chronic overcommitment?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager protect the team from overcommitment and make thoughtful tradeoffs when new work is added?"
+      },
+      {
+        "audience": "peer",
+        "question": "How effectively does this manager allocate resources and negotiate scope when competing demands arise?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager balance resource allocation across competing priorities while maintaining team sustainability?"
+      }
     ]
   },
   {
     "capabilityId": "C11",
     "behavioralAnchors": [
-      {"level": 1, "description": "Hiring is ad hoc; job descriptions are generic; interviews lack structure; new hires receive minimal onboarding beyond access setup"},
-      {"level": 2, "description": "Uses structured interviews but does not calibrate hiring bar across interviewers; onboarding covers logistics but lacks a ramp-up plan"},
-      {"level": 3, "description": "Designs roles with clear success criteria; runs calibrated interview loops; provides 30/60/90-day onboarding plans with defined milestones"},
-      {"level": 4, "description": "Builds hiring pipelines that consistently attract diverse, high-caliber candidates; onboarding produces independently effective engineers within 60 days"},
-      {"level": 5, "description": "Shapes org-wide hiring standards and interviewer training programs; designs role architectures that create clear career progression across the engineering org"}
+      {
+        "level": 1,
+        "description": "Hiring is ad hoc; job descriptions are generic; interviews lack structure; new hires receive minimal onboarding beyond access setup"
+      },
+      {
+        "level": 2,
+        "description": "Uses structured interviews but does not calibrate hiring bar across interviewers; onboarding covers logistics but lacks a ramp-up plan"
+      },
+      {
+        "level": 3,
+        "description": "Designs roles with clear success criteria; runs calibrated interview loops; provides 30/60/90-day onboarding plans with defined milestones"
+      },
+      {
+        "level": 4,
+        "description": "Builds hiring pipelines that consistently attract diverse, high-caliber candidates; onboarding produces independently effective engineers within 60 days"
+      },
+      {
+        "level": 5,
+        "description": "Shapes org-wide hiring standards and interviewer training programs; designs role architectures that create clear career progression across the engineering org"
+      }
     ],
     "gapQuestions": [
       "How long does it take a new hire on your team to ship their first meaningful contribution, and what have you done to shorten that timeline?",
@@ -231,41 +519,96 @@
       "What is your process for evaluating whether your onboarding is effective, and what did you change based on that evaluation?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How effectively do I design roles, run hiring processes, and onboard new team members to set them up for success?"},
-      {"audience": "direct-report", "question": "Was your onboarding experience well-structured, and did you feel supported in ramping up to full productivity?"},
-      {"audience": "peer", "question": "How well does this manager hire and onboard engineers who integrate effectively with cross-functional teams?"},
-      {"audience": "manager", "question": "How effectively does this manager build and maintain a high-quality hiring pipeline and onboarding experience?"}
+      {
+        "audience": "self",
+        "question": "How effectively do I design roles, run hiring processes, and onboard new team members to set them up for success?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Was your onboarding experience well-structured, and did you feel supported in ramping up to full productivity?"
+      },
+      {
+        "audience": "peer",
+        "question": "How well does this manager hire and onboard engineers who integrate effectively with cross-functional teams?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager build and maintain a high-quality hiring pipeline and onboarding experience?"
+      }
     ]
   },
   {
     "capabilityId": "C12",
     "behavioralAnchors": [
-      {"level": 1, "description": "Team norms are implicit and inconsistent; new members struggle to understand expectations around communication, code quality, or collaboration"},
-      {"level": 2, "description": "Some norms exist (coding standards, review expectations) but they are not actively reinforced or evolved as the team changes"},
-      {"level": 3, "description": "Deliberately shapes team culture through explicit norms, modeling desired behaviors, and addressing norm violations constructively"},
-      {"level": 4, "description": "Creates a psychologically safe environment where team members challenge ideas openly; culture attracts and retains strong engineers"},
-      {"level": 5, "description": "Influences engineering culture beyond their own team; establishes norms and practices that define how the broader org collaborates and operates"}
+      {
+        "level": 1,
+        "description": "Team norms are implicit and inconsistent; new members struggle to understand expectations around communication, code quality, or collaboration"
+      },
+      {
+        "level": 2,
+        "description": "Some norms exist (coding standards, review expectations) but they are not actively reinforced or evolved as the team changes"
+      },
+      {
+        "level": 3,
+        "description": "Deliberately shapes team culture through explicit norms, modeling desired behaviors, and addressing norm violations constructively"
+      },
+      {
+        "level": 4,
+        "description": "Creates a psychologically safe environment where team members challenge ideas openly; culture attracts and retains strong engineers"
+      },
+      {
+        "level": 5,
+        "description": "Influences engineering culture beyond their own team; establishes norms and practices that define how the broader org collaborates and operates"
+      }
     ],
     "gapQuestions": [
       "What are the top 3 cultural norms on your team, and how would a new hire learn about them in their first week?",
       "When was the last time you addressed a behavior that was undermining team culture, and how did you handle it?",
-      "How do you actively foster psychological safety so that team members feel comfortable raising concerns or admitting mistakes?"
+      "How do you actively foster psychological safety so that team members feel comfortable raising concerns or admitting mistakes?",
+      "How do you ensure that knowledge sharing and documentation are living practices on your team, not just one-time efforts that go stale?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How intentionally do I shape and maintain team culture, and do I address cultural issues before they become entrenched?"},
-      {"audience": "direct-report", "question": "Does your team have a healthy culture where you feel safe to take risks, raise concerns, and disagree openly?"},
-      {"audience": "peer", "question": "How effectively does this manager build a team culture that supports collaboration, learning, and high performance?"},
-      {"audience": "manager", "question": "How well does this manager cultivate a healthy team culture that aligns with organizational values and retains talent?"}
+      {
+        "audience": "self",
+        "question": "How intentionally do I shape and maintain team culture, and do I address cultural issues before they become entrenched?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your team have a healthy culture where you feel safe to take risks, raise concerns, and disagree openly?"
+      },
+      {
+        "audience": "peer",
+        "question": "How effectively does this manager build a team culture that supports collaboration, learning, and high performance?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager cultivate a healthy team culture that aligns with organizational values and retains talent?"
+      }
     ]
   },
   {
     "capabilityId": "C13",
     "behavioralAnchors": [
-      {"level": 1, "description": "Security and compliance are treated as afterthoughts; team has unresolved audit findings and no awareness of relevant regulatory requirements"},
-      {"level": 2, "description": "Reacts to security issues and compliance requests but does not proactively integrate security practices into the development lifecycle"},
-      {"level": 3, "description": "Integrates security reviews into design and code review processes; ensures team completes compliance training and addresses findings on schedule"},
-      {"level": 4, "description": "Champions security as an engineering quality attribute; builds automated guardrails and drives threat modeling as a standard practice for new systems"},
-      {"level": 5, "description": "Shapes org-wide security and compliance strategy; establishes frameworks that make secure-by-default the path of least resistance for all teams"}
+      {
+        "level": 1,
+        "description": "Security and compliance are treated as afterthoughts; team has unresolved audit findings and no awareness of relevant regulatory requirements"
+      },
+      {
+        "level": 2,
+        "description": "Reacts to security issues and compliance requests but does not proactively integrate security practices into the development lifecycle"
+      },
+      {
+        "level": 3,
+        "description": "Integrates security reviews into design and code review processes; ensures team completes compliance training and addresses findings on schedule"
+      },
+      {
+        "level": 4,
+        "description": "Champions security as an engineering quality attribute; builds automated guardrails and drives threat modeling as a standard practice for new systems"
+      },
+      {
+        "level": 5,
+        "description": "Shapes org-wide security and compliance strategy; establishes frameworks that make secure-by-default the path of least resistance for all teams"
+      }
     ],
     "gapQuestions": [
       "When was the last time your team conducted a threat model for a new feature or system, and what did it surface?",
@@ -274,20 +617,47 @@
       "Can you describe a time you advocated for security investment that competed with feature delivery timelines?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How proactively do I integrate security and compliance into my team's engineering practices rather than treating them as external obligations?"},
-      {"audience": "direct-report", "question": "Does your manager make security and compliance feel like a natural part of engineering work rather than an afterthought or burden?"},
-      {"audience": "peer", "question": "How well does this manager ensure their team's systems meet security and compliance standards without creating bottlenecks for partner teams?"},
-      {"audience": "manager", "question": "How effectively does this manager maintain their team's security and compliance posture while balancing delivery priorities?"}
+      {
+        "audience": "self",
+        "question": "How proactively do I integrate security and compliance into my team's engineering practices rather than treating them as external obligations?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager make security and compliance feel like a natural part of engineering work rather than an afterthought or burden?"
+      },
+      {
+        "audience": "peer",
+        "question": "How well does this manager ensure their team's systems meet security and compliance standards without creating bottlenecks for partner teams?"
+      },
+      {
+        "audience": "manager",
+        "question": "How effectively does this manager maintain their team's security and compliance posture while balancing delivery priorities?"
+      }
     ]
   },
   {
     "capabilityId": "C14",
     "behavioralAnchors": [
-      {"level": 1, "description": "Performance reviews are vague and perfunctory; all team members receive similar ratings regardless of impact; underperformance goes unaddressed"},
-      {"level": 2, "description": "Provides differentiated ratings but feedback is generic; struggles to have direct conversations about underperformance or set clear improvement expectations"},
-      {"level": 3, "description": "Delivers honest, evidence-based performance assessments; sets clear expectations and manages underperformance with documented improvement plans"},
-      {"level": 4, "description": "Calibrates performance rigorously across the team; separates compensation decisions from developmental feedback; maintains a culture of continuous feedback"},
-      {"level": 5, "description": "Influences org-wide calibration standards; designs performance frameworks that reward impact over activity and reduce bias in evaluation processes"}
+      {
+        "level": 1,
+        "description": "Performance reviews are vague and perfunctory; all team members receive similar ratings regardless of impact; underperformance goes unaddressed"
+      },
+      {
+        "level": 2,
+        "description": "Provides differentiated ratings but feedback is generic; struggles to have direct conversations about underperformance or set clear improvement expectations"
+      },
+      {
+        "level": 3,
+        "description": "Delivers honest, evidence-based performance assessments; sets clear expectations and manages underperformance with documented improvement plans"
+      },
+      {
+        "level": 4,
+        "description": "Calibrates performance rigorously across the team; separates compensation decisions from developmental feedback; maintains a culture of continuous feedback"
+      },
+      {
+        "level": 5,
+        "description": "Influences org-wide calibration standards; designs performance frameworks that reward impact over activity and reduce bias in evaluation processes"
+      }
     ],
     "gapQuestions": [
       "How do you differentiate between a strong performer and an exceptional performer on your team, with specific examples?",
@@ -296,10 +666,22 @@
       "How do you handle the conversation when a high performer receives feedback that they are not yet ready for promotion?"
     ],
     "feedbackQuestions": [
-      {"audience": "self", "question": "How consistently do I provide honest, evidence-based performance feedback, even when the message is difficult to deliver?"},
-      {"audience": "direct-report", "question": "Does your manager provide fair and transparent performance assessments with specific examples, and do you understand where you stand?"},
-      {"audience": "peer", "question": "How effectively does this manager calibrate performance on their team and address performance issues constructively?"},
-      {"audience": "manager", "question": "How well does this manager conduct rigorous, fair performance evaluations and manage underperformance decisively?"}
+      {
+        "audience": "self",
+        "question": "How consistently do I provide honest, evidence-based performance feedback, even when the message is difficult to deliver?"
+      },
+      {
+        "audience": "direct-report",
+        "question": "Does your manager provide fair and transparent performance assessments with specific examples, and do you understand where you stand?"
+      },
+      {
+        "audience": "peer",
+        "question": "How effectively does this manager calibrate performance on their team and address performance issues constructively?"
+      },
+      {
+        "audience": "manager",
+        "question": "How well does this manager conduct rigorous, fair performance evaluations and manage underperformance decisively?"
+      }
     ]
   }
 ]

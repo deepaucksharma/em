@@ -25,7 +25,7 @@
     { "rank": 6, "metricId": "8.2", "dashboard": "qbr", "cadence": "quarterly", "rationale": "How you justify the org's existence and defend headcount." },
     { "rank": 7, "metricId": "3.3", "dashboard": "main", "cadence": "monthly", "rationale": "Are teams following the freeze/slowdown policy? If not, SLO compliance will degrade." },
     { "rank": 8, "metricId": "1.2", "dashboard": "main", "cadence": "monthly", "rationale": "Find structural bottlenecks. Compare with archetype context." },
-    { "rank": 9, "metricId": "AI-4", "dashboard": "qbr", "cadence": "quarterly", "rationale": "Predicts whether AI investment will help or hurt." },
+    { "rank": 9, "metricId": "AI-4", "dashboard": "qbr", "cadence": "quarterly", "rationale": "Org-wide readiness assessment: tooling access, training completion, policy clarity. Complements 5.9's adoption signal with structural prerequisites." },
     { "rank": 10, "metricId": "7.8", "dashboard": "main", "cadence": "quarterly", "rationale": "Macro canary. If <0, investigate immediately." },
     { "rank": 11, "metricId": "10.1", "dashboard": "qbr", "cadence": "monthly", "rationale": "Efficiency at scale. The CFO metric." },
     { "rank": 12, "metricId": "3.6", "dashboard": "main", "cadence": "monthly", "rationale": "Context for SLO compliance. Hot services." },

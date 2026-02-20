@@ -1044,249 +1044,6 @@
     "id": "C6-O10"
   },
   {
-    "title": "AP-01: The Absent Architect \u2014 EM defers all technical direction to TL/Staff and has no opinion on system evolution",
-    "description": "No tech strategy doc exists; architecture decisions are ad hoc; design reviews are inconsistent or skipped; tech debt is invisible until it causes incidents",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-absent-architect/",
-    "domain": "Execution",
-    "capabilityName": "Systems Design & Architecture",
-    "id": "AP-01"
-  },
-  {
-    "title": "AP-02: The Over-Involved Architect \u2014 EM makes every technical decision, bypassing TL/seniors",
-    "description": "EM reviews all PRs; design docs require EM approval; senior engineers are disempowered; EM is the bottleneck for every decision",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-over-involved-architect/",
-    "domain": "Execution",
-    "capabilityName": "Systems Design & Architecture",
-    "id": "AP-02"
-  },
-  {
-    "title": "AP-03: Metrics Theater \u2014 tracking DORA/SPACE dashboards without acting on them, or gaming metrics",
-    "description": "Beautiful dashboards nobody looks at; metrics improve but team doesn't feel faster; metrics targets become team KPIs used in performance reviews; 'deploy frequency' gamed by splitting deploys",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/metrics-theater/",
-    "domain": "Data",
-    "capabilityName": "Metrics, Measurement & Outcomes",
-    "id": "AP-03"
-  },
-  {
-    "title": "AP-04: Velocity Obsession \u2014 optimizing for shipping speed while quality, reliability, and sustainability degrade",
-    "description": "Rising change failure rate alongside rising deployment frequency; increasing on-call pages; growing tech debt backlog; team working overtime 'to ship'; cutting testing 'to move faster'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/velocity-obsession/",
-    "domain": "Reliability",
-    "capabilityName": "Incidents, Risk & Reliability",
-    "id": "AP-04"
-  },
-  {
-    "title": "AP-05: Security As Someone Else's Problem \u2014 EM treats security as the security team's job, not the engineering team's responsibility",
-    "description": "Security reviews are afterthoughts or skipped; vulnerabilities linger beyond SLA; team doesn't know basic security practices; 'we'll fix it after launch'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/security-as-someone-elses-problem/",
-    "domain": "Reliability",
-    "capabilityName": "Security & Compliance Posture",
-    "id": "AP-05"
-  },
-  {
-    "title": "AP-06: Hero Culture \u2014 incidents resolved by the same 2-3 people every time; tribal knowledge instead of process",
-    "description": "Same people always on incident calls; no runbooks; new team members useless during incidents; MTTR depends on who's on-call; hero engineers burned out",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/hero-culture/",
-    "domain": "Reliability",
-    "capabilityName": "Incidents, Risk & Reliability",
-    "id": "AP-06"
-  },
-  {
-    "title": "AP-07: Blame Post-Mortems \u2014 post-incident analysis becomes finger-pointing, driving incidents underground",
-    "description": "People avoid documenting what went wrong; root causes listed as 'human error'; defensive language in post-mortems; fewer incidents reported (not fewer incidents occurring); near-misses never discussed",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/blame-post-mortems/",
-    "domain": "Reliability",
-    "capabilityName": "Incidents, Risk & Reliability",
-    "id": "AP-07"
-  },
-  {
-    "title": "AP-08: Re-org Addiction \u2014 constantly restructuring teams instead of solving underlying problems",
-    "description": "More than one re-org per year; teams never stabilize; people joke about 'the next re-org'; leadership sees re-orgs as solutions to execution problems",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/re-org-addiction/",
-    "domain": "Strategy",
-    "capabilityName": "Org-Level Thinking",
-    "id": "AP-08"
-  },
-  {
-    "title": "AP-09: Fuzzy Ownership \u2014 multiple teams think they own the same thing, or nobody owns it",
-    "description": "Incidents where 3 teams are paged and nobody acts; features that 'slip through the cracks'; cross-team meetings to figure out 'who should build this'; duplicate implementations discovered",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/fuzzy-ownership/",
-    "domain": "Strategy",
-    "capabilityName": "Org-Level Thinking",
-    "id": "AP-09"
-  },
-  {
-    "title": "AP-10: Conflict Avoidance \u2014 EM avoids difficult conversations, lets problems fester, gives vague feedback",
-    "description": "Underperformers coasting for quarters; team frustration about 'dead weight'; EM gives everyone positive feedback; real issues discussed in back-channels; skip-level 1:1s reveal problems EM hasn't addressed",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/conflict-avoidance/",
-    "domain": "People",
-    "capabilityName": "Coaching & Talent Development",
-    "id": "AP-10"
-  },
-  {
-    "title": "AP-11: The Bubble \u2014 EM only hears good news because team doesn't feel safe sharing problems",
-    "description": "EM thinks team is happy; engagement survey results are surprising; problems discovered through incidents or attrition, not through communication; 1:1s are pleasant but shallow",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-bubble/",
-    "domain": "People",
-    "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-11"
-  },
-  {
-    "title": "AP-12: The 24/7 Manager \u2014 EM is always available, always responsive, and burning out while modeling unsustainable behavior",
-    "description": "EM responds to Slack at midnight; team feels guilty taking PTO because EM never does; EM can't delegate because 'it's faster to do it myself'; EM's manager doesn't know EM is underwater",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-247-manager/",
-    "domain": "Stakeholder",
-    "capabilityName": "Decision Framing & Communication",
-    "id": "AP-12"
-  },
-  {
-    "title": "AP-13: Lowering the Bar Under Pressure \u2014 hiring warm bodies because reqs are open and leadership is asking",
-    "description": "Declining interview scores accepted with 'we need someone'; onboarding problems increase; regrettable hires within 12 months; team quality diluted",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/lowering-the-bar-under-pressure/",
-    "domain": "People",
-    "capabilityName": "Hiring, Onboarding & Role Design",
-    "id": "AP-13"
-  },
-  {
-    "title": "AP-14: The Clone Factory \u2014 hiring people who look, think, and work exactly like the current team",
-    "description": "Homogeneous team; same backgrounds and perspectives; groupthink in design reviews; interview process unconsciously filters for 'culture fit' meaning 'like us'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-clone-factory/",
-    "domain": "People",
-    "capabilityName": "Hiring, Onboarding & Role Design",
-    "id": "AP-14"
-  },
-  {
-    "title": "AP-15: The Permanent PIP \u2014 using performance management as punishment instead of genuine development tool",
-    "description": "PIPs designed to fail; documentation started only when exit decision already made; no real coaching or support during PIP; team perceives PIPs as 'you're being fired slowly'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-permanent-pip/",
-    "domain": "People",
-    "capabilityName": "Performance Management & Calibration",
-    "id": "AP-15"
-  },
-  {
-    "title": "AP-16: Promotion as Retention \u2014 promoting people who aren't ready to prevent them from leaving",
-    "description": "Engineers promoted without next-level evidence; newly promoted engineers struggling at new level; promo rate high but calibration pushback increasing; 'title inflation'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/promotion-as-retention/",
-    "domain": "People",
-    "capabilityName": "Performance Management & Calibration",
-    "id": "AP-16"
-  },
-  {
-    "title": "AP-17: The Lake Wobegon Effect \u2014 rating everyone above average, avoiding differentiation",
-    "description": "All reports rated 'Exceeds Expectations'; calibration committee overrides your ratings; no one on your team has development areas in their review; skip-level feedback contradicts your assessments",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-lake-wobegon-effect/",
-    "domain": "People",
-    "capabilityName": "Performance Management & Calibration",
-    "id": "AP-17"
-  },
-  {
-    "title": "AP-18: Culture by Accident \u2014 no intentional culture, just whatever norms emerge from the loudest personalities",
-    "description": "Team norms driven by most senior/vocal person; new hires absorb unhealthy patterns; no written team charter; 'that's just how we do things' is the only explanation",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/culture-by-accident/",
-    "domain": "People",
-    "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-18"
-  },
-  {
-    "title": "AP-19: The Super-EM \u2014 Director who manages ICs through their EMs, undermining EM authority",
-    "description": "ICs come to Director instead of their EM; Director gives direction that contradicts EM's plan; EMs feel like figureheads; Director in too many operational details",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-super-em/",
-    "domain": "Strategy",
-    "capabilityName": "Org-Level Thinking",
-    "id": "AP-19"
-  },
-  {
-    "title": "AP-20: Absent Director \u2014 delegates everything and disappears, providing no coaching, context, or support",
-    "description": "EMs making conflicting decisions; no cross-team alignment; EMs don't know organizational context; Director can't articulate what their teams are doing; skip-level feedback: 'I never see my Director'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/absent-director/",
-    "domain": "People",
-    "capabilityName": "Coaching & Talent Development",
-    "id": "AP-20"
-  },
-  {
-    "title": "AP-21: The Feature Factory \u2014 team builds whatever PM asks without questioning whether it's the right investment",
-    "description": "Roadmap is just PM's feature list; no engineering-initiated work; tech debt never prioritized; team can't articulate why they're building what they're building; no OKRs, just a Jira backlog",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-feature-factory/",
-    "domain": "Strategy",
-    "capabilityName": "Strategic Prioritization",
-    "id": "AP-21"
-  },
-  {
-    "title": "AP-22: The Adversarial Triad \u2014 Eng/PM/Design in constant conflict, treating each other as obstacles instead of partners",
-    "description": "Blame between functions when things go wrong; PM and Eng have separate roadmaps; Design excluded from technical decisions; 'us vs them' language in team meetings",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-adversarial-triad/",
-    "domain": "Stakeholder",
-    "capabilityName": "Cross-Functional Influence",
-    "id": "AP-22"
-  },
-  {
-    "title": "AP-23: The Surprise Factory \u2014 leadership learns about problems from other people, not from you",
-    "description": "VP asks about a project delay you haven't reported; partner team escalates an issue you thought was contained; your manager is blindsided in a meeting; 'why am I hearing about this from [someone else]?'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-surprise-factory/",
-    "domain": "Stakeholder",
-    "capabilityName": "Decision Framing & Communication",
-    "id": "AP-23"
-  },
-  {
-    "title": "AP-24: Empire Building \u2014 expanding scope for status rather than customer or business impact",
-    "description": "Politicking for headcount without clear need; absorbing teams without clear benefit; optimizing for org size rather than org impact; 'more reports = more important'",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/empire-building/",
-    "domain": "Stakeholder",
-    "capabilityName": "Cross-Functional Influence",
-    "id": "AP-24"
-  },
-  {
-    "title": "AP-25: The Blank Check Mentality \u2014 asking for resources without cost consciousness or ROI justification",
-    "description": "Every problem's solution is 'we need more headcount'; no cost tracking for cloud/infra; proposals lack ROI analysis; never voluntarily reducing spend; surprised by budget discussions",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-blank-check-mentality/",
-    "domain": "Strategy",
-    "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-25"
-  },
-  {
-    "title": "AP-26: Analysis Paralysis \u2014 every decision requires exhaustive analysis, committees, and consensus before action",
-    "description": "Simple decisions take weeks; team waits for EM approval on everything; meetings to plan meetings; 'let's get more data' as default response; reversible decisions treated as irreversible",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/analysis-paralysis/",
-    "domain": "Stakeholder",
-    "capabilityName": "Decision Framing & Communication",
-    "id": "AP-26"
-  },
-  {
-    "title": "AP-27: The Yes Machine \u2014 agreeing to everything, never pushing back, never making trade-offs explicit",
-    "description": "Team overcommitted; every stakeholder thinks their request is accepted; deadlines consistently missed; team working overtime; EM apologizing constantly",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-yes-machine/",
-    "domain": "Strategy",
-    "capabilityName": "Strategic Prioritization",
-    "id": "AP-27"
-  },
-  {
     "title": "P-C6-1: Your Top Performer Gives 2 Weeks Notice",
     "description": "Your best senior engineer has an offer from a competitor. They seem decided but are giving you a courtesy conversation.",
     "type": "playbook",
@@ -1692,60 +1449,6 @@
     "id": "P-C3-3"
   },
   {
-    "title": "The IC Trap",
-    "description": "The IC Trap \u2014 EM spends their time writing code and reviewing PRs instead of doing the actual management work their team needs",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-ic-trap/",
-    "domain": "People",
-    "capabilityName": "Coaching & Talent Development",
-    "id": "AP-28"
-  },
-  {
-    "title": "Death by Metrics",
-    "description": "Death by Metrics \u2014 EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/death-by-metrics/",
-    "domain": "Data",
-    "capabilityName": "Metrics, Measurement & Outcomes",
-    "id": "AP-29"
-  },
-  {
-    "title": "The Consensus Trap",
-    "description": "The Consensus Trap \u2014 EM treats every decision as requiring unanimous agreement, turning consensus into a procrastination mechanism",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-consensus-trap/",
-    "domain": "Stakeholder",
-    "capabilityName": "Decision Framing & Communication",
-    "id": "AP-30"
-  },
-  {
-    "title": "Meeting Debt",
-    "description": "Meeting Debt \u2014 team drowning in ceremonies and syncs until engineers have less than two hours of uninterrupted focus time per day",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/meeting-debt/",
-    "domain": "Execution",
-    "capabilityName": "Operational Leadership & Rhythm",
-    "id": "AP-31"
-  },
-  {
-    "title": "Documentation Hoarding",
-    "description": "Documentation Hoarding \u2014 EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful, creating a graveyard of stale pages",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/documentation-hoarding/",
-    "domain": "Execution",
-    "capabilityName": "Operational Leadership & Rhythm",
-    "id": "AP-32"
-  },
-  {
-    "title": "The Hero EM",
-    "description": "The Hero EM \u2014 manager who solves every problem personally, takes over every escalation, and works unsustainable hours while the team never develops independence",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-hero-em/",
-    "domain": "People",
-    "capabilityName": "Coaching & Talent Development",
-    "id": "AP-33"
-  },
-  {
     "title": "Quarterly Planning When Product and Engineering Disagree on Priorities",
     "description": "It's planning season. Product wants to invest heavily in new features for a key customer segment. Engineering wants to p",
     "type": "playbook",
@@ -1780,51 +1483,6 @@
     "domain": "Execution",
     "capabilityName": "Operational Leadership & Rhythm",
     "id": "P-C4-2"
-  },
-  {
-    "title": "The Infinite Runway",
-    "description": "The Infinite Runway \u2014 EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-infinite-runway/",
-    "domain": "Strategy",
-    "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-35"
-  },
-  {
-    "title": "Security as Afterthought",
-    "description": "Security as Afterthought \u2014 security reviews happen only after incidents, not as part of the development workflow",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/security-as-afterthought/",
-    "domain": "Reliability",
-    "capabilityName": "Security & Compliance Posture",
-    "id": "AP-36"
-  },
-  {
-    "title": "Compliance Cramming",
-    "description": "Compliance Cramming \u2014 EM treats compliance as a periodic audit exercise rather than continuous posture",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/compliance-cramming/",
-    "domain": "Reliability",
-    "capabilityName": "Security & Compliance Posture",
-    "id": "AP-37"
-  },
-  {
-    "title": "The Ivory Tower Architect",
-    "description": "The Ivory Tower Architect \u2014 EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-ivory-tower-architect/",
-    "domain": "Execution",
-    "capabilityName": "Systems Design & Architecture",
-    "id": "AP-38"
-  },
-  {
-    "title": "The Vanity Dashboard",
-    "description": "The Vanity Dashboard \u2014 EM builds impressive-looking dashboards that measure activity instead of outcomes",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-vanity-dashboard/",
-    "domain": "Data",
-    "capabilityName": "Metrics, Measurement & Outcomes",
-    "id": "AP-39"
   },
   {
     "title": "1.2: Lead Time for Changes",
@@ -2925,51 +2583,6 @@
     "id": "C8-O8"
   },
   {
-    "title": "AP-40: The Missing Stair \u2014 EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them",
-    "description": "New hires warned informally about 'how to handle' a specific person; team has workarounds for someone's behavior; complaints in skip-levels about someone EM hasn't addressed; code review avoidance patterns around one person; 1:1s with other reports frequently mention the same person",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-missing-stair/",
-    "domain": "People",
-    "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-40"
-  },
-  {
-    "title": "AP-41: Culture Tourism \u2014 EM treats culture building as periodic events (off-sites, pizza, team lunches) rather than daily structural practices",
-    "description": "Team building = quarterly off-sites; culture initiative = Slack emoji reactions; no written team norms; culture conversations only happen when engagement scores drop; fun activities substituted for addressing real team dysfunction; 'we have great culture' but people are leaving",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/culture-tourism/",
-    "domain": "People",
-    "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-41"
-  },
-  {
-    "title": "AP-42: Peanut Butter Spreading \u2014 EM distributes resources evenly across all projects instead of concentrating on highest-impact bets",
-    "description": "Every project gets exactly 1-2 engineers; no project has enough resources to succeed; everything moves slowly; nothing gets killed; team feels spread thin; 'we're working on everything' but shipping nothing meaningful",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/peanut-butter-spreading/",
-    "domain": "Strategy",
-    "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-42"
-  },
-  {
-    "title": "AP-43: The Telephone Game \u2014 information degrades as it passes through management layers because there's no source-of-truth documentation",
-    "description": "Team's understanding of strategy differs from leadership's intent; 'I heard from my manager who heard from their manager' is common; written strategy docs don't exist or are stale; different teams interpret the same directive differently; confusion after all-hands about what was actually decided",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-telephone-game/",
-    "domain": "Stakeholder",
-    "capabilityName": "Decision Framing & Communication",
-    "id": "AP-43"
-  },
-  {
-    "title": "AP-44: The Recency Trap \u2014 EM's performance assessment dominated by last 6 weeks instead of full review period, rewarding or punishing based on timing rather than sustained performance",
-    "description": "Review feedback mostly references recent projects; engineers who had strong H1 but quiet H2 get middling reviews; someone's one mistake in November overshadows 10 months of excellence; EM can't cite specific examples from early in the review period; performance rating correlates with what happened last month, not the full cycle",
-    "type": "anti-pattern",
-    "url": "/anti-patterns/the-recency-trap/",
-    "domain": "People",
-    "capabilityName": "Performance Management & Calibration",
-    "id": "AP-44"
-  },
-  {
     "title": "P-C12-3: Your Team Culture Is Deteriorating After Rapid Growth",
     "description": "Your team doubled from 6 to 12 in 3 months. Skip-level feedback reveals new hires feel excluded, original team members feel their culture is gone, and collaboration norms are breaking down.",
     "type": "playbook",
@@ -3022,5 +2635,1035 @@
     "domain": "People",
     "capabilityName": "Performance Management & Calibration",
     "id": "P-C14-3"
+  },
+  {
+    "title": "C13-O5: Embeds security champions within the team who own security awareness and review practices",
+    "description": "Rotates a security champion role quarterly among senior engineers, who attend security guild meetings, review threat models for new features, and run quarterly security training for the team.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O5"
+  },
+  {
+    "title": "C13-O6: Integrates automated security scanning into CI/CD pipeline with severity-based deployment gates",
+    "description": "Pipeline includes SAST, dependency scanning, and container image scanning. Critical/High vulnerabilities block deployment automatically. Medium vulnerabilities create tracked tickets with 30-day SLA.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O6"
+  },
+  {
+    "title": "C13-O7: Conducts threat modeling for features touching sensitive data, authentication, or external interfaces",
+    "description": "Before launching a new payment integration, leads a STRIDE-based threat model session with the team, identifies 4 attack vectors, implements mitigations, and documents accepted risks with business justification.",
+    "type": "observable",
+    "url": "/capabilities/security-compliance-posture/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "C13-O7"
+  },
+  {
+    "title": "C11-O9: Designs structured interview processes with rubrics that evaluate demonstrated competencies over pedigree",
+    "description": "Replaces 'culture fit' assessment with structured behavioral questions mapped to role competencies. Every interviewer uses the same rubric. Scoring happens independently before debrief to prevent anchoring.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O9"
+  },
+  {
+    "title": "C11-O10: Builds competitive hiring strategy that wins talent without solely competing on compensation",
+    "description": "When competing against FAANG offers, articulates differentiated value proposition: faster career growth, higher impact per engineer, meaningful product ownership. Pairs with competitive (if not top-of-market) compensation and strong employer branding.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O10"
+  },
+  {
+    "title": "C11-O11: Measures and optimizes hiring funnel conversion rates with data-driven pipeline management",
+    "description": "Tracks conversion rates at each hiring stage (sourcing \u2192 screen \u2192 onsite \u2192 offer \u2192 accept). Identifies bottlenecks, A/B tests improvements, and shares pipeline health with leadership weekly.",
+    "type": "observable",
+    "url": "/capabilities/hiring-onboarding-role-design/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "C11-O11"
+  },
+  {
+    "title": "C4-O12: Diagnoses and resolves engineering velocity bottlenecks using systemic analysis, not just process changes",
+    "description": "When team velocity drops, maps the entire value stream from idea to production, identifies specific bottleneck (code review turnaround was 3 days), implements targeted fix (review SLA + pairing rotation), and measures improvement.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O12"
+  },
+  {
+    "title": "C4-O13: Protects maker time with structural calendar policies ensuring engineers have 4+ hours of uninterrupted focus daily",
+    "description": "Establishes meeting-free mornings, consolidates ceremonies into 2 days per week, defaults to async for status updates, and tracks focus time as a team health metric. Engineers report 5+ hours of focus time daily.",
+    "type": "observable",
+    "url": "/capabilities/operational-leadership-rhythm/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "C4-O13"
+  },
+  {
+    "title": "C9-O9: Uses metric pairings to prevent single-metric optimization \u2014 always balances speed with quality",
+    "description": "Pairs deployment frequency with change failure rate; pairs cycle time with customer-reported bugs; pairs velocity with tech debt ratio. Never reports a speed metric without its quality counterpart.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O9"
+  },
+  {
+    "title": "C9-O10: Adapts metric sophistication to organizational maturity \u2014 starts simple and evolves based on decisions driven",
+    "description": "For a new team, starts with 3 core metrics (cycle time, deployment frequency, change failure rate). Adds developer satisfaction surveys after 1 quarter. Introduces SPACE framework dimensions only after basic metrics drive consistent decisions.",
+    "type": "observable",
+    "url": "/capabilities/metrics-measurement-outcomes/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "C9-O10"
+  },
+  {
+    "title": "C3-O11: Quantifies tech debt impact in business terms and maintains a prioritized tech debt backlog with ROI justification",
+    "description": "Maintains a tech debt registry where each item has estimated cost-of-delay, risk rating, and remediation cost. Presents quarterly tech debt report to leadership in business terms: 'This tech debt item costs us 2 engineer-days per sprint in workarounds and has caused 3 incidents.'",
+    "type": "observable",
+    "url": "/capabilities/systems-design-architecture/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "C3-O11"
+  },
+  {
+    "title": "C5-O16: Maintains alignment with product and design through regular triad syncs and shared success metrics",
+    "description": "Weekly 30-minute triad sync with PM and Design lead. Shared OKRs (not separate Eng/PM OKRs). Joint quarterly retrospective. When disagreements arise, resolves within the triad before escalating.",
+    "type": "observable",
+    "url": "/capabilities/cross-functional-influence/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "C5-O16"
+  },
+  {
+    "title": "C6-O13: Creates clear career pathways for engineers at all levels, including IC and management tracks",
+    "description": "Maintains documented career ladder with specific expectations per level. Helps engineers choose between IC and management tracks based on strengths and interests. Creates explicit pathways for Staff+ ICs alongside management progression.",
+    "type": "observable",
+    "url": "/capabilities/coaching-talent-development/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "C6-O13"
+  },
+  {
+    "title": "P-C13-2: Building a DevSecOps Culture From Scratch",
+    "description": "Your team has no security practices embedded in the development workflow. Security reviews happen only when the security team has bandwidth (which is never). Your team shipped a feature with a known SQL injection vulnerability because 'security didn't review it in time.'",
+    "type": "playbook",
+    "url": "/playbooks/building-devsecops-culture-from-scratch/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "P-C13-2"
+  },
+  {
+    "title": "P-C11-3: Your Interview Process Is Rejecting Good Candidates",
+    "description": "Your team has been hiring for 4 months with zero offers extended. Recruiting says candidate quality is high, but your interviewers keep saying 'not a strong enough signal.' You suspect the interview process itself is the problem.",
+    "type": "playbook",
+    "url": "/playbooks/your-interview-process-is-rejecting-good-candidates/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "P-C11-3"
+  },
+  {
+    "title": "P-C4-3: Your Team Is Agile in Name Only",
+    "description": "Your team runs 'sprints' but nothing is really iterative. Sprint planning is task assignment by the EM. Retros generate action items nobody completes. Standup is a status report to you. The team jokes about 'waterfall with standups.'",
+    "type": "playbook",
+    "url": "/playbooks/your-team-is-agile-in-name-only/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "P-C4-3"
+  },
+  {
+    "title": "P-C9-2: Leadership Wants Engineering Productivity Metrics Yesterday",
+    "description": "Your VP asks for a 'developer productivity dashboard' by next month. They want to see engineering ROI. Your team currently has no metrics infrastructure. You know that naive productivity metrics can be destructive.",
+    "type": "playbook",
+    "url": "/playbooks/leadership-wants-engineering-productivity-metrics-yesterday/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "P-C9-2"
+  },
+  {
+    "title": "P-C5-6: Product and Engineering Have Separate Roadmaps",
+    "description": "You discover that PM has a roadmap they share with stakeholders, and your engineering team has a separate technical roadmap. The two don't align. PM is frustrated that engineering is 'doing their own thing.' Engineering is frustrated that PM doesn't account for technical investment.",
+    "type": "playbook",
+    "url": "/playbooks/product-and-engineering-have-separate-roadmaps/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "P-C5-6"
+  },
+  {
+    "title": "P-C6-5: Your New Engineering Manager Is Struggling With the IC-to-EM Transition",
+    "description": "You promoted your best senior engineer to EM 3 months ago. They're still writing code 50% of the time, 1:1s are technical problem-solving sessions, and skip-level feedback reveals reports feel unsupported. Your new EM is frustrated that 'management is keeping me from real work.'",
+    "type": "playbook",
+    "url": "/playbooks/your-new-engineering-manager-is-struggling-with-the-transition-from-ic/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "P-C6-5"
+  },
+  {
+    "title": "C1-O16: Translates business strategy into team-level goals",
+    "description": "Translates business strategy into team-level goals with explicit success criteria and cross-team dependency mapping",
+    "type": "observable",
+    "url": "/capabilities/org-level-thinking/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "C1-O16"
+  },
+  {
+    "title": "C7-O11: Communicates trade-offs explicitly",
+    "description": "Communicates trade-offs explicitly \u2014 names what's being sacrificed, for whom, and why it's the right call",
+    "type": "observable",
+    "url": "/capabilities/decision-framing-communication/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "C7-O11"
+  },
+  {
+    "title": "C14-O9: Executes managed exits with dignity",
+    "description": "Executes managed exits with dignity \u2014 clear timeline, support, and no surprises for the departing employee",
+    "type": "observable",
+    "url": "/capabilities/performance-management-calibration/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "C14-O9"
+  },
+  {
+    "title": "P-C8-4: Building Incident Readiness Before Your First Major Outage",
+    "description": "Your team owns a growing service but has never had a serious incident. There are no runbooks, no defined on-call rotation, and no incident response process. You know it's a matter of when, not if.",
+    "type": "playbook",
+    "url": "/playbooks/building-incident-readiness-before-your-first-major-outage/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "P-C8-4"
+  },
+  {
+    "title": "P-C8-5: Your On-Call Rotation Is Burning People Out",
+    "description": "Your on-call engineers are getting paged 10+ times per week. The same alerts fire repeatedly. Morale is cratering. Two engineers have asked to be removed from the rotation. You're losing people to teams with better operational hygiene.",
+    "type": "playbook",
+    "url": "/playbooks/your-on-call-rotation-is-burning-people-out/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability, Operational Leadership & Rhythm",
+    "id": "P-C8-5"
+  },
+  {
+    "title": "P-C9-3: Your Metrics Are Being Gamed and Everyone Knows It",
+    "description": "Leadership set a deployment frequency target. Your team is now deploying tiny changes to hit the number, but cycle time is actually worse and code review quality has dropped. Engineers are cynical about measurement.",
+    "type": "playbook",
+    "url": "/playbooks/your-metrics-are-being-gamed-and-everyone-knows-it/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "P-C9-3"
+  },
+  {
+    "title": "P-C9-4: Choosing the Right Metrics Framework for Your Team's Maturity",
+    "description": "You've been asked to implement DORA metrics, but your team has no CI/CD pipeline, manual deployments, and no incident tracking. Jumping to DORA feels premature but leadership wants 'engineering productivity metrics'.",
+    "type": "playbook",
+    "url": "/playbooks/choosing-the-right-metrics-framework-for-your-teams-maturity/",
+    "domain": "Execution",
+    "capabilityName": "Metrics, Measurement & Outcomes, Operational Leadership & Rhythm",
+    "id": "P-C9-4"
+  },
+  {
+    "title": "P-C13-3: Your Team Keeps Failing Security Audits With the Same Findings",
+    "description": "For the third year in a row, your external audit surfaces the same categories of findings: stale access permissions, unpatched dependencies, and missing encryption at rest. Your team scrambles before each audit but nothing sticks. Leadership is frustrated.",
+    "type": "playbook",
+    "url": "/playbooks/your-team-keeps-failing-security-audits-with-the-same-findings/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "P-C13-3"
+  },
+  {
+    "title": "P-C13-4: Balancing Security Risk With Shipping Speed After a Close Call",
+    "description": "A near-miss security incident revealed that a feature shipped without a threat model \u2014 a known SQL injection vulnerability was caught in production monitoring before it was exploited. Leadership wants to know how this happened and what you're doing to prevent it.",
+    "type": "playbook",
+    "url": "/playbooks/balancing-security-risk-with-shipping-speed-after-a-close-call/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture, Incidents, Risk & Reliability",
+    "id": "P-C13-4"
+  },
+  {
+    "title": "P-C11-4: Scaling Your Interview Process From 5 to 50 Hires Per Year",
+    "description": "Your team went from hiring 1-2 engineers per quarter to needing 10+ per quarter. Your ad-hoc interview process worked fine at low volume but now you're seeing: inconsistent evaluations between interviewers, candidates getting wildly different interview experiences, no data on what predicts success, and your best engineers spending 30% of their time interviewing.",
+    "type": "playbook",
+    "url": "/playbooks/scaling-your-interview-process-from-5-to-50-hires-per-year/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "P-C11-4"
+  },
+  {
+    "title": "P-C14-4: Running Your First Cross-Team Performance Calibration",
+    "description": "You've been asked to lead calibration across 4 engineering teams (~30 engineers). Each manager has their own standards \u2014 some are generous, some are strict. There's no shared vocabulary for what 'exceeds expectations' means. You need consistent, fair outcomes.",
+    "type": "playbook",
+    "url": "/playbooks/running-your-first-cross-team-performance-calibration/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "P-C14-4"
+  },
+  {
+    "title": "P-C4-4: Mobilizing Your Team for a High-Stakes Deadline",
+    "description": "Your team has 6 weeks to deliver a major feature that would normally take 12. It's a real business-critical deadline (contract commitment, not artificial urgency). You need to supercharge execution without burning people out.",
+    "type": "playbook",
+    "url": "/playbooks/mobilizing-your-team-for-a-high-stakes-deadline/",
+    "domain": "Strategy",
+    "capabilityName": "Operational Leadership & Rhythm, Resource Allocation & Tradeoffs",
+    "id": "P-C4-4"
+  },
+  {
+    "title": "P-C12-5: Building Team Culture Through Intentional Rituals",
+    "description": "Your team ships reliably but lacks cohesion. Engineers don't understand business metrics, don't contribute to roadmap discussions, and treat culture as 'something HR does.' Retros feel perfunctory and nobody proposes ambitious improvements. You want to move from a group of individuals to a genuine team.",
+    "type": "playbook",
+    "url": "/playbooks/building-team-culture-through-intentional-rituals/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "P-C12-5"
+  },
+  {
+    "title": "P-C12-6: Rebuilding Psychological Safety After Organizational Disruption",
+    "description": "Your organization just went through layoffs, a major re-org, or leadership change. The remaining team is disengaged \u2014 people avoid speaking up in meetings, nobody challenges decisions, risk-taking has stopped, and your best performers are quietly interviewing. Trust has evaporated.",
+    "type": "playbook",
+    "url": "/playbooks/rebuilding-psychological-safety-after-organizational-disruption/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "P-C12-6"
+  },
+  {
+    "title": "P-C10-5: Navigating Your First Annual Engineering Budget Cycle",
+    "description": "You've been promoted to a role where you now own budget planning for the first time. You need to present a headcount plan, tooling budget, and infrastructure forecast to finance and your VP. You've never done this before and don't want to show up with a wishlist that gets cut in half.",
+    "type": "playbook",
+    "url": "/playbooks/navigating-your-first-annual-engineering-budget-cycle/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "P-C10-5"
+  },
+  {
+    "title": "P-C2-3: Everything Is Priority Zero and Your Team Is Drowning",
+    "description": "Every initiative in flight has been labeled 'highest priority' by a different stakeholder. Your team is context-switching between 5 workstreams, nothing is finishing, and engineers are frustrated. You tried pushing back but each stakeholder explains why theirs is genuinely the most urgent. Sprint commitments are meaningless.",
+    "type": "playbook",
+    "url": "/playbooks/everything-is-priority-zero-and-your-team-is-drowning/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "P-C2-3"
+  },
+  {
+    "title": "P-C3-4: Managing Tech Debt Strategically Without Stopping the Roadmap",
+    "description": "Your team has significant tech debt that's slowing delivery, but you can't stop the roadmap for a multi-month cleanup. Product is sympathetic but won't give you a quarter of dedicated refactoring time. Engineers are frustrated by working around old decisions. Previous 'tech debt sprints' produced feel-good cleanup that didn't move the needle on actual velocity.",
+    "type": "playbook",
+    "url": "/playbooks/managing-tech-debt-strategically-without-stopping-the-roadmap/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "P-C3-4"
+  },
+  {
+    "title": "P-C7-4: Making a High-Stakes Technical Decision Under Time Pressure",
+    "description": "You need to decide between two architectural approaches for a critical project. Both have significant trade-offs. Your team is split. Leadership wants an answer by Friday. The wrong choice will be expensive to reverse. You're feeling pressure to either over-analyze (missing the deadline) or decide too fast (regret later). Previous big decisions have been revisited repeatedly because they weren't well-documented.",
+    "type": "playbook",
+    "url": "/playbooks/making-a-high-stakes-technical-decision-under-time-pressure/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "P-C7-4"
+  },
+  {
+    "title": "P-C11-5: Your Onboarding Is Broken and New Hires Are Struggling",
+    "description": "New engineers take 6+ months to become productive. They report feeling lost in their first weeks, unsure who to ask for help, and overwhelmed by undocumented tribal knowledge. Your most recent hire quietly admitted in their 1:1 that they considered leaving in month two. Meanwhile, your tenured engineers complain they spend too much time answering basic questions.",
+    "type": "playbook",
+    "url": "/playbooks/your-onboarding-is-broken-and-new-hires-are-struggling/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "P-C11-5"
+  },
+  {
+    "title": "P-C13-5: Responding to a Critical Dependency Vulnerability",
+    "description": "A CVE is published for a widely-used open source dependency in your stack (think Log4Shell, XZ Utils-class events). The vulnerability is rated critical. Your team doesn't know how many services are affected, there's no bill of materials, and leadership is asking for a status update. Security is asking when you'll be patched. You're not sure where to start.",
+    "type": "playbook",
+    "url": "/playbooks/responding-to-a-critical-dependency-vulnerability/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "P-C13-5"
+  },
+  {
+    "title": "P-C14-5: Putting an Engineer on a PIP Designed to Succeed",
+    "description": "An engineer on your team has been underperforming for months despite verbal feedback and informal coaching. You've documented the pattern and HR agrees a formal Performance Improvement Plan is appropriate. You've never run a PIP before and you're unsure how to make it genuinely developmental rather than just a paper trail to termination. The engineer is anxious and the team is watching.",
+    "type": "playbook",
+    "url": "/playbooks/putting-an-engineer-on-a-pip-designed-to-succeed/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "P-C14-5"
+  },
+  {
+    "title": "P-C7-5: Your Project Is Going to Miss Its Deadline",
+    "description": "You're three weeks from a committed deadline and you've realized the team won't make it. The gap isn't small \u2014 you're looking at 2-4 weeks of additional work. Your VP has already communicated the date to customers. Product is counting on this for their quarterly goals. You're dreading the conversation but every day you delay makes it worse.",
+    "type": "playbook",
+    "url": "/playbooks/your-project-is-going-to-miss-its-deadline/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "P-C7-5"
+  },
+  {
+    "title": "P-C9-5: Introducing Engineering Metrics to a Team That Has None",
+    "description": "Your engineering organization has no systematic metrics. Leadership makes decisions based on gut feel and anecdotes. When asked 'how is engineering doing?' you struggle to answer beyond 'we shipped X features.' You want to introduce metrics but you're worried about creating a surveillance culture or picking the wrong things to measure.",
+    "type": "playbook",
+    "url": "/playbooks/introducing-engineering-metrics-to-a-team-that-has-none/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "P-C9-5"
+  },
+  {
+    "id": "P-C2-4",
+    "type": "playbook",
+    "title": "Killing a Project That Should Have Died Months Ago",
+    "slug": "/playbooks/killing-a-project-that-should-have-died-months-ago",
+    "url": "/playbooks/killing-a-project-that-should-have-died-months-ago/",
+    "description": "A major initiative has been running for 6+ months with growing scope, shifting requirements, and declining team morale. Nobody believes it will deliver the original value, but there's significant sunk cost \u2014 engineering hours, leadership credibility, customer promises. You suspect the right move is to kill it, but everyone is afraid to be the one to say it. 1. Separate sunk cost from future value (Day 1): The money and time already spent are gone regardless. The only question is: 'Starting from today, is the remaining investment justified by the expected"
+  },
+  {
+    "id": "P-C11-6",
+    "type": "playbook",
+    "title": "Your Top Candidate Just Declined \u2014 Winning in a Competitive Talent Market",
+    "slug": "/playbooks/your-top-candidate-just-declined-winning-in-competitive-market",
+    "url": "/playbooks/your-top-candidate-just-declined-winning-in-competitive-market/",
+    "description": "You've lost three of your last five top candidates to competing offers. Your interview process is solid, candidates reach the offer stage enthusiastic, but they take another offer at the last moment. Your employer brand isn't strong enough, your compensation is competitive but not leading, and your closing process is too slow. Leadership is frustrated by open reqs that stay unfilled for months. 1. Diagnose why candidates decline (Week 1): Reach out to recent decliners with a brief, non-defensive follow-up: 'We're working to improve our process \u2014 would you share what led to your decision?' Co"
+  },
+  {
+    "id": "P-C13-6",
+    "type": "playbook",
+    "title": "Your VP Wants Engineering to 'Own Security' But Nobody Has Expertise",
+    "slug": "/playbooks/your-vp-wants-engineering-to-own-security-but-nobody-has-expertise",
+    "url": "/playbooks/your-vp-wants-engineering-to-own-security-but-nobody-has-expertise/",
+    "description": "Your VP has decided that security should shift left into engineering. There's no dedicated security team, no AppSec engineer, and nobody on your team has deep security expertise. You're expected to embed security into the development lifecycle, but your engineers see security as 'not my job' and you don't know where to start. Meanwhile, compliance requirements are growing. 1. Start with automation, not training (Month 1): Don't begin by telling engineers to 'think about security more.' Begin by adding automated security scanning to your CI/CD pipeline \u2014 dependency scann"
+  },
+  {
+    "title": "AP-01: The Absent Architect \u2014 EM defers all technical direction to TL/Staff and has no opinion on system evolution",
+    "description": "No tech strategy doc exists; architecture decisions are ad hoc; design reviews are inconsistent or skipped; tech debt is invisible until it causes incidents",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-absent-architect/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-01"
+  },
+  {
+    "title": "AP-02: The Over-Involved Architect \u2014 EM makes every technical decision, bypassing TL/seniors",
+    "description": "EM reviews all PRs; design docs require EM approval; senior engineers are disempowered; EM is the bottleneck for every decision",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-over-involved-architect/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-02"
+  },
+  {
+    "title": "AP-03: Metrics Theater \u2014 Tracking DORA/SPACE dashboards without acting on them, or gaming metrics",
+    "description": "Beautiful dashboards nobody looks at; metrics improve but team doesn't feel faster; metrics targets become team KPIs used in performance reviews; 'deploy frequency' gamed by splitting deploys",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/metrics-theater/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-03"
+  },
+  {
+    "title": "AP-04: Velocity Obsession \u2014 Optimizing for shipping speed while quality, reliability, and sustainability degrade",
+    "description": "Rising change failure rate alongside rising deployment frequency; increasing on-call pages; growing tech debt backlog; team working overtime 'to ship'; cutting testing 'to move faster'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/velocity-obsession/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-04"
+  },
+  {
+    "title": "AP-05: Security As Someone Else's Problem \u2014 EM treats security as the security team's job rather than embedding it in the engineering workflow \u2014 security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
+    "description": "Security reviews are afterthoughts or skipped; No security checkpoints in CI/CD pipeline; Vulnerabilities linger beyond SLA with months-old backlog; Team doesn't know basic security practices; 'We'll fix it after launch' or 'we'll add security later' is common; No threat modeling for new features touching auth, payments, or PII",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/security-as-someone-elses-problem/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "AP-05"
+  },
+  {
+    "title": "AP-06: Hero Culture \u2014 Incidents resolved by the same 2-3 people every time; tribal knowledge instead of process",
+    "description": "Same people always on incident calls; no runbooks; new team members useless during incidents; MTTR depends on who's on-call; hero engineers burned out",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/hero-culture/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-06"
+  },
+  {
+    "title": "AP-07: Blame Post-Mortems \u2014 Post-incident analysis becomes finger-pointing, driving incidents underground",
+    "description": "People avoid documenting what went wrong; root causes listed as 'human error'; defensive language in post-mortems; fewer incidents reported (not fewer incidents occurring); near-misses never discussed",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/blame-post-mortems/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-07"
+  },
+  {
+    "title": "AP-08: Re-org Addiction \u2014 Constantly restructuring teams instead of solving underlying problems",
+    "description": "More than one re-org per year; teams never stabilize; people joke about 'the next re-org'; leadership sees re-orgs as solutions to execution problems",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/re-org-addiction/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-08"
+  },
+  {
+    "title": "AP-09: Fuzzy Ownership \u2014 Multiple teams think they own the same thing, or nobody owns it",
+    "description": "Incidents where 3 teams are paged and nobody acts; features that 'slip through the cracks'; cross-team meetings to figure out 'who should build this'; duplicate implementations discovered",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/fuzzy-ownership/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-09"
+  },
+  {
+    "title": "AP-10: Conflict Avoidance \u2014 EM avoids difficult conversations, lets problems fester, gives vague feedback",
+    "description": "Underperformers coasting for quarters; team frustration about 'dead weight'; EM gives everyone positive feedback; real issues discussed in back-channels; skip-level 1:1s reveal problems EM hasn't addressed",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/conflict-avoidance/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-10"
+  },
+  {
+    "title": "AP-11: The Bubble \u2014 EM only hears good news because team doesn't feel safe sharing problems",
+    "description": "EM thinks team is happy; engagement survey results are surprising; problems discovered through incidents or attrition, not through communication; 1:1s are pleasant but shallow",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-bubble/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-11"
+  },
+  {
+    "title": "AP-12: The 24/7 Manager \u2014 EM is always available, always responsive, and burning out while modeling unsustainable behavior",
+    "description": "EM responds to Slack at midnight; team feels guilty taking PTO because EM never does; EM can't delegate because 'it's faster to do it myself'; EM's manager doesn't know EM is underwater",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-247-manager/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-12"
+  },
+  {
+    "title": "AP-13: Lowering the Bar Under Pressure \u2014 Hiring warm bodies because reqs are open and leadership is asking",
+    "description": "Declining interview scores accepted with 'we need someone'; onboarding problems increase; regrettable hires within 12 months; team quality diluted",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/lowering-the-bar-under-pressure/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-13"
+  },
+  {
+    "title": "AP-14: The Clone Factory \u2014 Hiring people who look, think, and work exactly like the current team",
+    "description": "Homogeneous team; same backgrounds and perspectives; groupthink in design reviews; interview process unconsciously filters for 'culture fit' meaning 'like us'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-clone-factory/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-14"
+  },
+  {
+    "title": "AP-15: The Permanent PIP \u2014 Using performance management as punishment instead of genuine development tool",
+    "description": "PIPs designed to fail; documentation started only when exit decision already made; no real coaching or support during PIP; team perceives PIPs as 'you're being fired slowly'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-permanent-pip/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-15"
+  },
+  {
+    "title": "AP-16: Promotion as Retention \u2014 Promoting people who aren't ready to prevent them from leaving",
+    "description": "Engineers promoted without next-level evidence; newly promoted engineers struggling at new level; promo rate high but calibration pushback increasing; 'title inflation'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/promotion-as-retention/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-16"
+  },
+  {
+    "title": "AP-17: The Lake Wobegon Effect \u2014 Rating everyone above average, avoiding differentiation",
+    "description": "All reports rated 'Exceeds Expectations'; calibration committee overrides your ratings; no one on your team has development areas in their review; skip-level feedback contradicts your assessments",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-lake-wobegon-effect/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-17"
+  },
+  {
+    "title": "AP-18: Culture by Accident \u2014 No intentional culture, just whatever norms emerge from the loudest personalities",
+    "description": "Team norms driven by most senior/vocal person; new hires absorb unhealthy patterns; no written team charter; 'that's just how we do things' is the only explanation",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/culture-by-accident/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-18"
+  },
+  {
+    "title": "AP-19: The Super-EM \u2014 Director who manages ICs through their EMs, undermining EM authority",
+    "description": "ICs come to Director instead of their EM; Director gives direction that contradicts EM's plan; EMs feel like figureheads; Director in too many operational details",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-super-em/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-19"
+  },
+  {
+    "title": "AP-20: Absent Director \u2014 Delegates everything and disappears, providing no coaching, context, or support",
+    "description": "EMs making conflicting decisions; no cross-team alignment; EMs don't know organizational context; Director can't articulate what their teams are doing; skip-level feedback: 'I never see my Director'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/absent-director/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-20"
+  },
+  {
+    "title": "AP-21: The Feature Factory \u2014 Team builds whatever PM asks without questioning whether it's the right investment",
+    "description": "Roadmap is just PM's feature list; no engineering-initiated work; tech debt never prioritized; team can't articulate why they're building what they're building; no OKRs, just a Jira backlog",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-feature-factory/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-21"
+  },
+  {
+    "title": "AP-22: The Adversarial Triad \u2014 Eng/PM/Design in constant conflict, treating each other as obstacles instead of partners",
+    "description": "Blame between functions when things go wrong; PM and Eng have separate roadmaps; Design excluded from technical decisions; 'us vs them' language in team meetings",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-adversarial-triad/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-22"
+  },
+  {
+    "title": "AP-23: The Surprise Factory \u2014 Leadership learns about problems from other people, not from you",
+    "description": "VP asks about a project delay you haven't reported; partner team escalates an issue you thought was contained; your manager is blindsided in a meeting; 'why am I hearing about this from [someone else]?'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-surprise-factory/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-23"
+  },
+  {
+    "title": "AP-24: Empire Building \u2014 Expanding scope for status rather than customer or business impact",
+    "description": "Politicking for headcount without clear need; absorbing teams without clear benefit; optimizing for org size rather than org impact; 'more reports = more important'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/empire-building/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-24"
+  },
+  {
+    "title": "AP-25: The Blank Check Mentality \u2014 Asking for resources without cost consciousness, ROI justification, or capacity models linking headcount to deliverables",
+    "description": "Every problem's solution is 'we need more headcount'; no cost tracking for cloud/infra; proposals lack ROI analysis; never voluntarily reducing spend; surprised by budget discussions; headcount requests lack quantitative justification; hiring doesn't improve velocity proportionally; no tracking of cost-per-outcome",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-blank-check-mentality/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-25"
+  },
+  {
+    "title": "AP-26: Analysis Paralysis \u2014 Every decision requires exhaustive analysis, committees, and consensus before action",
+    "description": "Simple decisions take weeks; team waits for EM approval on everything; meetings to plan meetings; 'let's get more data' as default response; reversible decisions treated as irreversible",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/analysis-paralysis/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-26"
+  },
+  {
+    "title": "AP-27: The Yes Machine \u2014 Agreeing to everything, never pushing back, never making trade-offs explicit",
+    "description": "Team overcommitted; every stakeholder thinks their request is accepted; deadlines consistently missed; team working overtime; EM apologizing constantly",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-yes-machine/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-27"
+  },
+  {
+    "title": "AP-28: The IC Trap \u2014 EM spends their time writing code and reviewing PRs instead of doing the actual management work their team needs",
+    "description": "EM has more GitHub commits than some ICs; 1:1s frequently rescheduled or cut short because of 'a bug I need to fix'; career conversations haven't happened in quarters; EM is deep in code during incidents instead of coordinating; team members learn about promotions and calibration from peers, not their manager",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-ic-trap/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-28"
+  },
+  {
+    "title": "AP-29: Death by Metrics \u2014 EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work",
+    "description": "Every meeting opens with 15 minutes of charts; team spends hours per sprint updating Jira for metric accuracy; engineers asked to justify time not reflected in dashboards; new metrics added but old ones never retired; team privately jokes about 'feeding the dashboard'; sprint velocity discussed more than customer impact",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/death-by-metrics/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-29"
+  },
+  {
+    "title": "AP-30: The Consensus Trap \u2014 EM treats every decision as requiring unanimous agreement, turning consensus into a procrastination mechanism",
+    "description": "Reversible decisions take weeks because 'we need to get everyone aligned'; meetings end with 'let's discuss offline' and nothing happens; one dissenter can block any decision indefinitely; EM restates everyone's position but never makes a call; team describes the process as 'death by committee'; follow-up meetings scheduled to continue discussions from previous meetings",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-consensus-trap/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-30"
+  },
+  {
+    "title": "AP-31: Meeting Debt \u2014 Team drowning in ceremonies and syncs until engineers have less than two hours of uninterrupted focus time per day",
+    "description": "Engineers' calendars are a wall of color; standup + planning + retro + sync + all-hands + skip-level + architecture review + demo + backlog grooming = most of the week; people code at night or on weekends to get 'real work' done; meetings have meetings as prerequisites; 'quick sync' is the most common calendar invite; nobody can explain which meetings are mandatory vs optional",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/meeting-debt/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-31"
+  },
+  {
+    "title": "AP-32: Documentation Hoarding \u2014 EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful, creating a graveyard of stale pages",
+    "description": "Confluence has hundreds of pages but nobody can find anything; onboarding docs reference systems that were decommissioned two years ago; engineers write docs to satisfy process but nobody reads them; 'it's documented somewhere' is followed by 30 minutes of searching; PRs require design docs for trivial changes; documentation is a checkbox, not a communication tool",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/documentation-hoarding/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-32"
+  },
+  {
+    "title": "AP-33: The Hero EM \u2014 Manager who solves every problem personally, takes over every escalation, and works unsustainable hours while the team never develops independence",
+    "description": "EM is on every incident bridge; EM's Slack activity is 3x anyone else's; team defaults to 'let's ask [EM]' instead of figuring it out; EM works 60+ hour weeks regularly; when EM takes PTO things fall apart; team members aren't growing because EM absorbs all the challenging problems; EM's manager praises their 'dedication' without seeing the dysfunction",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-hero-em/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-33"
+  },
+  {
+    "title": "AP-35: The Infinite Runway \u2014 EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
+    "description": "No cloud cost dashboards or attribution; cost spikes go unnoticed until finance flags them; 'we'll optimize later' is repeated quarterly; no cost targets per service; engineers have no visibility into cost of their services",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-infinite-runway/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-35"
+  },
+  {
+    "title": "AP-37: Compliance Cramming \u2014 EM treats compliance as a periodic audit exercise or checklist, achieving minimal technical compliance without genuine security posture improvement",
+    "description": "Compliance activities spike before audits; Access reviews happen annually instead of quarterly; permissions accumulate without review; Evidence collection is manual and rushed, only during audit prep; Security reviews are copy-paste from templates; Same audit findings recur year after year; Security champion role is ceremonial; compliance artifacts are stale; Security training is annual checkbox with no retention",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/compliance-cramming/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "AP-37"
+  },
+  {
+    "title": "AP-38: The Ivory Tower Architect \u2014 EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
+    "description": "Every project requires a complex design doc before any code is written; simple features get enterprise-grade architecture; 'best practices' block shipping; team velocity is low despite strong engineers; architecture astronaut tendencies",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-ivory-tower-architect/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-38"
+  },
+  {
+    "title": "AP-39: The Vanity Dashboard \u2014 EM builds impressive-looking dashboards that measure activity instead of outcomes",
+    "description": "Dashboards show lines of code, PRs merged, or tickets closed; no connection between metrics and business outcomes; metrics always look good but customers are unhappy; no leading indicators \u2014 only lagging; team optimizes for metric movement rather than impact",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-vanity-dashboard/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-39"
+  },
+  {
+    "title": "AP-40: The Missing Stair \u2014 EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them",
+    "description": "New hires warned informally about 'how to handle' a specific person; team has workarounds for someone's behavior; complaints in skip-levels about someone EM hasn't addressed; code review avoidance patterns around one person; 1:1s with other reports frequently mention the same person",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-missing-stair/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-40"
+  },
+  {
+    "title": "AP-41: Culture Tourism \u2014 EM treats culture building as periodic events (off-sites, pizza, team lunches) rather than daily structural practices",
+    "description": "Team building = quarterly off-sites; culture initiative = Slack emoji reactions; no written team norms; culture conversations only happen when engagement scores drop; fun activities substituted for addressing real team dysfunction; 'we have great culture' but people are leaving",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/culture-tourism/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-41"
+  },
+  {
+    "title": "AP-42: Peanut Butter Spreading \u2014 EM distributes resources evenly across all projects instead of concentrating on highest-impact bets",
+    "description": "Every project gets exactly 1-2 engineers; no project has enough resources to succeed; everything moves slowly; nothing gets killed; team feels spread thin; 'we're working on everything' but shipping nothing meaningful",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/peanut-butter-spreading/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-42"
+  },
+  {
+    "title": "AP-43: The Telephone Game \u2014 Information degrades as it passes through management layers because there's no source-of-truth documentation",
+    "description": "Team's understanding of strategy differs from leadership's intent; 'I heard from my manager who heard from their manager' is common; written strategy docs don't exist or are stale; different teams interpret the same directive differently; confusion after all-hands about what was actually decided",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-telephone-game/",
+    "domain": "Stakeholder",
+    "capabilityName": "Decision Framing & Communication",
+    "id": "AP-43"
+  },
+  {
+    "title": "AP-44: The Recency Trap \u2014 EM's performance assessment dominated by last 6 weeks instead of full review period, rewarding or punishing based on timing rather than sustained performance",
+    "description": "Review feedback mostly references recent projects; engineers who had strong H1 but quiet H2 get middling reviews; someone's one mistake in November overshadows 10 months of excellence; EM can't cite specific examples from early in the review period; performance rating correlates with what happened last month, not the full cycle",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-recency-trap/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-44"
+  },
+  {
+    "title": "AP-46: The Vibes-Based Hire \u2014 EM relies on gut feeling and 'culture fit' rather than structured evaluation, leading to biased and unpredictable hiring outcomes",
+    "description": "Interview feedback uses subjective language ('not a good fit', 'seems sharp', 'I liked them'); no scoring rubrics; debrief decisions driven by loudest interviewer; interviewers not calibrated; 'culture fit' assessment has no defined criteria; hire rate correlates with candidate similarity to existing team",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-vibes-based-hire/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-46"
+  },
+  {
+    "title": "AP-47: Process Cargo Cult \u2014 EM adopts agile ceremonies and processes by name without understanding their purpose, running rituals that deliver no value",
+    "description": "Standups are status reports to the manager (not team coordination); retros generate the same action items every sprint (never completed); sprint planning is task assignment (not collaborative estimation); team does 'scrum' but can't explain why any ceremony exists; ceremonies take up 30%+ of the week; process was adopted wholesale from another team without adaptation",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/process-cargo-cult/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-47"
+  },
+  {
+    "title": "AP-48: The Lagging-Only Dashboard \u2014 EM only tracks lagging indicators (incidents, attrition, missed deadlines) and never has early warning signals for emerging problems",
+    "description": "Dashboard shows outcomes (deployment frequency, MTTR, attrition) but no predictive signals; team finds out about problems only after incidents or missed deadlines; no developer experience surveys; no leading indicators for team health; every problem feels like a surprise; metrics are retrospective, never prospective",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-lagging-only-dashboard/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-48"
+  },
+  {
+    "title": "AP-49: The Invisible Tech Debt \u2014 Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms",
+    "description": "No tech debt registry or backlog; tech debt only discussed when it causes incidents; engineers complain about tech debt but leadership doesn't see it; planning cycles have no tech debt allocation; 'we'll address it later' is the perpetual response; tech debt remediation is guerrilla work done without visibility",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-invisible-tech-debt/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-49"
+  },
+  {
+    "title": "AP-50: The Silo Builder \u2014 EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes",
+    "description": "Team builds custom solutions rather than contributing to shared platforms; EM hoards information that would help other teams; team's velocity is high but cross-team projects stall; EM avoids cross-team meetings; team's success metrics disconnected from org goals; 'not my team's problem' is a common response to cross-team requests",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-silo-builder/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-50"
+  },
+  {
+    "title": "AP-51: The Accidental Manager \u2014 Someone promoted into management because they were the best IC, without any management training, coaching, or support \u2014 and expected to figure it out",
+    "description": "New EM still doing 50%+ IC work; 1:1s are technical problem-solving sessions, not coaching conversations; new EM hasn't been trained on feedback delivery, performance management, or conflict resolution; skip-level feedback reveals reports feel unsupported; EM frustrated by management responsibilities interfering with 'real work'",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-accidental-manager/",
+    "domain": "People",
+    "capabilityName": "Coaching & Talent Development",
+    "id": "AP-51"
+  },
+  {
+    "title": "AP-52: The Task-List OKR \u2014 Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes, turning goal-setting into project management theater",
+    "description": "Key results are all binary (ship feature X, complete project Y); OKRs read like a project plan, not strategy; team measures completion, not impact; objectives depend on each other sequentially; 8+ OKRs per team per quarter; OKRs are set by leadership and handed to the team; nobody can articulate why these objectives matter to the business",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-task-list-okr/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-52"
+  },
+  {
+    "title": "AP-53: The Urgency Treadmill \u2014 Everything is urgent, nothing is strategic \u2014 team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
+    "description": "Roadmap changes weekly based on whoever shouted last; team can't finish multi-week projects because priorities shift mid-sprint; engineers describe their work as 'always firefighting'; quarterly goals abandoned by month 2; leadership asks 'why isn't X done?' but keeps adding new urgent requests; 'we don't have time for technical investment' is the permanent state",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-urgency-treadmill/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-53"
+  },
+  {
+    "title": "AP-54: The Wrecking Ball \u2014 New leader makes drastic changes in first weeks without understanding context \u2014 scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
+    "description": "Announces major changes before completing 1:1s with all directs; Dismisses existing processes as 'broken' without understanding why they exist; Cancels projects or changes priorities in first two weeks; Uses phrases like 'at my last company we did it differently' as justification; Team morale drops sharply within first month",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-wrecking-ball/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-54"
+  },
+  {
+    "title": "AP-55: Budget in a Vacuum \u2014 Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams, resulting in misaligned asks and adversarial budget reviews",
+    "description": "Budget proposal doesn't reference product roadmap or business goals; Headcount requests say 'we need more engineers' without specifying deliverables; Finance pushback is a surprise rather than an anticipated negotiation; Product leader has a different number for the same initiative; Cannot explain last year's budget variance",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/budget-in-a-vacuum/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-55"
+  },
+  {
+    "title": "AP-56: The Stress Funnel \u2014 Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering and translating it into actionable context",
+    "description": "Team knows about every executive disagreement and political conflict; Manager shares raw Slack threads from leadership arguing about priorities; Engineers feel anxious about company politics rather than focused on their work; Every new request comes with 'the VP is really worried about this' framing; Team morale tracks leadership drama rather than their own delivery",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-stress-funnel/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-56"
+  },
+  {
+    "title": "AP-57: Alert Noise Normalization \u2014 Team accumulates alerts over time but nobody removes them \u2014 engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
+    "description": "On-call engineers routinely mute or snooze alerts without investigating; New alert rules get added after incidents but old ones are never removed; Page volume is high but most pages result in 'no action needed'; On-call handoff includes tribal knowledge about which alerts to ignore; Mean time to acknowledge real incidents is increasing quarter over quarter",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/alert-noise-normalization/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-57"
+  },
+  {
+    "title": "AP-58: The Interview Marathon \u2014 Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages \u2014 top candidates drop out while mediocre ones persist",
+    "description": "Candidate drop-off rate exceeds 40% between offer and first interview; Total interview process takes more than 3 weeks end-to-end; Each round is 'just one more check' added after a bad hire; Interviewers can't articulate what unique signal their round provides; Competing companies close candidates before you make an offer",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-interview-marathon/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-58"
+  },
+  {
+    "title": "AP-59: The Order Taker \u2014 Engineering leader defers entirely to product for direction \u2014 never challenges priorities, never proposes technical opportunities, never shapes strategy \u2014 treating engineering as a feature factory that builds whatever is asked",
+    "description": "Engineering roadmap is 100% product-driven with no technical investment or innovation items; EM never pushes back on feasibility, timeline, or approach during planning; Engineers complain that 'product just throws things over the wall'; Technical debt grows unchecked because no one advocates for engineering priorities; Team has no input into what gets built, only how",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-order-taker/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-59"
+  },
+  {
+    "title": "AP-60: The Feedback Avoidance Loop \u2014 Manager avoids giving negative performance feedback until it's too late \u2014 minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
+    "description": "1:1 notes show only positive feedback for an engineer whose performance is declining; Manager uses phrases like 'they'll figure it out' or 'I don't want to micromanage'; Performance review rating is a surprise to the engineer; Manager confuses being nice with being kind \u2014 avoids discomfort at the cost of the person's growth; High performers on the team are frustrated that low performance goes unaddressed",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-feedback-avoidance-loop/",
+    "domain": "People",
+    "capabilityName": "Performance Management & Calibration",
+    "id": "AP-60"
+  },
+  {
+    "title": "AP-61: Incident Amnesia \u2014 Team runs post-mortems after every incident but action items die in a backlog \u2014 the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
+    "description": "Post-mortem action item completion rate is below 50%; The same root cause appears in multiple post-mortems across quarters; Engineers say 'we talked about this last time' during incident response; Action items are assigned but never tracked or reviewed; Post-mortems feel performative \u2014 people attend but don't expect change",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/incident-amnesia/",
+    "domain": "Reliability",
+    "capabilityName": "Incidents, Risk & Reliability",
+    "id": "AP-61"
+  },
+  {
+    "title": "AP-62: Resume-Driven Architecture \u2014 Technology choices driven by what looks impressive on resumes rather than what solves the actual problem \u2014 team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
+    "description": "Architecture is designed for a scale the product has never seen and may never reach; Nobody can articulate what business problem the chosen technology solves better than simpler alternatives; Engineering proposals lead with the technology ('let's use Kafka') rather than the problem ('we need reliable async processing'); New hires struggle to onboard because the stack is unnecessarily complex; Operational burden exceeds the team's capacity to maintain it",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/resume-driven-architecture/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "AP-62"
+  },
+  {
+    "title": "AP-63: The Ostrich Leader \u2014 Leader avoids making difficult organizational decisions \u2014 lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
+    "description": "Known team dysfunction persists for months without intervention; Leader deflects organizational problems with 'let's give it more time'; Skip-level feedback consistently raises issues the leader hasn't addressed; Talented people leave citing organizational issues that were never resolved; Leader is surprised by problems that were visible to everyone else for months",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-ostrich-leader/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "AP-63"
+  },
+  {
+    "title": "AP-64: The Goodhart Trap \u2014 Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure \u2014 velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
+    "description": "Story points per sprint increase but customer satisfaction or feature adoption doesn't improve; Team debates how to 'count' work to maximize the metric rather than how to deliver value; Metrics dashboard shows green while stakeholders report slow progress; Engineers game metrics by splitting work into smaller tickets or inflating estimates; No counter-metrics exist to catch single-metric optimization",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-goodhart-trap/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-64"
+  },
+  {
+    "title": "AP-65: The Talent Hostage \u2014 Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency \u2014 making the team a place people can't leave rather than a place people want to stay",
+    "description": "Internal transfer requests are discouraged or slow-walked; Manager gives vague growth plans but blocks concrete opportunities (leading projects on other teams, rotations); High performers feel stuck but the manager frames it as 'the team needs you'; Attrition is low but engagement surveys show declining satisfaction; Manager counter-offers or guilt-trips engineers who express interest in other roles",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-talent-hostage/",
+    "domain": "People",
+    "capabilityName": "Hiring, Onboarding & Role Design",
+    "id": "AP-65"
+  },
+  {
+    "title": "AP-66: The Ivory Tower Strategy \u2014 leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams \u2014 the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
+    "description": "Engineers cannot articulate how their current project connects to the company's top 3 priorities; Strategy documents use abstract language ('leverage synergies,' 'drive innovation') that doesn't map to concrete engineering decisions; Teams discover conflicting priorities because the strategy was too high-level to resolve real trade-offs; Quarterly planning feels disconnected from the annual strategy \u2014 teams plan bottom-up with no top-down constraint; Leadership presents the same strategic slide deck for 3+ quarters while the market and team have moved on",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-ivory-tower-strategy/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "AP-66"
+  },
+  {
+    "title": "AP-67: The Toil Spiral \u2014 team neglects operational health \u2014 toil reduction, developer experience, and technical debt \u2014 because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
+    "description": "Engineers spend more than 30% of their time on repetitive manual tasks that could be automated; The team has had 'fix the build pipeline' or 'reduce deploy time' on the backlog for 3+ quarters without progress; Feature velocity is declining quarter over quarter despite stable headcount; New engineers say 'this is painful' about basic workflows that the team has normalized; Every sprint planning starts with 'we'll do tech debt next sprint' and it never happens",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-toil-spiral/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-67"
+  },
+  {
+    "title": "AP-68: The Stakeholder Surprise \u2014 engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment \u2014 stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
+    "description": "Stakeholders learn about project delays in the same meeting where the deadline was supposed to be met; Engineering leader uses optimistic framing ('we're working on it') when the project is materially off track; Product or business leaders say they 'don't trust engineering timelines' based on past surprises; Status reports consistently show green/on-track until suddenly flipping to red with no amber warning period; The engineering leader avoids 1:1s with their VP or product counterpart during difficult periods",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-stakeholder-surprise/",
+    "domain": "Stakeholder",
+    "capabilityName": "Cross-Functional Influence",
+    "id": "AP-68"
+  },
+  {
+    "title": "AP-69: The 100% Utilization Fallacy \u2014 manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration \u2014 projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
+    "description": "Sprint commitments assume every engineer is available for 8 productive hours per day, 5 days per week; Any unplanned work (production incident, urgent bug, exec request) immediately puts the sprint at risk; Engineers report having no time for code review, mentoring, documentation, or learning; Project timelines are built on best-case estimates with no contingency buffer; The team consistently delivers 60-70% of sprint commitments but the plan is never adjusted",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-100-percent-utilization-fallacy/",
+    "domain": "Strategy",
+    "capabilityName": "Resource Allocation & Tradeoffs",
+    "id": "AP-69"
+  },
+  {
+    "title": "AP-70: The Reassurance Trap \u2014 during periods of uncertainty \u2014 layoffs, reorgs, strategy pivots \u2014 the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
+    "description": "Manager says 'don't worry about it' when the team raises concerns about organizational changes; Reassurances prove wrong repeatedly \u2014 'no more layoffs' is followed by another round within months; Team members stop asking questions in all-hands because they've learned the answers won't be honest; Manager avoids the topic entirely, hoping uncertainty will resolve itself without acknowledgment; Private Slack channels and hallway conversations replace official channels as the trusted information source",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-reassurance-trap/",
+    "domain": "People",
+    "capabilityName": "Culture & Norms Shaping",
+    "id": "AP-70"
+  },
+  {
+    "title": "AP-71: Vulnerability Noise Blindness \u2014 automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction \u2014 the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
+    "description": "Security scanner dashboard shows 500+ open findings and the number grows every week; Engineers dismiss scanner alerts as 'mostly false positives' without verifying; Critical vulnerabilities sit unpatched for weeks because they're buried in a backlog of low-severity findings; The team disabled or ignored security scanning in CI because it blocked too many deploys for non-issues; Nobody owns vulnerability triage \u2014 findings go into a shared queue that nobody monitors",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/vulnerability-noise-blindness/",
+    "domain": "Reliability",
+    "capabilityName": "Security & Compliance Posture",
+    "id": "AP-71"
+  },
+  {
+    "id": "AP-72",
+    "type": "anti-pattern",
+    "title": "The Shadow Bypass",
+    "content": "engineers routinely circumvent security controls \u2014 disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing \u2014 because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity Engineers disable or skip security scanning steps in CI pipelines to unblock deploys Threat modeling is marked 'N/A' for features that clearly handle sensitive data because the team is behind schedule",
+    "slug": "/anti-patterns/the-shadow-bypass",
+    "capability": "C13"
+  },
+  {
+    "id": "AP-73",
+    "type": "anti-pattern",
+    "title": "The Certification Facade",
+    "content": "team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation \u2014 day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk Audit preparation is a 2-4 week scramble to gather evidence and update documentation that's been stale since the last audit Engineers can't describe the security practices the company is certified for without looking at the compliance docs",
+    "slug": "/anti-patterns/the-certification-facade",
+    "capability": "C13"
   }
 ]

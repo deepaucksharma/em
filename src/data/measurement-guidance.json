@@ -64,14 +64,16 @@
       "Tech debt backlog is triaged and prioritized quarterly",
       "System reliability targets (SLOs) are defined for all critical services",
       "Architecture review board meets regularly with clear decision log",
-      "Amazon tracks design doc completion rate and review turnaround time as architecture process health indicators"
+      "Amazon tracks design doc completion rate and review turnaround time as architecture process health indicators",
+      "Tech debt registry maintained with business impact estimates per item"
     ],
     "laggingIndicators": [
       "System uptime meets defined SLO targets (e.g., 99.9%)",
       "Median time to integrate a new service decreased over 6 months",
       "Tech debt ratio (debt work / total work) remains within target band",
       "No architecture-related production incidents recurring after fix",
-      "Google measures design doc adoption rate and architecture decision reversal frequency as quality signals"
+      "Google measures design doc adoption rate and architecture decision reversal frequency as quality signals",
+      "Tech debt ratio stable or improving quarter-over-quarter"
     ],
     "measurementAntiPatterns": [
       "Measuring architecture quality by document volume rather than decision outcomes",
@@ -93,14 +95,17 @@
       "Blockers are identified and escalated within 24 hours",
       "Team working agreements are documented and reviewed quarterly",
       "Delivery forecasts are shared with stakeholders before each cycle",
-      "Spotify tracks squad Health Check scores as a leading indicator of operational rhythm and team well-being"
+      "Spotify tracks squad Health Check scores as a leading indicator of operational rhythm and team well-being",
+      "Engineers report 4+ hours of daily uninterrupted focus time",
+      "Every team ceremony has documented purpose and measured value delivery"
     ],
     "laggingIndicators": [
       "Sprint commitment accuracy is 85%+ consistently",
-      "Cycle time for standard work items is stable or decreasing",
+      "Cycle time for standard work items is stable or improving quarter-over-quarter",
       "Meeting effectiveness scores above 3.5/5 in team surveys",
       "Zero missed external deadlines in the quarter",
-      "Amazon's operational excellence reviews measure 'mechanism completion rate' \u2014 the percentage of identified process gaps that have automated solutions"
+      "Amazon's operational excellence reviews measure 'mechanism completion rate' — the percentage of identified process gaps that have automated solutions",
+      "Retro action item completion rate above 80%"
     ],
     "measurementAntiPatterns": [
       "Optimizing for velocity without measuring outcome quality",
@@ -180,7 +185,7 @@
       "Key decisions are communicated to all affected parties within 48 hours",
       "Decision log is maintained and accessible to the team",
       "Pre-reads are shared at least 24 hours before decision meetings",
-      "Amazon uses the 6-pager narrative format as a leading indicator of decision quality \u2014 well-structured narratives correlate with better outcomes",
+      "Amazon uses the 6-pager narrative format as a leading indicator of decision quality — well-structured narratives correlate with better outcomes",
       "Decision authority matrix documented and team can reference it",
       "Communication scaling mechanisms (RFCs, decision logs) adopted and maintained"
     ],
@@ -215,7 +220,7 @@
       "Runbooks exist for top 10 failure scenarios and are tested quarterly",
       "Incident response roles (commander, scribe, comms) are defined and trained",
       "Risk register is reviewed and updated monthly",
-      "Google SRE targets error budget burn rate per quarter as a leading indicator \u2014 sustained burn above 5% triggers reliability investment"
+      "Google SRE targets error budget burn rate per quarter as a leading indicator — sustained burn above 5% triggers reliability investment"
     ],
     "laggingIndicators": [
       "Mean time to detect (MTTD) is under target threshold",
@@ -244,14 +249,18 @@
       "Dashboards are reviewed in team meetings at least biweekly",
       "Data quality checks are automated for critical metrics",
       "A/B test or experiment framework is available and used",
-      "Google and Microsoft's SPACE framework recommends measuring developer satisfaction alongside DORA metrics as complementary leading indicators"
+      "Google and Microsoft's SPACE framework recommends measuring developer satisfaction alongside DORA metrics as complementary leading indicators",
+      "Every tracked metric paired with a complementary metric preventing single-dimension optimization",
+      "Monthly audit: 'What decision did this metric inform?' applied to all active metrics"
     ],
     "laggingIndicators": [
       "Decisions reference specific data points in decision documents",
       "Product outcomes match or exceed pre-defined success criteria (>70% of launches)",
       "Data-informed pivots happen within one cycle of negative signal",
       "Metric definitions are consistent across teams (no conflicting dashboards)",
-      "Google's DORA research tracks four key metrics (deploy frequency, lead time, change failure rate, MTTR) as the definitive lagging measure of delivery capability"
+      "Google's DORA research tracks four key metrics (deploy frequency, lead time, change failure rate, MTTR) as the definitive lagging measure of delivery capability",
+      "Zero metrics maintained that haven't informed a decision in 90 days",
+      "Team reports metrics are useful (not surveillance) in engagement surveys"
     ],
     "measurementAntiPatterns": [
       "Tracking vanity metrics that do not tie to business or user outcomes",
@@ -305,9 +314,9 @@
     "capabilityId": "C11",
     "leadingIndicators": [
       "Job descriptions are reviewed and updated within the last 6 months",
-      "Interview rubrics exist and are calibrated across all interviewers",
+      "Structured rubrics with behavioral anchors used for every interview, calibrated across all interviewers",
       "Onboarding checklist has 30/60/90-day milestones with clear owners",
-      "Hiring pipeline metrics (conversion rates per stage) are tracked weekly",
+      "Hiring funnel conversion rates tracked weekly with bottleneck identification",
       "Amazon tracks Bar Raiser override rate as a hiring quality signal; Google tracks interviewer calibration scores to ensure rubric consistency"
     ],
     "laggingIndicators": [
@@ -315,7 +324,8 @@
       "New hire productivity ramp (time to first meaningful contribution) is within target",
       "90-day new hire retention is above 95%",
       "Hiring manager satisfaction with candidates is above 4/5",
-      "Google tracks 6-month new hire effectiveness ratings and Amazon measures regrettable attrition within 12 months of hire"
+      "Google tracks 6-month new hire effectiveness ratings and Amazon measures regrettable attrition within 12 months of hire",
+      "Regrettable hires below 10% at 12-month mark"
     ],
     "measurementAntiPatterns": [
       "Measuring hiring speed without assessing hire quality over time",
@@ -333,13 +343,12 @@
   {
     "capabilityId": "C12",
     "leadingIndicators": [
-      "Team working agreements are documented and revisited quarterly",
+      "Team working agreements and cultural norms are explicitly documented and revisited quarterly",
       "Psychological safety is explicitly discussed in retrospectives",
       "Recognition practices happen at least weekly (shoutouts, kudos)",
       "Manager models desired cultural behaviors visibly in meetings and communications",
       "Google measures psychological safety through quarterly team surveys using Project Aristotle methodology",
-      "Culture onboarding materials updated and used for every new hire",
-      "Team norms explicitly documented and reviewed quarterly"
+      "Culture onboarding materials updated and used for every new hire"
     ],
     "laggingIndicators": [
       "Psychological safety scores are above team benchmark in engagement surveys",
@@ -372,14 +381,18 @@
       "Vulnerability scanning is automated and runs on every deploy",
       "Compliance requirements are mapped to engineering controls with clear owners",
       "Threat modeling is completed for all new services before launch",
-      "Google's BeyondCorp model tracks automated security scan coverage rate across all CI/CD pipelines as a leading indicator"
+      "Google's BeyondCorp model tracks automated security scan coverage rate across all CI/CD pipelines as a leading indicator",
+      "Security champion active and rotating on every team",
+      "Automated security scanning integrated in CI/CD with severity-based gates"
     ],
     "laggingIndicators": [
       "Critical and high vulnerabilities are remediated within SLA (e.g., 7 days for critical)",
       "Zero compliance audit findings related to engineering controls",
       "Security incidents caused by known vulnerability classes decreased year-over-year",
       "Time to patch critical CVEs is under 72 hours",
-      "Amazon tracks mean-time-to-patch for critical CVEs and zero-day vulnerabilities as a lagging security posture metric"
+      "Amazon tracks mean-time-to-patch for critical CVEs and zero-day vulnerabilities as a lagging security posture metric",
+      "Zero critical/high vulnerabilities reaching production",
+      "Vulnerability remediation SLA compliance >90%"
     ],
     "measurementAntiPatterns": [
       "Counting security training completions without testing knowledge retention",

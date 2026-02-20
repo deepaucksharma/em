@@ -51,6 +51,18 @@
         "type": "exercise",
         "description": "Map your team's current work to org-level strategic pillars, identify misalignments, and draft proposals for realigning efforts to maximize strategic impact.",
         "url": ""
+      },
+      {
+        "title": "Four Rituals That Revolutionized My Engineering Teams (LeadDev)",
+        "type": "article",
+        "description": "How intentional rituals like metrics reviews and ideation sessions drive org-level alignment and team ownership.",
+        "url": "https://leaddev.com/culture/4-rituals-that-revolutionized-my-engineering-teams"
+      },
+      {
+        "title": "Five Management Anti-Patterns and Why They Happen (LeadDev)",
+        "type": "article",
+        "description": "Recognizing destructive leadership patterns \u2014 the Sphinx, Bottleneck, Funnel, and Wrecking Ball \u2014 and their organizational impact.",
+        "url": "https://leaddev.com/communication/five-management-anti-patterns-and-why-they-happen"
       }
     ],
     "advanced": [
@@ -132,6 +144,24 @@
         "type": "tool",
         "description": "Learn to quantify the cost of delay for different types of work (standard, urgent, fixed-date, intangible) and use this analysis to make sharper prioritization decisions.",
         "url": "https://blackswanfarming.com/cost-of-delay/"
+      },
+      {
+        "title": "Five Mistakes to Avoid When Setting OKRs",
+        "type": "article",
+        "description": "Five concrete OKR anti-patterns: external goal-setting, task-list key results, binary KRs, dependent objectives, and too many OKRs. Emphasizes team ownership and measurable outcomes over checkboxes.",
+        "url": "https://leaddev.com/reporting/five-mistakes-avoid-when-setting-okrs-your-team"
+      },
+      {
+        "title": "How to Build an Effective Technical Strategy (LeadDev)",
+        "type": "article",
+        "description": "Components of a robust technical strategy: aligning technical direction with organizational goals, collaborative vs. top-down approaches, and translating strategy into engineering priorities.",
+        "url": "https://leaddev.com/technical-direction/how-build-effective-technical-strategy"
+      },
+      {
+        "title": "Introducing OKRs to Your Team: From General Alignment to Measurable Results (LeadDev)",
+        "type": "article",
+        "description": "Step-by-step approach to transitioning from vague strategic intentions to measurable OKRs that connect engineering work to business goals.",
+        "url": "https://leaddev.com/reporting-metrics/introducing-okrs-your-team-general-alignment-measurable-results"
       }
     ],
     "advanced": [
@@ -184,7 +214,7 @@
       },
       {
         "title": "Fundamentals of Software Architecture",
-        "type": "course",
+        "type": "book",
         "description": "A structured course covering architecture styles (monolith, microservices, event-driven), architecture characteristics (scalability, reliability), and the role of the architect in modern orgs.",
         "url": "https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/"
       }
@@ -213,6 +243,24 @@
         "type": "tool",
         "description": "Learn to define and implement automated fitness functions that continuously validate that architecture characteristics (performance, coupling, complexity) remain within acceptable bounds.",
         "url": "https://www.thoughtworks.com/insights/articles/fitness-function-driven-development"
+      },
+      {
+        "title": "Steel Threads Are the Missing Link in Your System Design",
+        "type": "article",
+        "description": "Steel threads \u2014 the thinnest possible production-grade end-to-end flow \u2014 force teams to confront integration risk early. Key insight: the handoffs between components are where systems break; steel threads exercise those handoffs before you've built everything.",
+        "url": "https://leaddev.com/software-quality/steel-threads-missing-link-your-system-design"
+      },
+      {
+        "title": "Documenting and Communicating Architectural Decisions (LeadDev)",
+        "type": "article",
+        "description": "Lightweight, transparent methods for documenting architecture decisions in agile teams \u2014 enabling team autonomy while maintaining architectural coherence.",
+        "url": "https://leaddev.com/code-reviews-docs/documenting-and-communicating-architectural-decisions"
+      },
+      {
+        "title": "A Leader's Blueprint for Scaling Systems (LeadDev)",
+        "type": "article",
+        "description": "How engineering leaders identify and break through scalability ceilings \u2014 the strategic architectural decisions needed at each system growth inflection point.",
+        "url": "https://leaddev.com/technical-direction/a-leaders-blueprint-for-scaling-systems"
       }
     ],
     "advanced": [
@@ -294,6 +342,24 @@
         "type": "tool",
         "description": "Use a dedicated Kanban board to track operational improvements, making process changes visible and ensuring the team continuously improves its own ways of working.",
         "url": "https://kanbanize.com/kanban-resources/getting-started/what-is-kanban"
+      },
+      {
+        "title": "Finding Your Groove: Building Team Operational Cadence",
+        "type": "article",
+        "description": "Daniel Pupius's framework for establishing rhythmic work patterns that keep teams aligned and connected, emphasizing intentional ceremony design over prescriptive frameworks.",
+        "url": "https://leaddev.com/velocity/finding-your-groove-how-build-your-teams-operational-cadence"
+      },
+      {
+        "title": "What Is Developer Experience? Your Route to Better Productivity (LeadDev)",
+        "type": "article",
+        "description": "Developer experience as a lens for productivity: cognitive load, flow state, and feedback loops \u2014 practical framework for identifying and prioritizing DevEx improvements.",
+        "url": "https://leaddev.com/process/what-developer-experience-your-route-better-productivity"
+      },
+      {
+        "title": "How to Cultivate a Great Engineering Process (LeadDev)",
+        "type": "article",
+        "description": "Engineering leaders as process cultivators: observe work flow, find friction points, experiment with targeted changes rather than adopting off-the-shelf frameworks.",
+        "url": "https://leaddev.com/velocity/how-cultivate-great-engineering-process"
       }
     ],
     "advanced": [
@@ -375,6 +441,18 @@
         "type": "tool",
         "description": "A tool for creating RACI matrices that clarify who is Responsible, Accountable, Consulted, and Informed for cross-functional initiatives, reducing confusion and conflict.",
         "url": "https://www.teamgantt.com/blog/raci-chart-definition-tips-and-example"
+      },
+      {
+        "title": "Drive Product Gaps as an Engineering Leader (LeadDev)",
+        "type": "article",
+        "description": "Practical strategies for engineering leaders to influence product development and fill product management gaps.",
+        "url": "https://leaddev.com/software-quality/drive-product-gaps-as-an-engineering-leader"
+      },
+      {
+        "title": "Getting Good at Delivering Bad News (LeadDev)",
+        "type": "article",
+        "description": "Framework for owning mistakes, managing emotional reactions, and preserving trust when communicating difficult information.",
+        "url": "https://leaddev.com/team/getting-good-delivering-bad-news"
       }
     ],
     "advanced": [
@@ -456,6 +534,18 @@
         "type": "tool",
         "description": "A structured journaling practice for tracking feedback given and received, noting patterns, and improving the quality and impact of coaching conversations over time.",
         "url": "https://lattice.com/library/feedback"
+      },
+      {
+        "title": "Three Tips for Retaining Key Engineering Talent (LeadDev)",
+        "type": "article",
+        "description": "Individual growth plans (80/20 ratio), frequent 1:1s, and impact-focused development for retention.",
+        "url": "https://leaddev.com/hiring/three-tips-retaining-key-engineering-talent"
+      },
+      {
+        "title": "Cultivating Ownership at Any Engineering Level (LeadDev)",
+        "type": "article",
+        "description": "How to delegate effectively by setting guardrails and asking questions that spark critical thinking rather than dictating solutions.",
+        "url": "https://leaddev.com/management/cultivating-ownership-at-any-engineering-level"
       }
     ],
     "advanced": [
@@ -508,7 +598,7 @@
       },
       {
         "title": "Decision-Making Frameworks for Engineering Managers",
-        "type": "video",
+        "type": "article",
         "description": "A talk covering common decision-making frameworks (DACI, consent-based, advisory) and how to choose the right one based on the type and impact of the decision.",
         "url": "https://lethain.com/frameworks-for-decision-making/"
       }
@@ -636,6 +726,18 @@
         "type": "article",
         "description": "How trust-building practices improve incident response, blameless post-mortems, and team resilience through transparent decision-making and accountability.",
         "url": "https://leaddev.com/culture/trust-ultimate-driver-engineering-excellence"
+      },
+      {
+        "title": "How to Bring Order to Chaos Engineering (Liz Fong-Jones)",
+        "type": "article",
+        "description": "Practical guide on assessing readiness for chaos engineering, using error budgets to gauge ambition level, and running effective game days. Key insight: if you can't afford resilience testing, you can't afford unreliable systems.",
+        "url": "https://leaddev.com/software-quality/how-bring-order-chaos-engineering"
+      },
+      {
+        "title": "When, Not If: The Playbook Method for Managing Risk (Yonatan Zunger)",
+        "type": "article",
+        "description": "Alternative to traditional risk registers that assumes failures will happen and pre-writes response playbooks. Both a practical preparation tool and a psychological one that makes hard conversations easier.",
+        "url": "https://leaddev.com/leadership/when-not-if-playbook-method-managing-risk"
       }
     ],
     "advanced": [
@@ -716,7 +818,19 @@
         "title": "Developer Experience Survey Tool",
         "type": "tool",
         "description": "Design and deploy a developer experience survey measuring satisfaction, productivity friction, tooling effectiveness, and psychological safety, then use results to prioritize improvements.",
-        "url": "https://www.devex.com/"
+        "url": "https://getdx.com/"
+      },
+      {
+        "title": "How Netlify, Splice, Code Climate Use Engineering Metrics",
+        "type": "article",
+        "description": "Real-world examples of engineering metrics programs from multiple companies, covering metric selection, implementation approaches, and connecting metrics to business outcomes.",
+        "url": "https://leaddev.com/reporting/how-netlify-splice-code-climate-and-more-use-engineering-metrics"
+      },
+      {
+        "title": "Keep Your Delivery in Balance with Metrics Pairings",
+        "type": "article",
+        "description": "Framework for pairing complementary engineering metrics to prevent single-metric optimization, ensuring speed and quality are balanced in measurement.",
+        "url": "https://leaddev.com/reporting/keep-your-delivery-balance-these-metrics-pairings"
       }
     ],
     "advanced": [
@@ -804,6 +918,18 @@
         "type": "article",
         "description": "Kevin Dallaire's guide to aligning engineering budgets with strategic priorities, including headcount ROI frameworks and zero-based evaluation approaches.",
         "url": "https://leaddev.com/career-development/5-best-practices-annual-budget-planning"
+      },
+      {
+        "title": "5 Best Practices for Annual Budget Planning (LeadDev)",
+        "type": "article",
+        "description": "Practical guidance on stack-ranking priorities, evaluating headcount needs, and building data-driven business cases that resonate with executive stakeholders.",
+        "url": "https://leaddev.com/career-development/5-best-practices-annual-budget-planning"
+      },
+      {
+        "title": "Leading Through Scarcity: Building Capacity in the Team You Have (LeadDev)",
+        "type": "article",
+        "description": "Maximizing team performance under resource constraints through sustainable leadership practices and deliberate capacity-building without additional headcount.",
+        "url": "https://leaddev.com/management/leading-through-scarcity-building-capacity-in-the-team-you-have"
       }
     ],
     "advanced": [
@@ -857,7 +983,7 @@
       {
         "title": "The First 90 Days \u2014 Michael Watkins",
         "type": "book",
-        "description": "Michael Watkins essential guide for leaders in transition, applicable to designing onboarding programs that get new engineers to full productivity quickly, covering ramp-up strategies, milestone check-ins, and early wins.",
+        "description": "Michael Watkins's essential guide for leaders in transition, applicable to designing onboarding programs that get new engineers to full productivity quickly, covering ramp-up strategies, milestone check-ins, and early wins.",
         "url": "https://www.amazon.com/First-90-Days-Strategies-Expanded/dp/1422188612"
       }
     ],
@@ -884,7 +1010,25 @@
         "title": "Role Architecture Tool",
         "type": "tool",
         "description": "A tool for designing engineering roles that clearly delineate scope, expectations, growth paths, and how each role fits into the broader team and organizational structure.",
-        "url": "https://www.levels.fyi/"
+        "url": ""
+      },
+      {
+        "title": "The Secret to Hiring Engineers When You Pay Less Than Google",
+        "type": "article",
+        "description": "Competitive hiring strategies beyond compensation \u2014 building employer brand, articulating differentiated value propositions, and targeting candidates whose priorities match your strengths.",
+        "url": "https://leaddev.com/hiring/secret-hiring-engineers-when-you-pay-less-google"
+      },
+      {
+        "title": "Three Ways to Remove Bias from Technical Interviews",
+        "type": "article",
+        "description": "Structured approaches to reducing unconscious bias in technical interviews through standardized rubrics, consistent processes, and predefined evaluation criteria.",
+        "url": "https://leaddev.com/hiring/three-ways-remove-bias-technical-interviews"
+      },
+      {
+        "title": "Creating a Technical Interview Process That Works at Scale (GitLab)",
+        "type": "article",
+        "description": "How GitLab standardized interview rubrics during hypergrowth using shared scoring templates and data-driven hypothesis testing. Proved that modern framework experience predicted success equally regardless of specific framework.",
+        "url": "https://leaddev.com/hiring/creating-technical-interview-process-works-scale"
       }
     ],
     "advanced": [
@@ -939,7 +1083,7 @@
         "title": "Psychological Safety in Engineering Teams",
         "type": "article",
         "description": "How to create and maintain psychological safety on engineering teams, drawing from Google's Project Aristotle research and practical implementation strategies.",
-        "url": "https://rework.withgoogle.com/guides/understanding-team-effectiveness"
+        "url": "https://rework.withgoogle.com/en/guides/understanding-team-effectiveness"
       }
     ],
     "practical": [
@@ -1019,12 +1163,12 @@
       {
         "title": "The Phoenix Project",
         "type": "book",
-        "description": "Gene Kim novel about IT transformation, illustrating operational discipline themes \u2014 including change management, risk controls, and cross-functional collaboration \u2014 that are directly relevant to building a strong security and compliance posture.",
+        "description": "Gene Kim's novel about IT transformation, illustrating operational discipline themes \u2014 including change management, risk controls, and cross-functional collaboration \u2014 that are directly relevant to building a strong security and compliance posture.",
         "url": "https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290"
       },
       {
         "title": "OWASP Top 10 for Engineering Managers",
-        "type": "course",
+        "type": "reference",
         "description": "A course covering the OWASP Top 10 web application security risks from a management perspective, focusing on how to build processes that prevent these vulnerabilities systematically.",
         "url": "https://owasp.org/www-project-top-ten/"
       },
@@ -1059,6 +1203,24 @@
         "type": "tool",
         "description": "Set up and configure automated dependency scanning in your CI/CD pipeline, establishing policies for vulnerability severity levels, SLAs for patching, and exception processes.",
         "url": "https://snyk.io/"
+      },
+      {
+        "title": "Building a More Effective DevSecOps Culture",
+        "type": "article",
+        "description": "Stefania Chaplin's guide to embedding security into development workflows, moving from siloed security reviews to distributed security ownership across engineering teams.",
+        "url": "https://leaddev.com/culture/building-more-effective-devsecops-culture"
+      },
+      {
+        "title": "Building Security into Your Engineering Workflow (LeadDev)",
+        "type": "article",
+        "description": "Integrating security practices directly into the development process using tools, team practices, and process design that reduce vulnerabilities while maintaining velocity.",
+        "url": "https://leaddev.com/building-better-software/building-security-your-engineering-workflow"
+      },
+      {
+        "title": "Shifting Left on Security: Five Steps to Transformation (LeadDev)",
+        "type": "article",
+        "description": "Five-step transformation plan for embedding security earlier in the development lifecycle through cultural change, cross-functional collaboration, and concrete process improvements.",
+        "url": "https://leaddev.com/software-quality/shifting-left-security-five-steps-transformation"
       }
     ],
     "advanced": [
@@ -1139,7 +1301,7 @@
         "title": "Continuous Feedback Tracker",
         "type": "tool",
         "description": "A tool for capturing feedback and accomplishments throughout the review period, preventing recency bias and ensuring performance reviews reflect the full body of work.",
-        "url": "https://lattice.com/"
+        "url": ""
       },
       {
         "title": "Rejecting Promotions, PIPs, and Other Dreaded Conversations",
@@ -1152,6 +1314,12 @@
         "type": "article",
         "description": "LeadDev guide to running effective calibration sessions, avoiding the bell curve trap, and maintaining cross-team consistency in performance evaluation.",
         "url": "https://leaddev.com/management/managers-guide-performance-calibration"
+      },
+      {
+        "title": "Navigating Engineering Performance Reviews Part Two (Smruti Patel)",
+        "type": "article",
+        "description": "Practical guide to cross-team calibration, pre-calibration sessions for bias detection, and distilling feedback into one memorable sentence. Emphasizes fairness through evidence and process.",
+        "url": "https://leaddev.com/hiring/navigating-engineering-performance-reviews-part-two"
       }
     ],
     "advanced": [

@@ -21,7 +21,7 @@ const cap = getCapability(antiPattern.capabilityId);
     {antiPattern.name}
   </h3>
   <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-3">
-    {antiPattern.warningSigns}
+    {antiPattern.warningSigns.join('; ')}
   </p>
   {cap && (
     <div class="text-xs text-gray-500 dark:text-gray-400">

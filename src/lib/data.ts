@@ -72,9 +72,9 @@ export interface AntiPattern {
   observableIds: string[];
   capabilityId: string;
   shortDesc: string;
-  warningSigns: string;
+  warningSigns: string[];
   impact: string;
-  recoveryActions: string;
+  recoveryActions: string[];
   sourceTopic: string;
   mappingNotes: string;
 }

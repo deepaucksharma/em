@@ -8,7 +8,7 @@
     "primarySubTopics": [
       "16"
     ],
-    "observableCount": 15,
+    "observableCount": 16,
     "v5Status": "CARRIED"
   },
   {
@@ -32,7 +32,7 @@
     "primarySubTopics": [
       "11"
     ],
-    "observableCount": 10,
+    "observableCount": 11,
     "v5Status": "CARRIED"
   },
   {
@@ -44,7 +44,7 @@
     "primarySubTopics": [
       "13"
     ],
-    "observableCount": 11,
+    "observableCount": 13,
     "v5Status": "CARRIED"
   },
   {
@@ -56,7 +56,7 @@
     "primarySubTopics": [
       "16"
     ],
-    "observableCount": 15,
+    "observableCount": 16,
     "v5Status": "CARRIED"
   },
   {
@@ -68,7 +68,7 @@
     "primarySubTopics": [
       "12"
     ],
-    "observableCount": 12,
+    "observableCount": 13,
     "v5Status": "UPDATED"
   },
   {
@@ -80,7 +80,7 @@
     "primarySubTopics": [
       "11"
     ],
-    "observableCount": 10,
+    "observableCount": 11,
     "v5Status": "CARRIED"
   },
   {
@@ -104,7 +104,7 @@
     "primarySubTopics": [
       "9"
     ],
-    "observableCount": 8,
+    "observableCount": 10,
     "v5Status": "CARRIED"
   },
   {
@@ -128,7 +128,7 @@
     "primarySubTopics": [
       "10"
     ],
-    "observableCount": 8,
+    "observableCount": 11,
     "v5Status": "CARRIED"
   },
   {
@@ -152,7 +152,7 @@
     "primarySubTopics": [
       "4"
     ],
-    "observableCount": 4,
+    "observableCount": 7,
     "v5Status": "NEW"
   },
   {
@@ -164,7 +164,7 @@
     "primarySubTopics": [
       "9"
     ],
-    "observableCount": 8,
+    "observableCount": 9,
     "v5Status": "NEW"
   }
 ]

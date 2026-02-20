@@ -1105,54 +1105,30 @@
   },
   {
     "id": "SIG-139",
-    "observableId": "C5-O11",
-    "capabilityId": "C5",
-    "signalText": "Navigating leadership transitions defines career durability. \"Built trust with new [VP/Director] within 30 days, preserved roadmap through transition, identified alignment opportunities proactively.\"",
-    "signalType": "manager_observation",
-    "sourceSubTopic": "Leadership Transitions"
-  },
-  {
-    "id": "SIG-140",
-    "observableId": "C5-O12",
-    "capabilityId": "C5",
-    "signalText": "Directors who build reusable compliance patterns create org-wide leverage. \"Built pre-approved design patterns for [privacy scenario], eliminating [X] weeks of launch-blocking reviews for [Y] teams.\"",
-    "signalType": "metric",
-    "sourceSubTopic": "Legal/Privacy Partnership Patterns"
-  },
-  {
-    "id": "SIG-141",
-    "observableId": "C5-O13",
-    "capabilityId": "C5",
-    "signalText": "The 90-day window determines trajectory. \"Established credibility by [quick win] in first 6 weeks, built stakeholder trust through listening before changing, earned mandate for [larger initiative].\"",
-    "signalType": "peer_feedback",
-    "sourceSubTopic": "New Leader Credibility"
-  },
-  {
-    "id": "SIG-142",
     "observableId": "C6-O8",
     "capabilityId": "C6",
-    "signalText": "Advanced retention practice. \"Instituted stay interviews, surfaced [X] theme, addressed it, zero regrettable attrition for [Y] consecutive quarters.\"",
+    "signalText": "Advanced retention practice. 'Instituted stay interviews, surfaced [X] theme, addressed it, zero regrettable attrition for [Y] consecutive quarters.'",
     "signalType": "metric",
     "sourceSubTopic": "Systematic Stay Interviews"
   },
   {
-    "id": "SIG-143",
+    "id": "SIG-140",
     "observableId": "C6-O9",
     "capabilityId": "C6",
-    "signalText": "Highest-leverage people management. \"Partnered with [Staff engineer] on [technical vision], provided organizational air cover for [initiative], Staff engineer cited partnership as force multiplier.\"",
+    "signalText": "Highest-leverage people management. 'Partnered with [Staff engineer] on [technical vision], provided organizational air cover for [initiative], Staff engineer cited partnership as force multiplier.'",
     "signalType": "peer_feedback",
     "sourceSubTopic": "Staff+ Engineer Partnership"
   },
   {
-    "id": "SIG-144",
+    "id": "SIG-141",
     "observableId": "C6-O10",
     "capabilityId": "C6",
-    "signalText": "Retention and growth signal. \"100% of direct reports have active development plans. [X] engineers progressed to next level through deliberate skill-building aligned to career conversations.\"",
+    "signalText": "Retention and growth signal. '100% of direct reports have active development plans. [X] engineers progressed to next level through deliberate skill-building aligned to career conversations.'",
     "signalType": "metric",
     "sourceSubTopic": "Structured Career Development"
   },
   {
-    "id": "SIG-145",
+    "id": "SIG-142",
     "observableId": "C1-O14",
     "capabilityId": "C1",
     "signalText": "M&A integration is Director-defining work. 'Led integration of [X]-person acquired team, consolidated [Y] overlapping services, retained [Z]% of acquired engineers through structured culture bridging.'",
@@ -1160,7 +1136,7 @@
     "sourceSubTopic": "M&A Engineering Integration"
   },
   {
-    "id": "SIG-146",
+    "id": "SIG-143",
     "observableId": "C1-O14",
     "capabilityId": "C1",
     "signalText": "Integration velocity metric: 'Acquired team reached full productivity within [X] days, codebase consolidation completed [Y] months ahead of schedule, saving $[Z] in duplicated infrastructure.'",
@@ -1168,7 +1144,7 @@
     "sourceSubTopic": "Acquisition Talent Retention"
   },
   {
-    "id": "SIG-147",
+    "id": "SIG-144",
     "observableId": "C1-O15",
     "capabilityId": "C1",
     "signalText": "How you wind down reveals leadership character. 'Managed wind-down of [X]-person team, placed [Y]% internally, completed knowledge transfer for [Z] critical systems with zero orphaned services.'",
@@ -1176,7 +1152,7 @@
     "sourceSubTopic": "Team Wind-Down Leadership"
   },
   {
-    "id": "SIG-148",
+    "id": "SIG-145",
     "observableId": "C1-O15",
     "capabilityId": "C1",
     "signalText": "'Led divestiture affecting [X] engineers: all critical systems had documented ownership transfer, zero production incidents during transition, [Y]% of displaced engineers placed in new roles within 30 days.'",
@@ -1184,7 +1160,7 @@
     "sourceSubTopic": "Divestiture Knowledge Preservation"
   },
   {
-    "id": "SIG-149",
+    "id": "SIG-146",
     "observableId": "C3-O9",
     "capabilityId": "C3",
     "signalText": "FinOps maturity is a Director-level differentiator. 'Established cost-per-service dashboards, identified $[X] in optimization opportunities, reduced cloud spend [Y]% while maintaining performance SLAs.'",
@@ -1192,7 +1168,7 @@
     "sourceSubTopic": "FinOps and Cost Architecture"
   },
   {
-    "id": "SIG-150",
+    "id": "SIG-147",
     "observableId": "C3-O9",
     "capabilityId": "C3",
     "signalText": "Cost consciousness embedded in design culture: 'Every design doc includes cost projection. Team reduced cost-per-transaction [X]% through [right-sizing / reserved instances / architecture change].'",
@@ -1200,7 +1176,7 @@
     "sourceSubTopic": "Cost-Aware Design Reviews"
   },
   {
-    "id": "SIG-151",
+    "id": "SIG-148",
     "observableId": "C3-O10",
     "capabilityId": "C3",
     "signalText": "Emerging differentiator for senior leaders. 'Implemented carbon-aware scheduling for batch workloads, reduced compute carbon intensity [X]% while maintaining SLA commitments.'",
@@ -1208,7 +1184,7 @@
     "sourceSubTopic": "Carbon-Aware Computing"
   },
   {
-    "id": "SIG-152",
+    "id": "SIG-149",
     "observableId": "C3-O10",
     "capabilityId": "C3",
     "signalText": "'Adopted energy-efficient infrastructure (ARM instances, right-sized clusters), reduced energy consumption [X]% for stateless services. Sustainability metrics reported in quarterly business reviews.'",
@@ -1216,7 +1192,7 @@
     "sourceSubTopic": "Green Architecture Decisions"
   },
   {
-    "id": "SIG-153",
+    "id": "SIG-150",
     "observableId": "C5-O14",
     "capabilityId": "C5",
     "signalText": "Matrix management is a survival skill. 'Managed competing priorities from [X] stakeholders, proactively surfaced [Y] conflicts with trade-off analysis, maintained trust across all reporting lines.'",
@@ -1224,7 +1200,7 @@
     "sourceSubTopic": "Matrix Stakeholder Navigation"
   },
   {
-    "id": "SIG-154",
+    "id": "SIG-151",
     "observableId": "C5-O14",
     "capabilityId": "C5",
     "signalText": "Peer feedback signal: 'Acts as honest broker between competing priorities. I always know where I stand and why trade-offs were made.'",
@@ -1232,7 +1208,7 @@
     "sourceSubTopic": "Managing Up to Multiple Leaders"
   },
   {
-    "id": "SIG-155",
+    "id": "SIG-152",
     "observableId": "C5-O15",
     "capabilityId": "C5",
     "signalText": "Director-to-VP bridge skill. 'Authored engineering board narrative that secured $[X]M investment. Framed reliability as competitive moat and R&D velocity as market advantage.'",
@@ -1240,7 +1216,7 @@
     "sourceSubTopic": "Board-Level Communication"
   },
   {
-    "id": "SIG-156",
+    "id": "SIG-153",
     "observableId": "C5-O15",
     "capabilityId": "C5",
     "signalText": "'Prepared quarterly board materials translating engineering metrics into strategic narrative. Board approved [infrastructure/platform] investment based on competitive positioning analysis.'",
@@ -1248,7 +1224,7 @@
     "sourceSubTopic": "Executive Communication at Board Level"
   },
   {
-    "id": "SIG-157",
+    "id": "SIG-154",
     "observableId": "C6-O11",
     "capabilityId": "C6",
     "signalText": "Director's highest-leverage people work. 'Coached [X] struggling EM through [skill gap], implemented 90-day plan with measurable milestones, EM improved [metric] and team health score rose [Y] points.'",
@@ -1256,7 +1232,7 @@
     "sourceSubTopic": "Coaching Struggling EMs"
   },
   {
-    "id": "SIG-158",
+    "id": "SIG-155",
     "observableId": "C6-O11",
     "capabilityId": "C6",
     "signalText": "Knowing when to coach vs when to act: 'Identified EM skill gap via skip-level signals, distinguished from will gap, provided structured support. [X] of [Y] coached EMs showed measurable improvement within 90 days.'",
@@ -1264,7 +1240,7 @@
     "sourceSubTopic": "EM Skill Gap Diagnosis"
   },
   {
-    "id": "SIG-159",
+    "id": "SIG-156",
     "observableId": "C6-O12",
     "capabilityId": "C6",
     "signalText": "Org resilience evidence. 'Maintained succession plan for [X] critical roles, with identified successors and readiness timelines. When [EM/TL] departed, successor transitioned with zero team disruption.'",
@@ -1272,7 +1248,7 @@
     "sourceSubTopic": "Succession Planning"
   },
   {
-    "id": "SIG-160",
+    "id": "SIG-157",
     "observableId": "C6-O12",
     "capabilityId": "C6",
     "signalText": "'Built bench strength through deliberate development: [X] succession candidates given stretch assignments, [Y] ready-now successors identified across [Z] critical roles. Quarterly review cadence.'",
@@ -1280,7 +1256,7 @@
     "sourceSubTopic": "Bench Strength Development"
   },
   {
-    "id": "SIG-161",
+    "id": "SIG-158",
     "observableId": "C8-O5",
     "capabilityId": "C8",
     "signalText": "Directors own regulatory risk architecture. 'Built [GDPR/HIPAA/SOX] compliance framework adopted by [X] teams, automated [Y]% of compliance checks, passed [Z] consecutive audits with zero engineering findings.'",
@@ -1288,7 +1264,7 @@
     "sourceSubTopic": "Regulatory Compliance Framework"
   },
   {
-    "id": "SIG-162",
+    "id": "SIG-159",
     "observableId": "C8-O5",
     "capabilityId": "C8",
     "signalText": "Compliance as engineering culture: 'Embedded regulatory requirements into CI/CD pipeline. PII detection automated, data retention enforced programmatically, audit trail complete for all data access.'",
@@ -1296,7 +1272,7 @@
     "sourceSubTopic": "Audit-Ready Engineering Practices"
   },
   {
-    "id": "SIG-163",
+    "id": "SIG-160",
     "observableId": "C8-O6",
     "capabilityId": "C8",
     "signalText": "Operational resilience through vendor management. 'Maintained vendor risk registry for [X] critical dependencies, built abstraction layers for [Y] single-vendor risks, survived [vendor] outage with zero customer impact via automated failover.'",
@@ -1304,7 +1280,7 @@
     "sourceSubTopic": "Vendor Risk Assessment"
   },
   {
-    "id": "SIG-164",
+    "id": "SIG-161",
     "observableId": "C8-O6",
     "capabilityId": "C8",
     "signalText": "'Identified [X] single-vendor lock-in risks, negotiated multi-provider contracts saving $[Y]/year, built vendor abstraction reducing switch cost from [Z] months to [W] weeks.'",
@@ -1312,7 +1288,7 @@
     "sourceSubTopic": "Vendor Dependency Management"
   },
   {
-    "id": "SIG-165",
+    "id": "SIG-162",
     "observableId": "C9-O7",
     "capabilityId": "C9",
     "signalText": "Process maturity signal. 'Established feature flag governance, reduced active flags from [X] to [Y], eliminated [Z] incidents caused by stale flag interactions. Every flag has owner and expiry.'",
@@ -1320,7 +1296,7 @@
     "sourceSubTopic": "Feature Flag Lifecycle Governance"
   },
   {
-    "id": "SIG-166",
+    "id": "SIG-163",
     "observableId": "C9-O7",
     "capabilityId": "C9",
     "signalText": "Experimentation infrastructure maturity: 'Built experimentation framework with automated flag cleanup, ownership tracking, and interaction testing. Teams run [X] experiments/quarter with zero flag-related incidents.'",
@@ -1328,7 +1304,7 @@
     "sourceSubTopic": "Experimentation Framework"
   },
   {
-    "id": "SIG-167",
+    "id": "SIG-164",
     "observableId": "C9-O8",
     "capabilityId": "C9",
     "signalText": "Data-driven culture signal. 'Established A/B testing governance with mandatory power analysis. Caught [X] underpowered experiments before shipping. Pre-registered metrics for all experiments.'",
@@ -1336,7 +1312,7 @@
     "sourceSubTopic": "A/B Testing Standards"
   },
   {
-    "id": "SIG-168",
+    "id": "SIG-165",
     "observableId": "C9-O8",
     "capabilityId": "C9",
     "signalText": "'Implemented sequential testing framework, reducing average experiment duration [X]% while maintaining statistical validity. [Y] experiments completed per quarter with proper sample sizes.'",
@@ -1344,7 +1320,7 @@
     "sourceSubTopic": "Experiment Design Rigor"
   },
   {
-    "id": "SIG-169",
+    "id": "SIG-166",
     "observableId": "C11-O7",
     "capabilityId": "C11",
     "signalText": "Intentional pipeline building. 'Audited hiring funnel, identified [X]% drop-off at [stage], implemented [structured rubrics / diverse slates / sourcing partnerships], improved underrepresented candidate pass-through [Y]%.'",
@@ -1352,7 +1328,7 @@
     "sourceSubTopic": "Diversity Pipeline Optimization"
   },
   {
-    "id": "SIG-170",
+    "id": "SIG-167",
     "observableId": "C11-O7",
     "capabilityId": "C11",
     "signalText": "Systemic bias reduction: 'Revised job descriptions removing [X] exclusionary patterns, partnered with [Y] diversity-focused orgs, achieved diverse candidate slate for [Z]% of open roles.'",
@@ -1360,7 +1336,7 @@
     "sourceSubTopic": "Inclusive Hiring Practices"
   },
   {
-    "id": "SIG-171",
+    "id": "SIG-168",
     "observableId": "C11-O8",
     "capabilityId": "C11",
     "signalText": "Hiring signal quality. 'Built interviewer calibration program with monthly sessions, improved inter-rater reliability from [X] to [Y], reduced weak-hire reversals in debrief [Z]%.'",
@@ -1368,7 +1344,7 @@
     "sourceSubTopic": "Interviewer Calibration Program"
   },
   {
-    "id": "SIG-172",
+    "id": "SIG-169",
     "observableId": "C11-O8",
     "capabilityId": "C11",
     "signalText": "Interview quality culture: 'All interviewers complete shadow cycle before solo interviews. Monthly calibration reviews anonymized write-ups. Feedback rubric ensures evidence-based evaluations, not gut feel.'",
@@ -1376,7 +1352,7 @@
     "sourceSubTopic": "Interview Feedback Quality"
   },
   {
-    "id": "SIG-173",
+    "id": "SIG-170",
     "observableId": "C1-O3",
     "capabilityId": "C1",
     "signalText": "Observed during re-org: communicated rationale in team all-hands with empathy and clarity, answered hard questions directly, followed up individually with affected engineers within 24 hours.",
@@ -1384,7 +1360,7 @@
     "sourceSubTopic": "Re-org Execution Quality"
   },
   {
-    "id": "SIG-174",
+    "id": "SIG-171",
     "observableId": "C3-O2",
     "capabilityId": "C3",
     "signalText": "Observed in design reviews: asks probing questions about coupling and blast radius, pushes back on designs that create cross-team dependencies, references team topology constraints in architectural decisions.",
@@ -1392,7 +1368,7 @@
     "sourceSubTopic": "Design Review Quality"
   },
   {
-    "id": "SIG-175",
+    "id": "SIG-172",
     "observableId": "C4-O3",
     "capabilityId": "C4",
     "signalText": "Observed in sprint reviews: team consistently delivers within 10% of committed scope, EM flags risks early in standup rather than at sprint end, retro action items are tracked to completion.",
@@ -1400,7 +1376,7 @@
     "sourceSubTopic": "Delivery Predictability"
   },
   {
-    "id": "SIG-176",
+    "id": "SIG-173",
     "observableId": "C5-O3",
     "capabilityId": "C5",
     "signalText": "Observed in cross-functional syncs: PM and Design actively seek EM's input on scope trade-offs, EM raises technical constraints without blocking, disagreements resolved constructively in the room.",
@@ -1408,7 +1384,7 @@
     "sourceSubTopic": "Cross-Functional Collaboration Quality"
   },
   {
-    "id": "SIG-177",
+    "id": "SIG-174",
     "observableId": "C6-O2",
     "capabilityId": "C6",
     "signalText": "Observed in skip-levels: direct reports describe clear expectations and regular feedback from EM. EM addresses performance issues directly rather than routing around struggling engineers or reassigning their work silently.",
@@ -1416,7 +1392,7 @@
     "sourceSubTopic": "Performance Conversation Quality"
   },
   {
-    "id": "SIG-178",
+    "id": "SIG-175",
     "observableId": "C7-O4",
     "capabilityId": "C7",
     "signalText": "Observed in exec reviews: delivers updates with appropriate altitude (business impact, not implementation detail), surfaces risks proactively with options rather than waiting to be asked, handles tough questions with composure.",
@@ -1424,7 +1400,7 @@
     "sourceSubTopic": "Executive Communication Quality"
   },
   {
-    "id": "SIG-179",
+    "id": "SIG-176",
     "observableId": "C8-O1",
     "capabilityId": "C8",
     "signalText": "Observed during Sev1 incident: EM took command role calmly, established clear communication cadence, delegated investigation while managing stakeholder updates, ran structured post-mortem within 48 hours.",
@@ -1432,7 +1408,7 @@
     "sourceSubTopic": "Incident Response Behavior"
   },
   {
-    "id": "SIG-180",
+    "id": "SIG-177",
     "observableId": "C9-O2",
     "capabilityId": "C9",
     "signalText": "Observed in team meetings: EM references DORA metrics and developer satisfaction data naturally in planning discussions, uses data to justify engineering investments rather than relying on anecdotes or gut feel.",
@@ -1440,15 +1416,15 @@
     "sourceSubTopic": "Data Literacy in Practice"
   },
   {
-    "id": "SIG-181",
-    "observableId": "C11-O3",
+    "id": "SIG-178",
+    "observableId": "C11-O1",
     "capabilityId": "C11",
     "signalText": "Observed in interview debriefs: EM calibrates interviewers on evidence quality, pushes back on vague 'culture fit' signals, ensures structured scoring rubric is applied consistently across candidates.",
     "signalType": "manager_observation",
     "sourceSubTopic": "Interview Process Rigor"
   },
   {
-    "id": "SIG-182",
+    "id": "SIG-179",
     "observableId": "C12-O3",
     "capabilityId": "C12",
     "signalText": "Observed in team meetings: diverse voices participate actively, EM facilitates equitably (draws out quieter members, time-boxes dominant speakers), async decision-making options provided for different working styles.",
@@ -1456,119 +1432,135 @@
     "sourceSubTopic": "Inclusive Team Dynamics"
   },
   {
-    "id": "SIG-183",
+    "id": "SIG-180",
     "capabilityId": "C2",
     "observableId": "C2-O1",
     "signalType": "promo_packet",
-    "signalText": "Led quarterly planning that resulted in 30% reallocation of engineering investment toward highest-impact business priorities, documented with clear ROI analysis"
+    "signalText": "Led quarterly planning that resulted in 30% reallocation of engineering investment toward highest-impact business priorities, documented with clear ROI analysis",
+    "sourceSubTopic": "Quarterly/Half Planning"
+  },
+  {
+    "id": "SIG-181",
+    "capabilityId": "C2",
+    "observableId": "C2-O1",
+    "signalType": "manager_observation",
+    "signalText": "Consistently produces planning artifacts that connect engineering work to business outcomes; stakeholders cite their planning process as a model for other teams",
+    "sourceSubTopic": "Quarterly/Half Planning"
+  },
+  {
+    "id": "SIG-182",
+    "capabilityId": "C2",
+    "observableId": "C2-O2",
+    "signalType": "peer_feedback",
+    "signalText": "When they say no, it never feels like a rejection \u2014 they show you exactly what you'd be trading off and help you make the call yourself",
+    "sourceSubTopic": "Saying No Effectively"
+  },
+  {
+    "id": "SIG-183",
+    "capabilityId": "C2",
+    "observableId": "C2-O2",
+    "signalType": "promo_packet",
+    "signalText": "Deflected 5 out-of-scope requests in Q3 by presenting trade-off analyses that stakeholders described as 'the clearest prioritization communication they'd seen'",
+    "sourceSubTopic": "Saying No Effectively"
   },
   {
     "id": "SIG-184",
     "capabilityId": "C2",
-    "observableId": "C2-O1",
+    "observableId": "C2-O3",
     "signalType": "manager_observation",
-    "signalText": "Consistently produces planning artifacts that connect engineering work to business outcomes; stakeholders cite their planning process as a model for other teams"
+    "signalText": "Distinguishes one-way door decisions from two-way door decisions and applies proportionate rigor; doesn't over-analyze reversible choices or under-analyze irreversible ones",
+    "sourceSubTopic": "Prioritization Under Ambiguity"
   },
   {
     "id": "SIG-185",
     "capabilityId": "C2",
-    "observableId": "C2-O2",
+    "observableId": "C2-O3",
     "signalType": "peer_feedback",
-    "signalText": "When they say no, it never feels like a rejection \u2014 they show you exactly what you'd be trading off and help you make the call yourself"
+    "signalText": "In ambiguous situations where other teams stall, they find a way to make meaningful progress by scoping down the decision and iterating",
+    "sourceSubTopic": "Prioritization Under Ambiguity"
   },
   {
     "id": "SIG-186",
     "capabilityId": "C2",
-    "observableId": "C2-O2",
+    "observableId": "C2-O4",
     "signalType": "promo_packet",
-    "signalText": "Deflected 5 out-of-scope requests in Q3 by presenting trade-off analyses that stakeholders described as 'the clearest prioritization communication they'd seen'"
+    "signalText": "Challenged the team's assumption that a full rewrite was needed by applying first-principles analysis, resulting in a targeted migration that saved 3 months of engineering time",
+    "sourceSubTopic": "First Principles Analysis"
   },
   {
     "id": "SIG-187",
     "capabilityId": "C2",
-    "observableId": "C2-O3",
+    "observableId": "C2-O4",
     "signalType": "manager_observation",
-    "signalText": "Distinguishes one-way door decisions from two-way door decisions and applies proportionate rigor; doesn't over-analyze reversible choices or under-analyze irreversible ones"
+    "signalText": "Regularly surfaces assumptions that others take as given; asks 'why do we believe this?' in a way that sharpens team thinking rather than undermining confidence",
+    "sourceSubTopic": "First Principles Analysis"
   },
   {
     "id": "SIG-188",
-    "capabilityId": "C2",
-    "observableId": "C2-O3",
-    "signalType": "peer_feedback",
-    "signalText": "In ambiguous situations where other teams stall, they find a way to make meaningful progress by scoping down the decision and iterating"
+    "capabilityId": "C13",
+    "observableId": "C13-O1",
+    "signalType": "metric",
+    "signalText": "Reduced security review bottleneck from 5 days to <1 day by embedding automated SAST/DAST scanning into CI pipeline, catching 85% of issues before human review",
+    "sourceSubTopic": "Security Review Integration"
   },
   {
     "id": "SIG-189",
-    "capabilityId": "C2",
-    "observableId": "C2-O4",
+    "capabilityId": "C13",
+    "observableId": "C13-O1",
     "signalType": "promo_packet",
-    "signalText": "Challenged the team's assumption that a full rewrite was needed by applying first-principles analysis, resulting in a targeted migration that saved 3 months of engineering time"
+    "signalText": "Designed and implemented security-by-default development workflow adopted by 3 teams, reducing post-deploy security findings by 60%",
+    "sourceSubTopic": "Security Review Integration"
   },
   {
     "id": "SIG-190",
-    "capabilityId": "C2",
-    "observableId": "C2-O4",
-    "signalType": "manager_observation",
-    "signalText": "Regularly surfaces assumptions that others take as given; asks 'why do we believe this?' in a way that sharpens team thinking rather than undermining confidence"
+    "capabilityId": "C13",
+    "observableId": "C13-O2",
+    "signalType": "metric",
+    "signalText": "Maintained P0 vulnerability patch velocity under 48 hours and P1 under 7 days for 4 consecutive quarters; zero SLA breaches on critical vulnerabilities",
+    "sourceSubTopic": "Vulnerability Management"
   },
   {
     "id": "SIG-191",
     "capabilityId": "C13",
-    "observableId": "C13-O1",
-    "signalType": "metric",
-    "signalText": "Reduced security review bottleneck from 5 days to <1 day by embedding automated SAST/DAST scanning into CI pipeline, catching 85% of issues before human review"
+    "observableId": "C13-O2",
+    "signalType": "manager_observation",
+    "signalText": "Treats vulnerability management as an ongoing practice, not a periodic exercise; team consistently patches within SLA without needing escalation",
+    "sourceSubTopic": "Vulnerability Management"
   },
   {
     "id": "SIG-192",
     "capabilityId": "C13",
-    "observableId": "C13-O1",
-    "signalType": "promo_packet",
-    "signalText": "Designed and implemented security-by-default development workflow adopted by 3 teams, reducing post-deploy security findings by 60%"
+    "observableId": "C13-O3",
+    "signalType": "peer_feedback",
+    "signalText": "Their access review process is thorough but not burdensome \u2014 they automated the quarterly review and elevated permissions expire automatically, so we rarely have stale access",
+    "sourceSubTopic": "Access Control & Least Privilege"
   },
   {
     "id": "SIG-193",
     "capabilityId": "C13",
-    "observableId": "C13-O2",
-    "signalType": "metric",
-    "signalText": "Maintained P0 vulnerability patch velocity under 48 hours and P1 under 7 days for 4 consecutive quarters; zero SLA breaches on critical vulnerabilities"
+    "observableId": "C13-O3",
+    "signalType": "promo_packet",
+    "signalText": "Implemented automated access governance reducing over-privileged accounts by 70% and eliminating the quarterly manual access review burden for 200+ engineers",
+    "sourceSubTopic": "Access Control & Least Privilege"
   },
   {
     "id": "SIG-194",
     "capabilityId": "C13",
-    "observableId": "C13-O2",
-    "signalType": "manager_observation",
-    "signalText": "Treats vulnerability management as an ongoing practice, not a periodic exercise; team consistently patches within SLA without needing escalation"
+    "observableId": "C13-O4",
+    "signalType": "metric",
+    "signalText": "Achieved continuous SOC2 compliance with automated evidence collection; audit prep time reduced from 6 weeks to 3 days",
+    "sourceSubTopic": "Compliance & Audit Readiness"
   },
   {
     "id": "SIG-195",
     "capabilityId": "C13",
-    "observableId": "C13-O3",
+    "observableId": "C13-O4",
     "signalType": "peer_feedback",
-    "signalText": "Their access review process is thorough but not burdensome \u2014 they automated the quarterly review and elevated permissions expire automatically, so we rarely have stale access"
+    "signalText": "Compliance used to be a dreaded annual exercise \u2014 now it runs continuously in the background and we barely notice it. That's entirely due to their leadership on automation",
+    "sourceSubTopic": "Compliance & Audit Readiness"
   },
   {
     "id": "SIG-196",
-    "capabilityId": "C13",
-    "observableId": "C13-O3",
-    "signalType": "promo_packet",
-    "signalText": "Implemented automated access governance reducing over-privileged accounts by 70% and eliminating the quarterly manual access review burden for 200+ engineers"
-  },
-  {
-    "id": "SIG-197",
-    "capabilityId": "C13",
-    "observableId": "C13-O4",
-    "signalType": "metric",
-    "signalText": "Achieved continuous SOC2 compliance with automated evidence collection; audit prep time reduced from 6 weeks to 3 days"
-  },
-  {
-    "id": "SIG-198",
-    "capabilityId": "C13",
-    "observableId": "C13-O4",
-    "signalType": "peer_feedback",
-    "signalText": "Compliance used to be a dreaded annual exercise \u2014 now it runs continuously in the background and we barely notice it. That's entirely due to their leadership on automation"
-  },
-  {
-    "id": "SIG-214",
     "observableId": "C12-O6",
     "capabilityId": "C12",
     "signalText": "Cultural stewardship during growth: 'Scaled team from 8 to 20 while maintaining top-quartile engagement scores \u2014 structured culture onboarding, buddy system, and quarterly norms review'",
@@ -1576,7 +1568,7 @@
     "sourceSubTopic": "Cultural Continuity"
   },
   {
-    "id": "SIG-215",
+    "id": "SIG-197",
     "observableId": "C12-O7",
     "capabilityId": "C12",
     "signalText": "Inclusive participation: 'Restructured design review process with written-first input \u2014 participation from underrepresented team members increased from 30% to 75%'",
@@ -1584,7 +1576,7 @@
     "sourceSubTopic": "Inclusive Feedback Channels"
   },
   {
-    "id": "SIG-216",
+    "id": "SIG-198",
     "observableId": "C12-O8",
     "capabilityId": "C12",
     "signalText": "Culture enforcement: 'Addressed senior engineer's dismissive behavior within 48 hours \u2014 behavior improved within 30 days, team psychological safety scores recovered by next survey'",
@@ -1592,7 +1584,7 @@
     "sourceSubTopic": "Toxic Behavior Intervention"
   },
   {
-    "id": "SIG-217",
+    "id": "SIG-199",
     "observableId": "C10-O6",
     "capabilityId": "C10",
     "signalText": "Resource planning maturity: 'Every headcount request includes three tiers with quantified ROI and explicit trade-offs \u2014 leadership approval rate increased from 40% to 85%'",
@@ -1600,7 +1592,7 @@
     "sourceSubTopic": "Tiered Resource Planning"
   },
   {
-    "id": "SIG-218",
+    "id": "SIG-200",
     "observableId": "C10-O7",
     "capabilityId": "C10",
     "signalText": "FinOps discipline: 'Established cost-per-transaction dashboards \u2014 identified $300K/year in idle infrastructure, redirected savings to reliability investment'",
@@ -1608,7 +1600,7 @@
     "sourceSubTopic": "Engineering ROI Tracking"
   },
   {
-    "id": "SIG-219",
+    "id": "SIG-201",
     "observableId": "C10-O8",
     "capabilityId": "C10",
     "signalText": "Dynamic reallocation: 'Proactively reallocated 3 engineers from diminishing-return project to critical reliability initiative mid-quarter \u2014 SLA improvement from 99.5% to 99.95% with no stakeholder escalation'",
@@ -1616,7 +1608,7 @@
     "sourceSubTopic": "Dynamic Resource Reallocation"
   },
   {
-    "id": "SIG-220",
+    "id": "SIG-202",
     "observableId": "C7-O8",
     "capabilityId": "C7",
     "signalText": "Difficult conversation skill: 'Delivered 12 difficult messages in H2 (promotion rejections, project cancellations, performance concerns) \u2014 all within 48 hours of trigger, zero surprises in skip-levels'",
@@ -1624,7 +1616,7 @@
     "sourceSubTopic": "Difficult Conversations"
   },
   {
-    "id": "SIG-221",
+    "id": "SIG-203",
     "observableId": "C7-O9",
     "capabilityId": "C7",
     "signalText": "Communication scaling: 'Introduced RFC process + decision log as team grew to 20 \u2014 meeting hours per engineer dropped 35%, decision revisitation incidents dropped from 8/quarter to 1'",
@@ -1632,7 +1624,7 @@
     "sourceSubTopic": "Communication Scaling"
   },
   {
-    "id": "SIG-222",
+    "id": "SIG-204",
     "observableId": "C7-O10",
     "capabilityId": "C7",
     "signalText": "Distributed authority: 'Documented decision authority matrix \u2014 team now makes 85% of decisions autonomously, escalation rate down 60%, team reports feeling more empowered in engagement survey'",
@@ -1640,7 +1632,7 @@
     "sourceSubTopic": "Decision Authority Distribution"
   },
   {
-    "id": "SIG-223",
+    "id": "SIG-205",
     "observableId": "C14-O7",
     "capabilityId": "C14",
     "signalText": "Continuous documentation practice: 'Maintained weekly performance notes for all reports \u2014 review preparation time dropped from 2 weeks to 3 days, zero 'surprise' complaints in post-review feedback'",
@@ -1648,7 +1640,7 @@
     "sourceSubTopic": "Continuous Performance Documentation"
   },
   {
-    "id": "SIG-224",
+    "id": "SIG-206",
     "observableId": "C14-O8",
     "capabilityId": "C14",
     "signalText": "High performer investment: 'Created stretch assignment program for top performers \u2014 3 of 4 achieved promotion readiness within 12 months, zero regrettable departures from top-performer cohort'",
@@ -1656,7 +1648,7 @@
     "sourceSubTopic": "High Performer Development"
   },
   {
-    "id": "SIG-225",
+    "id": "SIG-207",
     "observableId": "C2-O5",
     "capabilityId": "C2",
     "signalText": "Strategic trade-off transparency: 'Published not-doing list alongside roadmap \u2014 stakeholder re-litigation dropped 65%, team focus improved measurably'",
@@ -1664,7 +1656,7 @@
     "sourceSubTopic": "Strategic Trade-off Transparency"
   },
   {
-    "id": "SIG-226",
+    "id": "SIG-208",
     "observableId": "C2-O6",
     "capabilityId": "C2",
     "signalText": "Outcome-connected planning: 'Required business success metrics for all initiatives \u2014 identified 2 low-impact projects mid-quarter and reallocated to higher-ROI work'",
@@ -1672,7 +1664,7 @@
     "sourceSubTopic": "Outcome-Connected Planning"
   },
   {
-    "id": "SIG-227",
+    "id": "SIG-209",
     "observableId": "C8-O7",
     "capabilityId": "C8",
     "signalText": "Proactive resilience: 'Quarterly game days discovered 5 runbook gaps and 3 tooling issues before production impact \u2014 MTTR improved 40% in real incidents'",
@@ -1680,11 +1672,691 @@
     "sourceSubTopic": "Proactive Resilience Testing"
   },
   {
-    "id": "SIG-228",
+    "id": "SIG-210",
     "observableId": "C8-O8",
     "capabilityId": "C8",
     "signalText": "Error budget discipline: 'Implemented SLO-based error budgets \u2014 automatically triggered reliability sprint when checkout service consumed 80% of monthly budget, preventing SLA breach'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Error Budget Management"
+  },
+  {
+    "id": "SIG-211",
+    "observableId": "C13-O5",
+    "capabilityId": "C13",
+    "signalText": "Security champion rotation: 'Rotating security champion catches 2-3 vulnerability patterns per sprint that automated tools miss, team security literacy measurably improved'",
+    "signalType": "metric",
+    "sourceSubTopic": "Security Champions"
+  },
+  {
+    "id": "SIG-212",
+    "observableId": "C13-O6",
+    "capabilityId": "C13",
+    "signalText": "CI/CD security gates: 'Automated scanning blocks critical vulnerabilities at build time \u2014 zero critical findings in production for 6 months'",
+    "signalType": "metric",
+    "sourceSubTopic": "Automated Security Scanning"
+  },
+  {
+    "id": "SIG-213",
+    "observableId": "C13-O7",
+    "capabilityId": "C13",
+    "signalText": "Threat modeling practice: 'Required STRIDE threat models for auth and payment features \u2014 caught 5 design-level vulnerabilities before implementation'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Threat Modeling"
+  },
+  {
+    "id": "SIG-214",
+    "observableId": "C11-O9",
+    "capabilityId": "C11",
+    "signalText": "Structured hiring: 'Implemented competency-mapped rubrics and independent scoring \u2014 interviewer agreement improved 30%, offer-to-accept rate 80%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Structured Interview Design"
+  },
+  {
+    "id": "SIG-215",
+    "observableId": "C11-O10",
+    "capabilityId": "C11",
+    "signalText": "Competitive hiring: 'Won 4 of 5 competing offers against FAANG by differentiating on career velocity and impact \u2014 all hires retained at 1 year'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Competitive Hiring Strategy"
+  },
+  {
+    "id": "SIG-216",
+    "observableId": "C11-O11",
+    "capabilityId": "C11",
+    "signalText": "Pipeline optimization: 'Instrumented full hiring funnel \u2014 identified technical screen bottleneck, redesigned assessment, improved pass-through rate from 25% to 45%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Hiring Pipeline Analytics"
+  },
+  {
+    "id": "SIG-217",
+    "observableId": "C4-O12",
+    "capabilityId": "C4",
+    "signalText": "Bottleneck resolution: 'Value stream mapping identified CI pipeline as primary bottleneck (45min avg build) \u2014 parallelized build stages, reduced to 12min, cycle time improved 30%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Velocity Bottleneck Analysis"
+  },
+  {
+    "id": "SIG-218",
+    "observableId": "C4-O13",
+    "capabilityId": "C4",
+    "signalText": "Focus time protection: 'Implemented no-meeting mornings \u2014 engineers report 5+ hours of daily focus time, complex feature velocity improved 35%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Focus Time Protection"
+  },
+  {
+    "id": "SIG-219",
+    "observableId": "C9-O9",
+    "capabilityId": "C9",
+    "signalText": "Metric pairing: 'Paired deployment frequency with change failure rate \u2014 shipping 3x faster while maintaining <5% failure rate, proving velocity and quality are not inherently opposed'",
+    "signalType": "metric",
+    "sourceSubTopic": "Metric Pairings"
+  },
+  {
+    "id": "SIG-220",
+    "observableId": "C9-O10",
+    "capabilityId": "C9",
+    "signalText": "Metrics maturity: 'Started with 3 DORA metrics, retired 1, added developer satisfaction survey \u2014 every active metric informed a decision within 90 days'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Metrics Maturity Evolution"
+  },
+  {
+    "id": "SIG-221",
+    "observableId": "C3-O11",
+    "capabilityId": "C3",
+    "signalText": "Tech debt visibility: 'Quantified top 5 tech debt items in business terms \u2014 secured 20% capacity allocation, remediated items saving estimated $400K/year in engineering time'",
+    "signalType": "metric",
+    "sourceSubTopic": "Tech Debt Quantification"
+  },
+  {
+    "id": "SIG-222",
+    "observableId": "C5-O16",
+    "capabilityId": "C5",
+    "signalText": "Triad alignment: 'Shared OKRs with PM and Design lead \u2014 zero cross-functional escalations in Q4, joint satisfaction scores 4.7/5'",
+    "signalType": "metric",
+    "sourceSubTopic": "Product Triad Alignment"
+  },
+  {
+    "id": "SIG-223",
+    "observableId": "C6-O13",
+    "capabilityId": "C6",
+    "signalText": "Career pathway clarity: 'Documented IC and management tracks \u2014 100% of reports have career plans, Staff IC track retained 3 senior engineers who would have otherwise sought management elsewhere'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Career Pathway Design"
+  },
+  {
+    "id": "SIG-224",
+    "observableId": "C1-O16",
+    "capabilityId": "C1",
+    "signalText": "Strategic alignment: 'Translated company H2 strategy into 4 team OKRs with measurable business outcomes \u2014 3 of 4 hit target, cross-team dependency map prevented 2 potential mid-quarter blockers'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Business Strategy to Team Goals"
+  },
+  {
+    "id": "SIG-225",
+    "observableId": "C1-O16",
+    "capabilityId": "C1",
+    "signalText": "Director-level: 'Established quarterly strategy decomposition process across 5 teams \u2014 85% of team goals now have explicit business outcome metrics, up from 30% before'",
+    "signalType": "metric",
+    "sourceSubTopic": "Cross-Team Goal Alignment"
+  },
+  {
+    "id": "SIG-226",
+    "observableId": "C7-O11",
+    "capabilityId": "C7",
+    "signalText": "Trade-off clarity: 'Presented platform migration proposal with explicit cost section \u2014 Team B loses 2 weeks of roadmap, Team C takes on temporary operational burden \u2014 leadership approved with full awareness of costs'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Trade-off Communication"
+  },
+  {
+    "id": "SIG-227",
+    "observableId": "C7-O11",
+    "capabilityId": "C7",
+    "signalText": "Decision durability metric: 'Decisions presented with explicit trade-off framing had 90% stick rate vs 55% for decisions where costs were implicit \u2014 reduced re-litigation meetings by 40%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Explicit Trade-off Framing"
+  },
+  {
+    "id": "SIG-228",
+    "observableId": "C14-O9",
+    "capabilityId": "C14",
+    "signalText": "Exit management signal: 'Managed 3 exits this year \u2014 all completed with full knowledge transfer, zero legal escalations, and post-departure survey showed remaining team trusted the process was fair'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Managed Exit Execution"
+  },
+  {
+    "id": "SIG-229",
+    "observableId": "C14-O9",
+    "capabilityId": "C14",
+    "signalText": "Director-level: 'Established managed exit playbook across org \u2014 standardized timeline, communication templates, and knowledge transfer checklist; reduced average exit timeline from 6 weeks of ambiguity to 3 weeks of structured transition'",
+    "signalType": "metric",
+    "sourceSubTopic": "Exit Process Standardization"
+  },
+  {
+    "id": "SIG-230",
+    "observableId": "C2-O5",
+    "capabilityId": "C2",
+    "signalText": "Prioritization discipline: 'Killed 2 in-flight projects mid-quarter when outcome data showed <10% of projected impact \u2014 reallocated team to higher-ROI work, stakeholders aligned within 1 week'",
+    "signalType": "metric",
+    "sourceSubTopic": "Outcome-Driven Prioritization"
+  },
+  {
+    "id": "SIG-231",
+    "observableId": "C2-O6",
+    "capabilityId": "C2",
+    "signalText": "Goal-setting maturity: 'Team co-creates OKRs with measurable outcomes (not task lists) \u2014 85% key result achievement rate, zero OKRs with dependencies on other teams without explicit agreements'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "OKR Design Quality"
+  },
+  {
+    "id": "SIG-232",
+    "observableId": "C8-O7",
+    "capabilityId": "C8",
+    "signalText": "Incident readiness: 'Pre-wrote failure playbooks for top 5 risk scenarios \u2014 when first major incident hit, team responded in 12 minutes using the playbook vs. estimated 2+ hours without it'",
+    "signalType": "metric",
+    "sourceSubTopic": "Pre-Incident Preparation"
+  },
+  {
+    "id": "SIG-233",
+    "observableId": "C8-O2",
+    "capabilityId": "C8",
+    "signalText": "On-call health: 'Reduced alert noise 70% by triaging all alerts (actionable vs. noise) \u2014 on-call pages dropped from 15/week to 3, zero requests to leave rotation in Q4'",
+    "signalType": "metric",
+    "sourceSubTopic": "On-Call Sustainability"
+  },
+  {
+    "id": "SIG-234",
+    "observableId": "C8-O3",
+    "capabilityId": "C8",
+    "signalText": "Post-mortem effectiveness: 'Post-mortem action item completion rate 90% \u2014 repeat incidents from same root cause dropped to zero in Q3, team views post-mortems as valuable learning, not bureaucracy'",
+    "signalType": "metric",
+    "sourceSubTopic": "Post-Mortem Quality"
+  },
+  {
+    "id": "SIG-235",
+    "observableId": "C9-O9",
+    "capabilityId": "C9",
+    "signalText": "Anti-gaming design: 'Replaced single deployment frequency target with paired metrics (DF + CFR + PR size) \u2014 gaming stopped, team engaged with metrics as diagnostic tools, identified genuine bottleneck in code review turnaround'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Metric Pairing for Integrity"
+  },
+  {
+    "id": "SIG-236",
+    "observableId": "C11-O10",
+    "capabilityId": "C11",
+    "signalText": "EVP differentiation: 'Articulated mission-driven value proposition emphasizing impact per engineer and career velocity \u2014 won 6 of 8 competing offers despite 20% lower total comp, all hires thriving at 12 months'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Employer Value Proposition"
+  },
+  {
+    "id": "SIG-237",
+    "observableId": "C11-O11",
+    "capabilityId": "C11",
+    "signalText": "Pipeline diagnosis: 'Identified interviewer miscalibration as root cause of 4-month hiring drought \u2014 recalibrated team using mock interviews, first offer extended within 3 weeks of fix'",
+    "signalType": "metric",
+    "sourceSubTopic": "Hiring Pipeline Diagnosis"
+  },
+  {
+    "id": "SIG-238",
+    "observableId": "C14-O1",
+    "capabilityId": "C14",
+    "signalText": "Calibration preparation: 'Ran pre-calibration sessions with peer managers to identify bias and inconsistency before formal calibration \u2014 eliminated 3 instances of recency bias and 2 of similarity bias across the group'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Pre-Calibration Quality"
+  },
+  {
+    "id": "SIG-239",
+    "observableId": "C14-O7",
+    "capabilityId": "C14",
+    "signalText": "Feedback distillation: 'Trained myself to distill each review into one sentence the engineer will remember \u2014 feedback retention (measured in follow-up 1:1s) improved from ~40% to ~85%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Feedback Clarity"
+  },
+  {
+    "id": "SIG-240",
+    "observableId": "C1-O4",
+    "capabilityId": "C1",
+    "signalText": "Reorg leadership: 'Led team through 2 reorgs in 18 months \u2014 addressed belonging, predictability, and significance needs proactively through personalized 1:1s, zero regrettable attrition during either transition'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Organizational Change Navigation"
+  },
+  {
+    "id": "SIG-241",
+    "observableId": "C5-O1",
+    "capabilityId": "C5",
+    "signalText": "Cross-team quick wins: 'Started new cross-team partnership by identifying 3 low-friction quick wins \u2014 delivered in first 2 weeks, built trust foundation that enabled successful 6-month platform migration'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Cross-Team Trust Building"
+  },
+  {
+    "id": "SIG-242",
+    "observableId": "C6-O1",
+    "capabilityId": "C6",
+    "signalText": "Non-technical coaching: 'Coached senior engineer on scope breakdown and stakeholder communication \u2014 not just code quality \u2014 resulting in first independently-led cross-team project, promotion case built naturally'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Whole-Engineer Development"
+  },
+  {
+    "id": "SIG-243",
+    "observableId": "C3-O11",
+    "capabilityId": "C3",
+    "signalText": "Tech debt business case: 'Categorized tech debt by type (velocity-blocking, risk-amplifying, cost-inflating) \u2014 business case showed top 3 items costing $600K/year in workarounds, secured dedicated 20% capacity allocation'",
+    "signalType": "metric",
+    "sourceSubTopic": "Tech Debt Categorization"
+  },
+  {
+    "id": "SIG-244",
+    "observableId": "C13-O3",
+    "capabilityId": "C13",
+    "signalText": "Continuous compliance: 'Automated evidence collection for all repeat audit findings \u2014 next audit had zero repeat findings, prep time dropped from 3 weeks to 2 days'",
+    "signalType": "metric",
+    "sourceSubTopic": "Audit Readiness Automation"
+  },
+  {
+    "id": "SIG-245",
+    "observableId": "C13-O6",
+    "capabilityId": "C13",
+    "signalText": "Proportional security gates: 'Defined security-sensitive triggers for threat model requirement \u2014 30% of features needed review, 70% shipped with automated scanning only, zero escaped vulnerabilities, no deployment bottleneck'",
+    "signalType": "metric",
+    "sourceSubTopic": "Proportional Security Review"
+  },
+  {
+    "id": "SIG-246",
+    "observableId": "C11-O9",
+    "capabilityId": "C11",
+    "signalText": "Interview standardization: 'Standardized rubrics with independent scoring \u2014 interviewer pass rate variance narrowed from 50% spread to 15%, candidate experience scores improved 25%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Interview Process Scaling"
+  },
+  {
+    "id": "SIG-247",
+    "observableId": "C14-O1",
+    "capabilityId": "C14",
+    "signalText": "Calibration facilitation: 'Led cross-team calibration for 30 engineers across 4 teams \u2014 pre-calibration caught 5 bias instances, meeting completed in under 3 hours, zero surprise feedback in post-review survey'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Cross-Team Calibration"
+  },
+  {
+    "id": "SIG-248",
+    "observableId": "C4-O12",
+    "capabilityId": "C4",
+    "signalText": "Focused execution: 'Mobilized team for 6-week critical deadline \u2014 paused all other work, split into autonomous pairs, delivered on time with no weekend work, team reported high energy despite intensity'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "High-Stakes Execution"
+  },
+  {
+    "id": "SIG-249",
+    "observableId": "C3-O1",
+    "capabilityId": "C3",
+    "signalText": "Steel thread architecture: 'Required steel thread (thinnest end-to-end production path) before full feature build for all major projects \u2014 integration issues caught 6-8 weeks earlier, no cross-team surprise failures at launch'",
+    "signalType": "metric",
+    "sourceSubTopic": "Steel Thread Design Pattern"
+  },
+  {
+    "id": "SIG-250",
+    "observableId": "C5-O16",
+    "capabilityId": "C5",
+    "signalText": "Trifecta model: 'Adopted named Eng-PM-Design trifecta with shared accountability \u2014 decisions made within the triad without escalation, feature delivery predictability improved from 60% to 85%'",
+    "signalType": "metric",
+    "sourceSubTopic": "Product Trifecta Partnership"
+  },
+  {
+    "id": "SIG-251",
+    "observableId": "C2-O1",
+    "capabilityId": "C2",
+    "signalText": "OKR quality: 'Redesigned OKRs from task lists to measurable outcomes \u2014 team co-creates goals, 85% KR achievement rate with all KRs tied to business metrics, zero binary checkboxes'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Outcome-Based Goal Setting"
+  },
+  {
+    "id": "SIG-252",
+    "observableId": "C2-O5",
+    "capabilityId": "C2",
+    "signalText": "Focus protection: 'Protected 40% capacity for planned strategic work \u2014 quarterly goal completion improved from 35% to 80% by requiring stakeholders to trade priorities rather than add them'",
+    "signalType": "metric",
+    "sourceSubTopic": "Strategic Capacity Protection"
+  },
+  {
+    "id": "SIG-253",
+    "observableId": "C8-O1",
+    "capabilityId": "C8",
+    "signalText": "Never solve the same problem twice: 'Created incident knowledge base from post-mortems \u2014 repeat incidents dropped to zero over 6 months, 30% of on-call time freed for proactive reliability work'",
+    "signalType": "metric",
+    "sourceSubTopic": "Incident Knowledge Management"
+  },
+  {
+    "id": "SIG-254",
+    "observableId": "C10-O1",
+    "capabilityId": "C10",
+    "signalText": "Budget partnership: 'Presented joint eng+product budget to CFO \u2014 approved in one revision cycle with 90% of tier-2 ask, because every headcount linked to a roadmap deliverable with timeline impact.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Annual Budget Planning"
+  },
+  {
+    "id": "SIG-255",
+    "observableId": "C10-O6",
+    "capabilityId": "C10",
+    "signalText": "Negotiation readiness: 'Pre-identified which tier-3 investments to defer \u2014 when finance requested 20% cut, responded within 24 hours with revised plan and explicit trade-offs, maintaining trust.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Annual Budget Planning"
+  },
+  {
+    "id": "SIG-256",
+    "observableId": "C10-O7",
+    "capabilityId": "C10",
+    "signalText": "Historical grounding: 'Analyzed 3-year budget vs. actuals trend \u2014 identified consistent underspend on tooling and overspend on contractors, proposed rebalancing that saved $200K while improving developer productivity.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Resource Allocation Strategy"
+  },
+  {
+    "id": "SIG-257",
+    "observableId": "C10-O5",
+    "capabilityId": "C10",
+    "signalText": "Strategic constraint navigation: 'During hiring freeze, negotiated contractor-to-FTE conversion for 2 critical roles \u2014 lower total cost with higher retention, accepted by finance because of ROI model.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Resource Allocation Under Constraints"
+  },
+  {
+    "id": "SIG-258",
+    "observableId": "C12-O2",
+    "capabilityId": "C12",
+    "signalText": "Intentional ritual design: 'Introduced monthly cross-functional metrics review \u2014 within 3 months, engineers proactively flagged business-impacting technical decisions without being asked.'",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Culture Rituals"
+  },
+  {
+    "id": "SIG-259",
+    "observableId": "C12-O4",
+    "capabilityId": "C12",
+    "signalText": "Bottom-up innovation channel: 'Structured monthly ideation sessions produced 4 shipped features from engineer proposals in 6 months \u2014 team ownership scores increased 15 points.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Culture Rituals"
+  },
+  {
+    "id": "SIG-260",
+    "observableId": "C12-O1",
+    "capabilityId": "C12",
+    "signalText": "Post-disruption recovery: 'After layoffs, ran individual listening sessions with all 14 remaining team members before making any changes. Published 30-60-90 stability plan. Attrition: zero regrettable departures in following quarter.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Psychological Safety"
+  },
+  {
+    "id": "SIG-261",
+    "observableId": "C12-O7",
+    "capabilityId": "C12",
+    "signalText": "Accountability without blame: 'Shifted team retrospectives from 'what went wrong' to 'what did we learn and what will we do differently' \u2014 action item completion rate improved from 40% to 85%, and engineers started volunteering ownership of improvements.'",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Accountability Culture"
+  },
+  {
+    "id": "SIG-262",
+    "observableId": "C8-O4",
+    "capabilityId": "C8",
+    "signalText": "Proactive risk discovery: 'Ran quarterly game day exercises simulating database failover, region outage, and dependency timeout \u2014 identified 3 critical gaps before they became incidents, with fixes deployed within sprint.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Proactive Risk Management"
+  },
+  {
+    "id": "SIG-263",
+    "observableId": "C8-O3",
+    "capabilityId": "C8",
+    "signalText": "Alert quality ownership: 'Established monthly alert hygiene review \u2014 team deleted 40% of alerts as non-actionable, refined thresholds on remaining. Alert-to-action ratio improved from 1:8 to 1:2, on-call satisfaction score up 30 points.'",
+    "signalType": "metric",
+    "sourceSubTopic": "On-Call Health"
+  },
+  {
+    "id": "SIG-264",
+    "observableId": "C11-O11",
+    "capabilityId": "C11",
+    "signalText": "Process efficiency: 'Reduced interview rounds from 7 to 4 while maintaining quality bar \u2014 time-to-offer decreased from 28 to 12 days, offer acceptance rate increased from 65% to 85% because we stopped losing candidates to faster competitors.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Hiring Pipeline Optimization"
+  },
+  {
+    "id": "SIG-265",
+    "observableId": "C11-O7",
+    "capabilityId": "C11",
+    "signalText": "Bias reduction through structure: 'Rewrote interview rubrics to require specific behavioral examples \u2014 eliminated subjective 'culture fit' criteria, introduced independent scoring before debrief. Under-leveling rate for underrepresented candidates dropped from 23% to 5%.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Inclusive Hiring"
+  },
+  {
+    "id": "SIG-266",
+    "observableId": "C5-O3",
+    "capabilityId": "C5",
+    "signalText": "Engineering-led product influence: 'Identified performance bottleneck from production data that product hadn't surfaced \u2014 proposed and shipped optimization that improved conversion by 12%. Established precedent for engineering contributing to product discovery.'",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Product Strategy Influence"
+  },
+  {
+    "id": "SIG-267",
+    "observableId": "C5-O10",
+    "capabilityId": "C5",
+    "signalText": "Scope ambiguity navigation: 'When product management was understaffed, stepped into product gap: ran customer interviews, defined requirements for 2 features, and delivered both \u2014 earned trust that expanded engineering's strategic voice permanently.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Cross-Functional Influence"
+  },
+  {
+    "id": "SIG-268",
+    "observableId": "C14-O7",
+    "capabilityId": "C14",
+    "signalText": "Continuous performance documentation: 'Maintained monthly performance notes for all 12 directs \u2014 review cycle prep took 2 hours per person instead of 2 days, and every rating was backed by 6+ specific examples with dates.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Continuous Performance Tracking"
+  },
+  {
+    "id": "SIG-269",
+    "observableId": "C14-O8",
+    "capabilityId": "C14",
+    "signalText": "High-performer differentiation: 'Created individualized growth plans for top 3 performers \u2014 one got a stretch architecture role, one got external conference speaking, one got cross-team project lead. All three stayed through a year of industry layoffs.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "High Performer Retention"
+  },
+  {
+    "id": "SIG-270",
+    "observableId": "C4-O7",
+    "capabilityId": "C4",
+    "signalText": "Interrupt management: 'Implemented interrupt budget of 15% capacity with designated interrupt handler rotation \u2014 unplanned work dropped from 40% to 18% of sprint capacity, and sprint completion rate improved from 65% to 88%.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Focus Protection"
+  },
+  {
+    "id": "SIG-271",
+    "observableId": "C4-O12",
+    "capabilityId": "C4",
+    "signalText": "Velocity bottleneck diagnosis: 'Used value stream mapping to identify code review as throughput bottleneck \u2014 review queue averaged 3 days. Introduced review pairing and async-first reviews, reducing to 8 hours. Cycle time improved 35%.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Delivery Velocity"
+  },
+  {
+    "id": "SIG-272",
+    "observableId": "C9-O9",
+    "capabilityId": "C9",
+    "signalText": "Metric pairing discipline: 'Paired velocity metric with quality metric \u2014 when team optimized for story points, defect rate spiked. Added defect escape rate as counter-metric and coached team on the trade-off. Both metrics improved within 2 quarters.'",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Balanced Metrics"
+  },
+  {
+    "id": "SIG-273",
+    "observableId": "C9-O10",
+    "capabilityId": "C9",
+    "signalText": "Maturity-appropriate metrics: 'New team started with just 3 metrics (cycle time, deployment frequency, escaped defects). Resisted pressure to add DORA/SPACE dashboards until team had 6 months of baseline data and could interpret trends meaningfully.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Metrics Maturity"
+  },
+  {
+    "id": "SIG-274",
+    "observableId": "C10-O2",
+    "capabilityId": "C10",
+    "signalText": "Reprioritization communication: 'When 3 engineers were pulled for incident response, immediately published updated timeline for all active projects with explicit 'what stops, what slows, what continues' \u2014 stakeholders thanked the transparency instead of discovering delays later.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Reprioritization Under Constraint"
+  },
+  {
+    "id": "SIG-275",
+    "observableId": "C10-O4",
+    "capabilityId": "C10",
+    "signalText": "Team composition optimization: 'Identified that 60% of contractor spend was on roles that should be FTE for knowledge retention. Built business case for 4 contractor-to-FTE conversions \u2014 net savings of $180K/year with improved institutional knowledge and reduced onboarding overhead.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Team Composition"
+  },
+  {
+    "id": "SIG-276",
+    "observableId": "C12-O3",
+    "capabilityId": "C12",
+    "signalText": "Knowledge sharing institutionalized: 'Established weekly tech talks rotation \u2014 90% of team presented within 6 months. Bus factor improved from 1.2 to 3.1 on critical systems. New hires cited tech talks as top onboarding resource in post-onboarding surveys.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Knowledge Sharing"
+  },
+  {
+    "id": "SIG-277",
+    "observableId": "C12-O6",
+    "capabilityId": "C12",
+    "signalText": "Cultural continuity during transition: 'When 3 of 8 senior engineers left in one quarter, preserved culture through explicit documentation of team norms, temporary mentoring pairs, and weekly team health check-ins. Engagement scores recovered within 2 months.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Cultural Resilience"
+  },
+  {
+    "id": "SIG-278",
+    "observableId": "C13-O2",
+    "capabilityId": "C13",
+    "signalText": "Vulnerability SLA discipline: 'Established severity-based patching SLAs (critical: 48hrs, high: 7 days, medium: 30 days). Compliance rate: 95% for critical, 88% for high. Mean time to remediate for critical vulns dropped from 12 days to 36 hours.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Vulnerability Management"
+  },
+  {
+    "id": "SIG-279",
+    "observableId": "C13-O6",
+    "capabilityId": "C13",
+    "signalText": "Supply chain readiness: 'Implemented SBOM generation in CI/CD for all production services. When Log4Shell-class vulnerability dropped, identified all 23 affected services within 15 minutes vs. previous incident where blast radius assessment took 2 days.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Supply Chain Security"
+  },
+  {
+    "id": "SIG-280",
+    "observableId": "C11-O3",
+    "capabilityId": "C11",
+    "signalText": "Onboarding iteration: 'Reduced time-to-first-deploy from 14 days to 3 days over 4 cohorts by acting on 90-day exit survey feedback. Key fix: replaced 'read the wiki' with structured buddy-guided first-week tasks.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Onboarding Effectiveness"
+  },
+  {
+    "id": "SIG-281",
+    "observableId": "C11-O4",
+    "capabilityId": "C11",
+    "signalText": "Retention through development: 'Built individual growth plans for all engineers (80% self-directed goals, 20% team needs). Combined with regular 1:1 context-sharing and public recognition. Regrettable attrition dropped from 18% to 6% year-over-year.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Talent Retention"
+  },
+  {
+    "id": "SIG-282",
+    "observableId": "C10-O3",
+    "capabilityId": "C10",
+    "signalText": "Cloud cost ownership: 'Implemented per-service cost attribution dashboards and made cost a first-class metric in sprint reviews. Teams self-identified $400K in optimization opportunities within first quarter \u2014 no top-down mandates needed.'",
+    "signalType": "metric",
+    "sourceSubTopic": "Cloud Cost Management"
+  },
+  {
+    "id": "SIG-283",
+    "observableId": "C10-O8",
+    "capabilityId": "C10",
+    "signalText": "Proactive capacity reallocation: 'Identified two teams with excess capacity after feature launch stabilized. Proposed cross-team lending model \u2014 3 engineers redeployed to high-priority initiative, delivering 6 weeks earlier than original plan without any new hires.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Dynamic Resource Allocation"
+  },
+  {
+    "id": "SIG-284",
+    "observableId": "C2-O2",
+    "capabilityId": "C2",
+    "signalText": "Trade-off visibility: 'When VP requested urgent feature, responded within 4 hours with impact matrix: what stops, what slows, what continues. VP chose to defer their request after seeing the trade-offs \u2014 praised the transparent framing.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Saying No Through Trade-offs"
+  },
+  {
+    "id": "SIG-285",
+    "observableId": "C2-O3",
+    "capabilityId": "C2",
+    "signalText": "Decision-making under ambiguity: 'In fast-moving market with incomplete data, classified decisions as one-way vs. two-way doors. Made 12 two-way door decisions in one quarter with feature flags for safe rollback. Reversed 2 that didn't work \u2014 team learned fast without catastrophic risk.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Ambiguity Navigation"
+  },
+  {
+    "id": "SIG-286",
+    "observableId": "C7-O2",
+    "capabilityId": "C7",
+    "signalText": "Audience-adapted communication: 'Same migration proposal presented three ways: 2-page exec summary for VP (business impact and timeline), technical RFC for architects (approach and trade-offs), and team FAQ for ICs (what changes for you). All three audiences approved within one week.'",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Communication Altitude"
+  },
+  {
+    "id": "SIG-287",
+    "observableId": "C7-O3",
+    "capabilityId": "C7",
+    "signalText": "Proactive status communication: 'Established weekly status cadence with consistent format \u2014 shipped, at risk, blocked, help needed. After 8 weeks, VP said: I never have to ask how engineering is doing, I already know. Autonomy increased because trust was earned through transparency.'",
+    "signalType": "manager_observation",
+    "sourceSubTopic": "Status Communication"
+  },
+  {
+    "id": "SIG-288",
+    "observableId": "C12-O5",
+    "capabilityId": "C12",
+    "signalText": "Manager tracks opportunity distribution data (project leads, high-visibility assignments, conference talks) and can show equitable allocation across team members regardless of background or tenure",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Inclusive Practices & Equitable Opportunity"
+  },
+  {
+    "id": "SIG-289",
+    "observableId": "C12-O5",
+    "capabilityId": "C12",
+    "signalText": "Team members from underrepresented groups report feeling equally included in technical discussions and decision-making, not just invited to meetings but actively sought out for input",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Inclusive Practices & Equitable Opportunity"
+  },
+  {
+    "id": "SIG-290",
+    "observableId": "C12-O8",
+    "capabilityId": "C12",
+    "signalText": "Manager addresses toxic behavior patterns within 1 week of identification \u2014 does not wait for formal complaints or performance review cycles to intervene on behaviors that damage team trust",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Toxic Behavior Intervention"
+  },
+  {
+    "id": "SIG-291",
+    "observableId": "C12-O8",
+    "capabilityId": "C12",
+    "signalText": "Team has explicit behavioral norms documented in team charter, and manager references them when addressing violations \u2014 interventions feel principled rather than personal",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Toxic Behavior Intervention"
+  },
+  {
+    "id": "SIG-292",
+    "observableId": "C14-O2",
+    "capabilityId": "C14",
+    "signalText": "Manager prepares calibration cases with 3+ specific examples per rating dimension, anticipates which ratings will be challenged, and has pre-built counter-arguments grounded in observable behavior rather than general impressions",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Calibration Preparation & Evidence"
+  },
+  {
+    "id": "SIG-293",
+    "observableId": "C14-O2",
+    "capabilityId": "C14",
+    "signalText": "During calibration sessions, manager advocates effectively for their reports without inflating \u2014 peers trust the manager's assessments because they are consistently evidence-based and honest about gaps",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Calibration Preparation & Evidence"
+  },
+  {
+    "id": "SIG-294",
+    "observableId": "C14-O4",
+    "capabilityId": "C14",
+    "signalText": "Performance feedback is delivered within 48 hours of the observed behavior using Situation-Behavior-Impact format \u2014 engineers always know where they stand and are never surprised at review time",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Timely Performance Feedback"
+  },
+  {
+    "id": "SIG-295",
+    "observableId": "C14-O5",
+    "capabilityId": "C14",
+    "signalText": "Manager maintains a running promotion document for each promotion-track engineer with gap analysis updated monthly \u2014 engineers see a clear path from current performance to next level with specific evidence milestones",
+    "signalType": "calibration_language",
+    "sourceSubTopic": "Promotion Evidence Building"
   }
 ]
