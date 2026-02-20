@@ -43,7 +43,7 @@
     ]
   },
   "cd3": {
-    "formula": "CD3 = Weekly Financial Value / Weeks to Deliver",
+    "formula": "CD3 = Cost of Delay / Duration",
     "description": "Sequence work by highest CD3, not highest total value. Prioritizing by highest total value locks up capacity for long durations before delivering any value.",
     "example": [
       {

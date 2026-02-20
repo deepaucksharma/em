@@ -34,8 +34,7 @@
     "warningRange": "1-7 days",
     "dangerRange": "> 7 days",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C9-O1",
@@ -84,8 +83,7 @@
     "dangerRange": "> 15%",
     "capabilityIds": [
       "C4",
-      "C8",
-      "C9"
+      "C8"
     ],
     "observableIds": [
       "C9-O1",
@@ -130,8 +128,7 @@
     "warningRange": "10-50% remaining, 1-3x burn",
     "dangerRange": "< 10% remaining, > 3x burn",
     "capabilityIds": [
-      "C8",
-      "C9"
+      "C8"
     ],
     "observableIds": [
       "C8-O2"
@@ -174,8 +171,7 @@
     "warningRange": "94-97% met",
     "dangerRange": "< 94% met",
     "capabilityIds": [
-      "C8",
-      "C9"
+      "C8"
     ],
     "observableIds": [
       "C8-O2"
@@ -270,8 +266,7 @@
     "warningRange": "5-10% annually",
     "dangerRange": "> 10% annually",
     "capabilityIds": [
-      "C7",
-      "C9",
+      "C6",
       "C12",
       "C14"
     ],
@@ -318,8 +313,8 @@
     "warningRange": "> 40% in any single category",
     "dangerRange": "> 60% KTLO or unknown",
     "capabilityIds": [
-      "C1",
       "C2",
+      "C7",
       "C9",
       "C10"
     ],
@@ -367,8 +362,7 @@
     "capabilityIds": [
       "C1",
       "C2",
-      "C3",
-      "C9"
+      "C5"
     ],
     "observableIds": [
       "C1-O1",
@@ -411,8 +405,7 @@
     "warningRange": "70-85%",
     "dangerRange": "< 70%",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C4-O1"
@@ -453,8 +446,7 @@
     "warningRange": "1-4 hours",
     "dangerRange": "> 4 hours",
     "capabilityIds": [
-      "C8",
-      "C9"
+      "C8"
     ],
     "observableIds": [
       "C8-O1"
@@ -496,6 +488,7 @@
     "warningRange": "2-5 pages/shift",
     "dangerRange": "> 5 pages/shift",
     "capabilityIds": [
+      "C6",
       "C8",
       "C12"
     ],
@@ -658,8 +651,7 @@
     "capabilityIds": [
       "C1",
       "C2",
-      "C3",
-      "C9"
+      "C5"
     ],
     "observableIds": [
       "C1-O1",
@@ -706,6 +698,7 @@
     "dangerRange": "> 24 hours",
     "capabilityIds": [
       "C4",
+      "C5",
       "C7"
     ],
     "observableIds": [
@@ -747,7 +740,8 @@
     "dangerRange": "> 25%",
     "capabilityIds": [
       "C1",
-      "C4"
+      "C4",
+      "C5"
     ],
     "observableIds": [
       "C1-O3"
@@ -789,7 +783,7 @@
     "warningRange": "0-30",
     "dangerRange": "< 0",
     "capabilityIds": [
-      "C7",
+      "C6",
       "C12"
     ],
     "observableIds": [
@@ -831,7 +825,6 @@
     "dangerRange": "Increasing trend",
     "capabilityIds": [
       "C1",
-      "C9",
       "C10"
     ],
     "observableIds": [
@@ -874,8 +867,7 @@
     "warningRange": "70-90% on time",
     "dangerRange": "< 70% on time",
     "capabilityIds": [
-      "C8",
-      "C9"
+      "C8"
     ],
     "observableIds": [
       "C8-O3"
@@ -916,7 +908,6 @@
     "warningRange": "Critical 1-3d, High 7-30d",
     "dangerRange": "Critical > 3d, High > 30d",
     "capabilityIds": [
-      "C9",
       "C13"
     ],
     "observableIds": [
@@ -994,8 +985,7 @@
     "warningRange": "10-25%",
     "dangerRange": "> 25%",
     "capabilityIds": [
-      "C7",
-      "C9"
+      "C7"
     ],
     "observableIds": [
       "C7-O1",
@@ -1039,8 +1029,7 @@
     "warningRange": "1/week - 1/day",
     "dangerRange": "< 1/week",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C9-O1"
@@ -1236,8 +1225,7 @@
     "warningRange": "1-3 per release",
     "dangerRange": "> 3 per release",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C4-O5",
@@ -1314,8 +1302,7 @@
     "warningRange": "2-10%",
     "dangerRange": "> 10%",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C4-O3",
@@ -1354,8 +1341,7 @@
     "warningRange": "10-30 minutes",
     "dangerRange": "> 30 minutes",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C4-O3",
@@ -1394,8 +1380,7 @@
     "warningRange": "3-6 switches/day",
     "dangerRange": "> 6 switches/day",
     "capabilityIds": [
-      "C7",
-      "C9"
+      "C7"
     ],
     "observableIds": [
       "C9-O2"
@@ -1473,8 +1458,7 @@
     "warningRange": "50-80%",
     "dangerRange": "< 50%",
     "capabilityIds": [
-      "C4",
-      "C9"
+      "C4"
     ],
     "observableIds": [
       "C4-O3",
@@ -1513,7 +1497,7 @@
     "warningRange": "0% or > 8%",
     "dangerRange": "0% for > 1 year",
     "capabilityIds": [
-      "C7",
+      "C6",
       "C14"
     ],
     "observableIds": [
@@ -1552,7 +1536,6 @@
     "warningRange": "30-60 days",
     "dangerRange": "> 60 days",
     "capabilityIds": [
-      "C7",
       "C11"
     ],
     "observableIds": [
@@ -1591,7 +1574,6 @@
     "warningRange": "60-80%",
     "dangerRange": "< 60%",
     "capabilityIds": [
-      "C7",
       "C11"
     ],
     "observableIds": [
@@ -1631,7 +1613,6 @@
     "dangerRange": "> 60 days",
     "capabilityIds": [
       "C6",
-      "C7",
       "C11",
       "C14"
     ],
@@ -1673,7 +1654,6 @@
     "dangerRange": "< 3 or > 12",
     "capabilityIds": [
       "C1",
-      "C7",
       "C11",
       "C14"
     ],
@@ -1716,7 +1696,6 @@
     "warningRange": "Flat trends",
     "dangerRange": "Declining representation",
     "capabilityIds": [
-      "C7",
       "C11",
       "C12"
     ],
@@ -1797,7 +1776,9 @@
     "warningRange": "Flat trends",
     "dangerRange": "Declining customer outcomes",
     "capabilityIds": [
-      "C3"
+      "C2",
+      "C3",
+      "C5"
     ],
     "observableIds": [
       "C3-O5"
@@ -1835,8 +1816,8 @@
     "warningRange": "< 10% or > 35%",
     "dangerRange": "0% or > 50%",
     "capabilityIds": [
+      "C3",
       "C4",
-      "C9",
       "C10"
     ],
     "observableIds": [
@@ -1952,7 +1933,7 @@
     "warningRange": "< 30% or > 80%",
     "dangerRange": "< 20% (waste) or > 90% (risk)",
     "capabilityIds": [
-      "C9"
+      "C10"
     ],
     "observableIds": [
       "C9-O5"
@@ -2768,7 +2749,6 @@
     "warningRange": "High perception gap (report gains but metrics flat)",
     "dangerRange": "High adoption + delivery metrics declining",
     "capabilityIds": [
-      "C7",
       "C9"
     ],
     "observableIds": [
@@ -2786,7 +2766,7 @@
     "category": "People",
     "tier": "secondary",
     "type": "leading",
-    "description": "Based on Maslach dimensions: (1) Energy exhaustion, (2) Cynicism toward job, (3) Reduced professional efficacy. Survey 3 items quarterly. 55% of the broader workforce reports significant burnout. Chronic burnout arises from cognitive overload, lack of autonomy, impossible deadlines, and invisible toil.",
+    "description": "Based on Maslach dimensions: (1) Emotional Exhaustion, (2) Depersonalization, (3) Reduced Personal Accomplishment. Survey 3 items quarterly. 55% of the broader workforce reports significant burnout. Chronic burnout arises from cognitive overload, lack of autonomy, impossible deadlines, and invisible toil.",
     "emRank": {
       "priority": "C",
       "rank": 17
@@ -2813,7 +2793,7 @@
     "warningRange": "1-2 dimensions elevated",
     "dangerRange": "All 3 dimensions high",
     "capabilityIds": [
-      "C7",
+      "C6",
       "C12"
     ],
     "observableIds": [
@@ -2852,7 +2832,6 @@
     "warningRange": "50-99% scanned",
     "dangerRange": "< 50% scanned",
     "capabilityIds": [
-      "C9",
       "C13"
     ],
     "observableIds": [
@@ -3063,7 +3042,6 @@
     "dangerRange": "Negative: spending with no improvement",
     "capabilityIds": [
       "C1",
-      "C9",
       "C10"
     ],
     "observableIds": [

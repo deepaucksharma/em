@@ -1936,7 +1936,7 @@
   },
   {
     "title": "7.9: Burnout Risk Index",
-    "description": "Based on Maslach dimensions: energy exhaustion, cynicism, reduced professional efficacy. Survey 3 items quarterly.",
+    "description": "Based on Maslach dimensions: Emotional Exhaustion, Depersonalization, Reduced Personal Accomplishment. Survey 3 items quarterly.",
     "type": "metric",
     "url": "/metrics/burnout-risk-index/",
     "domain": "People",

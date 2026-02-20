@@ -32,10 +32,10 @@ const domainAPs = antiPatterns.filter(a => capIds.has(a.capabilityId));
 const domainPBs = playbooks.filter(p => p.capabilityIds.some(id => capIds.has(id)));
 
 const stats = [
-  { value: domainCaps.length, label: 'Capabilities' },
-  { value: domainObs.length, label: 'Observables' },
-  { value: domainAPs.length, label: 'Anti-Patterns' },
-  { value: domainPBs.length, label: 'Playbooks' },
+  { value: domainCaps.length, label: domainCaps.length === 1 ? 'Capability' : 'Capabilities' },
+  { value: domainObs.length, label: domainObs.length === 1 ? 'Observable' : 'Observables' },
+  { value: domainAPs.length, label: domainAPs.length === 1 ? 'Anti-Pattern' : 'Anti-Patterns' },
+  { value: domainPBs.length, label: domainPBs.length === 1 ? 'Playbook' : 'Playbooks' },
 ];
 ---
 
