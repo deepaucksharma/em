@@ -318,7 +318,7 @@
     "directorRelevance": "High",
     "levelNotes": "EMs apply to team; Directors apply across org",
     "why": "Optimizing one team or metric can degrade the whole system — local maxima aren't global maxima",
-    "how": "Map dependencies, identify feedback loops, check for unintended incentives, consult affected parties",
+    "how": "Map dependencies, identify feedback loops, check for unintended incentives, consult product triad and downstream EMs before committing",
     "expectedResult": "Decisions improve the system, not just local metrics; fewer 'fixed A but broke B' situations",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -3461,7 +3461,7 @@
     "status": "NEW",
     "calibrationSignals": [
       {
-        "id": "SIG-141",
+        "id": "SIG-329",
         "observableId": "C5-O13",
         "capabilityId": "C5",
         "signalText": "The 90-day window determines trajectory. \"Established credibility by [quick win] in first 6 weeks, built stakeholder trust through listening before changing, earned mandate for [larger initiative].\"",
@@ -5039,7 +5039,7 @@
     "directorRelevance": "High",
     "levelNotes": "EMs execute individual managed exits; Directors ensure consistent, fair processes across their org and coach EMs through difficult exits",
     "why": "Botched exits destroy team trust — remaining employees watch how departures are handled to judge if they're safe; poorly managed exits also create legal risk and damage employer brand. At Netflix, the Keeper Test normalizes honest performance conversations so exits are rarely a surprise — when someone leaves, the team understands why because the culture of candor precedes it.",
-    "how": "Decide with conviction after fair process; deliver the message directly and clearly; provide timeline and support; communicate to team without violating privacy; ensure knowledge transfer; offer genuine career support; debrief with HR on process quality",
+    "how": "Decide with conviction after fair process; deliver the message directly and clearly; provide timeline and support; communicate to team without violating privacy; ensure knowledge transfer; offer references, job search advocacy, and outplacement support; debrief with HR on process quality",
     "expectedResult": "Departing employee feels treated fairly even if disappointed; remaining team trusts the process; zero legal escalations; knowledge transfer complete; team morale preserved",
     "status": "NEW",
     "calibrationSignals": [

@@ -523,7 +523,7 @@
     "id": "SIG-066",
     "observableId": "C11-O2",
     "capabilityId": "C11",
-    "signalText": "'Maintained hiring bar despite [X] open reqs for [Y] months, resulting in [Z] strong hires with zero regrettable offers'. Amazon's Bar Raiser program assigns an independent evaluator to every hiring loop specifically to prevent lowering the bar under headcount pressure \u2014 the Bar Raiser can veto any hire. Amazon's Bar Raiser program assigns an independent evaluator to every hiring loop who can veto any hire; Google's hiring committee model separates the hiring decision from the team manager to prevent 'warm body' hires under headcount pressure.",
+    "signalText": "'Maintained hiring bar despite [X] open reqs for [Y] months, resulting in [Z] strong hires with zero regrettable offers'. Amazon's Bar Raiser program assigns an independent evaluator to every hiring loop who can veto any hire; Google's hiring committee model separates the hiring decision from the team manager to prevent 'warm body' hires under headcount pressure.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Bar Raiser Discipline"
   },
@@ -1339,7 +1339,7 @@
     "id": "SIG-168",
     "observableId": "C11-O8",
     "capabilityId": "C11",
-    "signalText": "Hiring signal quality. 'Built interviewer calibration program with monthly sessions, improved inter-rater reliability from [X] to [Y], reduced weak-hire reversals in debrief [Z]%.'. Google's structured interviewing research shows calibrated interviewers with rubric training produce 2x better hiring signal than uncalibrated interviewers using unstructured formats.",
+    "signalText": "Hiring signal quality. 'Built interviewer calibration program with monthly sessions, improved inter-rater reliability from [X] to [Y], reduced weak-hire reversals in debrief [Z]%.' Google's structured interviewing research shows calibrated interviewers with rubric training produce 2x better hiring signal than uncalibrated interviewers using unstructured formats.",
     "signalType": "metric",
     "sourceSubTopic": "Interviewer Calibration Program"
   },
@@ -1347,7 +1347,7 @@
     "id": "SIG-169",
     "observableId": "C11-O8",
     "capabilityId": "C11",
-    "signalText": "Interview quality culture: 'All interviewers complete shadow cycle before solo interviews. Monthly calibration reviews anonymized write-ups. Feedback rubric ensures evidence-based evaluations, not gut feel.'. Google requires all interviewers to complete interviewer training and shadow 2-3 loops before conducting solo interviews; Amazon's Bar Raiser certification requires passing a calibration panel.",
+    "signalText": "Interview quality culture: 'All interviewers complete shadow cycle before solo interviews. Monthly calibration reviews anonymized write-ups. Feedback rubric ensures evidence-based evaluations, not gut feel.' Google requires all interviewers to complete interviewer training and shadow 2-3 loops before conducting solo interviews; Amazon's Bar Raiser certification requires passing a calibration panel.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Interview Feedback Quality"
   },
