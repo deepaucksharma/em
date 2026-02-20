@@ -148,7 +148,7 @@ export interface LearningPathwayItem {
   title: string;
   type: string;
   description: string;
-  url: string;
+  url: string | null;
 }
 
 export interface LearningPathway {

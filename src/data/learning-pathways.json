@@ -287,12 +287,6 @@
         "url": "https://leaddev.com/technical-direction/facilitating-software-architecture-andrew-harmel-law-conversation"
       },
       {
-        "title": "Steel Threads Are the Missing Link in Your System Design (LeadDev)",
-        "type": "article",
-        "description": "The steel thread approach to architecture validation \u2014 building the thinnest possible production-grade end-to-end flow to exercise riskiest integrations, surface issues in days not months, and force cross-team collaboration.",
-        "url": "https://leaddev.com/software-quality/steel-threads-missing-link-your-system-design"
-      },
-      {
         "title": "AI Won't Fix Developer Productivity Unless You Fix Context First (LeadDev)",
         "type": "article",
         "description": "Context engineering as a named discipline \u2014 organizations with 500 developers lose up to $7.9M annually from context inefficiencies. Self-serve documentation access makes developers 4.4x more productive. Build a context layer linking decisions, discussions, and system history before investing in AI tools.",
@@ -995,12 +989,6 @@
         "title": "5 Best Practices for Annual Budget Planning",
         "type": "article",
         "description": "Kevin Dallaire's guide to aligning engineering budgets with strategic priorities, including headcount ROI frameworks and zero-based evaluation approaches.",
-        "url": "https://leaddev.com/career-development/5-best-practices-annual-budget-planning"
-      },
-      {
-        "title": "5 Best Practices for Annual Budget Planning (LeadDev)",
-        "type": "article",
-        "description": "Practical guidance on stack-ranking priorities, evaluating headcount needs, and building data-driven business cases that resonate with executive stakeholders.",
         "url": "https://leaddev.com/career-development/5-best-practices-annual-budget-planning"
       },
       {
