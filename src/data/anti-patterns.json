@@ -630,7 +630,7 @@
       "C5-O7"
     ],
     "capabilityId": "C5",
-    "shortDesc": "Expanding scope for status rather than customer or business impact",
+    "shortDesc": "EM expands scope and absorbs teams to grow their org size rather than for customer or business impact. Resources get spread thin across non-critical work, peers lose respect for the political maneuvering, and the bloated org becomes a target during the next rebalancing cycle.",
     "warningSigns": [
       "Politicking for headcount without clear need",
       "absorbing teams without clear benefit",
@@ -719,7 +719,7 @@
       "C2-O2"
     ],
     "capabilityId": "C2",
-    "shortDesc": "Agreeing to everything, never pushing back, never making trade-offs explicit",
+    "shortDesc": "EM agrees to every request from stakeholders without pushing back or making trade-offs visible, leaving the team chronically overcommitted. Deadlines slip, quality degrades, and credibility collapses as the gap between promises and delivery widens every quarter.",
     "warningSigns": [
       "Team overcommitted",
       "every stakeholder thinks their request is accepted",
