@@ -163,7 +163,7 @@
   },
   {
     "title": "C1-O5: Maintains single-threaded ownership registry with no ambiguity",
-    "description": "Builds and maintains service→team→on-call→contact registry; resolves disputes by escalation, not by sharing ownership. [Amazon]",
+    "description": "Builds and maintains service\u2192team\u2192on-call\u2192contact registry; resolves disputes by escalation, not by sharing ownership. [Amazon]",
     "type": "observable",
     "url": "/capabilities/org-level-thinking/#c1-o5",
     "domain": "Strategy",
@@ -226,7 +226,7 @@
   },
   {
     "title": "C2-O2: Declines requests by making trade-offs visible, not by saying no",
-    "description": "Responds to scope request with: 'Yes, if we deprioritize X — would you like to make that trade-off?' with data on impact of each option. [Amazon; Netflix]",
+    "description": "Responds to scope request with: 'Yes, if we deprioritize X \u2014 would you like to make that trade-off?' with data on impact of each option. [Amazon; Netflix]",
     "type": "observable",
     "url": "/capabilities/strategic-prioritization/#c2-o2",
     "domain": "Strategy",
@@ -253,7 +253,7 @@
   },
   {
     "title": "C3-O1: Authors and maintains multi-quarter technical vision with clear migration path",
-    "description": "Co-authors tech strategy doc with Staff engineers: current state → target state → migration path → success metrics. Reviews quarterly against delivery reality. [Google]",
+    "description": "Co-authors tech strategy doc with Staff engineers: current state \u2192 target state \u2192 migration path \u2192 success metrics. Reviews quarterly against delivery reality. [Google]",
     "type": "observable",
     "url": "/capabilities/systems-design-architecture/#c3-o1",
     "domain": "Execution",
@@ -316,7 +316,7 @@
   },
   {
     "title": "C4-O1: Establishes operating cadences with clear purposes and measurable outputs",
-    "description": "Creates quarterly planning, weekly ops review, and async status cadence — each with defined roles, inputs, and outputs. Eliminates 3 meetings with unclear purpose. [Amazon]",
+    "description": "Creates quarterly planning, weekly ops review, and async status cadence \u2014 each with defined roles, inputs, and outputs. Eliminates 3 meetings with unclear purpose. [Amazon]",
     "type": "observable",
     "url": "/capabilities/operational-leadership-rhythm/#c4-o1",
     "domain": "Execution",
@@ -352,7 +352,7 @@
   },
   {
     "title": "C4-O5: Implements risk-appropriate release process with automated rollback",
-    "description": "Deploys with canary (1%→10%→50%→100%), automated rollback triggers on error rate spike, feature flags decoupling deploy from release.",
+    "description": "Deploys with canary (1%\u219210%\u219250%\u2192100%), automated rollback triggers on error rate spike, feature flags decoupling deploy from release.",
     "type": "observable",
     "url": "/capabilities/operational-leadership-rhythm/#c4-o5",
     "domain": "Execution",
@@ -549,7 +549,7 @@
     "id": "C7-O1"
   },
   {
-    "title": "C7-O2: Adapts communication altitude to audience — exec summary to detailed appendix",
+    "title": "C7-O2: Adapts communication altitude to audience \u2014 exec summary to detailed appendix",
     "description": "Creates one-slide exec memo for VP and detailed appendix for engineering; same content, different altitude. Both audiences get what they need. [Netflix]",
     "type": "observable",
     "url": "/capabilities/decision-framing-communication/#c7-o2",
@@ -558,7 +558,7 @@
     "id": "C7-O2"
   },
   {
-    "title": "C7-O3: Communicates status proactively — wins, risks, and needs — earning autonomy",
+    "title": "C7-O3: Communicates status proactively \u2014 wins, risks, and needs \u2014 earning autonomy",
     "description": "Weekly written update to manager: top 3 wins, top 3 risks, what I need from you. Manager says: 'always knows what's happening, no surprises.' [Amazon]",
     "type": "observable",
     "url": "/capabilities/decision-framing-communication/#c7-o3",
@@ -702,7 +702,7 @@
     "id": "C10-O1"
   },
   {
-    "title": "C10-O2: Reprioritizes aggressively during cuts, communicating what stops — not just what continues",
+    "title": "C10-O2: Reprioritizes aggressively during cuts, communicating what stops \u2014 not just what continues",
     "description": "During 15% budget cut: stack-ranks all work, pauses bottom 20%, communicates cuts to stakeholders explicitly, maintains delivery on top-3 priorities. [Netflix]",
     "type": "observable",
     "url": "/capabilities/resource-allocation-tradeoffs/#c10-o2",
@@ -721,7 +721,7 @@
   },
   {
     "title": "C10-O4: Optimizes team composition with principled FTE/contractor/vendor mix",
-    "description": "Evaluates work types: core differentiating work→FTE, commodity/surge work→contractor, specialized work→vendor. Saves 20% while maintaining velocity.",
+    "description": "Evaluates work types: core differentiating work\u2192FTE, commodity/surge work\u2192contractor, specialized work\u2192vendor. Saves 20% while maintaining velocity.",
     "type": "observable",
     "url": "/capabilities/resource-allocation-tradeoffs/#c10-o4",
     "domain": "Strategy",
@@ -747,7 +747,7 @@
     "id": "C11-O1"
   },
   {
-    "title": "C11-O2: Maintains hiring bar under pressure — no warm body hires",
+    "title": "C11-O2: Maintains hiring bar under pressure \u2014 no warm body hires",
     "description": "Despite 4 open reqs for 6 months, passes on borderline candidates; eventual hires all rated 'strong hire' with zero regrettable offers. [Amazon]",
     "type": "observable",
     "url": "/capabilities/hiring-onboarding-role-design/#c11-o2",
@@ -901,7 +901,7 @@
   },
   {
     "title": "C14-O4: Delivers performance feedback within 48hrs using SBI framework",
-    "description": "Uses Situation→Behavior→Impact framework for all feedback. Never saves feedback for perf review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
+    "description": "Uses Situation\u2192Behavior\u2192Impact framework for all feedback. Never saves feedback for perf review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
     "type": "observable",
     "url": "/capabilities/performance-management-calibration/#c14-o4",
     "domain": "People",
@@ -918,7 +918,7 @@
     "id": "C14-O5"
   },
   {
-    "title": "C14-O6: Runs fair PIPs with genuine support and clean process — zero procedural issues",
+    "title": "C14-O6: Runs fair PIPs with genuine support and clean process \u2014 zero procedural issues",
     "description": "Specific gaps with examples, measurable criteria, 30-60 day timeline, weekly check-ins with documented progress, genuine coaching and resources. HR sees them as reliable partner.",
     "type": "observable",
     "url": "/capabilities/performance-management-calibration/#c14-o6",
@@ -1243,7 +1243,7 @@
   },
   {
     "title": "2.5: Sprint Commitment Accuracy",
-    "description": "Best proxy for predictability. 85%+ accuracy earns trust, autonomy, fewer 'when?' questions. Not primary because it's a planning metric, not a delivery system metric — it tells you how well you forecast, not how fast you ship.",
+    "description": "Best proxy for predictability. 85%+ accuracy earns trust, autonomy, fewer 'when?' questions. Not primary because it's a planning metric, not a delivery system metric \u2014 it tells you how well you forecast, not how fast you ship.",
     "type": "metric",
     "url": "/metrics/sprint-commitment-accuracy/",
     "domain": "Flow",
@@ -1270,7 +1270,7 @@
   },
   {
     "title": "3.1: SLI Definition",
-    "description": "Essential foundation for error budgets and SLO compliance. The work is in getting the SLI right — choosing user-centric indicators that reflect real customer experience. Once defined correctly, SLIs disappear into the SLO.",
+    "description": "Essential foundation for error budgets and SLO compliance. The work is in getting the SLI right \u2014 choosing user-centric indicators that reflect real customer experience. Once defined correctly, SLIs disappear into the SLO.",
     "type": "metric",
     "url": "/metrics/sli-definition/",
     "domain": "Reliability",
@@ -1306,7 +1306,7 @@
   },
   {
     "title": "5.4: Code Review Turnaround Time",
-    "description": "Hidden tax on velocity — often 40-60% of Lead Time. Secondary because better decomposed from Lead Time than tracked independently; can be gamed with rubber-stamp fast reviews.",
+    "description": "Hidden tax on velocity \u2014 often 40-60% of Lead Time. Secondary because better decomposed from Lead Time than tracked independently; can be gamed with rubber-stamp fast reviews.",
     "type": "metric",
     "url": "/metrics/code-review-turnaround-time/",
     "domain": "DevEx",
@@ -1324,7 +1324,7 @@
   },
   {
     "title": "7.8: eNPS / Engagement Score",
-    "description": "Useful macro trend — if < 0, something is seriously wrong. Secondary because too coarse to act on, moves slowly, influenced by factors outside your control. Actionable detail comes from DX surveys and exit interviews.",
+    "description": "Useful macro trend \u2014 if < 0, something is seriously wrong. Secondary because too coarse to act on, moves slowly, influenced by factors outside your control. Actionable detail comes from DX surveys and exit interviews.",
     "type": "metric",
     "url": "/metrics/enps-engagement-score/",
     "domain": "People",
@@ -1360,7 +1360,7 @@
   },
   {
     "title": "4.3: Rollback Rate",
-    "description": "Most unambiguous quality signal — either you rolled back or you didn't. Secondary because all quality metrics are lagging, and CFR + error budget are better leading signals.",
+    "description": "Most unambiguous quality signal \u2014 either you rolled back or you didn't. Secondary because all quality metrics are lagging, and CFR + error budget are better leading signals.",
     "type": "metric",
     "url": "/metrics/rollback-rate/",
     "domain": "Quality",
@@ -1378,7 +1378,7 @@
   },
   {
     "title": "1.1: Deployment Frequency",
-    "description": "Most cited DORA metric but least useful as a primary: most gameable (split deploys), lagging indicator of Lead Time (LT improves → DF rises naturally), varies wildly by architecture. DF is a side effect of good Lead Time, not a goal.",
+    "description": "Most cited DORA metric but least useful as a primary: most gameable (split deploys), lagging indicator of Lead Time (LT improves \u2192 DF rises naturally), varies wildly by architecture. DF is a side effect of good Lead Time, not a goal.",
     "type": "metric",
     "url": "/metrics/deployment-frequency/",
     "domain": "DORA",
@@ -1432,7 +1432,7 @@
   },
   {
     "title": "4.1: Test Coverage (Critical Paths)",
-    "description": "Most misleading quality metric in software. High coverage ≠ good tests. Use as code review conversation, not a KPI. The signal you want is 'do tests catch bugs?' — better measured through escaped defects and CFR.",
+    "description": "Most misleading quality metric in software. High coverage \u2260 good tests. Use as code review conversation, not a KPI. The signal you want is 'do tests catch bugs?' \u2014 better measured through escaped defects and CFR.",
     "type": "metric",
     "url": "/metrics/test-coverage-critical-paths/",
     "domain": "Quality",
@@ -1531,7 +1531,7 @@
   },
   {
     "title": "7.7: Diversity Metrics",
-    "description": "Not tertiary because they don't matter — they matter enormously. They operate on a different cadence and accountability structure. Pipeline and retention diversity are strategic, quarterly/annual concerns in hiring reviews and org planning. Parallel track, not lower priority.",
+    "description": "Not tertiary because they don't matter \u2014 they matter enormously. They operate on a different cadence and accountability structure. Pipeline and retention diversity are strategic, quarterly/annual concerns in hiring reviews and org planning. Parallel track, not lower priority.",
     "type": "metric",
     "url": "/metrics/diversity-metrics/",
     "domain": "People",
@@ -1612,7 +1612,7 @@
   },
   {
     "title": "6.1: PR Throughput (Team)",
-    "description": "Spot blocked teams, detect sudden disruption. A >50% week-over-week drop warrants immediate investigation. Team-level diagnostic only — never for individual performance.",
+    "description": "Spot blocked teams, detect sudden disruption. A >50% week-over-week drop warrants immediate investigation. Team-level diagnostic only \u2014 never for individual performance.",
     "type": "metric",
     "url": "/metrics/pr-throughput-team/",
     "domain": "Activity",
@@ -1791,7 +1791,7 @@
     "id": "I15"
   },
   {
-    "title": "Velocity ↔ Quality",
+    "title": "Velocity \u2194 Quality",
     "description": "Speed without a quality check incentivizes shipping broken code fast. Quality without a speed check incentivizes paralysis.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#velocity-quality",
@@ -1800,7 +1800,7 @@
     "id": "MP1"
   },
   {
-    "title": "Reliability ↔ Velocity",
+    "title": "Reliability \u2194 Velocity",
     "description": "Reliability without velocity tracking leads to over-engineering. Velocity without reliability tracking leads to chaos. Error budgets exist specifically to balance these.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#reliability-velocity",
@@ -1809,8 +1809,8 @@
     "id": "MP2"
   },
   {
-    "title": "People ↔ Delivery",
-    "description": "Happy teams that don’t ship aren’t sustainable. Productive teams that are miserable won’t last. You need both to know if performance is real and sustainable.",
+    "title": "People \u2194 Delivery",
+    "description": "Happy teams that don\u2019t ship aren\u2019t sustainable. Productive teams that are miserable won\u2019t last. You need both to know if performance is real and sustainable.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#people-delivery",
     "domain": "Metrics",
@@ -1818,7 +1818,7 @@
     "id": "MP3"
   },
   {
-    "title": "Investment ↔ Outcome",
+    "title": "Investment \u2194 Outcome",
     "description": "Knowing where capacity goes is useless without knowing what it produced. Knowing what was produced without knowing what was invested is accidental, not strategic.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#investment-outcome",
@@ -1827,8 +1827,8 @@
     "id": "MP4"
   },
   {
-    "title": "Incidents ↔ Follow-Through",
-    "description": "Counting incidents without tracking whether you fixed root causes means you’ll count the same incidents again next quarter.",
+    "title": "Incidents \u2194 Follow-Through",
+    "description": "Counting incidents without tracking whether you fixed root causes means you\u2019ll count the same incidents again next quarter.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#incidents-follow-through",
     "domain": "Metrics",
@@ -1836,8 +1836,8 @@
     "id": "MP5"
   },
   {
-    "title": "Attrition ↔ Classification",
-    "description": "Raw attrition rate is meaningless. Losing a low performer you were about to PIP is healthy. Losing your Staff engineer to a competitor is a crisis. Without classification, you can’t tell the difference.",
+    "title": "Attrition \u2194 Classification",
+    "description": "Raw attrition rate is meaningless. Losing a low performer you were about to PIP is healthy. Losing your Staff engineer to a competitor is a crisis. Without classification, you can\u2019t tell the difference.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#attrition-classification",
     "domain": "Metrics",
@@ -1846,7 +1846,7 @@
   },
   {
     "title": "Lead Time spiking",
-    "description": "Is this one team’s problem (process) or multiple teams’ problem (platform/architecture)?",
+    "description": "Is this one team\u2019s problem (process) or multiple teams\u2019 problem (platform/architecture)?",
     "type": "diagnostic-chain",
     "url": "/metrics/diagnostics/#lead-time-spiking",
     "domain": "Metrics",
@@ -1909,7 +1909,7 @@
   },
   {
     "title": "OKR Achievement <50%",
-    "description": "Are OKRs failing because they’re bad OKRs (alignment) or because we can’t execute (delivery)?",
+    "description": "Are OKRs failing because they\u2019re bad OKRs (alignment) or because we can\u2019t execute (delivery)?",
     "type": "diagnostic-chain",
     "url": "/metrics/diagnostics/#okr-achievement-declining",
     "domain": "Metrics",
@@ -2007,7 +2007,7 @@
     "id": "I16"
   },
   {
-    "title": "AI Throughput ↔ Verification",
+    "title": "AI Throughput \u2194 Verification",
     "description": "AI accelerates code generation while reviews become rubber stamps. Without verification metrics, bug rates climb silently.",
     "type": "metric-pair",
     "url": "/metrics/pairs/#ai-throughput-verification",
@@ -2098,7 +2098,7 @@
   },
   {
     "title": "Specialized Silo",
-    "description": "Deep expertise in narrow domains with minimal cross-training. High bus factor — metrics look OK but organization is fragile.",
+    "description": "Deep expertise in narrow domains with minimal cross-training. High bus factor \u2014 metrics look OK but organization is fragile.",
     "type": "archetype",
     "url": "/metrics/archetypes/#specialized-silo",
     "domain": "Metrics",
@@ -2161,7 +2161,7 @@
   },
   {
     "title": "C10-O6: Presents resource requests as tiered options with quantified trade-offs for each level",
-    "description": "Instead of requesting 5 headcount, presents three options: (A) 2 heads — deliver core features only, delay platform work 6 months; (B) 4 heads — core + platform, accept tech debt in monitoring; (C) 6 heads — full roadmap with reliability investment. Each option includes timeline, risk, and ROI. [Google]",
+    "description": "Instead of requesting 5 headcount, presents three options: (A) 2 heads \u2014 deliver core features only, delay platform work 6 months; (B) 4 heads \u2014 core + platform, accept tech debt in monitoring; (C) 6 heads \u2014 full roadmap with reliability investment. Each option includes timeline, risk, and ROI. [Google]",
     "type": "observable",
     "url": "/capabilities/resource-allocation-tradeoffs/",
     "domain": "Strategy",
@@ -2196,7 +2196,7 @@
     "id": "C7-O8"
   },
   {
-    "title": "C7-O9: Scales communication systems as org grows — replaces hallway decisions with documented processes",
+    "title": "C7-O9: Scales communication systems as org grows \u2014 replaces hallway decisions with documented processes",
     "description": "As team grows from 8 to 25 engineers, replaces informal decision-making with an RFC process, introduces weekly written status updates replacing daily syncs, and creates tiered communication channels (urgent/informational/discussion).",
     "type": "observable",
     "url": "/capabilities/decision-framing-communication/",
@@ -2205,7 +2205,7 @@
     "id": "C7-O9"
   },
   {
-    "title": "C7-O10: Distributes decision authority using clear frameworks — knows which decisions need consensus vs. a driver",
+    "title": "C7-O10: Distributes decision authority using clear frameworks \u2014 knows which decisions need consensus vs. a driver",
     "description": "Maintains a decision authority matrix: team norms require consensus, technical design decisions use DACI with tech lead as Driver, tooling choices are delegated to individual engineers, and architecture bets require EM + TL alignment. Team knows which decisions they can make autonomously.",
     "type": "observable",
     "url": "/capabilities/decision-framing-communication/",
@@ -2215,7 +2215,7 @@
   },
   {
     "title": "C14-O7: Maintains continuous performance signal through ongoing documentation, not end-of-cycle reconstruction",
-    "description": "Keeps running performance notes for each report updated weekly. When review cycle arrives, has 6 months of specific examples ready — not scrambling to remember what happened. Shares feedback themes in 1:1s monthly so reviews contain zero surprises. [Amazon; Google]",
+    "description": "Keeps running performance notes for each report updated weekly. When review cycle arrives, has 6 months of specific examples ready \u2014 not scrambling to remember what happened. Shares feedback themes in 1:1s monthly so reviews contain zero surprises. [Amazon; Google]",
     "type": "observable",
     "url": "/capabilities/performance-management-calibration/",
     "domain": "People",
@@ -2314,7 +2314,7 @@
   },
   {
     "title": "C11-O11: Measures and optimizes hiring funnel conversion rates with data-driven pipeline management",
-    "description": "Tracks conversion rates at each hiring stage (sourcing → screen → onsite → offer → accept). Identifies bottlenecks, A/B tests improvements, and shares pipeline health with leadership weekly.",
+    "description": "Tracks conversion rates at each hiring stage (sourcing \u2192 screen \u2192 onsite \u2192 offer \u2192 accept). Identifies bottlenecks, A/B tests improvements, and shares pipeline health with leadership weekly.",
     "type": "observable",
     "url": "/capabilities/hiring-onboarding-role-design/",
     "domain": "People",
@@ -2340,7 +2340,7 @@
     "id": "C4-O13"
   },
   {
-    "title": "C9-O9: Uses metric pairings to prevent single-metric optimization — always balances speed with quality",
+    "title": "C9-O9: Uses metric pairings to prevent single-metric optimization \u2014 always balances speed with quality",
     "description": "Pairs deployment frequency with change failure rate; pairs cycle time with customer-reported bugs; pairs velocity with tech debt ratio. Never reports a speed metric without its quality counterpart.",
     "type": "observable",
     "url": "/capabilities/metrics-measurement-outcomes/",
@@ -2349,7 +2349,7 @@
     "id": "C9-O9"
   },
   {
-    "title": "C9-O10: Adapts metric sophistication to organizational maturity — starts simple and evolves based on decisions driven",
+    "title": "C9-O10: Adapts metric sophistication to organizational maturity \u2014 starts simple and evolves based on decisions driven",
     "description": "For a new team, starts with 3 core metrics (cycle time, deployment frequency, change failure rate). Adds developer satisfaction surveys after 1 quarter. Introduces SPACE framework dimensions only after basic metrics drive consistent decisions. [DORA]",
     "type": "observable",
     "url": "/capabilities/metrics-measurement-outcomes/",
@@ -2395,7 +2395,7 @@
   },
   {
     "title": "C7-O11: Communicates trade-offs explicitly",
-    "description": "Communicates trade-offs explicitly — names what's being sacrificed, for whom, and why it's the right call",
+    "description": "Communicates trade-offs explicitly \u2014 names what's being sacrificed, for whom, and why it's the right call",
     "type": "observable",
     "url": "/capabilities/decision-framing-communication/",
     "domain": "Stakeholder",
@@ -2412,7 +2412,7 @@
     "id": "C14-O9"
   },
   {
-    "title": "AP-01: The Absent Architect — EM defers all technical direction to TL/Staff and has no opinion on system evolution",
+    "title": "AP-01: The Absent Architect \u2014 EM defers all technical direction to TL/Staff and has no opinion on system evolution",
     "description": "EM defers all technical direction to TL/Staff and has no opinion on system evolution",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-absent-architect/",
@@ -2421,7 +2421,7 @@
     "id": "AP-01"
   },
   {
-    "title": "AP-02: The Over-Involved Architect — EM inserts themselves into every technical decision, bypassing TL and senior engineers. Creates a single point of failure where the team cannot function autonomously and senior talent atrophies or leaves.",
+    "title": "AP-02: The Over-Involved Architect \u2014 EM inserts themselves into every technical decision, bypassing TL and senior engineers. Creates a single point of failure where the team cannot function autonomously and senior talent atrophies or leaves.",
     "description": "EM inserts themselves into every technical decision, bypassing TL and senior engineers. Creates a single point of failure where the team cannot function autonomously and senior talent atrophies or leaves.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-over-involved-architect/",
@@ -2430,8 +2430,8 @@
     "id": "AP-02"
   },
   {
-    "title": "AP-03: Metrics Theater — Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows — dashboards measure activity instead of outcomes, metrics get gamed, and beautiful charts mask declining real productivity",
-    "description": "Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows — dashboards measure activity instead of outcomes, metrics get gamed, and beautiful charts mask declining real productivity",
+    "title": "AP-03: Metrics Theater \u2014 Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows \u2014 dashboards measure activity instead of outcomes, metrics get gamed, and beautiful charts mask declining real productivity",
+    "description": "Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows \u2014 dashboards measure activity instead of outcomes, metrics get gamed, and beautiful charts mask declining real productivity",
     "type": "anti-pattern",
     "url": "/anti-patterns/metrics-theater/",
     "domain": "Data",
@@ -2439,7 +2439,7 @@
     "id": "AP-03"
   },
   {
-    "title": "AP-04: Velocity Obsession — Optimizing for shipping speed while quality, reliability, and sustainability degrade",
+    "title": "AP-04: Velocity Obsession \u2014 Optimizing for shipping speed while quality, reliability, and sustainability degrade",
     "description": "Optimizing for shipping speed while quality, reliability, and sustainability degrade",
     "type": "anti-pattern",
     "url": "/anti-patterns/velocity-obsession/",
@@ -2448,8 +2448,8 @@
     "id": "AP-04"
   },
   {
-    "title": "AP-05: Security As Someone Else's Problem — EM treats security as the security team's job rather than embedding it in the engineering workflow — security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
-    "description": "EM treats security as the security team's job rather than embedding it in the engineering workflow — security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
+    "title": "AP-05: Security As Someone Else's Problem \u2014 EM treats security as the security team's job rather than embedding it in the engineering workflow \u2014 security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
+    "description": "EM treats security as the security team's job rather than embedding it in the engineering workflow \u2014 security reviews are afterthoughts, vulnerability backlogs grow, and threat modeling is absent",
     "type": "anti-pattern",
     "url": "/anti-patterns/security-as-someone-elses-problem/",
     "domain": "Reliability",
@@ -2457,7 +2457,7 @@
     "id": "AP-05"
   },
   {
-    "title": "AP-06: Hero Culture — Incidents resolved by the same 2-3 people every time; tribal knowledge instead of process",
+    "title": "AP-06: Hero Culture \u2014 Incidents resolved by the same 2-3 people every time; tribal knowledge instead of process",
     "description": "Incidents resolved by the same 2-3 people every time; tribal knowledge instead of process",
     "type": "anti-pattern",
     "url": "/anti-patterns/hero-culture/",
@@ -2466,7 +2466,7 @@
     "id": "AP-06"
   },
   {
-    "title": "AP-07: Blame Post-Mortems — Post-incident reviews devolve into blame assignment, with 'human error' as the default root cause. Teams learn to hide incidents and near-misses, real systemic causes go unaddressed, and the same failure modes recur.",
+    "title": "AP-07: Blame Post-Mortems \u2014 Post-incident reviews devolve into blame assignment, with 'human error' as the default root cause. Teams learn to hide incidents and near-misses, real systemic causes go unaddressed, and the same failure modes recur.",
     "description": "Post-incident reviews devolve into blame assignment, with 'human error' as the default root cause. Teams learn to hide incidents and near-misses, real systemic causes go unaddressed, and the same failure modes recur.",
     "type": "anti-pattern",
     "url": "/anti-patterns/blame-post-mortems/",
@@ -2475,7 +2475,7 @@
     "id": "AP-07"
   },
   {
-    "title": "AP-08: Re-org Addiction — Leadership reaches for re-orgs as the default solution to execution problems, restructuring teams every 6-9 months. Chronic instability prevents teams from gelling, destroys institutional knowledge, and masks the real process or leadership issues driving dysfunction.",
+    "title": "AP-08: Re-org Addiction \u2014 Leadership reaches for re-orgs as the default solution to execution problems, restructuring teams every 6-9 months. Chronic instability prevents teams from gelling, destroys institutional knowledge, and masks the real process or leadership issues driving dysfunction.",
     "description": "Leadership reaches for re-orgs as the default solution to execution problems, restructuring teams every 6-9 months. Chronic instability prevents teams from gelling, destroys institutional knowledge, and masks the real process or leadership issues driving dysfunction.",
     "type": "anti-pattern",
     "url": "/anti-patterns/re-org-addiction/",
@@ -2484,8 +2484,8 @@
     "id": "AP-08"
   },
   {
-    "title": "AP-09: Fuzzy Ownership — Service ownership is ambiguous — multiple teams claim the same component, or nobody claims it. Incidents escalate slowly, accountability dissolves, and cross-team friction compounds as ownership gaps become recurring sources of dropped work.",
-    "description": "Service ownership is ambiguous — multiple teams claim the same component, or nobody claims it. Incidents escalate slowly, accountability dissolves, and cross-team friction compounds as ownership gaps become recurring sources of dropped work.",
+    "title": "AP-09: Fuzzy Ownership \u2014 Service ownership is ambiguous \u2014 multiple teams claim the same component, or nobody claims it. Incidents escalate slowly, accountability dissolves, and cross-team friction compounds as ownership gaps become recurring sources of dropped work.",
+    "description": "Service ownership is ambiguous \u2014 multiple teams claim the same component, or nobody claims it. Incidents escalate slowly, accountability dissolves, and cross-team friction compounds as ownership gaps become recurring sources of dropped work.",
     "type": "anti-pattern",
     "url": "/anti-patterns/fuzzy-ownership/",
     "domain": "Strategy",
@@ -2493,8 +2493,8 @@
     "id": "AP-09"
   },
   {
-    "title": "AP-10: Conflict Avoidance — EM avoids difficult conversations — underperformance goes unaddressed for quarters, feedback stays vague and positive, and real issues surface only in back-channels. High performers leave frustrated by inequity while team standards quietly erode.",
-    "description": "EM avoids difficult conversations — underperformance goes unaddressed for quarters, feedback stays vague and positive, and real issues surface only in back-channels. High performers leave frustrated by inequity while team standards quietly erode.",
+    "title": "AP-10: Conflict Avoidance \u2014 EM avoids difficult conversations \u2014 underperformance goes unaddressed for quarters, feedback stays vague and positive, and real issues surface only in back-channels. High performers leave frustrated by inequity while team standards quietly erode.",
+    "description": "EM avoids difficult conversations \u2014 underperformance goes unaddressed for quarters, feedback stays vague and positive, and real issues surface only in back-channels. High performers leave frustrated by inequity while team standards quietly erode.",
     "type": "anti-pattern",
     "url": "/anti-patterns/conflict-avoidance/",
     "domain": "People",
@@ -2502,7 +2502,7 @@
     "id": "AP-10"
   },
   {
-    "title": "AP-11: The Bubble — EM operates in an information bubble where only good news flows upward because the team doesn't feel safe sharing problems. Real issues surface through incidents or resignations rather than through communication, blindsiding the EM and eroding leadership trust.",
+    "title": "AP-11: The Bubble \u2014 EM operates in an information bubble where only good news flows upward because the team doesn't feel safe sharing problems. Real issues surface through incidents or resignations rather than through communication, blindsiding the EM and eroding leadership trust.",
     "description": "EM operates in an information bubble where only good news flows upward because the team doesn't feel safe sharing problems. Real issues surface through incidents or resignations rather than through communication, blindsiding the EM and eroding leadership trust.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-bubble/",
@@ -2511,8 +2511,8 @@
     "id": "AP-11"
   },
   {
-    "title": "AP-12: The 24/7 Manager — EM is always available, always responsive, and burning out — modeling unsustainable pace that the team feels pressured to match",
-    "description": "EM is always available, always responsive, and burning out — modeling unsustainable pace that the team feels pressured to match",
+    "title": "AP-12: The 24/7 Manager \u2014 EM is always available, always responsive, and burning out \u2014 modeling unsustainable pace that the team feels pressured to match",
+    "description": "EM is always available, always responsive, and burning out \u2014 modeling unsustainable pace that the team feels pressured to match",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-247-manager/",
     "domain": "Stakeholder",
@@ -2520,8 +2520,8 @@
     "id": "AP-12"
   },
   {
-    "title": "AP-13: Lowering the Bar Under Pressure — EM lowers the hiring bar under pressure from open reqs and leadership urgency, accepting candidates who don't meet the standard. Poor hires drag down team velocity, consume disproportionate management attention, and often exit within 12 months — costing far more than the vacancy they filled.",
-    "description": "EM lowers the hiring bar under pressure from open reqs and leadership urgency, accepting candidates who don't meet the standard. Poor hires drag down team velocity, consume disproportionate management attention, and often exit within 12 months — costing far more than the vacancy they filled.",
+    "title": "AP-13: Lowering the Bar Under Pressure \u2014 EM lowers the hiring bar under pressure from open reqs and leadership urgency, accepting candidates who don't meet the standard. Poor hires drag down team velocity, consume disproportionate management attention, and often exit within 12 months \u2014 costing far more than the vacancy they filled.",
+    "description": "EM lowers the hiring bar under pressure from open reqs and leadership urgency, accepting candidates who don't meet the standard. Poor hires drag down team velocity, consume disproportionate management attention, and often exit within 12 months \u2014 costing far more than the vacancy they filled.",
     "type": "anti-pattern",
     "url": "/anti-patterns/lowering-the-bar-under-pressure/",
     "domain": "People",
@@ -2529,7 +2529,7 @@
     "id": "AP-13"
   },
   {
-    "title": "AP-14: The Clone Factory — Hiring process unconsciously filters for 'culture fit' meaning 'like us,' producing a homogeneous team that thinks alike. Groupthink emerges in design reviews, blind spots compound in product decisions, and the team becomes hostile to anyone who doesn't match the dominant profile.",
+    "title": "AP-14: The Clone Factory \u2014 Hiring process unconsciously filters for 'culture fit' meaning 'like us,' producing a homogeneous team that thinks alike. Groupthink emerges in design reviews, blind spots compound in product decisions, and the team becomes hostile to anyone who doesn't match the dominant profile.",
     "description": "Hiring process unconsciously filters for 'culture fit' meaning 'like us,' producing a homogeneous team that thinks alike. Groupthink emerges in design reviews, blind spots compound in product decisions, and the team becomes hostile to anyone who doesn't match the dominant profile.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-clone-factory/",
@@ -2538,8 +2538,8 @@
     "id": "AP-14"
   },
   {
-    "title": "AP-15: The Permanent PIP — PIPs are designed to fail — documentation starts only after the exit decision is already made, with no genuine coaching or support. The team learns that performance management equals termination, creating a culture of fear where honest feedback and real development never happen.",
-    "description": "PIPs are designed to fail — documentation starts only after the exit decision is already made, with no genuine coaching or support. The team learns that performance management equals termination, creating a culture of fear where honest feedback and real development never happen.",
+    "title": "AP-15: The Permanent PIP \u2014 PIPs are designed to fail \u2014 documentation starts only after the exit decision is already made, with no genuine coaching or support. The team learns that performance management equals termination, creating a culture of fear where honest feedback and real development never happen.",
+    "description": "PIPs are designed to fail \u2014 documentation starts only after the exit decision is already made, with no genuine coaching or support. The team learns that performance management equals termination, creating a culture of fear where honest feedback and real development never happen.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-permanent-pip/",
     "domain": "People",
@@ -2547,8 +2547,8 @@
     "id": "AP-15"
   },
   {
-    "title": "AP-16: Promotion as Retention — EM promotes engineers who haven't demonstrated sustained next-level impact, using title inflation as a retention lever. Newly promoted engineers struggle at their level, calibration credibility erodes, and the leveling system loses meaning — creating inequity for those who earned their level through evidence.",
-    "description": "EM promotes engineers who haven't demonstrated sustained next-level impact, using title inflation as a retention lever. Newly promoted engineers struggle at their level, calibration credibility erodes, and the leveling system loses meaning — creating inequity for those who earned their level through evidence.",
+    "title": "AP-16: Promotion as Retention \u2014 EM promotes engineers who haven't demonstrated sustained next-level impact, using title inflation as a retention lever. Newly promoted engineers struggle at their level, calibration credibility erodes, and the leveling system loses meaning \u2014 creating inequity for those who earned their level through evidence.",
+    "description": "EM promotes engineers who haven't demonstrated sustained next-level impact, using title inflation as a retention lever. Newly promoted engineers struggle at their level, calibration credibility erodes, and the leveling system loses meaning \u2014 creating inequity for those who earned their level through evidence.",
     "type": "anti-pattern",
     "url": "/anti-patterns/promotion-as-retention/",
     "domain": "People",
@@ -2556,7 +2556,7 @@
     "id": "AP-16"
   },
   {
-    "title": "AP-17: The Lake Wobegon Effect — EM rates everyone 'Exceeds Expectations,' avoiding the discomfort of honest differentiation. Calibration committees override ratings, top performers don't feel recognized, underperformers never receive clear signal, and the EM's judgment credibility collapses with leadership.",
+    "title": "AP-17: The Lake Wobegon Effect \u2014 EM rates everyone 'Exceeds Expectations,' avoiding the discomfort of honest differentiation. Calibration committees override ratings, top performers don't feel recognized, underperformers never receive clear signal, and the EM's judgment credibility collapses with leadership.",
     "description": "EM rates everyone 'Exceeds Expectations,' avoiding the discomfort of honest differentiation. Calibration committees override ratings, top performers don't feel recognized, underperformers never receive clear signal, and the EM's judgment credibility collapses with leadership.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-lake-wobegon-effect/",
@@ -2565,7 +2565,7 @@
     "id": "AP-17"
   },
   {
-    "title": "AP-18: Culture by Accident — No intentional culture, just whatever norms emerge from the loudest personalities",
+    "title": "AP-18: Culture by Accident \u2014 No intentional culture, just whatever norms emerge from the loudest personalities",
     "description": "No intentional culture, just whatever norms emerge from the loudest personalities",
     "type": "anti-pattern",
     "url": "/anti-patterns/culture-by-accident/",
@@ -2574,8 +2574,8 @@
     "id": "AP-18"
   },
   {
-    "title": "AP-19: The Super-EM — Director bypasses their EMs to manage ICs directly — giving direction that contradicts EM plans and fielding questions that should go to the EM first. EMs become figureheads, never develop independence, and the org can't scale beyond the Director's personal bandwidth.",
-    "description": "Director bypasses their EMs to manage ICs directly — giving direction that contradicts EM plans and fielding questions that should go to the EM first. EMs become figureheads, never develop independence, and the org can't scale beyond the Director's personal bandwidth.",
+    "title": "AP-19: The Super-EM \u2014 Director bypasses their EMs to manage ICs directly \u2014 giving direction that contradicts EM plans and fielding questions that should go to the EM first. EMs become figureheads, never develop independence, and the org can't scale beyond the Director's personal bandwidth.",
+    "description": "Director bypasses their EMs to manage ICs directly \u2014 giving direction that contradicts EM plans and fielding questions that should go to the EM first. EMs become figureheads, never develop independence, and the org can't scale beyond the Director's personal bandwidth.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-super-em/",
     "domain": "Strategy",
@@ -2583,8 +2583,8 @@
     "id": "AP-19"
   },
   {
-    "title": "AP-20: Absent Director — Director delegates everything then disappears — EMs operate in silos without organizational context, coaching, or cross-team alignment. The absence creates conflicting priorities, strategic drift, and EMs who never develop because nobody is investing in their growth.",
-    "description": "Director delegates everything then disappears — EMs operate in silos without organizational context, coaching, or cross-team alignment. The absence creates conflicting priorities, strategic drift, and EMs who never develop because nobody is investing in their growth.",
+    "title": "AP-20: Absent Director \u2014 Director delegates everything then disappears \u2014 EMs operate in silos without organizational context, coaching, or cross-team alignment. The absence creates conflicting priorities, strategic drift, and EMs who never develop because nobody is investing in their growth.",
+    "description": "Director delegates everything then disappears \u2014 EMs operate in silos without organizational context, coaching, or cross-team alignment. The absence creates conflicting priorities, strategic drift, and EMs who never develop because nobody is investing in their growth.",
     "type": "anti-pattern",
     "url": "/anti-patterns/absent-director/",
     "domain": "People",
@@ -2592,7 +2592,7 @@
     "id": "AP-20"
   },
   {
-    "title": "AP-21: The Feature Factory — Team builds whatever PM asks without questioning whether it's the right investment",
+    "title": "AP-21: The Feature Factory \u2014 Team builds whatever PM asks without questioning whether it's the right investment",
     "description": "Team builds whatever PM asks without questioning whether it's the right investment",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-feature-factory/",
@@ -2601,7 +2601,7 @@
     "id": "AP-21"
   },
   {
-    "title": "AP-22: The Adversarial Triad — Eng/PM/Design in constant conflict, treating each other as obstacles instead of partners",
+    "title": "AP-22: The Adversarial Triad \u2014 Eng/PM/Design in constant conflict, treating each other as obstacles instead of partners",
     "description": "Eng/PM/Design in constant conflict, treating each other as obstacles instead of partners",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-adversarial-triad/",
@@ -2610,8 +2610,8 @@
     "id": "AP-22"
   },
   {
-    "title": "AP-23: The Surprise Factory — Leadership consistently learns about problems — project delays, team issues, partner friction — from other people rather than from the EM. Trust erodes rapidly, autonomy gets revoked, and the EM's reputation for reliability collapses as surprises accumulate.",
-    "description": "Leadership consistently learns about problems — project delays, team issues, partner friction — from other people rather than from the EM. Trust erodes rapidly, autonomy gets revoked, and the EM's reputation for reliability collapses as surprises accumulate.",
+    "title": "AP-23: The Surprise Factory \u2014 Leadership consistently learns about problems \u2014 project delays, team issues, partner friction \u2014 from other people rather than from the EM. Trust erodes rapidly, autonomy gets revoked, and the EM's reputation for reliability collapses as surprises accumulate.",
+    "description": "Leadership consistently learns about problems \u2014 project delays, team issues, partner friction \u2014 from other people rather than from the EM. Trust erodes rapidly, autonomy gets revoked, and the EM's reputation for reliability collapses as surprises accumulate.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-surprise-factory/",
     "domain": "Stakeholder",
@@ -2619,7 +2619,7 @@
     "id": "AP-23"
   },
   {
-    "title": "AP-24: Empire Building — EM expands scope and absorbs teams to grow their org size rather than for customer or business impact. Resources get spread thin across non-critical work, peers lose respect for the political maneuvering, and the bloated org becomes a target during the next rebalancing cycle.",
+    "title": "AP-24: Empire Building \u2014 EM expands scope and absorbs teams to grow their org size rather than for customer or business impact. Resources get spread thin across non-critical work, peers lose respect for the political maneuvering, and the bloated org becomes a target during the next rebalancing cycle.",
     "description": "EM expands scope and absorbs teams to grow their org size rather than for customer or business impact. Resources get spread thin across non-critical work, peers lose respect for the political maneuvering, and the bloated org becomes a target during the next rebalancing cycle.",
     "type": "anti-pattern",
     "url": "/anti-patterns/empire-building/",
@@ -2628,7 +2628,7 @@
     "id": "AP-24"
   },
   {
-    "title": "AP-25: The Blank Check Mentality — Asking for resources without cost consciousness, ROI justification, or capacity models linking headcount to deliverables",
+    "title": "AP-25: The Blank Check Mentality \u2014 Asking for resources without cost consciousness, ROI justification, or capacity models linking headcount to deliverables",
     "description": "Asking for resources without cost consciousness, ROI justification, or capacity models linking headcount to deliverables",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-blank-check-mentality/",
@@ -2637,8 +2637,8 @@
     "id": "AP-25"
   },
   {
-    "title": "AP-26: Analysis Paralysis — Every decision requires exhaustive analysis and data-gathering before action — the team is stuck in perpetual research mode",
-    "description": "Every decision requires exhaustive analysis and data-gathering before action — the team is stuck in perpetual research mode",
+    "title": "AP-26: Analysis Paralysis \u2014 Every decision requires exhaustive analysis and data-gathering before action \u2014 the team is stuck in perpetual research mode",
+    "description": "Every decision requires exhaustive analysis and data-gathering before action \u2014 the team is stuck in perpetual research mode",
     "type": "anti-pattern",
     "url": "/anti-patterns/analysis-paralysis/",
     "domain": "Stakeholder",
@@ -2646,7 +2646,7 @@
     "id": "AP-26"
   },
   {
-    "title": "AP-27: The Yes Machine — EM agrees to every request from stakeholders without pushing back or making trade-offs visible, leaving the team chronically overcommitted. Deadlines slip, quality degrades, and credibility collapses as the gap between promises and delivery widens every quarter.",
+    "title": "AP-27: The Yes Machine \u2014 EM agrees to every request from stakeholders without pushing back or making trade-offs visible, leaving the team chronically overcommitted. Deadlines slip, quality degrades, and credibility collapses as the gap between promises and delivery widens every quarter.",
     "description": "EM agrees to every request from stakeholders without pushing back or making trade-offs visible, leaving the team chronically overcommitted. Deadlines slip, quality degrades, and credibility collapses as the gap between promises and delivery widens every quarter.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-yes-machine/",
@@ -2655,7 +2655,7 @@
     "id": "AP-27"
   },
   {
-    "title": "AP-28: The IC Trap — EM spends their time writing code and reviewing PRs instead of doing the actual management work their team needs",
+    "title": "AP-28: The IC Trap \u2014 EM spends their time writing code and reviewing PRs instead of doing the actual management work their team needs",
     "description": "EM spends their time writing code and reviewing PRs instead of doing the actual management work their team needs",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ic-trap/",
@@ -2664,7 +2664,7 @@
     "id": "AP-28"
   },
   {
-    "title": "AP-29: Death by Metrics — EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work",
+    "title": "AP-29: Death by Metrics \u2014 EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work",
     "description": "EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work",
     "type": "anti-pattern",
     "url": "/anti-patterns/death-by-metrics/",
@@ -2673,7 +2673,7 @@
     "id": "AP-29"
   },
   {
-    "title": "AP-30: The Consensus Trap — EM treats every decision as requiring unanimous agreement, turning consensus into a procrastination mechanism",
+    "title": "AP-30: The Consensus Trap \u2014 EM treats every decision as requiring unanimous agreement, turning consensus into a procrastination mechanism",
     "description": "EM treats every decision as requiring unanimous agreement, turning consensus into a procrastination mechanism",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-consensus-trap/",
@@ -2682,8 +2682,8 @@
     "id": "AP-30"
   },
   {
-    "title": "AP-31: Meeting Debt & Process Cargo Cult — Team drowning in ceremonies, syncs, and rituals that nobody can justify — agile processes adopted by name without understanding their purpose, leaving engineers with less than two hours of uninterrupted focus time per day",
-    "description": "Team drowning in ceremonies, syncs, and rituals that nobody can justify — agile processes adopted by name without understanding their purpose, leaving engineers with less than two hours of uninterrupted focus time per day",
+    "title": "AP-31: Meeting Debt & Process Cargo Cult \u2014 Team drowning in ceremonies, syncs, and rituals that nobody can justify \u2014 agile processes adopted by name without understanding their purpose, leaving engineers with less than two hours of uninterrupted focus time per day",
+    "description": "Team drowning in ceremonies, syncs, and rituals that nobody can justify \u2014 agile processes adopted by name without understanding their purpose, leaving engineers with less than two hours of uninterrupted focus time per day",
     "type": "anti-pattern",
     "url": "/anti-patterns/meeting-debt/",
     "domain": "Execution",
@@ -2691,7 +2691,7 @@
     "id": "AP-31"
   },
   {
-    "title": "AP-32: Documentation Hoarding — EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful, creating a graveyard of stale pages",
+    "title": "AP-32: Documentation Hoarding \u2014 EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful, creating a graveyard of stale pages",
     "description": "EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful, creating a graveyard of stale pages",
     "type": "anti-pattern",
     "url": "/anti-patterns/documentation-hoarding/",
@@ -2700,8 +2700,8 @@
     "id": "AP-32"
   },
   {
-    "title": "AP-33: The Hero EM — Manager who solves every problem personally, takes over every escalation, and absorbs all challenging work — the team never develops independence",
-    "description": "Manager who solves every problem personally, takes over every escalation, and absorbs all challenging work — the team never develops independence",
+    "title": "AP-33: The Hero EM \u2014 Manager who solves every problem personally, takes over every escalation, and absorbs all challenging work \u2014 the team never develops independence",
+    "description": "Manager who solves every problem personally, takes over every escalation, and absorbs all challenging work \u2014 the team never develops independence",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-hero-em/",
     "domain": "People",
@@ -2709,7 +2709,7 @@
     "id": "AP-33"
   },
   {
-    "title": "AP-35: The Infinite Runway — EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
+    "title": "AP-35: The Infinite Runway \u2014 EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
     "description": "EM treats cloud/infra spend as unbounded and never prioritizes cost optimization",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-infinite-runway/",
@@ -2718,7 +2718,7 @@
     "id": "AP-35"
   },
   {
-    "title": "AP-37: Compliance Cramming — EM treats compliance as a periodic audit exercise or checklist, achieving minimal technical compliance without genuine security posture improvement",
+    "title": "AP-37: Compliance Cramming \u2014 EM treats compliance as a periodic audit exercise or checklist, achieving minimal technical compliance without genuine security posture improvement",
     "description": "EM treats compliance as a periodic audit exercise or checklist, achieving minimal technical compliance without genuine security posture improvement",
     "type": "anti-pattern",
     "url": "/anti-patterns/compliance-cramming/",
@@ -2727,7 +2727,7 @@
     "id": "AP-37"
   },
   {
-    "title": "AP-38: The Ivory Tower Architect — EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
+    "title": "AP-38: The Ivory Tower Architect \u2014 EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
     "description": "EM pushes architectural purity and over-engineering at the expense of pragmatic delivery",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ivory-tower-architect/",
@@ -2736,7 +2736,7 @@
     "id": "AP-38"
   },
   {
-    "title": "AP-40: The Missing Stair — EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them",
+    "title": "AP-40: The Missing Stair \u2014 EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them",
     "description": "EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-missing-stair/",
@@ -2745,7 +2745,7 @@
     "id": "AP-40"
   },
   {
-    "title": "AP-41: Culture Tourism — EM treats culture building as periodic events (off-sites, pizza, team lunches) rather than daily structural practices",
+    "title": "AP-41: Culture Tourism \u2014 EM treats culture building as periodic events (off-sites, pizza, team lunches) rather than daily structural practices",
     "description": "EM treats culture building as periodic events (off-sites, pizza, team lunches) rather than daily structural practices",
     "type": "anti-pattern",
     "url": "/anti-patterns/culture-tourism/",
@@ -2754,7 +2754,7 @@
     "id": "AP-41"
   },
   {
-    "title": "AP-42: Peanut Butter Spreading — EM distributes resources evenly across all projects instead of concentrating on highest-impact bets",
+    "title": "AP-42: Peanut Butter Spreading \u2014 EM distributes resources evenly across all projects instead of concentrating on highest-impact bets",
     "description": "EM distributes resources evenly across all projects instead of concentrating on highest-impact bets",
     "type": "anti-pattern",
     "url": "/anti-patterns/peanut-butter-spreading/",
@@ -2763,7 +2763,7 @@
     "id": "AP-42"
   },
   {
-    "title": "AP-43: The Telephone Game — Information degrades as it passes through management layers because there's no source-of-truth documentation",
+    "title": "AP-43: The Telephone Game \u2014 Information degrades as it passes through management layers because there's no source-of-truth documentation",
     "description": "Information degrades as it passes through management layers because there's no source-of-truth documentation",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-telephone-game/",
@@ -2772,7 +2772,7 @@
     "id": "AP-43"
   },
   {
-    "title": "AP-44: The Recency Trap — EM's performance assessment dominated by last 6 weeks instead of full review period, rewarding or punishing based on timing rather than sustained performance",
+    "title": "AP-44: The Recency Trap \u2014 EM's performance assessment dominated by last 6 weeks instead of full review period, rewarding or punishing based on timing rather than sustained performance",
     "description": "EM's performance assessment dominated by last 6 weeks instead of full review period, rewarding or punishing based on timing rather than sustained performance",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-recency-trap/",
@@ -2781,7 +2781,7 @@
     "id": "AP-44"
   },
   {
-    "title": "AP-46: The Vibes-Based Hire — EM relies on gut feeling and 'culture fit' rather than structured evaluation, leading to biased and unpredictable hiring outcomes",
+    "title": "AP-46: The Vibes-Based Hire \u2014 EM relies on gut feeling and 'culture fit' rather than structured evaluation, leading to biased and unpredictable hiring outcomes",
     "description": "EM relies on gut feeling and 'culture fit' rather than structured evaluation, leading to biased and unpredictable hiring outcomes",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-vibes-based-hire/",
@@ -2790,7 +2790,7 @@
     "id": "AP-46"
   },
   {
-    "title": "AP-48: The Lagging-Only Dashboard — EM only tracks lagging indicators (incidents, attrition, missed deadlines) and never has early warning signals for emerging problems",
+    "title": "AP-48: The Lagging-Only Dashboard \u2014 EM only tracks lagging indicators (incidents, attrition, missed deadlines) and never has early warning signals for emerging problems",
     "description": "EM only tracks lagging indicators (incidents, attrition, missed deadlines) and never has early warning signals for emerging problems",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-lagging-only-dashboard/",
@@ -2799,7 +2799,7 @@
     "id": "AP-48"
   },
   {
-    "title": "AP-49: The Invisible Tech Debt — Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms",
+    "title": "AP-49: The Invisible Tech Debt \u2014 Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms",
     "description": "Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-invisible-tech-debt/",
@@ -2808,7 +2808,7 @@
     "id": "AP-49"
   },
   {
-    "title": "AP-50: The Silo Builder — EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes",
+    "title": "AP-50: The Silo Builder \u2014 EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes",
     "description": "EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-silo-builder/",
@@ -2817,8 +2817,8 @@
     "id": "AP-50"
   },
   {
-    "title": "AP-51: The Accidental Manager — Someone promoted into management because they were the best IC, without any management training, coaching, or support — and expected to figure it out",
-    "description": "Someone promoted into management because they were the best IC, without any management training, coaching, or support — and expected to figure it out",
+    "title": "AP-51: The Accidental Manager \u2014 Someone promoted into management because they were the best IC, without any management training, coaching, or support \u2014 and expected to figure it out",
+    "description": "Someone promoted into management because they were the best IC, without any management training, coaching, or support \u2014 and expected to figure it out",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-accidental-manager/",
     "domain": "People",
@@ -2826,7 +2826,7 @@
     "id": "AP-51"
   },
   {
-    "title": "AP-52: The Task-List OKR — Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes, turning goal-setting into project management theater",
+    "title": "AP-52: The Task-List OKR \u2014 Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes, turning goal-setting into project management theater",
     "description": "Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes, turning goal-setting into project management theater",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-task-list-okr/",
@@ -2835,8 +2835,8 @@
     "id": "AP-52"
   },
   {
-    "title": "AP-53: The Urgency Treadmill — Everything is urgent, nothing is strategic — team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
-    "description": "Everything is urgent, nothing is strategic — team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
+    "title": "AP-53: The Urgency Treadmill \u2014 Everything is urgent, nothing is strategic \u2014 team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
+    "description": "Everything is urgent, nothing is strategic \u2014 team constantly reacts to the loudest stakeholder or latest fire, never making progress on what actually matters",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-urgency-treadmill/",
     "domain": "Strategy",
@@ -2844,8 +2844,8 @@
     "id": "AP-53"
   },
   {
-    "title": "AP-54: The Wrecking Ball — New leader makes drastic changes in first weeks without understanding context — scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
-    "description": "New leader makes drastic changes in first weeks without understanding context — scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
+    "title": "AP-54: The Wrecking Ball \u2014 New leader makes drastic changes in first weeks without understanding context \u2014 scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
+    "description": "New leader makes drastic changes in first weeks without understanding context \u2014 scrapping processes, canceling projects, reorganizing teams based on assumptions rather than assessment",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-wrecking-ball/",
     "domain": "Strategy",
@@ -2853,7 +2853,7 @@
     "id": "AP-54"
   },
   {
-    "title": "AP-55: Budget in a Vacuum — Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams, resulting in misaligned asks and adversarial budget reviews",
+    "title": "AP-55: Budget in a Vacuum \u2014 Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams, resulting in misaligned asks and adversarial budget reviews",
     "description": "Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams, resulting in misaligned asks and adversarial budget reviews",
     "type": "anti-pattern",
     "url": "/anti-patterns/budget-in-a-vacuum/",
@@ -2862,7 +2862,7 @@
     "id": "AP-55"
   },
   {
-    "title": "AP-56: The Stress Funnel — Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering and translating it into actionable context",
+    "title": "AP-56: The Stress Funnel \u2014 Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering and translating it into actionable context",
     "description": "Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering and translating it into actionable context",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-stress-funnel/",
@@ -2871,8 +2871,8 @@
     "id": "AP-56"
   },
   {
-    "title": "AP-57: Alert Noise Normalization — Team accumulates alerts over time but nobody removes them — engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
-    "description": "Team accumulates alerts over time but nobody removes them — engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
+    "title": "AP-57: Alert Noise Normalization \u2014 Team accumulates alerts over time but nobody removes them \u2014 engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
+    "description": "Team accumulates alerts over time but nobody removes them \u2014 engineers are scared of deleting an alert that might matter, so non-actionable noise grows until the on-call is desensitized and real incidents get slower response",
     "type": "anti-pattern",
     "url": "/anti-patterns/alert-noise-normalization/",
     "domain": "Reliability",
@@ -2880,8 +2880,8 @@
     "id": "AP-57"
   },
   {
-    "title": "AP-58: The Interview Marathon — Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages — top candidates drop out while mediocre ones persist",
-    "description": "Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages — top candidates drop out while mediocre ones persist",
+    "title": "AP-58: The Interview Marathon \u2014 Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages \u2014 top candidates drop out while mediocre ones persist",
+    "description": "Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing stages \u2014 top candidates drop out while mediocre ones persist",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-interview-marathon/",
     "domain": "People",
@@ -2889,8 +2889,8 @@
     "id": "AP-58"
   },
   {
-    "title": "AP-59: The Order Taker — Engineering leader defers entirely to product for direction — never challenges priorities, never proposes technical opportunities, never shapes strategy — accepting a subordinate role rather than acting as a co-owner",
-    "description": "Engineering leader defers entirely to product for direction — never challenges priorities, never proposes technical opportunities, never shapes strategy — accepting a subordinate role rather than acting as a co-owner",
+    "title": "AP-59: The Order Taker \u2014 Engineering leader defers entirely to product for direction \u2014 never challenges priorities, never proposes technical opportunities, never shapes strategy \u2014 accepting a subordinate role rather than acting as a co-owner",
+    "description": "Engineering leader defers entirely to product for direction \u2014 never challenges priorities, never proposes technical opportunities, never shapes strategy \u2014 accepting a subordinate role rather than acting as a co-owner",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-order-taker/",
     "domain": "Stakeholder",
@@ -2898,8 +2898,8 @@
     "id": "AP-59"
   },
   {
-    "title": "AP-60: The Feedback Avoidance Loop — Manager avoids giving negative performance feedback until it's too late — minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
-    "description": "Manager avoids giving negative performance feedback until it's too late — minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
+    "title": "AP-60: The Feedback Avoidance Loop \u2014 Manager avoids giving negative performance feedback until it's too late \u2014 minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
+    "description": "Manager avoids giving negative performance feedback until it's too late \u2014 minor issues compound into serious underperformance, and the first honest feedback the engineer receives is a PIP or a low rating at review time",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-feedback-avoidance-loop/",
     "domain": "People",
@@ -2907,8 +2907,8 @@
     "id": "AP-60"
   },
   {
-    "title": "AP-61: Incident Amnesia — Team runs post-mortems after every incident but action items die in a backlog — the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
-    "description": "Team runs post-mortems after every incident but action items die in a backlog — the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
+    "title": "AP-61: Incident Amnesia \u2014 Team runs post-mortems after every incident but action items die in a backlog \u2014 the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
+    "description": "Team runs post-mortems after every incident but action items die in a backlog \u2014 the same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual without consequence",
     "type": "anti-pattern",
     "url": "/anti-patterns/incident-amnesia/",
     "domain": "Reliability",
@@ -2916,8 +2916,8 @@
     "id": "AP-61"
   },
   {
-    "title": "AP-62: Resume-Driven Architecture — Technology choices driven by what looks impressive on resumes rather than what solves the actual problem — team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
-    "description": "Technology choices driven by what looks impressive on resumes rather than what solves the actual problem — team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
+    "title": "AP-62: Resume-Driven Architecture \u2014 Technology choices driven by what looks impressive on resumes rather than what solves the actual problem \u2014 team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
+    "description": "Technology choices driven by what looks impressive on resumes rather than what solves the actual problem \u2014 team adopts Kubernetes for 3 services, microservices for a 5-person team, or event sourcing for a CRUD app because the technology is trendy",
     "type": "anti-pattern",
     "url": "/anti-patterns/resume-driven-architecture/",
     "domain": "Execution",
@@ -2925,8 +2925,8 @@
     "id": "AP-62"
   },
   {
-    "title": "AP-63: The Ostrich Leader — Leader avoids making difficult organizational decisions — lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
-    "description": "Leader avoids making difficult organizational decisions — lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
+    "title": "AP-63: The Ostrich Leader \u2014 Leader avoids making difficult organizational decisions \u2014 lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
+    "description": "Leader avoids making difficult organizational decisions \u2014 lets dysfunctional team dynamics persist, delays necessary re-orgs, and hopes problems will resolve themselves, while org health slowly deteriorates",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ostrich-leader/",
     "domain": "Strategy",
@@ -2934,8 +2934,8 @@
     "id": "AP-63"
   },
   {
-    "title": "AP-64: The Goodhart Trap — Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure — velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
-    "description": "Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure — velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
+    "title": "AP-64: The Goodhart Trap \u2014 Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure \u2014 velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
+    "description": "Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure \u2014 velocity numbers go up while actual delivery value goes down, and the metric loses its diagnostic power",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-goodhart-trap/",
     "domain": "Data",
@@ -2943,8 +2943,8 @@
     "id": "AP-64"
   },
   {
-    "title": "AP-65: The Talent Hostage — Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency — making the team a place people can't leave rather than a place people want to stay",
-    "description": "Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency — making the team a place people can't leave rather than a place people want to stay",
+    "title": "AP-65: The Talent Hostage \u2014 Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency \u2014 making the team a place people can't leave rather than a place people want to stay",
+    "description": "Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency \u2014 making the team a place people can't leave rather than a place people want to stay",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-talent-hostage/",
     "domain": "People",
@@ -2952,8 +2952,8 @@
     "id": "AP-65"
   },
   {
-    "title": "AP-66: The Ivory Tower Strategy — leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams — the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
-    "description": "leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams — the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
+    "title": "AP-66: The Ivory Tower Strategy \u2014 leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams \u2014 the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
+    "description": "leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams \u2014 the strategy exists on slides but engineers cannot connect their daily work to it, and the gap between intent and execution widens with every quarter",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ivory-tower-strategy/",
     "domain": "Strategy",
@@ -2961,8 +2961,8 @@
     "id": "AP-66"
   },
   {
-    "title": "AP-67: The Toil Spiral — team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
-    "description": "team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
+    "title": "AP-67: The Toil Spiral \u2014 team neglects operational health \u2014 toil reduction, developer experience, and technical debt \u2014 because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
+    "description": "team neglects operational health \u2014 toil reduction, developer experience, and technical debt \u2014 because feature delivery always wins the prioritization fight, until accumulated neglect degrades velocity so badly that the team can't ship features either",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-toil-spiral/",
     "domain": "Execution",
@@ -2970,8 +2970,8 @@
     "id": "AP-67"
   },
   {
-    "title": "AP-68: The Stakeholder Surprise — engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment — stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
-    "description": "engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment — stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
+    "title": "AP-68: The Stakeholder Surprise \u2014 engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment \u2014 stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
+    "description": "engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment \u2014 stakeholders are repeatedly blindsided by bad news, eroding trust until they start micromanaging or routing around engineering entirely",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-stakeholder-surprise/",
     "domain": "Stakeholder",
@@ -2979,8 +2979,8 @@
     "id": "AP-68"
   },
   {
-    "title": "AP-69: The 100% Utilization Fallacy — manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration — projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
-    "description": "manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration — projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
+    "title": "AP-69: The 100% Utilization Fallacy \u2014 manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration \u2014 projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
+    "description": "manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, learning, or collaboration \u2014 projects chronically miss deadlines because the plan assumed ideal conditions that never exist",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-100-percent-utilization-fallacy/",
     "domain": "Strategy",
@@ -2988,8 +2988,8 @@
     "id": "AP-69"
   },
   {
-    "title": "AP-70: The Reassurance Trap — during periods of uncertainty — layoffs, reorgs, strategy pivots — the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
-    "description": "during periods of uncertainty — layoffs, reorgs, strategy pivots — the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
+    "title": "AP-70: The Reassurance Trap \u2014 during periods of uncertainty \u2014 layoffs, reorgs, strategy pivots \u2014 the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
+    "description": "during periods of uncertainty \u2014 layoffs, reorgs, strategy pivots \u2014 the manager offers vague reassurances ('everything will be fine,' 'I'm sure there won't be more cuts') that ring hollow, destroying trust faster than honest acknowledgment of difficulty would",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-reassurance-trap/",
     "domain": "People",
@@ -2997,8 +2997,8 @@
     "id": "AP-70"
   },
   {
-    "title": "AP-71: Vulnerability Noise Blindness — automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction — the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
-    "description": "automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction — the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
+    "title": "AP-71: Vulnerability Noise Blindness \u2014 automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction \u2014 the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
+    "description": "automated security scanners generate hundreds of findings per week but without effective triage, prioritization, or noise reduction \u2014 the team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight",
     "type": "anti-pattern",
     "url": "/anti-patterns/vulnerability-noise-blindness/",
     "domain": "Reliability",
@@ -3006,8 +3006,8 @@
     "id": "AP-71"
   },
   {
-    "title": "AP-72: The Shadow Bypass — engineers routinely circumvent security controls — disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing — because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity",
-    "description": "engineers routinely circumvent security controls — disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing — because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity",
+    "title": "AP-72: The Shadow Bypass \u2014 engineers routinely circumvent security controls \u2014 disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing \u2014 because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity",
+    "description": "engineers routinely circumvent security controls \u2014 disabling scanners in CI, skipping threat modeling for 'urgent' features, using personal credentials for testing \u2014 because security processes are perceived as friction that slows delivery rather than guardrails that enable safe velocity",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-shadow-bypass/",
     "domain": "Reliability",
@@ -3015,8 +3015,8 @@
     "id": "AP-72"
   },
   {
-    "title": "AP-73: The Certification Facade — team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation — day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk",
-    "description": "team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation — day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk",
+    "title": "AP-73: The Certification Facade \u2014 team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation \u2014 day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk",
+    "description": "team maintains compliance certifications (SOC2, ISO 27001, HIPAA) and passes audits, but the certified practices are only followed during audit preparation \u2014 day-to-day security posture drifts far from what the documentation claims, creating a dangerous gap between paper compliance and actual risk",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-certification-facade/",
     "domain": "Reliability",
@@ -3052,7 +3052,7 @@
   },
   {
     "title": "Two of Your Engineers Are in Conflict",
-    "description": "Two senior engineers disagree on a technical approach. It's gotten personal — code reviews are hostile, standup is tense, team morale is affected.",
+    "description": "Two senior engineers disagree on a technical approach. It's gotten personal \u2014 code reviews are hostile, standup is tense, team morale is affected.",
     "type": "playbook",
     "url": "/playbooks/two-of-your-engineers-are-in-conflict/",
     "domain": "People",
@@ -3205,7 +3205,7 @@
   },
   {
     "title": "DORA Metrics Show Decline But Team Feels Fine",
-    "description": "Your DORA metrics have been trending down for 2 quarters — deploy frequency dropped 40%, lead time increased 3x. But team morale is fine and nobody is complaining. Your VP saw the dashboard and is asking questions.",
+    "description": "Your DORA metrics have been trending down for 2 quarters \u2014 deploy frequency dropped 40%, lead time increased 3x. But team morale is fine and nobody is complaining. Your VP saw the dashboard and is asking questions.",
     "type": "playbook",
     "url": "/playbooks/dora-metrics-show-decline-but-team-feels-fine/",
     "domain": "Data",
@@ -3250,7 +3250,7 @@
   },
   {
     "title": "Managing Through a Major Security Incident (Data Breach)",
-    "description": "Security team discovers unauthorized data access to your team's service. Customer PII (names, emails, hashed passwords) may be compromised. The scope is unclear — could be hundreds or millions of records. Legal, PR, and the exec team are involved. Your team owns the affected service. The incident is already escalated to the CEO. Clock is ticking on regulatory notification requirements (72 hours under GDPR).",
+    "description": "Security team discovers unauthorized data access to your team's service. Customer PII (names, emails, hashed passwords) may be compromised. The scope is unclear \u2014 could be hundreds or millions of records. Legal, PR, and the exec team are involved. Your team owns the affected service. The incident is already escalated to the CEO. Clock is ticking on regulatory notification requirements (72 hours under GDPR).",
     "type": "playbook",
     "url": "/playbooks/managing-through-a-major-security-incident-data-breach/",
     "domain": "Reliability",
@@ -3286,7 +3286,7 @@
   },
   {
     "title": "Managing Through a Hiring Freeze",
-    "description": "6-month hiring freeze announced company-wide. You have 3 open reqs mid-pipeline — one candidate just passed the onsite, another is in final round, and a third is at phone screen stage. Your team of 9 is already stretched across 3 projects. Two senior engineers are showing signs of burnout. One mid-level engineer recently mentioned they've been getting recruiter outreach. Attrition risk is real and you can't backfill.",
+    "description": "6-month hiring freeze announced company-wide. You have 3 open reqs mid-pipeline \u2014 one candidate just passed the onsite, another is in final round, and a third is at phone screen stage. Your team of 9 is already stretched across 3 projects. Two senior engineers are showing signs of burnout. One mid-level engineer recently mentioned they've been getting recruiter outreach. Attrition risk is real and you can't backfill.",
     "type": "playbook",
     "url": "/playbooks/managing-through-a-hiring-freeze/",
     "domain": "People",
@@ -3295,7 +3295,7 @@
   },
   {
     "title": "Your Product Is Being Sunset/Deprecated",
-    "description": "Leadership decides to sunset your team's product — a service with 50K active users. Revenue doesn't justify continued investment. Users need to be migrated to an alternative (internal or third-party). Timeline is 9 months. Your team of 10 engineers built this product over 3 years. They're anxious about their futures — will they be laid off, reassigned, or forgotten?",
+    "description": "Leadership decides to sunset your team's product \u2014 a service with 50K active users. Revenue doesn't justify continued investment. Users need to be migrated to an alternative (internal or third-party). Timeline is 9 months. Your team of 10 engineers built this product over 3 years. They're anxious about their futures \u2014 will they be laid off, reassigned, or forgotten?",
     "type": "playbook",
     "url": "/playbooks/your-product-is-being-sunset-deprecated/",
     "domain": "Execution",
@@ -3367,7 +3367,7 @@
   },
   {
     "title": "Communicating a Major Technical Decision Not Everyone Agrees With",
-    "description": "After an RFC process, you've decided to migrate from microservices back to a modular monolith. Senior engineers are split — some are excited, others feel their microservices expertise is being devalued. You need to communicate the decision without creating factions.",
+    "description": "After an RFC process, you've decided to migrate from microservices back to a modular monolith. Senior engineers are split \u2014 some are excited, others feel their microservices expertise is being devalued. You need to communicate the decision without creating factions.",
     "type": "playbook",
     "url": "/playbooks/communicating-a-major-technical-decision-that-not-everyone-agrees-with/",
     "domain": "Stakeholder",
@@ -3375,7 +3375,7 @@
     "id": "P-C7-2"
   },
   {
-    "title": "Your Team Has Communication Debt — Decisions Aren't Documented",
+    "title": "Your Team Has Communication Debt \u2014 Decisions Aren't Documented",
     "description": "Your team has grown from 5 to 15 people. Key technical decisions live in Slack threads, hallway conversations, and individual memories. New hires can't find context. The same decisions are relitigated monthly. You're drowning in 'quick syncs'.",
     "type": "playbook",
     "url": "/playbooks/your-team-has-communication-debt-decisions-not-documented/",
@@ -3475,7 +3475,7 @@
   },
   {
     "title": "Balancing Security Risk With Shipping Speed After a Close Call",
-    "description": "A near-miss security incident revealed that a feature shipped without a threat model — a misconfigured API endpoint was exposing customer PII to unauthenticated requests, caught in production monitoring before data was exfiltrated. Leadership wants to know how this happened and what you are doing to prevent it.",
+    "description": "A near-miss security incident revealed that a feature shipped without a threat model \u2014 a misconfigured API endpoint was exposing customer PII to unauthenticated requests, caught in production monitoring before data was exfiltrated. Leadership wants to know how this happened and what you are doing to prevent it.",
     "type": "playbook",
     "url": "/playbooks/balancing-security-risk-with-shipping-speed-after-a-close-call/",
     "domain": "Reliability",
@@ -3493,7 +3493,7 @@
   },
   {
     "title": "Running Your First Cross-Team Performance Calibration",
-    "description": "You've been asked to lead calibration across 4 engineering teams (~30 engineers). Each manager has their own standards — some are generous, some are strict. There's no shared vocabulary for what 'exceeds expectations' means. You need consistent, fair outcomes.",
+    "description": "You've been asked to lead calibration across 4 engineering teams (~30 engineers). Each manager has their own standards \u2014 some are generous, some are strict. There's no shared vocabulary for what 'exceeds expectations' means. You need consistent, fair outcomes.",
     "type": "playbook",
     "url": "/playbooks/running-your-first-cross-team-performance-calibration/",
     "domain": "People",
@@ -3520,7 +3520,7 @@
   },
   {
     "title": "Rebuilding Psychological Safety After Organizational Disruption",
-    "description": "Your organization just went through layoffs, a major re-org, or leadership change. The remaining team is disengaged — people avoid speaking up in meetings, nobody challenges decisions, risk-taking has stopped, and your best performers are quietly interviewing. Trust has evaporated.",
+    "description": "Your organization just went through layoffs, a major re-org, or leadership change. The remaining team is disengaged \u2014 people avoid speaking up in meetings, nobody challenges decisions, risk-taking has stopped, and your best performers are quietly interviewing. Trust has evaporated.",
     "type": "playbook",
     "url": "/playbooks/rebuilding-psychological-safety-after-organizational-disruption/",
     "domain": "People",
@@ -3592,7 +3592,7 @@
   },
   {
     "title": "Your Project Is Going to Miss Its Deadline",
-    "description": "You're three weeks from a committed deadline and you've realized the team won't make it. The gap isn't small — you're looking at 2-4 weeks of additional work. Your VP has already communicated the date to customers. Product is counting on this for their quarterly goals. You're dreading the conversation but every day you delay makes it worse.",
+    "description": "You're three weeks from a committed deadline and you've realized the team won't make it. The gap isn't small \u2014 you're looking at 2-4 weeks of additional work. Your VP has already communicated the date to customers. Product is counting on this for their quarterly goals. You're dreading the conversation but every day you delay makes it worse.",
     "type": "playbook",
     "url": "/playbooks/your-project-is-going-to-miss-its-deadline/",
     "domain": "Stakeholder",
@@ -3601,7 +3601,7 @@
   },
   {
     "title": "Introducing Engineering Metrics to a Team That Has None",
-    "description": "Your engineering organization has no systematic metrics. Leadership makes decisions based on gut feel and anecdotes. When asked 'how is engineering doing?' you struggle to answer beyond 'we shipped X features.' You may not even have the tooling prerequisites — no CI/CD pipeline, manual deployments, no incident tracking — which means jumping straight to DORA or SPACE feels premature. You want to introduce metrics but you're worried about creating a surveillance culture or picking the wrong things to measure.",
+    "description": "Your engineering organization has no systematic metrics. Leadership makes decisions based on gut feel and anecdotes. When asked 'how is engineering doing?' you struggle to answer beyond 'we shipped X features.' You may not even have the tooling prerequisites \u2014 no CI/CD pipeline, manual deployments, no incident tracking \u2014 which means jumping straight to DORA or SPACE feels premature. You want to introduce metrics but you're worried about creating a surveillance culture or picking the wrong things to measure.",
     "type": "playbook",
     "url": "/playbooks/introducing-engineering-metrics-to-a-team-that-has-none/",
     "domain": "Data",
@@ -3610,7 +3610,7 @@
   },
   {
     "title": "Killing a Project That Should Have Died Months Ago",
-    "description": "A major initiative has been running for 6+ months with growing scope, shifting requirements, and declining team morale. Nobody believes it will deliver the original value, but there's significant sunk cost — engineering hours, leadership credibility, customer promises. You suspect the right move is to kill it, but everyone is afraid to be the one to say it.",
+    "description": "A major initiative has been running for 6+ months with growing scope, shifting requirements, and declining team morale. Nobody believes it will deliver the original value, but there's significant sunk cost \u2014 engineering hours, leadership credibility, customer promises. You suspect the right move is to kill it, but everyone is afraid to be the one to say it.",
     "type": "playbook",
     "url": "/playbooks/killing-a-project-that-should-have-died-months-ago/",
     "domain": "Strategy",
@@ -3618,7 +3618,7 @@
     "id": "P-C2-4"
   },
   {
-    "title": "Your Top Candidate Just Declined — Winning in a Competitive Talent Market",
+    "title": "Your Top Candidate Just Declined \u2014 Winning in a Competitive Talent Market",
     "description": "You've lost three of your last five top candidates to competing offers. Your interview process is solid, candidates reach the offer stage enthusiastic, but they take another offer at the last moment. Your employer brand isn't strong enough, your compensation is competitive but not leading, and your closing process is too slow. Leadership is frustrated by open reqs that stay unfilled for months.",
     "type": "playbook",
     "url": "/playbooks/your-top-candidate-just-declined-winning-in-competitive-market/",
@@ -3628,7 +3628,7 @@
   },
   {
     "title": "Your VP Wants Engineering to 'Own Security' But Nobody Has Expertise",
-    "description": "Your VP has decided that security should shift left into engineering. There's no dedicated security team, no AppSec engineer, and nobody on your team has deep security expertise. A recent incident — a feature shipped with a known SQL injection vulnerability because 'security didn't review it in time' — has made this an urgent priority. You're expected to embed security into the development lifecycle, but your engineers see security as 'not my job' and compliance requirements are growing.",
+    "description": "Your VP has decided that security should shift left into engineering. There's no dedicated security team, no AppSec engineer, and nobody on your team has deep security expertise. A recent incident \u2014 a feature shipped with a known SQL injection vulnerability because 'security didn't review it in time' \u2014 has made this an urgent priority. You're expected to embed security into the development lifecycle, but your engineers see security as 'not my job' and compliance requirements are growing.",
     "type": "playbook",
     "url": "/playbooks/your-vp-wants-engineering-to-own-security-but-nobody-has-expertise/",
     "domain": "Reliability",
@@ -3643,5 +3643,68 @@
     "domain": "People",
     "capabilityName": "Culture & Norms Shaping",
     "id": "P-C12-7"
+  },
+  {
+    "title": "AP-74: The Big-Bang Deploy \u2014 Team batches weeks or months of changes into monolithic releases, turning every deploy into a high-risk event that requires weekend war rooms, rollback prayer, and post-deploy firefighting",
+    "description": "Team batches weeks or months of changes into monolithic releases, turning every deploy into a high-risk event that requires weekend war rooms, rollback prayer, and post-deploy firefighting",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-big-bang-deploy/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "AP-74"
+  },
+  {
+    "title": "AP-75: The Vanity OKR \u2014 Team sets OKRs that are either so vague they can't be measured, so easy they're always green, or so disconnected from actual work that nobody references them between quarterly planning sessions",
+    "description": "Team sets OKRs that are either so vague they can't be measured, so easy they're always green, or so disconnected from actual work that nobody references them between quarterly planning sessions",
+    "type": "anti-pattern",
+    "url": "/anti-patterns/the-vanity-okr/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "AP-75"
+  },
+  {
+    "title": "Restructuring Teams Around a Platform Strategy",
+    "description": "Multiple product teams are independently building similar infrastructure \u2014 authentication wrappers, data pipelines, deployment tooling, notification services.",
+    "type": "playbook",
+    "url": "/playbooks/restructuring-teams-around-a-platform-strategy/",
+    "domain": "Strategy",
+    "capabilityName": "Org-Level Thinking",
+    "id": "P-C1-5"
+  },
+  {
+    "title": "Building and Defending a Strategic 'Not Doing' List",
+    "description": "Your team is pulled in too many directions.",
+    "type": "playbook",
+    "url": "/playbooks/building-and-defending-a-strategic-not-doing-list/",
+    "domain": "Strategy",
+    "capabilityName": "Strategic Prioritization",
+    "id": "P-C2-5"
+  },
+  {
+    "title": "Running a Build-vs-Buy Decision for a Critical System",
+    "description": "Your team needs a capability \u2014 observability platform, feature flag system, CI/CD pipeline, identity provider, or similar infrastructure.",
+    "type": "playbook",
+    "url": "/playbooks/running-a-build-vs-buy-decision-for-a-critical-system/",
+    "domain": "Execution",
+    "capabilityName": "Systems Design & Architecture",
+    "id": "P-C3-5"
+  },
+  {
+    "title": "Establishing a Remote-First Operating Rhythm",
+    "description": "Your team is distributed across time zones (or transitioning from co-located to hybrid/remote).",
+    "type": "playbook",
+    "url": "/playbooks/establishing-a-remote-first-operating-rhythm/",
+    "domain": "Execution",
+    "capabilityName": "Operational Leadership & Rhythm",
+    "id": "P-C4-5"
+  },
+  {
+    "title": "Designing OKRs That Actually Drive Engineering Behavior",
+    "description": "Your organization uses OKRs but they're not working.",
+    "type": "playbook",
+    "url": "/playbooks/designing-okrs-that-actually-drive-engineering-behavior/",
+    "domain": "Data",
+    "capabilityName": "Metrics, Measurement & Outcomes",
+    "id": "P-C9-6"
   }
 ]
