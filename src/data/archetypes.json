@@ -162,7 +162,7 @@
     "signaturePattern": "Mid-migration between architectures or platforms. Not broken but not stable. Fragile state where old and new systems coexist with friction.",
     "metricsProfile": "Metrics show mixed signals — some services improving while others degrade. Lead Time bimodal. Tech debt ratio climbing as migration stalls. Team morale declining from prolonged uncertainty.",
     "firstPriority": "Complete the migration or make a deliberate decision to stop. The worst outcome is being stuck in the middle indefinitely. Set a deadline and staff accordingly.",
-    "antiPatternIfIgnored": "Assuming the migration will 'finish eventually.' Stalled transformations become permanent technical debt with compounding maintenance costs for both old and new systems.",
+    "antiPatternIfIgnored": "Assuming the migration will 'finish eventually.' Stalled transformations become permanent tech debt with compounding maintenance costs for both old and new systems.",
     "diagnosticMetricIds": ["8.4", "8.6", "1.2", "5.1", "5.2"],
     "recommendedMetricIds": ["8.4", "8.6", "1.2", "5.1", "5.2", "1.4", "7.1"],
     "quantifiedThresholds": {

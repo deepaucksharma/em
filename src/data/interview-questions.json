@@ -167,7 +167,7 @@
   {
     "id": "IQ-08",
     "capabilityId": "C2",
-    "question": "How do you balance investment between new feature development, technical debt reduction, and platform reliability across your org?",
+    "question": "How do you balance investment between new feature development, tech debt reduction, and platform reliability across your org?",
     "level": "director",
     "questionType": "behavioral",
     "followUps": [
@@ -638,7 +638,7 @@
     "level": "em",
     "questionType": "behavioral",
     "followUps": [
-      "How did you run the postmortem? What were the key outcomes?",
+      "How did you run the post-mortem? What were the key outcomes?",
       "What systemic changes came out of this incident?",
       "How did you support your team during and after a high-stress incident?"
     ],
@@ -686,7 +686,7 @@
     "questionType": "behavioral",
     "followUps": [
       "How did you shift from blame-oriented to blameless incident reviews?",
-      "How did you ensure postmortem action items actually got completed?",
+      "How did you ensure post-mortem action items actually got completed?",
       "What was your role during a major P0 incident?"
     ],
     "lookFor": [
@@ -705,7 +705,7 @@
   {
     "id": "IQ-32",
     "capabilityId": "C8",
-    "question": "How do you think about risk management across your engineering organization? What systems do you have for identifying portfolio-level risks — technical debt, single points of failure, key-person dependencies — and how do you communicate them to executive leadership?",
+    "question": "How do you think about risk management across your engineering organization? What systems do you have for identifying portfolio-level risks — tech debt, single points of failure, key-person dependencies — and how do you communicate them to executive leadership?",
     "level": "director",
     "questionType": "behavioral",
     "followUps": [
@@ -713,7 +713,7 @@
       "How do you balance risk mitigation with speed of delivery?"
     ],
     "lookFor": [
-      "Has a systematic approach to identifying risks: technical debt, single points of failure, key-person dependencies",
+      "Has a systematic approach to identifying risks: tech debt, single points of failure, key-person dependencies",
       "Uses risk registers or equivalent tracking for top risks",
       "Allocates engineering time proactively for risk reduction",
       "Connects technical risk to business risk in executive communications"
@@ -1743,7 +1743,7 @@
     "redFlags": [
       "Only optimized when forced to by budget pressure",
       "Can't quantify the impact",
-      "Cut corners that created technical debt or reliability risk",
+      "Cut corners that created tech debt or reliability risk",
       "No awareness of cost management as a leadership responsibility"
     ]
   },

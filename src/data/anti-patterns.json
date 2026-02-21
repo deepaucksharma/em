@@ -78,7 +78,13 @@
       "Track 'decisions driven by data' as a meta-metric for the first 2 quarters."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
-    "mappingNotes": "Metrics theater → outcome metrics / activity metrics observables"
+    "mappingNotes": "Metrics theater → outcome metrics / activity metrics observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-29",
+        "relationship": "AP-03 is vanity metrics (measuring the wrong things); AP-29 is metric overload (measuring too many things). Both corrupt metric culture from different directions."
+      }
+    ]
   },
   {
     "id": "AP-04",
@@ -270,7 +276,13 @@
       "Track improvement via metric M-7.8 (Manager Effectiveness Score)."
     ],
     "sourceTopic": "Team Health & Execution",
-    "mappingNotes": "Conflict avoidance → underperformance / feedback observables"
+    "mappingNotes": "Conflict avoidance → underperformance / feedback observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-55",
+        "relationship": "AP-10 is the broad conflict avoidance pattern; AP-55 is the specific feedback dimension. Resolving AP-55 without AP-10 treats symptoms — the root avoidance behavior persists."
+      }
+    ]
   },
   {
     "id": "AP-11",
@@ -320,11 +332,16 @@
       "Take PTO and be genuinely unreachable to prove the team can function without you.",
       "Tell your manager you're overloaded — it's not a weakness, it's a signal.",
       "Track your own working hours for a month and share the data with your manager.",
-      "Microsoft's Model-Coach-Care framework explicitly treats sustainable pace as a leadership competency — leaders who model overwork are failing, not succeeding.",
-      "See Playbook: 'Your On-Call Rotation Is Burning People Out' (P-C8-5) for structural approaches to preventing burnout through sustainable on-call and workload practices."
+      "Treat sustainable pace as a leadership competency — leaders who model overwork are failing, not succeeding."
     ],
     "sourceTopic": "Team Health & Execution",
-    "mappingNotes": "24/7 manager → proactive status / focus protection observables"
+    "mappingNotes": "24/7 manager → proactive status / focus protection observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-33",
+        "relationship": "AP-12 is always-on availability; AP-33 is heroic problem-solving. Both stem from inability to delegate and create single points of failure."
+      }
+    ]
   },
   {
     "id": "AP-13",
@@ -711,7 +728,13 @@
       "Set a 48-hour SLA for Type 2 decisions and a 1-week SLA for Type 1 decisions. Track decision throughput weekly in standup: count decisions made vs. decisions pending. If the pending queue grows two sprints in a row, mandate that the next pending decision is made by end-of-day with a DACI owner."
     ],
     "sourceTopic": "Decision Making & Prioritization",
-    "mappingNotes": "Analysis paralysis → DACI framework / reversibility matching observables"
+    "mappingNotes": "Analysis paralysis → DACI framework / reversibility matching observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-30",
+        "relationship": "AP-26 over-analyzes individually; AP-30 over-consults collectively. Both delay decisions — one through data paralysis, the other through consensus seeking."
+      }
+    ]
   },
   {
     "id": "AP-27",
@@ -796,7 +819,13 @@
       "Remove any metric that hasn't informed a decision in 90 days."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
-    "mappingNotes": "Death by metrics → outcome metrics / activity metrics observables"
+    "mappingNotes": "Death by metrics → outcome metrics / activity metrics observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-03",
+        "relationship": "AP-29 is metric overload (measuring too many things); AP-03 is vanity metrics (measuring the wrong things). Both corrupt metric culture from different directions."
+      }
+    ]
   },
   {
     "id": "AP-30",
@@ -825,7 +854,13 @@
       "Assign a single-threaded owner to make the call after gathering input — consensus is explicitly not required for Type 2 (reversible) decisions."
     ],
     "sourceTopic": "Decision Framing & Communication",
-    "mappingNotes": "Consensus trap → decision framework / DACI observables"
+    "mappingNotes": "Consensus trap → decision framework / DACI observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-26",
+        "relationship": "AP-30 over-consults collectively; AP-26 over-analyzes individually. Both delay decisions — one through consensus seeking, the other through data paralysis."
+      }
+    ]
   },
   {
     "id": "AP-31",
@@ -916,7 +951,13 @@
       "The acid test: can your team handle a major production incident during your vacation without you?"
     ],
     "sourceTopic": "Coaching & Talent Development",
-    "mappingNotes": "Hero EM → coaching approach / team independence observables"
+    "mappingNotes": "Hero EM → coaching approach / team independence observables",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-12",
+        "relationship": "AP-33 is heroic problem-solving; AP-12 is always-on availability. Both stem from inability to delegate and create single points of failure."
+      }
+    ]
   },
   {
     "id": "AP-34",
@@ -1240,8 +1281,7 @@
     "name": "The Silo Builder",
     "slug": "the-silo-builder",
     "observableIds": [
-      "C5-O1",
-      "C5-O16"
+      "C5-O1"
     ],
     "capabilityId": "C5",
     "shortDesc": "EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes. Peer teams learn to route around the silo, leadership loses trust, and the team's wins come at the cost of org-wide velocity.",
@@ -1416,8 +1456,7 @@
     "name": "The Stress Funnel",
     "slug": "the-stress-funnel",
     "observableIds": [
-      "C4-O7",
-      "C4-O13"
+      "C4-O7"
     ],
     "capabilityId": "C4",
     "shortDesc": "Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering it into actionable context. Team becomes anxious and distracted; productivity drops.",
@@ -1553,7 +1592,13 @@
       "Treat withholding feedback as a failure of leadership responsibility — deliver direct, actionable feedback within 48 hours of observing an issue, not accumulated for review season."
     ],
     "sourceTopic": "Performance Management & Calibration (Feedback Delivery)",
-    "mappingNotes": "Based on LeadDev 'The cost of skipping hard conversations' — leadership debt from delayed feedback compounds faster than technical debt."
+    "mappingNotes": "Based on LeadDev 'The cost of skipping hard conversations' — leadership debt from delayed feedback compounds faster than tech debt.",
+    "relatedAntiPatterns": [
+      {
+        "id": "AP-10",
+        "relationship": "AP-55 is the specific feedback dimension of conflict avoidance; AP-10 is the broad pattern. Resolving AP-55 without AP-10 treats symptoms — the root avoidance behavior persists."
+      }
+    ]
   },
   {
     "id": "AP-56",

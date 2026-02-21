@@ -31,6 +31,11 @@ const suggestedMetrics = (pb.suggestedMetricIds ?? []).map(id => getMetric(id)).
           <Badge text={`${cap.id}: ${cap.name}`} variant="domain" domain={cap.domain} />
         </a>
       ))}
+      {pb.relevantLevels && pb.relevantLevels.length > 0 && (
+        <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700">
+          Most relevant at L{Math.min(...pb.relevantLevels)}{pb.relevantLevels.length > 1 ? `\u2013L${Math.max(...pb.relevantLevels)}` : ''}
+        </span>
+      )}
       <span class="text-sm font-mono text-gray-400 dark:text-gray-500">{pb.id}</span>
     </div>
 

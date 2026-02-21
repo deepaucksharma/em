@@ -99,6 +99,26 @@ const relatedObs = observables.filter(o => ap.observableIds.includes(o.id));
       </section>
     )}
 
+    {ap.relatedAntiPatterns && ap.relatedAntiPatterns.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Related Anti-Patterns</h2>
+        <div class="space-y-3">
+          {ap.relatedAntiPatterns.map((ref: { id: string; relationship: string }) => {
+            const related = antiPatterns.find(a => a.id === ref.id);
+            return related ? (
+              <a href={url(`/anti-patterns/${related.slug}/`)} class="block p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="font-mono text-xs text-gray-400 dark:text-gray-500">{related.id}</span>
+                  <span class="font-semibold text-gray-900 dark:text-white">{related.name}</span>
+                </div>
+                <p class="text-sm text-gray-600 dark:text-gray-400">{ref.relationship}</p>
+              </a>
+            ) : null;
+          })}
+        </div>
+      </section>
+    )}
+
     {cap && (
       <section class="mb-8">
         <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Related Capability</h2>

@@ -310,7 +310,7 @@
     "implementationNotes": "2-4 wks: tag all work items by category (feature/reliability/debt/security), compute percentages",
     "replaces": "",
     "whyThisTier": "Answers 'where does our capacity actually go?' Without this, Directors cannot defend budget, justify headcount, or explain why the roadmap takes longer than expected.",
-    "goodRange": "Intentional and balanced",
+    "goodRange": "No single category >40%; tech debt 15-20%; explicit allocation reviewed quarterly",
     "warningRange": "> 40% in any single category",
     "dangerRange": "> 60% KTLO or unknown",
     "capabilityIds": [
@@ -357,7 +357,7 @@
     "implementationNotes": "4-8 wks: partner with data science to attribute eng changes to business metrics",
     "replaces": "I12",
     "whyThisTier": "How Directors justify their org's existence. Maps specific engineering work to specific business outcomes. Without it, you're at the mercy of whoever frames the narrative.",
-    "goodRange": "> 60% attributable",
+    "goodRange": "> 60% of shipped engineering initiatives have documented business outcome attribution",
     "warningRange": "30-60% attributable",
     "dangerRange": "< 30% attributable",
     "capabilityIds": [
@@ -753,7 +753,7 @@
   },
   {
     "id": "7.8",
-    "name": "eNPS / Engagement Score",
+    "name": "eNPS (Employee Net Promoter Score)",
     "slug": "enps-engagement-score",
     "category": "People",
     "tier": "secondary",
@@ -861,7 +861,7 @@
     ],
     "maturityPhase": 2,
     "implementationEffort": "medium",
-    "implementationNotes": "2-4 wks: track postmortem action items in issue tracker with due dates and SLAs",
+    "implementationNotes": "2-4 wks: track post-mortem action items in issue tracker with due dates and SLAs",
     "replaces": "",
     "whyThisTier": "Process discipline metric. Completion without quality is hollow. Effect of good follow-through shows up in declining incident rate and improving SLO compliance.",
     "goodRange": "> 90% on time",
@@ -2691,7 +2691,7 @@
     "category": "Activity",
     "tier": "inferior",
     "type": "lagging",
-    "description": "Trivially gamed; penalizes mentoring, design, architecture, code review, incident response; destroys trust instantly when used in perf reviews.",
+    "description": "Trivially gamed; penalizes mentoring, design, architecture, code review, incident response; destroys trust instantly when used in performance reviews.",
     "emRank": {
       "priority": "N/A",
       "rank": 99
@@ -2721,7 +2721,7 @@
   },
   {
     "id": "5.9",
-    "name": "AI Tool Adoption & Trust Score",
+    "name": "AI Tool Adoption & Perception-Reality Gap",
     "slug": "ai-tool-adoption-trust-score",
     "category": "DevEx",
     "tier": "secondary",

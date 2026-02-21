@@ -220,14 +220,14 @@
       "Runbooks exist for top 10 failure scenarios and are tested quarterly",
       "Incident response roles (commander, scribe, comms) are defined and trained",
       "Risk register is reviewed and updated monthly",
-      "Google SRE targets error budget burn rate per quarter as a leading indicator — sustained burn above 5% triggers reliability investment"
+      "Error budget burn rate per quarter tracked as a leading indicator — sustained burn above 5% triggers reliability investment"
     ],
     "laggingIndicators": [
       "Mean time to detect (MTTD) is under target threshold",
       "Mean time to resolve (MTTR) trending downward quarter-over-quarter",
       "Repeat incidents for the same root cause are zero after remediation",
       "Post-incident action items are completed within committed timeline (>90%)",
-      "Amazon's COE process tracks action item completion rate and time-to-close as post-incident effectiveness measures"
+      "COE (Correction of Error) process tracks action item completion rate and time-to-close as post-incident effectiveness measures"
     ],
     "measurementAntiPatterns": [
       "Counting incidents without weighting by severity and customer impact",
@@ -249,7 +249,7 @@
       "Dashboards are reviewed in team meetings at least biweekly",
       "Data quality checks are automated for critical metrics",
       "A/B test or experiment framework is available and used",
-      "Google and Microsoft's SPACE framework recommends measuring developer satisfaction alongside DORA metrics as complementary leading indicators",
+      "The SPACE framework recommends measuring developer satisfaction alongside DORA metrics as complementary leading indicators",
       "Every tracked metric paired with a complementary metric preventing single-dimension optimization",
       "Monthly audit: 'What decision did this metric inform?' applied to all active metrics"
     ],
@@ -258,7 +258,7 @@
       "Product outcomes match or exceed pre-defined success criteria (>70% of launches)",
       "Data-informed pivots happen within one cycle of negative signal",
       "Metric definitions are consistent across teams (no conflicting dashboards)",
-      "Google's DORA research tracks four key metrics (deploy frequency, lead time, change failure rate, MTTR) as the definitive lagging measure of delivery capability",
+      "DORA research tracks four key metrics (deploy frequency, lead time, change failure rate, MTTR) as the definitive lagging measure of delivery capability",
       "Zero metrics maintained that haven't informed a decision in 90 days",
       "Team reports metrics are useful (not surveillance) in engagement surveys"
     ],

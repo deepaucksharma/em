@@ -105,6 +105,17 @@ const evidenceExamples: Record<string, { strong: string; weak: string }> = {
                   </div>
                 )}
 
+                <div class="mb-3 space-y-1.5">
+                  <div class="text-xs">
+                    <span class="font-semibold text-blue-600 dark:text-blue-400">Verify: </span>
+                    <span class="text-gray-600 dark:text-gray-400">{et.verificationMethod}</span>
+                  </div>
+                  <div class="text-xs">
+                    <span class="font-semibold text-amber-600 dark:text-amber-400">Gaming risk: </span>
+                    <span class="text-gray-600 dark:text-gray-400">{et.gamingRisk}</span>
+                  </div>
+                </div>
+
                 <div class="text-xs text-gray-500 dark:text-gray-400 mb-2">
                   Used by {et.usageCount} observables
                 </div>

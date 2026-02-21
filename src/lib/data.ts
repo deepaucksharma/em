@@ -23,6 +23,7 @@ import calibrationLanguageData from '../data/calibration-language.json';
 import archetypesData from '../data/archetypes.json';
 import priorityStacksData from '../data/priority-stacks.json';
 import techDebtEconomicsData from '../data/tech-debt-economics.json';
+import aiImpactData from '../data/ai-impact.json';
 
 // ── Types ──────────────────────────────────────────────
 
@@ -77,6 +78,7 @@ export interface AntiPattern {
   recoveryActions: string[];
   sourceTopic: string;
   mappingNotes: string;
+  relatedAntiPatterns?: { id: string; relationship: string }[];
 }
 
 export interface Playbook {
@@ -84,6 +86,7 @@ export interface Playbook {
   slug: string;
   observableIds: string[];
   capabilityIds: string[];
+  relevantLevels?: number[];
   suggestedMetricIds: string[];
   title: string;
   context: string;
@@ -103,7 +106,24 @@ export interface RubricAnchor {
   level3Competent: string;
   level4Distinguished: string;
   level5Advanced: string;
+  level3WorkedExample?: string;
+  level4WorkedExample?: string;
+  level5WorkedExample?: string;
+  level3CommonMisassessment?: string;
+  level4CommonMisassessment?: string;
+  level5CommonMisassessment?: string;
   rationale: string;
+}
+
+export interface AiImpactEntry {
+  capabilityId: string;
+  summary: string;
+  impacts: {
+    area: string;
+    description: string;
+    observedEffect: string;
+  }[];
+  practicalNextSteps: string[];
 }
 
 export interface EvidenceType {
@@ -113,6 +133,8 @@ export interface EvidenceType {
   description: string;
   evidenceStrength: string;
   usageCount: number;
+  verificationMethod: string;
+  gamingRisk: string;
 }
 
 export interface CrosswalkEntry {
@@ -411,6 +433,8 @@ export const techDebtEconomics = techDebtEconomicsData as {
   starterSequences: { em: StarterSequenceStep[]; director: StarterSequenceStep[] };
 };
 
+export const aiImpact = aiImpactData as AiImpactEntry[];
+
 // ── Lookup helpers ─────────────────────────────────────
 
 const capById = new Map(capabilities.map(c => [c.id, c]));
@@ -466,6 +490,7 @@ export function getAllDomains(): string[] {
 const lpByCapId = new Map(learningPathways.map(lp => [lp.capabilityId, lp]));
 const saByCapId = new Map(selfAssessments.map(sa => [sa.capabilityId, sa]));
 const mgByCapId = new Map(measurementGuidance.map(mg => [mg.capabilityId, mg]));
+const aiByCapId = new Map(aiImpact.map(ai => [ai.capabilityId, ai]));
 const clBySlug = new Map(careerLevels.map(cl => [cl.slug, cl]));
 
 export function getLearningPathway(capId: string): LearningPathway | undefined {
@@ -486,6 +511,10 @@ export function getInterviewQuestionsByLevel(level: string): InterviewQuestion[]
 
 export function getMeasurementGuidance(capId: string): MeasurementGuidance | undefined {
   return mgByCapId.get(capId);
+}
+
+export function getAiImpact(capId: string): AiImpactEntry | undefined {
+  return aiByCapId.get(capId);
 }
 
 export function getCareerLevel(slug: string): CareerLevel | undefined {

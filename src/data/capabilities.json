@@ -6,9 +6,9 @@
     "domain": "Strategy",
     "description": "Assessed by: org topology clarity, cross-team ownership single-threading, re-org execution velocity, coordination overhead ratios, and strategic alignment metrics. Absence causes: ambiguous ownership creating coordination tax, re-orgs that destroy trust and attrition, scaling bottlenecks, and misalignment between org structure and architecture.",
     "primarySubTopics": [
-      "16"
+      "14"
     ],
-    "observableCount": 16,
+    "observableCount": 14,
     "v5Status": "CARRIED",
     "enabledBy": []
   },
@@ -45,9 +45,9 @@
     "domain": "Execution",
     "description": "Assessed by: sprint commitment accuracy, delivery cadence consistency, toil reduction metrics, and developer focus time. Absence causes: unpredictable delivery, eroded stakeholder trust, meeting overhead displacing deep work, and compounding operational toil.",
     "primarySubTopics": [
-      "13"
+      "12"
     ],
-    "observableCount": 13,
+    "observableCount": 12,
     "v5Status": "CARRIED",
     "enabledBy": [
       "C9"
@@ -60,9 +60,9 @@
     "domain": "Stakeholder",
     "description": "Assessed by: cross-functional stakeholder satisfaction, influence on major decisions, stakeholder escalation reduction, and peer feedback credibility. Absence causes: misaligned initiatives, cross-functional blame games, delayed delivery from lack of coordination, and EM isolation from product/design leadership.",
     "primarySubTopics": [
-      "16"
+      "14"
     ],
-    "observableCount": 16,
+    "observableCount": 14,
     "v5Status": "CARRIED",
     "enabledBy": []
   },

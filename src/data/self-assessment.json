@@ -118,7 +118,7 @@
       },
       {
         "level": 5,
-        "description": "Shapes the org's technical vision and architectural principles; brokers cross-team architectural decisions that resolve systemic technical debt"
+        "description": "Shapes the org's technical vision and architectural principles; brokers cross-team architectural decisions that resolve systemic tech debt"
       }
     ],
     "gapQuestions": [
@@ -355,7 +355,7 @@
       },
       {
         "level": 3,
-        "description": "Runs blameless postmortems consistently; ensures action items are tracked and completed; maintains up-to-date runbooks and on-call rotations"
+        "description": "Runs blameless post-mortems consistently; ensures action items are tracked and completed; maintains up-to-date runbooks and on-call rotations"
       },
       {
         "level": 4,
@@ -367,7 +367,7 @@
       }
     ],
     "gapQuestions": [
-      "What percentage of your postmortem action items from the last quarter are completed, and how do you track them?",
+      "What percentage of your post-mortem action items from the last quarter are completed, and how do you track them?",
       "How do you decide when to invest in reliability work versus feature development?",
       "When was the last time your team had a repeat incident caused by an unaddressed root cause, and what did you change?",
       "How do you prepare your team for on-call, and what do you do when on-call burden becomes unsustainable?"
@@ -379,7 +379,7 @@
       },
       {
         "audience": "direct-report",
-        "question": "Does your manager ensure the team learns from incidents and follows through on postmortem action items?"
+        "question": "Does your manager ensure the team learns from incidents and follows through on post-mortem action items?"
       },
       {
         "audience": "peer",

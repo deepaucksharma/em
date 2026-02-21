@@ -37,7 +37,7 @@
     "description": "Protect 15-20% of engineering capacity for debt remediation, platform health, and modernization. This is non-negotiable.",
     "strategies": [
       "Reframe the language: never say 'refactoring' or 'tech debt.' Say 'reliability investment,' 'productivity enablement,' or 'delivery acceleration.'",
-      "Quantify the interest payments: calculate 'We spend X eng-hours/week working around [specific legacy system]. At $Y/hr fully-loaded, that's $Z/year in interest payments on technical debt.'",
+      "Quantify the interest payments: calculate 'We spend X eng-hours/week working around [specific legacy system]. At $Y/hr fully-loaded, that's $Z/year in interest payments on tech debt.'",
       "Show the Lead Time connection: 'Lead Time for Team Alpha is 5 days. 3.2 days of that is caused by [legacy CI pipeline / monolith coupling / manual QA gate]. Investing 8 eng-weeks in [specific fix] would reduce Lead Time to <1 day.'",
       "Model the Investment Mix: present the current split and the target — 'We're currently at 72% features / 8% reliability / 12% debt / 8% security. Industry benchmark for sustainable velocity is 55-65% features / 15-20% reliability+debt. We need to shift 7 points to platform work.'"
     ]

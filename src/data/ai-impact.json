@@ -1,0 +1,366 @@
+[
+  {
+    "capabilityId": "C1",
+    "summary": "AI changes team sizing math and org topology decisions. When individual engineers produce 2-3x more code but review and verification overhead increases 91%, the bottleneck shifts from coding capacity to review capacity and architectural coherence. Org design must account for AI-inflated output per engineer while preserving cognitive load boundaries.",
+    "impacts": [
+      {
+        "area": "Team Sizing Recalculation",
+        "description": "AI-augmented engineers produce more code per person, but verification and review load scales with output volume, not headcount",
+        "observedEffect": "Teams with high AI adoption see 154% larger PRs requiring 91% longer review cycles, meaning a 6-person team generates review load previously associated with 10-12 engineers"
+      },
+      {
+        "area": "Topology Pressure on Review",
+        "description": "Stream-aligned teams that adopt AI heavily create review bottlenecks at team boundaries where context is thinnest",
+        "observedEffect": "Cross-team review requests increase 30-50% as AI-generated code touches shared interfaces more frequently, straining enabling team capacity"
+      },
+      {
+        "area": "Cognitive Load Redistribution",
+        "description": "AI shifts cognitive load from code authoring to code comprehension and verification, changing which team structures reduce overload",
+        "observedEffect": "Engineers report spending 40-60% of review time understanding AI-generated code they didn't write, comparable to onboarding onto unfamiliar codebases"
+      }
+    ],
+    "practicalNextSteps": [
+      "Re-evaluate team cognitive load assessments to include AI verification overhead as a distinct load category alongside domains owned and services maintained",
+      "Add review capacity as a first-class constraint in team topology decisions: teams generating high AI output need dedicated review bandwidth or rotation",
+      "Track cross-team dependency count (metric 6.5) segmented by AI-assisted vs human-authored changes to detect topology stress points"
+    ]
+  },
+  {
+    "capabilityId": "C2",
+    "summary": "AI compresses delivery timelines for certain work types, fundamentally changing planning assumptions and roadmap sequencing. Previously capacity-constrained initiatives become feasible, but the gap between perceived AI speedup (80%+ of engineers report gains) and measured impact (19% slowdown in controlled studies for experienced developers) makes planning accuracy harder, not easier.",
+    "impacts": [
+      {
+        "area": "Planning Baseline Disruption",
+        "description": "Historical velocity data becomes unreliable as AI adoption changes throughput characteristics unevenly across work types",
+        "observedEffect": "Teams using AI see 98% more PRs merged but sprint commitment accuracy drops 10-15% in the first two quarters as estimation baselines become stale"
+      },
+      {
+        "area": "Roadmap Sequencing Shift",
+        "description": "Cost of Delay (CD3) rankings change when AI compresses the 'weeks to deliver' denominator for certain initiative types",
+        "observedEffect": "Boilerplate-heavy features that previously ranked low on CD3 leap ahead when AI cuts estimated delivery from 6 weeks to 2 weeks, reshuffling quarterly priorities"
+      },
+      {
+        "area": "Capacity Illusion Risk",
+        "description": "AI-inflated throughput counts create false confidence in planning, masking that complex architectural work remains unaccelerated",
+        "observedEffect": "Teams report 40% more story points completed but late-stage integration failures increase because AI accelerated simple tasks while complex work remained on the critical path"
+      }
+    ],
+    "practicalNextSteps": [
+      "Segment planning estimates into AI-accelerable work (CRUD, boilerplate, test generation) and AI-resistant work (architecture, integration, novel algorithms) with separate velocity assumptions",
+      "Recalculate CD3 scores quarterly as AI adoption changes delivery time estimates, and flag initiatives whose priority ranking shifted due to AI compression",
+      "Add a 'verification buffer' of 20-30% to AI-assisted delivery estimates to account for the gap between code generation speed and production-ready quality"
+    ]
+  },
+  {
+    "capabilityId": "C3",
+    "summary": "AI-generated code compounds architectural debt at unprecedented speed. Code that passes syntax checks and unit tests but ignores established patterns, duplicates abstractions, or violates architectural boundaries accumulates faster than human-authored debt because AI produces more code per unit time. Architecture review and ADR enforcement become the primary quality gates.",
+    "impacts": [
+      {
+        "area": "Accelerated Debt Accumulation",
+        "description": "AI generates code that is locally correct but globally inconsistent, introducing duplicate abstractions, inconsistent error handling, and pattern violations at scale",
+        "observedEffect": "Teams scaling AI adoption report tech debt ratio increasing 15-25% within two quarters as AI-generated code introduces structural inconsistencies not caught by CI"
+      },
+      {
+        "area": "Design Review Bottleneck",
+        "description": "ADR compliance and design review become the critical quality gate because AI code passes functional tests while violating architectural intent",
+        "observedEffect": "PRs flagged for architectural violations increase 2-3x after AI adoption, with 60% of violations being pattern inconsistencies rather than functional bugs"
+      },
+      {
+        "area": "SLO Burn Rate Acceleration",
+        "description": "Higher deploy frequency from AI-generated code burns error budgets faster per unit time, even when individual change failure rates remain stable",
+        "observedEffect": "Teams with AI-inflated deployment frequency burn monthly error budgets 40% faster, requiring higher-cadence burn rate monitoring (daily instead of weekly)"
+      }
+    ],
+    "practicalNextSteps": [
+      "Mandate architectural linting rules that CI enforces on every PR, covering pattern consistency, import boundaries, and abstraction layer violations, not just syntax and tests",
+      "Add 'architectural coherence' as an explicit review criterion for AI-generated PRs, with a checklist covering: pattern consistency, abstraction reuse, error handling conventions",
+      "Increase error budget burn rate alerting cadence from weekly to daily for teams with >50% AI-assisted PR ratio, and correlate burn rate spikes with AI-authored deploys"
+    ]
+  },
+  {
+    "capabilityId": "C4",
+    "summary": "AI reshapes delivery rhythm by compressing coding time while inflating review and verification stages. Sprint ceremonies need recalibration: estimation changes, WIP limits need tightening (AI enables engineers to start more work simultaneously), and the definition of 'done' must explicitly include AI output verification. The net effect on lead time depends on whether review capacity scales with AI output.",
+    "impacts": [
+      {
+        "area": "Lead Time Stage Shift",
+        "description": "AI compresses the coding stage of lead time but inflates the review stage, shifting the bottleneck from 'time to write code' to 'time to verify code'",
+        "observedEffect": "Coding phase drops from 45% to 20% of lead time while review wait increases from 25% to 50%, making review turnaround the dominant driver of delivery speed"
+      },
+      {
+        "area": "WIP Inflation Pressure",
+        "description": "AI enables engineers to generate code for multiple work items simultaneously, driving WIP above sustainable limits and violating Little's Law",
+        "observedEffect": "Average WIP per engineer increases from 1.5 to 3-4 items when AI coding assistants are adopted, with corresponding lead time degradation despite faster per-item coding"
+      },
+      {
+        "area": "Sprint Accuracy Volatility",
+        "description": "AI-estimated effort varies wildly based on whether the task is AI-accelerable, making sprint commitment accuracy less predictable during transition",
+        "observedEffect": "Sprint commitment accuracy drops 10-15 percentage points in the first quarter of AI adoption before teams learn to distinguish AI-accelerable from AI-resistant work"
+      }
+    ],
+    "practicalNextSteps": [
+      "Decompose lead time into coding, review-wait, review-active, build/test, and deploy stages, and track each separately for AI-assisted vs human-authored PRs",
+      "Enforce WIP limits per engineer (not just per team) and monitor whether AI adoption is driving WIP above the limit, triggering focus-time conversations in standups",
+      "Adjust sprint planning to categorize work items as AI-accelerable or AI-resistant, using separate estimation baselines for each category"
+    ]
+  },
+  {
+    "capabilityId": "C5",
+    "summary": "AI changes cross-functional dynamics by shifting stakeholder expectations about engineering speed and creating new influence surfaces around AI strategy. Product, design, and business partners may expect faster delivery without understanding that AI accelerates coding but not coordination, discovery, or design. Engineering leaders must actively manage these expectations while leveraging AI literacy as a new source of cross-functional influence.",
+    "impacts": [
+      {
+        "area": "Expectation Gap Management",
+        "description": "Non-engineering stakeholders observe AI productivity headlines and expect proportional delivery acceleration, creating friction when complex projects don't speed up",
+        "observedEffect": "Cross-functional satisfaction scores drop 10-15% in the quarter after org-wide AI announcements as stakeholders expect 2x delivery speed but see 10-20% improvement on complex initiatives"
+      },
+      {
+        "area": "AI Strategy as Influence Lever",
+        "description": "Engineering leaders who can articulate AI-enabled possibilities and limitations earn earlier inclusion in strategic planning conversations",
+        "observedEffect": "EMs who present data-backed AI impact analyses (what AI can and cannot accelerate) get invited to 40% more strategic planning sessions compared to those who only discuss technical delivery"
+      },
+      {
+        "area": "Cross-Functional AI Literacy Gap",
+        "description": "Product managers and designers need help understanding how AI changes what's technically feasible, creating a new coaching responsibility for engineering leaders",
+        "observedEffect": "Teams where EMs run quarterly AI capability briefings for product partners report 25% fewer misaligned feature requests and more realistic timeline expectations"
+      }
+    ],
+    "practicalNextSteps": [
+      "Create a one-page AI impact briefing for cross-functional partners explaining what AI accelerates (boilerplate, test generation, documentation) and what it does not (architecture, integration, UX decisions)",
+      "Add AI-specific questions to cross-functional satisfaction surveys: 'Engineering team sets realistic expectations about AI-driven delivery timelines'",
+      "Proactively share AI adoption metrics and their delivery impact with product and business partners quarterly, framing AI as a tool with measurable tradeoffs rather than a magic accelerator"
+    ]
+  },
+  {
+    "capabilityId": "C6",
+    "summary": "AI fundamentally changes what skills engineering managers must coach. Code authoring speed becomes less differentiating while code review quality, architectural judgment, context engineering, and AI verification skills become critical. Coaching conversations shift from 'how to write better code' to 'how to verify, prompt, and architect effectively in an AI-augmented workflow.'",
+    "impacts": [
+      {
+        "area": "Skill Landscape Inversion",
+        "description": "AI compresses the gap between junior and senior coding speed while widening the gap in judgment, review quality, and architectural thinking",
+        "observedEffect": "Junior engineers using AI produce code volume comparable to mid-levels, but their PRs require 2-3x more review iterations due to architectural violations and pattern inconsistencies"
+      },
+      {
+        "area": "Coaching Focus Migration",
+        "description": "1-on-1 coaching must shift from coding skill development to verification discipline, prompt engineering, and knowing when not to use AI",
+        "observedEffect": "High-performing teams allocate 30% of coaching time to AI workflow practices: context engineering, output verification rituals, and architectural pattern adherence in AI-assisted work"
+      },
+      {
+        "area": "Bimodal Talent Assessment",
+        "description": "AI adoption creates two populations: power users who over-rely on AI (speed without judgment) and skeptics who under-adopt (judgment without speed), requiring different coaching strategies",
+        "observedEffect": "Performance distributions become bimodal: top quartile engineers who master AI verification ship 30% faster while bottom quartile who rubber-stamp AI output generate 40% more escaped defects"
+      }
+    ],
+    "practicalNextSteps": [
+      "Add AI workflow competencies to career ladders: context engineering, verification discipline, architectural judgment in AI-assisted code, and knowing when AI is the wrong tool",
+      "Structure skip-levels to probe AI adoption patterns: ask 'Walk me through your last AI-assisted PR and what you changed in the generated output' to assess verification discipline",
+      "Create coaching playbooks for the two failure modes: over-reliance (speed without judgment) and under-adoption (judgment without speed), with specific behavioral indicators for each"
+    ]
+  },
+  {
+    "capabilityId": "C7",
+    "summary": "AI changes the content and urgency of decision communication. Leaders must frame AI adoption decisions (tooling, governance, workflow changes) with the same rigor as architecture decisions, using data over hype. The gap between AI perception (80%+ report gains) and AI reality (mixed measured impact) makes precise, evidence-based communication a critical leadership differentiator.",
+    "impacts": [
+      {
+        "area": "AI Decision Framing Rigor",
+        "description": "AI tooling and adoption decisions require DACI/RFC-level documentation because they affect every engineer's workflow, cost structure, and security posture simultaneously",
+        "observedEffect": "Organizations that treat AI adoption as an architecture decision (with ADR-style documentation of tradeoffs) report 50% fewer rollbacks on AI tool deployments compared to those that adopt ad hoc"
+      },
+      {
+        "area": "Data vs Hype Communication",
+        "description": "Leaders must communicate AI impact using measured data, not vendor claims, because the perception-reality gap undermines credibility when oversold",
+        "observedEffect": "EMs who present AI ROI with specific before/after metrics (lead time, CFR, review turnaround) retain team trust, while those citing vendor productivity claims face skepticism when results don't materialize"
+      },
+      {
+        "area": "Exec AI Narrative Clarity",
+        "description": "Executive stakeholders need concise framing of AI investment tradeoffs: licensing cost vs delivery improvement, adoption rate vs quality metrics, speed vs risk",
+        "observedEffect": "Directors who present AI investment as 'cost per engineer increased $X/month, delivery improved Y%, quality delta is Z%' secure continued funding 2x more often than those presenting adoption percentages alone"
+      }
+    ],
+    "practicalNextSteps": [
+      "Write an AI adoption decision memo using RFC format: problem statement, options evaluated, metrics for success, rollback criteria, and 90-day review checkpoint",
+      "Build a quarterly AI impact dashboard showing measured delivery metrics (not perception surveys) before and after AI adoption, segmented by team and work type",
+      "Develop a standard executive briefing template for AI investment that includes: cost per engineer, delivery metric deltas, quality metric deltas, and risk indicators"
+    ]
+  },
+  {
+    "capabilityId": "C8",
+    "summary": "AI changes the incident landscape in two directions: AI-generated code introduces novel failure modes not covered by existing runbooks, while AI-assisted incident response can accelerate diagnosis through log analysis and pattern matching. The net effect depends on whether incident prevention (review quality, testing) keeps pace with AI-inflated deployment volume.",
+    "impacts": [
+      {
+        "area": "Novel Failure Modes",
+        "description": "AI-generated code introduces failure patterns that differ from human-authored bugs: subtly wrong business logic that passes tests, race conditions from pattern-matched but context-unaware concurrency",
+        "observedEffect": "Bug rates climb 9% with scaled AI adoption, with AI-specific incidents characterized by 'works in tests, fails under production load' patterns that take 30% longer to diagnose"
+      },
+      {
+        "area": "Incident Volume from Deploy Speed",
+        "description": "AI-inflated deployment frequency increases the rate at which new failure modes reach production, compressing the time between incidents",
+        "observedEffect": "Teams with >50% AI-assisted PR ratio and daily deploys see incident frequency increase 20-35% even when per-deploy failure rate holds steady, because volume amplifies base rate"
+      },
+      {
+        "area": "AI-Assisted Incident Diagnosis",
+        "description": "AI tools can accelerate log analysis, anomaly detection, and runbook retrieval during incidents, but cannot replace judgment on blast radius assessment and rollback decisions",
+        "observedEffect": "Teams using AI-assisted incident tools reduce MTTR diagnosis phase by 25-40%, but total MTTR improvement is only 10-15% because remediation and communication phases remain human-paced"
+      }
+    ],
+    "practicalNextSteps": [
+      "Add an 'AI-authored code' tag to incident tracking and run monthly analysis of whether AI-assisted deploys correlate with higher incident rates or different failure patterns",
+      "Update post-mortem templates to include: 'Was this change AI-assisted? Did the AI-generated code contribute to the failure? What verification step would have caught this?'",
+      "Pilot AI-assisted incident response tooling (log analysis, anomaly correlation) while maintaining human decision authority on rollback and blast radius assessment"
+    ]
+  },
+  {
+    "capabilityId": "C9",
+    "summary": "AI makes measurement both more critical and more complex. Traditional metrics like throughput and lines of code become dangerously misleading when AI inflates volume without proportional value. New AI-specific metrics (AI PR quality delta, verification overhead ratio, AI tooling ROI) are mandatory additions. The measurement framework must distinguish between AI-inflated vanity metrics and genuine outcome improvement.",
+    "impacts": [
+      {
+        "area": "Metric Gaming Amplification",
+        "description": "AI makes volume-based metrics (PRs merged, story points, lines of code) maximally dangerous as productivity proxies because AI inflates all of them without guaranteed value",
+        "observedEffect": "Teams tracking PR throughput see 98% increase after AI adoption, but when paired with quality metrics, 30-40% of the increase represents lower-complexity or lower-quality output"
+      },
+      {
+        "area": "New Metric Requirements",
+        "description": "AI-era measurement requires new metrics that didn't exist pre-AI: AI-assisted PR ratio, AI PR quality delta, verification overhead ratio, and AI tooling ROI",
+        "observedEffect": "Organizations that add AI-specific metrics within the first quarter of adoption detect quality degradation 60% faster than those relying on traditional DORA metrics alone"
+      },
+      {
+        "area": "Attribution Complexity",
+        "description": "When AI generates code and humans verify, traditional attribution models break down, making OKR achievement and business impact harder to trace to individual or team contribution",
+        "observedEffect": "Teams report 25% more difficulty attributing business outcomes to specific engineering efforts post-AI adoption, requiring shift from effort-based to outcome-based attribution"
+      }
+    ],
+    "practicalNextSteps": [
+      "Add AI-specific metrics to the measurement framework within 30 days of AI tool rollout: AI-assisted PR ratio (AI-1), AI PR quality delta (AI-2), verification overhead ratio (AI-3), and AI tooling ROI (10.5)",
+      "Deprecate or downgrade volume-based metrics (PR count, story points, lines of code) from team dashboards and replace with outcome metrics (OKR achievement, business impact attribution, customer impact)",
+      "Implement AI vs human segmentation on all delivery metrics (lead time, CFR, review turnaround) to detect whether AI adoption is improving or degrading each stage independently"
+    ]
+  },
+  {
+    "capabilityId": "C10",
+    "summary": "AI disrupts traditional resource allocation by changing the cost-per-engineer equation, the capacity-per-engineer assumption, and the headcount-to-output relationship. AI tool licensing adds $1,000-5,000/engineer/year in direct costs while promising productivity gains that may or may not materialize. Investment mix decisions must now include AI tooling as a budget line item with measurable ROI expectations.",
+    "impacts": [
+      {
+        "area": "Headcount Model Disruption",
+        "description": "AI changes the headcount-to-output curve, but unevenly: AI accelerates coding-phase work while leaving review, architecture, and coordination overhead unchanged",
+        "observedEffect": "Organizations that reduce headcount based on AI productivity assumptions see delivery decline within 2 quarters because review capacity, not coding capacity, was the actual constraint"
+      },
+      {
+        "area": "AI Tooling Budget Category",
+        "description": "AI tools create a new budget line item (licensing, API costs, GPU compute) that must be justified against measured delivery improvement, not perceived speed",
+        "observedEffect": "Fully-loaded cost per engineer increases 8-15% with AI tooling, requiring AI tooling ROI analysis showing delivery metric improvement exceeding the cost increase"
+      },
+      {
+        "area": "Investment Mix Rebalancing",
+        "description": "AI shifts optimal investment allocation: coding acceleration frees capacity that should flow to verification, security scanning, and architectural review rather than more feature work",
+        "observedEffect": "Teams that redirect AI-freed capacity to feature work see CFR increase 12-18% within a quarter, while teams that invest freed capacity in review and testing maintain quality at higher throughput"
+      }
+    ],
+    "practicalNextSteps": [
+      "Add AI tooling cost as a tracked budget line item with quarterly ROI review: (AI tool cost per engineer) vs (measured delivery improvement in lead time and throughput)",
+      "Model headcount scenarios with AI adoption at current, 50%, and 100% adoption levels, holding review capacity constant to identify the actual bottleneck before making headcount decisions",
+      "Redirect 30-50% of AI-freed coding capacity to verification, security review, and architectural consistency rather than additional feature work to maintain quality at higher volume"
+    ]
+  },
+  {
+    "capabilityId": "C11",
+    "summary": "AI changes what to hire for, how to evaluate candidates, and how to onboard new engineers. Coding speed becomes less differentiating in interviews while architectural judgment, verification discipline, and AI fluency become critical competencies to assess. Onboarding must explicitly include AI workflow training, and time-to-productivity metrics need recalibration because AI can mask shallow understanding with fast first PRs.",
+    "impacts": [
+      {
+        "area": "Interview Criteria Evolution",
+        "description": "Technical interviews must assess judgment and verification skill, not just coding ability, because AI-augmented engineers need different competencies than pre-AI hires",
+        "observedEffect": "Companies adding AI-assisted coding exercises to interviews (give candidate an AI-generated solution and ask them to find the bugs) report 35% better signal on production-readiness than traditional whiteboard coding"
+      },
+      {
+        "area": "Onboarding Acceleration Trap",
+        "description": "AI tools enable new hires to submit their first PR faster but can mask shallow codebase understanding, making time-to-first-PR a misleading ramp metric",
+        "observedEffect": "New hires using AI tools submit first PR 50% faster but take 20% longer to reach independent ownership (handling production issues, making architecture decisions without guidance)"
+      },
+      {
+        "area": "Role Design Recalibration",
+        "description": "AI changes the skill mix needed per role level: junior roles need more verification training, senior roles need more context engineering and architectural governance skills",
+        "observedEffect": "Teams that update job descriptions to include AI workflow competencies (context engineering, verification discipline, AI output governance) attract candidates who ramp 30% faster to full productivity"
+      }
+    ],
+    "practicalNextSteps": [
+      "Add an AI-assisted coding exercise to technical interviews: provide a generated solution with subtle bugs and assess the candidate's ability to identify architectural violations and logic errors",
+      "Update onboarding checklists to include AI workflow training: context engineering, verification checklists, when to use vs not use AI, and team-specific AI conventions",
+      "Redefine time-to-productivity to measure time-to-independent-ownership (can handle production issues, make architecture decisions, review others' PRs) rather than time-to-first-PR"
+    ]
+  },
+  {
+    "capabilityId": "C12",
+    "summary": "AI adoption creates new cultural fault lines that leaders must actively manage. Bimodal engagement emerges between AI power users and skeptics, creating team dynamics tension. Psychological safety is tested when AI-generated code quality becomes a performance signal, and norms around AI usage (when to use it, when not to, how to attribute AI-assisted work) need explicit establishment.",
+    "impacts": [
+      {
+        "area": "Bimodal Engagement Tension",
+        "description": "AI adoption splits teams into power users who embrace AI tools and skeptics who resist, creating in-group/out-group dynamics that erode team cohesion",
+        "observedEffect": "Teams without explicit AI norms see engagement score variance increase 40% as power users and skeptics develop competing narratives about 'the right way to work'"
+      },
+      {
+        "area": "Psychological Safety Under Pressure",
+        "description": "When AI raises the baseline output volume, engineers who work more methodically feel pressure to match AI-augmented peers, creating anxiety about appearing 'slow'",
+        "observedEffect": "30% of developers report low trust in AI output but feel pressure to adopt anyway, and teams where AI adoption is mandated without psychological safety see eNPS drop 15-20 points"
+      },
+      {
+        "area": "AI Usage Norm Vacuum",
+        "description": "Without explicit norms about AI attribution, acceptable use cases, and quality expectations for AI-generated code, teams develop inconsistent and sometimes conflicting practices",
+        "observedEffect": "Teams without written AI usage norms report 3x more code review conflicts about AI-generated code quality standards than teams with explicit documented expectations"
+      }
+    ],
+    "practicalNextSteps": [
+      "Draft and socialize explicit team AI norms covering: acceptable use cases, attribution expectations (disclose AI-assisted work in PRs), quality bar for AI-generated code, and opt-out provisions",
+      "Run a team health check specifically on AI adoption dynamics: survey for bimodal engagement, trust levels, and perceived pressure to adopt, then address results in a team retrospective",
+      "Establish that AI adoption speed is not a performance signal: explicitly communicate that methodical, high-quality work is valued regardless of whether AI tools are used"
+    ]
+  },
+  {
+    "capabilityId": "C13",
+    "summary": "AI-generated code introduces novel security and compliance challenges that existing controls may not cover. Standard scanners trained on human-authored vulnerability patterns may miss AI-specific weaknesses. Compliance frameworks need updating to address AI code provenance, and the increased code volume from AI amplifies the attack surface faster than security review capacity can scale.",
+    "impacts": [
+      {
+        "area": "Novel Vulnerability Patterns",
+        "description": "AI-generated code introduces vulnerability types that differ from human-authored patterns: insecure defaults from training data, outdated cryptographic patterns, and API key exposure in generated boilerplate",
+        "observedEffect": "AI-generated code shows 15-25% higher rate of security findings in static analysis, with novel patterns like hardcoded credentials from training data and deprecated TLS configurations"
+      },
+      {
+        "area": "Compliance Surface Expansion",
+        "description": "AI-generated code creates new compliance questions around code provenance, licensing, and audit trails that existing compliance frameworks don't address",
+        "observedEffect": "Organizations in regulated industries report 2-3 month delays in AI adoption while legal and compliance teams establish provenance tracking and licensing review for AI-generated code"
+      },
+      {
+        "area": "Security Review Capacity Gap",
+        "description": "AI-inflated code volume outpaces security review capacity, creating a growing backlog of unreviewed code in production",
+        "observedEffect": "Teams with >50% AI-assisted PR ratio and no additional security tooling see vulnerability remediation SLA compliance drop from 85% to 60% as scan volume overwhelms AppSec capacity"
+      }
+    ],
+    "practicalNextSteps": [
+      "Mandate security-specific scanning for all AI-generated PRs beyond standard CI checks, targeting AI-specific patterns: hardcoded secrets, deprecated library usage, insecure defaults from training data",
+      "Update compliance audit documentation to include AI code provenance: which tool generated the code, what human reviewed it, and what security scans were applied post-generation",
+      "Track AI-generated code security scan rate (metric 9.4) with a target of 100% coverage, and flag any AI-assisted PRs that bypass security review as compliance exceptions"
+    ]
+  },
+  {
+    "capabilityId": "C14",
+    "summary": "AI disrupts performance management by changing what 'high performance' means. Volume-based assessment (PRs shipped, tickets closed) becomes misleading when AI inflates output. Calibration committees must develop AI-era competency models that value judgment, verification quality, and architectural contribution over raw output. Natural attrition patterns shift as AI changes who thrives and who struggles.",
+    "impacts": [
+      {
+        "area": "Performance Signal Distortion",
+        "description": "AI-inflated output metrics make volume-based performance assessment dangerous: high PR count may indicate AI power usage rather than high-impact contribution",
+        "observedEffect": "Engineers using AI tools heavily show 60-80% higher PR throughput but when assessed on escaped defects and architectural coherence, the top quartile inverts: careful reviewers outperform prolific generators"
+      },
+      {
+        "area": "Calibration Criteria Update",
+        "description": "Calibration committees need new rubrics that assess AI-era competencies: verification discipline, context engineering skill, knowing when not to use AI, and architectural judgment",
+        "observedEffect": "Organizations that update calibration criteria to include AI verification quality see 25% reduction in post-promotion performance drops because the criteria predict AI-era effectiveness better"
+      },
+      {
+        "area": "Natural Attrition Pattern Shift",
+        "description": "AI changes who self-selects out: low performers who relied on manual tasks AI now automates leave, while engineers overwhelmed by AI-induced pace leave for calmer environments",
+        "observedEffect": "Teams with aggressive AI adoption see non-regrettable attrition increase 15-20% (AI exposes skill gaps) while also losing 5-10% of deliberate, methodical engineers who feel pressured by volume expectations"
+      }
+    ],
+    "practicalNextSteps": [
+      "Update performance review rubrics to weight outcome quality (escaped defects, architectural coherence, review quality) over output volume (PRs shipped, story points completed) in AI-augmented environments",
+      "Add AI-specific competencies to calibration criteria at each level: junior (verification discipline), mid (context engineering), senior (architectural governance of AI output), staff (AI strategy and adoption design)",
+      "Monitor attrition patterns segmented by AI adoption level and investigate both directions: are non-adopters leaving because of pressure, and are heavy adopters leaving because of burnout from verification overhead"
+    ]
+  }
+]

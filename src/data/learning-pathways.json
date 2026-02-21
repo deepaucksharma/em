@@ -186,7 +186,7 @@
       {
         "title": "Engineering Prioritization Case Studies",
         "type": "case-study",
-        "description": "Detailed examination of how high-performing engineering orgs balance platform investment, feature development, and technical debt reduction across multiple teams.",
+        "description": "Detailed examination of how high-performing engineering orgs balance platform investment, feature development, and tech debt reduction across multiple teams.",
         "url": null
       },
       {
@@ -746,9 +746,9 @@
         "url": null
       },
       {
-        "title": "Blameless Postmortem Workshop",
+        "title": "Blameless Post-Mortem Workshop",
         "type": "workshop",
-        "description": "A facilitated workshop teaching how to run effective blameless postmortems that focus on systemic causes, extract actionable learnings, and drive meaningful reliability improvements.",
+        "description": "A facilitated workshop teaching how to run effective blameless post-mortems that focus on systemic causes, extract actionable learnings, and drive meaningful reliability improvements.",
         "url": null
       },
       {

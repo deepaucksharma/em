@@ -4,18 +4,19 @@
     "capabilityId": "C1",
     "shortText": "Designs team topology aligned to value streams and cognitive load",
     "slug": "designs-team-topology-aligned-to-value-streams-and-cognitive-load",
-    "fullExample": "Reorganizes from layer-based to stream-aligned teams, mapping ownership to customer value flows with clear boundaries.",
+    "fullExample": "Reorganizes from layer-based to stream-aligned teams, mapping ownership to customer value flows with clear boundaries. Applies inverse Conway maneuver — restructures teams to match desired microservices architecture, enabling independent deployment per team.",
     "evidenceTypes": [
       "decision_doc",
-      "org_chart"
+      "org_chart",
+      "design_doc"
     ],
-    "defaultWeight": 0.106,
+    "defaultWeight": 0.123,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
     "levelNotes": "Directors design topology; EMs advocate for changes within their team",
     "why": "Teams organized by tech layer create handoff bottlenecks and can't own outcomes end-to-end. Small, stream-aligned teams with clear ownership boundaries ship faster and own outcomes without coordination tax because each team controls its full value-delivery pipeline.",
-    "how": "Map value streams using a dependency matrix updated quarterly; assign ownership boundaries documented in a team topology registry; minimize cross-team handoffs to less than 5% of sprint work. Assess cognitive load per team using a structured survey (domains owned, number of services, on-call scope) reviewed semi-annually. Validate each team can deploy independently without waiting on other teams. Validate with metric 8.4 (Engineering Investment Mix), 8.2 (Revenue / Business Impact Attribution), 2.6 (Blocked Work Rate), and 7.6 (Span of Control).",
+    "how": "Map value streams using a dependency matrix updated quarterly; assign ownership boundaries documented in a team topology registry; minimize cross-team handoffs to less than 5% of sprint work. Apply inverse Conway — map current architecture to team structure, find misalignments where service boundaries don't match team boundaries, restructure teams to match desired architecture. Assess cognitive load per team using a structured survey (domains owned, number of services, on-call scope) reviewed semi-annually. Validate each team can deploy independently without waiting on other teams. Validate with metric 8.4 (Engineering Investment Mix), 8.2 (Revenue / Business Impact Attribution), 2.6 (Blocked Work Rate), and 7.6 (Span of Control).",
     "expectedResult": "Teams ship independently with <5% of work requiring cross-team coordination; clear accountability; no 'I thought the other team owned that'; each team's blast radius is contained.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -34,32 +35,10 @@
         "signalText": "Key signal in re-org proposals: 'Team owns too much — proposed split based on cognitive load analysis'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Team Cognitive Load"
-      }
-    ]
-  },
-  {
-    "id": "C1-O2",
-    "capabilityId": "C1",
-    "shortText": "Applies inverse Conway maneuver to align org structure with target architecture",
-    "slug": "applies-inverse-conway-maneuver-to-align-org-structure-with-target-architecture",
-    "fullExample": "Restructures teams to match desired microservices architecture, enabling independent deployment per team.",
-    "evidenceTypes": [
-      "decision_doc",
-      "design_doc"
-    ],
-    "defaultWeight": 0.076,
-    "requiredFrequency": "episodic",
-    "emRelevance": "Medium",
-    "directorRelevance": "High",
-    "levelNotes": "Directors execute; EMs provide input on team-level implications",
-    "why": "Architecture mirrors org structure whether planned or not — fighting Conway's Law always loses. Decomposing into services is an org design decision as much as a technical one — team boundaries drive API boundaries.",
-    "how": "Map current architecture to team structure, find misalignments where service boundaries don't match team boundaries, restructure teams to match desired architecture — not the other way around. Start from the target architecture and design the org to produce it. Validate with metric 8.4 (Engineering Investment Mix).",
-    "expectedResult": "Architecture and org structure reinforce each other; service boundaries align with team boundaries; deploy frequency increases because teams don't block each other.",
-    "status": "CARRIED",
-    "calibrationSignals": [
+      },
       {
         "id": "SIG-039",
-        "observableId": "C1-O2",
+        "observableId": "C1-O1",
         "capabilityId": "C1",
         "signalText": "Director-level insight: 'Applied inverse Conway — re-orged teams to align with target microservices architecture, enabling independent deployment'",
         "signalType": "calibration_language",
@@ -77,7 +56,7 @@
       "comms_plan",
       "attrition_data"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.117,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -115,7 +94,7 @@
       "meeting_note",
       "metric"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.088,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -145,7 +124,7 @@
       "doc",
       "dashboard"
     ],
-    "defaultWeight": 0.051,
+    "defaultWeight": 0.059,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -159,7 +138,7 @@
         "id": "SIG-042",
         "observableId": "C1-O5",
         "capabilityId": "C1",
-        "signalText": "Amazon principle applied broadly — calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'",
+        "signalText": "Calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Single-Threaded Ownership"
       }
@@ -174,16 +153,18 @@
     "evidenceTypes": [
       "doc",
       "metric",
-      "meeting_note"
+      "meeting_note",
+      "planning_artifact",
+      "okr_doc"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.117,
     "requiredFrequency": "quarterly",
-    "emRelevance": "Low",
+    "emRelevance": "High",
     "directorRelevance": "High",
-    "levelNotes": "Directors own org-level; EMs align team goals upward",
-    "why": "Team-level goals don't automatically add up to org outcomes; engineering goals framed in technical terms are invisible to business leadership and fail to earn investment. Cascading objectives from company to team level makes misalignment structurally visible.",
-    "how": "Start from business strategy, decompose to org goals, then team OKRs using a cascading structure where each level's key results become the next level's objectives. For each goal, articulate the business impact chain. Run cross-team alignment reviews quarterly. Track org-level outcomes, not just team deliverables. Validate with metric 10.1 (Cloud Cost per Transaction/User).",
-    "expectedResult": "All teams rowing same direction; org-level goals met through coordinated execution; >80% of team OKRs explicitly link to org-level objectives; cross-team dependencies visible in planning artifacts.",
+    "levelNotes": "EMs translate org strategy to team goals with measurable success criteria; Directors ensure cross-team alignment and resolve conflicting priorities",
+    "why": "Team-level goals don't automatically add up to org outcomes; engineering goals framed in technical terms are invisible to business leadership and fail to earn investment. Cascading objectives from company to team level makes misalignment structurally visible. Without explicit translation, dependencies become surprise blockers mid-quarter.",
+    "how": "Start from business strategy, decompose to org goals, then team OKRs using a cascading structure where each level's key results become the next level's objectives. For each goal, articulate the business impact chain. Map cross-team dependencies in a shared dependency board updated quarterly and reviewed bi-weekly. Run cross-team alignment reviews quarterly. Track org-level outcomes, not just team deliverables. Target >85% of team OKRs traceable to a company-level objective. Validate with metric 8.1 (OKR Achievement Rate), 8.2 (Revenue / Business Impact Attribution), 2.6 (Blocked Work Rate), and 10.1 (Cloud Cost per Transaction/User).",
+    "expectedResult": "All teams rowing same direction; org-level goals met through coordinated execution; >85% of team OKRs explicitly link to org-level objectives; cross-team dependencies visible in planning artifacts; quarterly reviews show business outcome progress not just feature delivery.",
     "status": "CARRIED",
     "calibrationSignals": [
       {
@@ -201,6 +182,22 @@
         "signalText": "The difference between 'shipped features' and 'drove business outcomes'. Directors who can't articulate this connection lose influence",
         "signalType": "calibration_language",
         "sourceSubTopic": "Aligning Team Goals to Business Strategy"
+      },
+      {
+        "id": "SIG-255",
+        "observableId": "C1-O6",
+        "capabilityId": "C1",
+        "signalText": "Strategic alignment: 'Translated company H2 strategy into 4 team OKRs with measurable business outcomes — 3 of 4 hit target, cross-team dependency map prevented 2 potential mid-quarter blockers'",
+        "signalType": "calibration_language",
+        "sourceSubTopic": "Business Strategy to Team Goals"
+      },
+      {
+        "id": "SIG-256",
+        "observableId": "C1-O6",
+        "capabilityId": "C1",
+        "signalText": "Director-level: 'Established quarterly strategy decomposition process across 5 teams — 85% of team goals now have explicit business outcome metrics, up from 30% before'",
+        "signalType": "metric",
+        "sourceSubTopic": "Cross-Team Goal Alignment"
       }
     ]
   },
@@ -214,7 +211,7 @@
       "dashboard",
       "survey_data"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.088,
     "requiredFrequency": "continuous",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -244,7 +241,7 @@
       "comms_plan",
       "metric"
     ],
-    "defaultWeight": 0.101,
+    "defaultWeight": 0.117,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -282,7 +279,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.088,
     "requiredFrequency": "continuous",
     "emRelevance": "Director-Only",
     "directorRelevance": "High",
@@ -312,7 +309,7 @@
       "decision_doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.076,
+    "defaultWeight": 0.088,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -760,7 +757,7 @@
       "doc",
       "calendar"
     ],
-    "defaultWeight": 0.119,
+    "defaultWeight": 0.128,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -790,7 +787,7 @@
       "metric",
       "dashboard"
     ],
-    "defaultWeight": 0.152,
+    "defaultWeight": 0.163,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -828,7 +825,7 @@
       "metric",
       "doc"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.096,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -866,7 +863,7 @@
       "metric",
       "doc"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.096,
     "requiredFrequency": "quarterly",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -896,7 +893,7 @@
       "doc",
       "metric"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.096,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -934,7 +931,7 @@
       "metric",
       "doc"
     ],
-    "defaultWeight": 0.059,
+    "defaultWeight": 0.063,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Low",
@@ -957,21 +954,23 @@
   {
     "id": "C4-O7",
     "capabilityId": "C4",
-    "shortText": "Protects team focus with interrupt budget and scope change process",
+    "shortText": "Protects team focus through interrupt budgets, scope discipline, and structural calendar policies",
     "slug": "protects-team-focus-with-interrupt-budget-and-scope-change-process",
-    "fullExample": "Designates rotating interrupt handler per sprint, defines escalation criteria for true urgency, requires explicit trade-off for any mid-sprint scope addition.",
+    "fullExample": "Designates rotating interrupt handler per sprint, defines escalation criteria for true urgency, requires explicit trade-off for any mid-sprint scope addition. Establishes meeting-free mornings, consolidates ceremonies into 2 days per week, defaults to async for status updates.",
     "evidenceTypes": [
       "doc",
-      "meeting_note"
+      "meeting_note",
+      "team_survey",
+      "process_artifact"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.096,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
-    "levelNotes": "EMs own directly; Directors set org-level expectations",
-    "why": "Unmanaged interrupts fragment focus; scope creep erodes trust in commitments. Deep work requires 4+ hour uninterrupted blocks, and the operating model must structurally protect that constraint.",
-    "how": "Designate rotating interrupt handler per sprint, define escalation criteria for true urgency (SEV1/SEV2 only), require explicit trade-off documentation for any mid-sprint scope addition. Protect 4+ hours of contiguous maker time daily — schedule all ceremonies and meetings in consolidated blocks. Validate with metric 2.2 (WIP (Work in Progress)).",
-    "expectedResult": "Teams report 4+ hours of daily uninterrupted focus time; urgent issues still handled via interrupt rotation; mid-sprint scope changes require documented trade-off approval.",
+    "levelNotes": "EMs protect team-level focus time; Directors set org-wide meeting norms and audit calendar health across teams",
+    "why": "Unmanaged interrupts fragment focus; scope creep erodes trust in commitments. Context-switching is the biggest hidden tax on engineering productivity — a 30-minute meeting in the middle of a focus block costs 2+ hours of deep work. The operating model must structurally protect 4+ hour uninterrupted blocks.",
+    "how": "Designate rotating interrupt handler per sprint, define escalation criteria for true urgency (SEV1/SEV2 only), require explicit trade-off documentation for any mid-sprint scope addition. Audit team calendars monthly for focus block availability; establish meeting-free mornings (or equivalent 4-hour protected windows). Consolidate ceremonies into 2 days per week; default to async for status updates. Track focus time as a team health metric — target >=4 hours daily. Validate with metric 2.2 (WIP), 5.1 (Developer Satisfaction Score), and 2.4 (Throughput).",
+    "expectedResult": "Engineers report 4+ hours of daily uninterrupted focus time; urgent issues handled via interrupt rotation; mid-sprint scope changes require documented trade-off approval; >80% of engineers report satisfaction with focus time.",
     "status": "CARRIED",
     "calibrationSignals": [
       {
@@ -981,6 +980,14 @@
         "signalText": "Shows team management maturity: 'Protected team focus by [implementing interrupt rotation], delivered [project] on schedule despite [X] interrupt requests'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Managing Interrupts & Scope Creep"
+      },
+      {
+        "id": "SIG-218",
+        "observableId": "C4-O7",
+        "capabilityId": "C4",
+        "signalText": "Focus time protection: 'Established meeting-free mornings and async-first status updates — engineer focus time increased from 2.5 to 5 hours/day, complex feature delivery improved 35%'",
+        "signalType": "metric",
+        "sourceSubTopic": "Focus Time Protection"
       }
     ]
   },
@@ -994,7 +1001,7 @@
       "meeting_note",
       "metric"
     ],
-    "defaultWeight": 0.059,
+    "defaultWeight": 0.063,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -1017,21 +1024,23 @@
   {
     "id": "C5-O1",
     "capabilityId": "C5",
-    "shortText": "Maintains healthy Eng/PM/Design triad with joint roadmap ownership",
+    "shortText": "Maintains healthy Eng/PM/Design triad with shared OKRs, weekly syncs, and joint quarterly retrospectives",
     "slug": "maintains-healthy-engpmdesign-triad-with-joint-roadmap-ownership",
-    "fullExample": "Runs weekly triad syncs with shared context: PM shares business data, Design shares user research, Eng shares technical constraints. Disagreements resolved through data, not hierarchy.",
+    "fullExample": "Runs weekly 30-minute triad syncs with rotating facilitation: PM shares business data, Design shares user research, Eng shares technical constraints. Shared OKRs (not separate Eng/PM OKRs). Joint quarterly retrospective assesses triad health. Disagreements resolved through data within the triad before escalating.",
     "evidenceTypes": [
       "meeting_note",
-      "doc"
+      "doc",
+      "1_1_notes",
+      "planning_artifact"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.099,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
-    "levelNotes": "EMs own team-level triad; Directors broker org-level partnerships",
-    "why": "Misaligned triad causes rework, delays, scope fights, and blame games. The cross-functional triad (Eng/PM/Design) is the atomic unit of product development — breakdowns here are the root cause of most delivery failures.",
-    "how": "Run weekly triad syncs with shared context documents, establish joint roadmap ownership with explicit DACI roles, resolve disagreements through data and structured trade-off analysis where each function has veto power in their domain. Validate with metric 3.5 (SLO Compliance Rate) and 3.6 (Incident Rate by Severity).",
-    "expectedResult": "Aligned decisions balancing user needs, business goals, and technical feasibility; cross-functional escalations drop to near-zero; triad partners actively seek each other's input on scope decisions.",
+    "levelNotes": "EMs own team-level triad health with weekly syncs and shared OKRs; Directors broker org-level partnerships and ensure triad model adopted across their org",
+    "why": "Misaligned triad causes rework, delays, scope fights, and blame games. The cross-functional triad (Eng/PM/Design) is the atomic unit of product development — breakdowns here are the root cause of most delivery failures. Most cross-functional friction stems from misaligned incentives and infrequent communication.",
+    "how": "Run weekly 30-minute triad syncs with rotating facilitation and shared context documents. Create shared OKRs — not separate Eng/PM/Design OKRs. Establish joint roadmap ownership with explicit DACI roles; resolve disagreements through data and structured trade-off analysis where each function has veto power in their domain. Escalate only after 1 week of unresolved discussion with a written options doc. Run joint quarterly retrospectives to assess triad health. Track cross-functional escalation frequency — target <2 escalations per quarter. Validate with metric 11.1 (Stakeholder NPS for Engineering Partnership), 11.2 (Cross-Functional Project On-Time Delivery Rate), and 8.1 (OKR Achievement Rate).",
+    "expectedResult": "No 'us vs them' dynamic between Eng, PM, and Design; shared ownership of outcomes; cross-functional escalations drop to near-zero; triad partners actively seek each other's input on scope decisions; joint retro satisfaction >4/5.",
     "status": "CARRIED",
     "calibrationSignals": [
       {
@@ -1041,6 +1050,14 @@
         "signalText": "'Strong partner feedback from PM and Design' — explicit calibration dimension at most Big Tech companies",
         "signalType": "calibration_language",
         "sourceSubTopic": "Triad Dynamics"
+      },
+      {
+        "id": "SIG-240",
+        "observableId": "C5-O1",
+        "capabilityId": "C5",
+        "signalText": "Triad health signal: 'Established shared OKRs and weekly triad syncs with PM and Design — cross-functional escalations dropped from 5/quarter to 0, joint retro satisfaction 4.5/5'",
+        "signalType": "metric",
+        "sourceSubTopic": "Product Triad Alignment"
       }
     ]
   },
@@ -1054,7 +1071,7 @@
       "meeting_note",
       "decision_doc"
     ],
-    "defaultWeight": 0.089,
+    "defaultWeight": 0.099,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1084,13 +1101,13 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.067,
+    "defaultWeight": 0.075,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs contribute for team scope; Directors influence org-level product strategy",
     "why": "When engineering is treated as feature factory, technical possibilities don't inform product direction. The trio model explicitly requires engineering to co-own product discovery — the EM isn't waiting for a spec, they're shaping what gets built.",
-    "how": "Surface technical capabilities that unlock new product surfaces, present to PM with user impact framing (not tech framing), participate in product strategy sessions as a peer with standing to propose roadmap items. Validate with metric 3.3 (Error Budget Remaining + Burn Rate) and 3.5 (SLO Compliance Rate).",
+    "how": "Surface technical capabilities that unlock new product surfaces, present to PM with user impact framing (not tech framing), participate in product strategy sessions as a peer with standing to propose roadmap items. Validate with metric 8.1 (OKR Achievement Rate) and 11.1 (Stakeholder NPS for Engineering Partnership).",
     "expectedResult": "Product strategy informed by technical possibilities; engineering seen as creative partner.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -1122,7 +1139,7 @@
       "meeting_note",
       "email"
     ],
-    "defaultWeight": 0.09,
+    "defaultWeight": 0.097,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1160,7 +1177,7 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.067,
+    "defaultWeight": 0.075,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -1206,7 +1223,7 @@
       "email",
       "meeting_note"
     ],
-    "defaultWeight": 0.067,
+    "defaultWeight": 0.075,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -1244,7 +1261,7 @@
       "peer_feedback",
       "meeting_note"
     ],
-    "defaultWeight": 0.067,
+    "defaultWeight": 0.075,
     "requiredFrequency": "continuous",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -1290,7 +1307,7 @@
       "meeting_note",
       "doc"
     ],
-    "defaultWeight": 0.09,
+    "defaultWeight": 0.1,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -1320,7 +1337,7 @@
       "peer_feedback",
       "meeting_note"
     ],
-    "defaultWeight": 0.067,
+    "defaultWeight": 0.075,
     "requiredFrequency": "continuous",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -1350,7 +1367,7 @@
       "decision_doc",
       "peer_feedback"
     ],
-    "defaultWeight": 0.045,
+    "defaultWeight": 0.05,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -1643,19 +1660,11 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "Both levels; Directors at higher-stakes decisions",
-    "why": "Vague proposals get sent back; options without trade-offs don't enable real decisions. At Amazon, the 6-pager narrative format forces structured thinking — conclusion first, supporting data, alternatives considered, and risks acknowledged — because PowerPoint lets you hide weak reasoning behind bullet points.",
-    "how": "Lead with recommendation and 'why now,' quantify impact of each option, present trade-offs with explicit costs, anticipate the top 3 objections and address them preemptively — structured after Amazon's 6-pager discipline where the document does the thinking, not the meeting. Use a decision memo template (Google Docs or Confluence) with required sections: context, options (minimum 3 including 'do nothing'), quantified trade-offs, recommended path, risks, and reversibility assessment. For every significant decision (>1 engineer-week of effort), produce a written artifact before scheduling a review meeting. Target first-meeting approval rate >80% as a quality signal. Circulate the memo 48 hours before the meeting with a 'silent reading' period. Validate with metric 5.1 (Developer Satisfaction Score) and 8.1 (OKR Achievement Rate).",
+    "why": "Vague proposals get sent back; options without trade-offs don't enable real decisions. The 6-pager narrative format forces structured thinking — conclusion first, supporting data, alternatives considered, and risks acknowledged — because slide decks let you hide weak reasoning behind bullet points.",
+    "how": "Lead with recommendation and 'why now,' quantify impact of each option, present trade-offs with explicit costs, anticipate the top 3 objections and address them preemptively — structured so the document does the thinking, not the meeting. Use a decision memo template (shared doc or Confluence) with required sections: context, options (minimum 3 including 'do nothing'), quantified trade-offs, recommended path, risks, and reversibility assessment. For every significant decision (>1 engineer-week of effort), produce a written artifact before scheduling a review meeting. Target first-meeting approval rate >80% as a quality signal. Circulate the memo 48 hours before the meeting with a 'silent reading' period. Validate with metric 5.1 (Developer Satisfaction Score) and 8.1 (OKR Achievement Rate).",
     "expectedResult": "Proposals get approved in first review meeting; seen as a strategic partner, not just an implementer; decisions stick because stakeholders understood the trade-offs upfront.",
     "status": "CARRIED",
     "calibrationSignals": [
-      {
-        "id": "SIG-064",
-        "observableId": "C7-O1",
-        "capabilityId": "C7",
-        "signalText": "Judgment signal: 'Identified [X] issues in first month, addressed critical ones immediately, built 90-day plan for systemic changes'",
-        "signalType": "calibration_language",
-        "sourceSubTopic": "When to Change vs When to Observe"
-      },
       {
         "id": "SIG-115",
         "observableId": "C7-O1",
@@ -1689,7 +1698,7 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs learn this; Directors must master it for VP/exec audiences",
-    "why": "Engineering detail overwhelms executives; executive brevity leaves engineers without context. At Netflix, context-not-control means leaders must communicate the 'why' at the right altitude for each audience — the same decision needs three different framings to land with VPs, peer EMs, and ICs.",
+    "why": "Engineering detail overwhelms executives; executive brevity leaves engineers without context. Context-not-control means leaders must communicate the 'why' at the right altitude for each audience — the same decision needs three different framings to land with VPs, peer EMs, and ICs.",
     "how": "Apply pyramid principle: conclusion first for execs (3 bullets, business impact), technical trade-offs for peers, full implementation context for ICs. Maintain 3 versions of key communications: a 1-slide executive summary (30-second read), a 3-slide peer briefing (5-minute read), and a full technical appendix (15-minute read) — all in a shared Google Slides or Confluence template. Practice the 'so what' test on every slide and paragraph before sending. For recurring updates (weekly status, quarterly reviews), use a consistent template so the audience learns where to find information. Solicit feedback quarterly from each audience tier: 'Is my communication at the right altitude for you?' Target zero instances of 'too much detail' or 'not enough context' feedback per quarter. Validate with metric 5.1 (Developer Satisfaction Score) and 7.8 (eNPS / Engagement Score).",
     "expectedResult": "Executives understand and support direction; engineers have implementation context.",
     "status": "CARRIED",
@@ -1719,7 +1728,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "Both levels; the #1 lever for getting more scope and autonomy",
-    "why": "Leaders who learn about problems from others lose trust fast. At Amazon, the 'no surprises' principle is a career-defining expectation — your manager should never learn about a problem in your area from someone else's status update.",
+    "why": "Leaders who learn about problems from others lose trust fast. The 'no surprises' principle is a career-defining expectation — your manager should never learn about a problem in your area from someone else's status update.",
     "how": "Send weekly written update structured as: top 3 outcomes (not activities), top 3 risks with mitigation status, specific asks; flag bad news within 24 hours, never in a weekly summary. Validate with metric 5.1 (Developer Satisfaction Score).",
     "expectedResult": "Leadership trusts you; more autonomy and scope granted proactively; problems discussed early when options still exist; manager's manager knows your name for the right reasons.",
     "status": "CARRIED",
@@ -1749,7 +1758,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "Both levels; trust is built by how you handle bad news",
-    "why": "Hiding bad news to 'try to fix it first' is how surprises destroy credibility. At Google, structured decision-making requires surfacing risks early with data — the penalty for a late surprise far exceeds the penalty for an early honest assessment.",
+    "why": "Hiding bad news to 'try to fix it first' is how surprises destroy credibility. Structured decision-making requires surfacing risks early with data — the penalty for a late surprise far exceeds the penalty for an early honest assessment.",
     "how": "Immediately upon discovery (within 4 hours for Sev1, within 24 hours for Sev2): send a structured bad-news notification using a template in Slack or email with sections: what happened, customer/business impact (quantified in users affected or revenue at risk), preliminary root cause, current mitigation actions, what you need from leadership, and next update ETA. Own it even if the root cause wasn't your team — accountability builds credibility. Follow up with a written post-incident summary within 48 hours using a blameless retrospective format. Target zero instances per quarter where leadership learns about a problem from someone other than you. Track time-from-discovery-to-notification as a personal SLA (target <4 hours for Sev1). Validate with metric 1.3 (Mean Time to Restore) and 1.4 (Change Failure Rate).",
     "expectedResult": "Leadership trusts you to handle problems; they learn issues from you first; credibility survives setbacks.",
     "status": "CARRIED",
@@ -1787,7 +1796,7 @@
     "emRelevance": "Low",
     "directorRelevance": "High",
     "levelNotes": "Directors must master; EMs develop this skill for growth",
-    "why": "Executives have 15-minute attention spans; burying the lead wastes their time and your opportunity. At Amazon, the 6-page narrative memo forces the most important conclusion to appear first — presentations that don't drive a decision within the allotted slot are presentations that failed.",
+    "why": "Executives have 15-minute attention spans; burying the lead wastes their time and your opportunity. The 6-page narrative memo format forces the most important conclusion to appear first — presentations that don't drive a decision within the allotted slot are presentations that failed.",
     "how": "Structure every exec presentation using pyramid principle: conclusion on slide 1, 2-3 key data points on slide 2, appendix for deep-dives. Use a consistent 5-slide template (Situation, Recommendation, Data, Risks, Ask) in Google Slides or PowerPoint. Anticipate the question behind the question by pre-briefing a trusted exec peer 24 hours before the meeting. Practice brevity — rehearse to fit within 50% of allotted time, leaving room for discussion. Time-box preparation: 2 hours max for a 15-minute presentation. Measure success by decisions made in meeting (target: decision reached in first review >80% of the time) and by repeat invitations to strategy discussions. Solicit post-presentation feedback from your manager quarterly. Validate with metric 8.1 (OKR Achievement Rate).",
     "expectedResult": "Executives understand and support initiatives; on their radar for higher-scope opportunities.",
     "status": "CARRIED",
@@ -1825,7 +1834,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs implement for team; Directors standardize across org",
-    "why": "Without clear decision ownership, decisions get revisited endlessly or made by whoever argues loudest. At Amazon, the 6-pager and PR/FAQ process embeds decision-making rigor into the culture — every significant decision has a written artifact with explicit ownership.",
+    "why": "Without clear decision ownership, decisions get revisited endlessly or made by whoever argues loudest. The 6-pager and PR/FAQ process embeds decision-making rigor into the culture — every significant decision has a written artifact with explicit ownership.",
     "how": "Name DACI roles explicitly for every decision above threshold, RFC template with required sections (context, options, recommendation, risks), 5-day comment period with escalation path, maintain searchable decision log. Validate with metric 2.6 (Blocked Work Rate).",
     "expectedResult": "Decisions made efficiently and stick; decision revisitation drops below 10%; new hires can understand why things are the way they are by reading the decision log.",
     "status": "CARRIED",
@@ -1863,7 +1872,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "Both levels; transparency builds trust",
-    "why": "Hidden trade-offs create surprise scope cuts and erode stakeholder trust. At Spotify, squads publish explicit 'not doing' lists alongside their roadmaps — stakeholders who discover trade-offs through omission lose confidence in the team's transparency and escalate to leadership.",
+    "why": "Hidden trade-offs create surprise scope cuts and erode stakeholder trust. High-performing teams publish explicit 'not doing' lists alongside their roadmaps — stakeholders who discover trade-offs through omission lose confidence in the team's transparency and escalate to leadership.",
     "how": "Every quarterly planning doc (in Confluence, Notion, or Google Docs) must include a mandatory 'What we are NOT doing' section listing de-prioritized items with rationale. Maintain a visible priority stack rank in Jira or Linear, ordered by business impact, and shared with all stakeholders. New requests require an explicit trade-off: 'To add X, we must deprioritize Y — do you approve?' documented in the request ticket. Review the stack rank in a monthly stakeholder sync (30 minutes) to ensure alignment. Track trade-off acceptance rate — target >90% of de-prioritization decisions supported by stakeholders at quarter-end. Publish the roadmap with 'not doing' section to all stakeholders within 1 week of planning completion. Validate with metric 8.1 (OKR Achievement Rate).",
     "expectedResult": "Informed decisions; no surprise cuts; stakeholders own trade-offs jointly. Zero roadmap items cut without prior stakeholder notification; trade-off document exists for every planning cycle; stakeholder satisfaction with communication >4/5.",
     "status": "CARRIED",
@@ -2046,7 +2055,7 @@
     "directorRelevance": "High",
     "levelNotes": "EMs own team metrics; Directors benchmark across teams",
     "why": "Without measurement, delivery problems are invisible and improvement is guesswork. DORA research proved that deployment frequency, lead time, change failure rate, and MTTR predict both engineering effectiveness and business outcomes — these are diagnostic instruments, not vanity metrics.",
-    "how": "Instrument every pipeline stage for all 4 DORA metrics, build team/service dashboards with trend lines, decompose lead time into stages to pinpoint bottlenecks, set improvement targets per quarter — modeled after Google's DORA framework and validated by Stripe's developer productivity research. Validate with metric 1.2 (Lead Time for Changes) and 1.4 (Change Failure Rate).",
+    "how": "Instrument every pipeline stage for all 4 DORA metrics, build team/service dashboards with trend lines, decompose lead time into stages to pinpoint bottlenecks, set improvement targets per quarter — following the DORA framework validated by industry research. Validate with metric 1.2 (Lead Time for Changes) and 1.4 (Change Failure Rate).",
     "expectedResult": "Within 1 quarter: visibility into delivery cadence with weekly trend data; targeted friction removal based on stage-level decomposition; measurable improvement in at least one DORA metric.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2257,7 +2266,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs justify team-level; Directors own org headcount story",
-    "why": "Headcount requests without data get cut first in budget reviews. At Amazon, every headcount ask is a narrative document with quantified business impact — 'trust me, I need people' doesn't survive an S-team review.",
+    "why": "Headcount requests without data get cut first in budget reviews. Every headcount ask should be a narrative document with quantified business impact — 'trust me, I need people' doesn't survive an S-team review.",
     "how": "Build capacity model in a spreadsheet or workforce planning tool (e.g., Runn, Forecast) showing current utilization gap vs. planned work, then project impact-if-unfilled in revenue terms using Cost of Delay analysis. Construct ROI timeline with explicit payback period (target <12 months), priority-rank each role against strategic pillars with a weighted scoring matrix, and present a phased hiring plan with quarterly go/no-go checkpoints tied to business milestones. Review and update the model annually during planning and quarterly during budget reviews. Validate with metric 10.3 (Cost per Engineer) and 8.4 (Engineering Investment Mix).",
     "expectedResult": "Headcount secured with >80% approval rate; investment aligned with strategy; finance sees engineering as disciplined stewards; zero headcount clawed back mid-cycle due to weak justification.",
     "status": "CARRIED",
@@ -2303,7 +2312,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "Both levels; Directors manage across teams",
-    "why": "Trying to do everything with fewer resources guarantees failure across the board. At Netflix, 'highly aligned, loosely coupled' teams survive cuts because leaders can ruthlessly re-scope without waiting for top-down direction.",
+    "why": "Trying to do everything with fewer resources guarantees failure across the board. 'Highly aligned, loosely coupled' teams survive cuts because leaders can ruthlessly re-scope without waiting for top-down direction.",
     "how": "Stack-rank all active work within 48 hours of cut announcement using a weighted impact/effort matrix in a shared spreadsheet or project tracking tool (Jira, Asana). Identify the bottom 20% to pause, draft named stakeholder communication for each paused initiative explaining the trade-off, and publish an explicit 'stop doing' list visible to all partners. Ring-fence capacity for top-3 priorities with named owners and weekly progress check-ins. Run a 30-day retrospective to validate that the right items were cut. Validate with metric 8.3 (Cost of Delay) and 8.4 (Engineering Investment Mix).",
     "expectedResult": "Team focuses on highest-impact work; stakeholders understand trade-offs; no surprise misses; top-3 priorities delivered on time despite reduced capacity.",
     "status": "CARRIED",
@@ -2333,8 +2342,8 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs own team costs; Directors own org-level FinOps",
-    "why": "Untracked cloud costs spiral; surprise budget overruns damage credibility. At Amazon, FinOps culture means every team owns their cost curve — cloud spend is reviewed with the same rigor as feature delivery.",
-    "how": "Tag every resource to a team and service, run monthly cost review with anomaly detection, set per-team optimization targets with quarterly accountability, adopt FinOps practices — modeled after Amazon's cost attribution model where teams own unit economics for their services. Validate with metric 10.5 (AI Tooling ROI).",
+    "why": "Untracked cloud costs spiral; surprise budget overruns damage credibility. FinOps culture means every team owns their cost curve — cloud spend is reviewed with the same rigor as feature delivery.",
+    "how": "Tag every resource to a team and service, run monthly cost review with anomaly detection, set per-team optimization targets with quarterly accountability, adopt FinOps practices — where teams own unit economics for their services. Validate with metric 10.1 (Cloud Cost per Transaction/User).",
     "expectedResult": "Costs tracked with per-service attribution; cloud spend reduced 15-25% through right-sizing and reserved instances; no surprise overruns; engineering seen as cost-conscious partners to finance.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2371,7 +2380,7 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "Directors manage blended team models; EMs provide input on work classification",
-    "why": "Ad hoc staffing decisions lead to either over-spending on FTEs for commodity work or IP risk from over-contracting. Google's workforce planning model uses a principled framework: FTEs for core IP and long-term investment, contractors for well-scoped time-bound work, and vendors for commodity services.",
+    "why": "Ad hoc staffing decisions lead to either over-spending on FTEs for commodity work or IP risk from over-contracting. Best-practice workforce planning uses a principled framework: FTEs for core IP and long-term investment, contractors for well-scoped time-bound work, and vendors for commodity services.",
     "how": "Classify all active workstreams into categories (core differentiating, commodity/surge, specialized) using a decision matrix. Match each category to the optimal staffing model: FTE for core IP-sensitive work, contractors for surge/commodity work, vendors for specialized niche skills. Maintain a staffing composition dashboard reviewed quarterly with finance, tracking cost-per-output by worker type. Ensure IP and compliance guardrails are in place (code access policies, NDA enforcement, vendor security reviews). Run quarterly quality audits comparing output metrics (defect rates, velocity, code review feedback) across worker types. Validate with metric 10.3 (Cost per Engineer) and 8.4 (Engineering Investment Mix).",
     "expectedResult": "Cost-effective staffing maintaining quality; no IP or compliance surprises. Contractor-to-FTE ratio reviewed quarterly; all contractors have documented scope and IP agreements; cost per deliverable within 10% of FTE equivalent.",
     "status": "CARRIED",
@@ -2401,7 +2410,7 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "Directors defend at VP level; EMs prepare the impact analysis",
-    "why": "Leaders who can't articulate cut consequences in business terms lose their most important investments. At Netflix, leaders who defend investments by quantifying the blast radius of cuts — not by pleading — earn continued funding even in lean cycles.",
+    "why": "Leaders who can't articulate cut consequences in business terms lose their most important investments. Leaders who defend investments by quantifying the blast radius of cuts — not by pleading — earn continued funding even in lean cycles.",
     "how": "Prepare a consequence analysis document for each possible cut, quantifying downstream impact in revenue terms (e.g., '$X revenue at risk if platform team is cut because Y product teams lose deploy capability'). Rank cuts by blast radius using a dependency map showing how many teams, services, or customers are affected. Propose alternative savings with equivalent dollar value and lower blast radius. Present the analysis in a 1-page decision brief using business terms executives understand: revenue risk, customer impact, competitive position, and time-to-recover if the cut is reversed. Deliver within 72 hours of cut announcement. Validate with metric 8.3 (Cost of Delay) and 8.2 (Revenue / Business Impact Attribution).",
     "expectedResult": "Critical investments preserved; cuts fall on lower-priority items; leadership sees you as a responsible steward who protects the business, not just your headcount.",
     "status": "CARRIED",
@@ -2431,8 +2440,8 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs own team hiring quality; Directors standardize across org",
-    "why": "Uncalibrated interviewers produce noisy signal; inconsistent bar creates quality variance. At Google, hiring decisions go through an independent hiring committee — the interviewing team doesn't make the call alone, which forces signal quality to be high enough to survive external review.",
-    "how": "Define competency matrix per role/level in a shared rubric document (Google Doc or Notion), updated annually per role family. Run interviewer training pipeline: shadow 2 loops, reverse-shadow 1 loop, solo with feedback review. Enforce independent write-ups submitted before group debrief to prevent anchoring bias. Assign a bar raiser (trained outsider) with veto power to every loop — modeled after Amazon's bar raiser program. Track interviewer signal quality quarterly: measure agreement rate (target >80%), false-positive rate, and candidate NPS. Recalibrate or remove interviewers whose signal consistently diverges. Validate with metric 7.3 (Time to Hire) and 7.4 (Offer Acceptance Rate).",
+    "why": "Uncalibrated interviewers produce noisy signal; inconsistent bar creates quality variance. In best-practice hiring, decisions go through an independent hiring committee — the interviewing team doesn't make the call alone, which forces signal quality to be high enough to survive external review.",
+    "how": "Define competency matrix per role/level in a shared rubric document (Google Doc or Notion), updated annually per role family. Run interviewer training pipeline: shadow 2 loops, reverse-shadow 1 loop, solo with feedback review. Enforce independent write-ups submitted before group debrief to prevent anchoring bias. Assign a bar raiser (trained outsider) with veto power to every loop — Track interviewer signal quality quarterly: measure agreement rate (target >80%), false-positive rate, and candidate NPS. Recalibrate or remove interviewers whose signal consistently diverges. Validate with metric 7.3 (Time to Hire) and 7.4 (Offer Acceptance Rate).",
     "expectedResult": "Consistent bar across all interviewers; interviewer agreement rate above 80%; reduced bias in evaluation; candidates report positive experience even when rejected.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2469,7 +2478,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "Both levels; Directors hold EMs accountable to bar",
-    "why": "Filling reqs with warm bodies creates years of management overhead and drags team performance. At Amazon, the bar raiser program exists specifically to prevent hiring managers from lowering standards under pressure — an independent evaluator can veto any hire.",
+    "why": "Filling reqs with warm bodies creates years of management overhead and drags team performance. The bar raiser model exists specifically to prevent hiring managers from lowering standards under pressure — an independent evaluator can veto any hire.",
     "how": "Assign bar raiser veto power to a trained interviewer outside the hiring team for every loop. Define explicit no-hire criteria in the role scorecard before the loop starts, and share with all interviewers in a pre-loop calibration session (15-min sync on level expectations and must-have signals). Refuse to extend offers on split decisions without escalation to hiring committee or skip-level. Track quality-of-hire signals at 90 days (manager satisfaction, ramp velocity, first-quarter output) and correlate back to interview scores quarterly to validate hiring bar accuracy. Target: zero regrettable offers per year, 95%+ 90-day retention. Validate with metric 7.3 (Time to Hire) and 7.4 (Offer Acceptance Rate).",
     "expectedResult": "Every hire raises team capability; zero regrettable offers per year; team trusts the process; 90-day retention above 95%.",
     "status": "CARRIED",
@@ -2499,7 +2508,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs own team onboarding; Directors standardize org-level program",
-    "why": "Unstructured onboarding means new hires float for months, creating frustration and slow ramp. At Meta, Bootcamp immerses every new engineer in a structured multi-week program before team placement — the principle is that intentional onboarding compounds into years of higher productivity.",
+    "why": "Unstructured onboarding means new hires float for months, creating frustration and slow ramp. Structured onboarding immerses every new engineer in a multi-week program before team placement — the principle is that intentional onboarding compounds into years of higher productivity.",
     "how": "Build a 30/60/90 plan template in Notion or Confluence with measurable milestones: first commit by day 5, buddy-guided starter project shipped by day 30, independent feature delivered by day 60, full autonomous contribution by day 90. Assign a buddy from day one (not the manager) for daily questions and pairing. Pair with a mentor for career context and team culture orientation. Run structured feedback checkpoints at 30/60/90 days using a standard assessment form with explicit 'on track / needs support / at risk' ratings, shared with the new hire. Track time-to-first-PR as a leading indicator and update the onboarding plan based on cohort feedback each quarter. Validate with metric 7.5 (New Hire Ramp Time).",
     "expectedResult": "New hires productive within 60 days; time-to-first-PR under 5 business days; early identification of ramp issues; new hires report feeling supported in onboarding survey (>4.0/5.0).",
     "status": "CARRIED",
@@ -2545,7 +2554,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs collect and act; Directors track org-level trends",
-    "why": "Static onboarding programs calcify; each cohort hits the same friction that could have been fixed. At Meta, Bootcamp iterates continuously based on cohort feedback — every friction point discovered gets fixed before the next cohort arrives.",
+    "why": "Static onboarding programs calcify; each cohort hits the same friction that could have been fixed. The best onboarding programs iterate continuously based on cohort feedback — every friction point discovered gets fixed before the next cohort arrives.",
     "how": "Run 30/60/90 surveys with 5 targeted questions (e.g., 'What slowed you down most?', 'What was missing from documentation?', 'Rate your buddy experience 1-5') using Google Forms or Lattice. Hold a 30-minute onboarding retrospective with each cohort after their 90-day mark. Track time-to-first-PR trend as a leading metric on a team dashboard, targeting improvement each quarter. Fix the top friction point identified before the next hire starts — maintain a running onboarding improvement backlog. Iterate the program each cohort and share improvements with the team to demonstrate investment in the process. Validate with metric 7.5 (New Hire Ramp Time) and 5.1 (Developer Satisfaction Score).",
     "expectedResult": "Measurable improvement each cohort: ramp time decreasing quarter-over-quarter; onboarding satisfaction above 4.0/5.0; documentation gaps identified and closed within one cohort cycle.",
     "status": "CARRIED",
@@ -2575,7 +2584,7 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs build team-level brand; Directors own org-level talent brand",
-    "why": "Reactive hiring (post req, wait for recruiter) is slow and produces worse candidates. At Google, top engineering managers maintain a warm candidate pipeline year-round — when a req opens, they already have 3-5 strong candidates in conversation.",
+    "why": "Reactive hiring (post req, wait for recruiter) is slow and produces worse candidates. Top engineering managers maintain a warm candidate pipeline year-round — when a req opens, they already have 3-5 strong candidates in conversation.",
     "how": "Set quarterly referral goals (e.g., 2 qualified referrals per engineer per quarter) and track in team meetings. Publish engineering blog posts showcasing team work at least monthly using the company engineering blog or Medium. Support 1-2 conference talks per quarter from team members, sponsoring abstract submissions and rehearsal time. Maintain open source contributions that showcase technical depth. Track pipeline source mix (referral vs. inbound vs. recruiter) monthly and aim for 40%+ referral-sourced candidates. Build a diverse pipeline by partnering with organizations focused on underrepresented groups in tech. Validate with metric 7.3 (Time to Hire) and 7.7 (Diversity Metrics).",
     "expectedResult": "Positions filled faster with higher quality; diverse pipeline; less recruiter dependence.",
     "status": "CARRIED",
@@ -2621,7 +2630,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs own team-level EVP; Directors own org-level narrative",
-    "why": "Without a clear value proposition, you lose candidates to teams that tell a better story. At Stripe, every hiring manager crafts a team-specific pitch that addresses what candidates will learn, ship, and own — generic 'great culture' pitches don't differentiate.",
+    "why": "Without a clear value proposition, you lose candidates to teams that tell a better story. Effective hiring managers craft a team-specific pitch that addresses what candidates will learn, ship, and own — generic 'great culture' pitches don't differentiate.",
     "how": "Define a team Employee Value Proposition (EVP) document covering: what problems we solve, what scale we operate at, what you will learn in 12 months, career growth path, team culture, and tech stack. Store in Notion or a shared doc and update quarterly or when team scope changes. Use the EVP in recruiter briefings, sourcing outreach, and candidate closing conversations. Train all interviewers to articulate the EVP consistently. Track offer acceptance rate monthly (target >75%) and run brief post-decline surveys to identify EVP gaps. Validate with metric 7.4 (Offer Acceptance Rate) and 7.3 (Time to Hire).",
     "expectedResult": "Stronger pipeline; higher acceptance; lower attrition because expectations set honestly.",
     "status": "CARRIED",
@@ -2651,8 +2660,8 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs build for team; Directors ensure culture scales across org",
-    "why": "Psychological safety is the #1 predictor of team effectiveness (Google Project Aristotle). Without it, problems stay hidden until they become crises, knowledge hoarding replaces collaboration, and the team's best ideas never surface because speaking up feels unsafe.",
-    "how": "Model vulnerability by sharing your own mistakes publicly, respond to bad news with 'tell me more' not 'how did this happen', celebrate learning from failure in team retros, measure safety quarterly in surveys — modeled after Google's Project Aristotle findings where psychological safety was the single strongest differentiator of high-performing teams. Validate with metric 7.1 (Regrettable Attrition Rate) and 7.9 (Burnout Risk Index).",
+    "why": "Psychological safety is the #1 predictor of team effectiveness (Project Aristotle research). Without it, problems stay hidden until they become crises, knowledge hoarding replaces collaboration, and the team's best ideas never surface because speaking up feels unsafe.",
+    "how": "Model vulnerability by sharing your own mistakes publicly, respond to bad news with 'tell me more' not 'how did this happen', celebrate learning from failure in team retros, measure safety quarterly in surveys — based on research showing psychological safety is the single strongest differentiator of high-performing teams. Validate with metric 7.1 (Regrettable Attrition Rate) and 7.9 (Burnout Risk Index).",
     "expectedResult": "Issues surface within hours not weeks; team psychological safety survey scores above org 75th percentile; smart risks taken without fear; candid feedback flows bidirectionally.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2660,7 +2669,7 @@
         "id": "SIG-043",
         "observableId": "C12-O1",
         "capabilityId": "C12",
-        "signalText": "Google's Project Aristotle: #1 predictor of team effectiveness. Measured through skip-level feedback and team health surveys",
+        "signalText": "Project Aristotle research: #1 predictor of team effectiveness. Measured through skip-level feedback and team health surveys",
         "signalType": "peer_feedback",
         "sourceSubTopic": "Building Psychological Safety"
       },
@@ -2696,8 +2705,8 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs establish for team; Directors align principles across org",
-    "why": "Without explicit norms, culture is whatever happens; principles without documentation aren't principles. At Netflix, the Freedom and Responsibility culture doc became the operating system for every team decision — written norms scale culture in ways hallway conversations never can. At Stripe, writing culture means decisions and principles are documented by default.",
-    "how": "Draft the team charter collaboratively in a dedicated workshop (90-minute session, not EM-dictated), covering: team mission, communication norms (response time expectations, async-first vs. sync preferences), decision-making process (RACI or DRI model), and disagreement escalation paths. Document in Notion or Confluence and link from team README. Define 3-5 engineering principles (e.g., 'Ship small, learn fast', 'Leave code better than you found it') and reference them explicitly in design reviews, retros, and code review comments. Review and update the charter annually or when team composition changes by >30%. Modeled after Stripe's writing culture where documented principles are living references, not shelf-ware. Validate with metric 7.8 (eNPS / Engagement Score) and 5.1 (Developer Satisfaction Score).",
+    "why": "Without explicit norms, culture is whatever happens; principles without documentation aren't principles. A written culture doc becomes the operating system for every team decision — written norms scale culture in ways hallway conversations never can, and writing culture means decisions and principles are documented by default.",
+    "how": "Draft the team charter collaboratively in a dedicated workshop (90-minute session, not EM-dictated), covering: team mission, communication norms (response time expectations, async-first vs. sync preferences), decision-making process (RACI or DRI model), and disagreement escalation paths. Document in Notion or Confluence and link from team README. Define 3-5 engineering principles (e.g., 'Ship small, learn fast', 'Leave code better than you found it') and reference them explicitly in design reviews, retros, and code review comments. Review and update the charter annually or when team composition changes by >30%. Documented principles should be living references, not shelf-ware. Validate with metric 7.8 (eNPS / Engagement Score) and 5.1 (Developer Satisfaction Score).",
     "expectedResult": "New hires understand team operating model within first week; charter referenced in at least 2 decision discussions per sprint; existing members have shared expectations to invoke during disagreements.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2734,7 +2743,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs drive team practices; Directors standardize across org",
-    "why": "Knowledge locked in individuals creates single-point-of-failure risk and slow onboarding. At Stripe, writing culture means every significant decision, architecture choice, and operational procedure is documented — knowledge sharing isn't a nice-to-have, it's how the company operates.",
+    "why": "Knowledge locked in individuals creates single-point-of-failure risk and slow onboarding. Writing culture means every significant decision, architecture choice, and operational procedure is documented — knowledge sharing isn't a nice-to-have, it's how the company operates.",
     "how": "Run bi-weekly tech talks, enforce documentation standards (every system has README + runbook + design doc), build design doc culture where writing precedes building, track documentation coverage as a team metric. Validate with metric 7.5 (New Hire Ramp Time).",
     "expectedResult": "Bus factor above 2 for every critical system; onboarding time reduced 30%+; documentation coverage above 85%; team member vacation doesn't create on-call emergencies.",
     "status": "CARRIED",
@@ -2762,7 +2771,7 @@
     "capabilityId": "C12",
     "shortText": "Implements recognition rituals that reinforce desired behaviors",
     "slug": "implements-recognition-rituals-that-reinforce-desired-behaviors",
-    "fullExample": "Weekly shout-outs in team sync tied to engineering principles; peer recognition channel. Recognition is specific ('Sarah's design doc saved 2 weeks of rework') not generic ('good job').",
+    "fullExample": "Weekly shout-outs in team sync tied to engineering principles; peer recognition channel with 3+ contributions/week. Recognition is specific ('Sarah's design doc saved 2 weeks of rework') not generic ('good job'). Engagement survey shows 85%+ team members feel recognized for good work.",
     "evidenceTypes": [
       "meeting_note",
       "doc"
@@ -2772,7 +2781,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs run for team; Directors notice recognition culture quality",
-    "why": "Generic recognition is noise; specific recognition aligned to values is culture reinforcement. At Google, peer bonuses require explicit connection to a team value — this trains the whole team to notice and name the behaviors that matter.",
+    "why": "Generic recognition is noise; specific recognition aligned to values is culture reinforcement. Effective peer recognition programs require explicit connection to a team value — this trains the whole team to notice and name the behaviors that matter.",
     "how": "Establish a weekly recognition ritual in team sync (2-3 minutes): specific shout-outs tied to team engineering principles (e.g., 'Sarah's design doc saved 2 weeks of rework — this is what Simplify First looks like'). Create a dedicated #team-kudos Slack channel for peer-to-peer recognition, visible to leadership. Ensure recognition is specific (what happened, why it mattered, which principle it exemplifies) not generic ('good job'). Track recognition frequency monthly — aim for every team member receiving at least one specific recognition per sprint. Rotate who gives shout-outs to encourage peer recognition culture, not just top-down praise. Validate with metric 5.1 (Developer Satisfaction Score) and 7.8 (eNPS / Engagement Score).",
     "expectedResult": "Positive behaviors reinforced; culture becomes self-reinforcing; team members feel valued.",
     "status": "CARRIED",
@@ -2792,7 +2801,7 @@
     "capabilityId": "C12",
     "shortText": "Drives inclusive practices ensuring equitable opportunity distribution",
     "slug": "drives-inclusive-practices-ensuring-equitable-opportunity-distribution",
-    "fullExample": "Uses round-robin facilitation, async participation options, and equitable stretch assignment distribution. Promotion rates equitable across demographics.",
+    "fullExample": "Uses round-robin facilitation, async participation options, and equitable stretch assignment distribution tracked via quarterly distribution audit. Promotion rates and stretch assignment allocation are equitable across demographics, with disparities flagged and addressed within one quarter.",
     "evidenceTypes": [
       "doc",
       "metric"
@@ -2802,7 +2811,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs practice for team; Directors set org-level inclusion standards",
-    "why": "Inclusion must be proactive — absence of exclusion is not the same as belonging. Google's Project Aristotle found that psychological safety (the inclusion proxy) is the single strongest predictor of team performance. Teams that don't actively distribute opportunities see attrition skew toward underrepresented groups.",
+    "why": "Inclusion must be proactive — absence of exclusion is not the same as belonging. Research found that psychological safety (the inclusion proxy) is the single strongest predictor of team performance. Teams that don't actively distribute opportunities see attrition skew toward underrepresented groups.",
     "how": "Implement structured meeting facilitation practices: round-robin for input, written-first proposals before discussion (Slack thread or doc comments), and async participation options for different time zones and working styles. Track stretch assignment and high-visibility opportunity distribution quarterly using a simple spreadsheet — flag if any demographic group receives <20% of stretch opportunities relative to their representation. Rotate on-call, demo presentations, and cross-team liaison roles equitably. Measure inclusion through quarterly pulse surveys with specific questions on belonging and voice (target >4.0/5.0 across all demographic groups). Validate with metric 7.7 (Diversity Metrics) and 5.1 (Developer Satisfaction Score).",
     "expectedResult": "Diverse perspectives contribute; retention across demographics improves; innovation increases.",
     "status": "CARRIED",
@@ -2832,8 +2841,8 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs ensure team follows process; Directors drive security culture across org",
-    "why": "Security found late is expensive to fix; teams skip reviews under deadline pressure creating org-level risk. At Amazon, mandatory security reviews are gates in the deployment pipeline — you literally cannot ship without passing threat model review, making security non-negotiable rather than aspirational.",
-    "how": "Embed threat modeling in design phase using STRIDE, wire automated SAST/DAST scanning into CI as blocking gates, rotate security champion role quarterly, enforce pre-launch security checklist — modeled after Amazon's threat model gates where security review is a pipeline stage, not a meeting request. Validate with metric 9.1 (Vulnerability Remediation Time).",
+    "why": "Security found late is expensive to fix; teams skip reviews under deadline pressure creating org-level risk. Mandatory security reviews should be gates in the deployment pipeline — you literally cannot ship without passing threat model review, making security non-negotiable rather than aspirational.",
+    "how": "Embed threat modeling in design phase using STRIDE, wire automated SAST/DAST scanning into CI as blocking gates, rotate security champion role quarterly, enforce pre-launch security checklist — where security review is a pipeline stage, not a meeting request. Validate with metric 9.1 (Vulnerability Remediation Time).",
     "expectedResult": "Security issues caught at design time (10x cheaper than production); zero last-minute launch blockers; security review turnaround under 24 hours; 80%+ of vulnerabilities caught before code review.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2878,7 +2887,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs own team vulnerability hygiene; Directors own org-level posture",
-    "why": "Known vulnerabilities sitting unpatched are ticking time bombs; zero-days require rapid systematic response. At Amazon, vulnerability SLAs are tracked as rigorously as operational SLAs — breaching a patching SLA triggers the same escalation path as breaching a customer-facing SLA.",
+    "why": "Known vulnerabilities sitting unpatched are ticking time bombs; zero-days require rapid systematic response. Vulnerability SLAs should be tracked as rigorously as operational SLAs — breaching a patching SLA triggers the same escalation path as breaching a customer-facing SLA.",
     "how": "Wire automated dependency scanning into CI, define severity-based SLAs (Critical: 48hr, High: 1 week, Medium: 1 month), track patch velocity on a dashboard, escalate blocked patches within 24 hours, schedule regular dependency upgrades as sprint-level work items. Validate with metric 9.2 (Dependency Currency).",
     "expectedResult": "Zero critical CVEs beyond SLA for 4+ consecutive quarters; clean vulnerability posture at any point-in-time audit; patch velocity dashboard shows P0 under 48 hours consistently.",
     "status": "CARRIED",
@@ -2924,8 +2933,8 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs maintain for team; Directors ensure compliance across org",
-    "why": "Over-provisioned access multiplies blast radius of any breach or insider mistake. At Google, BeyondCorp zero-trust architecture assumes the network is hostile — every access request is authenticated and authorized regardless of location, eliminating the 'inside the firewall means trusted' assumption.",
-    "how": "Run quarterly access reviews with automated stale-account flagging, enforce role-based access aligned to on-call rotation, implement temporary elevation with auto-expiry for debugging — modeled after Google's BeyondCorp principle where access is granted per-request, not per-network. Validate with metric 9.3 (Compliance Audit Readiness).",
+    "why": "Over-provisioned access multiplies blast radius of any breach or insider mistake. Zero-trust architecture assumes the network is hostile — every access request is authenticated and authorized regardless of location, eliminating the 'inside the firewall means trusted' assumption.",
+    "how": "Run quarterly access reviews with automated stale-account flagging, enforce role-based access aligned to on-call rotation, implement temporary elevation with auto-expiry for debugging — following the zero-trust principle where access is granted per-request, not per-network. Validate with metric 9.3 (Compliance Audit Readiness).",
     "expectedResult": "Over-privileged accounts reduced by 70%+; clean audit trail with zero unexplained elevations; compliance-ready access posture at any point-in-time; no access-related security incidents.",
     "status": "CARRIED",
     "calibrationSignals": [
@@ -2970,7 +2979,7 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs maintain team compliance; Directors own org-level audit readiness",
-    "why": "Audits are painful fire drills when compliance is manual; last-minute scrambles damage credibility and pull engineers off roadmap work. Amazon automates compliance evidence collection so that SOC2/ISO audits are a data export, not a 6-week project. Continuous compliance posture means you're audit-ready every day.",
+    "why": "Audits are painful fire drills when compliance is manual; last-minute scrambles damage credibility and pull engineers off roadmap work. Automating compliance evidence collection means SOC2/ISO audits become a data export, not a 6-week project. Continuous compliance posture means you're audit-ready every day.",
     "how": "Automated checks in CI/CD, evidence collection pipelines, quarterly self-audit, compliance dashboard. Validate with metric 9.4 (AI-Generated Code Security Scan Rate).",
     "expectedResult": "Painless audits; no surprises; credibility with security and compliance teams. Audit prep time <1 week; zero critical findings from external audits; continuous compliance dashboard shows green on >95% of controls.",
     "status": "CARRIED",
@@ -3104,7 +3113,7 @@
     "capabilityId": "C14",
     "shortText": "Delivers performance feedback within 48hrs using SBI framework",
     "slug": "delivers-performance-feedback-within-48hrs-using-sbi-framework",
-    "fullExample": "Uses Situation→Behavior→Impact framework for all feedback. Never saves feedback for perf review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
+    "fullExample": "Uses Situation→Behavior→Impact framework for all feedback. Never saves feedback for performance review. Direct reports consistently confirm in skip-levels: 'I know where I stand.'",
     "evidenceTypes": [
       "note",
       "meeting_note"
@@ -3216,7 +3225,7 @@
       "metric",
       "org_chart"
     ],
-    "defaultWeight": 0.025,
+    "defaultWeight": 0.029,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3247,7 +3256,7 @@
       "email",
       "attrition_data"
     ],
-    "defaultWeight": 0.012,
+    "defaultWeight": 0.014,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3277,7 +3286,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.012,
+    "defaultWeight": 0.014,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3347,7 +3356,7 @@
       "oncall_data",
       "metric"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.031,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -3378,7 +3387,7 @@
       "metric",
       "pr"
     ],
-    "defaultWeight": 0.059,
+    "defaultWeight": 0.063,
     "requiredFrequency": "episodic",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -3409,7 +3418,7 @@
       "survey_data",
       "meeting_note"
     ],
-    "defaultWeight": 0.029,
+    "defaultWeight": 0.031,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3432,21 +3441,22 @@
   {
     "id": "C5-O11",
     "capabilityId": "C5",
-    "shortText": "Navigates leadership transitions by rebuilding trust proactively within 30 days",
+    "shortText": "Navigates leadership transitions by rebuilding trust within 30 days and earns credibility as new leader through structured 90-day onboarding",
     "slug": "navigates-leadership-transitions-by-rebuilding-trust-proactively-within-30-days",
-    "fullExample": "New VP arrives with different priorities. Within 2 weeks: scheduled intro, presented team portfolio with business impact framing, identified 2 alignment opportunities. VP trust established before first planning cycle.",
+    "fullExample": "New VP arrives with different priorities. Within 2 weeks: scheduled intro, presented team portfolio with business impact framing, identified 2 alignment opportunities. VP trust established before first planning cycle. When joining a new team: spent weeks 1-3 in listening mode (skip-levels, stakeholder intros, codebase review), delivered quick win by week 6, earned mandate for larger changes.",
     "evidenceTypes": [
       "meeting_note",
-      "email"
+      "email",
+      "doc"
     ],
-    "defaultWeight": 0.051,
+    "defaultWeight": 0.057,
     "requiredFrequency": "episodic",
     "emRelevance": "High",
     "directorRelevance": "High",
-    "levelNotes": "Directors must proactively manage VP transitions; EMs manage Director transitions. Both critical survival skills.",
-    "why": "Leadership transitions are the #1 cause of strategy whiplash and org instability. Passive waiting = 6 months of lost credibility.",
-    "how": "Schedule intro meeting within week 1 of the leadership transition. Prepare a concise brief (1-2 pages in Google Docs or Notion) covering: team mission, top 3 recent wins with business impact, current bets and rationale, biggest risk. Ask the new leader: 'What does success look like for you in the first 90 days?' Identify one early alignment opportunity you can deliver within 2 weeks. Follow up with a written summary of agreed priorities within 48 hours. Conduct a trust checkpoint at the 30-day mark to confirm alignment is on track. Target: zero roadmap items overridden without mutual discussion within first quarter. Validate with metric 8.1 (OKR Achievement Rate).",
-    "expectedResult": "New leader trusts team within 30 days. Roadmap survives transition intact or adapts by mutual agreement, not mandate.",
+    "levelNotes": "Both levels face transitions on every role change — both incoming and outgoing. Directors have shorter credibility windows and must manage VP transitions proactively.",
+    "why": "Leadership transitions are the #1 cause of strategy whiplash and org instability. Passive waiting = 6 months of lost credibility. New leaders who change things before earning trust face resistance that compounds. Quick wins + listening = earned mandate.",
+    "how": "For incoming leader transitions: schedule intro meeting within week 1. Prepare a concise brief (1-2 pages) covering: team mission, top 3 recent wins with business impact, current bets and rationale, biggest risk. Ask: 'What does success look like in the first 90 days?' Identify one early alignment opportunity deliverable within 2 weeks. Follow up with written priority summary within 48 hours. Conduct trust checkpoint at day 30. For your own new role: follow a structured 90-day plan. Weeks 1-3: listen mode — 1:1s with all directs, skip-levels with key ICs, stakeholder intros, read existing docs (ADRs, post-mortems, OKRs). Week 4: identify 1 visible quick win with high impact and low risk. Weeks 5-8: deliver and communicate broadly. Week 9+: propose larger changes with earned credibility. Target: team confidence score >4/5 by day 60; zero roadmap items overridden without mutual discussion in first quarter. Validate with metric 8.1 (OKR Achievement Rate) and 5.1 (Developer Satisfaction Score).",
+    "expectedResult": "New leader trusts team within 30 days. When joining: team says 'they get us' by week 6, stakeholders trust judgment, larger changes face minimal resistance. Roadmap survives transitions intact or adapts by mutual agreement.",
     "status": "NEW",
     "calibrationSignals": [
       {
@@ -3472,6 +3482,38 @@
         "signalText": "When our director changed, they had a 1:1 with the new leader within 3 days and a written alignment doc within a week. The rest of us were still figuring out what the change meant while their team had already confirmed priorities.",
         "signalType": "peer_feedback",
         "sourceSubTopic": "Leadership Transitions"
+      },
+      {
+        "id": "SIG-329",
+        "observableId": "C5-O11",
+        "capabilityId": "C5",
+        "signalText": "The 90-day window determines trajectory. \"Established credibility by [quick win] in first 6 weeks, built stakeholder trust through listening before changing, earned mandate for [larger initiative].\"",
+        "signalType": "peer_feedback",
+        "sourceSubTopic": "New Leader Credibility"
+      },
+      {
+        "id": "SIG-339",
+        "observableId": "C5-O11",
+        "capabilityId": "C5",
+        "signalText": "Completed structured 90-day onboarding: 3 weeks listening (1:1s with all directs and key ICs), delivered a visible quick win (eliminated a 45-minute weekly status meeting) by week 5, then proposed larger changes with earned credibility.",
+        "signalType": "manager_observation",
+        "sourceSubTopic": "New Leader Credibility"
+      },
+      {
+        "id": "SIG-340",
+        "observableId": "C5-O11",
+        "capabilityId": "C5",
+        "signalText": "Achieved team confidence score of 4.3/5 in 60-day pulse check after joining as new EM, up from 3.1 under previous leadership, by prioritizing listening and quick wins over immediate process changes.",
+        "signalType": "metric",
+        "sourceSubTopic": "New Leader Credibility"
+      },
+      {
+        "id": "SIG-064",
+        "observableId": "C5-O11",
+        "capabilityId": "C5",
+        "signalText": "Judgment signal: 'Identified [X] issues in first month, addressed critical ones immediately, built 90-day plan for systemic changes'",
+        "signalType": "calibration_language",
+        "sourceSubTopic": "New Leader Credibility"
       }
     ]
   },
@@ -3485,7 +3527,7 @@
       "doc",
       "checklist"
     ],
-    "defaultWeight": 0.051,
+    "defaultWeight": 0.057,
     "requiredFrequency": "quarterly",
     "emRelevance": "Medium",
     "directorRelevance": "High",
@@ -3518,52 +3560,6 @@
         "signalText": "Their team ships features through compliance faster than anyone else because they invested upfront in reusable patterns. Other teams now use their self-serve checklists as a template.",
         "signalType": "peer_feedback",
         "sourceSubTopic": "Legal/Privacy Partnership Patterns"
-      }
-    ]
-  },
-  {
-    "id": "C5-O13",
-    "capabilityId": "C5",
-    "shortText": "Earns early credibility as new leader through quick wins and listening before changing",
-    "slug": "earns-early-credibility-as-new-leader-through-quick-wins-and-listening-before-changing",
-    "fullExample": "First 90 days: spent weeks 1-3 in listening mode (skip-levels, stakeholder intros, codebase review). Identified quick win (flaky test fix) in week 4. Delivered by week 6. Earned mandate for larger changes.",
-    "evidenceTypes": [
-      "meeting_note",
-      "doc"
-    ],
-    "defaultWeight": 0.044,
-    "requiredFrequency": "episodic",
-    "emRelevance": "High",
-    "directorRelevance": "High",
-    "levelNotes": "Both levels face this on every role change. Directors have shorter credibility windows.",
-    "why": "New leaders who change things before earning trust face resistance that compounds. Quick wins + listening = earned mandate.",
-    "how": "Follow a structured 90-day plan. Weeks 1-3: listen mode — conduct 1:1s with every direct report, skip-levels with key ICs, stakeholder intro meetings, and read existing docs (ADRs, postmortems, OKRs). Document observations in a private journal. Week 4: identify 1 visible quick win with high team impact and low risk (e.g., fix a persistent CI flake, remove a toil burden). Weeks 5-8: deliver the quick win and communicate the result broadly. Week 9+: propose larger changes with earned credibility, referencing your listening-phase observations. Target: team confidence score >4/5 by day 60 in pulse check. Validate with metric 5.1 (Developer Satisfaction Score).",
-    "expectedResult": "Team says \"they get us\" by week 6. Stakeholders trust judgment. Larger changes face minimal resistance.",
-    "status": "NEW",
-    "calibrationSignals": [
-      {
-        "id": "SIG-329",
-        "observableId": "C5-O13",
-        "capabilityId": "C5",
-        "signalText": "The 90-day window determines trajectory. \"Established credibility by [quick win] in first 6 weeks, built stakeholder trust through listening before changing, earned mandate for [larger initiative].\"",
-        "signalType": "peer_feedback",
-        "sourceSubTopic": "New Leader Credibility"
-      },
-      {
-        "id": "SIG-339",
-        "observableId": "C5-O13",
-        "capabilityId": "C5",
-        "signalText": "Completed structured 90-day onboarding: 3 weeks listening (1:1s with all directs and key ICs), delivered a visible quick win (eliminated a 45-minute weekly status meeting) by week 5, then proposed larger changes with earned credibility.",
-        "signalType": "manager_observation",
-        "sourceSubTopic": "New Leader Credibility"
-      },
-      {
-        "id": "SIG-340",
-        "observableId": "C5-O13",
-        "capabilityId": "C5",
-        "signalText": "Achieved team confidence score of 4.3/5 in 60-day pulse check after joining as new EM, up from 3.1 under previous leadership, by prioritizing listening and quick wins over immediate process changes.",
-        "signalType": "metric",
-        "sourceSubTopic": "New Leader Credibility"
       }
     ]
   },
@@ -3668,7 +3664,7 @@
       "comms_plan",
       "attrition_data"
     ],
-    "defaultWeight": 0.025,
+    "defaultWeight": 0.029,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3707,7 +3703,7 @@
       "doc",
       "meeting_note"
     ],
-    "defaultWeight": 0.025,
+    "defaultWeight": 0.029,
     "requiredFrequency": "episodic",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -3824,7 +3820,7 @@
       "email",
       "doc"
     ],
-    "defaultWeight": 0.034,
+    "defaultWeight": 0.038,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "High",
@@ -3862,7 +3858,7 @@
       "doc",
       "decision_doc"
     ],
-    "defaultWeight": 0.025,
+    "defaultWeight": 0.028,
     "requiredFrequency": "quarterly",
     "emRelevance": "Low",
     "directorRelevance": "High",
@@ -4061,7 +4057,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs own team-level flag hygiene and experimentation frameworks; Directors set governance standards and track compliance across teams.",
-    "why": "Feature flags without lifecycle management become permanent technical debt. Forgotten flags create exponential complexity — 10 flags means 1024 possible code paths that nobody tests. Stale flags slow down every engineer who touches that code.",
+    "why": "Feature flags without lifecycle management become permanent tech debt. Forgotten flags create exponential complexity — 10 flags means 1024 possible code paths that nobody tests. Stale flags slow down every engineer who touches that code.",
     "how": "Every flag gets: owner, purpose, expiry date, cleanup ticket at creation time. Automated alerts when flags exceed expiry. Dashboard showing active flags per team with age distribution. Quarterly cleanup sprints. Flag interaction testing for long-lived flags. Validate with metric 1.4 (Change Failure Rate).",
     "expectedResult": "Within 1 quarter: active flag count stays manageable (target: <20 active flags per service); no production incidents from forgotten flags; experimentation velocity maintained without accumulating flag debt.",
     "status": "NEW",
@@ -4139,7 +4135,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs own team-level inclusive hiring practices and funnel analysis; Directors build org-level diversity sourcing partnerships and systemic bias reduction programs.",
-    "why": "Homogeneous teams produce homogeneous solutions. Without intentional pipeline optimization, structural biases in sourcing and screening perpetuate underrepresentation regardless of stated values. At Google, structured behavioral interviews with rubrics were adopted specifically because research showed they reduce demographic bias while improving prediction accuracy.",
+    "why": "Homogeneous teams produce homogeneous solutions. Without intentional pipeline optimization, structural biases in sourcing and screening perpetuate underrepresentation regardless of stated values. Research shows structured behavioral interviews with rubrics reduce demographic bias while improving prediction accuracy.",
     "how": "Audit hiring funnel by demographic at each stage. Remove exclusionary language from job descriptions. Require diverse candidate slates. Partner with diversity-focused organizations for sourcing. Use structured interviews with rubrics. Track and report pipeline diversity metrics quarterly. Validate with metric 7.7 (Diversity Metrics).",
     "expectedResult": "Diverse candidate pipeline with underrepresented candidate pass-through rate improving 20%+ within 2 quarters; reduced bias in screening and evaluation; team composition reflects intentional effort; hiring quality maintained or improved.",
     "status": "NEW",
@@ -4216,8 +4212,8 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs maintain team-level culture during growth; Directors ensure culture survives cross-team leadership transitions",
-    "why": "Culture degrades fastest during rapid growth and leadership changes — without intentional continuity, toxic norms can emerge in weeks. At Netflix, the Freedom and Responsibility culture doc serves as the immune system during growth — it gives every new hire and leader a shared operating model that persists through transitions.",
-    "how": "Pair new leaders and senior hires with designated culture carriers for their first 60 days (weekly 30-minute syncs on 'how we work here'). Document team norms explicitly in the onboarding checklist and discuss them in the new hire's first week. Run quarterly culture retros using a structured framework — modeled after Spotify's Health Checks where teams self-assess cultural health on specific dimensions (psychological safety, decision speed, technical quality, fun). Track culture survey scores through growth periods, flagging any dimension that drops >10% as an action item. Make values observable in daily decisions: reference principles in design reviews, retros, and hiring debriefs, not just posters. Validate with metric 7.8 (eNPS / Engagement Score) and 7.1 (Regrettable Attrition Rate).",
+    "why": "Culture degrades fastest during rapid growth and leadership changes — without intentional continuity, toxic norms can emerge in weeks. A written culture doc serves as the immune system during growth — it gives every new hire and leader a shared operating model that persists through transitions.",
+    "how": "Pair new leaders and senior hires with designated culture carriers for their first 60 days (weekly 30-minute syncs on 'how we work here'). Document team norms explicitly in the onboarding checklist and discuss them in the new hire's first week. Run quarterly culture retros using a structured framework — where teams self-assess cultural health on specific dimensions (psychological safety, decision speed, technical quality, fun). Track culture survey scores through growth periods, flagging any dimension that drops >10% as an action item. Make values observable in daily decisions: reference principles in design reviews, retros, and hiring debriefs, not just posters. Validate with metric 7.8 (eNPS / Engagement Score) and 7.1 (Regrettable Attrition Rate).",
     "expectedResult": "New team members describe team culture consistently within 60 days; culture surveys stable through growth periods; no 'culture shock' complaints in skip-levels.",
     "status": "NEW",
     "calibrationSignals": [
@@ -4246,8 +4242,8 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs design and maintain feedback channels; Directors audit equitable participation across teams",
-    "why": "Without deliberate inclusive structures, decisions reflect the preferences of the most senior or vocal team members, creating blind spots and marginalizing quieter contributors. At Stripe, written-first culture means decisions begin as documents, not meetings — this structurally levels the playing field between extroverts and introverts.",
-    "how": "Rotate meeting facilitation weekly so no single voice dominates. Use written-first formats for all significant decisions: circulate proposals as docs 24 hours before meetings — modeled after Stripe's writing culture where proposals are circulated before any meeting. Track meeting participation patterns quarterly (who speaks, who doesn't) using a simple tally during team meetings. Create an anonymous feedback channel (Google Form or Donut bot) for concerns that people may not raise publicly. Solicit input from quieter members directly in 1:1s ('I noticed you didn't weigh in on X — what's your take?'). Run quarterly anonymous team health surveys with specific questions on feeling heard (target >4.0/5.0). Validate with metric 5.1 (Developer Satisfaction Score) and 7.8 (eNPS / Engagement Score).",
+    "why": "Without deliberate inclusive structures, decisions reflect the preferences of the most senior or vocal team members, creating blind spots and marginalizing quieter contributors. Written-first culture means decisions begin as documents, not meetings — this structurally levels the playing field between extroverts and introverts.",
+    "how": "Rotate meeting facilitation weekly so no single voice dominates. Use written-first formats for all significant decisions: circulate proposals as docs 24 hours before meetings — Track meeting participation patterns quarterly (who speaks, who doesn't) using a simple tally during team meetings. Create an anonymous feedback channel (Google Form or Donut bot) for concerns that people may not raise publicly. Solicit input from quieter members directly in 1:1s ('I noticed you didn't weigh in on X — what's your take?'). Run quarterly anonymous team health surveys with specific questions on feeling heard (target >4.0/5.0). Validate with metric 5.1 (Developer Satisfaction Score) and 7.8 (eNPS / Engagement Score).",
     "expectedResult": "Meeting participation is distributed; engagement surveys show all demographics feel heard; decisions reflect diverse perspectives; fewer surprise escalations from unheard concerns.",
     "status": "NEW",
     "calibrationSignals": [
@@ -4306,8 +4302,8 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs present team-level options; Directors present org-level portfolio allocation options",
-    "why": "Binary resource requests force leadership into yes/no decisions without understanding trade-offs; tiered options enable informed prioritization across the org. At Google, resource request tiers are standard practice — teams present bronze/silver/gold options so leadership can optimize across the portfolio.",
-    "how": "For every resource request, prepare a 1-page tiered proposal with minimum/target/stretch options (e.g., bronze/silver/gold). Each tier includes: named deliverables, timeline, risks if under-resourced, and ROI projection with payback period — modeled after Google's resource request tiers where each level has a named scope commitment and quantified trade-off. Use a standard template shared with finance partners. Present tiers during quarterly planning or ad-hoc resource reviews, and track which tier was approved and whether actual outcomes matched projections. Validate with metric 8.4 (Engineering Investment Mix) and 8.3 (Cost of Delay).",
+    "why": "Binary resource requests force leadership into yes/no decisions without understanding trade-offs; tiered options enable informed prioritization across the org. Resource request tiers are a best practice — teams present bronze/silver/gold options so leadership can optimize across the portfolio.",
+    "how": "For every resource request, prepare a 1-page tiered proposal with minimum/target/stretch options (e.g., bronze/silver/gold). Each tier includes: named deliverables, timeline, risks if under-resourced, and ROI projection with payback period — Use a standard template shared with finance partners. Present tiers during quarterly planning or ad-hoc resource reviews, and track which tier was approved and whether actual outcomes matched projections. Validate with metric 8.4 (Engineering Investment Mix) and 8.3 (Cost of Delay).",
     "expectedResult": "Resource discussions are productive, not adversarial; leadership trusts your judgment; approval cycle shortened by 40%+ because trade-offs are pre-computed and transparent.",
     "status": "NEW",
     "calibrationSignals": [
@@ -4666,7 +4662,7 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs establish team-level security champion rotation; Directors ensure coverage across all teams in their org",
-    "why": "Security can't be solely the security team's job — distributed champions create security muscle memory in every team and catch issues at development time, not at audit time. At Google, security engineering is embedded into product teams rather than siloed — the BeyondCorp model works because security ownership is distributed, not centralized.",
+    "why": "Security can't be solely the security team's job — distributed champions create security muscle memory in every team and catch issues at development time, not at audit time. Security engineering should be embedded into product teams rather than siloed — the zero-trust model works because security ownership is distributed, not centralized.",
     "how": "Rotate security champion role quarterly; have champion attend security guild; integrate threat modeling into design reviews; run quarterly security awareness sessions; track vulnerability SLA compliance. Validate with metric 9.1 (Vulnerability Remediation Time).",
     "expectedResult": "Vulnerabilities caught earlier in development cycle; security review turnaround faster; team has baseline security literacy; audit findings decrease over time.",
     "status": "NEW",
@@ -4696,8 +4692,8 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs ensure their team's pipelines have security gates; Directors set org-wide security scanning standards",
-    "why": "Manual security reviews don't scale and create deployment bottlenecks; automated scanning catches known vulnerability patterns consistently without human toil. At Netflix, automated compliance scanning runs continuously — security posture is a dashboard metric, not a quarterly audit exercise.",
-    "how": "Wire SAST/DAST tools into CI/CD as blocking gates for critical/high findings; configure severity-based deployment gates; track false positive rates and tune quarterly; maintain live vulnerability SLA dashboard — modeled after Netflix's automated compliance where security posture is continuously measured, not periodically audited. Validate with metric 9.1 (Vulnerability Remediation Time).",
+    "why": "Manual security reviews don't scale and create deployment bottlenecks; automated scanning catches known vulnerability patterns consistently without human toil. Automated compliance scanning should run continuously — security posture is a dashboard metric, not a quarterly audit exercise.",
+    "how": "Wire SAST/DAST tools into CI/CD as blocking gates for critical/high findings; configure severity-based deployment gates; track false positive rates and tune quarterly; maintain live vulnerability SLA dashboard — where security posture is continuously measured, not periodically audited. Validate with metric 9.1 (Vulnerability Remediation Time).",
     "expectedResult": "Zero critical/high vulnerabilities reach production; vulnerability remediation time predictable; security doesn't bottleneck deployments; compliance evidence generated automatically.",
     "status": "NEW",
     "calibrationSignals": [
@@ -4726,8 +4722,8 @@
     "emRelevance": "Medium",
     "directorRelevance": "High",
     "levelNotes": "EMs ensure threat modeling happens for their team's sensitive features; Directors establish org-wide threat modeling requirements",
-    "why": "Threat modeling catches design-level security flaws that no amount of code scanning can find — it's cheaper to fix security issues in design than in production. At Amazon, threat model review is a mandatory gate before any service touching customer data can launch — it's not a suggestion, it's a deployment prerequisite.",
-    "how": "Require threat models for all features touching auth, payments, PII, or external APIs — modeled after Amazon's mandatory security review gates where threat model review is a deployment prerequisite. Use the STRIDE framework (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) in a structured 60-minute workshop with the feature team before design is finalized. Document threats in a standard template: attack vector, severity (CVSS score), proposed mitigation, residual risk, and business justification for any accepted risks. Review the threat model with the security team before implementation begins and archive as part of the design doc for audit trail. Run threat model reviews per-feature for sensitive changes, and audit coverage quarterly (target: 100% of features touching sensitive data have a completed threat model). Validate with metric 9.1 (Vulnerability Remediation Time) and 9.3 (Compliance Audit Readiness).",
+    "why": "Threat modeling catches design-level security flaws that no amount of code scanning can find — it's cheaper to fix security issues in design than in production. Threat model review should be a mandatory gate before any service touching customer data can launch — it's not a suggestion, it's a deployment prerequisite.",
+    "how": "Require threat models for all features touching auth, payments, PII, or external APIs — Use the STRIDE framework (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) in a structured 60-minute workshop with the feature team before design is finalized. Document threats in a standard template: attack vector, severity (CVSS score), proposed mitigation, residual risk, and business justification for any accepted risks. Review the threat model with the security team before implementation begins and archive as part of the design doc for audit trail. Run threat model reviews per-feature for sensitive changes, and audit coverage quarterly (target: 100% of features touching sensitive data have a completed threat model). Validate with metric 9.1 (Vulnerability Remediation Time) and 9.3 (Compliance Audit Readiness).",
     "expectedResult": "Design-level security flaws caught before code is written; security team engaged as partners, not gatekeepers; compliance evidence for audit readiness; no 'we didn't think about that' security incidents.",
     "status": "NEW",
     "calibrationSignals": [
@@ -4756,8 +4752,8 @@
     "emRelevance": "High",
     "directorRelevance": "Medium",
     "levelNotes": "EMs design and maintain team interview processes; Directors ensure consistency and fairness across teams",
-    "why": "Unstructured interviews are poor predictors of job performance and amplify bias — structured rubrics improve both prediction accuracy and fairness. At Amazon, structured behavioral interviews (the STAR method mapped to Leadership Principles) are mandatory, not optional — every question has a rubric, every answer is scored independently.",
-    "how": "Map role requirements to interview questions with behavioral anchors; create scoring rubrics with concrete examples at each level — modeled after Amazon's structured behavioral interview format; train interviewers on rubric use through shadow/reverse-shadow cycle; collect scores independently before debrief to prevent anchoring; audit for demographic patterns quarterly. Validate with metric 7.3 (Time to Hire) and 7.4 (Offer Acceptance Rate).",
+    "why": "Unstructured interviews are poor predictors of job performance and amplify bias — structured rubrics improve both prediction accuracy and fairness. Structured behavioral interviews (the STAR method mapped to role-specific competencies) should be mandatory, not optional — every question has a rubric, every answer is scored independently.",
+    "how": "Map role requirements to interview questions with behavioral anchors; create scoring rubrics with concrete examples at each level — train interviewers on rubric use through shadow/reverse-shadow cycle; collect scores independently before debrief to prevent anchoring; audit for demographic patterns quarterly. Validate with metric 7.3 (Time to Hire) and 7.4 (Offer Acceptance Rate).",
     "expectedResult": "Hiring decisions more predictable; bias reduced measurably; interviewer calibration improved; quality-of-hire metrics trend positive; candidate experience is consistent.",
     "status": "NEW",
     "calibrationSignals": [
@@ -4786,7 +4782,7 @@
     "emRelevance": "High",
     "directorRelevance": "High",
     "levelNotes": "EMs craft team-level employer value proposition; Directors design org-level talent acquisition strategy",
-    "why": "Most companies can't match top-of-market compensation — sustainable hiring requires differentiated value propositions that attract candidates whose priorities align with what you can offer. Even Google competes on mission and technical challenge, not just comp — the best candidates choose problems, not packages.",
+    "why": "Most companies can't match top-of-market compensation — sustainable hiring requires differentiated value propositions that attract candidates whose priorities align with what you can offer. Even top-tier companies compete on mission and technical challenge, not just comp — the best candidates choose problems, not packages.",
     "how": "Articulate what your team uniquely offers (impact, growth, autonomy, mission); build employer brand through tech blog, open source, conference talks; target candidates whose priorities match your strengths; train hiring managers on value proposition delivery; close candidates by connecting role specifics to their stated career goals. Validate with metric 7.4 (Offer Acceptance Rate).",
     "expectedResult": "Offer acceptance rate above 70% despite below-top-of-market compensation; hires aligned to team values with 90%+ one-year retention; reduced recruiter dependency through 40%+ referral pipeline; stronger employer brand.",
     "status": "NEW",
@@ -4841,7 +4837,7 @@
       "dashboard",
       "retrospective_output"
     ],
-    "defaultWeight": 0.069,
+    "defaultWeight": 0.074,
     "requiredFrequency": "continuous",
     "emRelevance": "High",
     "directorRelevance": "Medium",
@@ -4858,36 +4854,6 @@
         "signalText": "Velocity diagnosis: 'Value stream mapped end-to-end — identified code review turnaround (3 day avg) as primary bottleneck, implemented review SLA and pairing rotation, reduced to 6 hours, overall cycle time improved 40%'",
         "signalType": "metric",
         "sourceSubTopic": "Velocity Bottleneck Analysis"
-      }
-    ]
-  },
-  {
-    "id": "C4-O13",
-    "capabilityId": "C4",
-    "shortText": "Protects maker time with structural calendar policies ensuring engineers have 4+ hours of uninterrupted focus daily",
-    "slug": "protects-maker-time-with-structural-calendar-policies",
-    "fullExample": "Establishes meeting-free mornings, consolidates ceremonies into 2 days per week, defaults to async for status updates, and tracks focus time as a team health metric. Engineers report 5+ hours of focus time daily.",
-    "evidenceTypes": [
-      "team_survey",
-      "process_artifact"
-    ],
-    "defaultWeight": 0.069,
-    "requiredFrequency": "continuous",
-    "emRelevance": "High",
-    "directorRelevance": "Medium",
-    "levelNotes": "EMs protect team-level focus time; Directors set org-wide meeting norms and audit calendar health across teams",
-    "why": "Context-switching is the biggest hidden tax on engineering productivity — a 30-minute meeting in the middle of a focus block costs 2+ hours of deep work productivity. Protecting maker schedules is a leadership responsibility, not an individual one.",
-    "how": "Audit team calendars monthly for focus block availability; establish meeting-free mornings (or equivalent 4-hour protected windows). Consolidate ceremonies into 2 days per week; default to async for status updates using Slack/Loom/recorded standups. Track focus time as a team health metric in quarterly pulse surveys — target >=4 hours of uninterrupted focus time daily, with >80% of engineers reporting satisfaction with focus time. Validate with metric 5.1 (Developer Satisfaction Score) and 2.4 (Throughput).",
-    "expectedResult": "Engineers report 4+ hours of daily uninterrupted focus time; deep work improves; complex problems get solved; team satisfaction with working conditions increases.",
-    "status": "NEW",
-    "calibrationSignals": [
-      {
-        "id": "SIG-218",
-        "observableId": "C4-O13",
-        "capabilityId": "C4",
-        "signalText": "Focus time protection: 'Established meeting-free mornings and async-first status updates — engineer focus time increased from 2.5 to 5 hours/day, complex feature delivery improved 35%'",
-        "signalType": "metric",
-        "sourceSubTopic": "Focus Time Protection"
       }
     ]
   },
@@ -4982,36 +4948,6 @@
     ]
   },
   {
-    "id": "C5-O16",
-    "capabilityId": "C5",
-    "shortText": "Runs weekly triad syncs with PM and Design using shared OKRs and joint quarterly retrospectives",
-    "slug": "maintains-triad-alignment-through-regular-syncs-and-shared-metrics",
-    "fullExample": "Weekly 30-minute triad sync with PM and Design lead. Shared OKRs (not separate Eng/PM OKRs). Joint quarterly retrospective. When disagreements arise, resolves within the triad before escalating.",
-    "evidenceTypes": [
-      "1_1_notes",
-      "planning_artifact"
-    ],
-    "defaultWeight": 0.057,
-    "requiredFrequency": "continuous",
-    "emRelevance": "High",
-    "directorRelevance": "Medium",
-    "levelNotes": "EMs maintain team-level triad health; Directors ensure triad model adopted across their org",
-    "why": "Most cross-functional friction stems from misaligned incentives and infrequent communication — regular triad alignment prevents the adversarial dynamic that derails delivery. The Eng/PM/Design triad should operate as a single leadership unit with shared OKRs, not three functions reporting to a meeting.",
-    "how": "Establish a weekly 30-minute triad sync (Eng, PM, Design) with rotating facilitation. Create shared success metrics and OKRs — not separate Eng/PM/Design OKRs. Resolve disagreements within the triad first; escalate only after 1 week of unresolved discussion with a written options doc. Run joint quarterly retrospectives to assess triad health. Track cross-functional escalation frequency — target <2 escalations per quarter. Alignment is a continuous practice, not a quarterly planning event. Validate with metric 8.1 (OKR Achievement Rate) and 2.5 (Sprint Commitment Accuracy).",
-    "expectedResult": "No 'us vs them' dynamic between Eng, PM, and Design; shared ownership of outcomes; disagreements resolved quickly; team sees unified leadership.",
-    "status": "NEW",
-    "calibrationSignals": [
-      {
-        "id": "SIG-240",
-        "observableId": "C5-O16",
-        "capabilityId": "C5",
-        "signalText": "Triad health signal: 'Established shared OKRs and weekly triad syncs with PM and Design — cross-functional escalations dropped from 5/quarter to 0, joint retro satisfaction 4.5/5'",
-        "signalType": "metric",
-        "sourceSubTopic": "Product Triad Alignment"
-      }
-    ]
-  },
-  {
     "id": "C6-O13",
     "capabilityId": "C6",
     "shortText": "Creates clear career pathways for engineers at all levels, including IC and management tracks",
@@ -5038,45 +4974,6 @@
         "signalText": "Career pathway clarity: 'Documented explicit IC and management career tracks — 100% of reports have active career plans, Staff IC track adopted by 3 engineers who would have otherwise become reluctant managers'",
         "signalType": "calibration_language",
         "sourceSubTopic": "Career Pathway Design"
-      }
-    ]
-  },
-  {
-    "id": "C1-O16",
-    "capabilityId": "C1",
-    "shortText": "Translates business strategy into team-level goals with explicit success criteria and cross-team dependency mapping",
-    "slug": "translates-business-strategy-into-team-level-goals-with-cross-team-dependencies",
-    "fullExample": "Takes company-level strategic priorities and decomposes them into team OKRs with measurable success criteria. Maps cross-team dependencies explicitly so no team is blocked by an invisible handoff. Quarterly reviews tie team outcomes back to business impact.",
-    "evidenceTypes": [
-      "planning_artifact",
-      "decision_doc",
-      "okr_doc"
-    ],
-    "defaultWeight": 0.061,
-    "requiredFrequency": "quarterly",
-    "emRelevance": "High",
-    "directorRelevance": "High",
-    "levelNotes": "EMs translate org strategy to team goals; Directors ensure cross-team alignment and resolve conflicting priorities",
-    "why": "Without explicit translation, teams execute locally-optimal work that doesn't compound into business outcomes; dependencies become surprise blockers mid-quarter. A cascading OKR structure provides the translation layer — company-level objectives decompose into team-level key results, making the connection from individual work to business strategy structurally explicit.",
-    "how": "Start with business priorities each quarter, decompose to team-level outcomes with measurable success criteria using a cascading OKR structure (company objective to team key results). Map cross-team dependencies in a shared dependency board (e.g., Miro or spreadsheet) updated at the start of each quarter and reviewed bi-weekly. Review progress against business outcomes, not just task completion, in a monthly business review — write the press release first and work backward to team deliverables. Target >85% of team OKRs traceable to a company-level objective. Validate with metric 8.1 (OKR Achievement Rate), 8.2 (Revenue / Business Impact Attribution), and 2.6 (Blocked Work Rate).",
-    "expectedResult": "Every team can articulate how their work connects to business strategy; cross-team dependencies are known and tracked; quarterly reviews show business outcome progress not just feature delivery; >85% of team OKRs trace to company-level objectives.",
-    "status": "NEW",
-    "calibrationSignals": [
-      {
-        "id": "SIG-255",
-        "observableId": "C1-O16",
-        "capabilityId": "C1",
-        "signalText": "Strategic alignment: 'Translated company H2 strategy into 4 team OKRs with measurable business outcomes — 3 of 4 hit target, cross-team dependency map prevented 2 potential mid-quarter blockers'",
-        "signalType": "calibration_language",
-        "sourceSubTopic": "Business Strategy to Team Goals"
-      },
-      {
-        "id": "SIG-256",
-        "observableId": "C1-O16",
-        "capabilityId": "C1",
-        "signalText": "Director-level: 'Established quarterly strategy decomposition process across 5 teams — 85% of team goals now have explicit business outcome metrics, up from 30% before'",
-        "signalType": "metric",
-        "sourceSubTopic": "Cross-Team Goal Alignment"
       }
     ]
   },
