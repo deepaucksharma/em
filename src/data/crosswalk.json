@@ -348,7 +348,7 @@
     "primaryCapability": "C1",
     "secondaryCapability": "C3",
     "mappingNotes": "Org design + architecture alignment",
-    "observableId": "C1-O2"
+    "observableId": "C1-O1"
   },
   {
     "origTopic": "Org Design & Team Topologies",
@@ -933,7 +933,7 @@
     "primaryCapability": "C1",
     "secondaryCapability": "C2",
     "mappingNotes": "Org-level thinking + prioritization",
-    "observableId": "C1-O16"
+    "observableId": "C1-O6"
   },
   {
     "origTopic": "Strategic Alignment & Roadmapping",
