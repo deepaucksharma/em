@@ -305,7 +305,7 @@
   },
   {
     "id": "SIG-039",
-    "observableId": "C1-O2",
+    "observableId": "C1-O1",
     "capabilityId": "C1",
     "signalText": "Inverse Conway in practice: 'Re-orged teams to align with target microservices architecture, enabling independent deployment. Service boundaries now match team boundaries.' Evidence: architecture-to-org mapping doc, deploy independence metrics, cross-team handoff reduction.",
     "signalType": "calibration_language",
@@ -1785,7 +1785,7 @@
   },
   {
     "id": "SIG-224",
-    "observableId": "C1-O16",
+    "observableId": "C1-O6",
     "capabilityId": "C1",
     "signalText": "Strategic alignment: 'Translated company H2 strategy into 4 team OKRs with measurable business outcomes — 3 of 4 hit target, cross-team dependency map prevented 2 potential mid-quarter blockers'",
     "signalType": "calibration_language",
@@ -1793,7 +1793,7 @@
   },
   {
     "id": "SIG-225",
-    "observableId": "C1-O16",
+    "observableId": "C1-O6",
     "capabilityId": "C1",
     "signalText": "Director-level: 'Established quarterly strategy decomposition process across 5 teams — 85% of team goals now have explicit business outcome metrics, up from 30% before'",
     "signalType": "metric",

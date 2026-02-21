@@ -333,7 +333,7 @@
     "id": "P-C1-3",
     "slug": "a-cross-team-initiative-is-stalled-because-no-one-owns-it",
     "observableIds": [
-      "C1-O2",
+      "C1-O1",
       "C5-O7"
     ],
     "capabilityIds": [
@@ -2265,7 +2265,7 @@
     "observableIds": [
       "C1-O11",
       "C1-O5",
-      "C1-O2"
+      "C1-O1"
     ],
     "capabilityIds": [
       "C1",
