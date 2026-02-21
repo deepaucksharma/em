@@ -61,19 +61,19 @@
       {
         "title": "Five Management Anti-Patterns and Why They Happen (LeadDev)",
         "type": "article",
-        "description": "Recognizing destructive leadership patterns \u2014 the Sphinx, Bottleneck, Funnel, and Wrecking Ball \u2014 and their organizational impact.",
+        "description": "Recognizing destructive leadership patterns — the Sphinx, Bottleneck, Funnel, and Wrecking Ball — and their organizational impact.",
         "url": "https://leaddev.com/communication/five-management-anti-patterns-and-why-they-happen"
       },
       {
         "title": "The AI-Augmented Team: Rethinking Roles, Skills, and Leadership (LeadDev)",
         "type": "article",
-        "description": "How engineering leaders must redesign team structures and operating models to leverage AI capabilities \u2014 explicit human-AI task boundaries, updated cognitive load calculations, and the shift from headcount scaling to capability scaling.",
+        "description": "How engineering leaders must redesign team structures and operating models to leverage AI capabilities — explicit human-AI task boundaries, updated cognitive load calculations, and the shift from headcount scaling to capability scaling.",
         "url": "https://leaddev.com/technical-direction/the-ai-augmented-team-rethinking-roles-skills-and-leadership"
       },
       {
         "title": "Shaped by Demand: The Power of Fluid Teams (LeadDev)",
         "type": "article",
-        "description": "Dan North's demand-led planning model \u2014 teams of 20-200 people reorganize quarterly based on expected demand via big-room self-selection. Balances delivery, discovery, and Kaizen. Challenges the stable long-lived team orthodoxy with 10+ years of evolution.",
+        "description": "Dan North's demand-led planning model — teams of 20-200 people reorganize quarterly based on expected demand via big-room self-selection. Balances delivery, discovery, and Kaizen. Challenges the stable long-lived team orthodoxy with 10+ years of evolution.",
         "url": "https://leaddev.com/team/shaped-by-demand-the-power-of-fluid-teams"
       }
     ],
@@ -209,25 +209,25 @@
       {
         "title": "Designing Data-Intensive Applications",
         "type": "book",
-        "description": "Martin Kleppmann's essential guide to the principles and practicalities of data systems, covering consistency, partitioning, replication, and stream processing.",
+        "description": "Covers consistency, partitioning, replication, and stream processing for distributed data systems. Essential mental models for evaluating architecture trade-offs.",
         "url": "https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321"
       },
       {
         "title": "A Philosophy of Software Design",
         "type": "book",
-        "description": "John Ousterhout's concise guide to managing complexity in software, focusing on deep modules, information hiding, and strategic vs. tactical programming.",
+        "description": "Covers complexity management through deep modules, information hiding, and strategic vs. tactical programming. Directly applicable to design review criteria.",
         "url": "https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X"
       },
       {
         "title": "System Design Interview (Vol 1 & 2)",
         "type": "book",
-        "description": "Alex Xu's comprehensive walkthrough of large-scale system design problems, useful both for interviews and for building mental models of distributed systems.",
+        "description": "Walkthrough of large-scale system design problems; builds mental models for distributed systems including load balancing, caching, and data partitioning.",
         "url": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF"
       },
       {
         "title": "Fundamentals of Software Architecture",
         "type": "book",
-        "description": "A structured course covering architecture styles (monolith, microservices, event-driven), architecture characteristics (scalability, reliability), and the role of the architect in modern orgs.",
+        "description": "Covers architecture styles (monolith, microservices, event-driven), architecture characteristics (scalability, reliability), and the architect's role in modern organizations.",
         "url": "https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/"
       }
     ],
@@ -235,19 +235,19 @@
       {
         "title": "Architecture Decision Record (ADR) Template",
         "type": "template",
-        "description": "A lightweight template for documenting architecture decisions including context, decision, status, and consequences, fostering transparency and institutional memory.",
+        "description": "Lightweight template for documenting architecture decisions: context, decision, status, and consequences. Enables institutional memory and prevents relitigating settled decisions.",
         "url": null
       },
       {
         "title": "System Design Review Workshop",
         "type": "workshop",
-        "description": "A facilitated workshop where participants present system designs and receive structured feedback on scalability, reliability, operability, and alignment with business requirements.",
+        "description": "Facilitated workshop: participants present system designs and receive structured feedback on scalability, reliability, operability, and business alignment.",
         "url": null
       },
       {
         "title": "Failure Mode Analysis Exercise",
         "type": "exercise",
-        "description": "Take an existing system design and systematically identify failure modes, single points of failure, and cascading failure risks, then propose mitigations for each.",
+        "description": "Take an existing system design and systematically identify failure modes, single points of failure, and cascading failure risks; propose mitigations for each.",
         "url": null
       },
       {
@@ -259,37 +259,37 @@
       {
         "title": "Steel Threads Are the Missing Link in Your System Design",
         "type": "article",
-        "description": "Steel threads \u2014 the thinnest possible production-grade end-to-end flow \u2014 force teams to confront integration risk early. Key insight: the handoffs between components are where systems break; steel threads exercise those handoffs before you've built everything.",
+        "description": "Steel threads — the thinnest possible production-grade end-to-end flow — force teams to confront integration risk early. Key insight: the handoffs between components are where systems break; steel threads exercise those handoffs before you've built everything.",
         "url": "https://leaddev.com/software-quality/steel-threads-missing-link-your-system-design"
       },
       {
         "title": "Documenting and Communicating Architectural Decisions (LeadDev)",
         "type": "article",
-        "description": "Lightweight, transparent methods for documenting architecture decisions in agile teams \u2014 enabling team autonomy while maintaining architectural coherence.",
+        "description": "Lightweight, transparent methods for documenting architecture decisions in agile teams — enabling team autonomy while maintaining architectural coherence.",
         "url": "https://leaddev.com/code-reviews-docs/documenting-and-communicating-architectural-decisions"
       },
       {
         "title": "A Leader's Blueprint for Scaling Systems (LeadDev)",
         "type": "article",
-        "description": "How engineering leaders identify and break through scalability ceilings \u2014 the strategic architectural decisions needed at each system growth inflection point.",
+        "description": "How engineering leaders identify and break through scalability ceilings — the strategic architectural decisions needed at each system growth inflection point.",
         "url": "https://leaddev.com/technical-direction/a-leaders-blueprint-for-scaling-systems"
       },
       {
         "title": "How AI-Generated Code Compounds Technical Debt (LeadDev)",
         "type": "article",
-        "description": "Why AI-generated code creates a new category of tech debt \u2014 higher volume, lower comprehension, pattern-based duplication \u2014 and what guardrails engineering leaders need to establish.",
+        "description": "Why AI-generated code creates a new category of tech debt — higher volume, lower comprehension, pattern-based duplication — and what guardrails engineering leaders need to establish.",
         "url": "https://leaddev.com/technical-direction/how-ai-generated-code-compounds-technical-debt"
       },
       {
         "title": "The Architecture Advice Process (LeadDev)",
         "type": "article",
-        "description": "Andrew Harmel-Law's decentralized architecture decision model \u2014 anyone can make architectural decisions after consulting affected parties, replacing ivory-tower mandates with distributed ownership.",
+        "description": "Andrew Harmel-Law's decentralized architecture decision model — anyone can make architectural decisions after consulting affected parties, replacing ivory-tower mandates with distributed ownership.",
         "url": "https://leaddev.com/technical-direction/facilitating-software-architecture-andrew-harmel-law-conversation"
       },
       {
         "title": "AI Won't Fix Developer Productivity Unless You Fix Context First (LeadDev)",
         "type": "article",
-        "description": "Context engineering as a named discipline \u2014 organizations with 500 developers lose up to $7.9M annually from context inefficiencies. Self-serve documentation access makes developers 4.4x more productive. Build a context layer linking decisions, discussions, and system history before investing in AI tools.",
+        "description": "Context engineering as a named discipline — organizations with 500 developers lose up to $7.9M annually from context inefficiencies. Self-serve documentation access makes developers 4.4x more productive. Build a context layer linking decisions, discussions, and system history before investing in AI tools.",
         "url": "https://leaddev.com/technical-direction/ai-wont-fix-developer-productivity-unless-you-fix-context-first"
       }
     ],
@@ -297,25 +297,25 @@
       {
         "title": "Migration Strategy Case Studies",
         "type": "case-study",
-        "description": "Analysis of large-scale system migrations (monolith to microservices, data center to cloud, legacy rewrites) including the technical and organizational strategies that made them succeed or fail.",
+        "description": "Analysis of large-scale system migrations (monolith to microservices, data center to cloud, legacy rewrites) covering both technical and organizational strategies.",
         "url": null
       },
       {
         "title": "Architecture Review Board Participation",
         "type": "community",
-        "description": "Join or establish an architecture review board that evaluates cross-cutting technical decisions, ensuring consistency and quality across the engineering organization.",
+        "description": "Join or establish an architecture review board that evaluates cross-cutting technical decisions for consistency and quality across teams.",
         "url": null
       },
       {
         "title": "Staff+ Engineer Architecture Mentorship",
         "type": "mentorship",
-        "description": "Pair with a Staff or Principal engineer to develop the skill of evaluating architectural tradeoffs, navigating ambiguity in large-scale design, and influencing technical direction.",
+        "description": "Pair with a Staff or Principal engineer to develop trade-off evaluation skills, navigate design ambiguity, and influence technical direction.",
         "url": null
       },
       {
         "title": "Evolutionary Architecture Framework",
         "type": "framework",
-        "description": "A framework for designing systems that support guided, incremental change across multiple dimensions, enabling architecture to evolve alongside changing business requirements.",
+        "description": "Framework for designing systems that support guided, incremental change across multiple dimensions as business requirements evolve.",
         "url": null
       }
     ]
@@ -326,25 +326,25 @@
       {
         "title": "The Manager's Path",
         "type": "book",
-        "description": "Camille Fournier's guide to engineering leadership at every level, with practical advice on establishing team processes, running effective meetings, and creating operational cadences.",
+        "description": "Covers engineering leadership at every level: establishing team processes, running effective meetings, and creating operational cadences that scale.",
         "url": "https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897"
       },
       {
         "title": "High Output Management",
         "type": "book",
-        "description": "Andy Grove's classic on management fundamentals, introducing concepts like leverage, output measurement, and the managerial activity of creating and maintaining operational rhythms.",
+        "description": "Management fundamentals: leverage, output measurement, and creating operational rhythms. The concept of managerial output as the output of the organization under your management.",
         "url": "https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884"
       },
       {
         "title": "Team Topologies",
         "type": "book",
-        "description": "Matthew Skelton and Manuel Pais' framework for organizing teams for fast flow, covering team types, interaction modes, and how operational structure affects software delivery.",
+        "description": "Framework for organizing teams for fast flow: team types, interaction modes, and how operational structure directly affects software delivery speed.",
         "url": "https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819"
       },
       {
         "title": "Effective Sprint Ceremonies for Engineering Teams",
         "type": "article",
-        "description": "A practical guide to running standups, retrospectives, planning sessions, and demos that actually drive team effectiveness rather than becoming bureaucratic overhead.",
+        "description": "Practical guide to running standups, retrospectives, planning sessions, and demos that drive team effectiveness rather than becoming bureaucratic overhead.",
         "url": "https://www.atlassian.com/agile/scrum/ceremonies"
       }
     ],
@@ -352,7 +352,7 @@
       {
         "title": "Team Operating Manual Template",
         "type": "template",
-        "description": "A template for documenting your team's operating rhythm including meeting cadences, communication norms, decision-making processes, and escalation paths.",
+        "description": "Template for documenting team operating rhythm: meeting cadences, communication norms, decision-making processes, and escalation paths.",
         "url": null
       },
       {
@@ -382,7 +382,7 @@
       {
         "title": "What Is Developer Experience? Your Route to Better Productivity (LeadDev)",
         "type": "article",
-        "description": "Developer experience as a lens for productivity: cognitive load, flow state, and feedback loops \u2014 practical framework for identifying and prioritizing DevEx improvements.",
+        "description": "Developer experience as a lens for productivity: cognitive load, flow state, and feedback loops — practical framework for identifying and prioritizing DevEx improvements.",
         "url": "https://leaddev.com/process/what-developer-experience-your-route-better-productivity"
       },
       {
@@ -396,7 +396,7 @@
       {
         "title": "Scaling Operational Rhythms Across Multiple Teams",
         "type": "case-study",
-        "description": "Case studies of how engineering organizations scaled their operational cadences as they grew from one team to ten, examining what stayed the same and what had to change.",
+        "description": "Case studies of how engineering organizations scaled operational cadences from one team to ten, covering what stayed the same and what changed.",
         "url": null
       },
       {
@@ -414,7 +414,7 @@
       {
         "title": "The Operational Excellence Framework",
         "type": "framework",
-        "description": "A comprehensive framework covering the five pillars of operational leadership: cadence design, information flow, decision velocity, accountability structures, and continuous improvement loops.",
+        "description": "Framework covering five pillars of operational leadership: cadence design, information flow, decision velocity, accountability structures, and continuous improvement loops.",
         "url": null
       }
     ]
@@ -487,7 +487,7 @@
       {
         "title": "Anti-Misalignment: Nobody Knows What Alignment Is (LeadDev/Richard Kim)",
         "type": "article",
-        "description": "Reframes alignment as a negative-space problem \u2014 nobody knows what alignment IS, but everyone knows what misalignment FEELS like. Alignment = flow between people where the group feels like a trusted extension of yourself. Most alignment work is actually anti-misalignment: systematically removing misalignment rather than trying to add alignment.",
+        "description": "Reframes alignment as a negative-space problem — nobody knows what alignment IS, but everyone knows what misalignment FEELS like. Alignment = flow between people where the group feels like a trusted extension of yourself. Most alignment work is actually anti-misalignment: systematically removing misalignment rather than trying to add alignment.",
         "url": "https://leaddev.com/team/anti-misalignment-nobody-knows-what-alignment-is"
       }
     ],
@@ -679,7 +679,7 @@
       {
         "title": "Cultural Post Mortems: Learning and Recovering When People Systems Fail (LeadDev)",
         "type": "article",
-        "description": "Applies blameless post-mortem methodology to people-system failures \u2014 culture breakdowns, trust erosion, team dysfunction. Treats cultural incidents with the same structured rigor as technical incidents.",
+        "description": "Applies blameless post-mortem methodology to people-system failures — culture breakdowns, trust erosion, team dysfunction. Treats cultural incidents with the same structured rigor as technical incidents.",
         "url": "https://leaddev.com/culture/cultural-post-mortems-approach-learning-recovering-when-people-systems-fail"
       }
     ],
@@ -716,25 +716,25 @@
       {
         "title": "Site Reliability Engineering (The Google SRE Book)",
         "type": "book",
-        "description": "Google's definitive guide to SRE principles and practices, covering incident management, postmortems, risk management, and building reliable systems at scale.",
+        "description": "Covers SRE principles: SLOs, error budgets, toil management, incident response, and blameless post-mortems. The foundational text for reliability engineering.",
         "url": "https://sre.google/sre-book/table-of-contents/"
       },
       {
         "title": "Incident Management for Operations",
         "type": "book",
-        "description": "Rob Schnepp's guide to structured incident management, covering incident command systems, communication during crises, and post-incident learning processes.",
+        "description": "Practical incident management: ICS roles, communication during incidents, post-incident learning, and building incident response muscle memory.",
         "url": "https://www.amazon.com/Incident-Management-Operations-Rob-Schnepp/dp/1491917628"
       },
       {
         "title": "The Field Guide to Understanding Human Error",
         "type": "book",
-        "description": "Sidney Dekker's essential reading on moving beyond blame in incident analysis, understanding how well-intentioned actions lead to failure, and building just cultures.",
+        "description": "Human factors in incidents: how cognitive biases, organizational pressures, and system complexity contribute to failures. Shifts focus from blame to systemic understanding.",
         "url": "https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/1472439058"
       },
       {
         "title": "Introduction to Chaos Engineering",
         "type": "course",
-        "description": "A course covering the principles and practices of chaos engineering, including how to design experiments that proactively surface reliability weaknesses before they cause outages.",
+        "description": "Principles and practices of chaos engineering: controlled experiments to discover systemic weaknesses before they cause production incidents.",
         "url": "https://www.gremlin.com/community/tutorials/chaos-engineering-the-history-principles-and-practice/"
       }
     ],
@@ -784,19 +784,19 @@
       {
         "title": "Is AI-Assisted Coding an Incident Magnet? (LeadDev)",
         "type": "article",
-        "description": "How AI-generated code creates a new incident class \u2014 code ships faster but with less human comprehension, eroding domain expertise needed for incident diagnosis and creating cascading failures through opaque AI decision chains.",
+        "description": "How AI-generated code creates a new incident class — code ships faster but with less human comprehension, eroding domain expertise needed for incident diagnosis and creating cascading failures through opaque AI decision chains.",
         "url": "https://leaddev.com/software-quality/ai-assisted-coding-incident-magnet"
       },
       {
         "title": "How Monzo Built a Stand-In Platform to Sidestep Costly Outages (LeadDev)",
         "type": "article",
-        "description": "Monzo's standalone minimal DR system on a separate cloud provider (GCP vs primary AWS) \u2014 built by 6 engineers, costs 1% of total cloud bill, supports core banking features, constantly tested in production, activatable in seconds.",
+        "description": "Monzo's standalone minimal DR system on a separate cloud provider (GCP vs primary AWS) — built by 6 engineers, costs 1% of total cloud bill, supports core banking features, constantly tested in production, activatable in seconds.",
         "url": "https://leaddev.com/operations-and-incidents/how-monzo-built-a-stand-in-platform-to-sidestep-costly-outages"
       },
       {
         "title": "The Twin Mandate: What Leaders Still Don't Get About Observability (LeadDev)",
         "type": "article",
-        "description": "Charity Majors on observability's dual mandate \u2014 external (customer happiness) and internal (developer experience). Observability 2.0: move from three pillars with multiple sources of truth to one source of truth (wide structured log events). Observability should roll up to software engineering, not infrastructure.",
+        "description": "Charity Majors on observability's dual mandate — external (customer happiness) and internal (developer experience). Observability 2.0: move from three pillars with multiple sources of truth to one source of truth (wide structured log events). Observability should roll up to software engineering, not infrastructure.",
         "url": "https://leaddev.com/operations-and-incidents/the-twin-mandate-what-leaders-still-dont-get-about-observability"
       }
     ],
@@ -833,25 +833,25 @@
       {
         "title": "Accelerate: The Science of Lean Software and DevOps",
         "type": "book",
-        "description": "Nicole Forsgren, Jez Humble, and Gene Kim's research-backed guide to measuring software delivery performance using the four key metrics: deployment frequency, lead time, MTTR, and change failure rate.",
+        "description": "DORA research: the four key metrics that predict engineering and business performance. Essential for understanding what to measure and why.",
         "url": "https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339"
       },
       {
         "title": "How to Measure Anything",
         "type": "book",
-        "description": "Douglas Hubbard's guide to applied information economics, teaching how to quantify seemingly intangible things and make better decisions with imperfect data.",
+        "description": "OKR methodology: setting outcome-oriented objectives with measurable key results. Practical scoring and calibration.",
         "url": "https://www.amazon.com/How-Measure-Anything-Intangibles-Business/dp/1118539273"
       },
       {
         "title": "Measure What Matters",
         "type": "book",
-        "description": "John Doerr's introduction to OKRs (Objectives and Key Results), providing a framework for setting measurable goals that align teams with organizational outcomes.",
+        "description": "Developer productivity measurement: the SPACE framework (Satisfaction, Performance, Activity, Communication, Efficiency) for multi-dimensional productivity assessment.",
         "url": "https://www.amazon.com/Measure-What-Matters-Google-Foundation/dp/0525536221"
       },
       {
         "title": "Engineering Metrics That Matter",
         "type": "article",
-        "description": "A practical guide to selecting engineering metrics that drive behavior change, avoid Goodhart's Law pitfalls, and genuinely reflect team health and delivery effectiveness.",
+        "description": "Analytics fundamentals for engineering leaders: A/B testing, statistical significance, and data-driven decision making.",
         "url": "https://newsletter.pragmaticengineer.com/p/engineering-metrics"
       }
     ],
@@ -895,13 +895,13 @@
       {
         "title": "How DX Core 4 Aims to Unify Developer Productivity Frameworks (LeadDev)",
         "type": "article",
-        "description": "The DX Core 4 framework (Speed, Effectiveness, Quality, Impact) as a prescriptive meta-model that subsumes DORA and SPACE \u2014 practical guidance on framework selection based on organizational maturity.",
+        "description": "The DX Core 4 framework (Speed, Effectiveness, Quality, Impact) as a prescriptive meta-model that subsumes DORA and SPACE — practical guidance on framework selection based on organizational maturity.",
         "url": "https://leaddev.com/reporting/dx-core-4-aims-to-unify-developer-productivity-frameworks"
       },
       {
         "title": "What Is Diff Authoring Time? The Developer Metric Taking Meta by Storm (LeadDev)",
         "type": "article",
-        "description": "Meta's Diff Authoring Time (DAT) measures the inner development loop \u2014 actual active time from first IDE activity to final session. Average DAT at Meta is 50 minutes. Used to A/B test tooling investments: React compiler yielded 33% improvement, code sharing >50% improvement.",
+        "description": "Meta's Diff Authoring Time (DAT) measures the inner development loop — actual active time from first IDE activity to final session. Average DAT at Meta is 50 minutes. Used to A/B test tooling investments: React compiler yielded 33% improvement, code sharing >50% improvement.",
         "url": "https://leaddev.com/reporting/what-is-diff-authoring-time-developer-metric-taking-meta-by-storm"
       }
     ],
@@ -1047,7 +1047,7 @@
         "url": "https://review.firstround.com/the-anatomy-of-the-perfect-technical-interview-from-a-former-amazon-vp"
       },
       {
-        "title": "The First 90 Days \u2014 Michael Watkins",
+        "title": "The First 90 Days — Michael Watkins",
         "type": "book",
         "description": "Michael Watkins's essential guide for leaders in transition, applicable to designing onboarding programs that get new engineers to full productivity quickly, covering ramp-up strategies, milestone check-ins, and early wins.",
         "url": "https://www.amazon.com/First-90-Days-Strategies-Expanded/dp/1422188612"
@@ -1081,7 +1081,7 @@
       {
         "title": "The Secret to Hiring Engineers When You Pay Less Than Google",
         "type": "article",
-        "description": "Competitive hiring strategies beyond compensation \u2014 building employer brand, articulating differentiated value propositions, and targeting candidates whose priorities match your strengths.",
+        "description": "Competitive hiring strategies beyond compensation — building employer brand, articulating differentiated value propositions, and targeting candidates whose priorities match your strengths.",
         "url": "https://leaddev.com/hiring/secret-hiring-engineers-when-you-pay-less-google"
       },
       {
@@ -1099,19 +1099,19 @@
       {
         "title": "Interviewing in the Age of AI (LeadDev)",
         "type": "article",
-        "description": "How to redesign interview processes when candidates use AI tools \u2014 evaluating engineering judgment, system thinking, and communication rather than raw code production. AI-resilient assessment design.",
+        "description": "How to redesign interview processes when candidates use AI tools — evaluating engineering judgment, system thinking, and communication rather than raw code production. AI-resilient assessment design.",
         "url": "https://leaddev.com/hiring/interviewing-in-the-age-of-ai"
       },
       {
         "title": "AI-First Hiring Is Everywhere and It's Not Slowing Down (LeadDev)",
         "type": "article",
-        "description": "The equity and effectiveness implications of AI in hiring \u2014 from candidates using AI during assessments to companies requiring AI proficiency as a hiring signal. Navigating the shift without amplifying bias.",
+        "description": "The equity and effectiveness implications of AI in hiring — from candidates using AI during assessments to companies requiring AI proficiency as a hiring signal. Navigating the shift without amplifying bias.",
         "url": "https://leaddev.com/hiring/ai-first-hiring-everywhere-not-slowing-down"
       },
       {
         "title": "Your Top Job Candidate Might Be a Coordinated AI Scam (LeadDev)",
         "type": "article",
-        "description": "How scammers operate from call centers \u2014 scraping job postings, using AI to generate tailored resumes at scale, rotating different people through multi-round interviews. Detection: disable virtual backgrounds, hand-movement deepfake tests, STAR method probing, in-depth tool opinion questions.",
+        "description": "How scammers operate from call centers — scraping job postings, using AI to generate tailored resumes at scale, rotating different people through multi-round interviews. Detection: disable virtual backgrounds, hand-movement deepfake tests, STAR method probing, in-depth tool opinion questions.",
         "url": "https://leaddev.com/hiring/your-top-job-candidate-might-be-coordinated-ai-scam"
       }
     ],
@@ -1210,19 +1210,19 @@
       {
         "title": "How to Hire Force Multipliers, Not 10x Engineers (LeadDev)",
         "type": "article",
-        "description": "Why teams should screen for force-multiplier traits (cumulative culture, intellectual humility, ecological awe) rather than raw individual output \u2014 hiring for team elevation, not solo performance.",
+        "description": "Why teams should screen for force-multiplier traits (cumulative culture, intellectual humility, ecological awe) rather than raw individual output — hiring for team elevation, not solo performance.",
         "url": "https://leaddev.com/hiring/how-hire-force-multipliers-10x-engineers"
       },
       {
         "title": "Safety and Belonging: A Ritual to Jumpstart Psychological Safety (LeadDev)",
         "type": "article",
-        "description": "Concrete facilitated ritual from Riot Games for rebuilding trust from near-zero \u2014 a structured circle exercise focused on personal sharing that builds the interpersonal foundation for professional candor.",
+        "description": "Concrete facilitated ritual from Riot Games for rebuilding trust from near-zero — a structured circle exercise focused on personal sharing that builds the interpersonal foundation for professional candor.",
         "url": "https://leaddev.com/culture/safety-and-belonging-a-ritual-to-jumpstart-psychological-safety"
       },
       {
         "title": "Shaping Inclusive Cultures for Remote Engineering Teams (LeadDev)",
         "type": "article",
-        "description": "Framework decomposing culture into norms, rituals, and spaces \u2014 and how to explicitly redesign each for remote/distributed contexts where equity requires intentional adaptation.",
+        "description": "Framework decomposing culture into norms, rituals, and spaces — and how to explicitly redesign each for remote/distributed contexts where equity requires intentional adaptation.",
         "url": "https://leaddev.com/culture/shaping-inclusive-cultures-remote-engineering-teams"
       }
     ],
@@ -1265,7 +1265,7 @@
       {
         "title": "The Phoenix Project",
         "type": "book",
-        "description": "Gene Kim's novel about IT transformation, illustrating operational discipline themes \u2014 including change management, risk controls, and cross-functional collaboration \u2014 that are directly relevant to building a strong security and compliance posture.",
+        "description": "Gene Kim's novel about IT transformation, illustrating operational discipline themes — including change management, risk controls, and cross-functional collaboration — that are directly relevant to building a strong security and compliance posture.",
         "url": "https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290"
       },
       {
@@ -1426,7 +1426,7 @@
       {
         "title": "Mind the Gap: Navigating the Staff+ Performance Cliff (LeadDev)",
         "type": "article",
-        "description": "The 'Performance Cliff' \u2014 a named psychological phenomenon where highly capable engineers feel lost stepping into Staff+ roles. Old success metrics no longer apply, feedback becomes sparse, and the transition from team-focused to org-level impact creates a vacuum of direction.",
+        "description": "The 'Performance Cliff' — a named psychological phenomenon where highly capable engineers feel lost stepping into Staff+ roles. Old success metrics no longer apply, feedback becomes sparse, and the transition from team-focused to org-level impact creates a vacuum of direction.",
         "url": "https://leaddev.com/career-ladders-and-progression/mind-the-gap-navigating-the-staff-performance-cliff"
       }
     ],

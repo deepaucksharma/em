@@ -64,7 +64,7 @@
       "Tech debt backlog is triaged and prioritized quarterly",
       "System reliability targets (SLOs) are defined for all critical services",
       "Architecture review board meets regularly with clear decision log",
-      "Amazon tracks design doc completion rate and review turnaround time as architecture process health indicators",
+      "Design doc completion rate and review turnaround time tracked",
       "Tech debt registry maintained with business impact estimates per item"
     ],
     "laggingIndicators": [
@@ -72,7 +72,7 @@
       "Median time to integrate a new service decreased over 6 months",
       "Tech debt ratio (debt work / total work) remains within target band",
       "No architecture-related production incidents recurring after fix",
-      "Google measures design doc adoption rate and architecture decision reversal frequency as quality signals",
+      "Design doc adoption rate and architecture decision reversal frequency tracked as quality signals",
       "Tech debt ratio stable or improving quarter-over-quarter"
     ],
     "measurementAntiPatterns": [
@@ -95,7 +95,7 @@
       "Blockers are identified and escalated within 24 hours",
       "Team working agreements are documented and reviewed quarterly",
       "Delivery forecasts are shared with stakeholders before each cycle",
-      "Spotify tracks squad Health Check scores as a leading indicator of operational rhythm and team well-being",
+      "Squad health check scores tracked as leading indicator of operational rhythm",
       "Engineers report 4+ hours of daily uninterrupted focus time",
       "Every team ceremony has documented purpose and measured value delivery"
     ],
@@ -104,7 +104,7 @@
       "Cycle time for standard work items is stable or improving quarter-over-quarter",
       "Meeting effectiveness scores above 3.5/5 in team surveys",
       "Zero missed external deadlines in the quarter",
-      "Amazon's operational excellence reviews measure 'mechanism completion rate' — the percentage of identified process gaps that have automated solutions",
+      "Mechanism completion rate — percentage of identified process gaps with automated solutions",
       "Retro action item completion rate above 80%"
     ],
     "measurementAntiPatterns": [

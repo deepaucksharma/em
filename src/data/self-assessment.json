@@ -102,11 +102,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Defers all architecture decisions to senior ICs; unable to evaluate technical tradeoffs or ask probing design questions"
+        "description": "Defers all architecture decisions to senior ICs; cannot name the top 3 technical risks in their system; does not attend or contribute to design reviews"
       },
       {
         "level": 2,
-        "description": "Understands basic system components and can follow technical discussions; occasionally asks clarifying questions about scalability or reliability"
+        "description": "Understands basic system components and follows technical discussions; asks clarifying questions about scalability or reliability in design reviews; can diagram their team's service dependencies"
       },
       {
         "level": 3,
@@ -151,11 +151,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Team operates without consistent rituals; standups, retros, and planning happen sporadically or feel unproductive"
+        "description": "Team operates without consistent rituals; standups, retros, and planning happen sporadically or not at all; cannot state the purpose of any team ceremony"
       },
       {
         "level": 2,
-        "description": "Basic operational cadences exist but are inconsistently enforced; blockers surface late and sprint commitments are frequently missed"
+        "description": "Basic operational cadences exist but are inconsistently enforced; blockers surface late in the sprint; sprint commitments missed >30% of the time"
       },
       {
         "level": 3,
@@ -347,11 +347,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Reacts to incidents without a structured response process; postmortems are skipped or blame-oriented; recurring issues persist"
+        "description": "Reacts to incidents without defined roles or process; post-mortems blame individuals or don't happen; on-call page volume unknown"
       },
       {
         "level": 2,
-        "description": "Follows incident response procedures when prompted but does not proactively improve runbooks or drive systemic fixes from postmortems"
+        "description": "Participates in incident response but roles are ad hoc; post-mortems happen inconsistently with <50% action item completion; on-call load tracked but not actively managed"
       },
       {
         "level": 3,
@@ -396,11 +396,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Relies on anecdotes and gut feeling to assess team performance; no defined metrics for delivery, quality, or impact"
+        "description": "No delivery metrics tracked; team health is anecdotal; cannot state deployment frequency, lead time, or change failure rate"
       },
       {
         "level": 2,
-        "description": "Tracks basic delivery metrics (velocity, bug counts) but does not connect them to business outcomes or use them to drive decisions"
+        "description": "Basic metrics exist but are checked infrequently; dashboards built but not used for decisions; metrics used to report status upward, not to diagnose problems"
       },
       {
         "level": 3,

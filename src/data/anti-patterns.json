@@ -7,21 +7,19 @@
       "C3-O1"
     ],
     "capabilityId": "C3",
-    "shortDesc": "EM defers all technical direction to TL/Staff and has no opinion on system evolution. Architecture drifts without vision, tech debt compounds unchecked, and senior engineers lose respect for a manager who can't engage technically.",
+    "shortDesc": "EM defers all technical direction to TL/Staff with no opinion on system evolution. Architecture drifts without vision; tech debt compounds unchecked.",
     "warningSigns": [
-      "No tech strategy doc exists",
-      "Architecture decisions are ad hoc",
-      "Design reviews are inconsistent or skipped",
-      "Tech debt is invisible until it causes incidents"
+      "No tech strategy doc exists or current doc is >6 months stale",
+      "Architecture decisions lack documented rationale (no ADRs)",
+      "Design reviews are skipped or EM doesn't attend",
+      "Tech debt surfaces only through incidents, never through planned review"
     ],
-    "impact": "Team drifts architecturally; inconsistent quality; senior engineers lose respect for EM; tech debt compounds until velocity collapses",
+    "impact": "Within 2-3 quarters: team drifts architecturally; senior engineers route around EM for technical decisions; tech debt compounds until velocity drops measurably.",
     "recoveryActions": [
-      "Co-author tech strategy with TL.",
-      "Attend design reviews (even if not the deepest technical voice).",
-      "Build opinion through asking questions, not pretending to know.",
-      "Own tech debt visibility even if you don't write the code.",
-      "At Google, EMs co-own a written tech strategy doc alongside TLs, reviewed quarterly — absence of architectural opinion is a gap, not a feature.",
-      "See Playbook: 'Managing Tech Debt Strategically Without Stopping the Roadmap' (P-C3-4) for how to build and maintain technical strategy even when you're not the deepest technical voice."
+      "Co-author tech strategy doc with TL within first month: current state → target state → migration path.",
+      "Attend every design review; contribute by bringing business constraints and asking about failure modes.",
+      "Build technical opinion through asking questions, not pretending expertise.",
+      "Own tech debt visibility: maintain a registry even if you don't write the remediation code."
     ],
     "sourceTopic": "Technical Strategy & System Ownership",
     "mappingNotes": "Architecture without vision → tech vision observable"
@@ -35,19 +33,19 @@
       "C3-O2"
     ],
     "capabilityId": "C3",
-    "shortDesc": "EM inserts themselves into every technical decision, bypassing TL and senior engineers. Creates a single point of failure where the team cannot function autonomously and senior talent atrophies or leaves.",
+    "shortDesc": "EM inserts themselves into every technical decision, bypassing TL and senior engineers. Creates a single point of failure; team cannot function autonomously.",
     "warningSigns": [
-      "EM reviews all PRs",
-      "Design docs require EM approval",
-      "Senior engineers are disempowered",
-      "EM is the bottleneck for every decision"
+      "EM reviews all or most PRs personally",
+      "Design docs require EM sign-off before proceeding",
+      "Senior engineers escalate decisions they should own; PR approval requires EM sign-off",
+      "Team velocity drops measurably when EM is on vacation or in back-to-back meetings"
     ],
-    "impact": "Senior engineers leave (not empowered); team can't function when EM is on vacation; EM is stuck in IC work instead of managing; org bottleneck",
+    "impact": "Within 1-2 quarters: senior engineers leave (not empowered); team velocity drops when EM is unavailable; EM spends >50% time on IC work instead of management.",
     "recoveryActions": [
-      "Create a one-page Decision Authority Matrix within your first month: list 10-15 common decision types (tech stack, architecture, API contracts, hiring, sprint scope, on-call policy) and assign each to EM, TL, or IC with explicit escalation criteria. Review in team sync weekly for 4 weeks, then monthly.",
-      "Practice saying 'what do you think?' instead of 'here's what we should do'",
-      "Amazon's Single-Threaded Leadership model explicitly separates strategic ownership (EM) from technical execution (principal engineer), preventing this bottleneck by design.",
-      "See Playbook: 'Making a High-Stakes Technical Decision Under Time Pressure' (P-C7-4) for when to weigh in vs. delegate on technical decisions."
+      "Create a Decision Authority Matrix within first month: list 10-15 common decision types and assign each to EM, TL, or IC with explicit escalation criteria.",
+      "Remove yourself from PR review for all changes under 500 lines that don't cross service boundaries.",
+      "Practice 'what do you think?' before 'here's what we should do.'",
+      "Track delegation: measure how many decisions you make vs. delegate per week; target <20% EM-decided within 2 months."
     ],
     "sourceTopic": "Technical Strategy & System Ownership",
     "mappingNotes": "Over-involved architect → architecture decisions/delegation observable"
@@ -62,7 +60,7 @@
       "C9-O5"
     ],
     "capabilityId": "C9",
-    "shortDesc": "Team tracks DORA/SPACE dashboards religiously but never changes behavior based on what the data shows. Dashboards measure activity instead of outcomes, metrics get gamed, and beautiful charts mask declining real productivity.",
+    "shortDesc": "Dashboards exist but nobody uses them for decisions. Metrics are collected for reporting, not for diagnosis. The team can't name a single decision that was changed by metric data.",
     "warningSigns": [
       "Beautiful dashboards nobody looks at or acts on",
       "Metrics improve but team doesn't feel faster and customers are unhappy",
@@ -72,16 +70,12 @@
       "No leading indicators — only lagging",
       "Team optimizes for metric movement rather than impact"
     ],
-    "impact": "False confidence in team health; real problems invisible behind green dashboards; team cynicism about measurement; productivity actually declining",
+    "impact": "Within 1-2 quarters: metrics become overhead that produces no value; team resents measurement as busywork; delivery problems stay invisible; leadership distrusts engineering's self-reporting.",
     "recoveryActions": [
-      "Use metrics as diagnostic tools, never performance targets.",
-      "Ask 'what does this metric tell us about friction?' not 'how do we improve this number?'",
-      "Audit every metric: does it connect to a customer or business outcome? Replace activity metrics with outcome metrics.",
-      "Add leading indicators alongside lagging ones.",
-      "Share metrics with team as shared investigation, not report card.",
-      "Ask 'what would change if this metric moved?' — if nothing, remove it.",
-      "Google's DORA research team treats metrics as diagnostic signals, never as individual performance targets — a principle that prevents the gaming this pattern describes.",
-      "See Playbook: 'DORA Metrics Show Decline But Team Feels Fine' (P-C9-1) for how to investigate metric signals without punishing the team."
+      "Audit every dashboard: for each metric, name the last decision it informed. Delete metrics with no decision in 90 days.",
+      "Start with 3 DORA metrics and one developer satisfaction measure — nothing else until these drive decisions.",
+      "Review metrics weekly in team standup: 'What does this data tell us? What should we do differently?'",
+      "Track 'decisions driven by data' as a meta-metric for the first 2 quarters."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
     "mappingNotes": "Metrics theater → outcome metrics / activity metrics observables"
@@ -95,7 +89,7 @@
       "C8-O2"
     ],
     "capabilityId": "C8",
-    "shortDesc": "EM optimizes for shipping speed while quality, reliability, and sustainability degrade. Production instability compounds, the team burns out, and customer trust erodes until a major incident forces a costly stop-the-world quality investment.",
+    "shortDesc": "EM prioritizes feature velocity over reliability until incidents force attention. On-call degrades, post-mortems are skipped or incomplete, and the team enters a cycle of firefighting.",
     "warningSigns": [
       "Rising change failure rate alongside rising deployment frequency",
       "Increasing on-call pages",
@@ -103,13 +97,12 @@
       "Team working overtime 'to ship'",
       "Cutting testing 'to move faster'"
     ],
-    "impact": "Production instability; team burnout; customer trust erosion; eventually a major incident that forces a stop-the-world quality investment",
+    "impact": "Within 2-3 quarters: incident rate increases; on-call becomes unsustainable; senior engineers leave due to burnout; stakeholder trust erodes as outages accumulate.",
     "recoveryActions": [
-      "Track velocity AND quality together (they're a pair, not a trade-off).",
-      "Set minimum quality bar that can't be traded for speed.",
-      "Celebrate reliability wins as much as feature launches.",
-      "Netflix pairs deployment velocity with chaos engineering results — speed without resilience is a red flag in engineering reviews, not a badge of honor.",
-      "See Playbook: 'DORA Metrics Show Decline But Team Feels Fine' (P-C9-1) for a step-by-step scenario addressing this pattern."
+      "Track and publish on-call page rate, MTTR, and post-mortem action completion alongside velocity metrics.",
+      "Implement error budget policy: when error budget is consumed, feature work pauses until reliability improves.",
+      "Reserve minimum 20% capacity for reliability work — protect this in sprint planning.",
+      "Frame reliability investment in business terms: 'Each Sev1 costs approximately X hours of engineering time and Y in customer impact.'"
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
     "mappingNotes": "Velocity obsession → incident response / delivery quality observables"
@@ -156,7 +149,7 @@
       "C8-O3"
     ],
     "capabilityId": "C8",
-    "shortDesc": "Incidents are resolved by the same 2-3 people every time, with tribal knowledge replacing documented process. Hero engineers burn out or leave, and incidents during their absence become catastrophic because the team never built resilience.",
+    "shortDesc": "One or two engineers handle all incidents because they're fastest, creating a single point of failure. The heroes burn out, nobody else learns, and the team is paralyzed when heroes are unavailable.",
     "warningSigns": [
       "Same people always on incident calls",
       "No runbooks",
@@ -164,14 +157,12 @@
       "MTTR depends on who's on-call",
       "Hero engineers burned out"
     ],
-    "impact": "Key person dependency; hero engineers leave (burnout or poaching); incidents during hero's vacation are catastrophic; team never builds resilience",
+    "impact": "Within 1-2 quarters: heroes burn out or leave; remaining team can't handle incidents independently; MTTR spikes when heroes are unavailable; knowledge stays in one person's head.",
     "recoveryActions": [
-      "Document everything the heroes know (pair them with a writer).",
-      "Rotate incident commander role.",
-      "Game days with heroes explicitly excluded.",
-      "Celebrate process, not heroics.",
-      "Google SRE mandates that no single person handles more than 25% of on-call pages; rotation health is a team-level metric, making hero dependence structurally impossible.",
-      "See Playbook: 'Major Production Incident During Your Vacation' (P-C8-1) for how to test whether your team can function without the hero."
+      "Implement mandatory on-call rotation — every team member takes on-call, including senior engineers who currently dodge it.",
+      "Pair junior engineers with experienced ones during on-call rotations for the first 2 cycles.",
+      "Require runbooks for every alert so incident response doesn't depend on tribal knowledge.",
+      "Track incident resolution by person — if one person handles >40% of incidents, redistribute."
     ],
     "sourceTopic": "Operational Risk & Incident Management",
     "mappingNotes": "Hero culture → incident command / on-call health observables"
@@ -184,7 +175,7 @@
       "C8-O2"
     ],
     "capabilityId": "C8",
-    "shortDesc": "Post-incident reviews devolve into blame assignment, with 'human error' as the default root cause. Teams learn to hide incidents and near-misses, real systemic causes go unaddressed, and the same failure modes recur.",
+    "shortDesc": "Post-mortems focus on finding someone to blame rather than systemic causes. Team learns to hide incidents and near-misses; repeat failures continue because root causes go unaddressed.",
     "warningSigns": [
       "People avoid documenting what went wrong",
       "Root causes listed as 'human error'",
@@ -192,15 +183,12 @@
       "Fewer incidents reported (not fewer incidents occurring)",
       "Near-misses never discussed"
     ],
-    "impact": "Real root causes never addressed; repeat incidents; team hides mistakes; culture of fear; actual reliability gets worse while reported incidents go down",
+    "impact": "Within 1-2 quarters: incident reporting drops (hidden incidents); same failures repeat; team psychological safety erodes; voluntary near-miss reporting stops entirely.",
     "recoveryActions": [
-      "Retrain on blameless methodology.",
-      "Leader writes first blameless post-mortem as example.",
-      "Ban 'human error' as root cause.",
-      "Celebrate people who surface near-misses.",
-      "Track action item completion, not blame.",
-      "Google popularized blameless postmortems where root causes must be systemic — 'human error' is never accepted as a root cause, forcing teams to find the process gap.",
-      "See Playbook: 'Production Outage Caused by Your Team's Deploy' (P-C8-2) for a step-by-step scenario addressing this pattern."
+      "Rewrite post-mortem template to remove individual names from root cause section — focus on systems, processes, and tooling.",
+      "EM explicitly models blameless language in every post-mortem they attend.",
+      "Track repeat incident rate as the primary post-mortem effectiveness metric — if incidents repeat, the post-mortem failed.",
+      "Celebrate near-miss reporting publicly — reward the behavior you want to see."
     ],
     "sourceTopic": "Operational Risk & Incident Management",
     "mappingNotes": "Blame post-mortems → blameless post-mortem observable"
@@ -813,7 +801,7 @@
       "C9-O4"
     ],
     "capabilityId": "C9",
-    "shortDesc": "EM drowns the team in dashboards, OKR tracking, and velocity reports until measuring the work consumes more energy than doing the work. Engineers become cynical about metrics, game the numbers, and real productivity declines behind a wall of charts.",
+    "shortDesc": "EM introduces 20+ metrics, dashboards, and reports. Team spends more time measuring than delivering. Engineers game metrics or ignore them entirely because the volume is overwhelming.",
     "warningSigns": [
       "Every meeting opens with 15 minutes of charts",
       "Team spends hours per sprint updating Jira for metric accuracy",
@@ -822,15 +810,12 @@
       "Team privately jokes about 'feeding the dashboard'",
       "Sprint velocity discussed more than customer impact"
     ],
-    "impact": "Engineers feel surveilled rather than supported; intrinsic motivation replaced by metric gaming; actual productivity drops because overhead of measurement is high; team optimizes for what's measurable rather than what's valuable; creative problem-solving and experimentation decline because they don't show up in charts; best engineers leave for teams that trust them",
+    "impact": "Within 1 quarter: team resents measurement overhead; engineers optimize for metric gaming rather than actual outcomes; signal lost in noise; trust in metrics collapses.",
     "recoveryActions": [
-      "Audit: list every metric you track.",
-      "For each one, ask 'when did this metric last change a decision I made?' Kill any metric that hasn't driven a decision in 90 days.",
-      "Limit team-visible dashboards to 3-5 metrics maximum.",
-      "Use metrics as diagnostic tools when something feels wrong, not as continuous surveillance.",
-      "Ask the team: 'which of these measurements are actually useful to you?' — you'll be surprised how few they value.",
-      "Microsoft's SPACE framework deliberately combines perceptual measures (satisfaction, well-being) with behavioral measures (activity, efficiency), preventing single-metric surveillance.",
-      "See Playbook: 'Your Metrics Are Being Gamed and Everyone Knows It' (P-C9-3) for a step-by-step scenario addressing this pattern."
+      "Cut to 5 metrics maximum. For each, it must answer: 'What decision does this inform?'",
+      "Use metric pairings (speed + quality) to prevent gaming — never measure one dimension alone.",
+      "Start simple and evolve: 3 DORA metrics for 2 quarters before adding anything else.",
+      "Remove any metric that hasn't informed a decision in 90 days."
     ],
     "sourceTopic": "Engineering Excellence & Delivery",
     "mappingNotes": "Death by metrics → outcome metrics / activity metrics observables"
@@ -874,7 +859,7 @@
       "C4-O7"
     ],
     "capabilityId": "C4",
-    "shortDesc": "Team drowns in ceremonies, syncs, and rituals that nobody can justify, with agile processes adopted by name without understanding their purpose. Engineers get less than two hours of uninterrupted focus time per day, and real work happens only after hours.",
+    "shortDesc": "Team drowns in ceremonies and rituals nobody can justify. Engineers get less than two hours of uninterrupted focus time per day; real work happens only after hours.",
     "warningSigns": [
       "Engineers' calendars are a wall of color with less than 2 hours of focus time per day",
       "Standups are status reports to the manager, not team coordination",
@@ -884,17 +869,13 @@
       "'Quick sync' is the most common calendar invite",
       "Process was adopted wholesale from another team or textbook without adaptation"
     ],
-    "impact": "Deep work becomes impossible; complex problems don't get solved because nobody has contiguous time to think; engineers burned out from context-switching; productivity paradox — everyone's busy but nothing ships; senior engineers leave for companies that protect focus time; junior engineers never learn to do deep work because the environment doesn't allow it",
+    "impact": "Within 1-2 quarters: deep work becomes impossible; complex problems don't get solved; engineers burned out from context-switching; senior engineers leave for teams that protect focus time.",
     "recoveryActions": [
-      "Calendar audit: have every team member screenshot their week and count hours of uninterrupted 2+ hour blocks.",
-      "Target minimum 4 hours of focus time per day per engineer.",
+      "Calendar audit: have every team member count hours of uninterrupted 2+ hour blocks per week. Target minimum 4 hours of focus time per day.",
       "For every ceremony, ask: 'What problem does this solve for our team?' If no one can answer, cancel it.",
-      "Cancel bottom 30% of recurring meetings immediately and see if anyone notices.",
-      "Adapt remaining ceremonies to your team's actual needs — async standups, shorter retros, meeting-free blocks.",
-      "Measure ceremony value: does the retro generate completed action items? Does standup unblock people? Kill what doesn't deliver.",
-      "Shopify's 'chaos monkey for meetings' periodically cancels all recurring meetings, requiring each one to justify its existence to be reinstated.",
-      "Amazon's bias-for-action leadership principle requires that meetings produce written decisions within 24 hours — meetings without a decision agenda are unnecessary, and the 6-pager format replaces most status update ceremonies entirely.",
-      "See Playbook: 'You Inherit a Team with No Operating Cadence' (P-C4-2) for a step-by-step scenario addressing this pattern."
+      "Cancel bottom 30% of recurring meetings immediately and monitor whether anyone notices.",
+      "Adapt remaining ceremonies to actual needs — async standups, shorter retros, meeting-free blocks.",
+      "Measure ceremony value: does the retro generate completed action items? Does standup unblock people? Kill what doesn't deliver."
     ],
     "sourceTopic": "Operational Leadership & Rhythm",
     "mappingNotes": "Meeting debt → operational cadence / focus protection observables"
@@ -908,7 +889,7 @@
       "C4-O3"
     ],
     "capabilityId": "C4",
-    "shortDesc": "EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful. A graveyard of stale pages accumulates, engineers stop trusting docs, and tribal knowledge becomes the de facto system of record.",
+    "shortDesc": "EM mandates documentation for everything but never ensures it's maintained, discoverable, or useful. A graveyard of stale pages accumulates; engineers stop trusting docs.",
     "warningSigns": [
       "Confluence has hundreds of pages but nobody can find anything",
       "Onboarding docs reference systems that were decommissioned two years ago",
@@ -917,16 +898,13 @@
       "PRs require design docs for trivial changes",
       "Documentation is a checkbox, not a communication tool"
     ],
-    "impact": "Team loses trust in documentation entirely and reverts to tribal knowledge; onboarding takes longer because new hires can't distinguish current docs from stale ones; real knowledge stays in people's heads despite the illusion that it's 'all written down'; documentation becomes a resented chore rather than a multiplier; time invested in writing docs is wasted because no one maintains or reads them",
+    "impact": "Within 2 quarters: team loses trust in documentation and reverts to tribal knowledge; onboarding takes longer because new hires can't distinguish current from stale docs; time invested in writing is wasted.",
     "recoveryActions": [
       "Quality over quantity: fewer, better docs that are actually maintained.",
       "Assign owners to critical docs with quarterly review dates.",
       "Archive ruthlessly — stale docs are worse than no docs because they erode trust.",
-      "Make documentation discoverable: if people can't find it in 60 seconds, it doesn't exist.",
-      "Only mandate documentation for high-leverage things: onboarding, runbooks, architecture decisions, API contracts.",
-      "Let the team decide the right level for everything else.",
-      "Stripe's writing culture mandates fewer, higher-quality documents with clear owners and quarterly review dates; stale docs are archived aggressively rather than left to mislead.",
-      "See Playbook: 'Your Team Has Communication Debt — Decisions Aren't Documented' (P-C7-3) for how to build sustainable documentation practices that stay useful over time."
+      "Make documentation discoverable: if people can't find it in 60 seconds, it effectively doesn't exist.",
+      "Only mandate documentation for high-leverage items: onboarding, runbooks, architecture decisions, API contracts."
     ],
     "sourceTopic": "Operational Leadership & Rhythm",
     "mappingNotes": "Documentation hoarding → knowledge management / operational process observables"
@@ -1036,23 +1014,19 @@
       "C3-O1",
       "C3-O4"
     ],
-    "shortDesc": "EM pushes architectural purity and over-engineering at the expense of pragmatic delivery. Systems are technically impressive but ship late, the team gold-plates solutions nobody asked for, and business impact suffers while architecture reviews multiply.",
+    "shortDesc": "EM pushes architectural purity over pragmatic delivery. Systems are technically impressive but ship late; the team gold-plates solutions nobody asked for.",
     "warningSigns": [
-      "Every project requires a complex design doc before any code is written",
-      "Simple features get enterprise-grade architecture",
-      "'best practices' block shipping",
-      "Team velocity is low despite strong engineers",
-      "Architecture astronaut tendencies"
+      "Every project requires a multi-page design doc before any code is written, regardless of scope or reversibility",
+      "Simple features get enterprise-grade architecture (e.g., microservices for a single-use endpoint)",
+      "Team velocity is below peer teams despite strong engineers",
+      "Architecture reviews block PRs for style/pattern issues, not correctness or risk"
     ],
-    "impact": "Delivery slows dramatically; team frustration with over-engineering; premature abstraction creates complexity; competitors ship faster; practical trade-offs are treated as technical sin",
+    "impact": "Within 1-2 quarters: delivery pace falls below 50% of peer teams; team frustration surfaces in retros; business stakeholders lose confidence in engineering timelines.",
     "recoveryActions": [
-      "Match architectural rigor to project scope and reversibility.",
-      "Use design docs only for high-impact, irreversible decisions.",
-      "Set a time-box for design phases.",
-      "Celebrate pragmatic solutions.",
+      "Match architectural rigor to project scope: use a decision matrix mapping project size/reversibility to required documentation level.",
+      "Time-box design phases: 1 day for small projects, 1 week for large.",
       "Ask 'what's the simplest thing that could work?' before 'what's the ideal architecture?'",
-      "Amazon's Working Backwards process starts with the customer PR/FAQ, not the architecture — forcing pragmatic delivery focus and preventing architectural purity from overriding customer value.",
-      "See Playbook: 'Running a Build-vs-Buy Decision for a Critical System' (P-C3-5) for how to apply pragmatic decision frameworks to architectural choices."
+      "Celebrate pragmatic solutions in team retros alongside technical elegance."
     ],
     "sourceTopic": "Systems Design & Architecture",
     "mappingNotes": "Over-engineering → tech strategy / tech debt visibility observables"
@@ -1246,7 +1220,7 @@
       "C9-O9"
     ],
     "capabilityId": "C9",
-    "shortDesc": "EM only tracks lagging indicators — incidents, attrition, missed deadlines — and never has early warning signals for emerging problems. By the time a metric turns red the damage is done, and recovery takes months instead of the days a leading indicator would have enabled.",
+    "shortDesc": "Dashboard shows only lagging indicators (incident count, velocity, release date) with no leading indicators. Problems are visible only after they've already caused damage.",
     "warningSigns": [
       "Dashboard shows outcomes (deployment frequency, MTTR, attrition) but no predictive signals",
       "Team finds out about problems only after incidents or missed deadlines",
@@ -1255,13 +1229,12 @@
       "Every problem feels like a surprise",
       "Metrics are retrospective, never prospective"
     ],
-    "impact": "Every problem is discovered too late for cheap intervention; firefighting replaces prevention; team and leadership feel like they're always reacting; confidence in measurement erodes because metrics only confirm what everyone already knew; proactive management impossible",
+    "impact": "Within 2 quarters: team can only react to problems, never prevent them; leadership loses trust because bad news always arrives late; no early warning system for delivery or quality risks.",
     "recoveryActions": [
-      "For every lagging indicator, identify a leading counterpart: attrition → engagement survey scores; incidents → error budget consumption rate; missed deadlines → sprint burndown trajectory.",
-      "Make leading indicators the primary dashboard and lagging indicators the validation.",
-      "Add leading indicators (PR review time, blocked ticket count, test flakiness rate) to your weekly standup dashboard. Reserve lagging indicators (DORA metrics, customer satisfaction) for monthly retros. When a leading indicator moves >15%, investigate root cause within 48 hours.",
-      "Google's DORA team explicitly distinguishes leading (deployment frequency, lead time) from lagging (change failure rate, MTTR) metrics, using pairs to enable both prediction and validation.",
-      "See Playbook: 'Introducing Engineering Metrics to a Team That Has None' (P-C9-5) for a step-by-step scenario addressing this pattern."
+      "Add at least one leading indicator per lagging indicator: pair incident rate with error budget burn rate; pair velocity with WIP count.",
+      "Review leading indicators weekly, lagging indicators monthly.",
+      "Define action thresholds for leading indicators: 'When WIP exceeds 3x team size, we stop starting and start finishing.'",
+      "Track whether leading indicators predicted lagging outcomes — calibrate thresholds quarterly."
     ],
     "sourceTopic": "Metrics, Measurement & Outcomes",
     "mappingNotes": "Lagging-only dashboard → metric pairing / leading indicator observables"
@@ -1275,23 +1248,20 @@
       "C3-O11"
     ],
     "capabilityId": "C3",
-    "shortDesc": "Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms. Leadership sees no reason to fund remediation, engineers suffer in silence, and velocity degrades until a catastrophic failure forces attention.",
+    "shortDesc": "Tech debt accumulates invisibly because it's never quantified or communicated in business terms. Leadership sees no reason to fund remediation; velocity degrades until a catastrophic failure forces attention.",
     "warningSigns": [
-      "No tech debt registry or backlog",
-      "Tech debt only discussed when it causes incidents",
-      "Engineers complain about tech debt but leadership doesn't see it",
-      "Planning cycles have no tech debt allocation",
-      "'we'll address it later' is the perpetual response",
-      "Tech debt remediation is guerrilla work done without visibility"
+      "No tech debt registry, backlog, or tracking system exists",
+      "Tech debt is only discussed during incident post-mortems",
+      "Sprint planning has no explicit tech debt allocation",
+      "Engineers do guerrilla debt cleanup without visibility or approval",
+      "Deployment frequency has decreased >20% over 2 quarters with no corresponding scope increase"
     ],
-    "impact": "Tech debt compounds silently until it blocks feature delivery or causes major incidents; engineering credibility suffers when 'suddenly' velocity drops; leadership blindsided by tech debt crisis; tech debt remediation never prioritized because its cost is invisible",
+    "impact": "Within 2-3 quarters: deployment frequency drops measurably; incident rate increases from accumulated risk; engineering credibility suffers when leadership is blindsided by velocity collapse.",
     "recoveryActions": [
-      "Create a tech debt registry with business impact estimates.",
-      "Quantify each item: 'This debt costs us X engineer-days per sprint in workarounds and creates Y risk of incidents.' Present quarterly tech debt report to leadership.",
-      "Secure explicit capacity allocation (minimum 15-20% of engineering time).",
-      "Track remediation ROI to justify continued investment.",
-      "Amazon includes tech debt in their PRFAQ process — every initiative must account for the debt it creates and the plan to manage it.",
-      "See Playbook: 'Managing Tech Debt Strategically Without Stopping the Roadmap' (P-C3-4) for a step-by-step scenario addressing this pattern."
+      "Create a tech debt registry within 2 weeks: list top 10 items with business impact estimates (engineer-days lost per sprint, incident risk, blocked features).",
+      "Quantify each item: 'This debt costs us X engineer-days per sprint in workarounds and creates Y% probability of incident per quarter.'",
+      "Secure minimum 15-20% capacity allocation in next sprint planning cycle.",
+      "Track remediation ROI: before/after deployment frequency and incident rate for each resolved item."
     ],
     "sourceTopic": "Systems Design & Architecture",
     "mappingNotes": "Invisible tech debt → tech debt quantification / business-terms communication observables"
@@ -1490,7 +1460,7 @@
       "C4-O13"
     ],
     "capabilityId": "C4",
-    "shortDesc": "Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering it into actionable context. The team becomes anxious and distracted, productivity drops, and engineers start job-searching to escape the stress.",
+    "shortDesc": "Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering it into actionable context. Team becomes anxious and distracted; productivity drops.",
     "warningSigns": [
       "Team knows about every executive disagreement and political conflict",
       "Manager shares raw Slack threads from leadership arguing about priorities",
@@ -1498,17 +1468,13 @@
       "Every new request comes with 'the VP is really worried about this' framing",
       "Team morale tracks leadership drama rather than their own delivery"
     ],
-    "impact": "Engineers become anxious and distracted by problems they can't solve. Focus time is destroyed by context-switching on perceived emergencies that are actually just exec-level discussions. Best engineers leave because the environment feels chaotic and unsafe. Manager mistakes transparency for dumping, eroding psychological safety.",
+    "impact": "Within 1 quarter: engineers anxious about problems they can't solve; focus time destroyed by perceived emergencies; best engineers leave because the environment feels chaotic; manager mistakes transparency for dumping.",
     "recoveryActions": [
-      "Apply a personal filter before escalating: 'Does this information change what my team should do today?' If no, absorb it. If yes, translate it into a specific action item before sharing — never forward raw anxiety.",
+      "Apply a filter before sharing: 'Does this information change what my team should do today?' If no, absorb it. If yes, translate into a specific action item — never forward raw anxiety.",
       "Translate executive concerns into specific, actionable asks before sharing with the team.",
-      "Protect the team's context: share decisions and relevant context, not the sausage-making.",
-      "Build an interrupt budget — cap the number of 'urgent' redirections per sprint.",
+      "Share decisions and relevant context, not the sausage-making process.",
       "Practice the 3-sentence rule: situation, what it means for us, what we're doing about it.",
-      "Shopify's leadership principle of 'trust the team' means managers explicitly filter organizational noise — EMs are expected to translate exec priorities into team-level context without passing through the anxiety.",
-      "Track interrupt count per sprint and team sentiment score quarterly. If either degrades more than 10% from baseline, audit your information filter: review the last two weeks of messages you forwarded to the team and classify each as actionable vs. noise. Target less than two unplanned redirections per sprint.",
-      "Google's Project Oxygen research identified 'creates a productive and inclusive team environment' as a top manager behavior — managers who amplify stress rather than absorbing it scored lowest on team effectiveness.",
-      "See Playbook: 'Rebuilding Psychological Safety After Organizational Disruption' (P-C12-6) for how to protect team psychological safety when organizational pressure is high."
+      "Track interrupt count per sprint and team sentiment quarterly. Target fewer than two unplanned redirections per sprint."
     ],
     "sourceTopic": "Operational Leadership (Information Filtering)",
     "mappingNotes": "Based on LeadDev 'Five management anti-patterns' — The Funnel pattern. Manager acts as stress amplifier rather than filter."
@@ -1522,7 +1488,7 @@
       "C8-O8"
     ],
     "capabilityId": "C8",
-    "shortDesc": "Team accumulates alerts over time but nobody removes them because engineers fear deleting one that might matter. Non-actionable noise grows until on-call is desensitized, real incidents get slower response, and alert fatigue becomes a reliability risk itself.",
+    "shortDesc": "Team normalizes high alert volume — hundreds of alerts per week, most ignored. Real signals drown in noise; when a genuine incident occurs, it's missed because alerts have lost credibility.",
     "warningSigns": [
       "On-call engineers routinely mute or snooze alerts without investigating",
       "New alert rules get added after incidents but old ones are never removed",
@@ -1530,17 +1496,12 @@
       "On-call handoff includes tribal knowledge about which alerts to ignore",
       "Mean time to acknowledge real incidents is increasing quarter over quarter"
     ],
-    "impact": "Critical alerts get lost in the noise, increasing MTTA and MTTR for real incidents. On-call engineers burn out from frequent low-value pages, especially off-hours. Team develops learned helplessness around alert quality. Customer-facing reliability suffers because the signal-to-noise ratio has collapsed.",
+    "impact": "Within 1-2 quarters: genuine incidents missed because on-call ignores pages; MTTR increases as alert fatigue grows; on-call engineers develop habit of silencing alerts without investigating.",
     "recoveryActions": [
-      "Audit every alert: classify as actionable, needs-refinement, or delete — if nobody can explain what action to take, delete it.",
-      "Shift to SLO-based alerting tied to customer-facing metrics (error rate, latency, availability) rather than infrastructure thresholds.",
-      "Route alerts to owning teams by service tag — on-call should be the expert, not a proxy.",
-      "Run monthly alert hygiene reviews where on-call engineers propose alerts to remove or refine.",
-      "Track alert-to-action ratio as a reliability health metric.",
-      "Datadog practices 'alert-driven development' where every alert must have a runbook link and a clear owner — alerts without runbooks are automatically flagged for removal during monthly hygiene reviews.",
-      "LinkedIn's SRE team enforces a strict signal-to-noise ratio target and runs quarterly 'alert amnesty' events where engineers can safely delete alerts without fear of blame.",
-      "Google SRE mandates that every alert must be actionable and urgent — the toil budget treats non-actionable alerts as toil, and teams exceeding their alert noise threshold must invest in reducing it before taking new feature work.",
-      "See Playbook: 'Your On-Call Rotation Is Burning People Out' (P-C8-5) for a step-by-step scenario addressing this pattern."
+      "Run an alert audit: classify every alert from the last 30 days as actionable, noise, or duplicate.",
+      "Delete or silence all non-actionable alerts immediately — target alert-to-action ratio of 1:2 or better.",
+      "Set a monthly alert hygiene review cadence with the team.",
+      "Track alert volume and false positive rate on the on-call dashboard; set threshold: <2 off-hours pages per night."
     ],
     "sourceTopic": "Incidents, Risk & Reliability (Alert Management)",
     "mappingNotes": "Based on LeadDev 'How to avoid alert fatigue' — most alerts accumulate because engineers are scared of removing them."
@@ -1647,7 +1608,7 @@
       "C8-O7"
     ],
     "capabilityId": "C8",
-    "shortDesc": "Team runs post-mortems after every incident but action items die in a backlog. The same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual that breeds cynicism rather than resilience.",
+    "shortDesc": "Post-mortems are written but never referenced; the same incidents recur because learnings aren't integrated into team practices. Post-mortem documents accumulate in a wiki nobody reads.",
     "warningSigns": [
       "Post-mortem action item completion rate is below 50%",
       "The same root cause appears in multiple post-mortems across quarters",
@@ -1655,15 +1616,12 @@
       "Action items are assigned but never tracked or reviewed",
       "Post-mortems feel performative — people attend but don't expect change"
     ],
-    "impact": "Same incidents recur, eroding customer trust and team morale. Engineers lose faith in the post-mortem process because nothing changes. On-call burden increases because systemic fixes never land. The team develops learned helplessness about reliability — incidents feel inevitable rather than preventable.",
+    "impact": "Within 2-3 quarters: repeat incidents from known root causes; team loses faith in post-mortem process; action items are completed but systemic patterns go unaddressed.",
     "recoveryActions": [
-      "Assign every action item a single owner and a due date — review completion weekly in team standup.",
-      "Track action-item-to-prevention ratio: how many action items actually prevented a future incident.",
-      "Limit post-mortem action items to 3-5 highest-leverage items instead of exhaustive lists.",
-      "Schedule a monthly 'incident learning review' that examines patterns across incidents, not just individual events.",
-      "Make post-mortem action item completion a team-level reliability metric visible to leadership.",
-      "Google SRE tracks post-mortem action item completion as a team-level metric with P0/P1/P2 SLAs — P0 items (will cause recurrence) must be completed within 7 days, and completion rate is reviewed in quarterly reliability reviews.",
-      "See Playbook: 'Production Outage Caused by Your Team's Deploy' (P-C8-2) for how to run a post-mortem that produces systemic change, not just action items."
+      "Run quarterly meta-review of post-mortem themes — identify the top 3 recurring patterns across incidents.",
+      "Create an incident knowledge base linked to runbooks — every resolved incident should improve a runbook.",
+      "Track repeat incident rate as the primary measure of post-mortem effectiveness.",
+      "Reference previous post-mortems in new post-mortems when patterns overlap — make the connection explicit."
     ],
     "sourceTopic": "Incidents, Risk & Reliability (Learning from Incidents)",
     "mappingNotes": "Based on LeadDev 'How to turn an engineering incident into an opportunity' and post-mortem best practices."
@@ -1677,23 +1635,20 @@
       "C3-O1"
     ],
     "capabilityId": "C3",
-    "shortDesc": "Technology choices are driven by what looks impressive on resumes rather than what solves the actual problem. The team adopts Kubernetes for 3 services or microservices for a 5-person team, adding operational complexity that dwarfs the engineering value.",
+    "shortDesc": "Technology choices driven by resume appeal rather than problem fit. Team adopts complex tools (Kubernetes for 3 services, microservices for 5 engineers) adding operational complexity that dwarfs engineering value.",
     "warningSigns": [
-      "Architecture is designed for a scale the product has never seen and may never reach",
+      "Architecture designed for 10x scale the product has never reached",
       "Nobody can articulate what business problem the chosen technology solves better than simpler alternatives",
-      "Engineering proposals lead with the technology ('let's use Kafka') rather than the problem ('we need reliable async processing')",
-      "New hires struggle to onboard because the stack is unnecessarily complex",
-      "Operational burden exceeds the team's capacity to maintain it"
+      "Engineering proposals lead with technology ('let's use Kafka') rather than problem ('we need reliable async processing')",
+      "New hire onboarding exceeds 3 months due to stack complexity",
+      "Operational on-call burden exceeds 20% of team capacity"
     ],
-    "impact": "Operational complexity grows without corresponding business value. Onboarding time increases because the stack is over-engineered. The team spends more time fighting infrastructure than shipping features. Simpler alternatives would have delivered the same outcome at a fraction of the cost. Technical debt is created on day one.",
+    "impact": "Within 1-2 quarters: operational complexity consumes >30% of team capacity; onboarding time doubles; deployment frequency drops as infrastructure fighting displaces feature work.",
     "recoveryActions": [
-      "Require every architecture proposal to answer: 'What problem does this solve, and what's the simplest thing that could work?'",
-      "For every technology decision, write a one-page TCO analysis: license/hosting cost, operational burden (on-call hours, maintenance), hiring pool size (Indeed/LinkedIn job post counts), and cognitive load on the team. Compare the new option against the boring-but-proven alternative.",
-      "Adopt a 'boring technology' principle — default to proven, well-understood tools unless there's a compelling reason not to.",
-      "Create a team tech radar with explicit adopt/trial/assess/hold categories to channel experimentation productively.",
-      "Celebrate engineers who choose boring, effective solutions — not just those who introduce novel ones.",
-      "Stripe's engineering culture explicitly values 'boring technology' — choosing well-understood, battle-tested tools over novel ones unless there's a quantified technical reason the established option fails.",
-      "See Playbook: 'Running a Build-vs-Buy Decision for a Critical System' (P-C3-5) for a step-by-step scenario addressing this pattern."
+      "Require every architecture proposal to start with 'What problem does this solve?' and 'What's the simplest solution?'",
+      "Write a 1-page TCO analysis for every technology decision: license cost, operational burden (on-call hours), hiring pool size, and cognitive load.",
+      "Adopt a 'boring technology' default: proven tools unless there's a quantified reason the established option fails.",
+      "Create a team tech radar with explicit adopt/trial/assess/hold categories."
     ],
     "sourceTopic": "Systems Design & Architecture (Technology Selection)",
     "mappingNotes": "Based on resume-driven development patterns widely discussed in engineering leadership. The incentive structure is broken when choosing complexity is rewarded more than choosing simplicity."
@@ -1737,7 +1692,7 @@
       "C9-O9"
     ],
     "capabilityId": "C9",
-    "shortDesc": "Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure. Velocity numbers go up while actual delivery value goes down, the metric loses diagnostic power, and real performance becomes invisible.",
+    "shortDesc": "A metric becomes a target, then gets gamed. Deployment frequency is optimized by splitting PRs into tiny changes; cycle time is optimized by skipping reviews. The metric improves but actual outcomes don't.",
     "warningSigns": [
       "Story points per sprint increase but customer satisfaction or feature adoption doesn't improve",
       "Team debates how to 'count' work to maximize the metric rather than how to deliver value",
@@ -1745,15 +1700,12 @@
       "Engineers game metrics by splitting work into smaller tickets or inflating estimates",
       "No counter-metrics exist to catch single-metric optimization"
     ],
-    "impact": "Leadership makes decisions based on metrics that no longer reflect reality. The metric becomes a performance target rather than a diagnostic tool, creating perverse incentives. Team culture shifts from outcome-oriented to metrics-oriented. Trust in data erodes when stakeholders realize the numbers don't match their experience.",
+    "impact": "Within 1-2 quarters: metric looks great but real outcomes deteriorate; team loses trust in measurement; leadership makes bad decisions based on gamed numbers; gaming becomes cultural norm.",
     "recoveryActions": [
-      "Pair every target metric with a counter-metric (velocity + defect rate, throughput + cycle time)",
-      "Use metrics as diagnostic tools in team discussions, never as individual performance measures.",
-      "Rotate or retire metrics periodically — if a metric has been stable for 3 quarters, it may no longer be useful.",
-      "When presenting metrics, always include qualitative context: what the numbers mean, not just what they show.",
-      "Educate the team on Goodhart's Law explicitly — naming the trap makes it easier to avoid.",
-      "Google's DORA research team explicitly designed their metrics framework as a diagnostic tool, never as individual performance targets — when organizations use DORA metrics for evaluation, the metrics stop measuring what they were designed to measure.",
-      "See Playbook: 'Your Metrics Are Being Gamed and Everyone Knows It' (P-C9-3) for a step-by-step scenario addressing this pattern."
+      "Always pair metrics: deployment frequency with change failure rate; cycle time with escaped defect rate; velocity with customer satisfaction.",
+      "Look for metric-outcome divergence: if the metric improves but the experience doesn't, the metric is being gamed.",
+      "Make gaming visible by tracking paired metrics on the same dashboard — divergence is the signal.",
+      "Rotate metrics quarterly to prevent optimization lock-in."
     ],
     "sourceTopic": "Metrics, Measurement & Outcomes (Metric Dysfunction)",
     "mappingNotes": "Based on Goodhart's Law and LeadDev articles on metrics gaming and the 'flawed five' engineering productivity metrics."
@@ -1827,7 +1779,7 @@
       "C4-O3"
     ],
     "capabilityId": "C4",
-    "shortDesc": "Team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight. Accumulated neglect eventually degrades velocity so badly that the team can't ship features either.",
+    "shortDesc": "Team neglects operational health — toil reduction, developer experience, tech debt — because feature delivery always wins. Accumulated neglect eventually degrades velocity so badly that the team can't ship features either.",
     "warningSigns": [
       "Engineers spend more than 30% of their time on repetitive manual tasks that could be automated",
       "The team has had 'fix the build pipeline' or 'reduce deploy time' on the backlog for 3+ quarters without progress",
@@ -1835,15 +1787,13 @@
       "New engineers say 'this is painful' about basic workflows that the team has normalized",
       "Every sprint planning starts with 'we'll do tech debt next sprint' and it never happens"
     ],
-    "impact": "Toil compounds — manual operational work consumes the time needed to build automation that would eliminate that toil. The team enters a death spiral where declining velocity creates pressure for more shortcuts, which generate more toil. Developer experience degrades until senior engineers leave for teams with better tooling. The remaining team lacks the capacity or institutional knowledge to dig out. What started as a prioritization choice becomes an engineering capability crisis.",
+    "impact": "Within 2-3 quarters: toil compounds into a death spiral where declining velocity creates pressure for more shortcuts, which generate more toil. Developer experience degrades until senior engineers leave. The remaining team lacks capacity to dig out.",
     "recoveryActions": [
       "Reserve 20-30% of every sprint capacity for operational health, non-negotiably.",
       "Track toil explicitly — measure hours spent on repetitive manual tasks weekly and set reduction targets.",
-      "Start with the highest-leverage automation: the one manual task that every engineer does multiple times per week.",
-      "Make developer experience metrics visible to leadership — deploy frequency, build time, onboarding time-to-first-commit.",
-      "Frame operational investment in business terms: 'Reducing deploy time from 45 min to 5 min recovers X engineer-hours per week'",
-      "Google SRE enforces a hard 50% toil cap — if more than 50% of a team's time is spent on repetitive manual operational work, the team is required to invest in automation before accepting new feature requests.",
-      "See Playbook: 'Your On-Call Rotation Is Burning People Out' (P-C8-5) for how to make the case for operational health investment when feature work dominates."
+      "Start with the highest-leverage automation: the one manual task every engineer does multiple times per week.",
+      "Make DX metrics visible to leadership — deploy frequency, build time, onboarding time-to-first-commit.",
+      "Frame operational investment in business terms: 'Reducing deploy time from 45 min to 5 min recovers X engineer-hours per week.'"
     ],
     "sourceTopic": "Operational & Process Excellence (Operational Health)",
     "mappingNotes": "Based on LeadDev 'What is toil and why is it damaging your engineering org?' and 'How to break the cycle of tech debt' — toil creates a self-reinforcing trap where the team lacks capacity to fix the thing that's consuming their capacity."
@@ -2037,7 +1987,7 @@
       "C4-O10"
     ],
     "capabilityId": "C4",
-    "shortDesc": "Team batches weeks or months of changes into monolithic releases, turning every deploy into a high-risk event. Weekend war rooms, rollback plans, and post-deploy firefighting become the norm, and deploy frequency drops because nobody wants to trigger the next crisis.",
+    "shortDesc": "Team batches weeks of changes into monolithic releases, turning every deploy into a high-risk event. Deploy frequency drops because nobody wants to trigger the next crisis.",
     "warningSigns": [
       "Deploys happen weekly or less frequently, always as large batches",
       "Release day requires a war room or dedicated 'release captain'",
@@ -2047,17 +1997,14 @@
       "Post-deploy incidents are considered normal, not exceptional",
       "Feature branches live for weeks before merging"
     ],
-    "impact": "Each deploy carries accumulated risk from every change bundled together, making root cause analysis nearly impossible when things break. Teams develop deployment anxiety, shipping less frequently which compounds the problem. Feedback loops stretch from hours to weeks. Engineers can't connect their code change to production behavior because too many things changed at once. The organization develops a culture of risk aversion where 'don't deploy' feels safer than 'deploy small and often.'",
+    "impact": "Within 1-2 quarters: each deploy carries accumulated risk making root cause analysis impossible when things break; engineers develop deployment anxiety; feedback loops stretch from hours to weeks; culture of risk aversion develops.",
     "recoveryActions": [
       "Measure current deploy frequency and batch size — make the problem visible with data.",
       "Invest in automated rollback capability before increasing deploy frequency.",
-      "Ship every new feature behind a feature flag by default. Code merges to main and deploys dark. Product activates features independently via flag management (LaunchDarkly, Unleash, or config file). Set a 90-day flag lifecycle: clean up stale flags monthly.",
+      "Ship every new feature behind a feature flag by default. Set a 90-day flag lifecycle.",
       "Move to trunk-based development with short-lived branches (< 1 day).",
-      "Target multiple deploys per day with each containing a small, reviewable changeset.",
-      "Roll out every change through a canary pipeline: 1% traffic for 15 minutes, 10% for 1 hour, 50% for 4 hours, then 100%. Set automatic rollback triggers on error rate spike >2x baseline or latency >P99 threshold.",
-      "Replace change advisory boards with automated change risk scoring for routine changes, reserving human review for genuinely novel risk.",
-      "Netflix pioneered progressive deployment with canary analysis — every change rolls out to a small percentage of traffic first, with automated comparison against a control group, making small frequent deploys safer than big-bang releases by design.",
-      "See Playbook: 'Your Team's Delivery Predictability Has Collapsed' (P-C4-1) for a step-by-step scenario addressing this pattern."
+      "Target multiple deploys per day; roll out through canary pipeline (1%→10%→50%→100%) with automatic rollback triggers.",
+      "Replace change advisory boards with automated change risk scoring for routine changes."
     ],
     "sourceTopic": "Operational Leadership (Release Engineering)",
     "mappingNotes": "Big-bang deploys → release process / change management observables. Based on DORA research showing elite teams deploy multiple times per day with low change failure rates."
@@ -2071,7 +2018,7 @@
       "C9-O5"
     ],
     "capabilityId": "C9",
-    "shortDesc": "Team sets OKRs that are either so vague they can't be measured, so easy they're always green, or so disconnected from work that nobody references them. Goal-setting becomes a quarterly ritual with zero impact on daily decisions, and the team can't articulate what success looks like.",
+    "shortDesc": "OKRs are aspirational statements with no measurable key results. 'Improve developer experience' without defining what improvement looks like or how to measure it. Team can't tell if they succeeded.",
     "warningSigns": [
       "Key results use words like 'improve,' 'enhance,' or 'optimize' without quantified targets",
       "Every team hits 100% of OKRs every quarter — targets are sandbagged",
@@ -2081,16 +2028,12 @@
       "OKRs are copy-pasted from the previous quarter with minor wording changes",
       "Quarterly OKR review is a formality where everyone presents green slides"
     ],
-    "impact": "Strategic alignment becomes theater — leadership believes engineering is executing on company priorities while teams are actually working on whatever feels most urgent. Resource allocation decisions are made without real outcome data. The OKR process itself becomes resented overhead that consumes planning time without providing direction. When real strategic pivots are needed, there's no mechanism to signal or measure the change.",
+    "impact": "Within 1 quarter: OKRs don't influence daily work; prioritization decisions are disconnected from stated objectives; quarterly reviews are opinion-based because there's no measurement.",
     "recoveryActions": [
-      "Apply the 'would anyone disagree?' test to every objective — if not, it's not strategic enough.",
-      "Require every key result to have a number, a baseline, and a target. 'Improve page load time' fails; 'Reduce p95 page load from 3.2s to 1.5s' passes.",
-      "Set stretch targets where 70% completion is good — if you hit 100%, targets were too easy.",
-      "Connect at least one key result per team to a measurable business outcome (revenue, retention, adoption).",
-      "Schedule a 30-minute mid-quarter OKR data review. Pull actual metrics for each key result. If any KR is <30% progress at midpoint, escalate in your next 1:1: what's blocking it? Adjust the target or the approach, document the change, and communicate to stakeholders.",
-      "Kill OKRs that nobody references in sprint planning — they're not driving behavior.",
-      "Google's OKR grading system sets the expectation that 0.7 out of 1.0 represents success — if a team consistently scores 1.0, their targets were too easy. This calibration prevents both vanity and sandbag OKRs.",
-      "See Playbook: 'Designing OKRs That Actually Drive Engineering Behavior' (P-C9-6) for how to write measurable, ambitious OKRs that connect to real engineering outcomes."
+      "Rewrite every key result to include a number: 'Reduce CI build time from 45min to 10min' not 'Improve CI performance.'",
+      "Limit to 3 objectives with 3 key results each — if you can't prioritize, you have too many.",
+      "Score OKRs quarterly with brutal honesty: 0.6-0.8 is healthy; 1.0 means you didn't stretch; below 0.4 means the OKR was wrong.",
+      "Test each OKR: 'Would we make different daily decisions if this OKR didn't exist?' If no, rewrite it."
     ],
     "sourceTopic": "Metrics, Measurement & Outcomes (Goal Setting)",
     "mappingNotes": "Vanity OKRs → outcome-oriented OKR / business translation observables. Based on common OKR dysfunction patterns in engineering organizations."

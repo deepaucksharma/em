@@ -28,24 +28,28 @@
     "name": "Systems Design & Architecture",
     "slug": "systems-design-architecture",
     "domain": "Execution",
-    "description": "Designs resilient systems and organizational structures that scale.",
+    "description": "Assessed by: architecture decision records, design review process, SLO framework, tech debt registry, and migration execution. Absence causes: conflicting architectural decisions, compounding tech debt, reactive reliability investment, and failed migrations.",
     "primarySubTopics": [
       "11"
     ],
     "observableCount": 11,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C4",
     "name": "Operational Leadership & Rhythm",
     "slug": "operational-leadership-rhythm",
     "domain": "Execution",
-    "description": "Establishes operating cadences and ensures reliable delivery.",
+    "description": "Assessed by: sprint commitment accuracy, delivery cadence consistency, toil reduction metrics, and developer focus time. Absence causes: unpredictable delivery, eroded stakeholder trust, meeting overhead displacing deep work, and compounding operational toil.",
     "primarySubTopics": [
       "13"
     ],
     "observableCount": 13,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": [
+      "C9"
+    ]
   },
   {
     "id": "C5",
@@ -88,24 +92,28 @@
     "name": "Incidents, Risk & Reliability",
     "slug": "incidents-risk-reliability",
     "domain": "Reliability",
-    "description": "Manages incidents, extracts systemic fixes, and drives operational risk reduction.",
+    "description": "Assessed by: incident MTTR, post-mortem action completion rate, on-call page volume, game day frequency, and error budget burn rate. Absence causes: prolonged outages, repeat incidents from unaddressed root causes, on-call burnout, and unmanaged operational risk.",
     "primarySubTopics": [
       "6"
     ],
     "observableCount": 8,
-    "v5Status": "UPDATED"
+    "v5Status": "UPDATED",
+    "enabledBy": [
+      "C3"
+    ]
   },
   {
     "id": "C9",
     "name": "Metrics, Measurement & Outcomes",
     "slug": "metrics-measurement-outcomes",
     "domain": "Data",
-    "description": "Defines success metrics and uses data to validate decisions.",
+    "description": "Assessed by: DORA metric tracking, developer satisfaction measurement, OKR scoring discipline, business metric translation, and metric pairing against gaming. Absence causes: invisible delivery problems, unmeasured developer friction, vague OKRs that don't drive behavior, and engineering investment invisible to business leadership.",
     "primarySubTopics": [
       "9"
     ],
     "observableCount": 10,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C10",

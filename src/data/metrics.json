@@ -82,6 +82,7 @@
     "warningRange": "5-15%",
     "dangerRange": "> 15%",
     "capabilityIds": [
+      "C3",
       "C4",
       "C8"
     ],
@@ -218,9 +219,9 @@
     "dangerRange": "< 3.0",
     "capabilityIds": [
       "C6",
-      "C7",
       "C9",
-      "C12"
+      "C12",
+      "C14"
     ],
     "observableIds": [
       "C6-O3",
@@ -229,7 +230,7 @@
     ],
     "emTier": "primary",
     "directorTier": "secondary",
-    "aiEraImpact": "Add AI-specific questions: 'AI tools help me move faster' and 'I trust the code AI generates.' 30% of developers report little trust in AI output (METR RCT, 2024). Research shows 1-point DX improvement ≈ 13 min/week saved per engineer.",
+    "aiEraImpact": "Add AI-specific questions: 'AI tools help me move faster' and 'I trust the code AI generates.' 30% of developers report little trust in AI output (industry surveys, 2024-2025). Research shows 1-point DX improvement ≈ 13 min/week saved per engineer.",
     "decisionRule": "DX Score <3.0 → urgent intervention required, investigate toil and on-call burden. 3.0-4.0 → targeted improvement on top pain point. >4.0 → maintain."
   },
   {
@@ -698,8 +699,7 @@
     "dangerRange": "> 24 hours",
     "capabilityIds": [
       "C4",
-      "C5",
-      "C7"
+      "C5"
     ],
     "observableIds": [
       "C4-O3"
@@ -784,7 +784,8 @@
     "dangerRange": "< 0",
     "capabilityIds": [
       "C6",
-      "C12"
+      "C12",
+      "C14"
     ],
     "observableIds": [
       "C12-O2"
@@ -985,7 +986,7 @@
     "warningRange": "10-25%",
     "dangerRange": "> 25%",
     "capabilityIds": [
-      "C7"
+      "C4"
     ],
     "observableIds": [
       "C7-O1",
@@ -1225,6 +1226,7 @@
     "warningRange": "1-3 per release",
     "dangerRange": "> 3 per release",
     "capabilityIds": [
+      "C3",
       "C4"
     ],
     "observableIds": [
@@ -1380,7 +1382,7 @@
     "warningRange": "3-6 switches/day",
     "dangerRange": "> 6 switches/day",
     "capabilityIds": [
-      "C7"
+      "C4"
     ],
     "observableIds": [
       "C9-O2"
@@ -1418,7 +1420,7 @@
     "warningRange": "30 min - 2 hours",
     "dangerRange": "> 2 hours",
     "capabilityIds": [
-      "C7"
+      "C4"
     ],
     "observableIds": [
       "C7-O1"
@@ -1738,6 +1740,7 @@
       "C1",
       "C2",
       "C3",
+      "C7",
       "C10"
     ],
     "observableIds": [

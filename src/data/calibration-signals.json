@@ -3,7 +3,7 @@
     "id": "SIG-001",
     "observableId": "C3-O1",
     "capabilityId": "C3",
-    "signalText": "Promo packet: 'Authored and drove technical vision for [area], adopted by [X] teams, enabling [measurable outcome]'. Google promo committees expect technical vision evidence to show cross-team adoption with measurable before/after metrics; vague 'improved performance' language is flagged as insufficient.",
+    "signalText": "Promo packet: 'Authored and drove technical vision for [area], adopted by [X] teams, enabling [measurable outcome]'. Evidence required: written strategy doc with quarterly review history and cross-team adoption metrics.",
     "signalType": "promo_packet",
     "sourceSubTopic": "Setting Technical Vision"
   },
@@ -11,7 +11,7 @@
     "id": "SIG-002",
     "observableId": "C3-O2",
     "capabilityId": "C3",
-    "signalText": "Directors: 'Institutionalized design review process across org — reduced production incidents from design gaps by X%'. Google's design review process requires a TL-reviewed design doc for any change touching >500 lines or crossing service boundaries; Meta's similar threshold is any project exceeding 2 eng-weeks.",
+    "signalText": "Directors: 'Institutionalized design review process across org — reduced production incidents from design gaps by X%'. Threshold: design review required for changes >500 lines or crossing service boundaries.",
     "signalType": "metric",
     "sourceSubTopic": "Architecture Review Process"
   },
@@ -19,7 +19,7 @@
     "id": "SIG-003",
     "observableId": "C3-O3",
     "capabilityId": "C3",
-    "signalText": "Demonstrates strategic thinking: 'Saved [X] eng-months by buying [tool] instead of building, redirected capacity to [high-value project]'",
+    "signalText": "Build-vs-buy decision documented with 3-year TCO analysis: 'Saved [X] eng-months by buying [tool], redirected capacity to [high-value project]. Decision recorded in ADR with annual revisit criteria.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Build vs Buy Decisions"
   },
@@ -27,7 +27,7 @@
     "id": "SIG-004",
     "observableId": "C3-O4",
     "capabilityId": "C3",
-    "signalText": "Promo packet: 'Reduced incident rate X% and deployment time Y% through strategic tech debt paydown of [specific systems]'. Amazon's promo narratives require tech debt work to be framed as 'customer obsession' with measurable customer-facing impact; Google expects tech debt paydown to show velocity improvement in DORA metrics.",
+    "signalText": "Promo packet: 'Reduced incident rate X% and deployment time Y% through strategic tech debt paydown of [specific systems]'. Evidence: before/after DORA metrics showing velocity improvement.",
     "signalType": "promo_packet",
     "sourceSubTopic": "Tech Debt Management"
   },
@@ -35,7 +35,7 @@
     "id": "SIG-005",
     "observableId": "C3-O5",
     "capabilityId": "C3",
-    "signalText": "Directors own SLO culture across their org; EMs own per-service. 'Established SLO framework, reduced Sev1s by X% through error budget discipline'. Google SRE target: 99.99% availability for user-facing services (52.6 min downtime/year); error budget policy automatically freezes launches when budget is exhausted.",
+    "signalText": "Directors own SLO culture across their org; EMs own per-service. 'Established SLO framework, reduced Sev1s by X% through error budget discipline'. Target: 99.99% availability for user-facing services; error budget policy freezes launches when budget is exhausted.",
     "signalType": "metric",
     "sourceSubTopic": "SLA/SLO Definition & Monitoring"
   },
@@ -43,7 +43,7 @@
     "id": "SIG-006",
     "observableId": "C3-O8",
     "capabilityId": "C3",
-    "signalText": "Operational maturity signal: 'Anticipated 3x load for [event], pre-scaled with zero downtime'. Amazon's capacity planning for Prime Day requires teams to demonstrate 10x headroom months in advance; Google's DiRT (Disaster Recovery Testing) exercises validate capacity assumptions through controlled failure injection.",
+    "signalText": "Operational maturity signal: 'Anticipated [X]x load for [event], pre-scaled with zero downtime'. Threshold: capacity headroom validated via load test at least 2 weeks before projected demand spike.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Capacity Planning"
   },
@@ -59,7 +59,7 @@
     "id": "SIG-008",
     "observableId": "C3-O7",
     "capabilityId": "C3",
-    "signalText": "Table-stakes expectation — absence is a red flag. 'Instrumented [X] services, reduced mean time to diagnose from Y hours to Z minutes'. Google's observability standard requires every service to have SLIs with automated alerting; Netflix's approach mandates distributed tracing on 100% of requests across all microservices.",
+    "signalText": "Table-stakes expectation — absence is a red flag. 'Instrumented [X] services, reduced mean time to diagnose from Y hours to Z minutes'. Standard: every service has SLIs with automated alerting and distributed tracing.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Observability Strategy"
   },
@@ -67,7 +67,7 @@
     "id": "SIG-009",
     "observableId": "C3-O6",
     "capabilityId": "C3",
-    "signalText": "High-visibility promo evidence: 'Led migration of [system] serving [X] QPS from [old] to [new] with zero customer-facing incidents'. Google promo committees treat zero-downtime migrations as strong 'senior/staff-level scope' evidence; Stripe's migration playbook requires dual-read/dual-write phases with automated correctness verification.",
+    "signalText": "High-visibility promo evidence: 'Led migration of [system] serving [X] QPS from [old] to [new] with zero customer-facing incidents'. Evidence: dual-read/dual-write validation logs and phased rollout metrics.",
     "signalType": "promo_packet",
     "sourceSubTopic": "Migration Strategy"
   },
@@ -75,7 +75,7 @@
     "id": "SIG-010",
     "observableId": "C3-O8",
     "capabilityId": "C3",
-    "signalText": "Director-level: 'Identified [platform opportunity], built team around it, [X] teams adopted, saving [Y] eng-months/quarter across org'. Amazon's 'two-pizza team' model for platform teams requires each platform to have a single-threaded owner and internal adoption metrics tracked in OP1/OP2 reviews.",
+    "signalText": "Director-level: 'Identified [platform opportunity], built team around it, [X] teams adopted, saving [Y] eng-months/quarter across org'. Evidence: platform adoption metrics and maintenance cost reduction.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Platform Thinking"
   },
@@ -83,7 +83,7 @@
     "id": "SIG-011",
     "observableId": "C3-O2",
     "capabilityId": "C3",
-    "signalText": "Conway's Law in practice: 'Realigned service boundaries to team topology, reduced cross-team deploy coordination by X%'. Microsoft's DevDiv restructured from component teams to feature teams, reducing cross-team dependencies by 60% and improving deployment frequency 3x. Spotify's squad model formalized this as stream-aligned teams with embedded platform support.",
+    "signalText": "Conway's Law in practice: 'Realigned service boundaries to team topology, reduced cross-team deploy coordination by X%'. Evidence: deployment frequency improvement and cross-team dependency count reduction.",
     "signalType": "metric",
     "sourceSubTopic": "Modularity & Service Boundaries"
   },
@@ -91,7 +91,7 @@
     "id": "SIG-012",
     "observableId": "C9-O1",
     "capabilityId": "C9",
-    "signalText": "DORA elite: multiple deploys/day. EMs expected to know their team's numbers and trend direction. DORA elite benchmark: on-demand deployment frequency, <1 hour lead time, <5% change failure rate, <1 hour MTTR. Google and Amazon deploy thousands of times per day org-wide; teams below 'high' DORA tier face scrutiny in calibration.",
+    "signalText": "DORA elite benchmark: on-demand deployment frequency, <1 hour lead time, <5% change failure rate, <1 hour MTTR. Evidence: EM can state their team's current numbers and trend direction for all four metrics.",
     "signalType": "metric",
     "sourceSubTopic": "Deployment Frequency"
   },
@@ -107,7 +107,7 @@
     "id": "SIG-014",
     "observableId": "C9-O1",
     "capabilityId": "C9",
-    "signalText": "High CFR despite fast deploys = shipping garbage fast. Low CFR + low frequency = over-cautious. EMs own this balance. DORA elite benchmark: <5% change failure rate. Google enforces this through mandatory canary deployments (1% traffic for 30+ minutes before full rollout); Amazon uses automated rollback triggers tied to canary metrics.",
+    "signalText": "High change failure rate despite fast deploys = shipping garbage fast. Low CFR + low frequency = over-cautious. EMs own this balance. Elite benchmark: <5% change failure rate. Evidence: CFR tracked weekly with root cause analysis for each failure.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Change Failure Rate"
   },
@@ -115,7 +115,7 @@
     "id": "SIG-015",
     "observableId": "C9-O1",
     "capabilityId": "C9",
-    "signalText": "Promo packet: 'Reduced MTTR from 4hrs to 20min through [automated rollback / improved observability / incident response training]'. DORA elite benchmark: <1 hour MTTR. Google's target for user-facing services is <10 minute detection-to-mitigation; Meta's SEV process requires automated rollback capability for all production changes.",
+    "signalText": "Promo packet: 'Reduced MTTR from 4hrs to 20min through [automated rollback / improved observability / incident response training]'. Elite benchmark: <1 hour MTTR for user-facing services.",
     "signalType": "promo_packet",
     "sourceSubTopic": "Mean Time to Recovery (MTTR)"
   },
@@ -123,7 +123,7 @@
     "id": "SIG-016",
     "observableId": "C9-O2",
     "capabilityId": "C9",
-    "signalText": "Directors track satisfaction trends across teams; EMs act on individual signals. Attrition spike after ignoring survey results = leadership failure",
+    "signalText": "Directors track satisfaction trends across teams; EMs act on individual signals. Evidence: attrition spike after ignoring survey results is a leadership failure. Threshold: developer satisfaction >4.0/5.0; action plan for any score below 3.5.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Satisfaction & Well-being"
   },
@@ -131,7 +131,7 @@
     "id": "SIG-017",
     "observableId": "C4-O3",
     "capabilityId": "C4",
-    "signalText": "Concrete impact: 'Reduced CI pipeline from 45min to 8min, reclaiming [X] developer-hours/week across team'. Google's internal benchmark targets <10 minute CI for most builds; Shopify's engineering productivity team targets <15 minute full test suite. Developer wait time is treated as a first-class cost metric at these companies.",
+    "signalText": "Concrete impact: 'Reduced CI pipeline from 45min to 8min, reclaiming [X] developer-hours/week across team'. Benchmark: CI build target <10 minutes; full test suite <15 minutes.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Performance (System & Tooling)"
   },
@@ -139,7 +139,7 @@
     "id": "SIG-018",
     "observableId": "C9-O3",
     "capabilityId": "C9",
-    "signalText": "NEVER use as perf eval input directly. EMs who cite commit counts in reviews lose credibility instantly",
+    "signalText": "Activity metrics (commit counts, lines of code, PR volume) used exclusively as team-level diagnostic signals, never in individual performance evaluations. Evidence: performance review rubric contains no activity metric references; team survey confirms metrics are not perceived as surveillance.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Activity Metrics (Used Carefully)"
   },
@@ -147,7 +147,7 @@
     "id": "SIG-019",
     "observableId": "C4-O4",
     "capabilityId": "C4",
-    "signalText": "Leverage-thinking: 'Automated [X], saving [Y] eng-hours/quarter, equivalent to [Z] FTE capacity reclaimed'. Amazon's 'Invent and Simplify' leadership principle rewards automation that eliminates toil; Google SRE mandates that teams spend no more than 50% of time on operational toil — exceeding this triggers a formal review to automate or re-architect.",
+    "signalText": "Leverage-thinking: 'Automated [X], saving [Y] eng-hours/quarter, equivalent to [Z] FTE capacity reclaimed'. Threshold: team spends no more than 50% of time on operational toil — exceeding this triggers formal automation investment.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Toil Reduction & Automation"
   },
@@ -155,7 +155,7 @@
     "id": "SIG-020",
     "observableId": "C4-O5",
     "capabilityId": "C4",
-    "signalText": "EMs own release culture for their team; Directors standardize risk-appropriate release practices across org",
+    "signalText": "Release process documented with risk tiers, automated rollback triggers, and feature flag discipline. Evidence: deploy frequency >1x/day for low-risk changes; rollback time <5 minutes; zero manual deploy gates for automated-pass changes.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Release Management"
   },
@@ -163,7 +163,7 @@
     "id": "SIG-021",
     "observableId": "C4-O6",
     "capabilityId": "C4",
-    "signalText": "Healthy review culture is a team health indicator. 'Implemented review SLA, reduced review bottleneck from 3 days to <8 hours'. Google's engineering practices target <24 hour code review turnaround with same-day for small CLs; Shopify tracks 'time-to-first-review' as a team health metric with a target of <4 hours.",
+    "signalText": "Healthy review culture is a team health indicator. 'Implemented review SLA, reduced review bottleneck from 3 days to <8 hours'. Target: <24 hour code review turnaround; same-day for small changes; time-to-first-review tracked as team health metric.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Code Review Culture"
   },
@@ -171,7 +171,7 @@
     "id": "SIG-022",
     "observableId": "C4-O5",
     "capabilityId": "C4",
-    "signalText": "EMs should articulate their team's testing philosophy: 'We test [this way] because [this reason], resulting in [this outcome]'",
+    "signalText": "Testing strategy documented and measurable: 'Team runs [X] integration tests covering [Y]% of critical paths; flaky test rate <[Z]%; test suite execution time <[target]'. Evidence: test coverage dashboard and flaky test tracking system.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Testing Strategy"
   },
@@ -179,7 +179,7 @@
     "id": "SIG-023",
     "observableId": "C4-O2",
     "capabilityId": "C4",
-    "signalText": "Execution credibility: 'Team delivers 85%+ of committed scope for 3+ consecutive quarters' — this earns trust and autonomy from leadership. Amazon's OP1/OP2 planning process tracks commit-vs-deliver ratio at the VP level; teams consistently below 80% face escalation. Google's OKR framework expects 70% achievement on stretch goals as healthy.",
+    "signalText": "Execution credibility: 'Team delivers 85%+ of committed scope for 3+ consecutive quarters'. Evidence: commit-vs-deliver ratio tracked and visible to stakeholders.",
     "signalType": "metric",
     "sourceSubTopic": "Sprint/Cycle Health"
   },
@@ -211,7 +211,7 @@
     "id": "SIG-027",
     "observableId": "C4-O9",
     "capabilityId": "C4",
-    "signalText": "Operational maturity that scales beyond individual heroics. 'Every page has a runbook; new on-call engineers effective within first rotation' Google SRE mandates that every production service has runbooks covering top-10 alert scenarios; Amazon's operational readiness bar requires runbooks to be tested by a new team member before launch approval.",
+    "signalText": "Operational maturity that scales beyond individual heroics. 'Every page has a runbook; new on-call engineers effective within first rotation'. Standard: every production service has runbooks covering top-10 alert scenarios; runbooks tested by a new team member before launch approval.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Runbook Culture"
   },
@@ -235,7 +235,7 @@
     "id": "SIG-030",
     "observableId": "C8-O1",
     "capabilityId": "C8",
-    "signalText": "Response speed: EMs own team's incident readiness; Directors own org-level incident process. 'Implemented ICS model, reduced mean Sev1 time-to-mitigation from [X] hours to [Y] minutes'. Google SRE benchmark: Sev1 incidents require <5 minute response time to acknowledge and <30 minutes to mitigate; Meta's SEV1 process auto-pages the on-call chain if no acknowledgment within 5 minutes.",
+    "signalText": "Response speed: 'Implemented ICS model, reduced mean Sev1 time-to-mitigation from [X] hours to [Y] minutes'. Benchmark: Sev1 MTTR <1 hour; ICS roles assigned within 5 minutes of page.",
     "signalType": "metric",
     "sourceSubTopic": "Incident Response Speed"
   },
@@ -243,7 +243,7 @@
     "id": "SIG-031",
     "observableId": "C8-O2",
     "capabilityId": "C8",
-    "signalText": "Follow-through completeness: the real signal is action item completion, not the post-mortem itself. 'Post-mortem action item completion rate >90% within 14 days, repeat incidents of same root cause reduced X%'. Google's post-mortem culture mandates blameless reviews within 48 hours with action items tracked to completion by VP-level dashboards; Amazon's COE (Correction of Errors) process requires a written document with '5 Whys' analysis reviewed by senior leadership.",
+    "signalText": "Follow-through completeness: the real signal is action item completion, not the post-mortem document itself. 'Post-mortem action item completion rate >90% within 14 days, repeat incidents of same root cause reduced to zero.'",
     "signalType": "metric",
     "sourceSubTopic": "Post-Mortem Follow-Through"
   },
@@ -251,7 +251,7 @@
     "id": "SIG-032",
     "observableId": "C8-O3",
     "capabilityId": "C8",
-    "signalText": "Proactive on-call improvement: on-call health is a retention signal. High page volume + attrition = EM failure. 'Reduced off-hours pages by X% through [noise reduction / architecture improvement / alert tuning], false positive rate below Y%'. Google SRE target: <2 pages per on-call shift as healthy; teams exceeding this threshold trigger a formal 'operational overload' review. LinkedIn's on-call health score targets <1 interrupt per 8-hour shift.",
+    "signalText": "Proactive on-call improvement: on-call health is a retention signal. High page volume + attrition = EM failure. 'Reduced off-hours pages by X% through noise reduction and architecture improvement.' Threshold: <2 off-hours pages per night.",
     "signalType": "metric",
     "sourceSubTopic": "On-Call Health & Noise Reduction"
   },
@@ -259,7 +259,7 @@
     "id": "SIG-033",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "Standard practice at Big Tech — EMs who skip this create visible risk. 'Zero Sev1 incidents on launches in [X] quarters through readiness discipline'. Google's Launch Readiness Review (LRR) is a mandatory gate requiring sign-off from SRE, security, and privacy before any user-facing launch; Amazon's Operational Readiness Review (ORR) checklist has 100+ items covering scaling, monitoring, and rollback.",
+    "signalText": "Launch readiness is a maturity signal — skipping it creates visible risk. 'Zero Sev1 incidents on launches in [X] quarters through readiness discipline'. Standard: launch readiness review mandatory for any launch affecting >100 users or introducing new infrastructure dependency.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Launch Readiness Reviews"
   },
@@ -267,7 +267,7 @@
     "id": "SIG-034",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "'Identified and mitigated [X] failure modes proactively — prevented [estimated Y] incidents'. Netflix's Chaos Engineering practice (Chaos Monkey, Chaos Kong) requires teams to prove resilience through regular failure injection in production; Google's DiRT exercises simulate multi-region failures annually to validate disaster recovery.",
+    "signalText": "'Identified and mitigated [X] failure modes proactively — prevented estimated [Y] incidents'. Evidence: FMEA document with scored failure modes, mitigations implemented before launch.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Failure Mode Analysis"
   },
@@ -275,7 +275,7 @@
     "id": "SIG-035",
     "observableId": "C8-O4",
     "capabilityId": "C8",
-    "signalText": "Cross-org risk awareness: 'Mapped [X] critical dependencies, implemented fallbacks — survived [upstream team]'s outage with zero customer impact' Google's Production Readiness Review (PRR) requires explicit dependency mapping with fallback strategies documented; Amazon's architecture review board mandates that services degrade gracefully when any single dependency fails.",
+    "signalText": "Cross-org risk awareness: 'Mapped [X] critical dependencies, implemented fallbacks — survived upstream service outage with zero customer impact'. Evidence: dependency map with health checks and tested fallback strategies.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Dependency Risk Assessment"
   },
@@ -363,7 +363,7 @@
     "id": "SIG-046",
     "observableId": "C4-O2",
     "capabilityId": "C4",
-    "signalText": "Capacity model accounts for interrupts, on-call, PTO, and tech debt allocation. 'Capacity model predicted [X] velocity, team delivered within 10% for 4 consecutive sprints'. Amazon's OP1 planning requires EMs to account for 20-30% 'keep the lights on' allocation explicitly; Google's sprint planning norm reserves ~20% for tech debt and unplanned work.",
+    "signalText": "Capacity model accounts for interrupts, on-call, PTO, and tech debt allocation. 'Capacity model predicted [X] velocity, team delivered within 10% for 4 consecutive sprints'. Standard: reserves 20-30% for operational work explicitly.",
     "signalType": "metric",
     "sourceSubTopic": "Capacity Planning & Allocation"
   },
@@ -419,7 +419,7 @@
     "id": "SIG-053",
     "observableId": "C9-O6",
     "capabilityId": "C9",
-    "signalText": "Directors own org-level attrition analysis. 'Identified [pattern] driving regrettable attrition, addressed through [action], reduced rate from X% to Y%'",
+    "signalText": "Directors own org-level attrition analysis. 'Identified [pattern] driving regrettable attrition, addressed through [action], reduced rate from X% to Y%'. Evidence: attrition classified by regrettable/non-regrettable with root cause tracking.",
     "signalType": "metric",
     "sourceSubTopic": "Attrition Analysis"
   },
@@ -835,7 +835,7 @@
     "id": "SIG-105",
     "observableId": "C9-O5",
     "capabilityId": "C9",
-    "signalText": "The highest-leverage framing skill for EM/Director: 'Reduced p99 latency 40%, driving estimated 2% conversion lift worth $Xm ARR'. Amazon weekly business reviews demand this exact translation from technical metrics to customer and revenue outcomes — every operational metric must link to a business result.",
+    "signalText": "Highest-leverage framing skill: 'Reduced p99 latency 40%, driving estimated 2% conversion lift worth $Xm ARR'. Evidence: engineering metrics translated to business metrics in investment proposals.",
     "signalType": "metric",
     "sourceSubTopic": "Measuring Engineering Impact"
   },
