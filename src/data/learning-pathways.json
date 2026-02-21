@@ -5,25 +5,25 @@
       {
         "title": "An Elegant Puzzle: Systems of Engineering Management",
         "type": "book",
-        "description": "Team topology patterns: stream-aligned teams, platform teams, enabling teams. Why org structure is a technical decision with direct impact on architecture and delivery speed.",
+        "description": "Will Larson's comprehensive guide to thinking about engineering organizations as systems, covering org design, sizing teams, and managing technical migrations at scale.",
         "url": "https://lethain.com/elegant-puzzle/"
       },
       {
         "title": "Good Strategy Bad Strategy",
         "type": "book",
-        "description": "Conway's Law and inverse Conway: how org structure drives architecture whether intentional or not. Using org design to produce desired architecture.",
+        "description": "Richard Rumelt's foundational work on what makes strategy effective, teaching how to diagnose challenges, create guiding policies, and design coherent actions.",
         "url": "https://www.amazon.com/Good-Strategy-Bad-Difference-Matters/dp/0307886239"
       },
       {
         "title": "Thinking in Systems: A Primer",
         "type": "book",
-        "description": "Cognitive load theory: how to right-size team scope to avoid overload. Assessing cognitive load across different org models.",
+        "description": "Donella Meadows' introduction to systems thinking, essential for understanding how organizational structures create emergent behaviors and feedback loops.",
         "url": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557"
       },
       {
         "title": "How to Think About Org-Level Strategy as an EM",
         "type": "article",
-        "description": "Strategic planning and OKRs: translating business outcomes to team-level objectives with clear decision trade-offs.",
+        "description": "A practical article on translating company-level objectives into engineering org strategies, including aligning team missions with business outcomes.",
         "url": "https://lethain.com/engineering-strategy/"
       }
     ],
@@ -31,19 +31,19 @@
       {
         "title": "Org Strategy Document Template",
         "type": "template",
-        "description": "Team topology workshop: map current state, desired state, and transition plan for org restructuring.",
+        "description": "A structured template for writing an engineering org strategy document that connects business context, technical landscape, key challenges, and a coherent plan of action.",
         "url": null
       },
       {
         "title": "Wardley Mapping for Engineering Leaders",
         "type": "exercise",
-        "description": "Executing a re-org: communication plan, transition timeline, managing anxiety, measuring success.",
+        "description": "Practice mapping your technology landscape using Wardley Maps to identify evolution stages, build vs. buy decisions, and strategic positioning of engineering investments.",
         "url": null
       },
       {
         "title": "Strategy Review Simulation",
         "type": "workshop",
-        "description": "Building a service ownership registry: documenting single-threaded ownership, resolving ambiguity, maintaining as source of truth.",
+        "description": "A facilitated exercise where participants present and critique org-level strategies, practicing the skill of identifying weak strategies and strengthening them with concrete diagnosis and action.",
         "url": null
       },
       {
@@ -81,19 +81,19 @@
       {
         "title": "Multi-Year Technical Strategy Case Studies",
         "type": "case-study",
-        "description": "Designing org for scale: how stream-aligned teams, clear ownership, and cognitive load management enable scaling without chaos.",
+        "description": "Analysis of real-world multi-year engineering strategies from companies like Spotify, Stripe, and Google, examining how they evolved org structure to support strategic shifts.",
         "url": null
       },
       {
         "title": "Strategic Leadership Peer Group",
         "type": "community",
-        "description": "Strategic org design: using org structure as a lever to execute business strategy and shape technical direction.",
+        "description": "Join or form a peer group of senior engineering leaders who meet regularly to review and challenge each other's org-level strategies and share lessons learned.",
         "url": null
       },
       {
         "title": "Executive Strategy Mentorship",
         "type": "mentorship",
-        "description": "Mentorship: peer learning with other directors on org design decisions, re-org execution, and strategic alignment.",
+        "description": "Work with a VP or CTO-level mentor to develop the skill of reading business landscapes, identifying inflection points, and crafting strategies that position the engineering org for long-term success.",
         "url": null
       },
       {
@@ -110,25 +110,25 @@
       {
         "title": "Essentialism: The Disciplined Pursuit of Less",
         "type": "book",
-        "description": "Practical framework for planning engineering work: setting quarterly objectives, evaluating trade-offs, and allocating resources across competing priorities with transparency.",
+        "description": "Greg McKeown's guide to focusing on what truly matters, directly applicable to the challenge of saying no to good ideas in favor of great ones.",
         "url": "https://www.amazon.com/Essentialism-Disciplined-Pursuit-Greg-McKeown/dp/0804137404"
       },
       {
         "title": "The Art of Prioritization for Engineering Leaders",
         "type": "article",
-        "description": "How engineering strategy connects to business strategy. Frameworks for translating technical work to business outcomes and defending engineering investment to leadership.",
+        "description": "A deep dive into prioritization frameworks including RICE, ICE, and weighted scoring models, with guidance on when each is most appropriate for engineering contexts.",
         "url": "https://newsletter.pragmaticengineer.com/p/engineering-planning"
       },
       {
         "title": "Inspired: How to Create Tech Products People Love",
         "type": "book",
-        "description": "Principles of capacity planning: understanding team constraints, forecasting delivery, and managing technical debt alongside feature work without compromising either.",
+        "description": "Marty Cagan's work on product discovery and delivery, essential for understanding how to prioritize work that delivers genuine customer and business value.",
         "url": "https://www.amazon.com/INSPIRED-Create-Tech-Products-Customers/dp/1119387507"
       },
       {
         "title": "Opportunity Cost Thinking for Engineers",
         "type": "video",
-        "description": "Framework for communicating trade-offs and building alignment across engineering, product, and business on resource allocation and priority decisions.",
+        "description": "A talk on applying economic thinking to engineering prioritization, understanding that every choice to build one thing is a choice not to build something else.",
         "url": null
       }
     ],
@@ -136,19 +136,19 @@
       {
         "title": "RICE Scoring Workshop",
         "type": "workshop",
-        "description": "Template for quarterly planning: roadmap structure, business outcome mapping, stakeholder involvement, and monthly re-prioritization cadence.",
+        "description": "A hands-on session where teams score a backlog of real initiatives using Reach, Impact, Confidence, and Effort, then debate and calibrate their assessments.",
         "url": null
       },
       {
         "title": "Priority Stack Ranking Template",
         "type": "template",
-        "description": "Prioritization scorecard framework: defining criteria, scoring consistently, and using data to defend priority decisions to stakeholders.",
+        "description": "A spreadsheet template for stack-ranking engineering initiatives against strategic objectives, including fields for estimated impact, effort, risk, and strategic alignment.",
         "url": null
       },
       {
         "title": "Saying No Exercise",
         "type": "exercise",
-        "description": "Pre-execution design review process: identifying technical feasibility risks before initiatives start, reducing mid-execution surprises.",
+        "description": "Practice the skill of declining requests constructively by role-playing scenarios where stakeholders push for work that doesn't align with current priorities, and crafting clear, empathetic responses.",
         "url": null
       },
       {
@@ -180,25 +180,25 @@
       {
         "title": "Prioritization Under Uncertainty",
         "type": "framework",
-        "description": "Strategic planning at scale: coordinating roadmaps across multiple teams, maintaining strategic alignment, and ensuring consistent prioritization across the organization.",
+        "description": "A framework for making prioritization decisions when data is incomplete, combining lightweight experimentation, option-value thinking, and reversibility assessment.",
         "url": null
       },
       {
         "title": "Netflix and Spotify Prioritization Case Studies",
         "type": "case-study",
-        "description": "Building business acumen in engineering: translating technical work to business outcomes, understanding business drivers of prioritization, and participating in executive strategy.",
+        "description": "Detailed examination of how high-performing engineering orgs balance platform investment, feature development, and technical debt reduction across multiple teams.",
         "url": null
       },
       {
         "title": "Senior EM Prioritization Peer Review",
         "type": "community",
-        "description": "Case studies of organizations that scaled planning discipline: how planning frameworks evolve as teams grow and what changes when coordinating across many teams.",
+        "description": "A structured peer review process where engineering leaders present their quarterly prioritization rationale and receive feedback on blind spots, missing considerations, and alternative framings.",
         "url": null
       },
       {
         "title": "Portfolio Management Mentorship",
         "type": "mentorship",
-        "description": "Balancing feature velocity with technical health: frameworks for allocating capacity to tech debt, platform work, and operational investment without sacrificing delivery speed.",
+        "description": "Work with a senior leader experienced in managing a portfolio of engineering investments, learning to balance short-term delivery with long-term capability building.",
         "url": null
       }
     ]
@@ -425,25 +425,25 @@
       {
         "title": "Influence Without Authority",
         "type": "book",
-        "description": "Covers influence without authority, persuasion frameworks, and how to build credibility across organizational boundaries. Essential for leaders who must work through peers.",
+        "description": "Allan Cohen and David Bradford's guide to building influence through reciprocity and mutual benefit, essential for engineering leaders who must work across organizational boundaries.",
         "url": "https://www.amazon.com/Influence-Without-Authority-Allan-Cohen/dp/1119347718"
       },
       {
         "title": "Crucial Conversations",
         "type": "book",
-        "description": "Frameworks for cross-functional collaboration: DACI decision-making, shared OKRs, and conflict resolution. Applicable to any engineering-product-design environment.",
+        "description": "Tools for navigating high-stakes discussions where opinions vary and emotions run strong, directly applicable to cross-functional negotiations and alignment meetings.",
         "url": "https://www.amazon.com/Crucial-Conversations-Tools-Talking-Stakes/dp/1260474186"
       },
       {
         "title": "The Art of Cross-Functional Collaboration in Tech",
         "type": "article",
-        "description": "Communication fundamentals: active listening, perspective-taking, and framing technical concepts for non-technical audiences. Enables influence across functions.",
+        "description": "A practical article on building productive working relationships with Product, Design, Data Science, and other functions, including common pitfalls and how to avoid them.",
         "url": "https://leaddev.com/communication-relationships/navigating-cross-functional-partnerships-engineering-leader"
       },
       {
         "title": "Stakeholder Mapping for Engineering Leaders",
         "type": "video",
-        "description": "Understanding business and product thinking: how to translate between technical and business languages, and why business constraints matter as much as technical ones.",
+        "description": "A talk on identifying key stakeholders, understanding their motivations and concerns, and developing tailored influence strategies for each.",
         "url": null
       }
     ],
@@ -451,19 +451,19 @@
       {
         "title": "Stakeholder Map Template",
         "type": "template",
-        "description": "Templates for cross-functional coordination: shared planning docs, decision authority matrices, escalation criteria. Ready-to-use frameworks.",
+        "description": "A visual template for mapping stakeholders by influence and interest, identifying allies, blockers, and people who need to be informed or consulted on engineering decisions.",
         "url": null
       },
       {
         "title": "Cross-Functional Alignment Workshop",
         "type": "workshop",
-        "description": "Running effective triad meetings: agendas, decision frameworks, documentation practices that build alignment without overhead.",
+        "description": "A structured workshop format for bringing engineering, product, and design together to align on priorities, surface hidden dependencies, and commit to shared outcomes.",
         "url": null
       },
       {
         "title": "Influence Conversation Role-Play",
         "type": "exercise",
-        "description": "Negotiation skills for engineering leaders: how to disagree professionally, frame trade-offs, and resolve conflicts without escalation.",
+        "description": "Practice influence skills through role-playing scenarios such as convincing a product manager to prioritize tech debt, or negotiating timeline changes with a business stakeholder.",
         "url": null
       },
       {
@@ -495,19 +495,19 @@
       {
         "title": "Cross-Functional Influence at Scale",
         "type": "case-study",
-        "description": "Building trust across functions: how great leaders develop credibility with peers from different disciplines and influence strategy.",
+        "description": "Case studies of engineering leaders who successfully drove cross-functional initiatives (platform migrations, process changes, org restructures) that required buy-in from multiple functions.",
         "url": null
       },
       {
         "title": "Executive Influence Mentorship",
         "type": "mentorship",
-        "description": "Case studies of engineering-product-design partnerships: what works, what fails, and how mature leaders maintain alignment during chaos.",
+        "description": "Work with a senior leader skilled at cross-functional influence to develop strategies for building coalitions, managing resistance, and driving alignment at the executive level.",
         "url": null
       },
       {
         "title": "Cross-Functional Leadership Forum",
         "type": "community",
-        "description": "Pair with a respected peer from Product or Design to learn their decision-making frameworks and build cross-functional relationship skills.",
+        "description": "A forum bringing together leaders from engineering, product, design, and operations to discuss collaboration challenges and develop shared norms for working together effectively.",
         "url": null
       },
       {
@@ -524,25 +524,25 @@
       {
         "title": "The Coaching Habit",
         "type": "book",
-        "description": "Fundamentals of effective management including building strong relationships, giving feedback, developing people, and creating psychological safety. Essential foundation for talent development.",
+        "description": "Michael Bungay Stanier's guide to asking better questions and giving less advice, transforming managers from problem-solvers into coaches who develop their team's capabilities.",
         "url": "https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749"
       },
       {
         "title": "Radical Candor",
         "type": "book",
-        "description": "Covers progressive discipline, difficult conversations, handling underperformance, and managing people out. Necessary for addressing problems directly and fairly.",
+        "description": "Kim Scott's framework for caring personally while challenging directly, providing the foundation for honest feedback conversations that drive growth.",
         "url": "https://www.amazon.com/Radical-Candor-Revised-Kick-Ass-Humanity/dp/1250235375"
       },
       {
         "title": "Thanks for the Feedback",
         "type": "book",
-        "description": "Coaching methodology: asking powerful questions, listening actively, and helping people discover solutions. Core skill for developing talent.",
+        "description": "Douglas Stone and Sheila Heen's exploration of why feedback is hard to receive and how to create conditions where it lands effectively, essential for managers who give feedback daily.",
         "url": "https://www.amazon.com/Thanks-Feedback-Science-Receiving-Well/dp/0143127136"
       },
       {
         "title": "Growth Mindset and Engineering Teams",
         "type": "article",
-        "description": "How to recognize potential in people, develop high-performers, and create career paths. Directly applicable to retention and growth.",
+        "description": "A foundational 2016 article whose research remains widely cited. Covers how to cultivate a growth mindset culture on engineering teams, moving from a fixed-ability worldview to one where skills are developed through deliberate practice and stretch assignments.",
         "url": "https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means"
       }
     ],
@@ -550,19 +550,19 @@
       {
         "title": "Individual Development Plan (IDP) Template",
         "type": "template",
-        "description": "Structured 1:1 template with development focus: weekly conversations that include career growth, feedback, and coaching.",
+        "description": "A structured template for creating individual development plans that connect an engineer's career aspirations with specific skills to develop, experiences to seek, and milestones to track.",
         "url": null
       },
       {
         "title": "Coaching Conversation Practice",
         "type": "exercise",
-        "description": "How to conduct skip-level conversations quarterly to surface hidden problems and understand team health from employee perspective.",
+        "description": "Practice the GROW model (Goal, Reality, Options, Will) through simulated coaching conversations covering common engineering scenarios: career pivots, skill gaps, and performance challenges.",
         "url": null
       },
       {
         "title": "Stretch Assignment Design Workshop",
         "type": "workshop",
-        "description": "Progression framework design with explicit behavioral milestones per level, enabling clear career path visibility.",
+        "description": "Learn to identify and design stretch assignments that push engineers just beyond their comfort zone, with appropriate scaffolding to ensure learning without overwhelming risk.",
         "url": null
       },
       {
@@ -588,25 +588,25 @@
       {
         "title": "Talent Development at High-Growth Companies",
         "type": "case-study",
-        "description": "How to identify and develop future leaders within the organization, creating a sustainable pipeline of internal talent.",
+        "description": "How companies like Shopify, Stripe, and Datadog developed engineering talent at scale, including mentorship programs, internal mobility, and leadership development pipelines.",
         "url": null
       },
       {
         "title": "Coaching Skills Peer Practice Group",
         "type": "community",
-        "description": "Building high-performance teams through selection, development, and culture. How team composition affects outcomes.",
+        "description": "A small group of engineering managers who meet regularly to practice coaching skills on each other, providing a safe environment to experiment with new techniques and get feedback.",
         "url": null
       },
       {
         "title": "Executive Coach Partnership",
         "type": "mentorship",
-        "description": "Diversity and inclusion practices: hiring, sponsorship, and belonging. How diverse teams make better decisions.",
+        "description": "Work with a professional executive coach to deepen your own coaching skills, understand your coaching blind spots, and develop the ability to coach engineers through complex career transitions.",
         "url": null
       },
       {
         "title": "The Talent Density Framework",
         "type": "framework",
-        "description": "Scaling development practices across multiple teams while maintaining quality and personalization.",
+        "description": "A framework for systematically increasing team capability through targeted hiring, coaching, stretch assignments, and performance management, raising the bar across the organization.",
         "url": null
       }
     ]
@@ -617,19 +617,19 @@
       {
         "title": "Thinking in Bets",
         "type": "book",
-        "description": "Narrative memo structure: how to think through a decision and communicate it clearly. The 6-pager forces structured thinking and prevents hiding weak reasoning behind presentation slides.",
+        "description": "Annie Duke's guide to making better decisions under uncertainty, teaching how to separate decision quality from outcome quality and communicate probabilistic thinking.",
         "url": "https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions/dp/0735216371"
       },
       {
         "title": "The Pyramid Principle",
         "type": "book",
-        "description": "Covers presentation structure, audience adaptation, and executive presence. Essential for influence at scale.",
+        "description": "Barbara Minto's framework for structured communication, teaching how to organize ideas hierarchically so that key messages land clearly with any audience.",
         "url": "https://www.amazon.com/Pyramid-Principle-Logic-Writing-Thinking/dp/0273710516"
       },
       {
         "title": "Writing Well as an Engineering Leader",
         "type": "article",
-        "description": "Frameworks for decision-making: DACI, RFC process, decision documentation. Enables organizational learning by creating an institutional memory of decisions and their rationale.",
+        "description": "Practical guidance on writing effective technical documents, proposals, and updates that are clear, concise, and tailored to their audience.",
         "url": "https://newsletter.pragmaticengineer.com/p/writing-well"
       },
       {
@@ -643,19 +643,19 @@
       {
         "title": "Decision Document Template",
         "type": "template",
-        "description": "Decision memo template with required sections: context, options, trade-offs, recommendation, risks, reversibility. Directly usable in your organization.",
+        "description": "A one-page template for framing decisions that includes context, options with tradeoffs, recommendation, risks, and reversibility assessment, designed for executive audiences.",
         "url": null
       },
       {
         "title": "Executive Communication Workshop",
         "type": "workshop",
-        "description": "Communication templates for three audiences: executive summary, peer briefing, technical implementation context. Teaches altitude adaptation.",
+        "description": "Practice presenting technical decisions to non-technical executives, focusing on framing, storytelling, managing objections, and tailoring depth to the audience.",
         "url": null
       },
       {
         "title": "Decision Journal Exercise",
         "type": "exercise",
-        "description": "Workshop: practice delivering bad news early with structured escalation format. Role-play leadership's perspective to improve timing and framing.",
+        "description": "Maintain a decision journal for 90 days, recording each significant decision's context, reasoning, confidence level, and expected outcome, then reviewing to identify patterns and improve.",
         "url": null
       },
       {
@@ -687,19 +687,19 @@
       {
         "title": "High-Stakes Decision Communication Case Studies",
         "type": "case-study",
-        "description": "Case studies: how high-performing leaders maintain decision discipline at scale; preventing decision revisitation as organizations grow.",
+        "description": "Analysis of how engineering leaders communicated critical decisions (platform rewrites, team restructures, outage responses) including what worked, what failed, and lessons learned.",
         "url": null
       },
       {
         "title": "Senior Leader Communication Mentorship",
         "type": "mentorship",
-        "description": "Org-wide decision frameworks: how to standardize decision-making across teams while preserving autonomy; building decision culture.",
+        "description": "Work with a VP-level leader known for exceptional communication to develop your ability to frame complex technical decisions for diverse audiences and build consensus.",
         "url": null
       },
       {
         "title": "Decision Quality Community of Practice",
         "type": "community",
-        "description": "Executive communication mastery: navigating cross-functional decisions, executive stakeholder management, and strategic influence.",
+        "description": "A group of senior engineering leaders who meet to review past decisions, share decision-making techniques, and collectively improve the quality of decisions across the organization.",
         "url": null
       },
       {

@@ -129,59 +129,70 @@
     "name": "Resource Allocation & Tradeoffs",
     "slug": "resource-allocation-tradeoffs",
     "domain": "Strategy",
-    "description": "Allocates budget, headcount, and attention to maximize long-term value.",
+    "description": "Assessed by: headcount proposal success rate, budget utilization vs plan, engineering investment mix (feature/reliability/debt), capacity reallocation speed, and cost-per-engineer-month visibility. Absence causes: resource hoarding across teams, underfunded critical initiatives, headcount misaligned with strategy, invisible engineering costs, and chronic team capacity imbalances.",
     "primarySubTopics": [
       "8"
     ],
     "observableCount": 8,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": [
+      "C9"
+    ]
   },
   {
     "id": "C11",
     "name": "Hiring, Onboarding & Role Design",
     "slug": "hiring-onboarding-role-design",
     "domain": "People",
-    "description": "Designs hiring processes, ramps teams effectively, and builds talent brand.",
+    "description": "Assessed by: interview scorecard calibration, offer acceptance rate, time-to-productivity for new hires, job description signal quality, and pipeline diversity metrics. Absence causes: long time-to-fill creating delivery gaps, inconsistent hiring bar, talent brand damage from poor candidate experience, slow new-hire ramp eroding team velocity, and role confusion from vague job descriptions.",
     "primarySubTopics": [
       "10"
     ],
     "observableCount": 11,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C12",
     "name": "Culture & Norms Shaping",
     "slug": "culture-norms-shaping",
     "domain": "People",
-    "description": "Uses signals, rituals, and policy to shape team culture and psychological safety.",
+    "description": "Assessed by: psychological safety survey scores, team conflict resolution patterns, norm reinforcement consistency, inclusion metrics, and skip-level sentiment. Absence causes: toxic behavior tolerated from high performers, psychological safety collapse during crises, cultural drift as team scales, and 'missing stair' patterns where everyone routes around known problems.",
     "primarySubTopics": [
       "8"
     ],
     "observableCount": 8,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C13",
     "name": "Security & Compliance Posture",
     "slug": "security-compliance-posture",
     "domain": "Reliability",
-    "description": "Drives proactive security governance, vulnerability management, and compliance readiness.",
+    "description": "Assessed by: vulnerability remediation SLAs, security review coverage in design phase, compliance audit findings, incident response readiness, and team security training completion. Absence causes: security incidents from unpatched vulnerabilities, compliance failures creating legal risk, security treated as afterthought in design, and reactive firefighting replacing proactive governance.",
     "primarySubTopics": [
       "4"
     ],
     "observableCount": 7,
-    "v5Status": "NEW"
+    "v5Status": "NEW",
+    "enabledBy": [
+      "C3"
+    ]
   },
   {
     "id": "C14",
     "name": "Performance Management & Calibration",
     "slug": "performance-management-calibration",
     "domain": "People",
-    "description": "Runs the performance cycle: reviews, calibration, ratings, PIPs, and exits with rigor and fairness.",
+    "description": "Assessed by: performance review completion timeliness, calibration committee rating distributions, PIP conversion rates, feedback delivery cadence, and promotion evidence quality. Absence causes: performance surprises at review time, calibration without behavioral evidence, PIPs used punitively rather than developmentally, high performers under-recognized, and low performers carried indefinitely.",
     "primarySubTopics": [
       "9"
     ],
     "observableCount": 9,
-    "v5Status": "NEW"
+    "v5Status": "NEW",
+    "enabledBy": [
+      "C6"
+    ]
   }
 ]

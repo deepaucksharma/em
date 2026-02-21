@@ -117,21 +117,25 @@
       "C13-O2"
     ],
     "capabilityId": "C13",
-    "shortDesc": "EM focuses exclusively on engineering and treats product/design as 'the business side.' Engineering is isolated, reactive to asks, and develops an oppositional relationship with Product.",
+    "shortDesc": "EM treats security as the security team's job rather than embedding it in the engineering workflow. Security reviews become afterthoughts, vulnerability backlogs grow unchecked, and the team discovers threat modeling gaps only through incidents.",
     "warningSigns": [
-      "EM doesn't attend product planning or strategy meetings",
-      "Engineering is surprised by major initiatives or scope changes",
-      "Decisions are presented to engineering as done deals rather than negotiated",
-      "Communication with Product/Design is primarily through email or async comments, not synchronous discussion",
-      "EM describes Product as 'always changing their mind' or Design as 'unrealistic'"
+      "Security reviews are afterthoughts or skipped",
+      "No security checkpoints in CI/CD pipeline",
+      "Vulnerabilities linger beyond SLA with months-old backlog",
+      "Team doesn't know basic security practices",
+      "'We'll fix it after launch' or 'we'll add security later' is common",
+      "No threat modeling for new features touching auth, payments, or PII"
     ],
-    "impact": "Within 2-3 quarters: engineering becomes delivery-only, not strategic; product/design stops trusting engineering feasibility input; scope surprises and rework become common; EM is excluded from important planning conversations.",
+    "impact": "Security incidents that damage customer trust; compliance failures with VP-level visibility; forced emergency patching disrupting planned work; regulatory penalties",
     "recoveryActions": [
-      "Start attending product planning meetings and ask clarifying questions about priorities and market context.",
-      "Schedule 1:1s with PM and Design lead to understand their constraints and goals; share engineering's constraints.",
-      "Volunteer engineering perspective on upcoming initiatives — be proactive, not reactive.",
-      "Co-author roadmaps or planning documents with PM; ensure engineering constraints are reflected before commitments are made.",
-      "Build trust through consistency: do what you commit to; escalate obstacles early rather than surprising people."
+      "Embed security in the development workflow — add automated security scanning to CI/CD pipeline.",
+      "Security champion rotation within team.",
+      "Include security in launch checklist and require threat modeling for features touching auth, payments, or PII.",
+      "Make vulnerability SLA as visible as uptime SLA with severity-based targets.",
+      "Run quarterly security training and make security debt visible alongside tech debt in sprint planning.",
+      "Amazon embeds security reviews into every design doc and requires threat models before launch; security is a first-class gate, not an afterthought.",
+      "Google's BeyondCorp model and production security reviews require automated security scanning in every CI/CD pipeline; known vulnerabilities block deployment by default.",
+      "See Playbook: 'Your VP Wants Engineering to 'Own Security' But Nobody Has Expertise' (P-C13-6) for how to build security ownership incrementally when the team lacks expertise."
     ],
     "sourceTopic": "Security & Operational Rigor",
     "mappingNotes": "Security as afterthought → security integration observables"
@@ -198,19 +202,20 @@
       "C1-O4"
     ],
     "capabilityId": "C1",
-    "shortDesc": "EM presents vague proposals without options or trade-offs. Proposals get sent back; stakeholders lose confidence; decisions take 3x longer than necessary.",
+    "shortDesc": "Leadership reaches for re-orgs as the default solution to execution problems, restructuring teams every 6-9 months. Chronic instability prevents teams from gelling, destroys institutional knowledge, and masks the real process or leadership issues driving dysfunction.",
     "warningSigns": [
-      "Proposal submitted without written artifact; decision made 'in the meeting'",
-      "Options presented without quantified trade-offs — 'option A vs option B' with no cost or benefit comparison",
-      "No DACI roles assigned; decision authority unclear",
-      "First-meeting approval rate <50%; proposals regularly require rework"
+      "More than one re-org per year",
+      "Teams never stabilize",
+      "People joke about 'the next re-org'",
+      "Leadership sees re-orgs as solutions to execution problems"
     ],
-    "impact": "Within 1-2 quarters: stakeholder trust erodes; proposals get sent back repeatedly; EM seen as unprepared; team velocity decreases as decisions take longer.",
+    "impact": "Chronic instability; people disengage (why invest in something that'll change in 6 months?); institutional knowledge lost in each shuffle; real problems never addressed",
     "recoveryActions": [
-      "Create a decision memo template with required sections: context, options (minimum 3), quantified trade-offs, recommendation, risks, reversibility.",
-      "Write a decision memo for every decision >1 engineer-week of effort before scheduling a meeting.",
-      "Circulate 48 hours before the meeting; establish a silent reading period.",
-      "Measure first-meeting approval rate (target >80%) and track improvements."
+      "Diagnose root cause before proposing structural change.",
+      "Ask: 'Would this problem exist regardless of team structure?' Most execution problems are process/people/leadership problems, not org chart problems.",
+      "Minimum 6 months between structural changes.",
+      "Spotify's Squad model provides stable team structure even as product priorities shift — teams own domains, not projects, which eliminates the impulse to re-org for every new initiative.",
+      "See Playbook: 'Merging Two Teams After Acquisition/Re-org' (P-C1-4) for a step-by-step scenario addressing this pattern."
     ],
     "sourceTopic": "Org Design & Team Topologies",
     "mappingNotes": "Re-org addiction → re-org execution / signal recognition observables"
@@ -251,19 +256,22 @@
       "C14-O4"
     ],
     "capabilityId": "C6",
-    "shortDesc": "Org structure doesn't match architecture; teams organized by technology layer instead of value streams. Coordination overhead paralyzes delivery; every feature requires cross-team handoffs.",
+    "shortDesc": "EM avoids difficult conversations — underperformance goes unaddressed for quarters, feedback stays vague and positive, and real issues surface only in back-channels. High performers leave frustrated by inequity while team standards quietly erode.",
     "warningSigns": [
-      "Team boundaries are by technology layer (backend team, frontend team, data team) instead of by customer value or product area",
-      ">30% of sprint work requires coordination across teams",
-      "No clear single owner for any service — shared ownership of critical systems is normal",
-      "Deploy process requires tickets to be handed off between teams"
+      "Underperformers coasting for quarters",
+      "Team frustration about 'dead weight'",
+      "EM gives everyone positive feedback",
+      "Real issues discussed in back-channels",
+      "Skip-level 1:1s reveal problems EM hasn't addressed"
     ],
-    "impact": "Within 2-3 quarters: coordination overhead compounds; deployment frequency drops because features require serialized work across teams; team morale suffers from 'not my problem' dynamics; hiring stalls because org is clearly broken.",
+    "impact": "High performers leave (frustrated by inequity); team standards erode; EM loses credibility with leadership and team; eventual crisis when problems can't be ignored anymore",
     "recoveryActions": [
-      "Map value streams: what customer outcomes do we deliver? What's the end-to-end path from request to delivery?",
-      "Propose stream-aligned teams (not layer-aligned) where each team owns a complete value stream end-to-end.",
-      "Restructure org to match target architecture, not the other way around (inverse Conway).",
-      "Set a target: <5% of sprint work requires cross-team handoffs; measure quarterly."
+      "Start with smallest difficult conversation and build the muscle.",
+      "Use SBI framework to make feedback specific.",
+      "Set personal goal: address one difficult issue per week.",
+      "Get coaching from your manager on delivery.",
+      "Netflix's culture of radical candor expects managers to deliver direct feedback within 48 hours — avoiding difficult conversations is itself treated as a performance issue.",
+      "See Playbook: 'Two of Your Engineers Are in Conflict' (P-C12-1) for structured conflict resolution, and track improvement via metric M-7.8 (Manager Effectiveness Score)."
     ],
     "sourceTopic": "Team Health & Execution",
     "mappingNotes": "Conflict avoidance → underperformance / feedback observables"
@@ -276,20 +284,21 @@
       "C12-O1"
     ],
     "capabilityId": "C12",
-    "shortDesc": "Priorities shift constantly. Every week, the most senior person in the room reproritizes what the team is working on. Teams thrash between contexts and finish nothing.",
+    "shortDesc": "EM operates in an information bubble where only good news flows upward because the team doesn't feel safe sharing problems. Real issues surface through incidents or resignations rather than through communication, blindsiding the EM and eroding leadership trust.",
     "warningSigns": [
-      "Team can't describe what quarter they're planning for",
-      "More than one unplanned priority shift per sprint",
-      "Engineers complain about context-switching and half-finished work",
-      "Retrospectives mention whiplash and inability to focus"
+      "EM thinks team is happy",
+      "Engagement survey results are surprising",
+      "Problems discovered through incidents or attrition, not through communication",
+      "1:1s are pleasant but shallow"
     ],
-    "impact": "Within 1-2 quarters: velocity craters from context-switching; senior engineers leave due to chaos; team loses trust in planning; morale drops as work feels meaningless.",
+    "impact": "Real problems invisible until they explode; EM blindsided by resignations; incidents that could have been prevented; leadership surprised by team issues EM should have known about",
     "recoveryActions": [
-      "Freeze the current quarter plan — no new prioritizations for 30 days.",
-      "Implement formal planning cycle: quarterly plan, monthly re-prioritization gate, no ad hoc changes.",
-      "When new requests arrive, queue them for the next planning cycle — don't disrupt current work.",
-      "Track unplanned reprioritizations weekly; target zero within 2 months.",
-      "Hold post-quarter review: what % of plan shipped? What % was disrupted? Use data to justify planning discipline."
+      "Ask specific questions (not 'how are things?' but 'what's the most frustrating part of your work right now?').",
+      "Share your own concerns first (model vulnerability).",
+      "Act on small feedback to prove it's safe to share bigger feedback.",
+      "Anonymous team health surveys as backup signal.",
+      "Google's Project Aristotle research identified psychological safety as the #1 predictor of team effectiveness; mandatory quarterly skip-level surveys help surface problems that 1:1s miss.",
+      "See Playbook: 'Rebuilding Psychological Safety After Organizational Disruption' (P-C12-6) for how to create the safety conditions that surface real information."
     ],
     "sourceTopic": "Team Health & Execution",
     "mappingNotes": "The bubble → psychological safety observable"
@@ -303,19 +312,21 @@
       "C4-O7"
     ],
     "capabilityId": "C7",
-    "shortDesc": "1:1s are status meetings where the EM extracts information. No development conversations happen; team doesn't feel coached; career growth is left to chance.",
+    "shortDesc": "EM is always available, always responsive, and burning out while modeling unsustainable pace that the team feels pressured to match. Decision quality degrades with fatigue, the team adopts unhealthy norms, and the EM becomes a single point of failure.",
     "warningSigns": [
-      "1:1 agenda is always the EM's list of things to check on, never employee-driven",
-      "Conversations about career development are rare and reactive",
-      "Team members don't know what they need to do to get to next level",
-      "Team describes 1:1s as 'status reports', not conversations"
+      "EM responds to Slack at midnight and on weekends",
+      "Team feels guilty taking PTO because EM never does",
+      "EM's personal health and relationships are suffering",
+      "Manager praises EM's 'dedication' without seeing the burnout trajectory"
     ],
-    "impact": "Within 2-3 quarters: high-potential people leave for managers who coach them; team morale drops; development becomes invisible and left to chance.",
+    "impact": "EM burnout and potential departure; team adopts unsustainable norms; no one takes vacation; EM becomes bottleneck; quality of EM's decisions degrades with fatigue",
     "recoveryActions": [
-      "Redesign 1:1 template: employee brings their agenda; EM asks development-focused questions.",
-      "Rotate 1:1 topics: week 1 career goals, week 2 current project, week 3 feedback/coaching, week 4 blockers.",
-      "Block 15 minutes of every 1:1 for a focused development conversation.",
-      "Have EM bring a thoughtful observation or question prepared to each 1:1."
+      "Set and enforce personal boundaries visibly — the team takes cues from your behavior.",
+      "Take PTO and be genuinely unreachable to prove the team can function without you.",
+      "Tell your manager you're overloaded — it's not a weakness, it's a signal.",
+      "Track your own working hours for a month and share the data with your manager.",
+      "Microsoft's Model-Coach-Care framework explicitly treats sustainable pace as a leadership competency — leaders who model overwork are failing, not succeeding.",
+      "See Playbook: 'Your On-Call Rotation Is Burning People Out' (P-C8-5) for structural approaches to preventing burnout through sustainable on-call and workload practices."
     ],
     "sourceTopic": "Team Health & Execution",
     "mappingNotes": "24/7 manager → proactive status / focus protection observables"
@@ -329,19 +340,21 @@
       "C11-O2"
     ],
     "capabilityId": "C11",
-    "shortDesc": "Performance reviews are an annual surprise where managers unleash accumulated resentment. Feedback is personality-based ('you're not a team player') rather than behavioral; no calibration across the team.",
+    "shortDesc": "EM lowers the hiring bar under pressure from open reqs and leadership urgency, accepting candidates who don't meet the standard. Poor hires drag down team velocity, consume disproportionate management attention, and often exit within 12 months — costing far more than the vacancy they filled.",
     "warningSigns": [
-      "Employees say 'I had no idea I was doing this badly' after reviews",
-      "Feedback uses personality traits instead of specific behaviors",
-      "Rating distribution is inconsistent across the team (one manager rates everyone high, another low)",
-      "Same behavior gets different ratings from different managers"
+      "Declining interview scores accepted with 'we need someone'",
+      "Onboarding problems increase",
+      "Regrettable hires within 12 months",
+      "Team quality diluted"
     ],
-    "impact": "Within 1-2 quarters: top talent leaves because reviews feel unfair; team morale drops; psychological safety erodes; calibration problems become visible when comparing across teams.",
+    "impact": "Poor hires drag down team velocity and morale; management overhead increases; eventual PIP/exit process (6-12 months wasted); team loses trust in hiring process",
     "recoveryActions": [
-      "Shift to real-time feedback, not once-a-year dump. Monthly feedback conversations.",
-      "Feedback template: situation, specific behavior observed, impact on team. No personality judgments.",
-      "Calibration session with all managers: discuss edge cases, align on rating scales, adjust outliers.",
-      "Pre-review conversation with each employee: 'Here's the feedback we've been gathering, here's what we've observed.'"
+      "Hold the bar.",
+      "Show leadership the cost of bad hires (in months of lost productivity, management time, and team morale).",
+      "Track quality-of-hire metrics.",
+      "Better to be understaffed for 3 months than to have a bad hire for 12.",
+      "Amazon's Bar Raiser program gives an independent interviewer veto power specifically to prevent pressure-driven hiring compromises, structurally protecting quality.",
+      "See Playbook: 'You Need to Build a New Team From Scratch' (P-C11-1) for how to hire under pressure without lowering the bar."
     ],
     "sourceTopic": "Talent Acquisition & Team Building",
     "mappingNotes": "Hiring bar collapse → calibrated hiring / bar maintenance observables"
@@ -967,19 +980,27 @@
       "C13-O3",
       "C13-O4"
     ],
-    "shortDesc": "Promotions feel arbitrary. 'I don't know what I need to do to get promoted' is the silent reason people leave. High-potential talent has no visibility into what's required.",
+    "shortDesc": "EM treats compliance as a periodic audit exercise, achieving minimal technical compliance without genuine security posture improvement. Day-to-day practices drift from documented standards, and audit preparation becomes a recurring fire drill that disrupts planned work.",
     "warningSigns": [
-      "No documented progression framework exists",
-      "Promotion decisions are made in EM's office, not in team conversation",
-      "Employees are surprised when told they're not being promoted",
-      "Different teams have different unwritten standards"
+      "Compliance activities spike before audits",
+      "Access reviews happen annually instead of quarterly; permissions accumulate without review",
+      "Evidence collection is manual and rushed, only during audit prep",
+      "Security reviews are copy-paste from templates",
+      "Same audit findings recur year after year",
+      "Security champion role is ceremonial; compliance artifacts are stale",
+      "Security training is annual checkbox with no retention"
     ],
-    "impact": "Within 2 quarters: high-potential people leave because they don't see a path; weaker performers stay because they don't know they're underperforming; promotions feel like favoritism.",
+    "impact": "Audit findings and remediation consume weeks; compliance gaps create legal/financial risk; team treats compliance as punishment rather than practice; access sprawl creates security vulnerabilities",
     "recoveryActions": [
-      "Define progression framework with explicit criteria per level — written and visible to entire team.",
-      "Maintain promotion register: candidates, what they need to show, timeline.",
-      "Pre-promotion conversation: 'Here's what we're seeing, here's what we need to see, here's the timeline.'",
-      "No surprises: every promoted person knew they were being considered; every non-promoted person understood why."
+      "Shift from compliance-driven to threat-driven security.",
+      "Automate evidence collection and compliance monitoring continuously.",
+      "Set all elevated permissions to auto-expire after 24 hours by default. Run quarterly access audits: export all accounts with elevated access, verify each has a business justification, and revoke any without one within 5 business days.",
+      "Build compliance checks into deployment pipeline.",
+      "Track unique audit findings — repeat findings indicate a checkbox approach.",
+      "Require genuine threat models, not template copies.",
+      "Treat compliance posture as an ongoing metric, not a periodic event.",
+      "Netflix's security approach treats compliance as a byproduct of strong security posture, not the goal — continuous monitoring and automated evidence collection replace periodic audit scrambles.",
+      "See Playbook: 'Your Team Keeps Failing Security Audits With the Same Findings' (P-C13-3) for a step-by-step scenario addressing this pattern."
     ],
     "sourceTopic": "Security & Compliance Posture",
     "mappingNotes": "Periodic compliance → access management / continuous compliance observables"
@@ -1254,20 +1275,23 @@
       "C5-O16"
     ],
     "capabilityId": "C5",
-    "shortDesc": "Tech debt is never formally allocated in planning. It gets squeezed in around feature work until velocity deteriorates, then panic ensues and a 'tech debt sprint' derails the roadmap.",
+    "shortDesc": "EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes. Peer teams learn to route around the silo, leadership loses trust, and the team's wins come at the cost of org-wide velocity.",
     "warningSigns": [
-      "Tech debt discussed reactively only after velocity hits alert thresholds",
-      "No debt allocation in quarterly planning",
-      "Debt work competes with features and always loses",
-      "Team discusses debt in retros but EM doesn't act to allocate capacity"
+      "Team builds custom solutions rather than contributing to shared platforms",
+      "EM hoards information that would help other teams",
+      "Team's velocity is high but cross-team projects stall",
+      "EM avoids cross-team meetings",
+      "Team's success metrics disconnected from org goals",
+      "'not my team's problem' is a common response to cross-team requests"
     ],
-    "impact": "Within 2-3 quarters: velocity degrades; deployment frequency drops; incidents increase from accumulated risk; team becomes demoralized from death-by-a-thousand-cuts.",
+    "impact": "Duplicated effort across teams; cross-team initiatives fail; other teams can't depend on your team; EM's reputation suffers despite strong local results; eventually leadership intervenes to force collaboration; org-level outcomes suffer while team-level metrics look great",
     "recoveryActions": [
-      "Create a tech debt inventory: list top 15 debt items, estimate effort and impact (velocity drag, incident risk, security risk).",
-      "Allocate 15-20% of each quarter's capacity explicitly to debt — add it as a line item in quarterly planning.",
-      "Prioritize debt by impact/effort ratio; schedule top 3 items into the quarter.",
-      "Track velocity improvement after major debt items resolved; use data to justify continued debt allocation.",
-      "Review debt inventory quarterly and adjust priorities based on new technical risks."
+      "Tie team success metrics to org-level outcomes, not just team-level velocity.",
+      "Participate actively in cross-team forums.",
+      "Contribute to shared platforms even when it's not the fastest path for your team.",
+      "Track cross-team dependencies and proactively unblock them.",
+      "Ask: 'Would a peer team describe us as good partners?' Spotify's squad model works because squads are measured on shared outcomes, not just squad-level metrics — squad health checks include collaboration with other squads.",
+      "See Playbook: 'A Cross-Team Initiative Is Stalled Because No One Owns It' (P-C1-3) for how to break silo dynamics through shared ownership and cross-team collaboration structures."
     ],
     "sourceTopic": "Cross-Functional Partnership",
     "mappingNotes": "Silo builder → cross-team collaboration / triad alignment observables"
@@ -1281,19 +1305,23 @@
       "C6-O13"
     ],
     "capabilityId": "C6",
-    "shortDesc": "EM hoards engineering information and doesn't share constraints, capacity limits, or technical risks with Product. Product makes unrealistic commitments because they don't understand what's actually possible.",
+    "shortDesc": "Someone is promoted into management because they were the best IC, without any management training, coaching, or support. The org loses a great engineer and gains a struggling manager, and the team suffers through months of avoidable mistakes.",
     "warningSigns": [
-      "Product frequently commits to things engineering didn't know were needed until mid-sprint",
-      "Engineering capacity and constraints are unknown to Product/Design",
-      "EM is the only person who can answer 'can we do X?' questions from Product",
-      "Product treats all feature requests as equally doable"
+      "New EM still doing 50%+ IC work",
+      "1:1s are technical problem-solving sessions, not coaching conversations",
+      "New EM hasn't been trained on feedback delivery, performance management, or conflict resolution",
+      "Skip-level feedback reveals reports feel unsupported",
+      "EM frustrated by management responsibilities interfering with 'real work'"
     ],
-    "impact": "Within 2 quarters: Product makes unrealistic commitments; engineering is constantly surprised and overcommitted; relationship deteriorates as Product feels engineering is uncooperative.",
+    "impact": "New EM burns out trying to be both manager and IC; reports don't get the coaching and career development they need; strong IC skills wasted on management tasks they haven't been trained for; EM either reverts to IC work (neglecting team) or struggles visibly; some of the best potential managers are lost because the transition was unsupported",
     "recoveryActions": [
-      "Create a shared constraints doc: document technical debt, capacity limits, dependency risks; share with Product/Design monthly.",
-      "Run monthly 'capacity and constraints' planning meeting where engineering shares what's possible and what's not given current state.",
-      "Teach your team to be transparent: any engineer can explain a technical constraint to Product; it's not EM-only information.",
-      "Make tradeoffs visible: 'If you want feature X, you're getting feature Y delayed by 2 weeks or we drop feature Z.'"
+      "Never promote to management without an explicit transition plan.",
+      "First 90 days: pair with experienced EM mentor, reduce IC commitments to <20%, provide management training (feedback, 1:1s, performance management).",
+      "Write down your top 5 success criteria as an EM — team delivery predictability, attrition rate, developer satisfaction, incident response quality, and hiring pipeline health. Track them monthly. Share with your manager in your next 1:1 and agree on which 2-3 matter most this quarter.",
+      "Regular check-ins with skip-level on transition health.",
+      "Offer an explicit return-to-IC path if management isn't the right fit — removing this stigma retains great engineers who tried management honestly.",
+      "Google provides structured EM training (Managing@Google) for all new managers, and explicitly offers return-to-IC without stigma within the first year.",
+      "See Playbook: 'Your New Engineering Manager Is Struggling With the IC-to-EM Transition' (P-C6-5) for a step-by-step scenario addressing this pattern."
     ],
     "sourceTopic": "Coaching & Talent Development",
     "mappingNotes": "Accidental manager → career pathway / IC-to-EM transition observables"
@@ -1371,20 +1399,24 @@
       "C1-O4"
     ],
     "capabilityId": "C1",
-    "shortDesc": "Engineering initiatives are planned and executed with no consideration of how they connect to business outcomes. 'We did the architecture refactor' is treated the same as 'we shipped a feature that increased conversion.'",
+    "shortDesc": "New leader makes drastic changes in their first weeks without understanding context, scrapping processes and reorganizing teams based on assumptions. Institutional knowledge is destroyed, trust collapses, and the very problems the changes aimed to fix get worse.",
     "warningSigns": [
-      "Roadmap initiatives described only in technical terms",
-      "Engineering proposals lack business outcome statements",
-      "Business leadership can't articulate why engineering work matters",
-      "Engineering doesn't participate in business planning conversations"
+      "Announces major changes before completing 1:1s with all directs",
+      "Dismisses existing processes as 'broken' without understanding why they exist",
+      "Cancels projects or changes priorities in first two weeks",
+      "Uses phrases like 'at my last company we did it differently' as justification",
+      "Team morale drops sharply within first month"
     ],
-    "impact": "Within 2 quarters: business stops funding engineering investment proposals; engineering seen as a cost center; strategic engineering work treated as nice-to-have.",
+    "impact": "Team loses trust in new leadership immediately. Institutional knowledge is discarded. Good people leave because they feel their work was meaningless. Changes may solve problems that didn't exist while ignoring real ones. Creates a reputation that makes future change initiatives harder because the team has 'change fatigue.'",
     "recoveryActions": [
-      "Require every planning initiative to include: business outcome, ROI estimate, and customer/operational impact.",
-      "Train EMs to translate technical work to business terms: 'This reduces onboarding time from 2 weeks to 3 days, enabling 50% faster revenue per new employee.'",
-      "Present roadmap to business stakeholders in business language, not technical language.",
-      "Create a template for engineering proposals that mirrors product feature proposals — same ROI analysis format.",
-      "Invite EM to quarterly business planning based on engineering investment track record."
+      "Pause all announced changes and communicate a structured assessment period.",
+      "Conduct proper 30-day listening tour with every team member and key stakeholders.",
+      "Map existing processes to the problems they were designed to solve before eliminating them.",
+      "Separate genuine problems from style preferences — only act on the former first.",
+      "Build credibility through quick wins on acknowledged pain points before tackling structural changes.",
+      "GitLab's handbook-first culture documents why every process exists, giving new leaders context before they change anything — the handbook serves as institutional memory that prevents well-intentioned but uninformed disruption.",
+      "Amazon's leadership principles include 'Earn Trust,' and new leaders are expected to complete a structured listening tour before making significant changes — credibility is built through understanding, not action speed.",
+      "See Playbook: 'You Inherit a Low-Performing Team' (P-C1-1) for how to assess context before making changes when taking over a new team."
     ],
     "sourceTopic": "Org-Level Thinking (New Leader Entry)",
     "mappingNotes": "Based on LeadDev 'Five management anti-patterns and why they happen' — The Wrecking Ball pattern."
@@ -1546,20 +1578,23 @@
       "C14-O7"
     ],
     "capabilityId": "C14",
-    "shortDesc": "EM avoids all conflict and never disagrees with Product/Design. Concerns about feasibility, quality, or timeline are swallowed; EM just finds a way to make it work.",
+    "shortDesc": "Manager avoids giving negative performance feedback until it's too late, letting small issues compound for months without a signal to course-correct. The first honest feedback arrives as a PIP or low rating, destroying trust and making recovery nearly impossible because the engineer never had a chance to improve.",
     "warningSigns": [
-      "EM is known as 'always agreeable' but engineering feels unheard",
-      "Engineering workarounds and heroics accumulate because nobody pushed back on unrealistic plans",
-      "EM's 1:1 feedback from Product/Design is consistently 'great to work with' but team morale is low",
-      "Cross-functional disagreements never surface — either EM absorbs the conflict or the team does"
+      "1:1 notes show only positive feedback for an engineer whose performance is declining",
+      "Manager uses phrases like 'they'll figure it out' or 'I don't want to micromanage'",
+      "Performance review rating is a surprise to the engineer",
+      "Manager confuses being nice with being kind — avoids discomfort at the cost of the person's growth",
+      "High performers on the team are frustrated that low performance goes unaddressed"
     ],
-    "impact": "Within 2 quarters: team burns out from accepting impossible asks; quality degrades as corners are cut; EM loses credibility with engineering because they didn't advocate for realistic scope.",
+    "impact": "The underperforming engineer loses months or years of potential growth because nobody told them the truth. High performers leave because they see uneven accountability. When feedback finally arrives, it feels punitive rather than developmental. Manager loses credibility with the team. Leadership debt compounds — the cost of delayed feedback is always higher than the cost of an uncomfortable conversation.",
     "recoveryActions": [
-      "Start small: disagree on one small thing this month to build the skill.",
-      "Frame disagreement as 'here's another perspective' not 'you're wrong.'",
-      "Prepare specific data before disagreeing: 'We'll need X engineer-weeks for this, which pushes back Y by 2 weeks. Here are our options.'",
-      "Practice saying 'that's not feasible at that timeline' and then proposing alternatives.",
-      "Get feedback from Product/Design on whether they find your perspective valuable; most good partners appreciate thoughtful pushback."
+      "Schedule a direct conversation within 48 hours using SBI format (Situation-Behavior-Impact)",
+      "Acknowledge the delay: 'I should have raised this sooner, and that's on me'",
+      "Write documented feedback for every direct report at least monthly. Block 15 minutes per person on the last Friday of the month. Use the SBI format (Situation, Behavior, Impact) and share in the next 1:1.",
+      "Build conflict literacy through practice — start with lower-stakes feedback and build up.",
+      "Reframe feedback as a gift: withholding it is not kindness, it's neglect.",
+      "Netflix's culture explicitly treats withholding feedback as a failure of leadership responsibility — managers are expected to deliver direct, actionable feedback within 48 hours of observing an issue, not accumulate it for review season.",
+      "See Playbook: 'Putting an Engineer on a PIP Designed to Succeed' (P-C14-5) for a step-by-step scenario addressing this pattern."
     ],
     "sourceTopic": "Performance Management & Calibration (Feedback Delivery)",
     "mappingNotes": "Based on LeadDev 'The cost of skipping hard conversations' — leadership debt from delayed feedback compounds faster than technical debt."
@@ -1627,20 +1662,23 @@
       "C1-O7"
     ],
     "capabilityId": "C1",
-    "shortDesc": "Priorities are set by whoever screams loudest, not by systematic analysis. The person who escalates to the VP gets their initiative moved to top of roadmap. Systematic prioritization abandoned.",
+    "shortDesc": "Leader avoids making difficult organizational decisions — unclear ownership, toxic team members, misaligned team boundaries — hoping problems resolve themselves. The avoidance signals weakness to top performers who leave for teams with decisive leadership, which concentrates dysfunction among those who remain, further raising the cost of intervention until the situation becomes a crisis requiring emergency action.",
     "warningSigns": [
-      "Major priority shifts happen within days of escalation",
-      "Prioritization decisions made outside of formal process",
-      "Different stakeholders experience different prioritization criteria",
-      "Senior people bypass prioritization process for pet projects"
+      "Known team dysfunction persists for months without intervention",
+      "Leader deflects organizational problems with 'let's give it more time'",
+      "Skip-level feedback consistently raises issues the leader hasn't addressed",
+      "Talented people leave citing organizational issues that were never resolved",
+      "Leader is surprised by problems that were visible to everyone else for months"
     ],
-    "impact": "Within 1-2 quarters: team can't trust the roadmap; planning discipline collapses; organizational anxiety rises; people learn to escalate instead of working through process.",
+    "impact": "Org health degrades gradually until a crisis forces action — but by then, the best people have left and trust is eroded. The leader's credibility suffers because the team sees problems being ignored. Small, manageable issues become large, expensive ones. The org develops a culture where raising concerns feels pointless because nothing changes.",
     "recoveryActions": [
-      "Create a formal prioritization scorecard with transparent criteria (business impact, technical risk, alignment to strategy, team capacity).",
-      "All requests — regardless of source — go through the scorecard.",
-      "Hold formal prioritization meetings where all stakeholders participate; decisions are joint and transparent.",
-      "Publish the prioritization scorecard and all scored requests; make the methodology visible to everyone.",
-      "When someone asks to bypass the process, point to the scorecard: 'Your request scored 65; top priority scored 92. If we change the plan, we have to defer something that scored higher. Which?'"
+      "Run a regular org health review with explicit metrics (attrition, engagement, skip-level themes)",
+      "Build a decision log for organizational issues — track what's been raised, when, and what action was taken.",
+      "Set a 30-day rule: any organizational concern raised twice must have an action plan within 30 days.",
+      "Seek coaching or peer support for developing comfort with organizational conflict.",
+      "Reframe avoidance: inaction is itself a decision with consequences — the cost of not deciding is real.",
+      "Amazon's 'disagree and commit' principle requires leaders to make decisions even when uncomfortable — and the Correction of Error (COE) process treats delayed action on known problems as a leadership failure, not a safe default.",
+      "See Playbook: 'Addressing a Toxic Senior Engineer the Team Works Around' (P-C12-4) for how to make difficult people decisions when avoidance has become the default."
     ],
     "sourceTopic": "Org-Level Thinking (Organizational Decision Making)",
     "mappingNotes": "Complementary to The Wrecking Ball (AP-54) — where that anti-pattern is about acting too fast, this one is about acting too slow."
@@ -1769,19 +1807,23 @@
       "C5-O6"
     ],
     "capabilityId": "C5",
-    "shortDesc": "Senior engineer underperforms but isn't addressed because they're technically skilled or because feedback feels uncomfortable. Over time they block others, drag down team velocity, and create cultural problems.",
+    "shortDesc": "Engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment. Stakeholders are repeatedly blindsided, trust erodes rapidly, and leadership starts micromanaging or routing around engineering entirely.",
     "warningSigns": [
-      "Engineer meets technical requirements but doesn't coach others or contributes toxic behavior",
-      "Peers complain about the person but EM avoids the conversation",
-      "Underperformance tolerance increases based on seniority (L4 gets excused for behavior that would be addressed for L2)",
-      "Person has been 'on thin ice' for >6 months with no resolution"
+      "Stakeholders learn about project delays in the same meeting where the deadline was supposed to be met",
+      "Engineering leader uses optimistic framing ('we're working on it') when the project is materially off track",
+      "Product or business leaders say they 'don't trust engineering timelines' based on past surprises",
+      "Status reports consistently show green/on-track until suddenly flipping to red with no amber warning period",
+      "The engineering leader avoids 1:1s with their VP or product counterpart during difficult periods"
     ],
-    "impact": "Within 2-3 quarters: team morale erodes; junior engineers don't learn from the senior engineer; team velocity stays below potential; other senior engineers lose respect for the EM.",
+    "impact": "Each surprise erodes stakeholder trust compoundingly — the first late project is forgiven, the third triggers micromanagement. Business leaders lose confidence in engineering's ability to self-manage and start demanding detailed progress reports, daily standups with leadership, or scope commitments with penalty clauses. The engineering leader's credibility and autonomy shrink with each surprise. Eventually, product and business make decisions without engineering input because they've learned that engineering's input is unreliable.",
     "recoveryActions": [
-      "Define expectations clearly: 'L4 performance means X and Y and Z. You're meeting technical requirement but not Z.'",
-      "Direct conversation: 'Here's what we're seeing, here's what we need, here's support we'll provide, here's the timeline (usually 60 days).'",
-      "Weekly check-ins for accountability. Make expectations explicit and trackable.",
-      "After 60 days: if improved, reinforce publicly. If not, begin transition (different team, IC→manager track change, or exit) within 30 days."
+      "Adopt a 'no surprises' principle: any risk with >30% likelihood of impacting timeline gets communicated within 48 hours of identification.",
+      "Practice the formula: 'Here's what happened, here's the impact, here's what we're doing about it, here's when I'll update you next'",
+      "Build in regular risk reviews with stakeholders — weekly 15-minute syncs where you proactively share what's on track and what's not.",
+      "Reframe early bad news as a trust-building opportunity: leaders who surface problems early are seen as reliable, not as failures.",
+      "Track your prediction accuracy — compare initial estimates to actuals and use the data to calibrate future commitments.",
+      "Amazon's weekly business review (WBR) forces leaders to surface deviations from plan within the same week they occur — the meeting structure makes it structurally impossible to hide problems for more than 7 days.",
+      "See Playbook: 'Your Project Is Going to Miss Its Deadline' (P-C7-5) for how to surface timeline risks proactively and rebuild stakeholder trust."
     ],
     "sourceTopic": "Stakeholder & Product (Stakeholder Communication)",
     "mappingNotes": "Based on LeadDev 'Getting good at delivering bad news' — the cost of late bad news is always higher than the cost of early bad news. Trust is built by reliability of information, not by optimism."
@@ -1855,20 +1897,23 @@
       "C13-O6"
     ],
     "capabilityId": "C13",
-    "shortDesc": "Team is homogeneous and leadership doesn't realize it's a problem. Hiring is accidentally one-type because no one is actively diversifying. Underrepresented candidates are missed or don't feel welcome.",
+    "shortDesc": "Automated security scanners generate hundreds of findings per week without severity-based triage or noise reduction. Volume desensitizes the team: engineers stop reading scan results, critical vulnerabilities get lost among low-severity noise, and the backlog grows until a real breach exposes a finding that was flagged months ago but never triaged.",
     "warningSigns": [
-      "Team diversity doesn't match org or city demographics",
-      "Hiring panel is always the same demographic as current team",
-      "Underrepresented candidates in interviews report not feeling welcome",
-      "No one is actively sponsoring diverse talent for visibility and growth"
+      "Security scanner dashboard shows 500+ open findings and the number grows every week",
+      "Engineers dismiss scanner alerts as 'mostly false positives' without verifying",
+      "Critical vulnerabilities sit unpatched for weeks because they're buried in a backlog of low-severity findings",
+      "The team disabled or ignored security scanning in CI because it blocked too many deploys for non-issues",
+      "Nobody owns vulnerability triage — findings go into a shared queue that nobody monitors"
     ],
-    "impact": "Within 2 quarters: groupthink increases; decision-making becomes narrower; organization loses the cognitive diversity benefit; underrepresented talent goes elsewhere.",
+    "impact": "The security scanning investment delivers negative value — it generates noise that obscures real risk rather than reducing it. Engineers develop contempt for security tooling because it cries wolf constantly. When a genuine critical vulnerability appears, it gets the same treatment as the hundreds of low-severity findings: acknowledged, backlogged, forgotten. The organization has the appearance of security diligence (tools are running, dashboards exist) while actual security posture degrades.",
     "recoveryActions": [
-      "Track team demographics quarterly. Own the data.",
-      "Ensure diverse interview panels — minimum 2 different perspectives on every interview.",
-      "Hiring criteria explicit and bias-checked — what are we actually requiring vs. nice-to-have?",
-      "Actively sponsor high-potential people from underrepresented groups for visible projects and skip-level conversations.",
-      "Measure belonging in team surveys — target >4.0/5.0; address microaggressions immediately."
+      "Assign a single owner for vulnerability triage — one person or rotating role who reviews every finding weekly.",
+      "Publish severity-based SLAs visible to the whole team: critical = patch within 48 hours, high = 7 days, medium = 30 days, low = next quarter. Track SLA compliance weekly. Escalate any breach to the EM within 24 hours of the deadline.",
+      "Aggressively tune scanners: suppress known false positives, configure severity thresholds, and accept risk on low-impact findings formally.",
+      "Track signal-to-noise ratio: what percentage of scanner findings led to actual fixes vs. dismissals — if >80% are dismissed, the tool needs reconfiguration.",
+      "Separate the vulnerability backlog from the feature backlog — make security work visible with its own tracking and reporting.",
+      "Google's vulnerability management program uses severity-based SLOs with escalating response times (critical: 48 hours, high: 7 days) and automated tracking — triaging noise is as important as fixing the real issues.",
+      "See Playbook: 'Responding to a Critical Dependency Vulnerability' (P-C13-5) for how to triage and prioritize vulnerability response when the backlog is overwhelming."
     ],
     "sourceTopic": "Security & Compliance (Vulnerability Management)",
     "mappingNotes": "Based on LeadDev articles on security-engineering relationship dynamics and vulnerability management — the scanner is only as valuable as the triage process behind it. Without effective prioritization, more scanning creates more noise, not more security."
@@ -1882,20 +1927,23 @@
       "C13-O6"
     ],
     "capabilityId": "C13",
-    "shortDesc": "Manager hasn't written code in years and has no technical credibility. Can't evaluate engineering quality, doesn't understand technical constraints, and team sees them as out of touch.",
+    "shortDesc": "Engineers routinely circumvent security controls — disabling scanners, skipping threat modeling, using personal credentials — because security is perceived as friction. Each bypass normalizes the next, widening the gap between documented security posture and actual practice.",
     "warningSigns": [
-      "EM can't participate meaningfully in architecture discussions",
-      "EM grades code quality but team disagrees with the assessment",
-      "EM doesn't understand why a project takes as long as it does",
-      "Technical team members make decisions around the EM, not with them"
+      "Engineers disable or skip security scanning steps in CI pipelines to unblock deploys",
+      "Threat modeling is marked 'N/A' for features that clearly handle sensitive data because the team is behind schedule",
+      "Developers use personal accounts, hardcoded tokens, or shared credentials for testing and staging",
+      "Security exceptions become the norm — more features ship with exceptions than without",
+      "The security team discovers bypassed controls only during quarterly audits or after incidents"
     ],
-    "impact": "Within 1-2 quarters: EM credibility with technical team erodes; poor technical decisions are made because EM can't evaluate trade-offs; coaching becomes ineffective because EM is seen as not understanding the work.",
+    "impact": "The organization pays the cost of security processes (tooling, policy documentation, team time) without getting the benefit. Real vulnerabilities ship to production through the gaps created by bypasses. When an incident occurs, investigation reveals that existing controls would have caught it if they hadn't been circumvented. The security team loses credibility because their processes clearly aren't working, even though the root cause is organizational, not technical. Engineers develop a habit of treating security as optional, which becomes very hard to reverse.",
     "recoveryActions": [
-      "Maintain 5-10% hands-on technical work: read design docs, code review some PRs, pair program occasionally, do a small feature.",
-      "Not to code-review everything (that's insecurity), but enough to understand the technical constraints.",
-      "Stay current on team's tech debt, system limitations, and architectural decisions.",
-      "Model learning by coding alongside the team and asking questions.",
-      "Periodically pair with a senior IC to deepen technical understanding."
+      "Audit current bypass patterns — survey engineers anonymously about which security steps they routinely skip and why.",
+      "Fix the top 3 friction points: if scanning takes 20 minutes, invest in making it take 2 minutes rather than making it mandatory-but-slow.",
+      "Make security controls non-bypassable for high-risk paths (production deploys, auth changes, data access) while allowing more flexibility for low-risk changes.",
+      "Reframe security as a shared engineering quality standard, not an external gate — include security in definition of done alongside tests and code review.",
+      "Track bypass rate as a metric: percentage of deploys that skip any security step — trending down means the process is becoming less painful.",
+      "Google's BeyondCorp security model designs controls that can't be bypassed rather than relying on compliance — production deploy pipelines enforce scanning automatically, making it harder to skip security than to do it.",
+      "See Playbook: 'Balancing Security Risk With Shipping Speed After a Close Call' (P-C13-4) for how to design security controls that engineers actually follow rather than bypass."
     ],
     "sourceTopic": "Security & Compliance (Security Process Adoption)",
     "mappingNotes": "Based on LeadDev 'Overcoming security hurdles to push engineering velocity' — engineers bypass security not because they don't care, but because the controls are designed for compliance rather than developer experience."
@@ -1909,20 +1957,23 @@
       "C13-O2"
     ],
     "capabilityId": "C13",
-    "shortDesc": "EM builds roadmap in secret, announces it to the team, then surprises stakeholders with scope cuts and re-prioritizations.",
+    "shortDesc": "Team maintains compliance certifications and passes audits, but certified practices are only followed during audit preparation. Day-to-day security posture drifts far from documented standards, creating a dangerous gap between paper compliance and actual risk.",
     "warningSigns": [
-      "Roadmap has no 'what we are NOT doing' section",
-      "Stakeholders discover de-prioritized items through absence rather than explicit communication",
-      "New requests handled ad hoc without explicit trade-off discussion",
-      "Scope cuts happen unannounced late in the cycle"
+      "Audit preparation is a 2-4 week scramble to gather evidence and update documentation that's been stale since the last audit",
+      "Engineers can't describe the security practices the company is certified for without looking at the compliance docs",
+      "Access reviews happen the week before the audit, not continuously — stale permissions accumulate for months",
+      "Compliance evidence is generated retroactively rather than as a byproduct of actual security practices",
+      "The certification badge is prominently displayed on the sales page but the security team knows the daily reality doesn't match"
     ],
-    "impact": "Within 1 quarter: stakeholder trust erodes; every request becomes a negotiation; team blamed for 'moving goalposts.'",
+    "impact": "The certification creates a false sense of security for customers, leadership, and the team itself. Real risk goes unmanaged because the compliance program measures documentation, not actual practice. When a breach occurs, investigation reveals that the certified controls weren't being followed, creating legal liability and destroying customer trust far more severely than if the company had never been certified. The compliance program consumes significant resources (audit fees, preparation time, documentation) without reducing actual risk.",
     "recoveryActions": [
-      "Create a mandatory 'What we are NOT doing' section in every quarterly roadmap with rationale for each de-prioritization.",
-      "Maintain a visible priority stack rank ordered by business impact, shared with all stakeholders.",
-      "Review the stack rank in monthly stakeholder syncs (30 minutes) to ensure alignment.",
-      "For every new request: 'To add X, we must deprioritize Y — do you approve?'",
-      "Publish the roadmap with trade-off section to all stakeholders within 1 week of planning completion."
+      "Automate compliance evidence collection — access logs, change records, vulnerability scan results should be generated continuously, not prepared for audits.",
+      "Map each certification control to an actual engineering practice. For controls that require manual evidence, automate the collection. For controls that don't match real workflow, escalate to security leadership with a proposal: 'We can sustain control X if we change it to Y.'",
+      "Run internal mini-audits monthly — spot-check 3-5 controls to ensure continuous compliance rather than periodic cramming.",
+      "Make compliance metrics visible to engineering: access review completion rate, vulnerability SLA adherence, training completion — treat these like engineering SLOs.",
+      "Build compliance into engineering workflows so evidence is a byproduct of work, not a separate artifact: automated access management, built-in audit trails, continuous scanning.",
+      "Amazon embeds security controls into every engineering workflow — threat models are part of design docs, security scanning runs in every CI pipeline, and access reviews happen continuously, not just during audit preparation windows.",
+      "See Playbook: 'Your Team Keeps Failing Security Audits With the Same Findings' (P-C13-3) for how to move from audit-time compliance theater to continuous security practices."
     ],
     "sourceTopic": "Security & Compliance (Compliance Integrity)",
     "mappingNotes": "Based on LeadDev articles on compliance-heavy industry testing and born-left security — certifications should reflect reality, not create an alternative reality that only exists during audit windows."
@@ -1936,19 +1987,24 @@
       "C4-O10"
     ],
     "capabilityId": "C4",
-    "shortDesc": "Team grows without structure; ownership becomes unclear, cognitive load explodes, coordination overhead balloons. Eventually team must be split, but late (after productivity already degraded).",
+    "shortDesc": "Team batches weeks of changes into monolithic releases, turning every deploy into a high-risk event. Deploy frequency drops because nobody wants to trigger the next crisis.",
     "warningSigns": [
-      "Team size >12 people with >5 active service ownership domains",
-      ">30% of sprint work requires cross-team coordination or review",
-      "Team members report confusion about who owns what; decisions take longer as team size grows",
-      "On-call rotation becoming unsustainable; shared context is lost"
+      "Deploys happen weekly or less frequently, always as large batches",
+      "Release day requires a war room or dedicated 'release captain'",
+      "Rollbacks are manual, untested, or nonexistent",
+      "Engineers avoid deploying on Fridays (or any day near a deadline)",
+      "Every deploy requires a change advisory board meeting",
+      "Post-deploy incidents are considered normal, not exceptional",
+      "Feature branches live for weeks before merging"
     ],
-    "impact": "Within 1-2 quarters: team productivity drops as coordination overhead grows; cognitive load exhausts senior engineers; decision velocity slows; team splits become chaotic because deferred too long.",
+    "impact": "Within 1-2 quarters: each deploy carries accumulated risk making root cause analysis impossible when things break; engineers develop deployment anxiety; feedback loops stretch from hours to weeks; culture of risk aversion develops.",
     "recoveryActions": [
-      "Monitor team health quarterly: size, number of service domains, coordination overhead %, meeting load per engineer.",
-      "Trigger re-org evaluation when: team >10 people managing >8 services, OR >20% of work requires cross-team coordination for 2+ consecutive quarters.",
-      "Plan split by matching teams to value streams, not by arbitrary size cuts.",
-      "Use inverse Conway: desired architecture should dictate team structure, not the reverse."
+      "Measure current deploy frequency and batch size — make the problem visible with data.",
+      "Invest in automated rollback capability before increasing deploy frequency.",
+      "Ship every new feature behind a feature flag by default. Set a 90-day flag lifecycle.",
+      "Move to trunk-based development with short-lived branches (< 1 day).",
+      "Target multiple deploys per day; roll out through canary pipeline (1%→10%→50%→100%) with automatic rollback triggers.",
+      "Replace change advisory boards with automated change risk scoring for routine changes."
     ],
     "sourceTopic": "Operational Leadership (Release Engineering)",
     "mappingNotes": "Big-bang deploys → release process / change management observables. Based on DORA research showing elite teams deploy multiple times per day with low change failure rates."
@@ -1962,19 +2018,22 @@
       "C9-O5"
     ],
     "capabilityId": "C9",
-    "shortDesc": "Strategic intent is vague or internal-facing; engineers don't understand why the org is structured this way or how their work connects to business outcomes. Local optimization replaces strategic alignment.",
+    "shortDesc": "OKRs are aspirational statements with no measurable key results. 'Improve developer experience' without defining what improvement looks like or how to measure it. Team can't tell if they succeeded.",
     "warningSigns": [
-      "Team-level OKRs don't obviously connect to org-level strategy",
-      "Engineers can't explain why their team is structured as it is beyond 'someone decided'",
-      "Strategic direction changes frequently without visible reason; engineers feel whiplashed",
-      "Team retros devolve into griping about org decisions instead of proposing changes"
+      "Key results use words like 'improve,' 'enhance,' or 'optimize' without quantified targets",
+      "Every team hits 100% of OKRs every quarter — targets are sandbagged",
+      "OKRs are set in January and never referenced until the next planning cycle",
+      "Key results measure activity (ship X features) rather than outcomes (reduce churn by Y%)",
+      "Team can't explain how their daily work connects to their stated OKRs",
+      "OKRs are copy-pasted from the previous quarter with minor wording changes",
+      "Quarterly OKR review is a formality where everyone presents green slides"
     ],
-    "impact": "Within 2-3 quarters: teams optimize for their local success at expense of org-wide outcomes; duplicated effort across teams; strategic direction feels arbitrary; senior engineers leave for organizations with clearer purpose.",
+    "impact": "Within 1 quarter: OKRs don't influence daily work; prioritization decisions are disconnected from stated objectives; quarterly reviews are opinion-based because there's no measurement.",
     "recoveryActions": [
-      "Articulate strategic intent in business outcome terms (not engineering jargon): 'We need to reduce customer churn by X%, and that requires improving Y capability.'",
-      "Cascade to team-level OKRs with explicit trade-off rationale: 'Why does this team own this piece? How does their work connect to reducing churn?'",
-      "Use quarterly all-hands to reinforce strategic pillars and connect team work to org outcomes.",
-      "Revisit org structure decision rationale annually: ask 'does our org structure still support our strategy?' If no, re-org."
+      "Rewrite every key result to include a number: 'Reduce CI build time from 45min to 10min' not 'Improve CI performance.'",
+      "Limit to 3 objectives with 3 key results each — if you can't prioritize, you have too many.",
+      "Score OKRs quarterly with brutal honesty: 0.6-0.8 is healthy; 1.0 means you didn't stretch; below 0.4 means the OKR was wrong.",
+      "Test each OKR: 'Would we make different daily decisions if this OKR didn't exist?' If no, rewrite it."
     ],
     "sourceTopic": "Metrics, Measurement & Outcomes (Goal Setting)",
     "mappingNotes": "Vanity OKRs → outcome-oriented OKR / business translation observables. Based on common OKR dysfunction patterns in engineering organizations."

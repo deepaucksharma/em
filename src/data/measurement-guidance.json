@@ -2,20 +2,18 @@
   {
     "capabilityId": "C1",
     "leadingIndicators": [
-      "Org topology registry maintained and up-to-date",
-      "Cross-team handoff frequency tracked as % of total work",
-      "Team cognitive load assessed via quarterly health survey (services owned, domains, on-call scope)",
-      "Ownership ambiguity incidents logged and tracked",
-      "Strategic alignment visible in team-level OKRs and documented connections",
-      "Re-org signals monitored via coordination overhead and team health metrics"
+      "Cross-team dependency mapping is current (updated within 30 days)",
+      "Org health dashboard reviewed weekly by leadership",
+      "Succession plan exists for all critical roles",
+      "Quarterly org design review is scheduled and attended",
+      "Google uses quarterly org health surveys with >80% response rate as a leading indicator of structural effectiveness"
     ],
     "laggingIndicators": [
-      "Org structure changes are proactive (signals detected early), not reactive (after productivity impacts)",
-      "Cross-team coordination overhead <5% of total sprint work",
-      "Re-orgs execute with zero regrettable attrition (measured post-re-org)",
-      "Team productivity restored within 3-4 weeks of structural change",
-      "Ownership disputes resolved in <24 hours on average",
-      "Deployment frequency stable or improving after structural changes"
+      "Zero regrettable attrition post-reorg",
+      "Teams achieve 85%+ delivery commitment rate",
+      "Cross-team escalations decreased quarter-over-quarter",
+      "Employee engagement scores stable or improving through org changes",
+      "Amazon tracks whether single-threaded ownership is maintained across all services as a structural health metric"
     ],
     "measurementAntiPatterns": [
       "Using team size as a proxy for leadership scope",
@@ -33,20 +31,18 @@
   {
     "capabilityId": "C2",
     "leadingIndicators": [
-      "Quarterly roadmap published with business outcome mapping",
-      "Prioritization scorecard applied consistently to all incoming requests",
-      "Monthly re-prioritization gate held with documented decisions",
-      "Tech debt allocation visible in quarterly planning (15-20% capacity)",
-      "Pre-execution design review completed for all planned initiatives >20% quarter capacity",
-      "Roadmap communicated to all stakeholders with clear rationale"
+      "Prioritization framework is documented and shared with stakeholders",
+      "Roadmap has explicit not-doing list with rationale",
+      "Investment allocation ratios are reviewed monthly",
+      "Stakeholders can articulate the current top 3 priorities",
+      "Amazon's PR/FAQ process requires written opportunity-cost analysis before any initiative is prioritized"
     ],
     "laggingIndicators": [
-      "Roadmap delivery rate 80%+ for 3+ consecutive quarters",
-      "Planning forecast accuracy improving quarter-over-quarter",
-      "Unplanned priority shifts <1 per sprint",
-      "Stakeholder satisfaction with planning process >4.0/5.0",
-      "Business outcome statements included in 95%+ of planned initiatives",
-      "Tech debt inventory maintained and prioritized quarterly"
+      "Feature delivery aligns with stated priorities (>80% match)",
+      "Unplanned work remains below 20% of total capacity",
+      "Strategic bets delivered measurable outcomes within expected timeframe",
+      "Stakeholder satisfaction with prioritization decisions is above 4/5",
+      "Google tracks OKR completion rates by investment tier (core/strategic/venture) to assess prioritization accuracy"
     ],
     "measurementAntiPatterns": [
       "Equating busyness with strategic alignment",
@@ -127,20 +123,18 @@
   {
     "capabilityId": "C5",
     "leadingIndicators": [
-      "Regular triad syncs (weekly or bi-weekly) with documented agendas and decisions",
-      "Shared constraints and capacity planning documents reviewed monthly",
-      "Early engineering involvement in planning cycles (pre-commitment validation)",
-      "Cross-functional satisfaction survey scores for collaboration quality",
-      "Decision authority matrix documented and referenced in dispute resolution",
-      "Peer 1:1s with PM and Design leads scheduled regularly and consistent"
+      "Regular 1:1s scheduled with key cross-functional peers (PM, Design, Sales)",
+      "Engineering input is included in cross-functional planning documents",
+      "Stakeholder map is maintained with relationship health scores",
+      "Pre-alignment meetings happen before major cross-functional decisions",
+      "Meta measures triad health through quarterly joint retrospectives between Eng, PM, and Design leads"
     ],
     "laggingIndicators": [
-      "Cross-functional escalations (fewer than 1 per quarter)",
-      "Scope change requests mid-sprint (trend toward zero)",
-      "Peer feedback from Product/Design on engineering collaboration credibility",
-      "Commitment accuracy (scope delivered vs. scope committed) stays above 85%",
-      "Cross-functional satisfaction survey trending upward",
-      "EM invited to strategic planning conversations based on merit"
+      "Cross-functional projects delivered on time with no late-stage surprises",
+      "Stakeholder NPS for engineering partnership is above 40",
+      "Requests from other functions are resolved within agreed SLAs",
+      "Engineering is invited to strategic planning conversations proactively",
+      "Spotify tracks cross-squad dependency resolution time as a lagging indicator of partnership effectiveness"
     ],
     "measurementAntiPatterns": [
       "Measuring influence by meeting attendance rather than decision impact",
@@ -158,24 +152,18 @@
   {
     "capabilityId": "C6",
     "leadingIndicators": [
-      "Skip-level conversations conducted quarterly with >90% participation",
-      "Performance review calibration sessions held before finalizing ratings",
-      "Progression framework documented and visible to team",
-      "Promotion register maintained with pre-promotion conversations",
-      "Structured 1:1 agenda with development focus implemented",
-      "High-performer career conversations completed annually",
-      "Mentor assignments for junior and new engineers tracked",
-      "Underperformance issues addressed within 30 days of identification"
+      "All direct reports have documented career development plans",
+      "1:1s happen weekly with documented notes and action items",
+      "Manager has completed coaching or leadership training in past 12 months",
+      "Stretch assignments are actively tracked for each team member",
+      "Google measures manager coaching effectiveness through anonymous upward feedback surveys (Project Oxygen methodology)"
     ],
     "laggingIndicators": [
-      "Retention of high performers >90% (vs. regrettable attrition <5%/year)",
-      "Internal promotion rate >30% of promotion opportunities",
-      "Employee confidence in career path (survey): >80% can describe next-level criteria",
-      "Junior engineer L2→L3 promotion rate increased 20%+ year-over-year",
-      "Zero surprised rejections in promotion process",
-      "Team satisfaction with growth opportunities >4.0/5.0",
-      "Skip-level feedback themes addressed with manager coaching",
-      "Underperformance resolution rate: 70% improvement, 30% transition or exit within 60-90 days"
+      "Internal promotion rate is at or above org benchmark",
+      "Direct reports report high manager effectiveness in surveys (>4/5)",
+      "Regrettable attrition is below org average",
+      "At least one direct report ready for next-level role within 12 months",
+      "Amazon tracks the promotion rate and retention rate of direct reports as lagging indicators of coaching investment"
     ],
     "measurementAntiPatterns": [
       "Measuring coaching by number of 1:1s held rather than development outcomes",
@@ -193,20 +181,22 @@
   {
     "capabilityId": "C7",
     "leadingIndicators": [
-      "Decision memos written for all decisions >1 engineer-week of effort",
-      "DACI roles assigned to significant decisions (documented)",
-      "Weekly proactive status updates sent to manager with outcomes, risks, and asks",
-      "Bad-news escalation SLA tracked (Sev1 <4 hours, Sev2 <24 hours)",
-      "Roadmap includes explicit 'What we are NOT doing' section with trade-off rationale",
-      "Three-altitude communication versions prepared for major announcements"
+      "Decision documents follow a consistent template (options, tradeoffs, recommendation)",
+      "Key decisions are communicated to all affected parties within 48 hours",
+      "Decision log is maintained and accessible to the team",
+      "Pre-reads are shared at least 24 hours before decision meetings",
+      "Amazon uses the 6-pager narrative format as a leading indicator of decision quality — well-structured narratives correlate with better outcomes",
+      "Decision authority matrix documented and team can reference it",
+      "Communication scaling mechanisms (RFCs, decision logs) adopted and maintained"
     ],
     "laggingIndicators": [
-      "First-meeting decision approval rate >80% (decisions approved without rework)",
-      "Decision revisitation rate <10% (decisions don't reopen without changed facts)",
-      "Manager feedback: no surprises, learns about issues from EM first",
-      "Stakeholder satisfaction with communication >4/5",
-      "Roadmap change tracking: zero items cut without prior stakeholder notification",
-      "Exec feedback on communication quality and presence"
+      "Decisions are rarely revisited or reversed due to miscommunication",
+      "Team members can articulate the rationale behind recent key decisions",
+      "Executive asks for clarification less than 10% of the time on proposals",
+      "Decision-to-action latency is under 1 week for standard decisions",
+      "Netflix tracks decision reversal rate for Type 2 decisions as a signal that bias-for-action is calibrated correctly",
+      "Decision revisitation rate below 10% per quarter",
+      "Meeting hours per engineer trending down as team scales"
     ],
     "measurementAntiPatterns": [
       "Measuring communication volume (emails sent, docs written) rather than clarity and reach",

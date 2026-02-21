@@ -10,16 +10,15 @@
       "What data or signals told you this was a structural issue rather than a local one?"
     ],
     "lookFor": [
-      "Describes specific misalignment between org structure and architecture they fixed, with measurable outcome (e.g., handoff rate reduction)",
-      "Names a specific stream-aligned vs. layer-aligned decision and why stream-alignment won",
-      "Shows cognitive load consideration: explains how they right-size team scope to avoid overload",
-      "Articulates inverse Conway principle: 'We designed the org to produce the architecture we wanted'"
+      "Ability to see beyond their own team's boundaries",
+      "Systematic diagnosis rather than gut-feel reactions",
+      "Evidence of collaboration with peer managers",
+      "Clear articulation of the before/after state"
     ],
     "redFlags": [
-      "Cannot describe their org structure rationale beyond 'that's how it was when I got here'",
-      "Makes org decisions without considering architecture implications",
-      "Teams remain layer-aligned (backend, frontend, data) without justification",
-      "Treats re-orgs as purely personnel moves without considering work topology"
+      "Only focused on their own team's symptoms",
+      "Escalated without attempting to understand root causes",
+      "Could not explain the broader organizational impact"
     ]
   },
   {
@@ -175,16 +174,16 @@
       "What metrics do you use to know the balance is right?"
     ],
     "lookFor": [
-      "Describes structured planning process with clear cadence (quarterly + monthly re-prioritization)",
-      "Can articulate the prioritization criteria they use (business impact, technical risk, strategic alignment, capacity)",
-      "Names stakeholders involved in prioritization decisions; not a unilateral EM decision",
-      "Tracks roadmap delivery rate and can describe what drove any misses"
+      "Has explicit allocation targets or budgets for each category",
+      "Uses data to adjust the balance over time rather than fixed ratios",
+      "Can articulate the long-term cost of under-investing in each area",
+      "Creates structural mechanisms to protect non-feature work"
     ],
     "redFlags": [
-      "No documented planning process or cadence",
-      "Priorities decided by whoever escalates highest",
-      "Roadmap not shared with or understood by stakeholders",
-      "Cannot describe their team's roadmap delivery rate or how they measure it"
+      "No conscious allocation strategy; it just happens",
+      "100% feature-focused with tech debt as an afterthought",
+      "Cannot explain how the balance has shifted over time or why",
+      "Treats reliability as someone else's problem"
     ]
   },
   {
@@ -293,16 +292,16 @@
       "How do you maintain team morale during the slip?"
     ],
     "lookFor": [
-      "Can describe a recent decision using structured framework: context, options with trade-offs, recommendation, risks",
-      "Written decision artifact was created before the meeting — decision didn't happen 'in the meeting'",
-      "First-meeting approval rate mentioned as a quality metric (target >80%)",
-      "Adapts communication altitude to audience — exec summary vs. technical detail vs. implementation context"
+      "Communicates early and transparently, does not hide the slip",
+      "Diagnoses root cause before proposing a new timeline",
+      "Proposes scope reduction or re-sequencing rather than just pushing the date",
+      "Takes ownership without throwing the team under the bus"
     ],
     "redFlags": [
-      "Decisions made verbally without written artifact",
-      "Cannot articulate the trade-offs in a recent decision",
-      "No structured process for framing proposals",
-      "Same presentation given to all audiences regardless of seniority"
+      "Waits until the deadline to communicate the slip",
+      "Blames the team without examining process or estimation failures",
+      "Responds by demanding overtime without addressing root cause",
+      "No plan to improve estimation or early-warning signals going forward"
     ]
   },
   {
@@ -1038,16 +1037,16 @@
       "How do you ensure that remote and in-office engineers have equitable experiences?"
     ],
     "lookFor": [
-      "Explicitly states ownership model for their org — can name who owns every critical service",
-      "Describes a dispute about ownership and how they resolved it (escalation path, DRI decision)",
-      "Maintains a registry or system of record for ownership; can pull it up during conversation",
-      "Uses the 'who decides?' test to validate ownership clarity"
+      "Treats inclusion as an ongoing practice, not a one-time initiative",
+      "Uses structural mechanisms: meeting norms, feedback processes, promotion criteria",
+      "Actively seeks input from underrepresented voices rather than waiting for them to speak up",
+      "Measures inclusion through engagement surveys and retention data"
     ],
     "redFlags": [
-      "Ownership is fuzzy — 'we share responsibility' for critical services",
-      "Cannot quickly name the owner of their team's key dependencies",
-      "No documented registry of ownership; relies on institutional knowledge",
-      "Has tolerated ambiguous ownership for >1 month without fixing it"
+      "Treats diversity and inclusion as solely an HR responsibility",
+      "No concrete actions, only statements of intent",
+      "Defines culture in ways that favor the existing majority",
+      "Cannot point to specific changes they made to improve inclusion"
     ]
   },
   {
@@ -1322,16 +1321,16 @@
       "What did you learn about managing divestiture?"
     ],
     "lookFor": [
-      "Describes performance reviews as a conversation about growth, not a report card",
-      "Calibrates feedback across the team — can give specific examples of consistency",
-      "Feedback is behavioral with examples, not personality-based",
-      "Explains how they handled someone who received critical feedback"
+      "Frames divestiture as strategic, not failure",
+      "Has a systematic approach to evaluating investments",
+      "Prioritizes people through transitions",
+      "Documents learnings for future decisions"
     ],
     "redFlags": [
-      "Performance reviews are annual, not ongoing",
-      "Feedback is vague: 'You're not being a team player' rather than specific situations",
-      "Cannot describe how they ensure consistent feedback across the team",
-      "Reviews are surprising to employees because they haven't heard feedback before"
+      "Avoids hard decisions about stopping work",
+      "Treats shutting down projects as purely mechanical",
+      "No empathy for affected team members",
+      "Can't explain the strategic rationale"
     ]
   },
   {
@@ -1346,16 +1345,16 @@
       "What would you do differently?"
     ],
     "lookFor": [
-      "Explains promotion criteria clearly with written examples",
-      "Describes a pre-promotion conversation: 'Here's what we're seeing, here's what we need to see'",
-      "Can name high-performers and their promotion timeline",
-      "Low regret rate: promoted people continue to high-perform"
+      "Builds relationships before needing them",
+      "Uses data and framing rather than positional power",
+      "Understands stakeholder motivations",
+      "Achieves outcomes through persuasion not escalation"
     ],
     "redFlags": [
-      "No documented promotion criteria beyond 'we'll know it when we see it'",
-      "Surprised people when told they were (or weren't) being promoted",
-      "Can't describe a clear threshold for promotion",
-      "High-performer retention is lower than peer teams"
+      "Defaults to escalation when disagreed with",
+      "Can't adapt communication style to audience",
+      "Views cross-functional partners as adversaries",
+      "Only example involves their direct manager"
     ]
   },
   {
@@ -1370,16 +1369,16 @@
       "How did you reach resolution?"
     ],
     "lookFor": [
-      "Identifies high-performers early, not waiting for promotion cycle",
-      "Creates stretch opportunities: rotations, leadership opportunities, new projects",
-      "Invests in senior ICs' career paths even if not management track",
-      "Describes zero or near-zero regrettable attrition of high performers"
+      "Maps stakeholder landscape proactively",
+      "Transparent about trade-offs with all parties",
+      "Creates win-win frames where possible",
+      "Maintains trust even when delivering bad news"
     ],
     "redFlags": [
-      "High-performers leave the team because they don't see growth",
-      "No rotation opportunities — people stay in the same role for years",
-      "Only pathway visible is management; high-performing ICs have nowhere to go",
-      "Doesn't have development conversations with high-performers until they start job searching"
+      "Tells each stakeholder what they want to hear",
+      "Avoids conflict between stakeholders",
+      "Always sides with the loudest voice",
+      "No systematic approach to stakeholder management"
     ]
   },
   {
@@ -1514,16 +1513,16 @@
       "How do you know if your cadence is working?"
     ],
     "lookFor": [
-      "Specific example of a complex disagreement with Product or Design and how they handled it",
-      "Used structured framework (trade-off analysis, DACI, shared data) to discuss the disagreement",
-      "Listened to the other perspective before advocating for engineering's position",
-      "Resolution was collaborative, not a win-loss outcome"
+      "Balances consistency with autonomy",
+      "Has clear principles for what to standardize",
+      "Measures operational health, not just compliance",
+      "Adapts cadence to team maturity"
     ],
     "redFlags": [
-      "Avoids conflict; doesn't push back on unrealistic asks",
-      "Conflicts are described as Product/Design making bad decisions, not as legitimate disagreements",
-      "Resolution usually involves escalation to leadership",
-      "No specific examples; generalizations about cross-functional challenges"
+      "One-size-fits-all approach",
+      "Measures process compliance rather than outcomes",
+      "Can't articulate why standardization is needed",
+      "Forces their previous company's model on teams"
     ]
   },
   {
@@ -1589,16 +1588,16 @@
       "How did you onboard new team members into these norms?"
     ],
     "lookFor": [
-      "Describes a recent bad news escalation: project slip, incident, or missed goal",
-      "Flagged the issue early with specific timing (e.g., 'I surfaced this 3 weeks before deadline')",
-      "Included impact assessment (business impact quantified) and mitigation options",
-      "Manager feedback confirms 'no surprises' principle — leadership learned from EM first"
+      "Collaborative norm-setting rather than dictating",
+      "Written, explicit norms rather than assumed",
+      "Enforcement through coaching, not punishment",
+      "Regular revisiting and updating of norms"
     ],
     "redFlags": [
-      "Bad news always surfaces after it's too late to mitigate",
-      "Manager hears about problems from other teams before EM mentions them",
-      "Lacks a structured escalation process for bad news",
-      "Delays announcing bad news hoping to fix it first"
+      "Norms imposed without team input",
+      "No mechanism for enforcement or evolution",
+      "Confuses rules with culture",
+      "Never revisited norms after initial creation"
     ]
   },
   {
@@ -1613,16 +1612,16 @@
       "How do you handle someone who consistently dominates discussions?"
     ],
     "lookFor": [
-      "Can translate a technical initiative to business outcome — gives a specific example",
-      "Frames ROI analysis the same way as product features: time required, user/customer impact, revenue impact",
-      "Uses business outcome framing in proposals to leadership",
-      "Measures whether business outcomes were realized after initiative ships"
+      "Structural solutions (rotating facilitators, written-first processes) not just good intentions",
+      "Awareness of power dynamics and privilege",
+      "Tracking mechanisms for opportunity distribution",
+      "Willingness to address dominant behaviors"
     ],
     "redFlags": [
-      "Describes initiatives only in technical terms",
-      "Cannot explain how a technical improvement connects to customer or business impact",
-      "Business proposals lack ROI analysis or use different frameworks than product",
-      "Engineering initiatives not discussed in business planning conversations"
+      "Claims everyone already has equal opportunity without evidence",
+      "Relies on 'open door policy' without structural support",
+      "Hasn't noticed or addressed participation imbalances",
+      "Conflates equality with equity"
     ]
   },
   {
@@ -1783,16 +1782,16 @@
       "When did you revisit the decision to see if it was working?"
     ],
     "lookFor": [
-      "Clearly articulates org strategy in business outcome terms (not engineering jargon)",
-      "Shows how team-level OKRs connect to org strategy with specific examples",
-      "Demonstrates why org is structured the way it is in service of strategy",
-      "Updates strategy as business needs change; treats org structure as a strategic lever"
+      "Clear decision framework (DACI, RFC, or similar)",
+      "Documentation of alternatives and rationale",
+      "Respect for dissent combined with decisiveness",
+      "Post-decision follow-up and review"
     ],
     "redFlags": [
-      "Strategy is vague or internally focused ('scale the platform', 'improve quality')",
-      "Team OKRs don't have visible connection to stated org strategy",
-      "Org structure is static — hasn't changed despite shifts in business direction",
-      "Cannot explain to a new hire why their team was created or how it fits the bigger picture"
+      "Made unilateral decisions without input",
+      "Couldn't handle disagreement constructively",
+      "No documentation of the decision process",
+      "Never revisited to evaluate outcomes"
     ]
   },
   {
@@ -2287,16 +2286,16 @@
       "How do you measure the ROI of resilience testing?"
     ],
     "lookFor": [
-      "Maintains a decision log or searchable record of significant decisions",
-      "Can articulate DACI roles (Decider, Accountable, Consulted, Informed) for their decisions",
-      "Describes how they prevent decision revisitation — specific mechanism like RFC process or decision record",
-      "New hires can understand system rationale by reading the decision log"
+      "Understanding that chaos engineering requires baseline observability and SLOs first",
+      "Uses error budget to gauge how aggressive resilience testing can be",
+      "Starts small — doesn't jump to production chaos without groundwork",
+      "Treats resilience testing as practice, not theater"
     ],
     "redFlags": [
-      "No searchable decision log exists",
-      "Same decision debated multiple times",
-      "Cannot name the decision-making framework used",
-      "No documented rationale for existing decisions"
+      "Wants to do chaos engineering without basic monitoring in place",
+      "No concept of error budgets or SLOs",
+      "Treats chaos engineering as a checkbox rather than a practice",
+      "Never considered resilience testing at all"
     ]
   },
   {

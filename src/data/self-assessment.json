@@ -4,11 +4,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Operates within team boundaries without understanding broader org context; cannot articulate how their work connects to other teams or strategic intent; unsure why teams are structured as they are"
+        "description": "Focuses primarily on own team's backlog; limited visibility into cross-team dynamics or org-level priorities"
       },
       {
         "level": 2,
-        "description": "Understands their team's dependencies and basic org topology; can explain some rationale for org structure; beginning to recognize coordination overhead as a problem"
+        "description": "Aware of adjacent teams' work and occasionally considers upstream/downstream impacts when planning"
       },
       {
         "level": 3,
@@ -53,11 +53,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Priorities shift frequently without formal process; team can't articulate why they're allocated as they are; no documented roadmap or prioritization criteria"
+        "description": "Treats all requests as equally urgent; team frequently context-switches without clear rationale"
       },
       {
         "level": 2,
-        "description": "Structured planning exists but roadmap delivery is inconsistent; stakeholders feel trade-offs are made arbitrarily; tech debt not formally allocated in planning"
+        "description": "Maintains a prioritized backlog but struggles to say no to new requests or make explicit tradeoff decisions"
       },
       {
         "level": 3,
@@ -200,11 +200,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Works primarily within engineering; doesn't attend product/design planning; reactive to product asks without proactive input"
+        "description": "Primarily interacts within own team; rarely engages product, design, or other functions unless brought into a meeting"
       },
       {
         "level": 2,
-        "description": "Attends some cross-functional meetings and beginning to understand product/design perspectives; responds to input but doesn't proactively shape decisions"
+        "description": "Has working relationships with immediate cross-functional partners but influence is limited to reactive problem-solving"
       },
       {
         "level": 3,
@@ -249,11 +249,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "1:1s are status meetings focused on what needs to get done; no development conversations; team members cannot describe their career goals or growth path"
+        "description": "Conducts 1:1s infrequently or without structure; provides little feedback beyond annual reviews; team members unclear on growth paths"
       },
       {
         "level": 2,
-        "description": "Some development conversations happen; promotion criteria exist informally; performance reviews are annual with limited coaching; high-performers occasionally leave"
+        "description": "Holds regular 1:1s and provides occasional feedback but lacks a systematic approach to individual development planning"
       },
       {
         "level": 3,
@@ -298,11 +298,11 @@
     "behavioralAnchors": [
       {
         "level": 1,
-        "description": "Proposals lack structure and written artifacts; decisions made verbally without documented rationale; communication not adapted to audience (same level of detail for execs and ICs)"
+        "description": "Presents decisions after the fact with little context; stakeholders feel surprised or uninformed about key tradeoffs"
       },
       {
         "level": 2,
-        "description": "Written decisions exist but inconsistently structured; attempting to adapt communication altitude but execution uneven; bad news escalation sometimes delayed"
+        "description": "Communicates decisions clearly but does not proactively frame the alternatives considered or the risks of each option"
       },
       {
         "level": 3,
