@@ -92,7 +92,7 @@
     ],
     "emTier": "primary",
     "directorTier": "secondary",
-    "aiEraImpact": "AI-generated code that passes syntax but fails under production load increases CFR. Monitor CFR specifically for AI-assisted PRs vs human PRs. Bug rates climb 9% with scaled AI adoption (Faros AI, 2024).",
+    "aiEraImpact": "AI-generated code that passes syntax but fails under production load increases CFR. Monitor CFR specifically for AI-assisted PRs vs human PRs. Bug rates climb 9% with scaled AI adoption (Faros AI industry report, 2024).",
     "decisionRule": "CFR >15% → freeze features and investigate root causes by deployment type. CFR >5% → pair with escaped defects to identify testing gaps."
   },
   {
@@ -706,7 +706,7 @@
     ],
     "emTier": "secondary",
     "directorTier": "tertiary",
-    "aiEraImpact": "The AI verification bottleneck. AI adoption drives 154% larger PRs and 91% longer review times (Faros AI, 2024). Review turnaround is now the #1 leading indicator of AI-era delivery degradation.",
+    "aiEraImpact": "The AI verification bottleneck. AI adoption drives 154% larger PRs and 91% longer review times (Faros AI industry report, 2024). Review turnaround is now the #1 leading indicator of AI-era delivery degradation.",
     "decisionRule": "Review turnaround >24h → biggest bottleneck in Lead Time. Investigate review load distribution and PR size. Pair with PR Size (6.2)."
   },
   {
@@ -1235,7 +1235,7 @@
     ],
     "emTier": "tertiary",
     "directorTier": "tertiary",
-    "aiEraImpact": "9% increase in bug rates with AI adoption (Faros AI, 2024). Escaped defect tracking becomes the primary quality feedback loop for AI-generated code.",
+    "aiEraImpact": "9% increase in bug rates with AI adoption (Faros AI industry report, 2024). Escaped defect tracking becomes the primary quality feedback loop for AI-generated code.",
     "decisionRule": "Diagnostic only — investigate when CFR rises. Escaped defects identify where testing gaps exist."
   },
   {
@@ -1389,7 +1389,7 @@
     ],
     "emTier": "tertiary",
     "directorTier": "tertiary",
-    "aiEraImpact": "New for AI era. DevEx framework identifies cognitive load as a core dimension. AI paradoxically increases cognitive load when engineers must verify, debug, and understand code they didn't write. The 19% slowdown for experienced developers (METR RCT, 2024) is driven by this verification overhead.",
+    "aiEraImpact": "New for AI era. DevEx framework identifies cognitive load as a core dimension. AI paradoxically increases cognitive load when engineers must verify, debug, and understand code they didn't write. The 19% slowdown for experienced developers (METR RCT, 2025) is driven by this verification overhead.",
     "decisionRule": "Diagnostic only — high cognitive load correlates with DX decline. Investigate context-switching frequency and AI verification overhead."
   },
   {
@@ -2053,7 +2053,7 @@
     "observableIds": [],
     "emTier": "diagnostic",
     "directorTier": "diagnostic",
-    "aiEraImpact": "AI inflates PR throughput (98% increase in PRs merged (Faros AI, 2024)). Throughput increase without quality validation is a trap.",
+    "aiEraImpact": "AI inflates PR throughput (98% increase in PRs merged (Faros AI industry report, 2024)). Throughput increase without quality validation is a trap.",
     "decisionRule": "Diagnostic only — investigate when flagged by primary metric. Never use as individual performance measure."
   },
   {
@@ -2089,7 +2089,7 @@
     "observableIds": [],
     "emTier": "diagnostic",
     "directorTier": "diagnostic",
-    "aiEraImpact": "Critical AI diagnostic. 154% increase in PR size with AI (Faros AI, 2024). Large AI PRs overwhelm reviewers, leading to rubber-stamping. Track AI vs human PR size separately.",
+    "aiEraImpact": "Critical AI diagnostic. 154% increase in PR size with AI (Faros AI industry report, 2024). Large AI PRs overwhelm reviewers, leading to rubber-stamping. Track AI vs human PR size separately.",
     "decisionRule": "PR size >400 lines → review quality degrades. Use to investigate Code Review Turnaround bottlenecks."
   },
   {
@@ -2896,7 +2896,7 @@
     "category": "AI-Era",
     "tier": "secondary",
     "type": "lagging",
-    "description": "Difference in CFR, rollback rate, and escaped defect rate between AI-assisted and human-authored PRs. The critical quality signal. If AI PRs have 2x the rollback rate, your verification process is insufficient. 9% increase in bug rates at scale (Faros AI, 2024).",
+    "description": "Difference in CFR, rollback rate, and escaped defect rate between AI-assisted and human-authored PRs. The critical quality signal. If AI PRs have 2x the rollback rate, your verification process is insufficient. 9% increase in bug rates at scale (Faros AI industry report, 2024).",
     "emRank": {
       "priority": "C",
       "rank": 14
@@ -2916,7 +2916,7 @@
     "implementationEffort": "medium",
     "implementationNotes": "2-3 wks: compare quality metrics between AI-flagged and human PRs",
     "replaces": "",
-    "whyThisTier": "The critical quality signal for AI adoption. 9% increase in bug rates at scale (Faros AI, 2024).",
+    "whyThisTier": "The critical quality signal for AI adoption. 9% increase in bug rates at scale (Faros AI industry report, 2024).",
     "goodRange": "AI PR quality within 5% of human PRs",
     "warningRange": "AI PRs 5-15% worse",
     "dangerRange": "AI PRs >15% worse quality",
@@ -2938,7 +2938,7 @@
     "category": "AI-Era",
     "tier": "secondary",
     "type": "leading",
-    "description": "(Review time for AI PRs) / (Review time for human PRs). Good: < 1.5x (AI review time close to human). Warning: 1.5x-3x. If >3x, AI is creating net-negative flow impact. Directly measures the verification bottleneck. 19% slowdown driven by verification cognitive overhead (METR RCT, 2024). 91% increase in review time (Faros AI, 2024).",
+    "description": "(Review time for AI PRs) / (Review time for human PRs). Good: < 1.5x (AI review time close to human). Warning: 1.5x-3x. If >3x, AI is creating net-negative flow impact. Directly measures the verification bottleneck. 19% slowdown driven by verification cognitive overhead (METR RCT, 2025). 91% increase in review time (Faros AI industry report, 2024).",
     "emRank": {
       "priority": "C",
       "rank": 16
@@ -2959,7 +2959,7 @@
     "implementationEffort": "medium",
     "implementationNotes": "2-3 wks: segment review time by AI vs human PR flag",
     "replaces": "",
-    "whyThisTier": "Directly measures the verification bottleneck. 19% slowdown driven by verification cognitive overhead (METR RCT, 2024).",
+    "whyThisTier": "Directly measures the verification bottleneck. 19% slowdown driven by verification cognitive overhead (METR RCT, 2025).",
     "goodRange": "< 1.5x",
     "warningRange": "1.5x-3x",
     "dangerRange": "> 3x (net-negative flow impact)",
@@ -2971,7 +2971,7 @@
     ],
     "emTier": "secondary",
     "directorTier": "tertiary",
-    "aiEraImpact": "Directly measures the verification bottleneck. 91% increase in review time with AI adoption (Faros AI, 2024).",
+    "aiEraImpact": "Directly measures the verification bottleneck. 91% increase in review time with AI adoption (Faros AI industry report, 2024).",
     "decisionRule": "Verification overhead >2x → AI creating net-negative flow impact. Investigate review tooling and AI output quality."
   },
   {
@@ -3086,7 +3086,7 @@
     "observableIds": [],
     "emTier": "inferior",
     "directorTier": "inferior",
-    "aiEraImpact": "Self-referential: using AI-generated productivity scores to evaluate AI adoption. 80%+ of engineers report gains; controlled studies show 19% slowdown for experienced developers (METR RCT, 2024).",
+    "aiEraImpact": "Self-referential: using AI-generated productivity scores to evaluate AI adoption. 80%+ of engineers report gains; controlled studies show 19% slowdown for experienced developers (METR RCT, 2025).",
     "superiorReplacement": "AI Tooling ROI (10.5) + AI-3 + AI-2",
     "decisionRule": "Do not track. Use AI Tooling ROI (10.5) and AI Trust Score (5.9) instead."
   },

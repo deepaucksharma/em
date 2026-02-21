@@ -10,15 +10,16 @@
       "What data or signals told you this was a structural issue rather than a local one?"
     ],
     "lookFor": [
-      "Ability to see beyond their own team's boundaries",
-      "Systematic diagnosis rather than gut-feel reactions",
-      "Evidence of collaboration with peer managers",
-      "Clear articulation of the before/after state"
+      "Describes specific misalignment between org structure and delivery they identified, with measurable outcome (e.g., handoff rate reduction, incident resolution speedup)",
+      "Uses systematic diagnosis: mapped dependencies, measured coordination overhead, identified root cause before proposing fix",
+      "Collaborated with peer managers and stakeholders rather than acting unilaterally",
+      "Articulates the before/after state with concrete metrics (delivery speed, incident rate, team satisfaction)"
     ],
     "redFlags": [
-      "Only focused on their own team's symptoms",
-      "Escalated without attempting to understand root causes",
-      "Could not explain the broader organizational impact"
+      "Only focused on their own team's symptoms without investigating cross-team dynamics",
+      "Escalated without attempting to understand root causes or gather data",
+      "Cannot explain the broader organizational impact of the structural problem",
+      "Solution was 'have a meeting about it' rather than a structural change"
     ]
   },
   {
@@ -1321,16 +1322,16 @@
       "What did you learn about managing divestiture?"
     ],
     "lookFor": [
-      "Frames divestiture as strategic, not failure",
-      "Has a systematic approach to evaluating investments",
-      "Prioritizes people through transitions",
-      "Documents learnings for future decisions"
+      "Describes clear decision criteria for what to stop: ROI analysis, strategic misalignment, opportunity cost quantified",
+      "Managed team impact deliberately — redeployed engineers to high-value work rather than leaving people in limbo",
+      "Communicated the 'why' to affected teams with transparency about business rationale",
+      "Preserved institutional knowledge during wind-down: documentation, knowledge transfer sessions, transition runbooks"
     ],
     "redFlags": [
-      "Avoids hard decisions about stopping work",
-      "Treats shutting down projects as purely mechanical",
-      "No empathy for affected team members",
-      "Can't explain the strategic rationale"
+      "No structured criteria for the wind-down decision — felt like politics rather than analysis",
+      "Team members learned about divestiture through rumor rather than direct communication",
+      "No plan for affected engineers — people left in limbo or attrited",
+      "Institutional knowledge lost because no transition plan existed"
     ]
   },
   {

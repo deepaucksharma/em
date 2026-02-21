@@ -1089,7 +1089,7 @@
     "id": "C5-O14"
   },
   {
-    "title": "C5-O15: Prepares board-level materials that frame engineering investment as strategic business narrative",
+    "title": "C5-O15: Positions engineering as strategic asset at board level, securing investment through business-outcome narrative",
     "description": "Authored engineering section of quarterly board deck: 3 slides covering platform reliability as competitive moat, R&D velocity benchmarked against industry, and talent pipeline as strategic risk. Board approved $2M infrastructure investment based on narrative.",
     "type": "observable",
     "url": "/capabilities/cross-functional-influence/",
@@ -2223,8 +2223,8 @@
     "id": "C14-O7"
   },
   {
-    "title": "C14-O8: Manages high performers with differentiated development plans and retention-conscious conversations",
-    "description": "Identifies top performers' growth aspirations proactively, creates stretch assignments aligned to next-level expectations, has quarterly career conversations (not just at review time), and flags retention risks to leadership before they become emergencies. [Netflix; Keeper Test]",
+    "title": "C14-O8: Differentiates high-performer ratings with evidence portfolios and documents retention risk for leadership",
+    "description": "Prepares calibration cases for top performers with quantified impact evidence, pre-wires calibration committee to prevent default ratings, and maintains a written retention risk register shared with skip-level quarterly. [Amazon; Netflix Keeper Test]",
     "type": "observable",
     "url": "/capabilities/performance-management-calibration/",
     "domain": "People",
@@ -2709,319 +2709,319 @@
     "id": "AP-33"
   },
   {
-    "title": "AP-35: The Infinite Runway — EM treats cloud/infra spend as unbounded and never prioritizes cost optimization. Costs grow unchecked until finance forces an emergency reduction, diverting the team from planned work to reactive cost-cutting under pressure.",
+    "title": "AP-34: The Infinite Runway — EM treats cloud/infra spend as unbounded and never prioritizes cost optimization. Costs grow unchecked until finance forces an emergency reduction, diverting the team from planned work to reactive cost-cutting under pressure.",
     "description": "EM treats cloud/infra spend as unbounded and never prioritizes cost optimization. Costs grow unchecked until finance forces an emergency reduction, diverting the team from planned work to reactive cost-cutting under pressure.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-infinite-runway/",
     "domain": "Strategy",
     "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-35"
+    "id": "AP-34"
   },
   {
-    "title": "AP-37: Compliance Cramming — EM treats compliance as a periodic audit exercise, achieving minimal technical compliance without genuine security posture improvement. Day-to-day practices drift from documented standards, and audit preparation becomes a recurring fire drill that disrupts planned work.",
+    "title": "AP-35: Compliance Cramming — EM treats compliance as a periodic audit exercise, achieving minimal technical compliance without genuine security posture improvement. Day-to-day practices drift from documented standards, and audit preparation becomes a recurring fire drill that disrupts planned work.",
     "description": "EM treats compliance as a periodic audit exercise, achieving minimal technical compliance without genuine security posture improvement. Day-to-day practices drift from documented standards, and audit preparation becomes a recurring fire drill that disrupts planned work.",
     "type": "anti-pattern",
     "url": "/anti-patterns/compliance-cramming/",
     "domain": "Reliability",
     "capabilityName": "Security & Compliance Posture",
-    "id": "AP-37"
+    "id": "AP-35"
   },
   {
-    "title": "AP-38: The Ivory Tower Architect — EM pushes architectural purity and over-engineering at the expense of pragmatic delivery. Systems are technically impressive but ship late, the team gold-plates solutions nobody asked for, and business impact suffers while architecture reviews multiply.",
+    "title": "AP-36: The Ivory Tower Architect — EM pushes architectural purity and over-engineering at the expense of pragmatic delivery. Systems are technically impressive but ship late, the team gold-plates solutions nobody asked for, and business impact suffers while architecture reviews multiply.",
     "description": "EM pushes architectural purity and over-engineering at the expense of pragmatic delivery. Systems are technically impressive but ship late, the team gold-plates solutions nobody asked for, and business impact suffers while architecture reviews multiply.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ivory-tower-architect/",
     "domain": "Execution",
     "capabilityName": "Systems Design & Architecture",
-    "id": "AP-38"
+    "id": "AP-36"
   },
   {
-    "title": "AP-40: The Missing Stair — EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them. High performers leave frustrated by the inequity, team standards erode, and the EM's credibility collapses when the situation inevitably escalates.",
+    "title": "AP-37: The Missing Stair — EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them. High performers leave frustrated by the inequity, team standards erode, and the EM's credibility collapses when the situation inevitably escalates.",
     "description": "EM tolerates a known toxic or underperforming person because the team has learned to 'work around' them. High performers leave frustrated by the inequity, team standards erode, and the EM's credibility collapses when the situation inevitably escalates.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-missing-stair/",
     "domain": "People",
     "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-40"
+    "id": "AP-37"
   },
   {
-    "title": "AP-41: Culture Tourism — EM treats culture building as periodic events — off-sites, pizza, team lunches — rather than daily structural practices. Surface-level perks mask unaddressed dysfunction, and engineers see through the performative gestures to the real culture underneath.",
+    "title": "AP-38: Culture Tourism — EM treats culture building as periodic events — off-sites, pizza, team lunches — rather than daily structural practices. Surface-level perks mask unaddressed dysfunction, and engineers see through the performative gestures to the real culture underneath.",
     "description": "EM treats culture building as periodic events — off-sites, pizza, team lunches — rather than daily structural practices. Surface-level perks mask unaddressed dysfunction, and engineers see through the performative gestures to the real culture underneath.",
     "type": "anti-pattern",
     "url": "/anti-patterns/culture-tourism/",
     "domain": "People",
     "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-41"
+    "id": "AP-38"
   },
   {
-    "title": "AP-42: Peanut Butter Spreading — EM distributes resources evenly across all projects instead of concentrating on highest-impact bets. Everything moves slowly, nothing ships with impact, and the team delivers mediocre results across the board instead of excellence where it matters.",
+    "title": "AP-39: Peanut Butter Spreading — EM distributes resources evenly across all projects instead of concentrating on highest-impact bets. Everything moves slowly, nothing ships with impact, and the team delivers mediocre results across the board instead of excellence where it matters.",
     "description": "EM distributes resources evenly across all projects instead of concentrating on highest-impact bets. Everything moves slowly, nothing ships with impact, and the team delivers mediocre results across the board instead of excellence where it matters.",
     "type": "anti-pattern",
     "url": "/anti-patterns/peanut-butter-spreading/",
     "domain": "Strategy",
     "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-42"
+    "id": "AP-39"
   },
   {
-    "title": "AP-43: The Telephone Game — Information degrades as it passes through management layers because there's no source-of-truth documentation. Teams operate on conflicting versions of reality, decisions get relitigated, and alignment meetings multiply to compensate for broken information flow.",
+    "title": "AP-40: The Telephone Game — Information degrades as it passes through management layers because there's no source-of-truth documentation. Teams operate on conflicting versions of reality, decisions get relitigated, and alignment meetings multiply to compensate for broken information flow.",
     "description": "Information degrades as it passes through management layers because there's no source-of-truth documentation. Teams operate on conflicting versions of reality, decisions get relitigated, and alignment meetings multiply to compensate for broken information flow.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-telephone-game/",
     "domain": "Stakeholder",
     "capabilityName": "Decision Framing & Communication",
-    "id": "AP-43"
+    "id": "AP-40"
   },
   {
-    "title": "AP-44: The Recency Trap — EM's performance assessment is dominated by the last 6 weeks instead of the full review period. Engineers who had a strong H1 but quiet H2 get underrated, while those who time visible work to review season get overrated, eroding trust in the process.",
+    "title": "AP-41: The Recency Trap — EM's performance assessment is dominated by the last 6 weeks instead of the full review period. Engineers who had a strong H1 but quiet H2 get underrated, while those who time visible work to review season get overrated, eroding trust in the process.",
     "description": "EM's performance assessment is dominated by the last 6 weeks instead of the full review period. Engineers who had a strong H1 but quiet H2 get underrated, while those who time visible work to review season get overrated, eroding trust in the process.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-recency-trap/",
     "domain": "People",
     "capabilityName": "Performance Management & Calibration",
-    "id": "AP-44"
+    "id": "AP-41"
   },
   {
-    "title": "AP-46: The Vibes-Based Hire — EM relies on gut feeling and 'culture fit' rather than structured evaluation in hiring. Biased and unpredictable outcomes follow — the team clones its existing demographic, strong candidates are rejected for vague reasons, and hiring quality varies wildly by interviewer.",
+    "title": "AP-42: The Vibes-Based Hire — EM relies on gut feeling and 'culture fit' rather than structured evaluation in hiring. Biased and unpredictable outcomes follow — the team clones its existing demographic, strong candidates are rejected for vague reasons, and hiring quality varies wildly by interviewer.",
     "description": "EM relies on gut feeling and 'culture fit' rather than structured evaluation in hiring. Biased and unpredictable outcomes follow — the team clones its existing demographic, strong candidates are rejected for vague reasons, and hiring quality varies wildly by interviewer.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-vibes-based-hire/",
     "domain": "People",
     "capabilityName": "Hiring, Onboarding & Role Design",
-    "id": "AP-46"
+    "id": "AP-42"
   },
   {
-    "title": "AP-48: The Lagging-Only Dashboard — EM only tracks lagging indicators — incidents, attrition, missed deadlines — and never has early warning signals for emerging problems. By the time a metric turns red the damage is done, and recovery takes months instead of the days a leading indicator would have enabled.",
+    "title": "AP-43: The Lagging-Only Dashboard — EM only tracks lagging indicators — incidents, attrition, missed deadlines — and never has early warning signals for emerging problems. By the time a metric turns red the damage is done, and recovery takes months instead of the days a leading indicator would have enabled.",
     "description": "EM only tracks lagging indicators — incidents, attrition, missed deadlines — and never has early warning signals for emerging problems. By the time a metric turns red the damage is done, and recovery takes months instead of the days a leading indicator would have enabled.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-lagging-only-dashboard/",
     "domain": "Data",
     "capabilityName": "Metrics, Measurement & Outcomes",
-    "id": "AP-48"
+    "id": "AP-43"
   },
   {
-    "title": "AP-49: The Invisible Tech Debt — Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms. Leadership sees no reason to fund remediation, engineers suffer in silence, and velocity degrades until a catastrophic failure forces attention.",
+    "title": "AP-44: The Invisible Tech Debt — Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms. Leadership sees no reason to fund remediation, engineers suffer in silence, and velocity degrades until a catastrophic failure forces attention.",
     "description": "Tech debt accumulates invisibly because it's never quantified, tracked, or communicated to stakeholders in business terms. Leadership sees no reason to fund remediation, engineers suffer in silence, and velocity degrades until a catastrophic failure forces attention.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-invisible-tech-debt/",
     "domain": "Execution",
     "capabilityName": "Systems Design & Architecture",
-    "id": "AP-49"
+    "id": "AP-44"
   },
   {
-    "title": "AP-50: The Silo Builder — EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes. Peer teams learn to route around the silo, leadership loses trust, and the team's wins come at the cost of org-wide velocity.",
+    "title": "AP-45: The Silo Builder — EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes. Peer teams learn to route around the silo, leadership loses trust, and the team's wins come at the cost of org-wide velocity.",
     "description": "EM optimizes for their team's local success at the expense of cross-team collaboration and org-wide outcomes. Peer teams learn to route around the silo, leadership loses trust, and the team's wins come at the cost of org-wide velocity.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-silo-builder/",
     "domain": "Stakeholder",
     "capabilityName": "Cross-Functional Influence",
-    "id": "AP-50"
+    "id": "AP-45"
   },
   {
-    "title": "AP-51: The Accidental Manager — Someone is promoted into management because they were the best IC, without any management training, coaching, or support. The org loses a great engineer and gains a struggling manager, and the team suffers through months of avoidable mistakes.",
+    "title": "AP-46: The Accidental Manager — Someone is promoted into management because they were the best IC, without any management training, coaching, or support. The org loses a great engineer and gains a struggling manager, and the team suffers through months of avoidable mistakes.",
     "description": "Someone is promoted into management because they were the best IC, without any management training, coaching, or support. The org loses a great engineer and gains a struggling manager, and the team suffers through months of avoidable mistakes.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-accidental-manager/",
     "domain": "People",
     "capabilityName": "Coaching & Talent Development",
-    "id": "AP-51"
+    "id": "AP-46"
   },
   {
-    "title": "AP-52: The Task-List OKR — Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes. Goal-setting becomes project management theater — checking boxes doesn't prove impact, and the team never learns whether their work actually moved the needle.",
+    "title": "AP-47: The Task-List OKR — Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes. Goal-setting becomes project management theater — checking boxes doesn't prove impact, and the team never learns whether their work actually moved the needle.",
     "description": "Team's OKRs are formatted as task lists with binary checkboxes rather than measurable outcomes. Goal-setting becomes project management theater — checking boxes doesn't prove impact, and the team never learns whether their work actually moved the needle.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-task-list-okr/",
     "domain": "Strategy",
     "capabilityName": "Strategic Prioritization",
-    "id": "AP-52"
+    "id": "AP-47"
   },
   {
-    "title": "AP-53: The Urgency Treadmill — Everything is urgent and nothing is strategic — the team constantly reacts to the loudest stakeholder or latest fire. Long-term initiatives never gain traction, engineers burn out from context-switching, and the team's impact stays flat despite working harder.",
+    "title": "AP-48: The Urgency Treadmill — Everything is urgent and nothing is strategic — the team constantly reacts to the loudest stakeholder or latest fire. Long-term initiatives never gain traction, engineers burn out from context-switching, and the team's impact stays flat despite working harder.",
     "description": "Everything is urgent and nothing is strategic — the team constantly reacts to the loudest stakeholder or latest fire. Long-term initiatives never gain traction, engineers burn out from context-switching, and the team's impact stays flat despite working harder.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-urgency-treadmill/",
     "domain": "Strategy",
     "capabilityName": "Strategic Prioritization",
-    "id": "AP-53"
+    "id": "AP-48"
   },
   {
-    "title": "AP-54: The Wrecking Ball — New leader makes drastic changes in their first weeks without understanding context, scrapping processes and reorganizing teams based on assumptions. Institutional knowledge is destroyed, trust collapses, and the very problems the changes aimed to fix get worse.",
+    "title": "AP-49: The Wrecking Ball — New leader makes drastic changes in their first weeks without understanding context, scrapping processes and reorganizing teams based on assumptions. Institutional knowledge is destroyed, trust collapses, and the very problems the changes aimed to fix get worse.",
     "description": "New leader makes drastic changes in their first weeks without understanding context, scrapping processes and reorganizing teams based on assumptions. Institutional knowledge is destroyed, trust collapses, and the very problems the changes aimed to fix get worse.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-wrecking-ball/",
     "domain": "Strategy",
     "capabilityName": "Org-Level Thinking",
-    "id": "AP-54"
+    "id": "AP-49"
   },
   {
-    "title": "AP-55: Budget in a Vacuum — Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams. Budget reviews become adversarial, asks get cut disproportionately, and the org loses credibility as a strategic partner.",
+    "title": "AP-50: Budget in a Vacuum — Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams. Budget reviews become adversarial, asks get cut disproportionately, and the org loses credibility as a strategic partner.",
     "description": "Engineering leader plans budget in isolation without cross-functional input from product, finance, or peer engineering teams. Budget reviews become adversarial, asks get cut disproportionately, and the org loses credibility as a strategic partner.",
     "type": "anti-pattern",
     "url": "/anti-patterns/budget-in-a-vacuum/",
     "domain": "Strategy",
     "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-55"
+    "id": "AP-50"
   },
   {
-    "title": "AP-56: The Stress Funnel — Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering it into actionable context. The team becomes anxious and distracted, productivity drops, and engineers start job-searching to escape the stress.",
+    "title": "AP-51: The Stress Funnel — Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering it into actionable context. The team becomes anxious and distracted, productivity drops, and engineers start job-searching to escape the stress.",
     "description": "Manager passes organizational pressure, political conflicts, and exec anxiety directly to engineers instead of filtering it into actionable context. The team becomes anxious and distracted, productivity drops, and engineers start job-searching to escape the stress.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-stress-funnel/",
     "domain": "Execution",
     "capabilityName": "Operational Leadership & Rhythm",
-    "id": "AP-56"
+    "id": "AP-51"
   },
   {
-    "title": "AP-57: Alert Noise Normalization — Team accumulates alerts over time but nobody removes them because engineers fear deleting one that might matter. Non-actionable noise grows until on-call is desensitized, real incidents get slower response, and alert fatigue becomes a reliability risk itself.",
+    "title": "AP-52: Alert Noise Normalization — Team accumulates alerts over time but nobody removes them because engineers fear deleting one that might matter. Non-actionable noise grows until on-call is desensitized, real incidents get slower response, and alert fatigue becomes a reliability risk itself.",
     "description": "Team accumulates alerts over time but nobody removes them because engineers fear deleting one that might matter. Non-actionable noise grows until on-call is desensitized, real incidents get slower response, and alert fatigue becomes a reliability risk itself.",
     "type": "anti-pattern",
     "url": "/anti-patterns/alert-noise-normalization/",
     "domain": "Reliability",
     "capabilityName": "Incidents, Risk & Reliability",
-    "id": "AP-57"
+    "id": "AP-52"
   },
   {
-    "title": "AP-58: The Interview Marathon — Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing ones. Top candidates drop out mid-process, offer acceptance rate plummets, and the team selects for persistence over talent.",
+    "title": "AP-53: The Interview Marathon — Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing ones. Top candidates drop out mid-process, offer acceptance rate plummets, and the team selects for persistence over talent.",
     "description": "Hiring process has grown to 7-8 rounds through risk aversion, with each bad hire triggering another interview stage rather than improving existing ones. Top candidates drop out mid-process, offer acceptance rate plummets, and the team selects for persistence over talent.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-interview-marathon/",
     "domain": "People",
     "capabilityName": "Hiring, Onboarding & Role Design",
-    "id": "AP-58"
+    "id": "AP-53"
   },
   {
-    "title": "AP-59: The Order Taker — Engineering leader defers entirely to product for direction, never challenging priorities, proposing technical opportunities, or shaping strategy. Engineering becomes a feature factory with no technical voice, and the leader's credibility as a strategic partner erodes.",
+    "title": "AP-54: The Order Taker — Engineering leader defers entirely to product for direction, never challenging priorities, proposing technical opportunities, or shaping strategy. Engineering becomes a feature factory with no technical voice, and the leader's credibility as a strategic partner erodes.",
     "description": "Engineering leader defers entirely to product for direction, never challenging priorities, proposing technical opportunities, or shaping strategy. Engineering becomes a feature factory with no technical voice, and the leader's credibility as a strategic partner erodes.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-order-taker/",
     "domain": "Stakeholder",
     "capabilityName": "Cross-Functional Influence",
-    "id": "AP-59"
+    "id": "AP-54"
   },
   {
-    "title": "AP-60: The Feedback Avoidance Loop — Manager avoids giving negative performance feedback until it's too late, letting minor issues compound into serious underperformance. The first honest feedback the engineer receives is a PIP or a low rating, destroying trust and making recovery nearly impossible.",
+    "title": "AP-55: The Feedback Avoidance Loop — Manager avoids giving negative performance feedback until it's too late, letting minor issues compound into serious underperformance. The first honest feedback the engineer receives is a PIP or a low rating, destroying trust and making recovery nearly impossible.",
     "description": "Manager avoids giving negative performance feedback until it's too late, letting small issues compound for months without a signal to course-correct. The first honest feedback arrives as a PIP or low rating, destroying trust and making recovery nearly impossible because the engineer never had a chance to improve.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-feedback-avoidance-loop/",
     "domain": "People",
     "capabilityName": "Performance Management & Calibration",
-    "id": "AP-60"
+    "id": "AP-55"
   },
   {
-    "title": "AP-61: Incident Amnesia — Team runs post-mortems after every incident but action items die in a backlog. The same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual that breeds cynicism rather than resilience.",
+    "title": "AP-56: Incident Amnesia — Team runs post-mortems after every incident but action items die in a backlog. The same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual that breeds cynicism rather than resilience.",
     "description": "Team runs post-mortems after every incident but action items die in a backlog. The same class of incident recurs because learning never converts to systemic change, and the post-mortem becomes a ritual that breeds cynicism rather than resilience.",
     "type": "anti-pattern",
     "url": "/anti-patterns/incident-amnesia/",
     "domain": "Reliability",
     "capabilityName": "Incidents, Risk & Reliability",
-    "id": "AP-61"
+    "id": "AP-56"
   },
   {
-    "title": "AP-62: Resume-Driven Architecture — Technology choices are driven by what looks impressive on resumes rather than what solves the actual problem. The team adopts Kubernetes for 3 services or microservices for a 5-person team, adding operational complexity that dwarfs the engineering value.",
+    "title": "AP-57: Resume-Driven Architecture — Technology choices are driven by what looks impressive on resumes rather than what solves the actual problem. The team adopts Kubernetes for 3 services or microservices for a 5-person team, adding operational complexity that dwarfs the engineering value.",
     "description": "Technology choices are driven by what looks impressive on resumes rather than what solves the actual problem. The team adopts Kubernetes for 3 services or microservices for a 5-person team, adding operational complexity that dwarfs the engineering value.",
     "type": "anti-pattern",
     "url": "/anti-patterns/resume-driven-architecture/",
     "domain": "Execution",
     "capabilityName": "Systems Design & Architecture",
-    "id": "AP-62"
+    "id": "AP-57"
   },
   {
-    "title": "AP-63: The Ostrich Leader — Leader avoids making difficult organizational decisions, letting dysfunctional dynamics persist and hoping problems resolve themselves. Org health slowly deteriorates, top performers leave the dysfunction, and the problems compound until they become crises.",
+    "title": "AP-58: The Ostrich Leader — Leader avoids making difficult organizational decisions, letting dysfunctional dynamics persist and hoping problems resolve themselves. Org health slowly deteriorates, top performers leave the dysfunction, and the problems compound until they become crises.",
     "description": "Leader avoids making difficult organizational decisions — unclear ownership, toxic team members, misaligned team boundaries — hoping problems resolve themselves. The avoidance signals weakness to top performers who leave for teams with decisive leadership, which concentrates dysfunction among those who remain, further raising the cost of intervention until the situation becomes a crisis requiring emergency action.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ostrich-leader/",
     "domain": "Strategy",
     "capabilityName": "Org-Level Thinking",
-    "id": "AP-63"
+    "id": "AP-58"
   },
   {
-    "title": "AP-64: The Goodhart Trap — Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure. Velocity numbers go up while actual delivery value goes down, the metric loses diagnostic power, and real performance becomes invisible.",
+    "title": "AP-59: The Goodhart Trap — Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure. Velocity numbers go up while actual delivery value goes down, the metric loses diagnostic power, and real performance becomes invisible.",
     "description": "Once a metric becomes a target, the team optimizes for the metric rather than the outcome it was supposed to measure. Velocity numbers go up while actual delivery value goes down, the metric loses diagnostic power, and real performance becomes invisible.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-goodhart-trap/",
     "domain": "Data",
     "capabilityName": "Metrics, Measurement & Outcomes",
-    "id": "AP-64"
+    "id": "AP-59"
   },
   {
-    "title": "AP-65: The Talent Hostage — Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency. The team becomes a place people can't leave rather than a place they want to stay, and the best engineers leave the company entirely.",
+    "title": "AP-60: The Talent Hostage — Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency. The team becomes a place people can't leave rather than a place they want to stay, and the best engineers leave the company entirely.",
     "description": "Manager hoards talent by blocking internal transfers, withholding growth opportunities, or creating dependency. The team becomes a place people can't leave rather than a place they want to stay, and the best engineers leave the company entirely.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-talent-hostage/",
     "domain": "People",
     "capabilityName": "Hiring, Onboarding & Role Design",
-    "id": "AP-65"
+    "id": "AP-60"
   },
   {
-    "title": "AP-66: The Ivory Tower Strategy — Leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams. Engineers cannot connect their daily work to the strategy, the gap between intent and execution widens quarterly, and OKRs drift into busywork.",
+    "title": "AP-61: The Ivory Tower Strategy — Leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams. Engineers cannot connect their daily work to the strategy, the gap between intent and execution widens quarterly, and OKRs drift into busywork.",
     "description": "Leadership creates a strategic vision in documents and presentations but never translates it into actionable work for teams. Engineers cannot connect their daily work to the strategy, the gap between intent and execution widens quarterly, and OKRs drift into busywork.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-ivory-tower-strategy/",
     "domain": "Strategy",
     "capabilityName": "Strategic Prioritization",
-    "id": "AP-66"
+    "id": "AP-61"
   },
   {
-    "title": "AP-67: The Toil Spiral — Team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight. Accumulated neglect eventually degrades velocity so badly that the team can't ship features either.",
+    "title": "AP-62: The Toil Spiral — Team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight. Accumulated neglect eventually degrades velocity so badly that the team can't ship features either.",
     "description": "Team neglects operational health — toil reduction, developer experience, and technical debt — because feature delivery always wins the prioritization fight. Accumulated neglect eventually degrades velocity so badly that the team can't ship features either.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-toil-spiral/",
     "domain": "Execution",
     "capabilityName": "Operational Leadership & Rhythm",
-    "id": "AP-67"
+    "id": "AP-62"
   },
   {
-    "title": "AP-68: The Stakeholder Surprise — Engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment. Stakeholders are repeatedly blindsided, trust erodes rapidly, and leadership starts micromanaging or routing around engineering entirely.",
+    "title": "AP-63: The Stakeholder Surprise — Engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment. Stakeholders are repeatedly blindsided, trust erodes rapidly, and leadership starts micromanaging or routing around engineering entirely.",
     "description": "Engineering leader avoids surfacing technical risks, timeline slips, and scope changes until the last possible moment. Stakeholders are repeatedly blindsided, trust erodes rapidly, and leadership starts micromanaging or routing around engineering entirely.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-stakeholder-surprise/",
     "domain": "Stakeholder",
     "capabilityName": "Cross-Functional Influence",
-    "id": "AP-68"
+    "id": "AP-63"
   },
   {
-    "title": "AP-69: The 100% Utilization Fallacy — Manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, or learning. Projects chronically miss deadlines because the plan assumed ideal conditions that never exist, and the team has no capacity to absorb reality.",
+    "title": "AP-64: The 100% Utilization Fallacy — Manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, or learning. Projects chronically miss deadlines because the plan assumed ideal conditions that never exist, and the team has no capacity to absorb reality.",
     "description": "Manager allocates 100% of engineering capacity to planned work, leaving zero buffer for unplanned work, interrupts, or learning. Projects chronically miss deadlines because the plan assumed ideal conditions that never exist, and the team has no capacity to absorb reality.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-100-percent-utilization-fallacy/",
     "domain": "Strategy",
     "capabilityName": "Resource Allocation & Tradeoffs",
-    "id": "AP-69"
+    "id": "AP-64"
   },
   {
-    "title": "AP-70: The Reassurance Trap — During periods of uncertainty — layoffs, reorgs, strategy pivots — the manager offers vague reassurances that ring hollow. Trust is destroyed faster than honest acknowledgment of difficulty would, and the team disengages or begins job-searching in silence.",
+    "title": "AP-65: The Reassurance Trap — During periods of uncertainty — layoffs, reorgs, strategy pivots — the manager offers vague reassurances that ring hollow. Trust is destroyed faster than honest acknowledgment of difficulty would, and the team disengages or begins job-searching in silence.",
     "description": "During periods of uncertainty — layoffs, reorgs, strategy pivots — the manager offers vague reassurances that ring hollow. Trust is destroyed faster than honest acknowledgment of difficulty would, and the team disengages or begins job-searching in silence.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-reassurance-trap/",
     "domain": "People",
     "capabilityName": "Culture & Norms Shaping",
-    "id": "AP-70"
+    "id": "AP-65"
   },
   {
-    "title": "AP-71: Vulnerability Noise Blindness — Automated security scanners generate hundreds of findings per week but without effective triage or noise reduction. The team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight.",
+    "title": "AP-66: Vulnerability Noise Blindness — Automated security scanners generate hundreds of findings per week but without effective triage or noise reduction. The team becomes desensitized, treating the vulnerability backlog as unfixable background noise while critical issues hide in plain sight.",
     "description": "Automated security scanners generate hundreds of findings per week without severity-based triage or noise reduction. Volume desensitizes the team: engineers stop reading scan results, critical vulnerabilities get lost among low-severity noise, and the backlog grows until a real breach exposes a finding that was flagged months ago but never triaged.",
     "type": "anti-pattern",
     "url": "/anti-patterns/vulnerability-noise-blindness/",
     "domain": "Reliability",
     "capabilityName": "Security & Compliance Posture",
-    "id": "AP-71"
+    "id": "AP-66"
   },
   {
-    "title": "AP-72: The Shadow Bypass — Engineers routinely circumvent security controls — disabling scanners, skipping threat modeling, using personal credentials — because security is perceived as friction. Each bypass normalizes the next, widening the gap between documented security posture and actual practice.",
+    "title": "AP-67: The Shadow Bypass — Engineers routinely circumvent security controls — disabling scanners, skipping threat modeling, using personal credentials — because security is perceived as friction. Each bypass normalizes the next, widening the gap between documented security posture and actual practice.",
     "description": "Engineers routinely circumvent security controls — disabling scanners, skipping threat modeling, using personal credentials — because security is perceived as friction. Each bypass normalizes the next, widening the gap between documented security posture and actual practice.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-shadow-bypass/",
     "domain": "Reliability",
     "capabilityName": "Security & Compliance Posture",
-    "id": "AP-72"
+    "id": "AP-67"
   },
   {
-    "title": "AP-73: The Certification Facade — Team maintains compliance certifications and passes audits, but certified practices are only followed during audit preparation. Day-to-day security posture drifts far from documented standards, creating a dangerous gap between paper compliance and actual risk.",
+    "title": "AP-68: The Certification Facade — Team maintains compliance certifications and passes audits, but certified practices are only followed during audit preparation. Day-to-day security posture drifts far from documented standards, creating a dangerous gap between paper compliance and actual risk.",
     "description": "Team maintains compliance certifications and passes audits, but certified practices are only followed during audit preparation. Day-to-day security posture drifts far from documented standards, creating a dangerous gap between paper compliance and actual risk.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-certification-facade/",
     "domain": "Reliability",
     "capabilityName": "Security & Compliance Posture",
-    "id": "AP-73"
+    "id": "AP-68"
   },
   {
     "title": "Your Top Performer Gives 2 Weeks Notice",
@@ -3645,22 +3645,22 @@
     "id": "P-C12-7"
   },
   {
-    "title": "AP-74: The Big-Bang Deploy — Team batches weeks or months of changes into monolithic releases, turning every deploy into a high-risk event. Weekend war rooms, rollback plans, and post-deploy firefighting become the norm, and deploy frequency drops because nobody wants to trigger the next crisis.",
+    "title": "AP-69: The Big-Bang Deploy — Team batches weeks or months of changes into monolithic releases, turning every deploy into a high-risk event. Weekend war rooms, rollback plans, and post-deploy firefighting become the norm, and deploy frequency drops because nobody wants to trigger the next crisis.",
     "description": "Team batches weeks or months of changes into monolithic releases, turning every deploy into a high-risk event. Weekend war rooms, rollback plans, and post-deploy firefighting become the norm, and deploy frequency drops because nobody wants to trigger the next crisis.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-big-bang-deploy/",
     "domain": "Execution",
     "capabilityName": "Operational Leadership & Rhythm",
-    "id": "AP-74"
+    "id": "AP-69"
   },
   {
-    "title": "AP-75: The Vanity OKR — Team sets OKRs that are either so vague they can't be measured, so easy they're always green, or so disconnected from work that nobody references them. Goal-setting becomes a quarterly ritual with zero impact on daily decisions, and the team can't articulate what success looks like.",
+    "title": "AP-70: The Vanity OKR — Team sets OKRs that are either so vague they can't be measured, so easy they're always green, or so disconnected from work that nobody references them. Goal-setting becomes a quarterly ritual with zero impact on daily decisions, and the team can't articulate what success looks like.",
     "description": "Team sets OKRs that are either so vague they can't be measured, so easy they're always green, or so disconnected from work that nobody references them. Goal-setting becomes a quarterly ritual with zero impact on daily decisions, and the team can't articulate what success looks like.",
     "type": "anti-pattern",
     "url": "/anti-patterns/the-vanity-okr/",
     "domain": "Data",
     "capabilityName": "Metrics, Measurement & Outcomes",
-    "id": "AP-75"
+    "id": "AP-70"
   },
   {
     "title": "Restructuring Teams Around a Platform Strategy",

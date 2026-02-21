@@ -124,6 +124,7 @@ const relatedMetrics = getMetricsForCapability(cap.id);
   <!-- Observables -->
   <section class="mb-10">
     <h2 class="section-heading">Observables ({observables.length})</h2>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Each observable carries a weight (visible when expanded) indicating its relative importance within this capability. Weights sum to approximately 1.0 and reflect how frequently the behavior surfaces in calibration discussions, incident reviews, and promotion assessments.</p>
     <div class="space-y-3">
       {observables.map(obs => (
         <ObservableCard observable={obs} />

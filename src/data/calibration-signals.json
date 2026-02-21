@@ -91,7 +91,7 @@
     "id": "SIG-012",
     "observableId": "C9-O1",
     "capabilityId": "C9",
-    "signalText": "DORA elite benchmark: on-demand deployment frequency, <1 hour lead time, <5% change failure rate, <1 hour MTTR. Evidence: EM can state their team's current numbers and trend direction for all four metrics.",
+    "signalText": "DORA elite benchmark (per State of DevOps 2023): on-demand deployment frequency, <1 hour lead time, <5% change failure rate, <1 hour MTTR. Evidence: EM can state their team's current numbers and trend direction for all four metrics.",
     "signalType": "metric",
     "sourceSubTopic": "Deployment Frequency"
   },
@@ -283,7 +283,7 @@
     "id": "SIG-036",
     "observableId": "C1-O1",
     "capabilityId": "C1",
-    "signalText": "The foundational org design pattern. Directors must articulate team topology rationale: 'Reorganized from layer-based to stream-aligned teams, reducing cross-team handoffs by X%'. Amazon's single-threaded leadership model mandates that each team owns an end-to-end customer experience; Google's SRE handbook defines 'service ownership' as requiring a team to own build, deploy, and operate for their services.",
+    "signalText": "Foundational org design: 'Restructured from layer-based to stream-aligned teams, reducing cross-team handoffs from [X]% to <5%.' Evidence: team topology registry, handoff metrics, independent deployment capability per team.",
     "signalType": "metric",
     "sourceSubTopic": "Stream-Aligned Teams"
   },
@@ -307,7 +307,7 @@
     "id": "SIG-039",
     "observableId": "C1-O2",
     "capabilityId": "C1",
-    "signalText": "Director-level insight: 'Applied inverse Conway — re-orged teams to align with target microservices architecture, enabling independent deployment'. Amazon's VP-level org reviews explicitly evaluate whether team boundaries mirror service boundaries; Netflix credits its 'full-cycle developer' model (teams own end-to-end) for achieving hundreds of deploys per day.",
+    "signalText": "Inverse Conway in practice: 'Re-orged teams to align with target microservices architecture, enabling independent deployment. Service boundaries now match team boundaries.' Evidence: architecture-to-org mapping doc, deploy independence metrics, cross-team handoff reduction.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Conway's Law (Intentional)"
   },
@@ -323,7 +323,7 @@
     "id": "SIG-041",
     "observableId": "C1-O3",
     "capabilityId": "C1",
-    "signalText": "'Executed re-org of [X] engineers across [Y] teams with zero regrettable attrition and full productivity restored within 3 weeks'. Google's re-org playbook targets <4 weeks to full productivity post-reorg; Amazon calibration committees evaluate re-org execution by tracking 'regrettable attrition within 90 days' as the primary success metric.",
+    "signalText": "Re-org execution quality: 'Executed re-org of [X] engineers across [Y] teams with zero regrettable attrition and full productivity restored within 3 weeks.' Evidence: attrition data post-re-org, velocity recovery timeline (<4 weeks target), transition satisfaction survey.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Executing Re-orgs"
   },
@@ -331,7 +331,7 @@
     "id": "SIG-042",
     "observableId": "C1-O5",
     "capabilityId": "C1",
-    "signalText": "Amazon principle applied broadly — calibration rewards clear ownership stories: 'Established single-threaded ownership for [X], resolving [chronic issue]'. Amazon's Leadership Principle 'Ownership' is the most frequently cited in promo docs; candidates must demonstrate they 'never say that's not my job.'. Google's equivalent is 'no haunted graveyards' — every system must have a clear owning team.",
+    "signalText": "Ownership clarity: 'Established single-threaded ownership for [X], resolving [chronic issue]. Every service has exactly one owner in the registry — no haunted graveyards.' Evidence: ownership registry completeness, zero 'who owns this?' escalations, on-call routing accuracy.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Single-Threaded Ownership"
   },
@@ -451,7 +451,7 @@
     "id": "SIG-057",
     "observableId": "C1-O12",
     "capabilityId": "C1",
-    "signalText": "How you handle adversity you didn't create reveals character. 'Guided team through [re-org], maintained velocity and zero attrition'",
+    "signalText": "How a leader handles adversity they didn't create reveals character. 'Guided team through [re-org], maintained velocity and zero attrition'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Re-orgs You Didn't Initiate"
   },
@@ -499,7 +499,7 @@
     "id": "SIG-063",
     "observableId": "C5-O7",
     "capabilityId": "C5",
-    "signalText": "The 90-day window determines your trajectory. 'Established credibility by [quick win], built stakeholder trust through [action]'",
+    "signalText": "The 90-day window determines a new leader's trajectory. 'Established credibility by [quick win], built stakeholder trust through [action]'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Earning Credibility as New Leader"
   },
@@ -923,7 +923,7 @@
     "id": "SIG-116",
     "observableId": "C5-O6",
     "capabilityId": "C5",
-    "signalText": "Your manager is your primary sponsor in calibration and promo discussions. Invest in this relationship deliberately",
+    "signalText": "The leader's manager is their primary sponsor in calibration and promo discussions. This relationship warrants deliberate investment",
     "signalType": "promo_packet",
     "sourceSubTopic": "Managing Your Manager"
   },
@@ -931,7 +931,7 @@
     "id": "SIG-117",
     "observableId": "C7-O4",
     "capabilityId": "C7",
-    "signalText": "Trust is built by how you handle bad news. 'Flagged [project slip] early with mitigation plan, leadership appreciated transparency'. Amazon's Leadership Principle 'Earn Trust' explicitly rewards early escalation of bad news; Google calibration language includes 'brings problems with solutions, surfaces issues early' as a positive signal for EM maturity.",
+    "signalText": "Trust is built by how a leader handles bad news. 'Flagged [project slip] early with mitigation plan, leadership appreciated transparency'. Amazon's Leadership Principle 'Earn Trust' explicitly rewards early escalation of bad news; Google calibration language includes 'brings problems with solutions, surfaces issues early' as a positive signal for EM maturity.",
     "signalType": "calibration_language",
     "sourceSubTopic": "Delivering Bad News Upward"
   },
@@ -1147,7 +1147,7 @@
     "id": "SIG-144",
     "observableId": "C1-O15",
     "capabilityId": "C1",
-    "signalText": "How you wind down reveals leadership character. 'Managed wind-down of [X]-person team, placed [Y]% internally, completed knowledge transfer for [Z] critical systems with zero orphaned services.'",
+    "signalText": "How a leader winds down a team reveals character. 'Managed wind-down of [X]-person team, placed [Y]% internally, completed knowledge transfer for [Z] critical systems with zero orphaned services.'",
     "signalType": "calibration_language",
     "sourceSubTopic": "Team Wind-Down Leadership"
   },

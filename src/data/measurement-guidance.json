@@ -6,14 +6,14 @@
       "Org health dashboard reviewed weekly by leadership",
       "Succession plan exists for all critical roles",
       "Quarterly org design review is scheduled and attended",
-      "Google uses quarterly org health surveys with >80% response rate as a leading indicator of structural effectiveness"
+      "Quarterly org health surveys achieve >80% response rate"
     ],
     "laggingIndicators": [
       "Zero regrettable attrition post-reorg",
       "Teams achieve 85%+ delivery commitment rate",
       "Cross-team escalations decreased quarter-over-quarter",
       "Employee engagement scores stable or improving through org changes",
-      "Amazon tracks whether single-threaded ownership is maintained across all services as a structural health metric"
+      "Single-threaded ownership maintained across all services (0% orphaned services)"
     ],
     "measurementAntiPatterns": [
       "Using team size as a proxy for leadership scope",
@@ -35,14 +35,14 @@
       "Roadmap has explicit not-doing list with rationale",
       "Investment allocation ratios are reviewed monthly",
       "Stakeholders can articulate the current top 3 priorities",
-      "Amazon's PR/FAQ process requires written opportunity-cost analysis before any initiative is prioritized"
+      "Written opportunity-cost analysis required before any initiative is prioritized"
     ],
     "laggingIndicators": [
       "Feature delivery aligns with stated priorities (>80% match)",
       "Unplanned work remains below 20% of total capacity",
       "Strategic bets delivered measurable outcomes within expected timeframe",
       "Stakeholder satisfaction with prioritization decisions is above 4/5",
-      "Google tracks OKR completion rates by investment tier (core/strategic/venture) to assess prioritization accuracy"
+      "OKR completion rates tracked by investment tier (core/strategic/venture) to assess prioritization accuracy"
     ],
     "measurementAntiPatterns": [
       "Equating busyness with strategic alignment",
@@ -127,14 +127,14 @@
       "Engineering input is included in cross-functional planning documents",
       "Stakeholder map is maintained with relationship health scores",
       "Pre-alignment meetings happen before major cross-functional decisions",
-      "Meta measures triad health through quarterly joint retrospectives between Eng, PM, and Design leads"
+      "Triad health measured through quarterly joint retrospectives between Eng, PM, and Design leads"
     ],
     "laggingIndicators": [
       "Cross-functional projects delivered on time with no late-stage surprises",
       "Stakeholder NPS for engineering partnership is above 40",
       "Requests from other functions are resolved within agreed SLAs",
       "Engineering is invited to strategic planning conversations proactively",
-      "Spotify tracks cross-squad dependency resolution time as a lagging indicator of partnership effectiveness"
+      "Cross-team dependency resolution time tracked as a lagging indicator of partnership effectiveness"
     ],
     "measurementAntiPatterns": [
       "Measuring influence by meeting attendance rather than decision impact",
@@ -156,14 +156,14 @@
       "1:1s happen weekly with documented notes and action items",
       "Manager has completed coaching or leadership training in past 12 months",
       "Stretch assignments are actively tracked for each team member",
-      "Google measures manager coaching effectiveness through anonymous upward feedback surveys (Project Oxygen methodology)"
+      "Manager coaching effectiveness measured through anonymous upward feedback surveys"
     ],
     "laggingIndicators": [
       "Internal promotion rate is at or above org benchmark",
       "Direct reports report high manager effectiveness in surveys (>4/5)",
       "Regrettable attrition is below org average",
       "At least one direct report ready for next-level role within 12 months",
-      "Amazon tracks the promotion rate and retention rate of direct reports as lagging indicators of coaching investment"
+      "Promotion rate and retention rate of direct reports serve as lagging indicators of coaching investment"
     ],
     "measurementAntiPatterns": [
       "Measuring coaching by number of 1:1s held rather than development outcomes",
@@ -185,7 +185,7 @@
       "Key decisions are communicated to all affected parties within 48 hours",
       "Decision log is maintained and accessible to the team",
       "Pre-reads are shared at least 24 hours before decision meetings",
-      "Amazon uses the 6-pager narrative format as a leading indicator of decision quality — well-structured narratives correlate with better outcomes",
+      "Written narrative documents (6-pagers or equivalent) used as a leading indicator of decision quality — well-structured narratives correlate with better outcomes",
       "Decision authority matrix documented and team can reference it",
       "Communication scaling mechanisms (RFCs, decision logs) adopted and maintained"
     ],
@@ -194,7 +194,7 @@
       "Team members can articulate the rationale behind recent key decisions",
       "Executive asks for clarification less than 10% of the time on proposals",
       "Decision-to-action latency is under 1 week for standard decisions",
-      "Netflix tracks decision reversal rate for Type 2 decisions as a signal that bias-for-action is calibrated correctly",
+      "Decision reversal rate for Type 2 decisions serves as a signal that bias-for-action is calibrated correctly",
       "Decision revisitation rate below 10% per quarter",
       "Meeting hours per engineer trending down as team scales"
     ],
@@ -282,7 +282,7 @@
       "Investment allocation (build vs. maintain vs. innovate) is explicitly tracked",
       "Budget reviews happen monthly with variance analysis",
       "Tradeoff decisions are documented with alternatives considered",
-      "Amazon tracks cost-per-transaction and monthly cost attribution reports as leading indicators of financial discipline",
+      "Cost-per-transaction and monthly cost attribution reports serve as leading indicators of financial discipline",
       "Every resource request includes tiered options with quantified ROI",
       "Cost-per-outcome dashboards reviewed monthly with engineering and finance"
     ],
@@ -291,7 +291,7 @@
       "Time-to-fill for approved roles is within target (e.g., <60 days)",
       "ROI of major investments is measured and reported within 6 months of completion",
       "No critical projects stalled due to unplanned resource constraints",
-      "Netflix measures engineering output per dollar spent as a lagging indicator, optimizing for talent density over headcount",
+      "Engineering output per dollar spent serves as a lagging indicator, optimizing for talent density over headcount",
       "Resource reallocation decisions made proactively (before quarterly planning forces them)",
       "Engineering ROI improving quarter-over-quarter by cost-per-outcome metrics"
     ],
@@ -317,14 +317,14 @@
       "Structured rubrics with behavioral anchors used for every interview, calibrated across all interviewers",
       "Onboarding checklist has 30/60/90-day milestones with clear owners",
       "Hiring funnel conversion rates tracked weekly with bottleneck identification",
-      "Amazon tracks Bar Raiser override rate as a hiring quality signal; Google tracks interviewer calibration scores to ensure rubric consistency"
+      "Bar raiser override rate tracked as a hiring quality signal; interviewer calibration scores ensure rubric consistency"
     ],
     "laggingIndicators": [
       "Offer acceptance rate is above 80%",
       "New hire productivity ramp (time to first meaningful contribution) is within target",
       "90-day new hire retention is above 95%",
       "Hiring manager satisfaction with candidates is above 4/5",
-      "Google tracks 6-month new hire effectiveness ratings and Amazon measures regrettable attrition within 12 months of hire",
+      "6-month new hire effectiveness ratings and regrettable attrition within 12 months of hire tracked as quality signals",
       "Regrettable hires below 10% at 12-month mark"
     ],
     "measurementAntiPatterns": [
@@ -347,7 +347,7 @@
       "Psychological safety is explicitly discussed in retrospectives",
       "Recognition practices happen at least weekly (shoutouts, kudos)",
       "Manager models desired cultural behaviors visibly in meetings and communications",
-      "Google measures psychological safety through quarterly team surveys using Project Aristotle methodology",
+      "Psychological safety measured through quarterly team surveys using validated methodology",
       "Culture onboarding materials updated and used for every new hire"
     ],
     "laggingIndicators": [
@@ -355,7 +355,7 @@
       "Diverse voices participate in team discussions (not dominated by 1-2 individuals)",
       "Team conflict is resolved constructively without escalation above manager",
       "Employee engagement scores are above org median",
-      "Spotify tracks team Health Check trend scores across quarters as a lagging indicator of sustained cultural investment",
+      "Team Health Check trend scores across quarters serve as a lagging indicator of sustained cultural investment",
       "Psychological safety scores stable through rapid team growth periods",
       "No 'missing stair' patterns reported in skip-level feedback"
     ],
@@ -381,7 +381,7 @@
       "Vulnerability scanning is automated and runs on every deploy",
       "Compliance requirements are mapped to engineering controls with clear owners",
       "Threat modeling is completed for all new services before launch",
-      "Google's BeyondCorp model tracks automated security scan coverage rate across all CI/CD pipelines as a leading indicator",
+      "Automated security scan coverage rate across all CI/CD pipelines tracked as a leading indicator",
       "Security champion active and rotating on every team",
       "Automated security scanning integrated in CI/CD with severity-based gates"
     ],
@@ -390,7 +390,7 @@
       "Zero compliance audit findings related to engineering controls",
       "Security incidents caused by known vulnerability classes decreased year-over-year",
       "Time to patch critical CVEs is under 72 hours",
-      "Amazon tracks mean-time-to-patch for critical CVEs and zero-day vulnerabilities as a lagging security posture metric",
+      "Mean-time-to-patch for critical CVEs and zero-day vulnerabilities tracked as a lagging security posture metric",
       "Zero critical/high vulnerabilities reaching production",
       "Vulnerability remediation SLA compliance >90%"
     ],
@@ -414,7 +414,7 @@
       "Calibration criteria and rubric are documented and shared with all managers",
       "Managers complete calibration prep (draft ratings with evidence) before sessions",
       "Underperformance is addressed with documented feedback within 2 weeks of identification",
-      "Google's calibration committee pre-reads are submitted 1 week before sessions, and preparation quality is tracked as a leading indicator",
+      "Calibration committee pre-reads submitted 1 week before sessions, with preparation quality tracked as a leading indicator",
       "Running performance notes maintained and current for all reports",
       "Quarterly career conversations completed with all reports (including high performers)"
     ],
@@ -423,7 +423,7 @@
       "Employees report reviews as fair and useful (>4/5 in post-review survey)",
       "PIP-to-resolution cycle time is within policy guidelines",
       "Zero successful legal challenges to termination decisions",
-      "Netflix measures Keeper Test conversation frequency and outcome alignment as indicators of honest performance assessment culture",
+      "Keeper Test conversation frequency and outcome alignment measured as indicators of honest performance assessment culture",
       "Zero 'surprise' complaints in post-review engagement surveys",
       "High performer retention rate above 90% annually"
     ],

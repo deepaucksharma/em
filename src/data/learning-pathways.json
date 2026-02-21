@@ -81,7 +81,7 @@
       {
         "title": "Multi-Year Technical Strategy Case Studies",
         "type": "case-study",
-        "description": "Analysis of real-world multi-year engineering strategies from companies like Spotify, Stripe, and Google, examining how they evolved org structure to support strategic shifts.",
+        "description": "Analysis of real-world multi-year engineering strategies examining how high-growth companies evolved org structure to support strategic shifts.",
         "url": null
       },
       {
@@ -184,7 +184,7 @@
         "url": null
       },
       {
-        "title": "Netflix and Spotify Prioritization Case Studies",
+        "title": "Engineering Prioritization Case Studies",
         "type": "case-study",
         "description": "Detailed examination of how high-performing engineering orgs balance platform investment, feature development, and technical debt reduction across multiple teams.",
         "url": null
