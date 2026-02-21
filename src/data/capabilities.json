@@ -4,24 +4,26 @@
     "name": "Org-Level Thinking",
     "slug": "org-level-thinking",
     "domain": "Strategy",
-    "description": "Sees and shapes cross-team systems, tradeoffs, and long-horizon outcomes.",
+    "description": "Assessed by: org topology clarity, cross-team ownership single-threading, re-org execution velocity, coordination overhead ratios, and strategic alignment metrics. Absence causes: ambiguous ownership creating coordination tax, re-orgs that destroy trust and attrition, scaling bottlenecks, and misalignment between org structure and architecture.",
     "primarySubTopics": [
       "16"
     ],
     "observableCount": 16,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C2",
     "name": "Strategic Prioritization",
     "slug": "strategic-prioritization",
     "domain": "Strategy",
-    "description": "Defines and defends prioritization across competing investments.",
+    "description": "Assessed by: planning artifact quality, roadmap delivery rate, stakeholder alignment metrics, resource allocation transparency, and business ROI articulation. Absence causes: engineering work invisible to business, strategic misalignment, resource thrashing between competing priorities, and wasted engineering capacity.",
     "primarySubTopics": [
       "4"
     ],
     "observableCount": 6,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C3",
@@ -56,36 +58,43 @@
     "name": "Cross-Functional Influence",
     "slug": "cross-functional-influence",
     "domain": "Stakeholder",
-    "description": "Aligns peers and leaders through influence, not authority.",
+    "description": "Assessed by: cross-functional stakeholder satisfaction, influence on major decisions, stakeholder escalation reduction, and peer feedback credibility. Absence causes: misaligned initiatives, cross-functional blame games, delayed delivery from lack of coordination, and EM isolation from product/design leadership.",
     "primarySubTopics": [
       "16"
     ],
     "observableCount": 16,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": []
   },
   {
     "id": "C6",
     "name": "Coaching & Talent Development",
     "slug": "coaching-talent-development",
     "domain": "People",
-    "description": "Develops ICs and managers through 1:1s, career conversations, and growth-focused leadership.",
+    "description": "Assessed by: skip-level conversation quality, performance review calibration rigor, promotion success rate, retention of high performers, and team growth velocity. Absence causes: high-potential talent leaves for development, performance reviews become recency-biased, weak managers go uncoached, and promotions feel arbitrary rather than earned.",
     "primarySubTopics": [
       "12"
     ],
     "observableCount": 13,
-    "v5Status": "UPDATED"
+    "v5Status": "UPDATED",
+    "enabledBy": [
+      "C7"
+    ]
   },
   {
     "id": "C7",
     "name": "Decision Framing & Communication",
     "slug": "decision-framing-communication",
     "domain": "Stakeholder",
-    "description": "Frames complex choices clearly with options, tradeoffs, and risks.",
+    "description": "Assessed by: decision memo quality and approval rates, exec presentation crisp communication, proactive status updates, bad news flag timing, roadmap transparency, and DACI/RFC adoption. Absence causes: decisions revisited endlessly, stakeholder misalignment, late problem escalation, poor exec perception, and wasted organizational energy on rework.",
     "primarySubTopics": [
       "11"
     ],
     "observableCount": 11,
-    "v5Status": "CARRIED"
+    "v5Status": "CARRIED",
+    "enabledBy": [
+      "C3"
+    ]
   },
   {
     "id": "C8",
